@@ -21,3 +21,7 @@ Pesa mas de 200 GB y el acceso es por formulario academico con espera. Se reempl
 ## 2026-09-28 Datasets en redefinicion
 
 El grupo esta redefiniendo la lista de datasets. Cuando quede cerrada, actualizar readme.md y datasets/diccionario.md.
+
+## 2026-09-29 Tendencias de color, silueta y prenda
+
+La app no trabaja solo con colores: cada tendencia puede ser un color, una silueta o un tipo de prenda, con el mismo peso en la interfaz (tres pestanas en Tendencias de la temporada). Se ajusto la redaccion de la hipotesis para nombrar los tres.
