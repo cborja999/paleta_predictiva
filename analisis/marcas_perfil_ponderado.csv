@@ -1,0 +1,10 @@
+demora_meses,n_categorias,corr_promedio_sin_ponderar,corr_promedio_ponderada,positivas_signif_sin_ponderar,positivas_signif_ponderada
+0,25,0.005,-0.008,1,1
+3,25,-0.064,-0.048,0,0
+6,25,-0.002,-0.003,1,2
+9,25,-0.0,-0.01,0,0
+12,25,0.029,0.033,1,0
+15,25,0.037,0.013,1,1
+18,25,-0.037,-0.029,0,0
+21,25,-0.03,-0.018,1,1
+24,25,-0.008,-0.014,0,0

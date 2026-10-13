@@ -19,3 +19,20 @@ Google Trends mensual por termino (todas las tandas unidas).
 Reportes publicos de presencia en pasarela (T-Fashion y otros), 110 filas.
 - `temporada`, `ciudad`, `genero`, `fuente`, `fecha_publicacion`, `alcance`, `tipo`, `tendencia`, `metrica`, `valor`, `url`, `nota`.
 - Son resumenes secundarios publicos, no datos propios.
+
+## datasets/trends_marcas/
+Ocho consultas de Google Trends (busqueda web, mensual 2004 a oct 2026) tal como se bajaron. El nombre indica la zona (`MUNDO` o `AR`) y los terminos. Cada consulta esta en su propia escala (0 a 100 dentro de esa consulta).
+
+## datasets/trends_marcas/marcas_unificado.csv
+Las ocho consultas unidas en una escala comparable (encadenadas por la marca ancla Gucci o Zara).
+- `marca`, `grupo` (lujo, masiva o argentina), `geo` (MUNDO o AR), `mes`.
+- `valor_normalizado`: indice de busqueda reescalado. Los de MUNDO son comparables entre si; los de AR tienen su propia escala (Zara de Argentina como referencia).
+- `archivo_origen`: consulta de la que sale el dato.
+- `volumen_bajo`: si el maximo de la serie fue menor a 12 sobre 100 en su consulta.
+- `termino_ambiguo`: palabras que pueden mezclar otras busquedas (hermes, cos, mimo, vitamina, ayres, awada, mango, valentino).
+
+## analisis/marcas_relevancia_por_temporada.csv
+Para cada temporada de desfile y cada casa: indice de busqueda de los 12 meses previos al desfile, porcentaje entre las 14 casas y cantidad de fotos de esa casa.
+
+## analisis/marcas_perfil_ponderado.csv
+Correlacion promedio por desfase de 0 a 24 meses, con y sin ponderar cada foto por la relevancia de su casa.

@@ -37,3 +37,14 @@ Carpetas agregadas: `runway_gemini/` (scripts, muestra y `resultados_gemini.csv`
 - Vogue Runway via Hugging Face: `tonyassi/vogue-runway-top15-512px` (fotos y metadatos).
 - Google Trends: exportaciones mensuales por termino.
 - T-Fashion y reportes publicos de WGSN: crecimientos de presencia en pasarela 2025-2026 (resumenes secundarios).
+
+## Marcas mas buscadas (octubre 2026)
+
+Se bajaron de Google Trends (busqueda web, mensual 2004 a sep 2026) 8 consultas de marcas: casas de lujo de las fotos de pasarela, marcas de venta masiva y marcas argentinas (con busquedas de Argentina). Como Trends reescala cada consulta, se encadenan con una marca ancla (Gucci, Zara). Archivos en `datasets/trends_marcas/` y analisis en `analisis/marcas_trends.py` y `analisis/marcas_resumen.md`.
+
+- **Lujo (ultimos 12 meses, indice global):** Prada, Gucci, Dior, Chanel y Louis Vuitton lideran con indices entre 28 y 34.
+- **Venta masiva:** Zara (78) esta muy arriba, seguida de Shein (55) y H&M (31).
+- **Argentina (escala propia):** Zara (79) se busca mucho mas que las marcas locales: 47 Street (18), Rapsodia (11) y Kosiuko (8). Vitamina, Mimo, Awada y Ayres son palabras comunes y no se leen como ranking.
+- **Ponderacion del cruce:** cada foto se peso por la relevancia de busqueda de su casa. El promedio de correlaciones a 12 y 15 meses fue 0,033 sin ponderar y 0,023 ponderado: no cambia el resultado. La hipotesis sigue sin confirmarse ni refutarse.
+
+Limitaciones: buscar una marca no es comprarla; hay terminos ambiguos (hermes, cos, mango, valentino, etc.) y marcas con volumen muy bajo (Fendi, Cardon, Pull and Bear).

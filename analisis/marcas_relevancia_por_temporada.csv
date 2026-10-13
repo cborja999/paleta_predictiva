@@ -1,0 +1,379 @@
+temporada,casa,indice_busqueda_12m_previos,porcentaje_entre_casas,fotos_de_la_casa
+SS2011,alexander mcqueen,3.41,2.54,5
+SS2011,balenciaga,1.34,1.0,5
+SS2011,calvin klein,6.36,4.73,5
+SS2011,chanel,24.58,18.31,12
+SS2011,dior,8.42,6.27,6
+SS2011,fendi,1.89,1.41,6
+SS2011,gucci,20.92,15.58,6
+SS2011,hermes,15.96,11.88,7
+SS2011,louis vuitton,15.0,11.17,8
+SS2011,prada,11.08,8.25,5
+SS2011,ralph lauren,11.02,8.21,8
+SS2011,saint laurent,2.25,1.68,5
+SS2011,valentino,8.65,6.44,6
+SS2011,versace,3.41,2.54,6
+FW2011,alexander mcqueen,1.64,1.23,5
+FW2011,balenciaga,1.46,1.09,4
+FW2011,calvin klein,6.44,4.82,5
+FW2011,chanel,24.5,18.32,10
+FW2011,dior,8.5,6.36,9
+FW2011,fendi,2.07,1.55,5
+FW2011,gucci,20.42,15.27,7
+FW2011,hermes,16.63,12.43,6
+FW2011,louis vuitton,15.92,11.9,9
+FW2011,prada,10.58,7.91,5
+FW2011,ralph lauren,11.33,8.47,7
+FW2011,saint laurent,2.31,1.73,6
+FW2011,valentino,8.71,6.51,6
+FW2011,versace,3.23,2.41,6
+SS2012,alexander mcqueen,2.07,1.53,5
+SS2012,balenciaga,1.46,1.08,5
+SS2012,calvin klein,6.44,4.75,4
+SS2012,chanel,23.83,17.56,12
+SS2012,dior,9.08,6.69,7
+SS2012,fendi,2.19,1.62,6
+SS2012,gucci,19.92,14.68,6
+SS2012,hermes,17.3,12.75,5
+SS2012,louis vuitton,17.0,12.53,7
+SS2012,prada,10.83,7.98,6
+SS2012,ralph lauren,12.18,8.98,8
+SS2012,saint laurent,2.25,1.66,5
+SS2012,valentino,7.92,5.83,8
+SS2012,versace,3.23,2.38,6
+FW2012,alexander mcqueen,2.07,1.49,5
+FW2012,balenciaga,1.46,1.05,5
+FW2012,calvin klein,6.36,4.57,5
+FW2012,chanel,24.67,17.72,9
+FW2012,dior,9.08,6.52,8
+FW2012,fendi,2.19,1.57,6
+FW2012,gucci,19.42,13.95,7
+FW2012,hermes,17.24,12.38,6
+FW2012,louis vuitton,18.58,13.35,6
+FW2012,prada,11.17,8.02,6
+FW2012,ralph lauren,12.61,9.06,8
+FW2012,saint laurent,2.25,1.62,5
+FW2012,valentino,7.98,5.73,8
+FW2012,versace,4.14,2.97,6
+SS2013,alexander mcqueen,1.46,1.04,4
+SS2013,balenciaga,1.46,1.04,5
+SS2013,calvin klein,6.36,4.52,5
+SS2013,chanel,25.83,18.35,10
+SS2013,dior,8.83,6.27,7
+SS2013,fendi,2.01,1.43,7
+SS2013,gucci,18.42,13.08,6
+SS2013,hermes,17.11,12.16,4
+SS2013,louis vuitton,20.0,14.21,5
+SS2013,prada,11.33,8.05,5
+SS2013,ralph lauren,12.79,9.09,8
+SS2013,saint laurent,2.62,1.86,9
+SS2013,valentino,8.1,5.75,8
+SS2013,versace,4.45,3.16,7
+FW2013,alexander mcqueen,1.46,1.07,1
+FW2013,balenciaga,1.52,1.11,5
+FW2013,calvin klein,6.53,4.77,5
+FW2013,chanel,25.58,18.7,10
+FW2013,dior,8.67,6.33,7
+FW2013,fendi,1.95,1.42,6
+FW2013,gucci,17.92,13.09,7
+FW2013,hermes,16.87,12.33,5
+FW2013,louis vuitton,18.75,13.7,7
+FW2013,prada,11.08,8.1,6
+FW2013,ralph lauren,12.61,9.21,8
+FW2013,saint laurent,2.86,2.09,6
+FW2013,valentino,7.31,5.34,10
+FW2013,versace,3.72,2.72,7
+SS2014,alexander mcqueen,1.1,0.81,4
+SS2014,balenciaga,1.52,1.12,5
+SS2014,calvin klein,6.44,4.75,5
+SS2014,chanel,25.58,18.85,11
+SS2014,dior,8.5,6.26,10
+SS2014,fendi,2.07,1.53,6
+SS2014,gucci,18.5,13.63,6
+SS2014,hermes,17.11,12.61,5
+SS2014,louis vuitton,16.42,12.09,5
+SS2014,prada,10.67,7.86,5
+SS2014,ralph lauren,11.88,8.75,7
+SS2014,saint laurent,2.92,2.15,6
+SS2014,valentino,7.37,5.43,9
+SS2014,versace,5.66,4.17,6
+FW2014,alexander mcqueen,1.04,0.76,4
+FW2014,balenciaga,1.64,1.2,5
+FW2014,calvin klein,6.27,4.59,4
+FW2014,chanel,25.83,18.92,11
+FW2014,dior,8.42,6.16,7
+FW2014,fendi,2.01,1.47,7
+FW2014,gucci,18.25,13.36,5
+FW2014,hermes,17.11,12.53,5
+FW2014,louis vuitton,15.58,11.41,7
+FW2014,prada,10.5,7.69,6
+FW2014,ralph lauren,12.0,8.79,5
+FW2014,saint laurent,3.23,2.36,8
+FW2014,valentino,7.37,5.4,9
+FW2014,versace,7.31,5.35,7
+SS2015,alexander mcqueen,1.1,0.82,4
+SS2015,balenciaga,1.71,1.27,5
+SS2015,calvin klein,6.36,4.75,4
+SS2015,chanel,26.33,19.67,11
+SS2015,dior,8.58,6.41,7
+SS2015,fendi,2.01,1.5,6
+SS2015,gucci,16.83,12.57,6
+SS2015,hermes,16.75,12.51,5
+SS2015,louis vuitton,14.33,10.71,6
+SS2015,prada,9.92,7.41,5
+SS2015,ralph lauren,12.12,9.05,7
+SS2015,saint laurent,3.9,2.91,7
+SS2015,valentino,7.25,5.41,11
+SS2015,versace,6.7,5.0,6
+FW2015,alexander mcqueen,0.85,0.64,4
+FW2015,balenciaga,1.77,1.33,5
+FW2015,calvin klein,7.36,5.55,5
+FW2015,chanel,26.42,19.91,12
+FW2015,dior,8.67,6.53,6
+FW2015,fendi,2.07,1.56,7
+FW2015,gucci,16.0,12.06,5
+FW2015,hermes,16.75,12.62,6
+FW2015,louis vuitton,13.33,10.05,5
+FW2015,prada,9.58,7.22,6
+FW2015,ralph lauren,11.82,8.9,5
+FW2015,saint laurent,4.08,3.07,7
+FW2015,valentino,7.61,5.74,11
+FW2015,versace,6.39,4.82,6
+SS2016,alexander mcqueen,0.91,0.69,5
+SS2016,balenciaga,2.01,1.52,4
+SS2016,calvin klein,8.2,6.22,5
+SS2016,chanel,25.67,19.47,11
+SS2016,dior,9.25,7.02,6
+SS2016,fendi,2.19,1.66,5
+SS2016,gucci,15.08,11.44,8
+SS2016,hermes,17.05,12.94,5
+SS2016,louis vuitton,12.67,9.61,6
+SS2016,prada,9.0,6.83,5
+SS2016,ralph lauren,11.27,8.55,6
+SS2016,saint laurent,3.84,2.91,7
+SS2016,valentino,8.4,6.38,11
+SS2016,versace,6.27,4.76,6
+FW2016,alexander mcqueen,0.91,0.68,5
+FW2016,balenciaga,2.07,1.55,4
+FW2016,calvin klein,8.7,6.5,5
+FW2016,chanel,25.42,18.99,10
+FW2016,dior,9.83,7.35,7
+FW2016,fendi,2.25,1.68,5
+FW2016,gucci,15.17,11.33,7
+FW2016,hermes,17.42,13.01,5
+FW2016,louis vuitton,12.42,9.28,6
+FW2016,prada,8.42,6.29,6
+FW2016,ralph lauren,10.9,8.14,10
+FW2016,saint laurent,3.78,2.82,4
+FW2016,valentino,10.29,7.69,9
+FW2016,versace,6.27,4.69,7
+SS2017,alexander mcqueen,0.73,0.54,6
+SS2017,balenciaga,2.25,1.65,5
+SS2017,calvin klein,9.79,7.17,0
+SS2017,chanel,24.58,18.0,11
+SS2017,dior,10.08,7.38,8
+SS2017,fendi,2.38,1.74,7
+SS2017,gucci,17.17,12.57,10
+SS2017,hermes,17.3,12.67,6
+SS2017,louis vuitton,12.42,9.09,5
+SS2017,prada,8.08,5.92,6
+SS2017,ralph lauren,10.78,7.89,5
+SS2017,saint laurent,3.78,2.76,6
+SS2017,valentino,10.9,7.98,8
+SS2017,versace,6.33,4.64,7
+FW2017,alexander mcqueen,0.73,0.53,4
+FW2017,balenciaga,2.56,1.84,5
+FW2017,calvin klein,10.12,7.29,6
+FW2017,chanel,23.83,17.17,10
+FW2017,dior,10.0,7.2,7
+FW2017,fendi,2.5,1.8,5
+FW2017,gucci,19.75,14.23,11
+FW2017,hermes,17.17,12.37,5
+FW2017,louis vuitton,13.08,9.43,4
+FW2017,prada,8.0,5.76,5
+FW2017,ralph lauren,10.48,7.55,6
+FW2017,saint laurent,3.84,2.76,10
+FW2017,valentino,9.38,6.76,6
+FW2017,versace,7.37,5.31,6
+SS2018,alexander mcqueen,0.73,0.48,4
+SS2018,balenciaga,3.35,2.2,6
+SS2018,calvin klein,10.46,6.86,8
+SS2018,chanel,23.67,15.53,8
+SS2018,dior,10.42,6.84,7
+SS2018,fendi,2.8,1.84,5
+SS2018,gucci,26.17,17.17,10
+SS2018,hermes,17.97,11.79,5
+SS2018,louis vuitton,15.33,10.06,4
+SS2018,prada,7.75,5.09,5
+SS2018,ralph lauren,10.11,6.63,6
+SS2018,saint laurent,4.45,2.92,9
+SS2018,valentino,9.32,6.12,7
+SS2018,versace,9.87,6.47,6
+FW2018,alexander mcqueen,0.97,0.56,4
+FW2018,balenciaga,4.99,2.89,7
+FW2018,calvin klein,10.96,6.35,7
+FW2018,chanel,24.42,14.15,8
+FW2018,dior,11.42,6.62,6
+FW2018,fendi,2.92,1.69,4
+FW2018,gucci,36.67,21.25,9
+FW2018,hermes,18.51,10.73,5
+FW2018,louis vuitton,17.58,10.19,5
+FW2018,prada,7.83,4.54,4
+FW2018,ralph lauren,9.99,5.79,11
+FW2018,saint laurent,4.81,2.79,8
+FW2018,valentino,9.38,5.43,7
+FW2018,versace,12.12,7.02,5
+SS2019,alexander mcqueen,1.71,0.91,4
+SS2019,balenciaga,8.04,4.28,8
+SS2019,calvin klein,11.21,5.97,6
+SS2019,chanel,24.42,13.01,9
+SS2019,dior,11.75,6.26,9
+SS2019,fendi,3.35,1.79,4
+SS2019,gucci,44.17,23.54,9
+SS2019,hermes,18.76,10.0,5
+SS2019,louis vuitton,19.08,10.17,5
+SS2019,prada,9.33,4.97,5
+SS2019,ralph lauren,9.56,5.1,4
+SS2019,saint laurent,4.63,2.47,10
+SS2019,valentino,8.65,4.61,6
+SS2019,versace,12.97,6.91,6
+FW2019,alexander mcqueen,2.38,1.26,4
+FW2019,balenciaga,9.68,5.13,11
+FW2019,calvin klein,11.13,5.89,0
+FW2019,chanel,24.08,12.75,8
+FW2019,dior,12.25,6.49,9
+FW2019,fendi,4.14,2.19,5
+FW2019,gucci,42.25,22.37,9
+FW2019,hermes,19.0,10.06,5
+FW2019,louis vuitton,19.08,10.1,6
+FW2019,prada,10.0,5.29,6
+FW2019,ralph lauren,9.38,4.97,4
+FW2019,saint laurent,4.69,2.48,10
+FW2019,valentino,8.34,4.42,7
+FW2019,versace,12.49,6.61,6
+SS2020,alexander mcqueen,2.98,1.56,5
+SS2020,balenciaga,10.6,5.54,9
+SS2020,calvin klein,11.29,5.91,0
+SS2020,chanel,24.83,12.99,9
+SS2020,dior,14.17,7.41,10
+SS2020,fendi,4.57,2.39,5
+SS2020,gucci,38.92,20.36,11
+SS2020,hermes,19.61,10.26,6
+SS2020,louis vuitton,20.08,10.5,5
+SS2020,prada,9.17,4.79,6
+SS2020,ralph lauren,9.32,4.87,0
+SS2020,saint laurent,4.99,2.61,9
+SS2020,valentino,8.28,4.33,8
+SS2020,versace,12.36,6.47,7
+FW2020,alexander mcqueen,3.29,1.7,5
+FW2020,balenciaga,10.54,5.45,13
+FW2020,calvin klein,11.29,5.84,0
+FW2020,chanel,25.25,13.07,8
+FW2020,dior,16.25,8.41,0
+FW2020,fendi,4.45,2.3,6
+FW2020,gucci,36.67,18.97,7
+FW2020,hermes,20.1,10.4,6
+FW2020,louis vuitton,21.67,11.21,6
+FW2020,prada,9.17,4.74,7
+FW2020,ralph lauren,9.5,4.92,4
+FW2020,saint laurent,5.18,2.68,7
+FW2020,valentino,8.59,4.44,11
+FW2020,versace,11.33,5.86,10
+SS2021,alexander mcqueen,3.17,1.67,3
+SS2021,balenciaga,9.01,4.75,6
+SS2021,calvin klein,11.13,5.87,0
+SS2021,chanel,24.92,13.13,9
+SS2021,dior,19.17,10.1,9
+SS2021,fendi,4.45,2.34,8
+SS2021,gucci,33.67,17.75,11
+SS2021,hermes,21.07,11.11,6
+SS2021,louis vuitton,21.33,11.25,5
+SS2021,prada,9.33,4.92,4
+SS2021,ralph lauren,9.2,4.85,5
+SS2021,saint laurent,4.99,2.63,7
+SS2021,valentino,8.1,4.27,8
+SS2021,versace,10.17,5.36,9
+FW2021,alexander mcqueen,2.86,1.5,2
+FW2021,balenciaga,7.92,4.15,8
+FW2021,calvin klein,11.04,5.79,0
+FW2021,chanel,24.92,13.07,8
+FW2021,dior,22.0,11.54,10
+FW2021,fendi,4.51,2.36,8
+FW2021,gucci,32.67,17.13,0
+FW2021,hermes,22.29,11.69,7
+FW2021,louis vuitton,20.67,10.84,7
+FW2021,prada,10.25,5.38,7
+FW2021,ralph lauren,8.89,4.66,4
+FW2021,saint laurent,4.81,2.52,10
+FW2021,valentino,7.92,4.15,10
+FW2021,versace,9.93,5.21,9
+SS2022,alexander mcqueen,2.74,1.39,4
+SS2022,balenciaga,7.43,3.77,8
+SS2022,calvin klein,10.96,5.56,0
+SS2022,chanel,25.08,12.72,8
+SS2022,dior,24.75,12.55,10
+SS2022,fendi,4.51,2.28,6
+SS2022,gucci,32.42,16.43,13
+SS2022,hermes,22.66,11.49,7
+SS2022,louis vuitton,21.17,10.73,0
+SS2022,prada,11.5,5.83,4
+SS2022,ralph lauren,9.44,4.79,2
+SS2022,saint laurent,5.24,2.66,8
+SS2022,valentino,8.71,4.42,11
+SS2022,versace,10.66,5.4,9
+FW2022,alexander mcqueen,2.62,1.25,4
+FW2022,balenciaga,7.92,3.77,8
+FW2022,calvin klein,10.71,5.1,0
+FW2022,chanel,25.92,12.35,8
+FW2022,dior,27.5,13.11,9
+FW2022,fendi,4.87,2.32,6
+FW2022,gucci,37.58,17.91,9
+FW2022,hermes,22.05,10.51,6
+FW2022,louis vuitton,21.83,10.41,6
+FW2022,prada,12.17,5.8,6
+FW2022,ralph lauren,10.11,4.82,6
+FW2022,saint laurent,5.91,2.82,6
+FW2022,valentino,9.2,4.38,9
+FW2022,versace,11.45,5.46,7
+SS2023,alexander mcqueen,2.38,1.09,4
+SS2023,balenciaga,9.74,4.47,8
+SS2023,calvin klein,10.54,4.84,0
+SS2023,chanel,27.0,12.39,7
+SS2023,dior,30.25,13.89,9
+SS2023,fendi,4.93,2.26,7
+SS2023,gucci,39.25,18.02,7
+SS2023,hermes,20.71,9.51,6
+SS2023,louis vuitton,21.33,9.79,5
+SS2023,prada,14.0,6.43,6
+SS2023,ralph lauren,10.41,4.78,11
+SS2023,saint laurent,6.21,2.85,5
+SS2023,valentino,8.95,4.11,9
+SS2023,versace,12.12,5.56,6
+FW2023,alexander mcqueen,2.19,1.06,6
+FW2023,balenciaga,12.18,5.87,6
+FW2023,calvin klein,10.37,5.0,0
+FW2023,chanel,25.75,12.41,8
+FW2023,dior,30.33,14.62,11
+FW2023,fendi,4.45,2.14,6
+FW2023,gucci,31.75,15.31,6
+FW2023,hermes,18.94,9.13,7
+FW2023,louis vuitton,20.08,9.68,5
+FW2023,prada,14.33,6.91,6
+FW2023,ralph lauren,10.35,4.99,6
+FW2023,saint laurent,6.15,2.97,6
+FW2023,valentino,8.34,4.02,8
+FW2023,versace,12.18,5.87,9
+SS2024,alexander mcqueen,2.19,1.1,6
+SS2024,balenciaga,10.48,5.26,12
+SS2024,calvin klein,10.71,5.38,0
+SS2024,chanel,24.58,12.35,9
+SS2024,dior,29.83,14.99,11
+SS2024,fendi,4.45,2.23,6
+SS2024,gucci,27.17,13.65,8
+SS2024,hermes,18.82,9.46,9
+SS2024,louis vuitton,19.33,9.72,0
+SS2024,prada,14.42,7.24,6
+SS2024,ralph lauren,10.54,5.29,7
+SS2024,saint laurent,6.33,3.18,6
+SS2024,valentino,8.16,4.1,0
+SS2024,versace,12.0,6.03,10
