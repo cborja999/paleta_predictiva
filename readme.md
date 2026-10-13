@@ -51,3 +51,6 @@ Limitaciones: buscar una marca no es comprarla; hay terminos ambiguos (hermes, c
 
 ## Tres casos ilustrativos (octubre 2026)
 Triple S de Balenciaga, rosa de Valentino y minifalda de Miu Miu: como se movieron las busquedas en los 3 años despues del desfile. Son ejemplos elegidos (sesgo de seleccion), **no prueba**. Detalle, tabla y limites en `analisis/casos_resumen.md`; datos en `datasets/trends_casos/`; codigo `analisis/casos_ilustrativos.py`.
+
+## Lyst Index como segunda medida de relevancia (octubre 2026)
+Dataset del proyecto CICLO (Berney, Dobler, Dottori Greco). Las casas que tenemos en las fotos ocupan en promedio 42% del ranking Lyst; faltan Moncler, Bottega Veneta, Loewe, Burberry, Jacquemus y Miu Miu (puesto promedio 3,8). Acuerdo con Trends entre las 12 casas comunes: Spearman 0,45 (no significativo). Detalle: `analisis/lyst_resumen.md`. Los datos crudos de Lyst no estan en el repo (licencia).

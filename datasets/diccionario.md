@@ -41,3 +41,8 @@ Correlacion promedio por desfase de 0 a 24 meses, con y sin ponderar cada foto p
 - `trends_casos/CASO__*.csv`: Google Trends mundo, mensual, 2 o 3 terminos por archivo en la misma escala. `<1` se lee como 0,5.
 - `casos_resumen.csv`: por termino, promedio de la base (12 meses previos al desfile) y de los años 1, 2 y 3; `mes_pico_media_movil` es poco confiable (saltos 2025-2026).
 - `casos_pasarela.csv`: % de fotos con el rasgo (rosa o mini) en la temporada del desfile vs promedio del resto de temporadas.
+
+## lyst/ (no versionado) y analisis/lyst_*.csv
+- `datasets/lyst/lyst_index__34_trimestres.csv` (local, ignorado por git): trimestre, marca, puesto. Q1-18 a Q2-26; 2018 es top 10, desde Q1-19 top 20. Fuente: Lyst Index, via CICLO.
+- `lyst_cobertura.csv`: por trimestre, cuantos puestos ocupan casas que estan en nuestras fotos.
+- `lyst_vs_trends.csv`: puntos Lyst (21 - puesto, ultimos 4 trimestres) vs indice de Trends (12 meses) por casa, con rangos.

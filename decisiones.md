@@ -43,3 +43,9 @@ Se descartaron los Trends sueltos de colores y prendas del Drive (8 terminos ele
 - Compara ventanas de 12 meses completos (base, +1..+12, +13..+24, +25..+36) para evitar estacionalidad.
 - Lectura: Triple S confundido por salida a tiendas; rosa ambiguo (suba previa + Barbie); minifalda es el mas limpio. No confirma la hipotesis.
 - Pendiente: completar URLs de fuentes (Sneaker Freaker, Fashion Magazine, L'Officiel India, Rebag).
+
+## Lyst Index (octubre 2026)
+- Usamos el Lyst Index (via CICLO) como segunda medida de relevancia de marcas, solo como contexto y chequeo de cobertura.
+- No se hizo cruce ponderado: cubre solo 2018-2026 (~17 temporadas) y tiene un corte de formula en Q1-26.
+- Datos crudos de Lyst fuera del repo (`datasets/lyst/` ignorado): Lyst no permite redistribuir el informe. Se suben solo agregados.
+- Los demas datos de CICLO son anuales y procesados (detrend + normalizados, 2025 excluido): no sirven para el cruce de 12-18 meses. Los mensuales crudos los tiene Zoe Dottori Greco.
