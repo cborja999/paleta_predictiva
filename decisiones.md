@@ -37,3 +37,9 @@ Gemini anota color dominante, prenda, silueta y largo por foto. Falta validar a 
 ## 2026-10 Marcas mas buscadas como ponderacion
 
 Se descartaron los Trends sueltos de colores y prendas del Drive (8 terminos elegidos a dedo, sin relacion directa con las categorias de las fotos), y los datasets de Instagram, TikTok y Pinterest del Drive (rankings de influencers y datos de ejemplo sin fechas). En su lugar se bajaron busquedas de marcas (lujo, venta masiva y argentinas) y se uso la relevancia de cada casa para ponderar las fotos. La comparacion se declaro antes de correrla (promedio a 12 y 15 meses) y el resultado no cambio. No se ajusto ningun dato para forzar la hipotesis.
+
+## Casos ilustrativos (octubre 2026)
+- Decision: sumar 3 casos de tendencias atribuidas a un desfile, mostrando los tres aunque no todos sigan el patron.
+- Compara ventanas de 12 meses completos (base, +1..+12, +13..+24, +25..+36) para evitar estacionalidad.
+- Lectura: Triple S confundido por salida a tiendas; rosa ambiguo (suba previa + Barbie); minifalda es el mas limpio. No confirma la hipotesis.
+- Pendiente: completar URLs de fuentes (Sneaker Freaker, Fashion Magazine, L'Officiel India, Rebag).

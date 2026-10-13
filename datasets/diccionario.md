@@ -36,3 +36,8 @@ Para cada temporada de desfile y cada casa: indice de busqueda de los 12 meses p
 
 ## analisis/marcas_perfil_ponderado.csv
 Correlacion promedio por desfase de 0 a 24 meses, con y sin ponderar cada foto por la relevancia de su casa.
+
+## trends_casos/ y casos_resumen.csv / casos_pasarela.csv
+- `trends_casos/CASO__*.csv`: Google Trends mundo, mensual, 2 o 3 terminos por archivo en la misma escala. `<1` se lee como 0,5.
+- `casos_resumen.csv`: por termino, promedio de la base (12 meses previos al desfile) y de los años 1, 2 y 3; `mes_pico_media_movil` es poco confiable (saltos 2025-2026).
+- `casos_pasarela.csv`: % de fotos con el rasgo (rosa o mini) en la temporada del desfile vs promedio del resto de temporadas.

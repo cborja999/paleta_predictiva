@@ -48,3 +48,6 @@ Se bajaron de Google Trends (busqueda web, mensual 2004 a sep 2026) 8 consultas 
 - **Ponderacion del cruce:** cada foto se peso por la relevancia de busqueda de su casa. El promedio de correlaciones a 12 y 15 meses fue 0,033 sin ponderar y 0,023 ponderado: no cambia el resultado. La hipotesis sigue sin confirmarse ni refutarse.
 
 Limitaciones: buscar una marca no es comprarla; hay terminos ambiguos (hermes, cos, mango, valentino, etc.) y marcas con volumen muy bajo (Fendi, Cardon, Pull and Bear).
+
+## Tres casos ilustrativos (octubre 2026)
+Triple S de Balenciaga, rosa de Valentino y minifalda de Miu Miu: como se movieron las busquedas en los 3 años despues del desfile. Son ejemplos elegidos (sesgo de seleccion), **no prueba**. Detalle, tabla y limites en `analisis/casos_resumen.md`; datos en `datasets/trends_casos/`; codigo `analisis/casos_ilustrativos.py`.
