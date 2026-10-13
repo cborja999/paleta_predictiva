@@ -1,0 +1,24 @@
+PASO 1 - Que Gemini mire las fotos de runway y anote color, prenda y silueta
+
+Archivos de esta carpeta:
+- muestra_runway_para_gemini.csv : 2.070 looks (23 temporadas x 90 looks), ya armada.
+- extraer_color_silueta.py : el programa que le manda cada foto a Gemini.
+- muestrear_runway.py : el programa que armo la muestra (por si quieren cambiar el tamano).
+
+Como correrlo:
+1. Sacar una clave gratis en https://aistudio.google.com/apikey
+   (no la compartas ni la subas a GitHub)
+2. Abrir la Terminal en esta carpeta e instalar:
+      pip3 install google-genai requests
+3. Cargar la clave:
+      export GEMINI_API_KEY="tu_clave"
+4. Probar con 3 fotos:
+      python3 extraer_color_silueta.py --prueba
+5. Si salio bien, correr todas (las 3 de prueba no se repiten):
+      python3 extraer_color_silueta.py
+6. Resultado: resultados_gemini.csv
+
+Notas:
+- Si se corta o llega al limite diario del plan gratis, volve a correrlo: sigue donde quedo.
+- Si dice error de modelo, cambiar la linea MODELO del programa por el Flash vigente en aistudio.google.com
+- Las fotos son de door11.com y tienen derechos de autor: usarlas solo para el analisis, no subirlas al repo.

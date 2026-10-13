@@ -1,0 +1,2431 @@
+id,temporada,anio,ciudad,marca,look,ruta_local
+1,FW,2011,paris,alexander mcqueen,row1115,fotos_vogue/00001.jpg
+2,FW,2011,paris,alexander mcqueen,row1123,fotos_vogue/00002.jpg
+3,FW,2011,paris,alexander mcqueen,row1130,fotos_vogue/00003.jpg
+4,FW,2011,paris,alexander mcqueen,row1138,fotos_vogue/00004.jpg
+5,FW,2011,paris,alexander mcqueen,row1145,fotos_vogue/00005.jpg
+6,FW,2011,paris,balenciaga,row7630,fotos_vogue/00006.jpg
+7,FW,2011,paris,balenciaga,row7637,fotos_vogue/00007.jpg
+8,FW,2011,paris,balenciaga,row7645,fotos_vogue/00008.jpg
+9,FW,2011,paris,balenciaga,row7652,fotos_vogue/00009.jpg
+10,FW,2011,sin_dato,calvin klein collection,row13007,fotos_vogue/00010.jpg
+11,FW,2011,sin_dato,calvin klein collection,row13014,fotos_vogue/00011.jpg
+12,FW,2011,sin_dato,calvin klein collection,row13022,fotos_vogue/00012.jpg
+13,FW,2011,sin_dato,calvin klein collection,row13030,fotos_vogue/00013.jpg
+14,FW,2011,sin_dato,calvin klein collection,row13037,fotos_vogue/00014.jpg
+15,FW,2011,paris,chanel,row18043,fotos_vogue/00015.jpg
+16,FW,2011,paris,chanel,row18050,fotos_vogue/00016.jpg
+17,FW,2011,paris,chanel,row18058,fotos_vogue/00017.jpg
+18,FW,2011,paris,chanel,row18065,fotos_vogue/00018.jpg
+19,FW,2011,paris,chanel,row18073,fotos_vogue/00019.jpg
+20,FW,2011,paris,chanel,row18080,fotos_vogue/00020.jpg
+21,FW,2011,paris,chanel,row18088,fotos_vogue/00021.jpg
+22,FW,2011,paris,chanel,row18095,fotos_vogue/00022.jpg
+23,FW,2011,paris,chanel,row18103,fotos_vogue/00023.jpg
+24,FW,2011,paris,chanel,row18110,fotos_vogue/00024.jpg
+25,FW,2011,sin_dato,christian dior,row27609,fotos_vogue/00025.jpg
+26,FW,2011,sin_dato,christian dior,row27616,fotos_vogue/00026.jpg
+27,FW,2011,sin_dato,christian dior,row27624,fotos_vogue/00027.jpg
+28,FW,2011,sin_dato,christian dior,row27631,fotos_vogue/00028.jpg
+29,FW,2011,sin_dato,christian dior,row27639,fotos_vogue/00029.jpg
+30,FW,2011,sin_dato,christian dior,row27646,fotos_vogue/00030.jpg
+31,FW,2011,sin_dato,christian dior,row27654,fotos_vogue/00031.jpg
+32,FW,2011,sin_dato,christian dior,row27661,fotos_vogue/00032.jpg
+33,FW,2011,sin_dato,christian dior,row27669,fotos_vogue/00033.jpg
+34,FW,2011,milan,fendi,row34697,fotos_vogue/00034.jpg
+35,FW,2011,milan,fendi,row34705,fotos_vogue/00035.jpg
+36,FW,2011,milan,fendi,row34713,fotos_vogue/00036.jpg
+37,FW,2011,milan,fendi,row34720,fotos_vogue/00037.jpg
+38,FW,2011,milan,fendi,row34728,fotos_vogue/00038.jpg
+39,FW,2011,milan,gucci,row40192,fotos_vogue/00039.jpg
+40,FW,2011,milan,gucci,row40200,fotos_vogue/00040.jpg
+41,FW,2011,milan,gucci,row40207,fotos_vogue/00041.jpg
+42,FW,2011,milan,gucci,row40215,fotos_vogue/00042.jpg
+43,FW,2011,milan,gucci,row40222,fotos_vogue/00043.jpg
+44,FW,2011,milan,gucci,row40230,fotos_vogue/00044.jpg
+45,FW,2011,milan,gucci,row40237,fotos_vogue/00045.jpg
+46,FW,2011,paris,hermes,row46954,fotos_vogue/00046.jpg
+47,FW,2011,paris,hermes,row46961,fotos_vogue/00047.jpg
+48,FW,2011,paris,hermes,row46969,fotos_vogue/00048.jpg
+49,FW,2011,paris,hermes,row46976,fotos_vogue/00049.jpg
+50,FW,2011,paris,hermes,row46984,fotos_vogue/00050.jpg
+51,FW,2011,paris,hermes,row46991,fotos_vogue/00051.jpg
+52,FW,2011,paris,louis vuitton,row51205,fotos_vogue/00052.jpg
+53,FW,2011,paris,louis vuitton,row51212,fotos_vogue/00053.jpg
+54,FW,2011,paris,louis vuitton,row51220,fotos_vogue/00054.jpg
+55,FW,2011,paris,louis vuitton,row51227,fotos_vogue/00055.jpg
+56,FW,2011,paris,louis vuitton,row51235,fotos_vogue/00056.jpg
+57,FW,2011,paris,louis vuitton,row51243,fotos_vogue/00057.jpg
+58,FW,2011,paris,louis vuitton,row51250,fotos_vogue/00058.jpg
+59,FW,2011,paris,louis vuitton,row51258,fotos_vogue/00059.jpg
+60,FW,2011,paris,louis vuitton,row51265,fotos_vogue/00060.jpg
+61,FW,2011,milan,prada,row57223,fotos_vogue/00061.jpg
+62,FW,2011,milan,prada,row57230,fotos_vogue/00062.jpg
+63,FW,2011,milan,prada,row57238,fotos_vogue/00063.jpg
+64,FW,2011,milan,prada,row57245,fotos_vogue/00064.jpg
+65,FW,2011,milan,prada,row57253,fotos_vogue/00065.jpg
+66,FW,2011,new-york,ralph lauren,row62341,fotos_vogue/00066.jpg
+67,FW,2011,new-york,ralph lauren,row62349,fotos_vogue/00067.jpg
+68,FW,2011,new-york,ralph lauren,row62356,fotos_vogue/00068.jpg
+69,FW,2011,new-york,ralph lauren,row62364,fotos_vogue/00069.jpg
+70,FW,2011,new-york,ralph lauren,row62371,fotos_vogue/00070.jpg
+71,FW,2011,new-york,ralph lauren,row62379,fotos_vogue/00071.jpg
+72,FW,2011,new-york,ralph lauren,row62386,fotos_vogue/00072.jpg
+73,FW,2011,paris,saint laurent,row66347,fotos_vogue/00073.jpg
+74,FW,2011,paris,saint laurent,row66354,fotos_vogue/00074.jpg
+75,FW,2011,paris,saint laurent,row66362,fotos_vogue/00075.jpg
+76,FW,2011,paris,saint laurent,row66369,fotos_vogue/00076.jpg
+77,FW,2011,paris,saint laurent,row66377,fotos_vogue/00077.jpg
+78,FW,2011,paris,saint laurent,row66384,fotos_vogue/00078.jpg
+79,FW,2011,paris,valentino,row72711,fotos_vogue/00079.jpg
+80,FW,2011,paris,valentino,row72719,fotos_vogue/00080.jpg
+81,FW,2011,paris,valentino,row72726,fotos_vogue/00081.jpg
+82,FW,2011,paris,valentino,row72734,fotos_vogue/00082.jpg
+83,FW,2011,paris,valentino,row72741,fotos_vogue/00083.jpg
+84,FW,2011,paris,valentino,row72749,fotos_vogue/00084.jpg
+85,FW,2011,milan,versace,row82120,fotos_vogue/00085.jpg
+86,FW,2011,milan,versace,row82128,fotos_vogue/00086.jpg
+87,FW,2011,milan,versace,row82135,fotos_vogue/00087.jpg
+88,FW,2011,milan,versace,row82143,fotos_vogue/00088.jpg
+89,FW,2011,milan,versace,row82150,fotos_vogue/00089.jpg
+90,FW,2011,milan,versace,row82158,fotos_vogue/00090.jpg
+91,SS,2011,paris,alexander mcqueen,row4109,fotos_vogue/00091.jpg
+92,SS,2011,paris,alexander mcqueen,row4117,fotos_vogue/00092.jpg
+93,SS,2011,paris,alexander mcqueen,row4124,fotos_vogue/00093.jpg
+94,SS,2011,paris,alexander mcqueen,row4131,fotos_vogue/00094.jpg
+95,SS,2011,paris,alexander mcqueen,row4139,fotos_vogue/00095.jpg
+96,SS,2011,paris,balenciaga,row10750,fotos_vogue/00096.jpg
+97,SS,2011,paris,balenciaga,row10757,fotos_vogue/00097.jpg
+98,SS,2011,paris,balenciaga,row10765,fotos_vogue/00098.jpg
+99,SS,2011,paris,balenciaga,row10772,fotos_vogue/00099.jpg
+100,SS,2011,paris,balenciaga,row10779,fotos_vogue/00100.jpg
+101,SS,2011,sin_dato,calvin klein collection,row15134,fotos_vogue/00101.jpg
+102,SS,2011,sin_dato,calvin klein collection,row15141,fotos_vogue/00102.jpg
+103,SS,2011,sin_dato,calvin klein collection,row15149,fotos_vogue/00103.jpg
+104,SS,2011,sin_dato,calvin klein collection,row15156,fotos_vogue/00104.jpg
+105,SS,2011,sin_dato,calvin klein collection,row15163,fotos_vogue/00105.jpg
+106,SS,2011,paris,chanel,row24562,fotos_vogue/00106.jpg
+107,SS,2011,paris,chanel,row24569,fotos_vogue/00107.jpg
+108,SS,2011,paris,chanel,row24576,fotos_vogue/00108.jpg
+109,SS,2011,paris,chanel,row24584,fotos_vogue/00109.jpg
+110,SS,2011,paris,chanel,row24591,fotos_vogue/00110.jpg
+111,SS,2011,paris,chanel,row24599,fotos_vogue/00111.jpg
+112,SS,2011,paris,chanel,row24606,fotos_vogue/00112.jpg
+113,SS,2011,paris,chanel,row24613,fotos_vogue/00113.jpg
+114,SS,2011,paris,chanel,row24621,fotos_vogue/00114.jpg
+115,SS,2011,paris,chanel,row24628,fotos_vogue/00115.jpg
+116,SS,2011,paris,chanel,row24635,fotos_vogue/00116.jpg
+117,SS,2011,paris,chanel,row24643,fotos_vogue/00117.jpg
+118,SS,2011,sin_dato,christian dior,row32256,fotos_vogue/00118.jpg
+119,SS,2011,sin_dato,christian dior,row32263,fotos_vogue/00119.jpg
+120,SS,2011,sin_dato,christian dior,row32271,fotos_vogue/00120.jpg
+121,SS,2011,sin_dato,christian dior,row32278,fotos_vogue/00121.jpg
+122,SS,2011,sin_dato,christian dior,row32286,fotos_vogue/00122.jpg
+123,SS,2011,sin_dato,christian dior,row32293,fotos_vogue/00123.jpg
+124,SS,2011,milan,fendi,row37893,fotos_vogue/00124.jpg
+125,SS,2011,milan,fendi,row37901,fotos_vogue/00125.jpg
+126,SS,2011,milan,fendi,row37908,fotos_vogue/00126.jpg
+127,SS,2011,milan,fendi,row37915,fotos_vogue/00127.jpg
+128,SS,2011,milan,fendi,row37923,fotos_vogue/00128.jpg
+129,SS,2011,milan,fendi,row37930,fotos_vogue/00129.jpg
+130,SS,2011,milan,gucci,row44546,fotos_vogue/00130.jpg
+131,SS,2011,milan,gucci,row44554,fotos_vogue/00131.jpg
+132,SS,2011,milan,gucci,row44561,fotos_vogue/00132.jpg
+133,SS,2011,milan,gucci,row44569,fotos_vogue/00133.jpg
+134,SS,2011,milan,gucci,row44576,fotos_vogue/00134.jpg
+135,SS,2011,milan,gucci,row44583,fotos_vogue/00135.jpg
+136,SS,2011,paris,hermes,row49042,fotos_vogue/00136.jpg
+137,SS,2011,paris,hermes,row49049,fotos_vogue/00137.jpg
+138,SS,2011,paris,hermes,row49056,fotos_vogue/00138.jpg
+139,SS,2011,paris,hermes,row49064,fotos_vogue/00139.jpg
+140,SS,2011,paris,hermes,row49071,fotos_vogue/00140.jpg
+141,SS,2011,paris,hermes,row49079,fotos_vogue/00141.jpg
+142,SS,2011,paris,hermes,row49086,fotos_vogue/00142.jpg
+143,SS,2011,paris,louis vuitton,row54864,fotos_vogue/00143.jpg
+144,SS,2011,paris,louis vuitton,row54872,fotos_vogue/00144.jpg
+145,SS,2011,paris,louis vuitton,row54879,fotos_vogue/00145.jpg
+146,SS,2011,paris,louis vuitton,row54886,fotos_vogue/00146.jpg
+147,SS,2011,paris,louis vuitton,row54894,fotos_vogue/00147.jpg
+148,SS,2011,paris,louis vuitton,row54901,fotos_vogue/00148.jpg
+149,SS,2011,paris,louis vuitton,row54908,fotos_vogue/00149.jpg
+150,SS,2011,paris,louis vuitton,row54916,fotos_vogue/00150.jpg
+151,SS,2011,milan,prada,row60179,fotos_vogue/00151.jpg
+152,SS,2011,milan,prada,row60187,fotos_vogue/00152.jpg
+153,SS,2011,milan,prada,row60194,fotos_vogue/00153.jpg
+154,SS,2011,milan,prada,row60201,fotos_vogue/00154.jpg
+155,SS,2011,milan,prada,row60209,fotos_vogue/00155.jpg
+156,SS,2011,new-york,ralph lauren,row64584,fotos_vogue/00156.jpg
+157,SS,2011,new-york,ralph lauren,row64591,fotos_vogue/00157.jpg
+158,SS,2011,new-york,ralph lauren,row64599,fotos_vogue/00158.jpg
+159,SS,2011,new-york,ralph lauren,row64606,fotos_vogue/00159.jpg
+160,SS,2011,new-york,ralph lauren,row64613,fotos_vogue/00160.jpg
+161,SS,2011,new-york,ralph lauren,row64621,fotos_vogue/00161.jpg
+162,SS,2011,new-york,ralph lauren,row64628,fotos_vogue/00162.jpg
+163,SS,2011,new-york,ralph lauren,row64636,fotos_vogue/00163.jpg
+164,SS,2011,paris,saint laurent,row69893,fotos_vogue/00164.jpg
+165,SS,2011,paris,saint laurent,row69900,fotos_vogue/00165.jpg
+166,SS,2011,paris,saint laurent,row69908,fotos_vogue/00166.jpg
+167,SS,2011,paris,saint laurent,row69915,fotos_vogue/00167.jpg
+168,SS,2011,paris,saint laurent,row69922,fotos_vogue/00168.jpg
+169,SS,2011,paris,valentino,row78197,fotos_vogue/00169.jpg
+170,SS,2011,paris,valentino,row78204,fotos_vogue/00170.jpg
+171,SS,2011,paris,valentino,row78212,fotos_vogue/00171.jpg
+172,SS,2011,paris,valentino,row78219,fotos_vogue/00172.jpg
+173,SS,2011,paris,valentino,row78226,fotos_vogue/00173.jpg
+174,SS,2011,paris,valentino,row78234,fotos_vogue/00174.jpg
+175,SS,2011,milan,versace,row86148,fotos_vogue/00175.jpg
+176,SS,2011,milan,versace,row86155,fotos_vogue/00176.jpg
+177,SS,2011,milan,versace,row86163,fotos_vogue/00177.jpg
+178,SS,2011,milan,versace,row86170,fotos_vogue/00178.jpg
+179,SS,2011,milan,versace,row86177,fotos_vogue/00179.jpg
+180,SS,2011,milan,versace,row86185,fotos_vogue/00180.jpg
+181,FW,2012,paris,alexander mcqueen,row1184,fotos_vogue/00181.jpg
+182,FW,2012,paris,alexander mcqueen,row1192,fotos_vogue/00182.jpg
+183,FW,2012,paris,alexander mcqueen,row1199,fotos_vogue/00183.jpg
+184,FW,2012,paris,alexander mcqueen,row1207,fotos_vogue/00184.jpg
+185,FW,2012,paris,alexander mcqueen,row1214,fotos_vogue/00185.jpg
+186,FW,2012,paris,balenciaga,row7687,fotos_vogue/00186.jpg
+187,FW,2012,paris,balenciaga,row7694,fotos_vogue/00187.jpg
+188,FW,2012,paris,balenciaga,row7702,fotos_vogue/00188.jpg
+189,FW,2012,paris,balenciaga,row7709,fotos_vogue/00189.jpg
+190,FW,2012,paris,balenciaga,row7716,fotos_vogue/00190.jpg
+191,FW,2012,sin_dato,calvin klein collection,row13088,fotos_vogue/00191.jpg
+192,FW,2012,sin_dato,calvin klein collection,row13095,fotos_vogue/00192.jpg
+193,FW,2012,sin_dato,calvin klein collection,row13103,fotos_vogue/00193.jpg
+194,FW,2012,sin_dato,calvin klein collection,row13110,fotos_vogue/00194.jpg
+195,FW,2012,sin_dato,calvin klein collection,row13118,fotos_vogue/00195.jpg
+196,FW,2012,paris,chanel,row18185,fotos_vogue/00196.jpg
+197,FW,2012,paris,chanel,row18193,fotos_vogue/00197.jpg
+198,FW,2012,paris,chanel,row18200,fotos_vogue/00198.jpg
+199,FW,2012,paris,chanel,row18208,fotos_vogue/00199.jpg
+200,FW,2012,paris,chanel,row18215,fotos_vogue/00200.jpg
+201,FW,2012,paris,chanel,row18223,fotos_vogue/00201.jpg
+202,FW,2012,paris,chanel,row18230,fotos_vogue/00202.jpg
+203,FW,2012,paris,chanel,row18238,fotos_vogue/00203.jpg
+204,FW,2012,paris,chanel,row18245,fotos_vogue/00204.jpg
+205,FW,2012,sin_dato,christian dior,row27727,fotos_vogue/00205.jpg
+206,FW,2012,sin_dato,christian dior,row27735,fotos_vogue/00206.jpg
+207,FW,2012,sin_dato,christian dior,row27742,fotos_vogue/00207.jpg
+208,FW,2012,sin_dato,christian dior,row27750,fotos_vogue/00208.jpg
+209,FW,2012,sin_dato,christian dior,row27757,fotos_vogue/00209.jpg
+210,FW,2012,sin_dato,christian dior,row27765,fotos_vogue/00210.jpg
+211,FW,2012,sin_dato,christian dior,row27772,fotos_vogue/00211.jpg
+212,FW,2012,sin_dato,christian dior,row27780,fotos_vogue/00212.jpg
+213,FW,2012,milan,fendi,row34766,fotos_vogue/00213.jpg
+214,FW,2012,milan,fendi,row34774,fotos_vogue/00214.jpg
+215,FW,2012,milan,fendi,row34781,fotos_vogue/00215.jpg
+216,FW,2012,milan,fendi,row34789,fotos_vogue/00216.jpg
+217,FW,2012,milan,fendi,row34796,fotos_vogue/00217.jpg
+218,FW,2012,milan,fendi,row34804,fotos_vogue/00218.jpg
+219,FW,2012,milan,gucci,row40287,fotos_vogue/00219.jpg
+220,FW,2012,milan,gucci,row40294,fotos_vogue/00220.jpg
+221,FW,2012,milan,gucci,row40302,fotos_vogue/00221.jpg
+222,FW,2012,milan,gucci,row40309,fotos_vogue/00222.jpg
+223,FW,2012,milan,gucci,row40317,fotos_vogue/00223.jpg
+224,FW,2012,milan,gucci,row40324,fotos_vogue/00224.jpg
+225,FW,2012,milan,gucci,row40332,fotos_vogue/00225.jpg
+226,FW,2012,paris,hermes,row47047,fotos_vogue/00226.jpg
+227,FW,2012,paris,hermes,row47055,fotos_vogue/00227.jpg
+228,FW,2012,paris,hermes,row47062,fotos_vogue/00228.jpg
+229,FW,2012,paris,hermes,row47070,fotos_vogue/00229.jpg
+230,FW,2012,paris,hermes,row47077,fotos_vogue/00230.jpg
+231,FW,2012,paris,hermes,row47085,fotos_vogue/00231.jpg
+232,FW,2012,paris,louis vuitton,row51315,fotos_vogue/00232.jpg
+233,FW,2012,paris,louis vuitton,row51323,fotos_vogue/00233.jpg
+234,FW,2012,paris,louis vuitton,row51330,fotos_vogue/00234.jpg
+235,FW,2012,paris,louis vuitton,row51337,fotos_vogue/00235.jpg
+236,FW,2012,paris,louis vuitton,row51345,fotos_vogue/00236.jpg
+237,FW,2012,paris,louis vuitton,row51352,fotos_vogue/00237.jpg
+238,FW,2012,milan,prada,row57304,fotos_vogue/00238.jpg
+239,FW,2012,milan,prada,row57311,fotos_vogue/00239.jpg
+240,FW,2012,milan,prada,row57319,fotos_vogue/00240.jpg
+241,FW,2012,milan,prada,row57326,fotos_vogue/00241.jpg
+242,FW,2012,milan,prada,row57334,fotos_vogue/00242.jpg
+243,FW,2012,milan,prada,row57341,fotos_vogue/00243.jpg
+244,FW,2012,new-york,ralph lauren,row62398,fotos_vogue/00244.jpg
+245,FW,2012,new-york,ralph lauren,row62405,fotos_vogue/00245.jpg
+246,FW,2012,new-york,ralph lauren,row62413,fotos_vogue/00246.jpg
+247,FW,2012,new-york,ralph lauren,row62420,fotos_vogue/00247.jpg
+248,FW,2012,new-york,ralph lauren,row62428,fotos_vogue/00248.jpg
+249,FW,2012,new-york,ralph lauren,row62435,fotos_vogue/00249.jpg
+250,FW,2012,new-york,ralph lauren,row62442,fotos_vogue/00250.jpg
+251,FW,2012,new-york,ralph lauren,row62450,fotos_vogue/00251.jpg
+252,FW,2012,paris,saint laurent,row66419,fotos_vogue/00252.jpg
+253,FW,2012,paris,saint laurent,row66427,fotos_vogue/00253.jpg
+254,FW,2012,paris,saint laurent,row66434,fotos_vogue/00254.jpg
+255,FW,2012,paris,saint laurent,row66442,fotos_vogue/00255.jpg
+256,FW,2012,paris,saint laurent,row66449,fotos_vogue/00256.jpg
+257,FW,2012,paris,valentino,row72843,fotos_vogue/00257.jpg
+258,FW,2012,paris,valentino,row72850,fotos_vogue/00258.jpg
+259,FW,2012,paris,valentino,row72858,fotos_vogue/00259.jpg
+260,FW,2012,paris,valentino,row72865,fotos_vogue/00260.jpg
+261,FW,2012,paris,valentino,row72873,fotos_vogue/00261.jpg
+262,FW,2012,paris,valentino,row72880,fotos_vogue/00262.jpg
+263,FW,2012,paris,valentino,row72888,fotos_vogue/00263.jpg
+264,FW,2012,paris,valentino,row72895,fotos_vogue/00264.jpg
+265,FW,2012,milan,versace,row82216,fotos_vogue/00265.jpg
+266,FW,2012,milan,versace,row82224,fotos_vogue/00266.jpg
+267,FW,2012,milan,versace,row82231,fotos_vogue/00267.jpg
+268,FW,2012,milan,versace,row82239,fotos_vogue/00268.jpg
+269,FW,2012,milan,versace,row82246,fotos_vogue/00269.jpg
+270,FW,2012,milan,versace,row82254,fotos_vogue/00270.jpg
+271,SS,2012,paris,alexander mcqueen,row4179,fotos_vogue/00271.jpg
+272,SS,2012,paris,alexander mcqueen,row4186,fotos_vogue/00272.jpg
+273,SS,2012,paris,alexander mcqueen,row4194,fotos_vogue/00273.jpg
+274,SS,2012,paris,alexander mcqueen,row4201,fotos_vogue/00274.jpg
+275,SS,2012,paris,alexander mcqueen,row4208,fotos_vogue/00275.jpg
+276,SS,2012,paris,balenciaga,row10811,fotos_vogue/00276.jpg
+277,SS,2012,paris,balenciaga,row10818,fotos_vogue/00277.jpg
+278,SS,2012,paris,balenciaga,row10826,fotos_vogue/00278.jpg
+279,SS,2012,paris,balenciaga,row10833,fotos_vogue/00279.jpg
+280,SS,2012,paris,balenciaga,row10840,fotos_vogue/00280.jpg
+281,SS,2012,sin_dato,calvin klein collection,row15215,fotos_vogue/00281.jpg
+282,SS,2012,sin_dato,calvin klein collection,row15223,fotos_vogue/00282.jpg
+283,SS,2012,sin_dato,calvin klein collection,row15230,fotos_vogue/00283.jpg
+284,SS,2012,sin_dato,calvin klein collection,row15237,fotos_vogue/00284.jpg
+285,SS,2012,paris,chanel,row24708,fotos_vogue/00285.jpg
+286,SS,2012,paris,chanel,row24715,fotos_vogue/00286.jpg
+287,SS,2012,paris,chanel,row24723,fotos_vogue/00287.jpg
+288,SS,2012,paris,chanel,row24730,fotos_vogue/00288.jpg
+289,SS,2012,paris,chanel,row24737,fotos_vogue/00289.jpg
+290,SS,2012,paris,chanel,row24744,fotos_vogue/00290.jpg
+291,SS,2012,paris,chanel,row24752,fotos_vogue/00291.jpg
+292,SS,2012,paris,chanel,row24759,fotos_vogue/00292.jpg
+293,SS,2012,paris,chanel,row24766,fotos_vogue/00293.jpg
+294,SS,2012,paris,chanel,row24773,fotos_vogue/00294.jpg
+295,SS,2012,paris,chanel,row24780,fotos_vogue/00295.jpg
+296,SS,2012,paris,chanel,row24788,fotos_vogue/00296.jpg
+297,SS,2012,sin_dato,christian dior,row32343,fotos_vogue/00297.jpg
+298,SS,2012,sin_dato,christian dior,row32350,fotos_vogue/00298.jpg
+299,SS,2012,sin_dato,christian dior,row32357,fotos_vogue/00299.jpg
+300,SS,2012,sin_dato,christian dior,row32365,fotos_vogue/00300.jpg
+301,SS,2012,sin_dato,christian dior,row32372,fotos_vogue/00301.jpg
+302,SS,2012,sin_dato,christian dior,row32379,fotos_vogue/00302.jpg
+303,SS,2012,sin_dato,christian dior,row32386,fotos_vogue/00303.jpg
+304,SS,2012,milan,fendi,row37938,fotos_vogue/00304.jpg
+305,SS,2012,milan,fendi,row37946,fotos_vogue/00305.jpg
+306,SS,2012,milan,fendi,row37953,fotos_vogue/00306.jpg
+307,SS,2012,milan,fendi,row37960,fotos_vogue/00307.jpg
+308,SS,2012,milan,fendi,row37967,fotos_vogue/00308.jpg
+309,SS,2012,milan,fendi,row37975,fotos_vogue/00309.jpg
+310,SS,2012,milan,gucci,row44634,fotos_vogue/00310.jpg
+311,SS,2012,milan,gucci,row44641,fotos_vogue/00311.jpg
+312,SS,2012,milan,gucci,row44648,fotos_vogue/00312.jpg
+313,SS,2012,milan,gucci,row44655,fotos_vogue/00313.jpg
+314,SS,2012,milan,gucci,row44663,fotos_vogue/00314.jpg
+315,SS,2012,milan,gucci,row44670,fotos_vogue/00315.jpg
+316,SS,2012,paris,hermes,row49144,fotos_vogue/00316.jpg
+317,SS,2012,paris,hermes,row49151,fotos_vogue/00317.jpg
+318,SS,2012,paris,hermes,row49159,fotos_vogue/00318.jpg
+319,SS,2012,paris,hermes,row49166,fotos_vogue/00319.jpg
+320,SS,2012,paris,hermes,row49173,fotos_vogue/00320.jpg
+321,SS,2012,paris,louis vuitton,row54958,fotos_vogue/00321.jpg
+322,SS,2012,paris,louis vuitton,row54965,fotos_vogue/00322.jpg
+323,SS,2012,paris,louis vuitton,row54973,fotos_vogue/00323.jpg
+324,SS,2012,paris,louis vuitton,row54980,fotos_vogue/00324.jpg
+325,SS,2012,paris,louis vuitton,row54987,fotos_vogue/00325.jpg
+326,SS,2012,paris,louis vuitton,row54994,fotos_vogue/00326.jpg
+327,SS,2012,paris,louis vuitton,row55002,fotos_vogue/00327.jpg
+328,SS,2012,milan,prada,row60258,fotos_vogue/00328.jpg
+329,SS,2012,milan,prada,row60265,fotos_vogue/00329.jpg
+330,SS,2012,milan,prada,row60272,fotos_vogue/00330.jpg
+331,SS,2012,milan,prada,row60279,fotos_vogue/00331.jpg
+332,SS,2012,milan,prada,row60287,fotos_vogue/00332.jpg
+333,SS,2012,milan,prada,row60294,fotos_vogue/00333.jpg
+334,SS,2012,new-york,ralph lauren,row64644,fotos_vogue/00334.jpg
+335,SS,2012,new-york,ralph lauren,row64651,fotos_vogue/00335.jpg
+336,SS,2012,new-york,ralph lauren,row64659,fotos_vogue/00336.jpg
+337,SS,2012,new-york,ralph lauren,row64666,fotos_vogue/00337.jpg
+338,SS,2012,new-york,ralph lauren,row64673,fotos_vogue/00338.jpg
+339,SS,2012,new-york,ralph lauren,row64680,fotos_vogue/00339.jpg
+340,SS,2012,new-york,ralph lauren,row64687,fotos_vogue/00340.jpg
+341,SS,2012,new-york,ralph lauren,row64695,fotos_vogue/00341.jpg
+342,SS,2012,paris,saint laurent,row69955,fotos_vogue/00342.jpg
+343,SS,2012,paris,saint laurent,row69962,fotos_vogue/00343.jpg
+344,SS,2012,paris,saint laurent,row69969,fotos_vogue/00344.jpg
+345,SS,2012,paris,saint laurent,row69977,fotos_vogue/00345.jpg
+346,SS,2012,paris,saint laurent,row69984,fotos_vogue/00346.jpg
+347,SS,2012,paris,valentino,row78305,fotos_vogue/00347.jpg
+348,SS,2012,paris,valentino,row78312,fotos_vogue/00348.jpg
+349,SS,2012,paris,valentino,row78319,fotos_vogue/00349.jpg
+350,SS,2012,paris,valentino,row78327,fotos_vogue/00350.jpg
+351,SS,2012,paris,valentino,row78334,fotos_vogue/00351.jpg
+352,SS,2012,paris,valentino,row78341,fotos_vogue/00352.jpg
+353,SS,2012,paris,valentino,row78348,fotos_vogue/00353.jpg
+354,SS,2012,paris,valentino,row78356,fotos_vogue/00354.jpg
+355,SS,2012,milan,versace,row86241,fotos_vogue/00355.jpg
+356,SS,2012,milan,versace,row86248,fotos_vogue/00356.jpg
+357,SS,2012,milan,versace,row86255,fotos_vogue/00357.jpg
+358,SS,2012,milan,versace,row86262,fotos_vogue/00358.jpg
+359,SS,2012,milan,versace,row86270,fotos_vogue/00359.jpg
+360,SS,2012,milan,versace,row86277,fotos_vogue/00360.jpg
+361,FW,2013,paris,alexander mcqueen,row1246,fotos_vogue/00361.jpg
+362,FW,2013,paris,balenciaga,row7745,fotos_vogue/00362.jpg
+363,FW,2013,paris,balenciaga,row7752,fotos_vogue/00363.jpg
+364,FW,2013,paris,balenciaga,row7760,fotos_vogue/00364.jpg
+365,FW,2013,paris,balenciaga,row7767,fotos_vogue/00365.jpg
+366,FW,2013,paris,balenciaga,row7774,fotos_vogue/00366.jpg
+367,FW,2013,sin_dato,calvin klein collection,row13164,fotos_vogue/00367.jpg
+368,FW,2013,sin_dato,calvin klein collection,row13171,fotos_vogue/00368.jpg
+369,FW,2013,sin_dato,calvin klein collection,row13179,fotos_vogue/00369.jpg
+370,FW,2013,sin_dato,calvin klein collection,row13186,fotos_vogue/00370.jpg
+371,FW,2013,sin_dato,calvin klein collection,row13194,fotos_vogue/00371.jpg
+372,FW,2013,paris,chanel,row18325,fotos_vogue/00372.jpg
+373,FW,2013,paris,chanel,row18333,fotos_vogue/00373.jpg
+374,FW,2013,paris,chanel,row18340,fotos_vogue/00374.jpg
+375,FW,2013,paris,chanel,row18347,fotos_vogue/00375.jpg
+376,FW,2013,paris,chanel,row18355,fotos_vogue/00376.jpg
+377,FW,2013,paris,chanel,row18362,fotos_vogue/00377.jpg
+378,FW,2013,paris,chanel,row18370,fotos_vogue/00378.jpg
+379,FW,2013,paris,chanel,row18377,fotos_vogue/00379.jpg
+380,FW,2013,paris,chanel,row18385,fotos_vogue/00380.jpg
+381,FW,2013,paris,chanel,row18392,fotos_vogue/00381.jpg
+382,FW,2013,sin_dato,christian dior,row27835,fotos_vogue/00382.jpg
+383,FW,2013,sin_dato,christian dior,row27842,fotos_vogue/00383.jpg
+384,FW,2013,sin_dato,christian dior,row27849,fotos_vogue/00384.jpg
+385,FW,2013,sin_dato,christian dior,row27857,fotos_vogue/00385.jpg
+386,FW,2013,sin_dato,christian dior,row27864,fotos_vogue/00386.jpg
+387,FW,2013,sin_dato,christian dior,row27872,fotos_vogue/00387.jpg
+388,FW,2013,sin_dato,christian dior,row27879,fotos_vogue/00388.jpg
+389,FW,2013,milan,fendi,row34848,fotos_vogue/00389.jpg
+390,FW,2013,milan,fendi,row34855,fotos_vogue/00390.jpg
+391,FW,2013,milan,fendi,row34863,fotos_vogue/00391.jpg
+392,FW,2013,milan,fendi,row34870,fotos_vogue/00392.jpg
+393,FW,2013,milan,fendi,row34877,fotos_vogue/00393.jpg
+394,FW,2013,milan,fendi,row34885,fotos_vogue/00394.jpg
+395,FW,2013,milan,gucci,row40380,fotos_vogue/00395.jpg
+396,FW,2013,milan,gucci,row40388,fotos_vogue/00396.jpg
+397,FW,2013,milan,gucci,row40395,fotos_vogue/00397.jpg
+398,FW,2013,milan,gucci,row40403,fotos_vogue/00398.jpg
+399,FW,2013,milan,gucci,row40410,fotos_vogue/00399.jpg
+400,FW,2013,milan,gucci,row40418,fotos_vogue/00400.jpg
+401,FW,2013,milan,gucci,row40425,fotos_vogue/00401.jpg
+402,FW,2013,paris,hermes,row47138,fotos_vogue/00402.jpg
+403,FW,2013,paris,hermes,row47146,fotos_vogue/00403.jpg
+404,FW,2013,paris,hermes,row47153,fotos_vogue/00404.jpg
+405,FW,2013,paris,hermes,row47161,fotos_vogue/00405.jpg
+406,FW,2013,paris,hermes,row47168,fotos_vogue/00406.jpg
+407,FW,2013,paris,louis vuitton,row51406,fotos_vogue/00407.jpg
+408,FW,2013,paris,louis vuitton,row51413,fotos_vogue/00408.jpg
+409,FW,2013,paris,louis vuitton,row51421,fotos_vogue/00409.jpg
+410,FW,2013,paris,louis vuitton,row51428,fotos_vogue/00410.jpg
+411,FW,2013,paris,louis vuitton,row51435,fotos_vogue/00411.jpg
+412,FW,2013,paris,louis vuitton,row51443,fotos_vogue/00412.jpg
+413,FW,2013,paris,louis vuitton,row51450,fotos_vogue/00413.jpg
+414,FW,2013,milan,prada,row57398,fotos_vogue/00414.jpg
+415,FW,2013,milan,prada,row57405,fotos_vogue/00415.jpg
+416,FW,2013,milan,prada,row57413,fotos_vogue/00416.jpg
+417,FW,2013,milan,prada,row57420,fotos_vogue/00417.jpg
+418,FW,2013,milan,prada,row57428,fotos_vogue/00418.jpg
+419,FW,2013,milan,prada,row57435,fotos_vogue/00419.jpg
+420,FW,2013,new-york,ralph lauren,row62478,fotos_vogue/00420.jpg
+421,FW,2013,new-york,ralph lauren,row62486,fotos_vogue/00421.jpg
+422,FW,2013,new-york,ralph lauren,row62493,fotos_vogue/00422.jpg
+423,FW,2013,new-york,ralph lauren,row62501,fotos_vogue/00423.jpg
+424,FW,2013,new-york,ralph lauren,row62508,fotos_vogue/00424.jpg
+425,FW,2013,new-york,ralph lauren,row62516,fotos_vogue/00425.jpg
+426,FW,2013,new-york,ralph lauren,row62523,fotos_vogue/00426.jpg
+427,FW,2013,new-york,ralph lauren,row62531,fotos_vogue/00427.jpg
+428,FW,2013,paris,saint laurent,row66498,fotos_vogue/00428.jpg
+429,FW,2013,paris,saint laurent,row66505,fotos_vogue/00429.jpg
+430,FW,2013,paris,saint laurent,row66513,fotos_vogue/00430.jpg
+431,FW,2013,paris,saint laurent,row66520,fotos_vogue/00431.jpg
+432,FW,2013,paris,saint laurent,row66528,fotos_vogue/00432.jpg
+433,FW,2013,paris,saint laurent,row66535,fotos_vogue/00433.jpg
+434,FW,2013,paris,valentino,row72999,fotos_vogue/00434.jpg
+435,FW,2013,paris,valentino,row73006,fotos_vogue/00435.jpg
+436,FW,2013,paris,valentino,row73014,fotos_vogue/00436.jpg
+437,FW,2013,paris,valentino,row73021,fotos_vogue/00437.jpg
+438,FW,2013,paris,valentino,row73028,fotos_vogue/00438.jpg
+439,FW,2013,paris,valentino,row73036,fotos_vogue/00439.jpg
+440,FW,2013,paris,valentino,row73043,fotos_vogue/00440.jpg
+441,FW,2013,paris,valentino,row73051,fotos_vogue/00441.jpg
+442,FW,2013,paris,valentino,row73058,fotos_vogue/00442.jpg
+443,FW,2013,paris,valentino,row73066,fotos_vogue/00443.jpg
+444,FW,2013,milan,versace,row82319,fotos_vogue/00444.jpg
+445,FW,2013,milan,versace,row82327,fotos_vogue/00445.jpg
+446,FW,2013,milan,versace,row82334,fotos_vogue/00446.jpg
+447,FW,2013,milan,versace,row82341,fotos_vogue/00447.jpg
+448,FW,2013,milan,versace,row82349,fotos_vogue/00448.jpg
+449,FW,2013,milan,versace,row82356,fotos_vogue/00449.jpg
+450,FW,2013,milan,versace,row82364,fotos_vogue/00450.jpg
+451,SS,2013,paris,alexander mcqueen,row4247,fotos_vogue/00451.jpg
+452,SS,2013,paris,alexander mcqueen,row4255,fotos_vogue/00452.jpg
+453,SS,2013,paris,alexander mcqueen,row4263,fotos_vogue/00453.jpg
+454,SS,2013,paris,alexander mcqueen,row4270,fotos_vogue/00454.jpg
+455,SS,2013,paris,balenciaga,row10865,fotos_vogue/00455.jpg
+456,SS,2013,paris,balenciaga,row10873,fotos_vogue/00456.jpg
+457,SS,2013,paris,balenciaga,row10880,fotos_vogue/00457.jpg
+458,SS,2013,paris,balenciaga,row10888,fotos_vogue/00458.jpg
+459,SS,2013,paris,balenciaga,row10896,fotos_vogue/00459.jpg
+460,SS,2013,sin_dato,calvin klein collection,row15283,fotos_vogue/00460.jpg
+461,SS,2013,sin_dato,calvin klein collection,row15290,fotos_vogue/00461.jpg
+462,SS,2013,sin_dato,calvin klein collection,row15298,fotos_vogue/00462.jpg
+463,SS,2013,sin_dato,calvin klein collection,row15306,fotos_vogue/00463.jpg
+464,SS,2013,sin_dato,calvin klein collection,row15313,fotos_vogue/00464.jpg
+465,SS,2013,paris,chanel,row24866,fotos_vogue/00465.jpg
+466,SS,2013,paris,chanel,row24874,fotos_vogue/00466.jpg
+467,SS,2013,paris,chanel,row24881,fotos_vogue/00467.jpg
+468,SS,2013,paris,chanel,row24889,fotos_vogue/00468.jpg
+469,SS,2013,paris,chanel,row24897,fotos_vogue/00469.jpg
+470,SS,2013,paris,chanel,row24904,fotos_vogue/00470.jpg
+471,SS,2013,paris,chanel,row24912,fotos_vogue/00471.jpg
+472,SS,2013,paris,chanel,row24920,fotos_vogue/00472.jpg
+473,SS,2013,paris,chanel,row24928,fotos_vogue/00473.jpg
+474,SS,2013,paris,chanel,row24935,fotos_vogue/00474.jpg
+475,SS,2013,sin_dato,christian dior,row32436,fotos_vogue/00475.jpg
+476,SS,2013,sin_dato,christian dior,row32444,fotos_vogue/00476.jpg
+477,SS,2013,sin_dato,christian dior,row32451,fotos_vogue/00477.jpg
+478,SS,2013,sin_dato,christian dior,row32459,fotos_vogue/00478.jpg
+479,SS,2013,sin_dato,christian dior,row32467,fotos_vogue/00479.jpg
+480,SS,2013,sin_dato,christian dior,row32474,fotos_vogue/00480.jpg
+481,SS,2013,sin_dato,christian dior,row32482,fotos_vogue/00481.jpg
+482,SS,2013,milan,fendi,row38008,fotos_vogue/00482.jpg
+483,SS,2013,milan,fendi,row38015,fotos_vogue/00483.jpg
+484,SS,2013,milan,fendi,row38023,fotos_vogue/00484.jpg
+485,SS,2013,milan,fendi,row38031,fotos_vogue/00485.jpg
+486,SS,2013,milan,fendi,row38038,fotos_vogue/00486.jpg
+487,SS,2013,milan,fendi,row38046,fotos_vogue/00487.jpg
+488,SS,2013,milan,fendi,row38054,fotos_vogue/00488.jpg
+489,SS,2013,milan,gucci,row44717,fotos_vogue/00489.jpg
+490,SS,2013,milan,gucci,row44724,fotos_vogue/00490.jpg
+491,SS,2013,milan,gucci,row44732,fotos_vogue/00491.jpg
+492,SS,2013,milan,gucci,row44740,fotos_vogue/00492.jpg
+493,SS,2013,milan,gucci,row44747,fotos_vogue/00493.jpg
+494,SS,2013,milan,gucci,row44755,fotos_vogue/00494.jpg
+495,SS,2013,paris,hermes,row49231,fotos_vogue/00495.jpg
+496,SS,2013,paris,hermes,row49238,fotos_vogue/00496.jpg
+497,SS,2013,paris,hermes,row49246,fotos_vogue/00497.jpg
+498,SS,2013,paris,hermes,row49254,fotos_vogue/00498.jpg
+499,SS,2013,paris,louis vuitton,row55049,fotos_vogue/00499.jpg
+500,SS,2013,paris,louis vuitton,row55057,fotos_vogue/00500.jpg
+501,SS,2013,paris,louis vuitton,row55065,fotos_vogue/00501.jpg
+502,SS,2013,paris,louis vuitton,row55072,fotos_vogue/00502.jpg
+503,SS,2013,paris,louis vuitton,row55080,fotos_vogue/00503.jpg
+504,SS,2013,milan,prada,row60350,fotos_vogue/00504.jpg
+505,SS,2013,milan,prada,row60358,fotos_vogue/00505.jpg
+506,SS,2013,milan,prada,row60365,fotos_vogue/00506.jpg
+507,SS,2013,milan,prada,row60373,fotos_vogue/00507.jpg
+508,SS,2013,milan,prada,row60381,fotos_vogue/00508.jpg
+509,SS,2013,new-york,ralph lauren,row64722,fotos_vogue/00509.jpg
+510,SS,2013,new-york,ralph lauren,row64730,fotos_vogue/00510.jpg
+511,SS,2013,new-york,ralph lauren,row64738,fotos_vogue/00511.jpg
+512,SS,2013,new-york,ralph lauren,row64745,fotos_vogue/00512.jpg
+513,SS,2013,new-york,ralph lauren,row64753,fotos_vogue/00513.jpg
+514,SS,2013,new-york,ralph lauren,row64761,fotos_vogue/00514.jpg
+515,SS,2013,new-york,ralph lauren,row64768,fotos_vogue/00515.jpg
+516,SS,2013,new-york,ralph lauren,row64776,fotos_vogue/00516.jpg
+517,SS,2013,paris,saint laurent,row69988,fotos_vogue/00517.jpg
+518,SS,2013,paris,saint laurent,row69996,fotos_vogue/00518.jpg
+519,SS,2013,paris,saint laurent,row70003,fotos_vogue/00519.jpg
+520,SS,2013,paris,saint laurent,row70011,fotos_vogue/00520.jpg
+521,SS,2013,paris,saint laurent,row70019,fotos_vogue/00521.jpg
+522,SS,2013,paris,saint laurent,row70026,fotos_vogue/00522.jpg
+523,SS,2013,paris,saint laurent,row70034,fotos_vogue/00523.jpg
+524,SS,2013,paris,saint laurent,row70042,fotos_vogue/00524.jpg
+525,SS,2013,paris,saint laurent,row70049,fotos_vogue/00525.jpg
+526,SS,2013,paris,valentino,row78448,fotos_vogue/00526.jpg
+527,SS,2013,paris,valentino,row78456,fotos_vogue/00527.jpg
+528,SS,2013,paris,valentino,row78463,fotos_vogue/00528.jpg
+529,SS,2013,paris,valentino,row78471,fotos_vogue/00529.jpg
+530,SS,2013,paris,valentino,row78479,fotos_vogue/00530.jpg
+531,SS,2013,paris,valentino,row78486,fotos_vogue/00531.jpg
+532,SS,2013,paris,valentino,row78494,fotos_vogue/00532.jpg
+533,SS,2013,paris,valentino,row78502,fotos_vogue/00533.jpg
+534,SS,2013,milan,versace,row86333,fotos_vogue/00534.jpg
+535,SS,2013,milan,versace,row86340,fotos_vogue/00535.jpg
+536,SS,2013,milan,versace,row86348,fotos_vogue/00536.jpg
+537,SS,2013,milan,versace,row86356,fotos_vogue/00537.jpg
+538,SS,2013,milan,versace,row86363,fotos_vogue/00538.jpg
+539,SS,2013,milan,versace,row86371,fotos_vogue/00539.jpg
+540,SS,2013,milan,versace,row86379,fotos_vogue/00540.jpg
+541,FW,2014,paris,alexander mcqueen,row1286,fotos_vogue/00541.jpg
+542,FW,2014,paris,alexander mcqueen,row1294,fotos_vogue/00542.jpg
+543,FW,2014,paris,alexander mcqueen,row1302,fotos_vogue/00543.jpg
+544,FW,2014,paris,alexander mcqueen,row1309,fotos_vogue/00544.jpg
+545,FW,2014,paris,balenciaga,row7797,fotos_vogue/00545.jpg
+546,FW,2014,paris,balenciaga,row7804,fotos_vogue/00546.jpg
+547,FW,2014,paris,balenciaga,row7812,fotos_vogue/00547.jpg
+548,FW,2014,paris,balenciaga,row7820,fotos_vogue/00548.jpg
+549,FW,2014,paris,balenciaga,row7827,fotos_vogue/00549.jpg
+550,FW,2014,sin_dato,calvin klein collection,row13244,fotos_vogue/00550.jpg
+551,FW,2014,sin_dato,calvin klein collection,row13251,fotos_vogue/00551.jpg
+552,FW,2014,sin_dato,calvin klein collection,row13259,fotos_vogue/00552.jpg
+553,FW,2014,sin_dato,calvin klein collection,row13267,fotos_vogue/00553.jpg
+554,FW,2014,paris,chanel,row18471,fotos_vogue/00554.jpg
+555,FW,2014,paris,chanel,row18479,fotos_vogue/00555.jpg
+556,FW,2014,paris,chanel,row18486,fotos_vogue/00556.jpg
+557,FW,2014,paris,chanel,row18494,fotos_vogue/00557.jpg
+558,FW,2014,paris,chanel,row18502,fotos_vogue/00558.jpg
+559,FW,2014,paris,chanel,row18509,fotos_vogue/00559.jpg
+560,FW,2014,paris,chanel,row18517,fotos_vogue/00560.jpg
+561,FW,2014,paris,chanel,row18525,fotos_vogue/00561.jpg
+562,FW,2014,paris,chanel,row18532,fotos_vogue/00562.jpg
+563,FW,2014,paris,chanel,row18540,fotos_vogue/00563.jpg
+564,FW,2014,paris,chanel,row18547,fotos_vogue/00564.jpg
+565,FW,2014,sin_dato,christian dior,row27951,fotos_vogue/00565.jpg
+566,FW,2014,sin_dato,christian dior,row27959,fotos_vogue/00566.jpg
+567,FW,2014,sin_dato,christian dior,row27966,fotos_vogue/00567.jpg
+568,FW,2014,sin_dato,christian dior,row27974,fotos_vogue/00568.jpg
+569,FW,2014,sin_dato,christian dior,row27981,fotos_vogue/00569.jpg
+570,FW,2014,sin_dato,christian dior,row27989,fotos_vogue/00570.jpg
+571,FW,2014,sin_dato,christian dior,row27997,fotos_vogue/00571.jpg
+572,FW,2014,milan,fendi,row34935,fotos_vogue/00572.jpg
+573,FW,2014,milan,fendi,row34943,fotos_vogue/00573.jpg
+574,FW,2014,milan,fendi,row34950,fotos_vogue/00574.jpg
+575,FW,2014,milan,fendi,row34958,fotos_vogue/00575.jpg
+576,FW,2014,milan,fendi,row34966,fotos_vogue/00576.jpg
+577,FW,2014,milan,fendi,row34973,fotos_vogue/00577.jpg
+578,FW,2014,milan,fendi,row34981,fotos_vogue/00578.jpg
+579,FW,2014,milan,gucci,row40472,fotos_vogue/00579.jpg
+580,FW,2014,milan,gucci,row40479,fotos_vogue/00580.jpg
+581,FW,2014,milan,gucci,row40487,fotos_vogue/00581.jpg
+582,FW,2014,milan,gucci,row40494,fotos_vogue/00582.jpg
+583,FW,2014,milan,gucci,row40502,fotos_vogue/00583.jpg
+584,FW,2014,paris,hermes,row47219,fotos_vogue/00584.jpg
+585,FW,2014,paris,hermes,row47226,fotos_vogue/00585.jpg
+586,FW,2014,paris,hermes,row47234,fotos_vogue/00586.jpg
+587,FW,2014,paris,hermes,row47241,fotos_vogue/00587.jpg
+588,FW,2014,paris,hermes,row47249,fotos_vogue/00588.jpg
+589,FW,2014,paris,louis vuitton,row51496,fotos_vogue/00589.jpg
+590,FW,2014,paris,louis vuitton,row51503,fotos_vogue/00590.jpg
+591,FW,2014,paris,louis vuitton,row51511,fotos_vogue/00591.jpg
+592,FW,2014,paris,louis vuitton,row51518,fotos_vogue/00592.jpg
+593,FW,2014,paris,louis vuitton,row51526,fotos_vogue/00593.jpg
+594,FW,2014,paris,louis vuitton,row51534,fotos_vogue/00594.jpg
+595,FW,2014,paris,louis vuitton,row51541,fotos_vogue/00595.jpg
+596,FW,2014,milan,prada,row57496,fotos_vogue/00596.jpg
+597,FW,2014,milan,prada,row57504,fotos_vogue/00597.jpg
+598,FW,2014,milan,prada,row57511,fotos_vogue/00598.jpg
+599,FW,2014,milan,prada,row57519,fotos_vogue/00599.jpg
+600,FW,2014,milan,prada,row57526,fotos_vogue/00600.jpg
+601,FW,2014,milan,prada,row57534,fotos_vogue/00601.jpg
+602,FW,2014,new-york,ralph lauren,row62562,fotos_vogue/00602.jpg
+603,FW,2014,new-york,ralph lauren,row62569,fotos_vogue/00603.jpg
+604,FW,2014,new-york,ralph lauren,row62577,fotos_vogue/00604.jpg
+605,FW,2014,new-york,ralph lauren,row62584,fotos_vogue/00605.jpg
+606,FW,2014,new-york,ralph lauren,row62592,fotos_vogue/00606.jpg
+607,FW,2014,paris,saint laurent,row66595,fotos_vogue/00607.jpg
+608,FW,2014,paris,saint laurent,row66602,fotos_vogue/00608.jpg
+609,FW,2014,paris,saint laurent,row66610,fotos_vogue/00609.jpg
+610,FW,2014,paris,saint laurent,row66617,fotos_vogue/00610.jpg
+611,FW,2014,paris,saint laurent,row66625,fotos_vogue/00611.jpg
+612,FW,2014,paris,saint laurent,row66633,fotos_vogue/00612.jpg
+613,FW,2014,paris,saint laurent,row66640,fotos_vogue/00613.jpg
+614,FW,2014,paris,saint laurent,row66648,fotos_vogue/00614.jpg
+615,FW,2014,paris,valentino,row73186,fotos_vogue/00615.jpg
+616,FW,2014,paris,valentino,row73193,fotos_vogue/00616.jpg
+617,FW,2014,paris,valentino,row73201,fotos_vogue/00617.jpg
+618,FW,2014,paris,valentino,row73208,fotos_vogue/00618.jpg
+619,FW,2014,paris,valentino,row73216,fotos_vogue/00619.jpg
+620,FW,2014,paris,valentino,row73224,fotos_vogue/00620.jpg
+621,FW,2014,paris,valentino,row73231,fotos_vogue/00621.jpg
+622,FW,2014,paris,valentino,row73239,fotos_vogue/00622.jpg
+623,FW,2014,paris,valentino,row73246,fotos_vogue/00623.jpg
+624,FW,2014,milan,versace,row82420,fotos_vogue/00624.jpg
+625,FW,2014,milan,versace,row82428,fotos_vogue/00625.jpg
+626,FW,2014,milan,versace,row82435,fotos_vogue/00626.jpg
+627,FW,2014,milan,versace,row82443,fotos_vogue/00627.jpg
+628,FW,2014,milan,versace,row82450,fotos_vogue/00628.jpg
+629,FW,2014,milan,versace,row82458,fotos_vogue/00629.jpg
+630,FW,2014,milan,versace,row82466,fotos_vogue/00630.jpg
+631,SS,2014,paris,alexander mcqueen,row4309,fotos_vogue/00631.jpg
+632,SS,2014,paris,alexander mcqueen,row4317,fotos_vogue/00632.jpg
+633,SS,2014,paris,alexander mcqueen,row4325,fotos_vogue/00633.jpg
+634,SS,2014,paris,alexander mcqueen,row4333,fotos_vogue/00634.jpg
+635,SS,2014,paris,balenciaga,row10926,fotos_vogue/00635.jpg
+636,SS,2014,paris,balenciaga,row10934,fotos_vogue/00636.jpg
+637,SS,2014,paris,balenciaga,row10942,fotos_vogue/00637.jpg
+638,SS,2014,paris,balenciaga,row10950,fotos_vogue/00638.jpg
+639,SS,2014,paris,balenciaga,row10958,fotos_vogue/00639.jpg
+640,SS,2014,sin_dato,calvin klein collection,row15358,fotos_vogue/00640.jpg
+641,SS,2014,sin_dato,calvin klein collection,row15365,fotos_vogue/00641.jpg
+642,SS,2014,sin_dato,calvin klein collection,row15373,fotos_vogue/00642.jpg
+643,SS,2014,sin_dato,calvin klein collection,row15381,fotos_vogue/00643.jpg
+644,SS,2014,sin_dato,calvin klein collection,row15389,fotos_vogue/00644.jpg
+645,SS,2014,paris,chanel,row25013,fotos_vogue/00645.jpg
+646,SS,2014,paris,chanel,row25021,fotos_vogue/00646.jpg
+647,SS,2014,paris,chanel,row25029,fotos_vogue/00647.jpg
+648,SS,2014,paris,chanel,row25037,fotos_vogue/00648.jpg
+649,SS,2014,paris,chanel,row25045,fotos_vogue/00649.jpg
+650,SS,2014,paris,chanel,row25053,fotos_vogue/00650.jpg
+651,SS,2014,paris,chanel,row25060,fotos_vogue/00651.jpg
+652,SS,2014,paris,chanel,row25068,fotos_vogue/00652.jpg
+653,SS,2014,paris,chanel,row25076,fotos_vogue/00653.jpg
+654,SS,2014,paris,chanel,row25084,fotos_vogue/00654.jpg
+655,SS,2014,paris,chanel,row25092,fotos_vogue/00655.jpg
+656,SS,2014,sin_dato,christian dior,row32545,fotos_vogue/00656.jpg
+657,SS,2014,sin_dato,christian dior,row32553,fotos_vogue/00657.jpg
+658,SS,2014,sin_dato,christian dior,row32561,fotos_vogue/00658.jpg
+659,SS,2014,sin_dato,christian dior,row32569,fotos_vogue/00659.jpg
+660,SS,2014,sin_dato,christian dior,row32577,fotos_vogue/00660.jpg
+661,SS,2014,sin_dato,christian dior,row32584,fotos_vogue/00661.jpg
+662,SS,2014,sin_dato,christian dior,row32592,fotos_vogue/00662.jpg
+663,SS,2014,sin_dato,christian dior,row32600,fotos_vogue/00663.jpg
+664,SS,2014,sin_dato,christian dior,row32608,fotos_vogue/00664.jpg
+665,SS,2014,sin_dato,christian dior,row32616,fotos_vogue/00665.jpg
+666,SS,2014,milan,fendi,row38102,fotos_vogue/00666.jpg
+667,SS,2014,milan,fendi,row38110,fotos_vogue/00667.jpg
+668,SS,2014,milan,fendi,row38118,fotos_vogue/00668.jpg
+669,SS,2014,milan,fendi,row38126,fotos_vogue/00669.jpg
+670,SS,2014,milan,fendi,row38134,fotos_vogue/00670.jpg
+671,SS,2014,milan,fendi,row38141,fotos_vogue/00671.jpg
+672,SS,2014,milan,gucci,row44794,fotos_vogue/00672.jpg
+673,SS,2014,milan,gucci,row44802,fotos_vogue/00673.jpg
+674,SS,2014,milan,gucci,row44810,fotos_vogue/00674.jpg
+675,SS,2014,milan,gucci,row44818,fotos_vogue/00675.jpg
+676,SS,2014,milan,gucci,row44826,fotos_vogue/00676.jpg
+677,SS,2014,milan,gucci,row44834,fotos_vogue/00677.jpg
+678,SS,2014,paris,hermes,row49311,fotos_vogue/00678.jpg
+679,SS,2014,paris,hermes,row49319,fotos_vogue/00679.jpg
+680,SS,2014,paris,hermes,row49327,fotos_vogue/00680.jpg
+681,SS,2014,paris,hermes,row49334,fotos_vogue/00681.jpg
+682,SS,2014,paris,hermes,row49342,fotos_vogue/00682.jpg
+683,SS,2014,paris,louis vuitton,row55130,fotos_vogue/00683.jpg
+684,SS,2014,paris,louis vuitton,row55138,fotos_vogue/00684.jpg
+685,SS,2014,paris,louis vuitton,row55146,fotos_vogue/00685.jpg
+686,SS,2014,paris,louis vuitton,row55154,fotos_vogue/00686.jpg
+687,SS,2014,paris,louis vuitton,row55162,fotos_vogue/00687.jpg
+688,SS,2014,milan,prada,row60439,fotos_vogue/00688.jpg
+689,SS,2014,milan,prada,row60447,fotos_vogue/00689.jpg
+690,SS,2014,milan,prada,row60455,fotos_vogue/00690.jpg
+691,SS,2014,milan,prada,row60462,fotos_vogue/00691.jpg
+692,SS,2014,milan,prada,row60470,fotos_vogue/00692.jpg
+693,SS,2014,new-york,ralph lauren,row64811,fotos_vogue/00693.jpg
+694,SS,2014,new-york,ralph lauren,row64819,fotos_vogue/00694.jpg
+695,SS,2014,new-york,ralph lauren,row64827,fotos_vogue/00695.jpg
+696,SS,2014,new-york,ralph lauren,row64835,fotos_vogue/00696.jpg
+697,SS,2014,new-york,ralph lauren,row64843,fotos_vogue/00697.jpg
+698,SS,2014,new-york,ralph lauren,row64851,fotos_vogue/00698.jpg
+699,SS,2014,new-york,ralph lauren,row64859,fotos_vogue/00699.jpg
+700,SS,2014,paris,saint laurent,row70102,fotos_vogue/00700.jpg
+701,SS,2014,paris,saint laurent,row70109,fotos_vogue/00701.jpg
+702,SS,2014,paris,saint laurent,row70117,fotos_vogue/00702.jpg
+703,SS,2014,paris,saint laurent,row70125,fotos_vogue/00703.jpg
+704,SS,2014,paris,saint laurent,row70133,fotos_vogue/00704.jpg
+705,SS,2014,paris,saint laurent,row70141,fotos_vogue/00705.jpg
+706,SS,2014,paris,valentino,row78620,fotos_vogue/00706.jpg
+707,SS,2014,paris,valentino,row78628,fotos_vogue/00707.jpg
+708,SS,2014,paris,valentino,row78636,fotos_vogue/00708.jpg
+709,SS,2014,paris,valentino,row78644,fotos_vogue/00709.jpg
+710,SS,2014,paris,valentino,row78652,fotos_vogue/00710.jpg
+711,SS,2014,paris,valentino,row78659,fotos_vogue/00711.jpg
+712,SS,2014,paris,valentino,row78667,fotos_vogue/00712.jpg
+713,SS,2014,paris,valentino,row78675,fotos_vogue/00713.jpg
+714,SS,2014,paris,valentino,row78683,fotos_vogue/00714.jpg
+715,SS,2014,milan,versace,row86435,fotos_vogue/00715.jpg
+716,SS,2014,milan,versace,row86443,fotos_vogue/00716.jpg
+717,SS,2014,milan,versace,row86451,fotos_vogue/00717.jpg
+718,SS,2014,milan,versace,row86459,fotos_vogue/00718.jpg
+719,SS,2014,milan,versace,row86467,fotos_vogue/00719.jpg
+720,SS,2014,milan,versace,row86475,fotos_vogue/00720.jpg
+721,FW,2015,paris,alexander mcqueen,row1353,fotos_vogue/00721.jpg
+722,FW,2015,paris,alexander mcqueen,row1361,fotos_vogue/00722.jpg
+723,FW,2015,paris,alexander mcqueen,row1369,fotos_vogue/00723.jpg
+724,FW,2015,paris,alexander mcqueen,row1377,fotos_vogue/00724.jpg
+725,FW,2015,paris,balenciaga,row7861,fotos_vogue/00725.jpg
+726,FW,2015,paris,balenciaga,row7870,fotos_vogue/00726.jpg
+727,FW,2015,paris,balenciaga,row7878,fotos_vogue/00727.jpg
+728,FW,2015,paris,balenciaga,row7886,fotos_vogue/00728.jpg
+729,FW,2015,paris,balenciaga,row7894,fotos_vogue/00729.jpg
+730,FW,2015,sin_dato,calvin klein collection,row13323,fotos_vogue/00730.jpg
+731,FW,2015,sin_dato,calvin klein collection,row13332,fotos_vogue/00731.jpg
+732,FW,2015,sin_dato,calvin klein collection,row13340,fotos_vogue/00732.jpg
+733,FW,2015,sin_dato,calvin klein collection,row13348,fotos_vogue/00733.jpg
+734,FW,2015,sin_dato,calvin klein collection,row13356,fotos_vogue/00734.jpg
+735,FW,2015,paris,chanel,row18623,fotos_vogue/00735.jpg
+736,FW,2015,paris,chanel,row18632,fotos_vogue/00736.jpg
+737,FW,2015,paris,chanel,row18640,fotos_vogue/00737.jpg
+738,FW,2015,paris,chanel,row18648,fotos_vogue/00738.jpg
+739,FW,2015,paris,chanel,row18656,fotos_vogue/00739.jpg
+740,FW,2015,paris,chanel,row18664,fotos_vogue/00740.jpg
+741,FW,2015,paris,chanel,row18673,fotos_vogue/00741.jpg
+742,FW,2015,paris,chanel,row18681,fotos_vogue/00742.jpg
+743,FW,2015,paris,chanel,row18689,fotos_vogue/00743.jpg
+744,FW,2015,paris,chanel,row18697,fotos_vogue/00744.jpg
+745,FW,2015,paris,chanel,row18705,fotos_vogue/00745.jpg
+746,FW,2015,paris,chanel,row18714,fotos_vogue/00746.jpg
+747,FW,2015,sin_dato,christian dior,row28067,fotos_vogue/00747.jpg
+748,FW,2015,sin_dato,christian dior,row28075,fotos_vogue/00748.jpg
+749,FW,2015,sin_dato,christian dior,row28083,fotos_vogue/00749.jpg
+750,FW,2015,sin_dato,christian dior,row28091,fotos_vogue/00750.jpg
+751,FW,2015,sin_dato,christian dior,row28100,fotos_vogue/00751.jpg
+752,FW,2015,sin_dato,christian dior,row28108,fotos_vogue/00752.jpg
+753,FW,2015,milan,fendi,row35065,fotos_vogue/00753.jpg
+754,FW,2015,milan,fendi,row35073,fotos_vogue/00754.jpg
+755,FW,2015,milan,fendi,row35081,fotos_vogue/00755.jpg
+756,FW,2015,milan,fendi,row35090,fotos_vogue/00756.jpg
+757,FW,2015,milan,fendi,row35098,fotos_vogue/00757.jpg
+758,FW,2015,milan,fendi,row35106,fotos_vogue/00758.jpg
+759,FW,2015,milan,fendi,row35114,fotos_vogue/00759.jpg
+760,FW,2015,milan,gucci,row40548,fotos_vogue/00760.jpg
+761,FW,2015,milan,gucci,row40557,fotos_vogue/00761.jpg
+762,FW,2015,milan,gucci,row40565,fotos_vogue/00762.jpg
+763,FW,2015,milan,gucci,row40573,fotos_vogue/00763.jpg
+764,FW,2015,milan,gucci,row40581,fotos_vogue/00764.jpg
+765,FW,2015,paris,hermes,row47299,fotos_vogue/00765.jpg
+766,FW,2015,paris,hermes,row47308,fotos_vogue/00766.jpg
+767,FW,2015,paris,hermes,row47316,fotos_vogue/00767.jpg
+768,FW,2015,paris,hermes,row47324,fotos_vogue/00768.jpg
+769,FW,2015,paris,hermes,row47332,fotos_vogue/00769.jpg
+770,FW,2015,paris,hermes,row47340,fotos_vogue/00770.jpg
+771,FW,2015,paris,louis vuitton,row51590,fotos_vogue/00771.jpg
+772,FW,2015,paris,louis vuitton,row51598,fotos_vogue/00772.jpg
+773,FW,2015,paris,louis vuitton,row51606,fotos_vogue/00773.jpg
+774,FW,2015,paris,louis vuitton,row51614,fotos_vogue/00774.jpg
+775,FW,2015,paris,louis vuitton,row51622,fotos_vogue/00775.jpg
+776,FW,2015,milan,prada,row57590,fotos_vogue/00776.jpg
+777,FW,2015,milan,prada,row57598,fotos_vogue/00777.jpg
+778,FW,2015,milan,prada,row57606,fotos_vogue/00778.jpg
+779,FW,2015,milan,prada,row57614,fotos_vogue/00779.jpg
+780,FW,2015,milan,prada,row57622,fotos_vogue/00780.jpg
+781,FW,2015,milan,prada,row57631,fotos_vogue/00781.jpg
+782,FW,2015,new-york,ralph lauren,row62663,fotos_vogue/00782.jpg
+783,FW,2015,new-york,ralph lauren,row62671,fotos_vogue/00783.jpg
+784,FW,2015,new-york,ralph lauren,row62679,fotos_vogue/00784.jpg
+785,FW,2015,new-york,ralph lauren,row62687,fotos_vogue/00785.jpg
+786,FW,2015,new-york,ralph lauren,row62696,fotos_vogue/00786.jpg
+787,FW,2015,paris,saint laurent,row66717,fotos_vogue/00787.jpg
+788,FW,2015,paris,saint laurent,row66725,fotos_vogue/00788.jpg
+789,FW,2015,paris,saint laurent,row66733,fotos_vogue/00789.jpg
+790,FW,2015,paris,saint laurent,row66741,fotos_vogue/00790.jpg
+791,FW,2015,paris,saint laurent,row66750,fotos_vogue/00791.jpg
+792,FW,2015,paris,saint laurent,row66758,fotos_vogue/00792.jpg
+793,FW,2015,paris,saint laurent,row66766,fotos_vogue/00793.jpg
+794,FW,2015,paris,valentino,row73367,fotos_vogue/00794.jpg
+795,FW,2015,paris,valentino,row73375,fotos_vogue/00795.jpg
+796,FW,2015,paris,valentino,row73384,fotos_vogue/00796.jpg
+797,FW,2015,paris,valentino,row73392,fotos_vogue/00797.jpg
+798,FW,2015,paris,valentino,row73400,fotos_vogue/00798.jpg
+799,FW,2015,paris,valentino,row73408,fotos_vogue/00799.jpg
+800,FW,2015,paris,valentino,row73416,fotos_vogue/00800.jpg
+801,FW,2015,paris,valentino,row73425,fotos_vogue/00801.jpg
+802,FW,2015,paris,valentino,row73433,fotos_vogue/00802.jpg
+803,FW,2015,paris,valentino,row73441,fotos_vogue/00803.jpg
+804,FW,2015,paris,valentino,row73449,fotos_vogue/00804.jpg
+805,FW,2015,milan,versace,row82526,fotos_vogue/00805.jpg
+806,FW,2015,milan,versace,row82535,fotos_vogue/00806.jpg
+807,FW,2015,milan,versace,row82543,fotos_vogue/00807.jpg
+808,FW,2015,milan,versace,row82551,fotos_vogue/00808.jpg
+809,FW,2015,milan,versace,row82559,fotos_vogue/00809.jpg
+810,FW,2015,milan,versace,row82567,fotos_vogue/00810.jpg
+811,SS,2015,paris,alexander mcqueen,row4371,fotos_vogue/00811.jpg
+812,SS,2015,paris,alexander mcqueen,row4379,fotos_vogue/00812.jpg
+813,SS,2015,paris,alexander mcqueen,row4387,fotos_vogue/00813.jpg
+814,SS,2015,paris,alexander mcqueen,row4395,fotos_vogue/00814.jpg
+815,SS,2015,paris,balenciaga,row10987,fotos_vogue/00815.jpg
+816,SS,2015,paris,balenciaga,row10995,fotos_vogue/00816.jpg
+817,SS,2015,paris,balenciaga,row11003,fotos_vogue/00817.jpg
+818,SS,2015,paris,balenciaga,row11011,fotos_vogue/00818.jpg
+819,SS,2015,paris,balenciaga,row11018,fotos_vogue/00819.jpg
+820,SS,2015,sin_dato,calvin klein collection,row15441,fotos_vogue/00820.jpg
+821,SS,2015,sin_dato,calvin klein collection,row15449,fotos_vogue/00821.jpg
+822,SS,2015,sin_dato,calvin klein collection,row15456,fotos_vogue/00822.jpg
+823,SS,2015,sin_dato,calvin klein collection,row15464,fotos_vogue/00823.jpg
+824,SS,2015,paris,chanel,row25174,fotos_vogue/00824.jpg
+825,SS,2015,paris,chanel,row25182,fotos_vogue/00825.jpg
+826,SS,2015,paris,chanel,row25189,fotos_vogue/00826.jpg
+827,SS,2015,paris,chanel,row25197,fotos_vogue/00827.jpg
+828,SS,2015,paris,chanel,row25205,fotos_vogue/00828.jpg
+829,SS,2015,paris,chanel,row25213,fotos_vogue/00829.jpg
+830,SS,2015,paris,chanel,row25220,fotos_vogue/00830.jpg
+831,SS,2015,paris,chanel,row25228,fotos_vogue/00831.jpg
+832,SS,2015,paris,chanel,row25236,fotos_vogue/00832.jpg
+833,SS,2015,paris,chanel,row25244,fotos_vogue/00833.jpg
+834,SS,2015,paris,chanel,row25251,fotos_vogue/00834.jpg
+835,SS,2015,sin_dato,christian dior,row32675,fotos_vogue/00835.jpg
+836,SS,2015,sin_dato,christian dior,row32683,fotos_vogue/00836.jpg
+837,SS,2015,sin_dato,christian dior,row32690,fotos_vogue/00837.jpg
+838,SS,2015,sin_dato,christian dior,row32698,fotos_vogue/00838.jpg
+839,SS,2015,sin_dato,christian dior,row32706,fotos_vogue/00839.jpg
+840,SS,2015,sin_dato,christian dior,row32714,fotos_vogue/00840.jpg
+841,SS,2015,sin_dato,christian dior,row32721,fotos_vogue/00841.jpg
+842,SS,2015,milan,fendi,row38197,fotos_vogue/00842.jpg
+843,SS,2015,milan,fendi,row38205,fotos_vogue/00843.jpg
+844,SS,2015,milan,fendi,row38213,fotos_vogue/00844.jpg
+845,SS,2015,milan,fendi,row38220,fotos_vogue/00845.jpg
+846,SS,2015,milan,fendi,row38228,fotos_vogue/00846.jpg
+847,SS,2015,milan,fendi,row38236,fotos_vogue/00847.jpg
+848,SS,2015,milan,gucci,row44876,fotos_vogue/00848.jpg
+849,SS,2015,milan,gucci,row44883,fotos_vogue/00849.jpg
+850,SS,2015,milan,gucci,row44891,fotos_vogue/00850.jpg
+851,SS,2015,milan,gucci,row44899,fotos_vogue/00851.jpg
+852,SS,2015,milan,gucci,row44906,fotos_vogue/00852.jpg
+853,SS,2015,milan,gucci,row44914,fotos_vogue/00853.jpg
+854,SS,2015,paris,hermes,row49391,fotos_vogue/00854.jpg
+855,SS,2015,paris,hermes,row49399,fotos_vogue/00855.jpg
+856,SS,2015,paris,hermes,row49406,fotos_vogue/00856.jpg
+857,SS,2015,paris,hermes,row49414,fotos_vogue/00857.jpg
+858,SS,2015,paris,hermes,row49422,fotos_vogue/00858.jpg
+859,SS,2015,paris,louis vuitton,row55214,fotos_vogue/00859.jpg
+860,SS,2015,paris,louis vuitton,row55221,fotos_vogue/00860.jpg
+861,SS,2015,paris,louis vuitton,row55229,fotos_vogue/00861.jpg
+862,SS,2015,paris,louis vuitton,row55237,fotos_vogue/00862.jpg
+863,SS,2015,paris,louis vuitton,row55245,fotos_vogue/00863.jpg
+864,SS,2015,paris,louis vuitton,row55252,fotos_vogue/00864.jpg
+865,SS,2015,milan,prada,row60530,fotos_vogue/00865.jpg
+866,SS,2015,milan,prada,row60538,fotos_vogue/00866.jpg
+867,SS,2015,milan,prada,row60545,fotos_vogue/00867.jpg
+868,SS,2015,milan,prada,row60553,fotos_vogue/00868.jpg
+869,SS,2015,milan,prada,row60561,fotos_vogue/00869.jpg
+870,SS,2015,new-york,ralph lauren,row64892,fotos_vogue/00870.jpg
+871,SS,2015,new-york,ralph lauren,row64899,fotos_vogue/00871.jpg
+872,SS,2015,new-york,ralph lauren,row64907,fotos_vogue/00872.jpg
+873,SS,2015,new-york,ralph lauren,row64915,fotos_vogue/00873.jpg
+874,SS,2015,new-york,ralph lauren,row64923,fotos_vogue/00874.jpg
+875,SS,2015,new-york,ralph lauren,row64930,fotos_vogue/00875.jpg
+876,SS,2015,new-york,ralph lauren,row64938,fotos_vogue/00876.jpg
+877,SS,2015,paris,saint laurent,row70214,fotos_vogue/00877.jpg
+878,SS,2015,paris,saint laurent,row70222,fotos_vogue/00878.jpg
+879,SS,2015,paris,saint laurent,row70229,fotos_vogue/00879.jpg
+880,SS,2015,paris,saint laurent,row70237,fotos_vogue/00880.jpg
+881,SS,2015,paris,saint laurent,row70245,fotos_vogue/00881.jpg
+882,SS,2015,paris,saint laurent,row70252,fotos_vogue/00882.jpg
+883,SS,2015,paris,saint laurent,row70260,fotos_vogue/00883.jpg
+884,SS,2015,paris,valentino,row78789,fotos_vogue/00884.jpg
+885,SS,2015,paris,valentino,row78797,fotos_vogue/00885.jpg
+886,SS,2015,paris,valentino,row78804,fotos_vogue/00886.jpg
+887,SS,2015,paris,valentino,row78812,fotos_vogue/00887.jpg
+888,SS,2015,paris,valentino,row78820,fotos_vogue/00888.jpg
+889,SS,2015,paris,valentino,row78828,fotos_vogue/00889.jpg
+890,SS,2015,paris,valentino,row78835,fotos_vogue/00890.jpg
+891,SS,2015,paris,valentino,row78843,fotos_vogue/00891.jpg
+892,SS,2015,paris,valentino,row78851,fotos_vogue/00892.jpg
+893,SS,2015,paris,valentino,row78859,fotos_vogue/00893.jpg
+894,SS,2015,paris,valentino,row78866,fotos_vogue/00894.jpg
+895,SS,2015,milan,versace,row86536,fotos_vogue/00895.jpg
+896,SS,2015,milan,versace,row86544,fotos_vogue/00896.jpg
+897,SS,2015,milan,versace,row86551,fotos_vogue/00897.jpg
+898,SS,2015,milan,versace,row86559,fotos_vogue/00898.jpg
+899,SS,2015,milan,versace,row86567,fotos_vogue/00899.jpg
+900,SS,2015,milan,versace,row86575,fotos_vogue/00900.jpg
+901,FW,2016,paris,alexander mcqueen,row1421,fotos_vogue/00901.jpg
+902,FW,2016,paris,alexander mcqueen,row1430,fotos_vogue/00902.jpg
+903,FW,2016,paris,alexander mcqueen,row1439,fotos_vogue/00903.jpg
+904,FW,2016,paris,alexander mcqueen,row1448,fotos_vogue/00904.jpg
+905,FW,2016,paris,alexander mcqueen,row1457,fotos_vogue/00905.jpg
+906,FW,2016,paris,balenciaga,row7905,fotos_vogue/00906.jpg
+907,FW,2016,paris,balenciaga,row7914,fotos_vogue/00907.jpg
+908,FW,2016,paris,balenciaga,row7924,fotos_vogue/00908.jpg
+909,FW,2016,paris,balenciaga,row7933,fotos_vogue/00909.jpg
+910,FW,2016,sin_dato,calvin klein collection,row13402,fotos_vogue/00910.jpg
+911,FW,2016,sin_dato,calvin klein collection,row13411,fotos_vogue/00911.jpg
+912,FW,2016,sin_dato,calvin klein collection,row13420,fotos_vogue/00912.jpg
+913,FW,2016,sin_dato,calvin klein collection,row13429,fotos_vogue/00913.jpg
+914,FW,2016,sin_dato,calvin klein collection,row13438,fotos_vogue/00914.jpg
+915,FW,2016,paris,chanel,row18791,fotos_vogue/00915.jpg
+916,FW,2016,paris,chanel,row18800,fotos_vogue/00916.jpg
+917,FW,2016,paris,chanel,row18809,fotos_vogue/00917.jpg
+918,FW,2016,paris,chanel,row18818,fotos_vogue/00918.jpg
+919,FW,2016,paris,chanel,row18827,fotos_vogue/00919.jpg
+920,FW,2016,paris,chanel,row18836,fotos_vogue/00920.jpg
+921,FW,2016,paris,chanel,row18845,fotos_vogue/00921.jpg
+922,FW,2016,paris,chanel,row18854,fotos_vogue/00922.jpg
+923,FW,2016,paris,chanel,row18864,fotos_vogue/00923.jpg
+924,FW,2016,paris,chanel,row18873,fotos_vogue/00924.jpg
+925,FW,2016,sin_dato,christian dior,row28163,fotos_vogue/00925.jpg
+926,FW,2016,sin_dato,christian dior,row28172,fotos_vogue/00926.jpg
+927,FW,2016,sin_dato,christian dior,row28181,fotos_vogue/00927.jpg
+928,FW,2016,sin_dato,christian dior,row28190,fotos_vogue/00928.jpg
+929,FW,2016,sin_dato,christian dior,row28199,fotos_vogue/00929.jpg
+930,FW,2016,sin_dato,christian dior,row28208,fotos_vogue/00930.jpg
+931,FW,2016,sin_dato,christian dior,row28217,fotos_vogue/00931.jpg
+932,FW,2016,milan,fendi,row35224,fotos_vogue/00932.jpg
+933,FW,2016,milan,fendi,row35233,fotos_vogue/00933.jpg
+934,FW,2016,milan,fendi,row35242,fotos_vogue/00934.jpg
+935,FW,2016,milan,fendi,row35251,fotos_vogue/00935.jpg
+936,FW,2016,milan,fendi,row35260,fotos_vogue/00936.jpg
+937,FW,2016,milan,gucci,row40656,fotos_vogue/00937.jpg
+938,FW,2016,milan,gucci,row40666,fotos_vogue/00938.jpg
+939,FW,2016,milan,gucci,row40675,fotos_vogue/00939.jpg
+940,FW,2016,milan,gucci,row40684,fotos_vogue/00940.jpg
+941,FW,2016,milan,gucci,row40693,fotos_vogue/00941.jpg
+942,FW,2016,milan,gucci,row40702,fotos_vogue/00942.jpg
+943,FW,2016,milan,gucci,row40711,fotos_vogue/00943.jpg
+944,FW,2016,paris,hermes,row47389,fotos_vogue/00944.jpg
+945,FW,2016,paris,hermes,row47398,fotos_vogue/00945.jpg
+946,FW,2016,paris,hermes,row47407,fotos_vogue/00946.jpg
+947,FW,2016,paris,hermes,row47416,fotos_vogue/00947.jpg
+948,FW,2016,paris,hermes,row47425,fotos_vogue/00948.jpg
+949,FW,2016,paris,louis vuitton,row51673,fotos_vogue/00949.jpg
+950,FW,2016,paris,louis vuitton,row51682,fotos_vogue/00950.jpg
+951,FW,2016,paris,louis vuitton,row51691,fotos_vogue/00951.jpg
+952,FW,2016,paris,louis vuitton,row51700,fotos_vogue/00952.jpg
+953,FW,2016,paris,louis vuitton,row51710,fotos_vogue/00953.jpg
+954,FW,2016,paris,louis vuitton,row51719,fotos_vogue/00954.jpg
+955,FW,2016,milan,prada,row57689,fotos_vogue/00955.jpg
+956,FW,2016,milan,prada,row57698,fotos_vogue/00956.jpg
+957,FW,2016,milan,prada,row57707,fotos_vogue/00957.jpg
+958,FW,2016,milan,prada,row57716,fotos_vogue/00958.jpg
+959,FW,2016,milan,prada,row57725,fotos_vogue/00959.jpg
+960,FW,2016,milan,prada,row57734,fotos_vogue/00960.jpg
+961,FW,2016,new-york,ralph lauren,row62736,fotos_vogue/00961.jpg
+962,FW,2016,new-york,ralph lauren,row62745,fotos_vogue/00962.jpg
+963,FW,2016,new-york,ralph lauren,row62754,fotos_vogue/00963.jpg
+964,FW,2016,new-york,ralph lauren,row62763,fotos_vogue/00964.jpg
+965,FW,2016,new-york,ralph lauren,row62772,fotos_vogue/00965.jpg
+966,FW,2016,new-york,ralph lauren,row62781,fotos_vogue/00966.jpg
+967,FW,2016,new-york,ralph lauren,row62790,fotos_vogue/00967.jpg
+968,FW,2016,new-york,ralph lauren,row62800,fotos_vogue/00968.jpg
+969,FW,2016,new-york,ralph lauren,row62809,fotos_vogue/00969.jpg
+970,FW,2016,new-york,ralph lauren,row62818,fotos_vogue/00970.jpg
+971,FW,2016,paris,saint laurent,row66872,fotos_vogue/00971.jpg
+972,FW,2016,paris,saint laurent,row66881,fotos_vogue/00972.jpg
+973,FW,2016,paris,saint laurent,row66890,fotos_vogue/00973.jpg
+974,FW,2016,paris,saint laurent,row66899,fotos_vogue/00974.jpg
+975,FW,2016,paris,valentino,row73594,fotos_vogue/00975.jpg
+976,FW,2016,paris,valentino,row73603,fotos_vogue/00976.jpg
+977,FW,2016,paris,valentino,row73612,fotos_vogue/00977.jpg
+978,FW,2016,paris,valentino,row73621,fotos_vogue/00978.jpg
+979,FW,2016,paris,valentino,row73630,fotos_vogue/00979.jpg
+980,FW,2016,paris,valentino,row73639,fotos_vogue/00980.jpg
+981,FW,2016,paris,valentino,row73648,fotos_vogue/00981.jpg
+982,FW,2016,paris,valentino,row73657,fotos_vogue/00982.jpg
+983,FW,2016,paris,valentino,row73667,fotos_vogue/00983.jpg
+984,FW,2016,milan,versace,row82633,fotos_vogue/00984.jpg
+985,FW,2016,milan,versace,row82642,fotos_vogue/00985.jpg
+986,FW,2016,milan,versace,row82651,fotos_vogue/00986.jpg
+987,FW,2016,milan,versace,row82660,fotos_vogue/00987.jpg
+988,FW,2016,milan,versace,row82669,fotos_vogue/00988.jpg
+989,FW,2016,milan,versace,row82678,fotos_vogue/00989.jpg
+990,FW,2016,milan,versace,row82687,fotos_vogue/00990.jpg
+991,SS,2016,paris,alexander mcqueen,row4440,fotos_vogue/00991.jpg
+992,SS,2016,paris,alexander mcqueen,row4449,fotos_vogue/00992.jpg
+993,SS,2016,paris,alexander mcqueen,row4458,fotos_vogue/00993.jpg
+994,SS,2016,paris,alexander mcqueen,row4466,fotos_vogue/00994.jpg
+995,SS,2016,paris,alexander mcqueen,row4475,fotos_vogue/00995.jpg
+996,SS,2016,paris,balenciaga,row11053,fotos_vogue/00996.jpg
+997,SS,2016,paris,balenciaga,row11062,fotos_vogue/00997.jpg
+998,SS,2016,paris,balenciaga,row11071,fotos_vogue/00998.jpg
+999,SS,2016,paris,balenciaga,row11080,fotos_vogue/00999.jpg
+1000,SS,2016,sin_dato,calvin klein collection,row15515,fotos_vogue/01000.jpg
+1001,SS,2016,sin_dato,calvin klein collection,row15523,fotos_vogue/01001.jpg
+1002,SS,2016,sin_dato,calvin klein collection,row15532,fotos_vogue/01002.jpg
+1003,SS,2016,sin_dato,calvin klein collection,row15541,fotos_vogue/01003.jpg
+1004,SS,2016,sin_dato,calvin klein collection,row15550,fotos_vogue/01004.jpg
+1005,SS,2016,paris,chanel,row25343,fotos_vogue/01005.jpg
+1006,SS,2016,paris,chanel,row25352,fotos_vogue/01006.jpg
+1007,SS,2016,paris,chanel,row25361,fotos_vogue/01007.jpg
+1008,SS,2016,paris,chanel,row25369,fotos_vogue/01008.jpg
+1009,SS,2016,paris,chanel,row25378,fotos_vogue/01009.jpg
+1010,SS,2016,paris,chanel,row25387,fotos_vogue/01010.jpg
+1011,SS,2016,paris,chanel,row25396,fotos_vogue/01011.jpg
+1012,SS,2016,paris,chanel,row25405,fotos_vogue/01012.jpg
+1013,SS,2016,paris,chanel,row25414,fotos_vogue/01013.jpg
+1014,SS,2016,paris,chanel,row25423,fotos_vogue/01014.jpg
+1015,SS,2016,paris,chanel,row25431,fotos_vogue/01015.jpg
+1016,SS,2016,sin_dato,christian dior,row32783,fotos_vogue/01016.jpg
+1017,SS,2016,sin_dato,christian dior,row32792,fotos_vogue/01017.jpg
+1018,SS,2016,sin_dato,christian dior,row32801,fotos_vogue/01018.jpg
+1019,SS,2016,sin_dato,christian dior,row32810,fotos_vogue/01019.jpg
+1020,SS,2016,sin_dato,christian dior,row32819,fotos_vogue/01020.jpg
+1021,SS,2016,sin_dato,christian dior,row32828,fotos_vogue/01021.jpg
+1022,SS,2016,milan,fendi,row38296,fotos_vogue/01022.jpg
+1023,SS,2016,milan,fendi,row38305,fotos_vogue/01023.jpg
+1024,SS,2016,milan,fendi,row38314,fotos_vogue/01024.jpg
+1025,SS,2016,milan,fendi,row38323,fotos_vogue/01025.jpg
+1026,SS,2016,milan,fendi,row38332,fotos_vogue/01026.jpg
+1027,SS,2016,milan,gucci,row44980,fotos_vogue/01027.jpg
+1028,SS,2016,milan,gucci,row44989,fotos_vogue/01028.jpg
+1029,SS,2016,milan,gucci,row44997,fotos_vogue/01029.jpg
+1030,SS,2016,milan,gucci,row45006,fotos_vogue/01030.jpg
+1031,SS,2016,milan,gucci,row45015,fotos_vogue/01031.jpg
+1032,SS,2016,milan,gucci,row45024,fotos_vogue/01032.jpg
+1033,SS,2016,milan,gucci,row45033,fotos_vogue/01033.jpg
+1034,SS,2016,milan,gucci,row45042,fotos_vogue/01034.jpg
+1035,SS,2016,paris,hermes,row49476,fotos_vogue/01035.jpg
+1036,SS,2016,paris,hermes,row49484,fotos_vogue/01036.jpg
+1037,SS,2016,paris,hermes,row49493,fotos_vogue/01037.jpg
+1038,SS,2016,paris,hermes,row49502,fotos_vogue/01038.jpg
+1039,SS,2016,paris,hermes,row49511,fotos_vogue/01039.jpg
+1040,SS,2016,paris,louis vuitton,row55295,fotos_vogue/01040.jpg
+1041,SS,2016,paris,louis vuitton,row55304,fotos_vogue/01041.jpg
+1042,SS,2016,paris,louis vuitton,row55313,fotos_vogue/01042.jpg
+1043,SS,2016,paris,louis vuitton,row55321,fotos_vogue/01043.jpg
+1044,SS,2016,paris,louis vuitton,row55330,fotos_vogue/01044.jpg
+1045,SS,2016,paris,louis vuitton,row55339,fotos_vogue/01045.jpg
+1046,SS,2016,milan,prada,row60623,fotos_vogue/01046.jpg
+1047,SS,2016,milan,prada,row60632,fotos_vogue/01047.jpg
+1048,SS,2016,milan,prada,row60641,fotos_vogue/01048.jpg
+1049,SS,2016,milan,prada,row60650,fotos_vogue/01049.jpg
+1050,SS,2016,milan,prada,row60658,fotos_vogue/01050.jpg
+1051,SS,2016,new-york,ralph lauren,row64976,fotos_vogue/01051.jpg
+1052,SS,2016,new-york,ralph lauren,row64985,fotos_vogue/01052.jpg
+1053,SS,2016,new-york,ralph lauren,row64994,fotos_vogue/01053.jpg
+1054,SS,2016,new-york,ralph lauren,row65003,fotos_vogue/01054.jpg
+1055,SS,2016,new-york,ralph lauren,row65012,fotos_vogue/01055.jpg
+1056,SS,2016,new-york,ralph lauren,row65021,fotos_vogue/01056.jpg
+1057,SS,2016,paris,saint laurent,row70349,fotos_vogue/01057.jpg
+1058,SS,2016,paris,saint laurent,row70358,fotos_vogue/01058.jpg
+1059,SS,2016,paris,saint laurent,row70367,fotos_vogue/01059.jpg
+1060,SS,2016,paris,saint laurent,row70376,fotos_vogue/01060.jpg
+1061,SS,2016,paris,saint laurent,row70385,fotos_vogue/01061.jpg
+1062,SS,2016,paris,saint laurent,row70394,fotos_vogue/01062.jpg
+1063,SS,2016,paris,saint laurent,row70403,fotos_vogue/01063.jpg
+1064,SS,2016,paris,valentino,row79008,fotos_vogue/01064.jpg
+1065,SS,2016,paris,valentino,row79017,fotos_vogue/01065.jpg
+1066,SS,2016,paris,valentino,row79026,fotos_vogue/01066.jpg
+1067,SS,2016,paris,valentino,row79035,fotos_vogue/01067.jpg
+1068,SS,2016,paris,valentino,row79044,fotos_vogue/01068.jpg
+1069,SS,2016,paris,valentino,row79053,fotos_vogue/01069.jpg
+1070,SS,2016,paris,valentino,row79062,fotos_vogue/01070.jpg
+1071,SS,2016,paris,valentino,row79070,fotos_vogue/01071.jpg
+1072,SS,2016,paris,valentino,row79079,fotos_vogue/01072.jpg
+1073,SS,2016,paris,valentino,row79088,fotos_vogue/01073.jpg
+1074,SS,2016,paris,valentino,row79097,fotos_vogue/01074.jpg
+1075,SS,2016,milan,versace,row86631,fotos_vogue/01075.jpg
+1076,SS,2016,milan,versace,row86640,fotos_vogue/01076.jpg
+1077,SS,2016,milan,versace,row86649,fotos_vogue/01077.jpg
+1078,SS,2016,milan,versace,row86657,fotos_vogue/01078.jpg
+1079,SS,2016,milan,versace,row86666,fotos_vogue/01079.jpg
+1080,SS,2016,milan,versace,row86675,fotos_vogue/01080.jpg
+1081,FW,2017,paris,alexander mcqueen,row1493,fotos_vogue/01081.jpg
+1082,FW,2017,paris,alexander mcqueen,row1503,fotos_vogue/01082.jpg
+1083,FW,2017,paris,alexander mcqueen,row1513,fotos_vogue/01083.jpg
+1084,FW,2017,paris,alexander mcqueen,row1523,fotos_vogue/01084.jpg
+1085,FW,2017,paris,balenciaga,row7981,fotos_vogue/01085.jpg
+1086,FW,2017,paris,balenciaga,row7991,fotos_vogue/01086.jpg
+1087,FW,2017,paris,balenciaga,row8001,fotos_vogue/01087.jpg
+1088,FW,2017,paris,balenciaga,row8011,fotos_vogue/01088.jpg
+1089,FW,2017,paris,balenciaga,row8022,fotos_vogue/01089.jpg
+1090,FW,2017,new-york,calvin klein,row15639,fotos_vogue/01090.jpg
+1091,FW,2017,new-york,calvin klein,row15649,fotos_vogue/01091.jpg
+1092,FW,2017,new-york,calvin klein,row15659,fotos_vogue/01092.jpg
+1093,FW,2017,new-york,calvin klein,row15670,fotos_vogue/01093.jpg
+1094,FW,2017,new-york,calvin klein,row15680,fotos_vogue/01094.jpg
+1095,FW,2017,new-york,calvin klein,row15690,fotos_vogue/01095.jpg
+1096,FW,2017,paris,chanel,row18946,fotos_vogue/01096.jpg
+1097,FW,2017,paris,chanel,row18957,fotos_vogue/01097.jpg
+1098,FW,2017,paris,chanel,row18967,fotos_vogue/01098.jpg
+1099,FW,2017,paris,chanel,row18977,fotos_vogue/01099.jpg
+1100,FW,2017,paris,chanel,row18987,fotos_vogue/01100.jpg
+1101,FW,2017,paris,chanel,row18998,fotos_vogue/01101.jpg
+1102,FW,2017,paris,chanel,row19008,fotos_vogue/01102.jpg
+1103,FW,2017,paris,chanel,row19018,fotos_vogue/01103.jpg
+1104,FW,2017,paris,chanel,row19028,fotos_vogue/01104.jpg
+1105,FW,2017,paris,chanel,row19038,fotos_vogue/01105.jpg
+1106,FW,2017,sin_dato,christian dior,row28291,fotos_vogue/01106.jpg
+1107,FW,2017,sin_dato,christian dior,row28301,fotos_vogue/01107.jpg
+1108,FW,2017,sin_dato,christian dior,row28311,fotos_vogue/01108.jpg
+1109,FW,2017,sin_dato,christian dior,row28321,fotos_vogue/01109.jpg
+1110,FW,2017,sin_dato,christian dior,row28332,fotos_vogue/01110.jpg
+1111,FW,2017,sin_dato,christian dior,row28342,fotos_vogue/01111.jpg
+1112,FW,2017,sin_dato,christian dior,row28352,fotos_vogue/01112.jpg
+1113,FW,2017,milan,fendi,row35365,fotos_vogue/01113.jpg
+1114,FW,2017,milan,fendi,row35376,fotos_vogue/01114.jpg
+1115,FW,2017,milan,fendi,row35386,fotos_vogue/01115.jpg
+1116,FW,2017,milan,fendi,row35396,fotos_vogue/01116.jpg
+1117,FW,2017,milan,fendi,row35406,fotos_vogue/01117.jpg
+1118,FW,2017,milan,gucci,row40850,fotos_vogue/01118.jpg
+1119,FW,2017,milan,gucci,row40860,fotos_vogue/01119.jpg
+1120,FW,2017,milan,gucci,row40870,fotos_vogue/01120.jpg
+1121,FW,2017,milan,gucci,row40880,fotos_vogue/01121.jpg
+1122,FW,2017,milan,gucci,row40891,fotos_vogue/01122.jpg
+1123,FW,2017,milan,gucci,row40901,fotos_vogue/01123.jpg
+1124,FW,2017,milan,gucci,row40911,fotos_vogue/01124.jpg
+1125,FW,2017,milan,gucci,row40921,fotos_vogue/01125.jpg
+1126,FW,2017,milan,gucci,row40932,fotos_vogue/01126.jpg
+1127,FW,2017,milan,gucci,row40942,fotos_vogue/01127.jpg
+1128,FW,2017,milan,gucci,row40952,fotos_vogue/01128.jpg
+1129,FW,2017,paris,hermes,row47484,fotos_vogue/01129.jpg
+1130,FW,2017,paris,hermes,row47495,fotos_vogue/01130.jpg
+1131,FW,2017,paris,hermes,row47505,fotos_vogue/01131.jpg
+1132,FW,2017,paris,hermes,row47515,fotos_vogue/01132.jpg
+1133,FW,2017,paris,hermes,row47525,fotos_vogue/01133.jpg
+1134,FW,2017,paris,louis vuitton,row51777,fotos_vogue/01134.jpg
+1135,FW,2017,paris,louis vuitton,row51787,fotos_vogue/01135.jpg
+1136,FW,2017,paris,louis vuitton,row51797,fotos_vogue/01136.jpg
+1137,FW,2017,paris,louis vuitton,row51807,fotos_vogue/01137.jpg
+1138,FW,2017,milan,prada,row57799,fotos_vogue/01138.jpg
+1139,FW,2017,milan,prada,row57809,fotos_vogue/01139.jpg
+1140,FW,2017,milan,prada,row57819,fotos_vogue/01140.jpg
+1141,FW,2017,milan,prada,row57829,fotos_vogue/01141.jpg
+1142,FW,2017,milan,prada,row57840,fotos_vogue/01142.jpg
+1143,FW,2017,new-york,ralph lauren,row62860,fotos_vogue/01143.jpg
+1144,FW,2017,new-york,ralph lauren,row62870,fotos_vogue/01144.jpg
+1145,FW,2017,new-york,ralph lauren,row62880,fotos_vogue/01145.jpg
+1146,FW,2017,new-york,ralph lauren,row62891,fotos_vogue/01146.jpg
+1147,FW,2017,new-york,ralph lauren,row62901,fotos_vogue/01147.jpg
+1148,FW,2017,new-york,ralph lauren,row62911,fotos_vogue/01148.jpg
+1149,FW,2017,paris,saint laurent,row66914,fotos_vogue/01149.jpg
+1150,FW,2017,paris,saint laurent,row66924,fotos_vogue/01150.jpg
+1151,FW,2017,paris,saint laurent,row66935,fotos_vogue/01151.jpg
+1152,FW,2017,paris,saint laurent,row66945,fotos_vogue/01152.jpg
+1153,FW,2017,paris,saint laurent,row66955,fotos_vogue/01153.jpg
+1154,FW,2017,paris,saint laurent,row66965,fotos_vogue/01154.jpg
+1155,FW,2017,paris,saint laurent,row66976,fotos_vogue/01155.jpg
+1156,FW,2017,paris,saint laurent,row66986,fotos_vogue/01156.jpg
+1157,FW,2017,paris,saint laurent,row66996,fotos_vogue/01157.jpg
+1158,FW,2017,paris,saint laurent,row67006,fotos_vogue/01158.jpg
+1159,FW,2017,paris,valentino,row73791,fotos_vogue/01159.jpg
+1160,FW,2017,paris,valentino,row73801,fotos_vogue/01160.jpg
+1161,FW,2017,paris,valentino,row73811,fotos_vogue/01161.jpg
+1162,FW,2017,paris,valentino,row73821,fotos_vogue/01162.jpg
+1163,FW,2017,paris,valentino,row73832,fotos_vogue/01163.jpg
+1164,FW,2017,paris,valentino,row73842,fotos_vogue/01164.jpg
+1165,FW,2017,milan,versace,row82734,fotos_vogue/01165.jpg
+1166,FW,2017,milan,versace,row82744,fotos_vogue/01166.jpg
+1167,FW,2017,milan,versace,row82755,fotos_vogue/01167.jpg
+1168,FW,2017,milan,versace,row82765,fotos_vogue/01168.jpg
+1169,FW,2017,milan,versace,row82775,fotos_vogue/01169.jpg
+1170,FW,2017,milan,versace,row82785,fotos_vogue/01170.jpg
+1171,SS,2017,paris,alexander mcqueen,row4509,fotos_vogue/01171.jpg
+1172,SS,2017,paris,alexander mcqueen,row4517,fotos_vogue/01172.jpg
+1173,SS,2017,paris,alexander mcqueen,row4525,fotos_vogue/01173.jpg
+1174,SS,2017,paris,alexander mcqueen,row4533,fotos_vogue/01174.jpg
+1175,SS,2017,paris,alexander mcqueen,row4541,fotos_vogue/01175.jpg
+1176,SS,2017,paris,alexander mcqueen,row4549,fotos_vogue/01176.jpg
+1177,SS,2017,paris,balenciaga,row11125,fotos_vogue/01177.jpg
+1178,SS,2017,paris,balenciaga,row11133,fotos_vogue/01178.jpg
+1179,SS,2017,paris,balenciaga,row11141,fotos_vogue/01179.jpg
+1180,SS,2017,paris,balenciaga,row11149,fotos_vogue/01180.jpg
+1181,SS,2017,paris,balenciaga,row11157,fotos_vogue/01181.jpg
+1182,SS,2017,paris,chanel,row25503,fotos_vogue/01182.jpg
+1183,SS,2017,paris,chanel,row25511,fotos_vogue/01183.jpg
+1184,SS,2017,paris,chanel,row25519,fotos_vogue/01184.jpg
+1185,SS,2017,paris,chanel,row25527,fotos_vogue/01185.jpg
+1186,SS,2017,paris,chanel,row25535,fotos_vogue/01186.jpg
+1187,SS,2017,paris,chanel,row25543,fotos_vogue/01187.jpg
+1188,SS,2017,paris,chanel,row25551,fotos_vogue/01188.jpg
+1189,SS,2017,paris,chanel,row25559,fotos_vogue/01189.jpg
+1190,SS,2017,paris,chanel,row25567,fotos_vogue/01190.jpg
+1191,SS,2017,paris,chanel,row25575,fotos_vogue/01191.jpg
+1192,SS,2017,paris,chanel,row25583,fotos_vogue/01192.jpg
+1193,SS,2017,sin_dato,christian dior,row32891,fotos_vogue/01193.jpg
+1194,SS,2017,sin_dato,christian dior,row32899,fotos_vogue/01194.jpg
+1195,SS,2017,sin_dato,christian dior,row32907,fotos_vogue/01195.jpg
+1196,SS,2017,sin_dato,christian dior,row32915,fotos_vogue/01196.jpg
+1197,SS,2017,sin_dato,christian dior,row32923,fotos_vogue/01197.jpg
+1198,SS,2017,sin_dato,christian dior,row32931,fotos_vogue/01198.jpg
+1199,SS,2017,sin_dato,christian dior,row32939,fotos_vogue/01199.jpg
+1200,SS,2017,sin_dato,christian dior,row32947,fotos_vogue/01200.jpg
+1201,SS,2017,milan,fendi,row38392,fotos_vogue/01201.jpg
+1202,SS,2017,milan,fendi,row38400,fotos_vogue/01202.jpg
+1203,SS,2017,milan,fendi,row38408,fotos_vogue/01203.jpg
+1204,SS,2017,milan,fendi,row38416,fotos_vogue/01204.jpg
+1205,SS,2017,milan,fendi,row38424,fotos_vogue/01205.jpg
+1206,SS,2017,milan,fendi,row38432,fotos_vogue/01206.jpg
+1207,SS,2017,milan,fendi,row38440,fotos_vogue/01207.jpg
+1208,SS,2017,milan,gucci,row45113,fotos_vogue/01208.jpg
+1209,SS,2017,milan,gucci,row45121,fotos_vogue/01209.jpg
+1210,SS,2017,milan,gucci,row45129,fotos_vogue/01210.jpg
+1211,SS,2017,milan,gucci,row45137,fotos_vogue/01211.jpg
+1212,SS,2017,milan,gucci,row45145,fotos_vogue/01212.jpg
+1213,SS,2017,milan,gucci,row45153,fotos_vogue/01213.jpg
+1214,SS,2017,milan,gucci,row45161,fotos_vogue/01214.jpg
+1215,SS,2017,milan,gucci,row45169,fotos_vogue/01215.jpg
+1216,SS,2017,milan,gucci,row45177,fotos_vogue/01216.jpg
+1217,SS,2017,milan,gucci,row45185,fotos_vogue/01217.jpg
+1218,SS,2017,paris,hermes,row49571,fotos_vogue/01218.jpg
+1219,SS,2017,paris,hermes,row49579,fotos_vogue/01219.jpg
+1220,SS,2017,paris,hermes,row49587,fotos_vogue/01220.jpg
+1221,SS,2017,paris,hermes,row49595,fotos_vogue/01221.jpg
+1222,SS,2017,paris,hermes,row49603,fotos_vogue/01222.jpg
+1223,SS,2017,paris,hermes,row49611,fotos_vogue/01223.jpg
+1224,SS,2017,paris,louis vuitton,row55395,fotos_vogue/01224.jpg
+1225,SS,2017,paris,louis vuitton,row55403,fotos_vogue/01225.jpg
+1226,SS,2017,paris,louis vuitton,row55411,fotos_vogue/01226.jpg
+1227,SS,2017,paris,louis vuitton,row55419,fotos_vogue/01227.jpg
+1228,SS,2017,paris,louis vuitton,row55427,fotos_vogue/01228.jpg
+1229,SS,2017,milan,prada,row60717,fotos_vogue/01229.jpg
+1230,SS,2017,milan,prada,row60725,fotos_vogue/01230.jpg
+1231,SS,2017,milan,prada,row60734,fotos_vogue/01231.jpg
+1232,SS,2017,milan,prada,row60742,fotos_vogue/01232.jpg
+1233,SS,2017,milan,prada,row60750,fotos_vogue/01233.jpg
+1234,SS,2017,milan,prada,row60758,fotos_vogue/01234.jpg
+1235,SS,2017,new-york,ralph lauren,row65061,fotos_vogue/01235.jpg
+1236,SS,2017,new-york,ralph lauren,row65069,fotos_vogue/01236.jpg
+1237,SS,2017,new-york,ralph lauren,row65077,fotos_vogue/01237.jpg
+1238,SS,2017,new-york,ralph lauren,row65085,fotos_vogue/01238.jpg
+1239,SS,2017,new-york,ralph lauren,row65093,fotos_vogue/01239.jpg
+1240,SS,2017,paris,saint laurent,row70414,fotos_vogue/01240.jpg
+1241,SS,2017,paris,saint laurent,row70422,fotos_vogue/01241.jpg
+1242,SS,2017,paris,saint laurent,row70430,fotos_vogue/01242.jpg
+1243,SS,2017,paris,saint laurent,row70438,fotos_vogue/01243.jpg
+1244,SS,2017,paris,saint laurent,row70446,fotos_vogue/01244.jpg
+1245,SS,2017,paris,saint laurent,row70454,fotos_vogue/01245.jpg
+1246,SS,2017,paris,valentino,row79214,fotos_vogue/01246.jpg
+1247,SS,2017,paris,valentino,row79222,fotos_vogue/01247.jpg
+1248,SS,2017,paris,valentino,row79230,fotos_vogue/01248.jpg
+1249,SS,2017,paris,valentino,row79238,fotos_vogue/01249.jpg
+1250,SS,2017,paris,valentino,row79246,fotos_vogue/01250.jpg
+1251,SS,2017,paris,valentino,row79254,fotos_vogue/01251.jpg
+1252,SS,2017,paris,valentino,row79262,fotos_vogue/01252.jpg
+1253,SS,2017,paris,valentino,row79270,fotos_vogue/01253.jpg
+1254,SS,2017,milan,versace,row86726,fotos_vogue/01254.jpg
+1255,SS,2017,milan,versace,row86734,fotos_vogue/01255.jpg
+1256,SS,2017,milan,versace,row86742,fotos_vogue/01256.jpg
+1257,SS,2017,milan,versace,row86750,fotos_vogue/01257.jpg
+1258,SS,2017,milan,versace,row86758,fotos_vogue/01258.jpg
+1259,SS,2017,milan,versace,row86766,fotos_vogue/01259.jpg
+1260,SS,2017,milan,versace,row86774,fotos_vogue/01260.jpg
+1261,FW,2018,paris,alexander mcqueen,row1579,fotos_vogue/01261.jpg
+1262,FW,2018,paris,alexander mcqueen,row1589,fotos_vogue/01262.jpg
+1263,FW,2018,paris,alexander mcqueen,row1600,fotos_vogue/01263.jpg
+1264,FW,2018,paris,alexander mcqueen,row1610,fotos_vogue/01264.jpg
+1265,FW,2018,paris,balenciaga,row8030,fotos_vogue/01265.jpg
+1266,FW,2018,paris,balenciaga,row8041,fotos_vogue/01266.jpg
+1267,FW,2018,paris,balenciaga,row8051,fotos_vogue/01267.jpg
+1268,FW,2018,paris,balenciaga,row8062,fotos_vogue/01268.jpg
+1269,FW,2018,paris,balenciaga,row8072,fotos_vogue/01269.jpg
+1270,FW,2018,paris,balenciaga,row8082,fotos_vogue/01270.jpg
+1271,FW,2018,paris,balenciaga,row8093,fotos_vogue/01271.jpg
+1272,FW,2018,new-york,calvin klein,row15767,fotos_vogue/01272.jpg
+1273,FW,2018,new-york,calvin klein,row15778,fotos_vogue/01273.jpg
+1274,FW,2018,new-york,calvin klein,row15788,fotos_vogue/01274.jpg
+1275,FW,2018,new-york,calvin klein,row15798,fotos_vogue/01275.jpg
+1276,FW,2018,new-york,calvin klein,row15809,fotos_vogue/01276.jpg
+1277,FW,2018,new-york,calvin klein,row15819,fotos_vogue/01277.jpg
+1278,FW,2018,new-york,calvin klein,row15830,fotos_vogue/01278.jpg
+1279,FW,2018,paris,chanel,row19120,fotos_vogue/01279.jpg
+1280,FW,2018,paris,chanel,row19131,fotos_vogue/01280.jpg
+1281,FW,2018,paris,chanel,row19141,fotos_vogue/01281.jpg
+1282,FW,2018,paris,chanel,row19151,fotos_vogue/01282.jpg
+1283,FW,2018,paris,chanel,row19162,fotos_vogue/01283.jpg
+1284,FW,2018,paris,chanel,row19172,fotos_vogue/01284.jpg
+1285,FW,2018,paris,chanel,row19183,fotos_vogue/01285.jpg
+1286,FW,2018,paris,chanel,row19193,fotos_vogue/01286.jpg
+1287,FW,2018,sin_dato,christian dior,row28436,fotos_vogue/01287.jpg
+1288,FW,2018,sin_dato,christian dior,row28447,fotos_vogue/01288.jpg
+1289,FW,2018,sin_dato,christian dior,row28457,fotos_vogue/01289.jpg
+1290,FW,2018,sin_dato,christian dior,row28468,fotos_vogue/01290.jpg
+1291,FW,2018,sin_dato,christian dior,row28478,fotos_vogue/01291.jpg
+1292,FW,2018,sin_dato,christian dior,row28488,fotos_vogue/01292.jpg
+1293,FW,2018,milan,fendi,row35517,fotos_vogue/01293.jpg
+1294,FW,2018,milan,fendi,row35527,fotos_vogue/01294.jpg
+1295,FW,2018,milan,fendi,row35538,fotos_vogue/01295.jpg
+1296,FW,2018,milan,fendi,row35548,fotos_vogue/01296.jpg
+1297,FW,2018,milan,gucci,row41052,fotos_vogue/01297.jpg
+1298,FW,2018,milan,gucci,row41062,fotos_vogue/01298.jpg
+1299,FW,2018,milan,gucci,row41072,fotos_vogue/01299.jpg
+1300,FW,2018,milan,gucci,row41083,fotos_vogue/01300.jpg
+1301,FW,2018,milan,gucci,row41093,fotos_vogue/01301.jpg
+1302,FW,2018,milan,gucci,row41104,fotos_vogue/01302.jpg
+1303,FW,2018,milan,gucci,row41114,fotos_vogue/01303.jpg
+1304,FW,2018,milan,gucci,row41124,fotos_vogue/01304.jpg
+1305,FW,2018,milan,gucci,row41135,fotos_vogue/01305.jpg
+1306,FW,2018,paris,hermes,row47584,fotos_vogue/01306.jpg
+1307,FW,2018,paris,hermes,row47595,fotos_vogue/01307.jpg
+1308,FW,2018,paris,hermes,row47605,fotos_vogue/01308.jpg
+1309,FW,2018,paris,hermes,row47615,fotos_vogue/01309.jpg
+1310,FW,2018,paris,hermes,row47626,fotos_vogue/01310.jpg
+1311,FW,2018,paris,louis vuitton,row51871,fotos_vogue/01311.jpg
+1312,FW,2018,paris,louis vuitton,row51882,fotos_vogue/01312.jpg
+1313,FW,2018,paris,louis vuitton,row51892,fotos_vogue/01313.jpg
+1314,FW,2018,paris,louis vuitton,row51902,fotos_vogue/01314.jpg
+1315,FW,2018,paris,louis vuitton,row51913,fotos_vogue/01315.jpg
+1316,FW,2018,milan,prada,row57909,fotos_vogue/01316.jpg
+1317,FW,2018,milan,prada,row57920,fotos_vogue/01317.jpg
+1318,FW,2018,milan,prada,row57930,fotos_vogue/01318.jpg
+1319,FW,2018,milan,prada,row57941,fotos_vogue/01319.jpg
+1320,FW,2018,new-york,ralph lauren,row62959,fotos_vogue/01320.jpg
+1321,FW,2018,new-york,ralph lauren,row62969,fotos_vogue/01321.jpg
+1322,FW,2018,new-york,ralph lauren,row62980,fotos_vogue/01322.jpg
+1323,FW,2018,new-york,ralph lauren,row62990,fotos_vogue/01323.jpg
+1324,FW,2018,new-york,ralph lauren,row63001,fotos_vogue/01324.jpg
+1325,FW,2018,new-york,ralph lauren,row63011,fotos_vogue/01325.jpg
+1326,FW,2018,new-york,ralph lauren,row63021,fotos_vogue/01326.jpg
+1327,FW,2018,new-york,ralph lauren,row63032,fotos_vogue/01327.jpg
+1328,FW,2018,new-york,ralph lauren,row63042,fotos_vogue/01328.jpg
+1329,FW,2018,new-york,ralph lauren,row63053,fotos_vogue/01329.jpg
+1330,FW,2018,new-york,ralph lauren,row63063,fotos_vogue/01330.jpg
+1331,FW,2018,paris,saint laurent,row67020,fotos_vogue/01331.jpg
+1332,FW,2018,paris,saint laurent,row67031,fotos_vogue/01332.jpg
+1333,FW,2018,paris,saint laurent,row67041,fotos_vogue/01333.jpg
+1334,FW,2018,paris,saint laurent,row67052,fotos_vogue/01334.jpg
+1335,FW,2018,paris,saint laurent,row67062,fotos_vogue/01335.jpg
+1336,FW,2018,paris,saint laurent,row67073,fotos_vogue/01336.jpg
+1337,FW,2018,paris,saint laurent,row67083,fotos_vogue/01337.jpg
+1338,FW,2018,paris,saint laurent,row67093,fotos_vogue/01338.jpg
+1339,FW,2018,paris,valentino,row73965,fotos_vogue/01339.jpg
+1340,FW,2018,paris,valentino,row73975,fotos_vogue/01340.jpg
+1341,FW,2018,paris,valentino,row73986,fotos_vogue/01341.jpg
+1342,FW,2018,paris,valentino,row73996,fotos_vogue/01342.jpg
+1343,FW,2018,paris,valentino,row74006,fotos_vogue/01343.jpg
+1344,FW,2018,paris,valentino,row74017,fotos_vogue/01344.jpg
+1345,FW,2018,paris,valentino,row74027,fotos_vogue/01345.jpg
+1346,FW,2018,milan,versace,row82851,fotos_vogue/01346.jpg
+1347,FW,2018,milan,versace,row82861,fotos_vogue/01347.jpg
+1348,FW,2018,milan,versace,row82871,fotos_vogue/01348.jpg
+1349,FW,2018,milan,versace,row82882,fotos_vogue/01349.jpg
+1350,FW,2018,milan,versace,row82892,fotos_vogue/01350.jpg
+1351,SS,2018,paris,alexander mcqueen,row4595,fotos_vogue/01351.jpg
+1352,SS,2018,paris,alexander mcqueen,row4606,fotos_vogue/01352.jpg
+1353,SS,2018,paris,alexander mcqueen,row4616,fotos_vogue/01353.jpg
+1354,SS,2018,paris,alexander mcqueen,row4627,fotos_vogue/01354.jpg
+1355,SS,2018,paris,balenciaga,row11221,fotos_vogue/01355.jpg
+1356,SS,2018,paris,balenciaga,row11232,fotos_vogue/01356.jpg
+1357,SS,2018,paris,balenciaga,row11243,fotos_vogue/01357.jpg
+1358,SS,2018,paris,balenciaga,row11253,fotos_vogue/01358.jpg
+1359,SS,2018,paris,balenciaga,row11264,fotos_vogue/01359.jpg
+1360,SS,2018,paris,balenciaga,row11275,fotos_vogue/01360.jpg
+1361,SS,2018,new-york,calvin klein,row16001,fotos_vogue/01361.jpg
+1362,SS,2018,new-york,calvin klein,row16012,fotos_vogue/01362.jpg
+1363,SS,2018,new-york,calvin klein,row16022,fotos_vogue/01363.jpg
+1364,SS,2018,new-york,calvin klein,row16033,fotos_vogue/01364.jpg
+1365,SS,2018,new-york,calvin klein,row16044,fotos_vogue/01365.jpg
+1366,SS,2018,new-york,calvin klein,row16055,fotos_vogue/01366.jpg
+1367,SS,2018,new-york,calvin klein,row16066,fotos_vogue/01367.jpg
+1368,SS,2018,new-york,calvin klein,row16076,fotos_vogue/01368.jpg
+1369,SS,2018,paris,chanel,row25667,fotos_vogue/01369.jpg
+1370,SS,2018,paris,chanel,row25678,fotos_vogue/01370.jpg
+1371,SS,2018,paris,chanel,row25689,fotos_vogue/01371.jpg
+1372,SS,2018,paris,chanel,row25699,fotos_vogue/01372.jpg
+1373,SS,2018,paris,chanel,row25710,fotos_vogue/01373.jpg
+1374,SS,2018,paris,chanel,row25721,fotos_vogue/01374.jpg
+1375,SS,2018,paris,chanel,row25732,fotos_vogue/01375.jpg
+1376,SS,2018,paris,chanel,row25743,fotos_vogue/01376.jpg
+1377,SS,2018,sin_dato,christian dior,row33032,fotos_vogue/01377.jpg
+1378,SS,2018,sin_dato,christian dior,row33043,fotos_vogue/01378.jpg
+1379,SS,2018,sin_dato,christian dior,row33054,fotos_vogue/01379.jpg
+1380,SS,2018,sin_dato,christian dior,row33065,fotos_vogue/01380.jpg
+1381,SS,2018,sin_dato,christian dior,row33076,fotos_vogue/01381.jpg
+1382,SS,2018,sin_dato,christian dior,row33086,fotos_vogue/01382.jpg
+1383,SS,2018,sin_dato,christian dior,row33097,fotos_vogue/01383.jpg
+1384,SS,2018,milan,fendi,row38499,fotos_vogue/01384.jpg
+1385,SS,2018,milan,fendi,row38510,fotos_vogue/01385.jpg
+1386,SS,2018,milan,fendi,row38521,fotos_vogue/01386.jpg
+1387,SS,2018,milan,fendi,row38531,fotos_vogue/01387.jpg
+1388,SS,2018,milan,fendi,row38542,fotos_vogue/01388.jpg
+1389,SS,2018,milan,gucci,row45300,fotos_vogue/01389.jpg
+1390,SS,2018,milan,gucci,row45311,fotos_vogue/01390.jpg
+1391,SS,2018,milan,gucci,row45321,fotos_vogue/01391.jpg
+1392,SS,2018,milan,gucci,row45332,fotos_vogue/01392.jpg
+1393,SS,2018,milan,gucci,row45343,fotos_vogue/01393.jpg
+1394,SS,2018,milan,gucci,row45354,fotos_vogue/01394.jpg
+1395,SS,2018,milan,gucci,row45365,fotos_vogue/01395.jpg
+1396,SS,2018,milan,gucci,row45375,fotos_vogue/01396.jpg
+1397,SS,2018,milan,gucci,row45386,fotos_vogue/01397.jpg
+1398,SS,2018,milan,gucci,row45397,fotos_vogue/01398.jpg
+1399,SS,2018,paris,hermes,row49661,fotos_vogue/01399.jpg
+1400,SS,2018,paris,hermes,row49672,fotos_vogue/01400.jpg
+1401,SS,2018,paris,hermes,row49682,fotos_vogue/01401.jpg
+1402,SS,2018,paris,hermes,row49693,fotos_vogue/01402.jpg
+1403,SS,2018,paris,hermes,row49704,fotos_vogue/01403.jpg
+1404,SS,2018,paris,louis vuitton,row55484,fotos_vogue/01404.jpg
+1405,SS,2018,paris,louis vuitton,row55494,fotos_vogue/01405.jpg
+1406,SS,2018,paris,louis vuitton,row55505,fotos_vogue/01406.jpg
+1407,SS,2018,paris,louis vuitton,row55516,fotos_vogue/01407.jpg
+1408,SS,2018,milan,prada,row60812,fotos_vogue/01408.jpg
+1409,SS,2018,milan,prada,row60823,fotos_vogue/01409.jpg
+1410,SS,2018,milan,prada,row60833,fotos_vogue/01410.jpg
+1411,SS,2018,milan,prada,row60844,fotos_vogue/01411.jpg
+1412,SS,2018,milan,prada,row60855,fotos_vogue/01412.jpg
+1413,SS,2018,new-york,ralph lauren,row65142,fotos_vogue/01413.jpg
+1414,SS,2018,new-york,ralph lauren,row65153,fotos_vogue/01414.jpg
+1415,SS,2018,new-york,ralph lauren,row65163,fotos_vogue/01415.jpg
+1416,SS,2018,new-york,ralph lauren,row65174,fotos_vogue/01416.jpg
+1417,SS,2018,new-york,ralph lauren,row65185,fotos_vogue/01417.jpg
+1418,SS,2018,new-york,ralph lauren,row65196,fotos_vogue/01418.jpg
+1419,SS,2018,paris,saint laurent,row70464,fotos_vogue/01419.jpg
+1420,SS,2018,paris,saint laurent,row70474,fotos_vogue/01420.jpg
+1421,SS,2018,paris,saint laurent,row70485,fotos_vogue/01421.jpg
+1422,SS,2018,paris,saint laurent,row70496,fotos_vogue/01422.jpg
+1423,SS,2018,paris,saint laurent,row70507,fotos_vogue/01423.jpg
+1424,SS,2018,paris,saint laurent,row70517,fotos_vogue/01424.jpg
+1425,SS,2018,paris,saint laurent,row70528,fotos_vogue/01425.jpg
+1426,SS,2018,paris,saint laurent,row70539,fotos_vogue/01426.jpg
+1427,SS,2018,paris,saint laurent,row70550,fotos_vogue/01427.jpg
+1428,SS,2018,paris,valentino,row79408,fotos_vogue/01428.jpg
+1429,SS,2018,paris,valentino,row79418,fotos_vogue/01429.jpg
+1430,SS,2018,paris,valentino,row79429,fotos_vogue/01430.jpg
+1431,SS,2018,paris,valentino,row79440,fotos_vogue/01431.jpg
+1432,SS,2018,paris,valentino,row79451,fotos_vogue/01432.jpg
+1433,SS,2018,paris,valentino,row79462,fotos_vogue/01433.jpg
+1434,SS,2018,paris,valentino,row79472,fotos_vogue/01434.jpg
+1435,SS,2018,milan,versace,row86836,fotos_vogue/01435.jpg
+1436,SS,2018,milan,versace,row86847,fotos_vogue/01436.jpg
+1437,SS,2018,milan,versace,row86858,fotos_vogue/01437.jpg
+1438,SS,2018,milan,versace,row86869,fotos_vogue/01438.jpg
+1439,SS,2018,milan,versace,row86879,fotos_vogue/01439.jpg
+1440,SS,2018,milan,versace,row86890,fotos_vogue/01440.jpg
+1441,FW,2019,paris,alexander mcqueen,row1651,fotos_vogue/01441.jpg
+1442,FW,2019,paris,alexander mcqueen,row1661,fotos_vogue/01442.jpg
+1443,FW,2019,paris,alexander mcqueen,row1671,fotos_vogue/01443.jpg
+1444,FW,2019,paris,alexander mcqueen,row1681,fotos_vogue/01444.jpg
+1445,FW,2019,paris,balenciaga,row8212,fotos_vogue/01445.jpg
+1446,FW,2019,paris,balenciaga,row8222,fotos_vogue/01446.jpg
+1447,FW,2019,paris,balenciaga,row8232,fotos_vogue/01447.jpg
+1448,FW,2019,paris,balenciaga,row8242,fotos_vogue/01448.jpg
+1449,FW,2019,paris,balenciaga,row8251,fotos_vogue/01449.jpg
+1450,FW,2019,paris,balenciaga,row8261,fotos_vogue/01450.jpg
+1451,FW,2019,paris,balenciaga,row8271,fotos_vogue/01451.jpg
+1452,FW,2019,paris,balenciaga,row8281,fotos_vogue/01452.jpg
+1453,FW,2019,paris,balenciaga,row8290,fotos_vogue/01453.jpg
+1454,FW,2019,paris,balenciaga,row8300,fotos_vogue/01454.jpg
+1455,FW,2019,paris,balenciaga,row8310,fotos_vogue/01455.jpg
+1456,FW,2019,paris,chanel,row19266,fotos_vogue/01456.jpg
+1457,FW,2019,paris,chanel,row19275,fotos_vogue/01457.jpg
+1458,FW,2019,paris,chanel,row19285,fotos_vogue/01458.jpg
+1459,FW,2019,paris,chanel,row19295,fotos_vogue/01459.jpg
+1460,FW,2019,paris,chanel,row19305,fotos_vogue/01460.jpg
+1461,FW,2019,paris,chanel,row19314,fotos_vogue/01461.jpg
+1462,FW,2019,paris,chanel,row19324,fotos_vogue/01462.jpg
+1463,FW,2019,paris,chanel,row19334,fotos_vogue/01463.jpg
+1464,FW,2019,sin_dato,christian dior,row28562,fotos_vogue/01464.jpg
+1465,FW,2019,sin_dato,christian dior,row28572,fotos_vogue/01465.jpg
+1466,FW,2019,sin_dato,christian dior,row28581,fotos_vogue/01466.jpg
+1467,FW,2019,sin_dato,christian dior,row28591,fotos_vogue/01467.jpg
+1468,FW,2019,sin_dato,christian dior,row28601,fotos_vogue/01468.jpg
+1469,FW,2019,sin_dato,christian dior,row28611,fotos_vogue/01469.jpg
+1470,FW,2019,sin_dato,christian dior,row28620,fotos_vogue/01470.jpg
+1471,FW,2019,sin_dato,christian dior,row28630,fotos_vogue/01471.jpg
+1472,FW,2019,sin_dato,christian dior,row28640,fotos_vogue/01472.jpg
+1473,FW,2019,milan,fendi,row35676,fotos_vogue/01473.jpg
+1474,FW,2019,milan,fendi,row35685,fotos_vogue/01474.jpg
+1475,FW,2019,milan,fendi,row35695,fotos_vogue/01475.jpg
+1476,FW,2019,milan,fendi,row35705,fotos_vogue/01476.jpg
+1477,FW,2019,milan,fendi,row35715,fotos_vogue/01477.jpg
+1478,FW,2019,milan,gucci,row41235,fotos_vogue/01478.jpg
+1479,FW,2019,milan,gucci,row41245,fotos_vogue/01479.jpg
+1480,FW,2019,milan,gucci,row41255,fotos_vogue/01480.jpg
+1481,FW,2019,milan,gucci,row41265,fotos_vogue/01481.jpg
+1482,FW,2019,milan,gucci,row41274,fotos_vogue/01482.jpg
+1483,FW,2019,milan,gucci,row41284,fotos_vogue/01483.jpg
+1484,FW,2019,milan,gucci,row41294,fotos_vogue/01484.jpg
+1485,FW,2019,milan,gucci,row41304,fotos_vogue/01485.jpg
+1486,FW,2019,milan,gucci,row41313,fotos_vogue/01486.jpg
+1487,FW,2019,paris,hermes,row47687,fotos_vogue/01487.jpg
+1488,FW,2019,paris,hermes,row47697,fotos_vogue/01488.jpg
+1489,FW,2019,paris,hermes,row47707,fotos_vogue/01489.jpg
+1490,FW,2019,paris,hermes,row47716,fotos_vogue/01490.jpg
+1491,FW,2019,paris,hermes,row47726,fotos_vogue/01491.jpg
+1492,FW,2019,paris,louis vuitton,row51982,fotos_vogue/01492.jpg
+1493,FW,2019,paris,louis vuitton,row51992,fotos_vogue/01493.jpg
+1494,FW,2019,paris,louis vuitton,row52001,fotos_vogue/01494.jpg
+1495,FW,2019,paris,louis vuitton,row52011,fotos_vogue/01495.jpg
+1496,FW,2019,paris,louis vuitton,row52021,fotos_vogue/01496.jpg
+1497,FW,2019,paris,louis vuitton,row52031,fotos_vogue/01497.jpg
+1498,FW,2019,milan,prada,row58010,fotos_vogue/01498.jpg
+1499,FW,2019,milan,prada,row58020,fotos_vogue/01499.jpg
+1500,FW,2019,milan,prada,row58030,fotos_vogue/01500.jpg
+1501,FW,2019,milan,prada,row58040,fotos_vogue/01501.jpg
+1502,FW,2019,milan,prada,row58049,fotos_vogue/01502.jpg
+1503,FW,2019,milan,prada,row58059,fotos_vogue/01503.jpg
+1504,FW,2019,new-york,ralph lauren,row63115,fotos_vogue/01504.jpg
+1505,FW,2019,new-york,ralph lauren,row63125,fotos_vogue/01505.jpg
+1506,FW,2019,new-york,ralph lauren,row63134,fotos_vogue/01506.jpg
+1507,FW,2019,new-york,ralph lauren,row63144,fotos_vogue/01507.jpg
+1508,FW,2019,paris,saint laurent,row67215,fotos_vogue/01508.jpg
+1509,FW,2019,paris,saint laurent,row67225,fotos_vogue/01509.jpg
+1510,FW,2019,paris,saint laurent,row67235,fotos_vogue/01510.jpg
+1511,FW,2019,paris,saint laurent,row67244,fotos_vogue/01511.jpg
+1512,FW,2019,paris,saint laurent,row67254,fotos_vogue/01512.jpg
+1513,FW,2019,paris,saint laurent,row67264,fotos_vogue/01513.jpg
+1514,FW,2019,paris,saint laurent,row67274,fotos_vogue/01514.jpg
+1515,FW,2019,paris,saint laurent,row67283,fotos_vogue/01515.jpg
+1516,FW,2019,paris,saint laurent,row67293,fotos_vogue/01516.jpg
+1517,FW,2019,paris,saint laurent,row67303,fotos_vogue/01517.jpg
+1518,FW,2019,paris,valentino,row74159,fotos_vogue/01518.jpg
+1519,FW,2019,paris,valentino,row74168,fotos_vogue/01519.jpg
+1520,FW,2019,paris,valentino,row74178,fotos_vogue/01520.jpg
+1521,FW,2019,paris,valentino,row74188,fotos_vogue/01521.jpg
+1522,FW,2019,paris,valentino,row74198,fotos_vogue/01522.jpg
+1523,FW,2019,paris,valentino,row74207,fotos_vogue/01523.jpg
+1524,FW,2019,paris,valentino,row74217,fotos_vogue/01524.jpg
+1525,FW,2019,milan,versace,row82960,fotos_vogue/01525.jpg
+1526,FW,2019,milan,versace,row82970,fotos_vogue/01526.jpg
+1527,FW,2019,milan,versace,row82979,fotos_vogue/01527.jpg
+1528,FW,2019,milan,versace,row82989,fotos_vogue/01528.jpg
+1529,FW,2019,milan,versace,row82999,fotos_vogue/01529.jpg
+1530,FW,2019,milan,versace,row83009,fotos_vogue/01530.jpg
+1531,SS,2019,paris,alexander mcqueen,row4683,fotos_vogue/01531.jpg
+1532,SS,2019,paris,alexander mcqueen,row4693,fotos_vogue/01532.jpg
+1533,SS,2019,paris,alexander mcqueen,row4703,fotos_vogue/01533.jpg
+1534,SS,2019,paris,alexander mcqueen,row4713,fotos_vogue/01534.jpg
+1535,SS,2019,paris,balenciaga,row11286,fotos_vogue/01535.jpg
+1536,SS,2019,paris,balenciaga,row11296,fotos_vogue/01536.jpg
+1537,SS,2019,paris,balenciaga,row11305,fotos_vogue/01537.jpg
+1538,SS,2019,paris,balenciaga,row11315,fotos_vogue/01538.jpg
+1539,SS,2019,paris,balenciaga,row11325,fotos_vogue/01539.jpg
+1540,SS,2019,paris,balenciaga,row11335,fotos_vogue/01540.jpg
+1541,SS,2019,paris,balenciaga,row11345,fotos_vogue/01541.jpg
+1542,SS,2019,paris,balenciaga,row11355,fotos_vogue/01542.jpg
+1543,SS,2019,new-york,calvin klein,row16148,fotos_vogue/01543.jpg
+1544,SS,2019,new-york,calvin klein,row16157,fotos_vogue/01544.jpg
+1545,SS,2019,new-york,calvin klein,row16167,fotos_vogue/01545.jpg
+1546,SS,2019,new-york,calvin klein,row16177,fotos_vogue/01546.jpg
+1547,SS,2019,new-york,calvin klein,row16187,fotos_vogue/01547.jpg
+1548,SS,2019,new-york,calvin klein,row16197,fotos_vogue/01548.jpg
+1549,SS,2019,paris,chanel,row25812,fotos_vogue/01549.jpg
+1550,SS,2019,paris,chanel,row25821,fotos_vogue/01550.jpg
+1551,SS,2019,paris,chanel,row25831,fotos_vogue/01551.jpg
+1552,SS,2019,paris,chanel,row25841,fotos_vogue/01552.jpg
+1553,SS,2019,paris,chanel,row25851,fotos_vogue/01553.jpg
+1554,SS,2019,paris,chanel,row25861,fotos_vogue/01554.jpg
+1555,SS,2019,paris,chanel,row25871,fotos_vogue/01555.jpg
+1556,SS,2019,paris,chanel,row25881,fotos_vogue/01556.jpg
+1557,SS,2019,paris,chanel,row25890,fotos_vogue/01557.jpg
+1558,SS,2019,sin_dato,christian dior,row33184,fotos_vogue/01558.jpg
+1559,SS,2019,sin_dato,christian dior,row33194,fotos_vogue/01559.jpg
+1560,SS,2019,sin_dato,christian dior,row33204,fotos_vogue/01560.jpg
+1561,SS,2019,sin_dato,christian dior,row33214,fotos_vogue/01561.jpg
+1562,SS,2019,sin_dato,christian dior,row33224,fotos_vogue/01562.jpg
+1563,SS,2019,sin_dato,christian dior,row33233,fotos_vogue/01563.jpg
+1564,SS,2019,sin_dato,christian dior,row33243,fotos_vogue/01564.jpg
+1565,SS,2019,sin_dato,christian dior,row33253,fotos_vogue/01565.jpg
+1566,SS,2019,sin_dato,christian dior,row33263,fotos_vogue/01566.jpg
+1567,SS,2019,milan,fendi,row38611,fotos_vogue/01567.jpg
+1568,SS,2019,milan,fendi,row38621,fotos_vogue/01568.jpg
+1569,SS,2019,milan,fendi,row38631,fotos_vogue/01569.jpg
+1570,SS,2019,milan,fendi,row38640,fotos_vogue/01570.jpg
+1571,SS,2019,milan,gucci,row45405,fotos_vogue/01571.jpg
+1572,SS,2019,milan,gucci,row45415,fotos_vogue/01572.jpg
+1573,SS,2019,milan,gucci,row45425,fotos_vogue/01573.jpg
+1574,SS,2019,milan,gucci,row45435,fotos_vogue/01574.jpg
+1575,SS,2019,milan,gucci,row45445,fotos_vogue/01575.jpg
+1576,SS,2019,milan,gucci,row45454,fotos_vogue/01576.jpg
+1577,SS,2019,milan,gucci,row45464,fotos_vogue/01577.jpg
+1578,SS,2019,milan,gucci,row45474,fotos_vogue/01578.jpg
+1579,SS,2019,milan,gucci,row45484,fotos_vogue/01579.jpg
+1580,SS,2019,paris,hermes,row49763,fotos_vogue/01580.jpg
+1581,SS,2019,paris,hermes,row49773,fotos_vogue/01581.jpg
+1582,SS,2019,paris,hermes,row49782,fotos_vogue/01582.jpg
+1583,SS,2019,paris,hermes,row49792,fotos_vogue/01583.jpg
+1584,SS,2019,paris,hermes,row49802,fotos_vogue/01584.jpg
+1585,SS,2019,paris,louis vuitton,row55588,fotos_vogue/01585.jpg
+1586,SS,2019,paris,louis vuitton,row55598,fotos_vogue/01586.jpg
+1587,SS,2019,paris,louis vuitton,row55608,fotos_vogue/01587.jpg
+1588,SS,2019,paris,louis vuitton,row55618,fotos_vogue/01588.jpg
+1589,SS,2019,paris,louis vuitton,row55627,fotos_vogue/01589.jpg
+1590,SS,2019,milan,prada,row60924,fotos_vogue/01590.jpg
+1591,SS,2019,milan,prada,row60934,fotos_vogue/01591.jpg
+1592,SS,2019,milan,prada,row60944,fotos_vogue/01592.jpg
+1593,SS,2019,milan,prada,row60954,fotos_vogue/01593.jpg
+1594,SS,2019,milan,prada,row60964,fotos_vogue/01594.jpg
+1595,SS,2019,new-york,ralph lauren,row65249,fotos_vogue/01595.jpg
+1596,SS,2019,new-york,ralph lauren,row65259,fotos_vogue/01596.jpg
+1597,SS,2019,new-york,ralph lauren,row65269,fotos_vogue/01597.jpg
+1598,SS,2019,new-york,ralph lauren,row65279,fotos_vogue/01598.jpg
+1599,SS,2019,paris,saint laurent,row70626,fotos_vogue/01599.jpg
+1600,SS,2019,paris,saint laurent,row70636,fotos_vogue/01600.jpg
+1601,SS,2019,paris,saint laurent,row70646,fotos_vogue/01601.jpg
+1602,SS,2019,paris,saint laurent,row70655,fotos_vogue/01602.jpg
+1603,SS,2019,paris,saint laurent,row70665,fotos_vogue/01603.jpg
+1604,SS,2019,paris,saint laurent,row70675,fotos_vogue/01604.jpg
+1605,SS,2019,paris,saint laurent,row70685,fotos_vogue/01605.jpg
+1606,SS,2019,paris,saint laurent,row70695,fotos_vogue/01606.jpg
+1607,SS,2019,paris,saint laurent,row70705,fotos_vogue/01607.jpg
+1608,SS,2019,paris,saint laurent,row70714,fotos_vogue/01608.jpg
+1609,SS,2019,paris,valentino,row79613,fotos_vogue/01609.jpg
+1610,SS,2019,paris,valentino,row79623,fotos_vogue/01610.jpg
+1611,SS,2019,paris,valentino,row79633,fotos_vogue/01611.jpg
+1612,SS,2019,paris,valentino,row79643,fotos_vogue/01612.jpg
+1613,SS,2019,paris,valentino,row79653,fotos_vogue/01613.jpg
+1614,SS,2019,paris,valentino,row79663,fotos_vogue/01614.jpg
+1615,SS,2019,milan,versace,row86956,fotos_vogue/01615.jpg
+1616,SS,2019,milan,versace,row86966,fotos_vogue/01616.jpg
+1617,SS,2019,milan,versace,row86976,fotos_vogue/01617.jpg
+1618,SS,2019,milan,versace,row86986,fotos_vogue/01618.jpg
+1619,SS,2019,milan,versace,row86996,fotos_vogue/01619.jpg
+1620,SS,2019,milan,versace,row87006,fotos_vogue/01620.jpg
+1621,FW,2020,paris,alexander mcqueen,row1727,fotos_vogue/01621.jpg
+1622,FW,2020,paris,alexander mcqueen,row1736,fotos_vogue/01622.jpg
+1623,FW,2020,paris,alexander mcqueen,row1744,fotos_vogue/01623.jpg
+1624,FW,2020,paris,alexander mcqueen,row1753,fotos_vogue/01624.jpg
+1625,FW,2020,paris,alexander mcqueen,row1762,fotos_vogue/01625.jpg
+1626,FW,2020,paris,balenciaga,row8425,fotos_vogue/01626.jpg
+1627,FW,2020,paris,balenciaga,row8433,fotos_vogue/01627.jpg
+1628,FW,2020,paris,balenciaga,row8442,fotos_vogue/01628.jpg
+1629,FW,2020,paris,balenciaga,row8451,fotos_vogue/01629.jpg
+1630,FW,2020,paris,balenciaga,row8459,fotos_vogue/01630.jpg
+1631,FW,2020,paris,balenciaga,row8468,fotos_vogue/01631.jpg
+1632,FW,2020,paris,balenciaga,row8477,fotos_vogue/01632.jpg
+1633,FW,2020,paris,balenciaga,row8486,fotos_vogue/01633.jpg
+1634,FW,2020,paris,balenciaga,row8494,fotos_vogue/01634.jpg
+1635,FW,2020,paris,balenciaga,row8503,fotos_vogue/01635.jpg
+1636,FW,2020,paris,balenciaga,row8512,fotos_vogue/01636.jpg
+1637,FW,2020,paris,balenciaga,row8521,fotos_vogue/01637.jpg
+1638,FW,2020,paris,balenciaga,row8529,fotos_vogue/01638.jpg
+1639,FW,2020,paris,chanel,row19377,fotos_vogue/01639.jpg
+1640,FW,2020,paris,chanel,row19386,fotos_vogue/01640.jpg
+1641,FW,2020,paris,chanel,row19395,fotos_vogue/01641.jpg
+1642,FW,2020,paris,chanel,row19403,fotos_vogue/01642.jpg
+1643,FW,2020,paris,chanel,row19412,fotos_vogue/01643.jpg
+1644,FW,2020,paris,chanel,row19421,fotos_vogue/01644.jpg
+1645,FW,2020,paris,chanel,row19429,fotos_vogue/01645.jpg
+1646,FW,2020,paris,chanel,row19438,fotos_vogue/01646.jpg
+1647,FW,2020,milan,fendi,row35776,fotos_vogue/01647.jpg
+1648,FW,2020,milan,fendi,row35785,fotos_vogue/01648.jpg
+1649,FW,2020,milan,fendi,row35793,fotos_vogue/01649.jpg
+1650,FW,2020,milan,fendi,row35802,fotos_vogue/01650.jpg
+1651,FW,2020,milan,fendi,row35811,fotos_vogue/01651.jpg
+1652,FW,2020,milan,fendi,row35820,fotos_vogue/01652.jpg
+1653,FW,2020,milan,gucci,row41377,fotos_vogue/01653.jpg
+1654,FW,2020,milan,gucci,row41386,fotos_vogue/01654.jpg
+1655,FW,2020,milan,gucci,row41395,fotos_vogue/01655.jpg
+1656,FW,2020,milan,gucci,row41404,fotos_vogue/01656.jpg
+1657,FW,2020,milan,gucci,row41412,fotos_vogue/01657.jpg
+1658,FW,2020,milan,gucci,row41421,fotos_vogue/01658.jpg
+1659,FW,2020,milan,gucci,row41430,fotos_vogue/01659.jpg
+1660,FW,2020,paris,hermes,row47784,fotos_vogue/01660.jpg
+1661,FW,2020,paris,hermes,row47793,fotos_vogue/01661.jpg
+1662,FW,2020,paris,hermes,row47802,fotos_vogue/01662.jpg
+1663,FW,2020,paris,hermes,row47811,fotos_vogue/01663.jpg
+1664,FW,2020,paris,hermes,row47819,fotos_vogue/01664.jpg
+1665,FW,2020,paris,hermes,row47828,fotos_vogue/01665.jpg
+1666,FW,2020,paris,louis vuitton,row52095,fotos_vogue/01666.jpg
+1667,FW,2020,paris,louis vuitton,row52104,fotos_vogue/01667.jpg
+1668,FW,2020,paris,louis vuitton,row52112,fotos_vogue/01668.jpg
+1669,FW,2020,paris,louis vuitton,row52121,fotos_vogue/01669.jpg
+1670,FW,2020,paris,louis vuitton,row52130,fotos_vogue/01670.jpg
+1671,FW,2020,paris,louis vuitton,row52139,fotos_vogue/01671.jpg
+1672,FW,2020,milan,prada,row58122,fotos_vogue/01672.jpg
+1673,FW,2020,milan,prada,row58131,fotos_vogue/01673.jpg
+1674,FW,2020,milan,prada,row58140,fotos_vogue/01674.jpg
+1675,FW,2020,milan,prada,row58148,fotos_vogue/01675.jpg
+1676,FW,2020,milan,prada,row58157,fotos_vogue/01676.jpg
+1677,FW,2020,milan,prada,row58166,fotos_vogue/01677.jpg
+1678,FW,2020,milan,prada,row58175,fotos_vogue/01678.jpg
+1679,FW,2020,new-york,ralph lauren,row63187,fotos_vogue/01679.jpg
+1680,FW,2020,new-york,ralph lauren,row63196,fotos_vogue/01680.jpg
+1681,FW,2020,new-york,ralph lauren,row63205,fotos_vogue/01681.jpg
+1682,FW,2020,new-york,ralph lauren,row63214,fotos_vogue/01682.jpg
+1683,FW,2020,paris,saint laurent,row67316,fotos_vogue/01683.jpg
+1684,FW,2020,paris,saint laurent,row67325,fotos_vogue/01684.jpg
+1685,FW,2020,paris,saint laurent,row67334,fotos_vogue/01685.jpg
+1686,FW,2020,paris,saint laurent,row67343,fotos_vogue/01686.jpg
+1687,FW,2020,paris,saint laurent,row67351,fotos_vogue/01687.jpg
+1688,FW,2020,paris,saint laurent,row67360,fotos_vogue/01688.jpg
+1689,FW,2020,paris,saint laurent,row67369,fotos_vogue/01689.jpg
+1690,FW,2020,paris,valentino,row74290,fotos_vogue/01690.jpg
+1691,FW,2020,paris,valentino,row74299,fotos_vogue/01691.jpg
+1692,FW,2020,paris,valentino,row74308,fotos_vogue/01692.jpg
+1693,FW,2020,paris,valentino,row74317,fotos_vogue/01693.jpg
+1694,FW,2020,paris,valentino,row74325,fotos_vogue/01694.jpg
+1695,FW,2020,paris,valentino,row74334,fotos_vogue/01695.jpg
+1696,FW,2020,paris,valentino,row74343,fotos_vogue/01696.jpg
+1697,FW,2020,paris,valentino,row74352,fotos_vogue/01697.jpg
+1698,FW,2020,paris,valentino,row74360,fotos_vogue/01698.jpg
+1699,FW,2020,paris,valentino,row74369,fotos_vogue/01699.jpg
+1700,FW,2020,paris,valentino,row74378,fotos_vogue/01700.jpg
+1701,FW,2020,milan,versace,row83113,fotos_vogue/01701.jpg
+1702,FW,2020,milan,versace,row83121,fotos_vogue/01702.jpg
+1703,FW,2020,milan,versace,row83130,fotos_vogue/01703.jpg
+1704,FW,2020,milan,versace,row83139,fotos_vogue/01704.jpg
+1705,FW,2020,milan,versace,row83147,fotos_vogue/01705.jpg
+1706,FW,2020,milan,versace,row83156,fotos_vogue/01706.jpg
+1707,FW,2020,milan,versace,row83165,fotos_vogue/01707.jpg
+1708,FW,2020,milan,versace,row83174,fotos_vogue/01708.jpg
+1709,FW,2020,milan,versace,row83182,fotos_vogue/01709.jpg
+1710,FW,2020,milan,versace,row83191,fotos_vogue/01710.jpg
+1711,SS,2020,paris,alexander mcqueen,row4748,fotos_vogue/01711.jpg
+1712,SS,2020,paris,alexander mcqueen,row4758,fotos_vogue/01712.jpg
+1713,SS,2020,paris,alexander mcqueen,row4767,fotos_vogue/01713.jpg
+1714,SS,2020,paris,alexander mcqueen,row4777,fotos_vogue/01714.jpg
+1715,SS,2020,paris,alexander mcqueen,row4786,fotos_vogue/01715.jpg
+1716,SS,2020,paris,balenciaga,row11459,fotos_vogue/01716.jpg
+1717,SS,2020,paris,balenciaga,row11468,fotos_vogue/01717.jpg
+1718,SS,2020,paris,balenciaga,row11478,fotos_vogue/01718.jpg
+1719,SS,2020,paris,balenciaga,row11487,fotos_vogue/01719.jpg
+1720,SS,2020,paris,balenciaga,row11496,fotos_vogue/01720.jpg
+1721,SS,2020,paris,balenciaga,row11506,fotos_vogue/01721.jpg
+1722,SS,2020,paris,balenciaga,row11515,fotos_vogue/01722.jpg
+1723,SS,2020,paris,balenciaga,row11525,fotos_vogue/01723.jpg
+1724,SS,2020,paris,balenciaga,row11534,fotos_vogue/01724.jpg
+1725,SS,2020,paris,chanel,row25959,fotos_vogue/01725.jpg
+1726,SS,2020,paris,chanel,row25968,fotos_vogue/01726.jpg
+1727,SS,2020,paris,chanel,row25978,fotos_vogue/01727.jpg
+1728,SS,2020,paris,chanel,row25987,fotos_vogue/01728.jpg
+1729,SS,2020,paris,chanel,row25997,fotos_vogue/01729.jpg
+1730,SS,2020,paris,chanel,row26006,fotos_vogue/01730.jpg
+1731,SS,2020,paris,chanel,row26016,fotos_vogue/01731.jpg
+1732,SS,2020,paris,chanel,row26025,fotos_vogue/01732.jpg
+1733,SS,2020,paris,chanel,row26035,fotos_vogue/01733.jpg
+1734,SS,2020,sin_dato,christian dior,row33347,fotos_vogue/01734.jpg
+1735,SS,2020,sin_dato,christian dior,row33356,fotos_vogue/01735.jpg
+1736,SS,2020,sin_dato,christian dior,row33366,fotos_vogue/01736.jpg
+1737,SS,2020,sin_dato,christian dior,row33375,fotos_vogue/01737.jpg
+1738,SS,2020,sin_dato,christian dior,row33385,fotos_vogue/01738.jpg
+1739,SS,2020,sin_dato,christian dior,row33394,fotos_vogue/01739.jpg
+1740,SS,2020,sin_dato,christian dior,row33404,fotos_vogue/01740.jpg
+1741,SS,2020,sin_dato,christian dior,row33413,fotos_vogue/01741.jpg
+1742,SS,2020,sin_dato,christian dior,row33423,fotos_vogue/01742.jpg
+1743,SS,2020,sin_dato,christian dior,row33432,fotos_vogue/01743.jpg
+1744,SS,2020,milan,fendi,row38719,fotos_vogue/01744.jpg
+1745,SS,2020,milan,fendi,row38728,fotos_vogue/01745.jpg
+1746,SS,2020,milan,fendi,row38738,fotos_vogue/01746.jpg
+1747,SS,2020,milan,fendi,row38747,fotos_vogue/01747.jpg
+1748,SS,2020,milan,fendi,row38757,fotos_vogue/01748.jpg
+1749,SS,2020,milan,gucci,row45606,fotos_vogue/01749.jpg
+1750,SS,2020,milan,gucci,row45615,fotos_vogue/01750.jpg
+1751,SS,2020,milan,gucci,row45625,fotos_vogue/01751.jpg
+1752,SS,2020,milan,gucci,row45634,fotos_vogue/01752.jpg
+1753,SS,2020,milan,gucci,row45644,fotos_vogue/01753.jpg
+1754,SS,2020,milan,gucci,row45653,fotos_vogue/01754.jpg
+1755,SS,2020,milan,gucci,row45663,fotos_vogue/01755.jpg
+1756,SS,2020,milan,gucci,row45672,fotos_vogue/01756.jpg
+1757,SS,2020,milan,gucci,row45682,fotos_vogue/01757.jpg
+1758,SS,2020,milan,gucci,row45691,fotos_vogue/01758.jpg
+1759,SS,2020,milan,gucci,row45701,fotos_vogue/01759.jpg
+1760,SS,2020,paris,hermes,row49852,fotos_vogue/01760.jpg
+1761,SS,2020,paris,hermes,row49862,fotos_vogue/01761.jpg
+1762,SS,2020,paris,hermes,row49871,fotos_vogue/01762.jpg
+1763,SS,2020,paris,hermes,row49881,fotos_vogue/01763.jpg
+1764,SS,2020,paris,hermes,row49890,fotos_vogue/01764.jpg
+1765,SS,2020,paris,hermes,row49899,fotos_vogue/01765.jpg
+1766,SS,2020,paris,louis vuitton,row55690,fotos_vogue/01766.jpg
+1767,SS,2020,paris,louis vuitton,row55699,fotos_vogue/01767.jpg
+1768,SS,2020,paris,louis vuitton,row55709,fotos_vogue/01768.jpg
+1769,SS,2020,paris,louis vuitton,row55718,fotos_vogue/01769.jpg
+1770,SS,2020,paris,louis vuitton,row55728,fotos_vogue/01770.jpg
+1771,SS,2020,milan,prada,row61031,fotos_vogue/01771.jpg
+1772,SS,2020,milan,prada,row61041,fotos_vogue/01772.jpg
+1773,SS,2020,milan,prada,row61050,fotos_vogue/01773.jpg
+1774,SS,2020,milan,prada,row61060,fotos_vogue/01774.jpg
+1775,SS,2020,milan,prada,row61069,fotos_vogue/01775.jpg
+1776,SS,2020,milan,prada,row61079,fotos_vogue/01776.jpg
+1777,SS,2020,paris,saint laurent,row70805,fotos_vogue/01777.jpg
+1778,SS,2020,paris,saint laurent,row70815,fotos_vogue/01778.jpg
+1779,SS,2020,paris,saint laurent,row70824,fotos_vogue/01779.jpg
+1780,SS,2020,paris,saint laurent,row70833,fotos_vogue/01780.jpg
+1781,SS,2020,paris,saint laurent,row70843,fotos_vogue/01781.jpg
+1782,SS,2020,paris,saint laurent,row70852,fotos_vogue/01782.jpg
+1783,SS,2020,paris,saint laurent,row70862,fotos_vogue/01783.jpg
+1784,SS,2020,paris,saint laurent,row70871,fotos_vogue/01784.jpg
+1785,SS,2020,paris,saint laurent,row70881,fotos_vogue/01785.jpg
+1786,SS,2020,paris,valentino,row79797,fotos_vogue/01786.jpg
+1787,SS,2020,paris,valentino,row79807,fotos_vogue/01787.jpg
+1788,SS,2020,paris,valentino,row79816,fotos_vogue/01788.jpg
+1789,SS,2020,paris,valentino,row79826,fotos_vogue/01789.jpg
+1790,SS,2020,paris,valentino,row79835,fotos_vogue/01790.jpg
+1791,SS,2020,paris,valentino,row79845,fotos_vogue/01791.jpg
+1792,SS,2020,paris,valentino,row79854,fotos_vogue/01792.jpg
+1793,SS,2020,paris,valentino,row79864,fotos_vogue/01793.jpg
+1794,SS,2020,milan,versace,row87070,fotos_vogue/01794.jpg
+1795,SS,2020,milan,versace,row87079,fotos_vogue/01795.jpg
+1796,SS,2020,milan,versace,row87089,fotos_vogue/01796.jpg
+1797,SS,2020,milan,versace,row87098,fotos_vogue/01797.jpg
+1798,SS,2020,milan,versace,row87108,fotos_vogue/01798.jpg
+1799,SS,2020,milan,versace,row87117,fotos_vogue/01799.jpg
+1800,SS,2020,milan,versace,row87127,fotos_vogue/01800.jpg
+1801,FW,2021,paris,alexander mcqueen,row1797,fotos_vogue/01801.jpg
+1802,FW,2021,paris,alexander mcqueen,row1803,fotos_vogue/01802.jpg
+1803,FW,2021,paris,balenciaga,row8643,fotos_vogue/01803.jpg
+1804,FW,2021,paris,balenciaga,row8650,fotos_vogue/01804.jpg
+1805,FW,2021,paris,balenciaga,row8656,fotos_vogue/01805.jpg
+1806,FW,2021,paris,balenciaga,row8663,fotos_vogue/01806.jpg
+1807,FW,2021,paris,balenciaga,row8670,fotos_vogue/01807.jpg
+1808,FW,2021,paris,balenciaga,row8676,fotos_vogue/01808.jpg
+1809,FW,2021,paris,balenciaga,row8683,fotos_vogue/01809.jpg
+1810,FW,2021,paris,balenciaga,row8690,fotos_vogue/01810.jpg
+1811,FW,2021,paris,chanel,row19483,fotos_vogue/01811.jpg
+1812,FW,2021,paris,chanel,row19490,fotos_vogue/01812.jpg
+1813,FW,2021,paris,chanel,row19496,fotos_vogue/01813.jpg
+1814,FW,2021,paris,chanel,row19503,fotos_vogue/01814.jpg
+1815,FW,2021,paris,chanel,row19510,fotos_vogue/01815.jpg
+1816,FW,2021,paris,chanel,row19516,fotos_vogue/01816.jpg
+1817,FW,2021,paris,chanel,row19523,fotos_vogue/01817.jpg
+1818,FW,2021,paris,chanel,row19530,fotos_vogue/01818.jpg
+1819,FW,2021,sin_dato,christian dior,row28761,fotos_vogue/01819.jpg
+1820,FW,2021,sin_dato,christian dior,row28768,fotos_vogue/01820.jpg
+1821,FW,2021,sin_dato,christian dior,row28774,fotos_vogue/01821.jpg
+1822,FW,2021,sin_dato,christian dior,row28781,fotos_vogue/01822.jpg
+1823,FW,2021,sin_dato,christian dior,row28788,fotos_vogue/01823.jpg
+1824,FW,2021,sin_dato,christian dior,row28794,fotos_vogue/01824.jpg
+1825,FW,2021,sin_dato,christian dior,row28801,fotos_vogue/01825.jpg
+1826,FW,2021,sin_dato,christian dior,row28808,fotos_vogue/01826.jpg
+1827,FW,2021,sin_dato,christian dior,row28814,fotos_vogue/01827.jpg
+1828,FW,2021,sin_dato,christian dior,row28821,fotos_vogue/01828.jpg
+1829,FW,2021,milan,fendi,row35905,fotos_vogue/01829.jpg
+1830,FW,2021,milan,fendi,row35911,fotos_vogue/01830.jpg
+1831,FW,2021,milan,fendi,row35918,fotos_vogue/01831.jpg
+1832,FW,2021,milan,fendi,row35924,fotos_vogue/01832.jpg
+1833,FW,2021,milan,fendi,row35931,fotos_vogue/01833.jpg
+1834,FW,2021,milan,fendi,row35938,fotos_vogue/01834.jpg
+1835,FW,2021,milan,fendi,row35944,fotos_vogue/01835.jpg
+1836,FW,2021,milan,fendi,row35951,fotos_vogue/01836.jpg
+1837,FW,2021,paris,hermes,row47871,fotos_vogue/01837.jpg
+1838,FW,2021,paris,hermes,row47877,fotos_vogue/01838.jpg
+1839,FW,2021,paris,hermes,row47884,fotos_vogue/01839.jpg
+1840,FW,2021,paris,hermes,row47891,fotos_vogue/01840.jpg
+1841,FW,2021,paris,hermes,row47897,fotos_vogue/01841.jpg
+1842,FW,2021,paris,hermes,row47904,fotos_vogue/01842.jpg
+1843,FW,2021,paris,hermes,row47910,fotos_vogue/01843.jpg
+1844,FW,2021,paris,louis vuitton,row52247,fotos_vogue/01844.jpg
+1845,FW,2021,paris,louis vuitton,row52254,fotos_vogue/01845.jpg
+1846,FW,2021,paris,louis vuitton,row52260,fotos_vogue/01846.jpg
+1847,FW,2021,paris,louis vuitton,row52267,fotos_vogue/01847.jpg
+1848,FW,2021,paris,louis vuitton,row52274,fotos_vogue/01848.jpg
+1849,FW,2021,paris,louis vuitton,row52280,fotos_vogue/01849.jpg
+1850,FW,2021,paris,louis vuitton,row52287,fotos_vogue/01850.jpg
+1851,FW,2021,milan,prada,row58221,fotos_vogue/01851.jpg
+1852,FW,2021,milan,prada,row58228,fotos_vogue/01852.jpg
+1853,FW,2021,milan,prada,row58235,fotos_vogue/01853.jpg
+1854,FW,2021,milan,prada,row58241,fotos_vogue/01854.jpg
+1855,FW,2021,milan,prada,row58248,fotos_vogue/01855.jpg
+1856,FW,2021,milan,prada,row58255,fotos_vogue/01856.jpg
+1857,FW,2021,milan,prada,row58261,fotos_vogue/01857.jpg
+1858,FW,2021,new-york,ralph lauren,row63219,fotos_vogue/01858.jpg
+1859,FW,2021,new-york,ralph lauren,row63226,fotos_vogue/01859.jpg
+1860,FW,2021,new-york,ralph lauren,row63232,fotos_vogue/01860.jpg
+1861,FW,2021,new-york,ralph lauren,row63239,fotos_vogue/01861.jpg
+1862,FW,2021,paris,saint laurent,row67447,fotos_vogue/01862.jpg
+1863,FW,2021,paris,saint laurent,row67454,fotos_vogue/01863.jpg
+1864,FW,2021,paris,saint laurent,row67461,fotos_vogue/01864.jpg
+1865,FW,2021,paris,saint laurent,row67467,fotos_vogue/01865.jpg
+1866,FW,2021,paris,saint laurent,row67474,fotos_vogue/01866.jpg
+1867,FW,2021,paris,saint laurent,row67481,fotos_vogue/01867.jpg
+1868,FW,2021,paris,saint laurent,row67487,fotos_vogue/01868.jpg
+1869,FW,2021,paris,saint laurent,row67494,fotos_vogue/01869.jpg
+1870,FW,2021,paris,saint laurent,row67501,fotos_vogue/01870.jpg
+1871,FW,2021,paris,saint laurent,row67507,fotos_vogue/01871.jpg
+1872,FW,2021,paris,valentino,row74467,fotos_vogue/01872.jpg
+1873,FW,2021,paris,valentino,row74473,fotos_vogue/01873.jpg
+1874,FW,2021,paris,valentino,row74480,fotos_vogue/01874.jpg
+1875,FW,2021,paris,valentino,row74487,fotos_vogue/01875.jpg
+1876,FW,2021,paris,valentino,row74493,fotos_vogue/01876.jpg
+1877,FW,2021,paris,valentino,row74500,fotos_vogue/01877.jpg
+1878,FW,2021,paris,valentino,row74507,fotos_vogue/01878.jpg
+1879,FW,2021,paris,valentino,row74513,fotos_vogue/01879.jpg
+1880,FW,2021,paris,valentino,row74520,fotos_vogue/01880.jpg
+1881,FW,2021,paris,valentino,row74526,fotos_vogue/01881.jpg
+1882,FW,2021,milan,versace,row83198,fotos_vogue/01882.jpg
+1883,FW,2021,milan,versace,row83205,fotos_vogue/01883.jpg
+1884,FW,2021,milan,versace,row83211,fotos_vogue/01884.jpg
+1885,FW,2021,milan,versace,row83218,fotos_vogue/01885.jpg
+1886,FW,2021,milan,versace,row83225,fotos_vogue/01886.jpg
+1887,FW,2021,milan,versace,row83231,fotos_vogue/01887.jpg
+1888,FW,2021,milan,versace,row83238,fotos_vogue/01888.jpg
+1889,FW,2021,milan,versace,row83245,fotos_vogue/01889.jpg
+1890,FW,2021,milan,versace,row83251,fotos_vogue/01890.jpg
+1891,SS,2021,paris,alexander mcqueen,row4822,fotos_vogue/01891.jpg
+1892,SS,2021,paris,alexander mcqueen,row4831,fotos_vogue/01892.jpg
+1893,SS,2021,paris,alexander mcqueen,row4839,fotos_vogue/01893.jpg
+1894,SS,2021,paris,balenciaga,row11606,fotos_vogue/01894.jpg
+1895,SS,2021,paris,balenciaga,row11615,fotos_vogue/01895.jpg
+1896,SS,2021,paris,balenciaga,row11624,fotos_vogue/01896.jpg
+1897,SS,2021,paris,balenciaga,row11633,fotos_vogue/01897.jpg
+1898,SS,2021,paris,balenciaga,row11641,fotos_vogue/01898.jpg
+1899,SS,2021,paris,balenciaga,row11650,fotos_vogue/01899.jpg
+1900,SS,2021,paris,chanel,row26072,fotos_vogue/01900.jpg
+1901,SS,2021,paris,chanel,row26081,fotos_vogue/01901.jpg
+1902,SS,2021,paris,chanel,row26089,fotos_vogue/01902.jpg
+1903,SS,2021,paris,chanel,row26098,fotos_vogue/01903.jpg
+1904,SS,2021,paris,chanel,row26107,fotos_vogue/01904.jpg
+1905,SS,2021,paris,chanel,row26116,fotos_vogue/01905.jpg
+1906,SS,2021,paris,chanel,row26125,fotos_vogue/01906.jpg
+1907,SS,2021,paris,chanel,row26133,fotos_vogue/01907.jpg
+1908,SS,2021,paris,chanel,row26142,fotos_vogue/01908.jpg
+1909,SS,2021,sin_dato,christian dior,row33486,fotos_vogue/01909.jpg
+1910,SS,2021,sin_dato,christian dior,row33495,fotos_vogue/01910.jpg
+1911,SS,2021,sin_dato,christian dior,row33503,fotos_vogue/01911.jpg
+1912,SS,2021,sin_dato,christian dior,row33512,fotos_vogue/01912.jpg
+1913,SS,2021,sin_dato,christian dior,row33521,fotos_vogue/01913.jpg
+1914,SS,2021,sin_dato,christian dior,row33530,fotos_vogue/01914.jpg
+1915,SS,2021,sin_dato,christian dior,row33539,fotos_vogue/01915.jpg
+1916,SS,2021,sin_dato,christian dior,row33547,fotos_vogue/01916.jpg
+1917,SS,2021,sin_dato,christian dior,row33556,fotos_vogue/01917.jpg
+1918,SS,2021,milan,fendi,row38846,fotos_vogue/01918.jpg
+1919,SS,2021,milan,fendi,row38855,fotos_vogue/01919.jpg
+1920,SS,2021,milan,fendi,row38863,fotos_vogue/01920.jpg
+1921,SS,2021,milan,fendi,row38872,fotos_vogue/01921.jpg
+1922,SS,2021,milan,fendi,row38881,fotos_vogue/01922.jpg
+1923,SS,2021,milan,fendi,row38890,fotos_vogue/01923.jpg
+1924,SS,2021,milan,fendi,row38899,fotos_vogue/01924.jpg
+1925,SS,2021,milan,fendi,row38907,fotos_vogue/01925.jpg
+1926,SS,2021,milan,gucci,row45810,fotos_vogue/01926.jpg
+1927,SS,2021,milan,gucci,row45819,fotos_vogue/01927.jpg
+1928,SS,2021,milan,gucci,row45828,fotos_vogue/01928.jpg
+1929,SS,2021,milan,gucci,row45836,fotos_vogue/01929.jpg
+1930,SS,2021,milan,gucci,row45845,fotos_vogue/01930.jpg
+1931,SS,2021,milan,gucci,row45854,fotos_vogue/01931.jpg
+1932,SS,2021,milan,gucci,row45863,fotos_vogue/01932.jpg
+1933,SS,2021,milan,gucci,row45872,fotos_vogue/01933.jpg
+1934,SS,2021,milan,gucci,row45880,fotos_vogue/01934.jpg
+1935,SS,2021,milan,gucci,row45889,fotos_vogue/01935.jpg
+1936,SS,2021,milan,gucci,row45898,fotos_vogue/01936.jpg
+1937,SS,2021,paris,hermes,row49934,fotos_vogue/01937.jpg
+1938,SS,2021,paris,hermes,row49942,fotos_vogue/01938.jpg
+1939,SS,2021,paris,hermes,row49951,fotos_vogue/01939.jpg
+1940,SS,2021,paris,hermes,row49960,fotos_vogue/01940.jpg
+1941,SS,2021,paris,hermes,row49969,fotos_vogue/01941.jpg
+1942,SS,2021,paris,hermes,row49978,fotos_vogue/01942.jpg
+1943,SS,2021,paris,louis vuitton,row55862,fotos_vogue/01943.jpg
+1944,SS,2021,paris,louis vuitton,row55871,fotos_vogue/01944.jpg
+1945,SS,2021,paris,louis vuitton,row55880,fotos_vogue/01945.jpg
+1946,SS,2021,paris,louis vuitton,row55889,fotos_vogue/01946.jpg
+1947,SS,2021,paris,louis vuitton,row55897,fotos_vogue/01947.jpg
+1948,SS,2021,milan,prada,row61147,fotos_vogue/01948.jpg
+1949,SS,2021,milan,prada,row61156,fotos_vogue/01949.jpg
+1950,SS,2021,milan,prada,row61165,fotos_vogue/01950.jpg
+1951,SS,2021,milan,prada,row61174,fotos_vogue/01951.jpg
+1952,SS,2021,new-york,ralph lauren,row65320,fotos_vogue/01952.jpg
+1953,SS,2021,new-york,ralph lauren,row65329,fotos_vogue/01953.jpg
+1954,SS,2021,new-york,ralph lauren,row65338,fotos_vogue/01954.jpg
+1955,SS,2021,new-york,ralph lauren,row65347,fotos_vogue/01955.jpg
+1956,SS,2021,new-york,ralph lauren,row65355,fotos_vogue/01956.jpg
+1957,SS,2021,paris,saint laurent,row70920,fotos_vogue/01957.jpg
+1958,SS,2021,paris,saint laurent,row70929,fotos_vogue/01958.jpg
+1959,SS,2021,paris,saint laurent,row70938,fotos_vogue/01959.jpg
+1960,SS,2021,paris,saint laurent,row70947,fotos_vogue/01960.jpg
+1961,SS,2021,paris,saint laurent,row70955,fotos_vogue/01961.jpg
+1962,SS,2021,paris,saint laurent,row70964,fotos_vogue/01962.jpg
+1963,SS,2021,paris,saint laurent,row70973,fotos_vogue/01963.jpg
+1964,SS,2021,paris,valentino,row80016,fotos_vogue/01964.jpg
+1965,SS,2021,paris,valentino,row80024,fotos_vogue/01965.jpg
+1966,SS,2021,paris,valentino,row80033,fotos_vogue/01966.jpg
+1967,SS,2021,paris,valentino,row80042,fotos_vogue/01967.jpg
+1968,SS,2021,paris,valentino,row80051,fotos_vogue/01968.jpg
+1969,SS,2021,paris,valentino,row80060,fotos_vogue/01969.jpg
+1970,SS,2021,paris,valentino,row80068,fotos_vogue/01970.jpg
+1971,SS,2021,paris,valentino,row80077,fotos_vogue/01971.jpg
+1972,SS,2021,milan,versace,row87217,fotos_vogue/01972.jpg
+1973,SS,2021,milan,versace,row87226,fotos_vogue/01973.jpg
+1974,SS,2021,milan,versace,row87234,fotos_vogue/01974.jpg
+1975,SS,2021,milan,versace,row87243,fotos_vogue/01975.jpg
+1976,SS,2021,milan,versace,row87252,fotos_vogue/01976.jpg
+1977,SS,2021,milan,versace,row87261,fotos_vogue/01977.jpg
+1978,SS,2021,milan,versace,row87270,fotos_vogue/01978.jpg
+1979,SS,2021,milan,versace,row87278,fotos_vogue/01979.jpg
+1980,SS,2021,milan,versace,row87287,fotos_vogue/01980.jpg
+1981,FW,2022,paris,alexander mcqueen,row1837,fotos_vogue/01981.jpg
+1982,FW,2022,paris,alexander mcqueen,row1846,fotos_vogue/01982.jpg
+1983,FW,2022,paris,alexander mcqueen,row1855,fotos_vogue/01983.jpg
+1984,FW,2022,paris,alexander mcqueen,row1865,fotos_vogue/01984.jpg
+1985,FW,2022,paris,balenciaga,row8752,fotos_vogue/01985.jpg
+1986,FW,2022,paris,balenciaga,row8761,fotos_vogue/01986.jpg
+1987,FW,2022,paris,balenciaga,row8770,fotos_vogue/01987.jpg
+1988,FW,2022,paris,balenciaga,row8779,fotos_vogue/01988.jpg
+1989,FW,2022,paris,balenciaga,row8788,fotos_vogue/01989.jpg
+1990,FW,2022,paris,balenciaga,row8797,fotos_vogue/01990.jpg
+1991,FW,2022,paris,balenciaga,row8807,fotos_vogue/01991.jpg
+1992,FW,2022,paris,balenciaga,row8816,fotos_vogue/01992.jpg
+1993,FW,2022,paris,chanel,row19585,fotos_vogue/01993.jpg
+1994,FW,2022,paris,chanel,row19594,fotos_vogue/01994.jpg
+1995,FW,2022,paris,chanel,row19603,fotos_vogue/01995.jpg
+1996,FW,2022,paris,chanel,row19612,fotos_vogue/01996.jpg
+1997,FW,2022,paris,chanel,row19622,fotos_vogue/01997.jpg
+1998,FW,2022,paris,chanel,row19631,fotos_vogue/01998.jpg
+1999,FW,2022,paris,chanel,row19640,fotos_vogue/01999.jpg
+2000,FW,2022,paris,chanel,row19649,fotos_vogue/02000.jpg
+2001,FW,2022,sin_dato,christian dior,row28899,fotos_vogue/02001.jpg
+2002,FW,2022,sin_dato,christian dior,row28908,fotos_vogue/02002.jpg
+2003,FW,2022,sin_dato,christian dior,row28918,fotos_vogue/02003.jpg
+2004,FW,2022,sin_dato,christian dior,row28927,fotos_vogue/02004.jpg
+2005,FW,2022,sin_dato,christian dior,row28936,fotos_vogue/02005.jpg
+2006,FW,2022,sin_dato,christian dior,row28945,fotos_vogue/02006.jpg
+2007,FW,2022,sin_dato,christian dior,row28954,fotos_vogue/02007.jpg
+2008,FW,2022,sin_dato,christian dior,row28963,fotos_vogue/02008.jpg
+2009,FW,2022,sin_dato,christian dior,row28972,fotos_vogue/02009.jpg
+2010,FW,2022,milan,fendi,row36055,fotos_vogue/02010.jpg
+2011,FW,2022,milan,fendi,row36064,fotos_vogue/02011.jpg
+2012,FW,2022,milan,fendi,row36073,fotos_vogue/02012.jpg
+2013,FW,2022,milan,fendi,row36082,fotos_vogue/02013.jpg
+2014,FW,2022,milan,fendi,row36091,fotos_vogue/02014.jpg
+2015,FW,2022,milan,fendi,row36100,fotos_vogue/02015.jpg
+2016,FW,2022,milan,gucci,row41441,fotos_vogue/02016.jpg
+2017,FW,2022,milan,gucci,row41450,fotos_vogue/02017.jpg
+2018,FW,2022,milan,gucci,row41459,fotos_vogue/02018.jpg
+2019,FW,2022,milan,gucci,row41468,fotos_vogue/02019.jpg
+2020,FW,2022,milan,gucci,row41477,fotos_vogue/02020.jpg
+2021,FW,2022,milan,gucci,row41486,fotos_vogue/02021.jpg
+2022,FW,2022,milan,gucci,row41495,fotos_vogue/02022.jpg
+2023,FW,2022,milan,gucci,row41505,fotos_vogue/02023.jpg
+2024,FW,2022,milan,gucci,row41514,fotos_vogue/02024.jpg
+2025,FW,2022,paris,hermes,row47964,fotos_vogue/02025.jpg
+2026,FW,2022,paris,hermes,row47973,fotos_vogue/02026.jpg
+2027,FW,2022,paris,hermes,row47982,fotos_vogue/02027.jpg
+2028,FW,2022,paris,hermes,row47991,fotos_vogue/02028.jpg
+2029,FW,2022,paris,hermes,row48001,fotos_vogue/02029.jpg
+2030,FW,2022,paris,hermes,row48010,fotos_vogue/02030.jpg
+2031,FW,2022,paris,louis vuitton,row52367,fotos_vogue/02031.jpg
+2032,FW,2022,paris,louis vuitton,row52376,fotos_vogue/02032.jpg
+2033,FW,2022,paris,louis vuitton,row52385,fotos_vogue/02033.jpg
+2034,FW,2022,paris,louis vuitton,row52394,fotos_vogue/02034.jpg
+2035,FW,2022,paris,louis vuitton,row52403,fotos_vogue/02035.jpg
+2036,FW,2022,paris,louis vuitton,row52413,fotos_vogue/02036.jpg
+2037,FW,2022,milan,prada,row58321,fotos_vogue/02037.jpg
+2038,FW,2022,milan,prada,row58330,fotos_vogue/02038.jpg
+2039,FW,2022,milan,prada,row58339,fotos_vogue/02039.jpg
+2040,FW,2022,milan,prada,row58348,fotos_vogue/02040.jpg
+2041,FW,2022,milan,prada,row58357,fotos_vogue/02041.jpg
+2042,FW,2022,milan,prada,row58367,fotos_vogue/02042.jpg
+2043,FW,2022,new-york,ralph lauren,row63252,fotos_vogue/02043.jpg
+2044,FW,2022,new-york,ralph lauren,row63261,fotos_vogue/02044.jpg
+2045,FW,2022,new-york,ralph lauren,row63270,fotos_vogue/02045.jpg
+2046,FW,2022,new-york,ralph lauren,row63279,fotos_vogue/02046.jpg
+2047,FW,2022,new-york,ralph lauren,row63288,fotos_vogue/02047.jpg
+2048,FW,2022,new-york,ralph lauren,row63298,fotos_vogue/02048.jpg
+2049,FW,2022,paris,saint laurent,row67596,fotos_vogue/02049.jpg
+2050,FW,2022,paris,saint laurent,row67605,fotos_vogue/02050.jpg
+2051,FW,2022,paris,saint laurent,row67614,fotos_vogue/02051.jpg
+2052,FW,2022,paris,saint laurent,row67623,fotos_vogue/02052.jpg
+2053,FW,2022,paris,saint laurent,row67632,fotos_vogue/02053.jpg
+2054,FW,2022,paris,saint laurent,row67641,fotos_vogue/02054.jpg
+2055,FW,2022,paris,valentino,row74635,fotos_vogue/02055.jpg
+2056,FW,2022,paris,valentino,row74644,fotos_vogue/02056.jpg
+2057,FW,2022,paris,valentino,row74653,fotos_vogue/02057.jpg
+2058,FW,2022,paris,valentino,row74662,fotos_vogue/02058.jpg
+2059,FW,2022,paris,valentino,row74671,fotos_vogue/02059.jpg
+2060,FW,2022,paris,valentino,row74680,fotos_vogue/02060.jpg
+2061,FW,2022,paris,valentino,row74690,fotos_vogue/02061.jpg
+2062,FW,2022,paris,valentino,row74699,fotos_vogue/02062.jpg
+2063,FW,2022,paris,valentino,row74708,fotos_vogue/02063.jpg
+2064,FW,2022,milan,versace,row83283,fotos_vogue/02064.jpg
+2065,FW,2022,milan,versace,row83292,fotos_vogue/02065.jpg
+2066,FW,2022,milan,versace,row83301,fotos_vogue/02066.jpg
+2067,FW,2022,milan,versace,row83310,fotos_vogue/02067.jpg
+2068,FW,2022,milan,versace,row83320,fotos_vogue/02068.jpg
+2069,FW,2022,milan,versace,row83329,fotos_vogue/02069.jpg
+2070,FW,2022,milan,versace,row83338,fotos_vogue/02070.jpg
+2071,SS,2022,paris,alexander mcqueen,row4858,fotos_vogue/02071.jpg
+2072,SS,2022,paris,alexander mcqueen,row4867,fotos_vogue/02072.jpg
+2073,SS,2022,paris,alexander mcqueen,row4875,fotos_vogue/02073.jpg
+2074,SS,2022,paris,alexander mcqueen,row4884,fotos_vogue/02074.jpg
+2075,SS,2022,paris,balenciaga,row11662,fotos_vogue/02075.jpg
+2076,SS,2022,paris,balenciaga,row11670,fotos_vogue/02076.jpg
+2077,SS,2022,paris,balenciaga,row11679,fotos_vogue/02077.jpg
+2078,SS,2022,paris,balenciaga,row11688,fotos_vogue/02078.jpg
+2079,SS,2022,paris,balenciaga,row11696,fotos_vogue/02079.jpg
+2080,SS,2022,paris,balenciaga,row11705,fotos_vogue/02080.jpg
+2081,SS,2022,paris,balenciaga,row11714,fotos_vogue/02081.jpg
+2082,SS,2022,paris,balenciaga,row11722,fotos_vogue/02082.jpg
+2083,SS,2022,paris,chanel,row26198,fotos_vogue/02083.jpg
+2084,SS,2022,paris,chanel,row26207,fotos_vogue/02084.jpg
+2085,SS,2022,paris,chanel,row26215,fotos_vogue/02085.jpg
+2086,SS,2022,paris,chanel,row26224,fotos_vogue/02086.jpg
+2087,SS,2022,paris,chanel,row26233,fotos_vogue/02087.jpg
+2088,SS,2022,paris,chanel,row26241,fotos_vogue/02088.jpg
+2089,SS,2022,paris,chanel,row26250,fotos_vogue/02089.jpg
+2090,SS,2022,paris,chanel,row26259,fotos_vogue/02090.jpg
+2091,SS,2022,sin_dato,christian dior,row33635,fotos_vogue/02091.jpg
+2092,SS,2022,sin_dato,christian dior,row33644,fotos_vogue/02092.jpg
+2093,SS,2022,sin_dato,christian dior,row33653,fotos_vogue/02093.jpg
+2094,SS,2022,sin_dato,christian dior,row33661,fotos_vogue/02094.jpg
+2095,SS,2022,sin_dato,christian dior,row33670,fotos_vogue/02095.jpg
+2096,SS,2022,sin_dato,christian dior,row33679,fotos_vogue/02096.jpg
+2097,SS,2022,sin_dato,christian dior,row33687,fotos_vogue/02097.jpg
+2098,SS,2022,sin_dato,christian dior,row33696,fotos_vogue/02098.jpg
+2099,SS,2022,sin_dato,christian dior,row33705,fotos_vogue/02099.jpg
+2100,SS,2022,sin_dato,christian dior,row33713,fotos_vogue/02100.jpg
+2101,SS,2022,milan,fendi,row38994,fotos_vogue/02101.jpg
+2102,SS,2022,milan,fendi,row39003,fotos_vogue/02102.jpg
+2103,SS,2022,milan,fendi,row39012,fotos_vogue/02103.jpg
+2104,SS,2022,milan,fendi,row39020,fotos_vogue/02104.jpg
+2105,SS,2022,milan,fendi,row39029,fotos_vogue/02105.jpg
+2106,SS,2022,milan,fendi,row39038,fotos_vogue/02106.jpg
+2107,SS,2022,milan,gucci,row45913,fotos_vogue/02107.jpg
+2108,SS,2022,milan,gucci,row45922,fotos_vogue/02108.jpg
+2109,SS,2022,milan,gucci,row45931,fotos_vogue/02109.jpg
+2110,SS,2022,milan,gucci,row45939,fotos_vogue/02110.jpg
+2111,SS,2022,milan,gucci,row45948,fotos_vogue/02111.jpg
+2112,SS,2022,milan,gucci,row45957,fotos_vogue/02112.jpg
+2113,SS,2022,milan,gucci,row45965,fotos_vogue/02113.jpg
+2114,SS,2022,milan,gucci,row45974,fotos_vogue/02114.jpg
+2115,SS,2022,milan,gucci,row45983,fotos_vogue/02115.jpg
+2116,SS,2022,milan,gucci,row45991,fotos_vogue/02116.jpg
+2117,SS,2022,milan,gucci,row46000,fotos_vogue/02117.jpg
+2118,SS,2022,milan,gucci,row46009,fotos_vogue/02118.jpg
+2119,SS,2022,milan,gucci,row46017,fotos_vogue/02119.jpg
+2120,SS,2022,paris,hermes,row50026,fotos_vogue/02120.jpg
+2121,SS,2022,paris,hermes,row50035,fotos_vogue/02121.jpg
+2122,SS,2022,paris,hermes,row50043,fotos_vogue/02122.jpg
+2123,SS,2022,paris,hermes,row50052,fotos_vogue/02123.jpg
+2124,SS,2022,paris,hermes,row50061,fotos_vogue/02124.jpg
+2125,SS,2022,paris,hermes,row50069,fotos_vogue/02125.jpg
+2126,SS,2022,paris,hermes,row50078,fotos_vogue/02126.jpg
+2127,SS,2022,milan,prada,row61227,fotos_vogue/02127.jpg
+2128,SS,2022,milan,prada,row61235,fotos_vogue/02128.jpg
+2129,SS,2022,milan,prada,row61244,fotos_vogue/02129.jpg
+2130,SS,2022,milan,prada,row61253,fotos_vogue/02130.jpg
+2131,SS,2022,new-york,ralph lauren,row65361,fotos_vogue/02131.jpg
+2132,SS,2022,new-york,ralph lauren,row65369,fotos_vogue/02132.jpg
+2133,SS,2022,paris,saint laurent,row71039,fotos_vogue/02133.jpg
+2134,SS,2022,paris,saint laurent,row71048,fotos_vogue/02134.jpg
+2135,SS,2022,paris,saint laurent,row71056,fotos_vogue/02135.jpg
+2136,SS,2022,paris,saint laurent,row71065,fotos_vogue/02136.jpg
+2137,SS,2022,paris,saint laurent,row71074,fotos_vogue/02137.jpg
+2138,SS,2022,paris,saint laurent,row71082,fotos_vogue/02138.jpg
+2139,SS,2022,paris,saint laurent,row71091,fotos_vogue/02139.jpg
+2140,SS,2022,paris,saint laurent,row71100,fotos_vogue/02140.jpg
+2141,SS,2022,paris,valentino,row80152,fotos_vogue/02141.jpg
+2142,SS,2022,paris,valentino,row80161,fotos_vogue/02142.jpg
+2143,SS,2022,paris,valentino,row80170,fotos_vogue/02143.jpg
+2144,SS,2022,paris,valentino,row80178,fotos_vogue/02144.jpg
+2145,SS,2022,paris,valentino,row80187,fotos_vogue/02145.jpg
+2146,SS,2022,paris,valentino,row80196,fotos_vogue/02146.jpg
+2147,SS,2022,paris,valentino,row80204,fotos_vogue/02147.jpg
+2148,SS,2022,paris,valentino,row80213,fotos_vogue/02148.jpg
+2149,SS,2022,paris,valentino,row80222,fotos_vogue/02149.jpg
+2150,SS,2022,paris,valentino,row80230,fotos_vogue/02150.jpg
+2151,SS,2022,paris,valentino,row80239,fotos_vogue/02151.jpg
+2152,SS,2022,milan,versace,row87298,fotos_vogue/02152.jpg
+2153,SS,2022,milan,versace,row87306,fotos_vogue/02153.jpg
+2154,SS,2022,milan,versace,row87315,fotos_vogue/02154.jpg
+2155,SS,2022,milan,versace,row87324,fotos_vogue/02155.jpg
+2156,SS,2022,milan,versace,row87332,fotos_vogue/02156.jpg
+2157,SS,2022,milan,versace,row87341,fotos_vogue/02157.jpg
+2158,SS,2022,milan,versace,row87350,fotos_vogue/02158.jpg
+2159,SS,2022,milan,versace,row87358,fotos_vogue/02159.jpg
+2160,SS,2022,milan,versace,row87367,fotos_vogue/02160.jpg
+2161,FW,2023,paris,alexander mcqueen,row1910,fotos_vogue/02161.jpg
+2162,FW,2023,paris,alexander mcqueen,row1919,fotos_vogue/02162.jpg
+2163,FW,2023,paris,alexander mcqueen,row1928,fotos_vogue/02163.jpg
+2164,FW,2023,paris,alexander mcqueen,row1936,fotos_vogue/02164.jpg
+2165,FW,2023,paris,alexander mcqueen,row1945,fotos_vogue/02165.jpg
+2166,FW,2023,paris,alexander mcqueen,row1954,fotos_vogue/02166.jpg
+2167,FW,2023,paris,balenciaga,row8882,fotos_vogue/02167.jpg
+2168,FW,2023,paris,balenciaga,row8891,fotos_vogue/02168.jpg
+2169,FW,2023,paris,balenciaga,row8899,fotos_vogue/02169.jpg
+2170,FW,2023,paris,balenciaga,row8908,fotos_vogue/02170.jpg
+2171,FW,2023,paris,balenciaga,row8917,fotos_vogue/02171.jpg
+2172,FW,2023,paris,balenciaga,row8926,fotos_vogue/02172.jpg
+2173,FW,2023,paris,chanel,row19702,fotos_vogue/02173.jpg
+2174,FW,2023,paris,chanel,row19710,fotos_vogue/02174.jpg
+2175,FW,2023,paris,chanel,row19719,fotos_vogue/02175.jpg
+2176,FW,2023,paris,chanel,row19728,fotos_vogue/02176.jpg
+2177,FW,2023,paris,chanel,row19737,fotos_vogue/02177.jpg
+2178,FW,2023,paris,chanel,row19746,fotos_vogue/02178.jpg
+2179,FW,2023,paris,chanel,row19754,fotos_vogue/02179.jpg
+2180,FW,2023,paris,chanel,row19763,fotos_vogue/02180.jpg
+2181,FW,2023,sin_dato,christian dior,row29050,fotos_vogue/02181.jpg
+2182,FW,2023,sin_dato,christian dior,row29059,fotos_vogue/02182.jpg
+2183,FW,2023,sin_dato,christian dior,row29068,fotos_vogue/02183.jpg
+2184,FW,2023,sin_dato,christian dior,row29076,fotos_vogue/02184.jpg
+2185,FW,2023,sin_dato,christian dior,row29085,fotos_vogue/02185.jpg
+2186,FW,2023,sin_dato,christian dior,row29094,fotos_vogue/02186.jpg
+2187,FW,2023,sin_dato,christian dior,row29103,fotos_vogue/02187.jpg
+2188,FW,2023,sin_dato,christian dior,row29112,fotos_vogue/02188.jpg
+2189,FW,2023,sin_dato,christian dior,row29120,fotos_vogue/02189.jpg
+2190,FW,2023,sin_dato,christian dior,row29129,fotos_vogue/02190.jpg
+2191,FW,2023,sin_dato,christian dior,row29138,fotos_vogue/02191.jpg
+2192,FW,2023,milan,fendi,row36201,fotos_vogue/02192.jpg
+2193,FW,2023,milan,fendi,row36210,fotos_vogue/02193.jpg
+2194,FW,2023,milan,fendi,row36218,fotos_vogue/02194.jpg
+2195,FW,2023,milan,fendi,row36227,fotos_vogue/02195.jpg
+2196,FW,2023,milan,fendi,row36236,fotos_vogue/02196.jpg
+2197,FW,2023,milan,fendi,row36245,fotos_vogue/02197.jpg
+2198,FW,2023,milan,gucci,row41572,fotos_vogue/02198.jpg
+2199,FW,2023,milan,gucci,row41580,fotos_vogue/02199.jpg
+2200,FW,2023,milan,gucci,row41589,fotos_vogue/02200.jpg
+2201,FW,2023,milan,gucci,row41598,fotos_vogue/02201.jpg
+2202,FW,2023,milan,gucci,row41607,fotos_vogue/02202.jpg
+2203,FW,2023,milan,gucci,row41616,fotos_vogue/02203.jpg
+2204,FW,2023,paris,hermes,row48071,fotos_vogue/02204.jpg
+2205,FW,2023,paris,hermes,row48080,fotos_vogue/02205.jpg
+2206,FW,2023,paris,hermes,row48089,fotos_vogue/02206.jpg
+2207,FW,2023,paris,hermes,row48098,fotos_vogue/02207.jpg
+2208,FW,2023,paris,hermes,row48107,fotos_vogue/02208.jpg
+2209,FW,2023,paris,hermes,row48115,fotos_vogue/02209.jpg
+2210,FW,2023,paris,hermes,row48124,fotos_vogue/02210.jpg
+2211,FW,2023,paris,louis vuitton,row52489,fotos_vogue/02211.jpg
+2212,FW,2023,paris,louis vuitton,row52498,fotos_vogue/02212.jpg
+2213,FW,2023,paris,louis vuitton,row52507,fotos_vogue/02213.jpg
+2214,FW,2023,paris,louis vuitton,row52515,fotos_vogue/02214.jpg
+2215,FW,2023,paris,louis vuitton,row52524,fotos_vogue/02215.jpg
+2216,FW,2023,milan,prada,row58425,fotos_vogue/02216.jpg
+2217,FW,2023,milan,prada,row58434,fotos_vogue/02217.jpg
+2218,FW,2023,milan,prada,row58443,fotos_vogue/02218.jpg
+2219,FW,2023,milan,prada,row58451,fotos_vogue/02219.jpg
+2220,FW,2023,milan,prada,row58460,fotos_vogue/02220.jpg
+2221,FW,2023,milan,prada,row58469,fotos_vogue/02221.jpg
+2222,FW,2023,new-york,ralph lauren,row63307,fotos_vogue/02222.jpg
+2223,FW,2023,new-york,ralph lauren,row63316,fotos_vogue/02223.jpg
+2224,FW,2023,new-york,ralph lauren,row63324,fotos_vogue/02224.jpg
+2225,FW,2023,new-york,ralph lauren,row63333,fotos_vogue/02225.jpg
+2226,FW,2023,new-york,ralph lauren,row63342,fotos_vogue/02226.jpg
+2227,FW,2023,new-york,ralph lauren,row63351,fotos_vogue/02227.jpg
+2228,FW,2023,paris,saint laurent,row67704,fotos_vogue/02228.jpg
+2229,FW,2023,paris,saint laurent,row67712,fotos_vogue/02229.jpg
+2230,FW,2023,paris,saint laurent,row67721,fotos_vogue/02230.jpg
+2231,FW,2023,paris,saint laurent,row67730,fotos_vogue/02231.jpg
+2232,FW,2023,paris,saint laurent,row67739,fotos_vogue/02232.jpg
+2233,FW,2023,paris,saint laurent,row67748,fotos_vogue/02233.jpg
+2234,FW,2023,paris,valentino,row74800,fotos_vogue/02234.jpg
+2235,FW,2023,paris,valentino,row74809,fotos_vogue/02235.jpg
+2236,FW,2023,paris,valentino,row74818,fotos_vogue/02236.jpg
+2237,FW,2023,paris,valentino,row74827,fotos_vogue/02237.jpg
+2238,FW,2023,paris,valentino,row74836,fotos_vogue/02238.jpg
+2239,FW,2023,paris,valentino,row74844,fotos_vogue/02239.jpg
+2240,FW,2023,paris,valentino,row74853,fotos_vogue/02240.jpg
+2241,FW,2023,paris,valentino,row74862,fotos_vogue/02241.jpg
+2242,FW,2023,milan,versace,row83347,fotos_vogue/02242.jpg
+2243,FW,2023,milan,versace,row83356,fotos_vogue/02243.jpg
+2244,FW,2023,milan,versace,row83364,fotos_vogue/02244.jpg
+2245,FW,2023,milan,versace,row83373,fotos_vogue/02245.jpg
+2246,FW,2023,milan,versace,row83382,fotos_vogue/02246.jpg
+2247,FW,2023,milan,versace,row83391,fotos_vogue/02247.jpg
+2248,FW,2023,milan,versace,row83400,fotos_vogue/02248.jpg
+2249,FW,2023,milan,versace,row83408,fotos_vogue/02249.jpg
+2250,FW,2023,milan,versace,row83417,fotos_vogue/02250.jpg
+2251,SS,2023,paris,alexander mcqueen,row4923,fotos_vogue/02251.jpg
+2252,SS,2023,paris,alexander mcqueen,row4933,fotos_vogue/02252.jpg
+2253,SS,2023,paris,alexander mcqueen,row4943,fotos_vogue/02253.jpg
+2254,SS,2023,paris,alexander mcqueen,row4952,fotos_vogue/02254.jpg
+2255,SS,2023,paris,balenciaga,row11725,fotos_vogue/02255.jpg
+2256,SS,2023,paris,balenciaga,row11735,fotos_vogue/02256.jpg
+2257,SS,2023,paris,balenciaga,row11744,fotos_vogue/02257.jpg
+2258,SS,2023,paris,balenciaga,row11754,fotos_vogue/02258.jpg
+2259,SS,2023,paris,balenciaga,row11764,fotos_vogue/02259.jpg
+2260,SS,2023,paris,balenciaga,row11774,fotos_vogue/02260.jpg
+2261,SS,2023,paris,balenciaga,row11783,fotos_vogue/02261.jpg
+2262,SS,2023,paris,balenciaga,row11793,fotos_vogue/02262.jpg
+2263,SS,2023,paris,chanel,row26319,fotos_vogue/02263.jpg
+2264,SS,2023,paris,chanel,row26328,fotos_vogue/02264.jpg
+2265,SS,2023,paris,chanel,row26338,fotos_vogue/02265.jpg
+2266,SS,2023,paris,chanel,row26348,fotos_vogue/02266.jpg
+2267,SS,2023,paris,chanel,row26357,fotos_vogue/02267.jpg
+2268,SS,2023,paris,chanel,row26367,fotos_vogue/02268.jpg
+2269,SS,2023,paris,chanel,row26377,fotos_vogue/02269.jpg
+2270,SS,2023,sin_dato,christian dior,row33781,fotos_vogue/02270.jpg
+2271,SS,2023,sin_dato,christian dior,row33791,fotos_vogue/02271.jpg
+2272,SS,2023,sin_dato,christian dior,row33801,fotos_vogue/02272.jpg
+2273,SS,2023,sin_dato,christian dior,row33811,fotos_vogue/02273.jpg
+2274,SS,2023,sin_dato,christian dior,row33820,fotos_vogue/02274.jpg
+2275,SS,2023,sin_dato,christian dior,row33830,fotos_vogue/02275.jpg
+2276,SS,2023,sin_dato,christian dior,row33840,fotos_vogue/02276.jpg
+2277,SS,2023,sin_dato,christian dior,row33849,fotos_vogue/02277.jpg
+2278,SS,2023,sin_dato,christian dior,row33859,fotos_vogue/02278.jpg
+2279,SS,2023,milan,fendi,row39139,fotos_vogue/02279.jpg
+2280,SS,2023,milan,fendi,row39148,fotos_vogue/02280.jpg
+2281,SS,2023,milan,fendi,row39158,fotos_vogue/02281.jpg
+2282,SS,2023,milan,fendi,row39168,fotos_vogue/02282.jpg
+2283,SS,2023,milan,fendi,row39177,fotos_vogue/02283.jpg
+2284,SS,2023,milan,fendi,row39187,fotos_vogue/02284.jpg
+2285,SS,2023,milan,fendi,row39197,fotos_vogue/02285.jpg
+2286,SS,2023,milan,gucci,row46027,fotos_vogue/02286.jpg
+2287,SS,2023,milan,gucci,row46037,fotos_vogue/02287.jpg
+2288,SS,2023,milan,gucci,row46047,fotos_vogue/02288.jpg
+2289,SS,2023,milan,gucci,row46057,fotos_vogue/02289.jpg
+2290,SS,2023,milan,gucci,row46066,fotos_vogue/02290.jpg
+2291,SS,2023,milan,gucci,row46076,fotos_vogue/02291.jpg
+2292,SS,2023,milan,gucci,row46086,fotos_vogue/02292.jpg
+2293,SS,2023,paris,hermes,row50138,fotos_vogue/02293.jpg
+2294,SS,2023,paris,hermes,row50148,fotos_vogue/02294.jpg
+2295,SS,2023,paris,hermes,row50158,fotos_vogue/02295.jpg
+2296,SS,2023,paris,hermes,row50167,fotos_vogue/02296.jpg
+2297,SS,2023,paris,hermes,row50177,fotos_vogue/02297.jpg
+2298,SS,2023,paris,hermes,row50187,fotos_vogue/02298.jpg
+2299,SS,2023,paris,louis vuitton,row56146,fotos_vogue/02299.jpg
+2300,SS,2023,paris,louis vuitton,row56156,fotos_vogue/02300.jpg
+2301,SS,2023,paris,louis vuitton,row56166,fotos_vogue/02301.jpg
+2302,SS,2023,paris,louis vuitton,row56175,fotos_vogue/02302.jpg
+2303,SS,2023,paris,louis vuitton,row56185,fotos_vogue/02303.jpg
+2304,SS,2023,milan,prada,row61310,fotos_vogue/02304.jpg
+2305,SS,2023,milan,prada,row61320,fotos_vogue/02305.jpg
+2306,SS,2023,milan,prada,row61329,fotos_vogue/02306.jpg
+2307,SS,2023,milan,prada,row61339,fotos_vogue/02307.jpg
+2308,SS,2023,milan,prada,row61349,fotos_vogue/02308.jpg
+2309,SS,2023,milan,prada,row61358,fotos_vogue/02309.jpg
+2310,SS,2023,new-york,ralph lauren,row65382,fotos_vogue/02310.jpg
+2311,SS,2023,new-york,ralph lauren,row65392,fotos_vogue/02311.jpg
+2312,SS,2023,new-york,ralph lauren,row65401,fotos_vogue/02312.jpg
+2313,SS,2023,new-york,ralph lauren,row65411,fotos_vogue/02313.jpg
+2314,SS,2023,new-york,ralph lauren,row65421,fotos_vogue/02314.jpg
+2315,SS,2023,new-york,ralph lauren,row65430,fotos_vogue/02315.jpg
+2316,SS,2023,new-york,ralph lauren,row65440,fotos_vogue/02316.jpg
+2317,SS,2023,new-york,ralph lauren,row65450,fotos_vogue/02317.jpg
+2318,SS,2023,new-york,ralph lauren,row65460,fotos_vogue/02318.jpg
+2319,SS,2023,new-york,ralph lauren,row65469,fotos_vogue/02319.jpg
+2320,SS,2023,new-york,ralph lauren,row65479,fotos_vogue/02320.jpg
+2321,SS,2023,paris,saint laurent,row71159,fotos_vogue/02321.jpg
+2322,SS,2023,paris,saint laurent,row71168,fotos_vogue/02322.jpg
+2323,SS,2023,paris,saint laurent,row71178,fotos_vogue/02323.jpg
+2324,SS,2023,paris,saint laurent,row71188,fotos_vogue/02324.jpg
+2325,SS,2023,paris,saint laurent,row71197,fotos_vogue/02325.jpg
+2326,SS,2023,paris,valentino,row80339,fotos_vogue/02326.jpg
+2327,SS,2023,paris,valentino,row80349,fotos_vogue/02327.jpg
+2328,SS,2023,paris,valentino,row80358,fotos_vogue/02328.jpg
+2329,SS,2023,paris,valentino,row80368,fotos_vogue/02329.jpg
+2330,SS,2023,paris,valentino,row80378,fotos_vogue/02330.jpg
+2331,SS,2023,paris,valentino,row80387,fotos_vogue/02331.jpg
+2332,SS,2023,paris,valentino,row80397,fotos_vogue/02332.jpg
+2333,SS,2023,paris,valentino,row80407,fotos_vogue/02333.jpg
+2334,SS,2023,paris,valentino,row80417,fotos_vogue/02334.jpg
+2335,SS,2023,milan,versace,row87418,fotos_vogue/02335.jpg
+2336,SS,2023,milan,versace,row87428,fotos_vogue/02336.jpg
+2337,SS,2023,milan,versace,row87438,fotos_vogue/02337.jpg
+2338,SS,2023,milan,versace,row87447,fotos_vogue/02338.jpg
+2339,SS,2023,milan,versace,row87457,fotos_vogue/02339.jpg
+2340,SS,2023,milan,versace,row87467,fotos_vogue/02340.jpg
+2341,SS,2024,paris,alexander mcqueen,row4994,fotos_vogue/02341.jpg
+2342,SS,2024,paris,alexander mcqueen,row5002,fotos_vogue/02342.jpg
+2343,SS,2024,paris,alexander mcqueen,row5009,fotos_vogue/02343.jpg
+2344,SS,2024,paris,alexander mcqueen,row5017,fotos_vogue/02344.jpg
+2345,SS,2024,paris,alexander mcqueen,row5024,fotos_vogue/02345.jpg
+2346,SS,2024,paris,alexander mcqueen,row5032,fotos_vogue/02346.jpg
+2347,SS,2024,paris,balenciaga,row11799,fotos_vogue/02347.jpg
+2348,SS,2024,paris,balenciaga,row11807,fotos_vogue/02348.jpg
+2349,SS,2024,paris,balenciaga,row11815,fotos_vogue/02349.jpg
+2350,SS,2024,paris,balenciaga,row11822,fotos_vogue/02350.jpg
+2351,SS,2024,paris,balenciaga,row11830,fotos_vogue/02351.jpg
+2352,SS,2024,paris,balenciaga,row11837,fotos_vogue/02352.jpg
+2353,SS,2024,paris,balenciaga,row11845,fotos_vogue/02353.jpg
+2354,SS,2024,paris,balenciaga,row11852,fotos_vogue/02354.jpg
+2355,SS,2024,paris,balenciaga,row11860,fotos_vogue/02355.jpg
+2356,SS,2024,paris,balenciaga,row11867,fotos_vogue/02356.jpg
+2357,SS,2024,paris,balenciaga,row11875,fotos_vogue/02357.jpg
+2358,SS,2024,paris,balenciaga,row11882,fotos_vogue/02358.jpg
+2359,SS,2024,paris,chanel,row26390,fotos_vogue/02359.jpg
+2360,SS,2024,paris,chanel,row26397,fotos_vogue/02360.jpg
+2361,SS,2024,paris,chanel,row26405,fotos_vogue/02361.jpg
+2362,SS,2024,paris,chanel,row26412,fotos_vogue/02362.jpg
+2363,SS,2024,paris,chanel,row26420,fotos_vogue/02363.jpg
+2364,SS,2024,paris,chanel,row26428,fotos_vogue/02364.jpg
+2365,SS,2024,paris,chanel,row26435,fotos_vogue/02365.jpg
+2366,SS,2024,paris,chanel,row26443,fotos_vogue/02366.jpg
+2367,SS,2024,paris,chanel,row26450,fotos_vogue/02367.jpg
+2368,SS,2024,sin_dato,christian dior,row33866,fotos_vogue/02368.jpg
+2369,SS,2024,sin_dato,christian dior,row33873,fotos_vogue/02369.jpg
+2370,SS,2024,sin_dato,christian dior,row33881,fotos_vogue/02370.jpg
+2371,SS,2024,sin_dato,christian dior,row33888,fotos_vogue/02371.jpg
+2372,SS,2024,sin_dato,christian dior,row33896,fotos_vogue/02372.jpg
+2373,SS,2024,sin_dato,christian dior,row33903,fotos_vogue/02373.jpg
+2374,SS,2024,sin_dato,christian dior,row33911,fotos_vogue/02374.jpg
+2375,SS,2024,sin_dato,christian dior,row33918,fotos_vogue/02375.jpg
+2376,SS,2024,sin_dato,christian dior,row33926,fotos_vogue/02376.jpg
+2377,SS,2024,sin_dato,christian dior,row33933,fotos_vogue/02377.jpg
+2378,SS,2024,sin_dato,christian dior,row33941,fotos_vogue/02378.jpg
+2379,SS,2024,milan,fendi,row39265,fotos_vogue/02379.jpg
+2380,SS,2024,milan,fendi,row39272,fotos_vogue/02380.jpg
+2381,SS,2024,milan,fendi,row39280,fotos_vogue/02381.jpg
+2382,SS,2024,milan,fendi,row39287,fotos_vogue/02382.jpg
+2383,SS,2024,milan,fendi,row39295,fotos_vogue/02383.jpg
+2384,SS,2024,milan,fendi,row39302,fotos_vogue/02384.jpg
+2385,SS,2024,milan,gucci,row46111,fotos_vogue/02385.jpg
+2386,SS,2024,milan,gucci,row46118,fotos_vogue/02386.jpg
+2387,SS,2024,milan,gucci,row46126,fotos_vogue/02387.jpg
+2388,SS,2024,milan,gucci,row46133,fotos_vogue/02388.jpg
+2389,SS,2024,milan,gucci,row46141,fotos_vogue/02389.jpg
+2390,SS,2024,milan,gucci,row46148,fotos_vogue/02390.jpg
+2391,SS,2024,milan,gucci,row46156,fotos_vogue/02391.jpg
+2392,SS,2024,milan,gucci,row46163,fotos_vogue/02392.jpg
+2393,SS,2024,paris,hermes,row50251,fotos_vogue/02393.jpg
+2394,SS,2024,paris,hermes,row50259,fotos_vogue/02394.jpg
+2395,SS,2024,paris,hermes,row50266,fotos_vogue/02395.jpg
+2396,SS,2024,paris,hermes,row50274,fotos_vogue/02396.jpg
+2397,SS,2024,paris,hermes,row50281,fotos_vogue/02397.jpg
+2398,SS,2024,paris,hermes,row50289,fotos_vogue/02398.jpg
+2399,SS,2024,paris,hermes,row50296,fotos_vogue/02399.jpg
+2400,SS,2024,paris,hermes,row50304,fotos_vogue/02400.jpg
+2401,SS,2024,paris,hermes,row50311,fotos_vogue/02401.jpg
+2402,SS,2024,milan,prada,row61417,fotos_vogue/02402.jpg
+2403,SS,2024,milan,prada,row61424,fotos_vogue/02403.jpg
+2404,SS,2024,milan,prada,row61432,fotos_vogue/02404.jpg
+2405,SS,2024,milan,prada,row61439,fotos_vogue/02405.jpg
+2406,SS,2024,milan,prada,row61447,fotos_vogue/02406.jpg
+2407,SS,2024,milan,prada,row61454,fotos_vogue/02407.jpg
+2408,SS,2024,new-york,ralph lauren,row65514,fotos_vogue/02408.jpg
+2409,SS,2024,new-york,ralph lauren,row65522,fotos_vogue/02409.jpg
+2410,SS,2024,new-york,ralph lauren,row65529,fotos_vogue/02410.jpg
+2411,SS,2024,new-york,ralph lauren,row65537,fotos_vogue/02411.jpg
+2412,SS,2024,new-york,ralph lauren,row65544,fotos_vogue/02412.jpg
+2413,SS,2024,new-york,ralph lauren,row65552,fotos_vogue/02413.jpg
+2414,SS,2024,new-york,ralph lauren,row65559,fotos_vogue/02414.jpg
+2415,SS,2024,paris,saint laurent,row71256,fotos_vogue/02415.jpg
+2416,SS,2024,paris,saint laurent,row71263,fotos_vogue/02416.jpg
+2417,SS,2024,paris,saint laurent,row71271,fotos_vogue/02417.jpg
+2418,SS,2024,paris,saint laurent,row71278,fotos_vogue/02418.jpg
+2419,SS,2024,paris,saint laurent,row71286,fotos_vogue/02419.jpg
+2420,SS,2024,paris,saint laurent,row71293,fotos_vogue/02420.jpg
+2421,SS,2024,milan,versace,row87475,fotos_vogue/02421.jpg
+2422,SS,2024,milan,versace,row87482,fotos_vogue/02422.jpg
+2423,SS,2024,milan,versace,row87490,fotos_vogue/02423.jpg
+2424,SS,2024,milan,versace,row87498,fotos_vogue/02424.jpg
+2425,SS,2024,milan,versace,row87505,fotos_vogue/02425.jpg
+2426,SS,2024,milan,versace,row87513,fotos_vogue/02426.jpg
+2427,SS,2024,milan,versace,row87520,fotos_vogue/02427.jpg
+2428,SS,2024,milan,versace,row87528,fotos_vogue/02428.jpg
+2429,SS,2024,milan,versace,row87535,fotos_vogue/02429.jpg
+2430,SS,2024,milan,versace,row87543,fotos_vogue/02430.jpg

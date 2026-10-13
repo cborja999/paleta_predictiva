@@ -1,0 +1,10 @@
+fotos_vogue/
+__pycache__/
+.DS_Store
+DS_Store
+*.zip
+.env
+*key*
+listado_cache.json
+multiTimeline*.csv
+dress*.csv

@@ -1,0 +1,15 @@
+termino,prediccion_reporte,volumen_max,cambio_2025_vs_resto,cambio_2026_vs_resto,acierta
+brown outfit,sube,100.0,0.22,-0.06,no
+wide leg jeans,sube,100.0,0.22,0.25,si
+yellow outfit,sube,55.0,0.07,-0.03,no
+ecru outfit,sube,1.0,0.02,-0.23,no
+salmon outfit,sube,5.0,0.1,0.3,si
+charcoal outfit,sube,5.0,0.19,0.43,si
+polka dot dress,sube,24.0,0.89,0.14,si
+duster coat,sube,2.0,-0.1,-0.41,no
+tailored trousers,sube,6.0,0.59,0.12,si
+tailored blazer,sube,17.0,0.41,1.13,si
+harem pants,sube,8.0,-0.2,0.09,si
+crop top,sube,100.0,-0.18,-0.2,no
+flare pants,no sube,23.0,-0.12,0.19,no
+bootcut jeans,no sube,69.0,0.24,0.47,no

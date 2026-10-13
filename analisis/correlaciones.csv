@@ -1,0 +1,226 @@
+tipo,categoria,termino_trends,demora_meses,n_temporadas,corr_ajustada,p_permutacion,corr_bruta
+color,Azul,blue outfit,0,26,-0.181,0.356,0.079
+color,Azul,blue outfit,3,27,-0.141,0.466,-0.024
+color,Azul,blue outfit,6,27,0.028,0.891,0.002
+color,Azul,blue outfit,9,27,0.119,0.546,-0.015
+color,Azul,blue outfit,12,27,0.073,0.723,-0.01
+color,Azul,blue outfit,15,27,0.078,0.702,-0.013
+color,Azul,blue outfit,18,27,-0.181,0.34,-0.061
+color,Azul,blue outfit,21,27,0.098,0.615,-0.088
+color,Azul,blue outfit,24,27,0.146,0.457,-0.124
+color,Beige/Crema,beige outfit,0,26,-0.243,0.242,0.21
+color,Beige/Crema,beige outfit,3,27,-0.096,0.622,0.08
+color,Beige/Crema,beige outfit,6,27,-0.144,0.456,0.021
+color,Beige/Crema,beige outfit,9,27,0.207,0.292,0.012
+color,Beige/Crema,beige outfit,12,27,0.008,0.973,0.064
+color,Beige/Crema,beige outfit,15,27,-0.264,0.189,0.049
+color,Beige/Crema,beige outfit,18,27,0.187,0.376,0.028
+color,Beige/Crema,beige outfit,21,27,-0.017,0.938,0.021
+color,Beige/Crema,beige outfit,24,27,0.013,0.944,0.089
+color,Blanco,white outfit,0,26,0.002,0.993,-0.387
+color,Blanco,white outfit,3,27,-0.217,0.286,-0.488
+color,Blanco,white outfit,6,27,0.211,0.287,-0.422
+color,Blanco,white outfit,9,27,0.271,0.171,-0.341
+color,Blanco,white outfit,12,27,-0.279,0.152,-0.353
+color,Blanco,white outfit,15,27,-0.231,0.238,-0.467
+color,Blanco,white outfit,18,27,0.294,0.153,-0.405
+color,Blanco,white outfit,21,27,-0.065,0.752,-0.314
+color,Blanco,white outfit,24,27,-0.161,0.4,-0.286
+color,Gris,gray outfit,0,26,-0.065,0.754,-0.165
+color,Gris,gray outfit,3,27,0.052,0.811,-0.225
+color,Gris,gray outfit,6,27,0.149,0.435,-0.021
+color,Gris,gray outfit,9,27,-0.187,0.349,0.089
+color,Gris,gray outfit,12,27,-0.122,0.539,-0.106
+color,Gris,gray outfit,15,27,0.418,0.03,-0.117
+color,Gris,gray outfit,18,27,0.092,0.628,0.043
+color,Gris,gray outfit,21,27,-0.428,0.027,0.053
+color,Gris,gray outfit,24,27,0.095,0.637,-0.094
+color,Marron,brown outfit,0,26,0.005,0.987,-0.055
+color,Marron,brown outfit,3,27,-0.281,0.159,-0.071
+color,Marron,brown outfit,6,27,0.243,0.236,0.307
+color,Marron,brown outfit,9,27,-0.241,0.209,0.393
+color,Marron,brown outfit,12,27,0.429,0.022,0.047
+color,Marron,brown outfit,15,27,0.08,0.699,0.019
+color,Marron,brown outfit,18,27,-0.09,0.662,0.342
+color,Marron,brown outfit,21,27,0.411,0.037,0.396
+color,Marron,brown outfit,24,27,-0.396,0.041,-0.028
+color,Metalizado,silver outfit,0,26,-0.226,0.266,0.026
+color,Metalizado,silver outfit,3,27,-0.054,0.806,-0.033
+color,Metalizado,silver outfit,6,27,0.349,0.07,0.032
+color,Metalizado,silver outfit,9,27,-0.159,0.424,-0.046
+color,Metalizado,silver outfit,12,27,0.041,0.834,-0.019
+color,Metalizado,silver outfit,15,27,0.028,0.886,-0.036
+color,Metalizado,silver outfit,18,27,0.05,0.801,-0.054
+color,Metalizado,silver outfit,21,27,-0.117,0.573,-0.065
+color,Metalizado,silver outfit,24,27,0.097,0.621,-0.028
+color,Naranja,orange outfit,0,26,0.137,0.508,0.244
+color,Naranja,orange outfit,3,27,-0.301,0.135,-0.059
+color,Naranja,orange outfit,6,27,0.206,0.301,0.005
+color,Naranja,orange outfit,9,27,0.13,0.485,0.293
+color,Naranja,orange outfit,12,27,-0.016,0.934,0.237
+color,Naranja,orange outfit,15,27,-0.127,0.534,0.005
+color,Naranja,orange outfit,18,27,-0.03,0.88,-0.014
+color,Naranja,orange outfit,21,27,0.18,0.392,0.251
+color,Naranja,orange outfit,24,27,-0.074,0.732,0.2
+color,Negro,black outfit,0,26,-0.254,0.201,-0.276
+color,Negro,black outfit,3,27,0.185,0.347,-0.199
+color,Negro,black outfit,6,27,-0.153,0.448,0.0
+color,Negro,black outfit,9,27,-0.091,0.639,0.031
+color,Negro,black outfit,12,27,-0.008,0.971,-0.229
+color,Negro,black outfit,15,27,0.119,0.552,-0.197
+color,Negro,black outfit,18,27,-0.16,0.416,0.077
+color,Negro,black outfit,21,27,-0.142,0.477,0.125
+color,Negro,black outfit,24,27,0.245,0.215,-0.131
+color,Rojo,red outfit,0,26,0.105,0.601,0.255
+color,Rojo,red outfit,3,27,-0.027,0.897,0.248
+color,Rojo,red outfit,6,27,-0.244,0.233,0.272
+color,Rojo,red outfit,9,27,-0.037,0.853,0.28
+color,Rojo,red outfit,12,27,0.241,0.222,0.243
+color,Rojo,red outfit,15,27,0.155,0.46,0.196
+color,Rojo,red outfit,18,27,-0.178,0.357,0.238
+color,Rojo,red outfit,21,27,-0.152,0.455,0.23
+color,Rojo,red outfit,24,27,0.03,0.904,0.163
+color,Rosa,pink outfit,0,26,0.545,0.006,0.113
+color,Rosa,pink outfit,3,27,0.122,0.541,0.088
+color,Rosa,pink outfit,6,27,-0.221,0.263,0.03
+color,Rosa,pink outfit,9,27,-0.127,0.516,0.02
+color,Rosa,pink outfit,12,27,0.145,0.483,0.076
+color,Rosa,pink outfit,15,27,0.153,0.446,0.126
+color,Rosa,pink outfit,18,27,-0.086,0.653,0.04
+color,Rosa,pink outfit,21,27,-0.023,0.915,0.048
+color,Rosa,pink outfit,24,27,0.027,0.885,0.051
+color,Verde,green outfit,0,26,-0.031,0.885,-0.109
+color,Verde,green outfit,3,27,0.002,0.99,-0.06
+color,Verde,green outfit,6,27,-0.447,0.021,-0.157
+color,Verde,green outfit,9,27,0.351,0.079,-0.124
+color,Verde,green outfit,12,27,-0.143,0.476,-0.111
+color,Verde,green outfit,15,27,-0.222,0.25,-0.122
+color,Verde,green outfit,18,27,0.24,0.249,-0.094
+color,Verde,green outfit,21,27,-0.091,0.629,-0.119
+color,Verde,green outfit,24,27,-0.197,0.316,-0.043
+largo,Midi,midi skirt,0,26,0.063,0.761,-0.191
+largo,Midi,midi skirt,3,27,-0.15,0.434,-0.116
+largo,Midi,midi skirt,6,27,0.062,0.772,-0.217
+largo,Midi,midi skirt,9,27,-0.12,0.541,-0.33
+largo,Midi,midi skirt,12,27,0.142,0.49,-0.217
+largo,Midi,midi skirt,15,27,0.186,0.345,-0.073
+largo,Midi,midi skirt,18,27,-0.336,0.076,-0.325
+largo,Midi,midi skirt,21,27,-0.021,0.926,-0.327
+largo,Midi,midi skirt,24,27,-0.174,0.382,-0.21
+largo,Mini,mini skirt,0,26,0.085,0.698,-0.063
+largo,Mini,mini skirt,3,27,-0.028,0.886,-0.285
+largo,Mini,mini skirt,6,27,-0.001,0.995,-0.354
+largo,Mini,mini skirt,9,27,0.092,0.648,-0.3
+largo,Mini,mini skirt,12,27,-0.106,0.612,-0.159
+largo,Mini,mini skirt,15,27,0.08,0.698,-0.274
+largo,Mini,mini skirt,18,27,0.19,0.346,-0.325
+largo,Mini,mini skirt,21,27,-0.384,0.047,-0.338
+largo,Mini,mini skirt,24,27,0.145,0.452,-0.179
+prenda,Abrigo/Campera,coat,0,26,0.116,0.595,-0.576
+prenda,Abrigo/Campera,coat,3,27,-0.014,0.941,-0.618
+prenda,Abrigo/Campera,coat,6,27,-0.403,0.043,0.774
+prenda,Abrigo/Campera,coat,9,27,-0.171,0.383,0.875
+prenda,Abrigo/Campera,coat,12,27,0.198,0.336,-0.526
+prenda,Abrigo/Campera,coat,15,27,0.21,0.295,-0.646
+prenda,Abrigo/Campera,coat,18,27,-0.178,0.379,0.78
+prenda,Abrigo/Campera,coat,21,27,-0.331,0.096,0.859
+prenda,Abrigo/Campera,coat,24,27,0.083,0.67,-0.493
+prenda,Blazer/Saco,blazer,0,26,-0.003,0.986,0.495
+prenda,Blazer/Saco,blazer,3,27,0.105,0.611,0.492
+prenda,Blazer/Saco,blazer,6,27,-0.054,0.824,0.528
+prenda,Blazer/Saco,blazer,9,27,0.311,0.111,0.686
+prenda,Blazer/Saco,blazer,12,27,-0.065,0.765,0.548
+prenda,Blazer/Saco,blazer,15,27,-0.105,0.605,0.483
+prenda,Blazer/Saco,blazer,18,27,-0.124,0.557,0.53
+prenda,Blazer/Saco,blazer,21,27,0.161,0.423,0.695
+prenda,Blazer/Saco,blazer,24,27,0.08,0.694,0.561
+prenda,Falda,skirt,0,26,0.09,0.652,-0.001
+prenda,Falda,skirt,3,27,-0.178,0.389,-0.088
+prenda,Falda,skirt,6,27,0.129,0.503,0.002
+prenda,Falda,skirt,9,27,0.343,0.087,0.101
+prenda,Falda,skirt,12,27,-0.359,0.072,-0.011
+prenda,Falda,skirt,15,27,0.337,0.086,-0.066
+prenda,Falda,skirt,18,27,0.123,0.525,-0.094
+prenda,Falda,skirt,21,27,-0.414,0.035,-0.117
+prenda,Falda,skirt,24,27,0.1,0.621,0.033
+prenda,Mono,jumpsuit,0,26,-0.133,0.511,0.119
+prenda,Mono,jumpsuit,3,27,-0.166,0.417,-0.022
+prenda,Mono,jumpsuit,6,27,0.434,0.025,0.282
+prenda,Mono,jumpsuit,9,27,-0.085,0.674,0.234
+prenda,Mono,jumpsuit,12,27,0.153,0.451,0.167
+prenda,Mono,jumpsuit,15,27,-0.024,0.907,-0.027
+prenda,Mono,jumpsuit,18,27,-0.22,0.288,0.143
+prenda,Mono,jumpsuit,21,27,0.023,0.904,0.173
+prenda,Mono,jumpsuit,24,27,0.088,0.649,0.048
+prenda,Pantalon,trousers,0,26,-0.219,0.272,-0.143
+prenda,Pantalon,trousers,3,27,-0.287,0.141,-0.342
+prenda,Pantalon,trousers,6,27,0.246,0.221,-0.229
+prenda,Pantalon,trousers,9,27,0.089,0.65,-0.227
+prenda,Pantalon,trousers,12,27,-0.045,0.842,-0.189
+prenda,Pantalon,trousers,15,27,0.008,0.966,-0.298
+prenda,Pantalon,trousers,18,27,0.079,0.7,-0.27
+prenda,Pantalon,trousers,21,27,0.287,0.16,-0.256
+prenda,Pantalon,trousers,24,27,-0.077,0.706,-0.257
+prenda,Tejido/Sweater,sweater,0,26,0.253,0.207,-0.024
+prenda,Tejido/Sweater,sweater,3,27,-0.12,0.549,-0.068
+prenda,Tejido/Sweater,sweater,6,27,-0.126,0.521,0.216
+prenda,Tejido/Sweater,sweater,9,27,-0.077,0.697,0.259
+prenda,Tejido/Sweater,sweater,12,27,0.066,0.738,-0.038
+prenda,Tejido/Sweater,sweater,15,27,0.112,0.576,-0.096
+prenda,Tejido/Sweater,sweater,18,27,-0.208,0.306,0.211
+prenda,Tejido/Sweater,sweater,21,27,0.145,0.481,0.277
+prenda,Tejido/Sweater,sweater,24,27,-0.129,0.511,-0.116
+prenda,Top/Blusa/Camisa,blouse,0,26,-0.104,0.608,0.113
+prenda,Top/Blusa/Camisa,blouse,3,27,-0.141,0.49,-0.034
+prenda,Top/Blusa/Camisa,blouse,6,27,0.103,0.619,-0.094
+prenda,Top/Blusa/Camisa,blouse,9,27,-0.039,0.847,-0.126
+prenda,Top/Blusa/Camisa,blouse,12,27,0.048,0.822,-0.014
+prenda,Top/Blusa/Camisa,blouse,15,27,-0.316,0.111,-0.011
+prenda,Top/Blusa/Camisa,blouse,18,27,0.106,0.613,0.005
+prenda,Top/Blusa/Camisa,blouse,21,27,0.334,0.084,0.064
+prenda,Top/Blusa/Camisa,blouse,24,27,-0.011,0.95,0.171
+prenda,Vestido,dress,0,26,0.052,0.813,0.07
+prenda,Vestido,dress,3,27,0.254,0.211,-0.004
+prenda,Vestido,dress,6,27,-0.133,0.491,-0.092
+prenda,Vestido,dress,9,27,-0.262,0.187,-0.222
+prenda,Vestido,dress,12,27,0.049,0.828,-0.241
+prenda,Vestido,dress,15,27,0.069,0.72,-0.384
+prenda,Vestido,dress,18,27,-0.187,0.349,-0.315
+prenda,Vestido,dress,21,27,-0.074,0.703,-0.226
+prenda,Vestido,dress,24,27,0.185,0.348,-0.171
+silueta,Ajustada,bodycon dress,0,26,0.077,0.714,0.197
+silueta,Ajustada,bodycon dress,3,27,0.025,0.899,-0.054
+silueta,Ajustada,bodycon dress,6,27,-0.169,0.422,-0.125
+silueta,Ajustada,bodycon dress,9,27,-0.176,0.37,-0.151
+silueta,Ajustada,bodycon dress,12,27,0.226,0.282,-0.002
+silueta,Ajustada,bodycon dress,15,27,0.27,0.174,-0.078
+silueta,Ajustada,bodycon dress,18,27,-0.295,0.145,-0.265
+silueta,Ajustada,bodycon dress,21,27,-0.15,0.456,-0.24
+silueta,Ajustada,bodycon dress,24,27,-0.114,0.586,-0.159
+silueta,Amplia/Oversized,oversized,0,26,-0.041,0.849,0.705
+silueta,Amplia/Oversized,oversized,3,27,-0.199,0.325,0.75
+silueta,Amplia/Oversized,oversized,6,27,0.346,0.074,0.832
+silueta,Amplia/Oversized,oversized,9,27,-0.383,0.048,0.789
+silueta,Amplia/Oversized,oversized,12,27,-0.035,0.859,0.722
+silueta,Amplia/Oversized,oversized,15,27,0.119,0.553,0.775
+silueta,Amplia/Oversized,oversized,18,27,0.124,0.561,0.82
+silueta,Amplia/Oversized,oversized,21,27,-0.287,0.149,0.796
+silueta,Amplia/Oversized,oversized,24,27,-0.214,0.284,0.704
+silueta,Estructurada,tailored,0,26,0.13,0.528,-0.004
+silueta,Estructurada,tailored,3,27,0.044,0.812,-0.007
+silueta,Estructurada,tailored,6,27,-0.118,0.567,-0.21
+silueta,Estructurada,tailored,9,27,0.129,0.506,-0.172
+silueta,Estructurada,tailored,12,27,-0.135,0.501,-0.226
+silueta,Estructurada,tailored,15,27,-0.085,0.672,-0.159
+silueta,Estructurada,tailored,18,27,-0.044,0.831,-0.222
+silueta,Estructurada,tailored,21,27,0.178,0.354,-0.158
+silueta,Estructurada,tailored,24,27,-0.022,0.912,-0.18
+silueta,Fluida/Drapeada,flowy dress,0,26,-0.037,0.848,-0.01
+silueta,Fluida/Drapeada,flowy dress,3,27,0.018,0.925,-0.064
+silueta,Fluida/Drapeada,flowy dress,6,27,-0.346,0.079,0.09
+silueta,Fluida/Drapeada,flowy dress,9,27,0.102,0.616,0.259
+silueta,Fluida/Drapeada,flowy dress,12,27,0.231,0.24,-0.064
+silueta,Fluida/Drapeada,flowy dress,15,27,-0.128,0.522,-0.134
+silueta,Fluida/Drapeada,flowy dress,18,27,-0.089,0.668,0.135
+silueta,Fluida/Drapeada,flowy dress,21,27,0.127,0.542,0.258
+silueta,Fluida/Drapeada,flowy dress,24,27,0.037,0.848,-0.129

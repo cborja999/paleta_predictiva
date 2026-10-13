@@ -25,3 +25,11 @@ El grupo esta redefiniendo la lista de datasets. Cuando quede cerrada, actualiza
 ## 2026-09-29 Tendencias de color, silueta y prenda
 
 La app no trabaja solo con colores: cada tendencia puede ser un color, una silueta o un tipo de prenda, con el mismo peso en la interfaz (tres pestanas en Tendencias de la temporada). Se ajusto la redaccion de la hipotesis para nombrar los tres.
+
+## 2026-10 Resultado plano del cruce pasarela - busquedas
+
+Con 2.430 fotos clasificadas y Google Trends no aparece un desfase comun entre pasarela y busquedas (perfil promedio cerca de cero, estudio de eventos dentro de la banda aleatoria, 7 de 14 aciertos contra 2026). Se decidio presentarlo como resultado nulo y no forzar la hipotesis. Proximos pasos: Trends de Argentina en espanol, una segunda fuente de pasarela y datos de ventas de marcas locales.
+
+## 2026-10 Clasificacion de fotos con Gemini
+
+Gemini anota color dominante, prenda, silueta y largo por foto. Falta validar a mano una muestra. Las fotos no se suben al repo; el script `runway_gemini/bajar_fotos_vogue.py` las descarga.
