@@ -23,7 +23,7 @@ ap.add_argument("--por_temporada", type=int, default=90)
 ap.add_argument("--desde", type=int, default=2011)
 ap.add_argument("--hasta", type=int, default=2025)
 ap.add_argument("--carpeta", default="fotos_vogue")
-ap.add_argument("--salida", default="muestra_vogue_para_gemini.csv")
+ap.add_argument("--salida", default="../datasets/muestra_vogue_para_gemini.csv")
 args = ap.parse_args()
 S = requests.Session()
 

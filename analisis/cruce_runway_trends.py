@@ -13,7 +13,7 @@ from collections import defaultdict, Counter
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
-RES = os.path.join(RAIZ, "runway_gemini", "resultados_gemini.csv")
+RES = os.path.join(RAIZ, "datasets_procesados", "resultados_gemini.csv")
 TRE = os.path.join(RAIZ, "datasets", "trends", "trends_unificado.csv")
 LAGS = [0, 3, 6, 9, 12, 15, 18, 21, 24]      # meses entre desfile y busqueda
 PERMS = 2000

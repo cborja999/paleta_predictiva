@@ -32,7 +32,7 @@ CAMPOS = ["color_dominante", "color_secundario", "prenda_principal", "silueta", 
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--entrada", default="muestra_vogue_reducida.csv")
-ap.add_argument("--salida", default="resultados_gemini.csv")
+ap.add_argument("--salida", default="../datasets_procesados/resultados_gemini.csv")
 ap.add_argument("--prueba", action="store_true", help="procesa solo 3 fotos")
 ap.add_argument("--pausa", type=float, default=0.5, help="segundos entre fotos")
 ap.add_argument("--hilos", type=int, default=5, help="fotos en paralelo")

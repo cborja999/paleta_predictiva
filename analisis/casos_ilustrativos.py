@@ -16,7 +16,7 @@ from collections import defaultdict
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
 CASOS_DIR = os.path.join(RAIZ, "datasets", "trends_casos")
-RES = os.path.join(RAIZ, "runway_gemini", "resultados_gemini.csv")
+RES = os.path.join(RAIZ, "datasets_procesados", "resultados_gemini.csv")
 ULTIMO_MES = 2026 * 12 + 8     # sep-2026
 
 def absmes(y, m): return y * 12 + (m - 1)

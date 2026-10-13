@@ -11,7 +11,7 @@ azar (2000 sorteos, banda 5%-95%).
 import csv, math, os, random
 from collections import defaultdict, Counter
 AQUI = os.path.dirname(os.path.abspath(__file__)); RAIZ = os.path.dirname(AQUI)
-RES = os.path.join(RAIZ, "runway_gemini", "resultados_gemini.csv")
+RES = os.path.join(RAIZ, "datasets_procesados", "resultados_gemini.csv")
 TRE = os.path.join(RAIZ, "datasets", "trends", "trends_unificado.csv")
 OFFS = list(range(-6, 25, 3)); SORTEOS = 2000; MIN_LOOKS = 15
 RATIO, PUNTOS = 1.5, 5.0

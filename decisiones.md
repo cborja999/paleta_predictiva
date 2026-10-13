@@ -49,3 +49,8 @@ Se descartaron los Trends sueltos de colores y prendas del Drive (8 terminos ele
 - No se hizo cruce ponderado: cubre solo 2018-2026 (~17 temporadas) y tiene un corte de formula en Q1-26.
 - Datos crudos de Lyst fuera del repo (`datasets/lyst/` ignorado): Lyst no permite redistribuir el informe. Se suben solo agregados.
 - Los demas datos de CICLO son anuales y procesados (detrend + normalizados, 2025 excluido): no sirven para el cruce de 12-18 meses. Los mensuales crudos los tiene Zoe Dottori Greco.
+
+## Reorganizacion de carpetas (octubre 2026)
+- `datasets/muestra_vogue_para_gemini.csv`: la muestra de Vogue Runway (sin imagenes) que se le paso a Gemini.
+- `datasets_procesados/resultados_gemini.csv`: la clasificacion que armamos (color, prenda, silueta, largo).
+- Los scripts de `analisis/` y `runway_gemini/` ya apuntan a las nuevas rutas.

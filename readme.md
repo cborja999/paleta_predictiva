@@ -30,7 +30,7 @@ Se clasificaron con Gemini 2.430 fotos de Vogue Runway (15 casas, FW2011 a SS202
 
 **Como repetirlo:** las fotos no estan en el repo (derechos y tamano). `runway_gemini/bajar_fotos_vogue.py` las descarga. Para clasificar hace falta una clave propia de Gemini exportada como `GEMINI_API_KEY`; nunca se sube al repo. Los scripts de `analisis/` reproducen los resultados.
 
-Carpetas agregadas: `runway_gemini/` (scripts, muestra y `resultados_gemini.csv`), `analisis/` (scripts y resultados), `datasets/runway_reportes_2025_2026.csv` y `datasets/trends/trends_unificado.csv`.
+Carpetas agregadas: `runway_gemini/` (scripts), `datasets/muestra_vogue_para_gemini.csv` (muestra de Vogue) y `datasets_procesados/resultados_gemini.csv` (clasificacion con Gemini), `analisis/` (scripts y resultados), `datasets/runway_reportes_2025_2026.csv` y `datasets/trends/trends_unificado.csv`.
 
 ## Fuentes agregadas
 

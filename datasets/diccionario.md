@@ -2,12 +2,12 @@
 
 Los datasets finales siguen en redefinicion. Por ahora estan documentados los generados por el analisis de octubre 2026.
 
-## runway_gemini/resultados_gemini.csv
+## datasets_procesados/resultados_gemini.csv
 Una fila por foto de Vogue Runway clasificada con Gemini (2.430 fotos, FW2011 a SS2024, 90 por temporada).
 - `id`, `temporada`, `anio`, `ciudad`, `marca`, `look`: identifican la foto.
 - `color_dominante`, `color_secundario`, `prenda_principal`, `silueta`, `largo`: clasificacion de Gemini.
 - `confianza`: confianza declarada por el modelo. `error`: vacio si la clasificacion salio bien.
-Fuente de las fotos: `tonyassi/vogue-runway-top15-512px` (Hugging Face).
+La muestra de fotos de Vogue (sin las imagenes) esta en `datasets/muestra_vogue_para_gemini.csv`. Fuente de las fotos: `tonyassi/vogue-runway-top15-512px` (Hugging Face).
 
 ## datasets/trends/trends_unificado.csv
 Google Trends mensual por termino (todas las tandas unidas).

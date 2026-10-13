@@ -16,7 +16,7 @@ Como correrlo:
       python3 extraer_color_silueta.py --prueba
 5. Si salio bien, correr todas (las 3 de prueba no se repiten):
       python3 extraer_color_silueta.py
-6. Resultado: resultados_gemini.csv
+6. Resultado: ../datasets_procesados/resultados_gemini.csv (la muestra de Vogue esta en ../datasets/muestra_vogue_para_gemini.csv)
 
 Notas:
 - Si se corta o llega al limite diario del plan gratis, volve a correrlo: sigue donde quedo.
