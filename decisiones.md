@@ -54,3 +54,9 @@ Se descartaron los Trends sueltos de colores y prendas del Drive (8 terminos ele
 - `datasets/muestra_vogue_para_gemini.csv`: la muestra de Vogue Runway (sin imagenes) que se le paso a Gemini.
 - `datasets_procesados/resultados_gemini.csv`: la clasificacion que armamos (color, prenda, silueta, largo).
 - Los scripts de `analisis/` y `runway_gemini/` ya apuntan a las nuevas rutas.
+
+## Backtest y validación (octubre 2026)
+- Regla de predicción fijada antes de calcular (señal >= 3 pts; Alta >= 6). Resultado: la pasarela sola acierta como el azar (47% Alta, 53% Media); la inercia de Trends acierta 63%. No se ajustó nada para mejorar el resultado.
+- Validación de Gemini en 40 fotos: largo 90%, color 82%, prenda 70%, silueta 58%. Silueta no se presenta como dato duro. La columna "confianza" de Gemini es "alta" en casi todo y no se usa.
+- Foco propuesto para la próxima entrega: una marca, una temporada, tres atributos (color, largo, prenda). Pendiente de decisión del grupo.
+- Conocido: `analisis/chequeo_adelante.py` necesita los CSV crudos de Trends que no están en el repo; el resultado (7 de 14) está en `chequeo_adelante.csv`.

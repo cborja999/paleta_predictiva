@@ -1,0 +1,41 @@
+id,casa,temporada,color_mi_lectura,color_gemini,color_coincide,prenda_mi_lectura,prenda_gemini,prenda_coincide,silueta_mi_lectura,silueta_gemini,silueta_coincide,largo_mi_lectura,largo_gemini,largo_coincide
+11,calvin klein collection,FW2011,Beige/Crema,Beige/Crema,si,Conjunto de dos piezas,Abrigo/Campera,no,Recta,Recta,si,Mini,Mini,si
+48,hermes,FW2011,Gris,Gris,si,Blazer/Saco,Blazer/Saco,si,Estructurada,Estructurada,si,No aplica,No aplica,si
+304,fendi,SS2012,Celeste,Celeste,si,Vestido,Vestido,si,Recta,Acampanada/Evase,no,Midi,Midi,si
+328,prada,SS2012,Multicolor/Estampado,Multicolor/Estampado,si,Conjunto de dos piezas,Falda,no,Acampanada/Evase,Acampanada/Evase,si,Midi,Midi,si
+373,chanel,FW2013,Gris,Negro,no,Abrigo/Campera,Vestido,no,Estructurada,Recta,no,Mini,Mini,si
+412,louis vuitton,FW2013,Gris,Gris,si,Vestido,Vestido,si,Fluida/Drapeada,Fluida/Drapeada,si,Maxi,Maxi,si
+432,saint laurent,FW2013,Negro,Negro,si,Conjunto de dos piezas,Falda,no,Ajustada,Ajustada,si,Mini,Mini,si
+464,calvin klein collection,SS2013,Beige/Crema,Beige/Crema,si,Conjunto de dos piezas,Conjunto de dos piezas,si,Estructurada,Estructurada,si,Midi,Midi,si
+491,gucci,SS2013,Gris,Multicolor/Estampado,no,Vestido,Vestido,si,Recta,Recta,si,Mini,Mini,si
+598,prada,FW2014,Multicolor/Estampado,Multicolor/Estampado,si,Abrigo/Campera,Blazer/Saco,no,Recta,Estructurada,no,Midi,Midi,si
+718,versace,SS2014,Negro,Negro,si,Conjunto de dos piezas,Pantalon,no,Ajustada,Ajustada,si,No aplica,No aplica,si
+745,chanel,FW2015,Blanco,Negro,no,Conjunto de dos piezas,Conjunto de dos piezas,si,Amplia/Oversized,Estructurada,no,Maxi,Maxi,si
+874,ralph lauren,SS2015,Blanco,Blanco,si,Mono,Mono,si,Recta,Fluida/Drapeada,no,No aplica,Maxi,no
+925,christian dior,FW2016,Negro,Negro,si,Abrigo/Campera,Abrigo/Campera,si,Recta,Estructurada,no,Mini,Mini,si
+972,saint laurent,FW2016,Metalizado,Metalizado,si,Vestido,Vestido,si,Acampanada/Evase,Estructurada,no,Mini,Mini,si
+1096,chanel,FW2017,Blanco,Blanco,si,Abrigo/Campera,Abrigo/Campera,si,Recta,Recta,si,Mini,Midi,no
+1231,prada,SS2017,Multicolor/Estampado,Rojo,no,Conjunto de dos piezas,Abrigo/Campera,no,Estructurada,Estructurada,si,Midi,Midi,si
+1343,valentino,FW2018,Verde,Verde,si,Vestido,Vestido,si,Recta,Recta,si,Midi,Midi,si
+1369,chanel,SS2018,Multicolor/Estampado,Multicolor/Estampado,si,Mono,Mono,si,Amplia/Oversized,Recta,no,No aplica,No aplica,si
+1498,prada,FW2019,Multicolor/Estampado,Multicolor/Estampado,si,Vestido,Vestido,si,Fluida/Drapeada,Fluida/Drapeada,si,Midi,Midi,si
+1511,saint laurent,FW2019,Negro,Negro,si,Vestido,Vestido,si,Ajustada,Ajustada,si,Mini,Mini,si
+1555,chanel,SS2019,Negro,Negro,si,Conjunto de dos piezas,Vestido,no,Fluida/Drapeada,Recta,no,Maxi,Maxi,si
+1597,ralph lauren,SS2019,Negro,Negro,si,Abrigo/Campera,Abrigo/Campera,si,Acampanada/Evase,Fluida/Drapeada,no,Midi,Midi,si
+1709,versace,FW2020,Negro,Negro,si,Conjunto de dos piezas,Blazer/Saco,no,Estructurada,Estructurada,si,No aplica,No aplica,si
+1801,alexander mcqueen,FW2021,Gris,Gris,si,Blazer/Saco,Blazer/Saco,si,Estructurada,Estructurada,si,No aplica,No aplica,si
+1804,balenciaga,FW2021,Marron,Marron,si,Abrigo/Campera,Abrigo/Campera,si,Amplia/Oversized,Amplia/Oversized,si,Maxi,Maxi,si
+1862,saint laurent,FW2021,Multicolor/Estampado,Azul,no,Conjunto de dos piezas,Blazer/Saco,no,Ajustada,Estructurada,no,Mini,Mini,si
+1870,saint laurent,FW2021,Negro,Negro,si,Conjunto de dos piezas,Blazer/Saco,no,Estructurada,Estructurada,si,No aplica,No aplica,si
+1933,gucci,SS2021,Blanco,Blanco,si,Vestido,Vestido,si,Recta,Amplia/Oversized,no,Midi,Midi,si
+1942,hermes,SS2021,Negro,Negro,si,Conjunto de dos piezas,Falda,no,Recta,Recta,si,Midi,Midi,si
+2091,christian dior,SS2022,Naranja,Naranja,si,Abrigo/Campera,Abrigo/Campera,si,Recta,Acampanada/Evase,no,Mini,Mini,si
+2148,valentino,SS2022,Blanco,Blanco,si,Abrigo/Campera,Abrigo/Campera,si,Amplia/Oversized,Amplia/Oversized,si,No aplica,Maxi,no
+2203,gucci,FW2023,Blanco,Beige/Crema,no,Vestido,Vestido,si,Amplia/Oversized,Estructurada,no,Midi,Midi,si
+2209,hermes,FW2023,Burdeos/Vino,Burdeos/Vino,si,Vestido,Vestido,si,Fluida/Drapeada,Recta,no,Maxi,Midi,no
+2303,louis vuitton,SS2023,Negro,Blanco,no,Vestido,Vestido,si,Estructurada,Recta,no,Mini,Mini,si
+2305,prada,SS2023,Gris,Gris,si,Mono,Mono,si,Ajustada,Ajustada,si,No aplica,No aplica,si
+2321,saint laurent,SS2023,Marron,Marron,si,Abrigo/Campera,Abrigo/Campera,si,Amplia/Oversized,Estructurada,no,Maxi,Maxi,si
+2334,valentino,SS2023,Negro,Negro,si,Vestido,Vestido,si,Ajustada,Ajustada,si,Maxi,Maxi,si
+2372,christian dior,SS2024,Negro,Negro,si,Vestido,Vestido,si,Fluida/Drapeada,Fluida/Drapeada,si,Midi,Midi,si
+2389,gucci,SS2024,Burdeos/Vino,Burdeos/Vino,si,Conjunto de dos piezas,Conjunto de dos piezas,si,Ajustada,Ajustada,si,Midi,Midi,si

@@ -54,3 +54,6 @@ Triple S de Balenciaga, rosa de Valentino y minifalda de Miu Miu: como se movier
 
 ## Lyst Index como segunda medida de relevancia (octubre 2026)
 Dataset del proyecto CICLO (Berney, Dobler, Dottori Greco). Las casas que tenemos en las fotos ocupan en promedio 42% del ranking Lyst; faltan Moncler, Bottega Veneta, Loewe, Burberry, Jacquemus y Miu Miu (puesto promedio 3,8). Acuerdo con Trends entre las 12 casas comunes: Spearman 0,45 (no significativo). Detalle: `analisis/lyst_resumen.md`. Los datos crudos de Lyst no estan en el repo (licencia).
+
+## Respuesta a la devolución de la Entrega 2 (octubre 2026)
+Carpeta `entregas/entrega_3/`: qué observaron los docentes, qué hicimos (`respuesta_a_la_devolucion.md`), proceso y criterios (`proceso_y_criterios.md`) y guion de pantallas (`guion_pantallas.md`). Nuevos análisis: `analisis/backtest_resumen.md` (acierto histórico por nivel de confianza) y `analisis/validacion_gemini_resumen.md` (validación de 40 fotos).

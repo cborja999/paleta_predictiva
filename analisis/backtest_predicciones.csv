@@ -1,0 +1,551 @@
+temporada,tipo,categoria,termino_trends,señal_pasarela_pts,cambio_busquedas_relativo(log),inercia_trends_previa(log),ventana_limpia
+FW2013,color,Beige/Crema,beige outfit,-5.55,0.401,0.275,si
+FW2013,color,Negro,black outfit,16.67,0.409,0.153,si
+FW2013,prenda,Blazer/Saco,blazer,4.45,-0.289,0.002,si
+FW2013,prenda,Top/Blusa/Camisa,blouse,0.55,-0.157,0.321,si
+FW2013,color,Azul,blue outfit,-5.0,0.396,0.092,si
+FW2013,silueta,Ajustada,bodycon dress,8.89,0.278,0.188,si
+FW2013,color,Marron,brown outfit,0.56,0.254,0.224,si
+FW2013,prenda,Abrigo/Campera,coat,3.33,-0.214,-0.187,si
+FW2013,prenda,Vestido,dress,-1.11,-0.266,-0.218,si
+FW2013,silueta,Fluida/Drapeada,flowy dress,1.11,0.113,-0.218,si
+FW2013,color,Gris,gray outfit,-6.1,0.136,-0.006,si
+FW2013,color,Verde,green outfit,0.55,0.155,0.213,si
+FW2013,prenda,Mono,jumpsuit,-2.22,0.233,-0.247,si
+FW2013,largo,Midi,midi skirt,-2.55,1.04,-0.138,si
+FW2013,largo,Mini,mini skirt,2.89,-0.228,-0.068,si
+FW2013,color,Naranja,orange outfit,-0.56,-0.112,-0.318,si
+FW2013,silueta,Amplia/Oversized,oversized,-3.33,-0.132,0.0,si
+FW2013,color,Rosa,pink outfit,1.67,0.045,0.157,si
+FW2013,color,Rojo,red outfit,-1.11,-0.125,-0.146,si
+FW2013,color,Metalizado,silver outfit,0.56,-0.266,-0.084,si
+FW2013,prenda,Falda,skirt,1.11,-0.128,0.008,si
+FW2013,prenda,Tejido/Sweater,sweater,-2.78,0.0,0.038,si
+FW2013,silueta,Estructurada,tailored,2.79,-0.304,-0.173,si
+FW2013,prenda,Pantalon,trousers,-2.23,-0.101,-0.141,si
+FW2013,color,Blanco,white outfit,0.56,0.338,0.142,si
+SS2014,color,Beige/Crema,beige outfit,-10.37,0.399,0.314,si
+SS2014,color,Negro,black outfit,8.51,0.338,0.212,si
+SS2014,prenda,Blazer/Saco,blazer,3.04,-0.346,-0.062,si
+SS2014,prenda,Top/Blusa/Camisa,blouse,-4.05,0.0,0.0,si
+SS2014,color,Azul,blue outfit,-1.85,0.33,0.182,si
+SS2014,silueta,Ajustada,bodycon dress,-4.07,0.055,0.21,si
+SS2014,color,Marron,brown outfit,-1.11,0.2,0.148,si
+SS2014,prenda,Abrigo/Campera,coat,5.29,-0.251,-0.159,si
+SS2014,prenda,Vestido,dress,-8.1,-0.256,-0.193,si
+SS2014,silueta,Fluida/Drapeada,flowy dress,-7.41,0.182,-0.182,si
+SS2014,color,Gris,gray outfit,-0.0,0.229,0.0,si
+SS2014,color,Verde,green outfit,2.97,0.056,0.223,si
+SS2014,prenda,Mono,jumpsuit,1.15,0.216,-0.085,si
+SS2014,largo,Midi,midi skirt,8.5,0.786,0.329,si
+SS2014,largo,Mini,mini skirt,-3.54,-0.285,-0.14,si
+SS2014,color,Naranja,orange outfit,-0.74,-0.144,-0.282,si
+SS2014,silueta,Amplia/Oversized,oversized,0.38,-0.212,0.041,si
+SS2014,color,Rosa,pink outfit,-1.11,0.073,0.012,si
+SS2014,color,Rojo,red outfit,0.37,-0.102,-0.071,si
+SS2014,color,Metalizado,silver outfit,1.85,-0.297,-0.182,si
+SS2014,prenda,Falda,skirt,4.93,-0.242,-0.035,si
+SS2014,prenda,Tejido/Sweater,sweater,1.88,-0.146,0.074,si
+SS2014,silueta,Estructurada,tailored,-4.81,-0.335,-0.182,si
+SS2014,prenda,Pantalon,trousers,-3.64,-0.144,-0.091,si
+SS2014,color,Blanco,white outfit,-0.37,0.293,0.185,si
+FW2014,color,Beige/Crema,beige outfit,-0.37,0.543,0.175,si
+FW2014,color,Negro,black outfit,-5.56,0.418,0.259,si
+FW2014,prenda,Blazer/Saco,blazer,-1.49,-0.274,-0.055,si
+FW2014,prenda,Top/Blusa/Camisa,blouse,-1.85,0.073,-0.113,si
+FW2014,color,Azul,blue outfit,1.11,0.389,0.175,si
+FW2014,silueta,Ajustada,bodycon dress,-4.07,0.0,0.293,si
+FW2014,color,Marron,brown outfit,2.59,0.284,0.11,si
+FW2014,prenda,Abrigo/Campera,coat,6.67,-0.24,-0.027,si
+FW2014,prenda,Vestido,dress,1.48,-0.2,-0.141,si
+FW2014,silueta,Fluida/Drapeada,flowy dress,4.07,0.302,-0.113,si
+FW2014,color,Gris,gray outfit,-2.96,0.507,0.021,si
+FW2014,color,Verde,green outfit,-1.85,0.199,0.15,si
+FW2014,prenda,Mono,jumpsuit,-1.48,0.21,0.134,si
+FW2014,largo,Midi,midi skirt,-6.2,0.553,0.655,si
+FW2014,largo,Mini,mini skirt,8.15,-0.252,-0.072,si
+FW2014,color,Naranja,orange outfit,0.74,-0.081,-0.061,si
+FW2014,silueta,Amplia/Oversized,oversized,-1.11,-0.145,0.01,si
+FW2014,color,Rosa,pink outfit,5.56,0.247,-0.014,si
+FW2014,color,Rojo,red outfit,-2.96,-0.019,-0.036,si
+FW2014,color,Metalizado,silver outfit,-0.74,-0.017,-0.113,si
+FW2014,prenda,Falda,skirt,-0.38,-0.21,0.0,si
+FW2014,prenda,Tejido/Sweater,sweater,2.6,-0.162,0.133,si
+FW2014,silueta,Estructurada,tailored,-14.81,-0.304,-0.07,si
+FW2014,prenda,Pantalon,trousers,-2.6,-0.081,-0.007,si
+FW2014,color,Blanco,white outfit,-1.85,0.382,0.221,si
+SS2015,color,Beige/Crema,beige outfit,-7.78,0.527,0.05,si
+SS2015,color,Negro,black outfit,-3.61,0.341,0.177,si
+SS2015,prenda,Blazer/Saco,blazer,-3.35,-0.36,-0.122,si
+SS2015,prenda,Top/Blusa/Camisa,blouse,-0.84,0.099,-0.147,si
+SS2015,color,Azul,blue outfit,0.83,0.173,0.259,si
+SS2015,silueta,Ajustada,bodycon dress,-3.05,-0.13,0.231,si
+SS2015,color,Marron,brown outfit,0.27,0.217,0.101,si
+SS2015,prenda,Abrigo/Campera,coat,10.54,-0.31,-0.06,si
+SS2015,prenda,Vestido,dress,10.17,-0.305,-0.106,si
+SS2015,silueta,Fluida/Drapeada,flowy dress,2.23,-0.102,0.202,si
+SS2015,color,Gris,gray outfit,2.23,0.621,-0.147,si
+SS2015,color,Verde,green outfit,-2.22,0.228,0.077,si
+SS2015,prenda,Mono,jumpsuit,-0.29,0.03,0.239,si
+SS2015,largo,Midi,midi skirt,-6.69,0.045,0.642,si
+SS2015,largo,Mini,mini skirt,5.15,-0.437,-0.029,si
+SS2015,color,Naranja,orange outfit,-0.56,-0.147,-0.047,si
+SS2015,silueta,Amplia/Oversized,oversized,6.94,-0.13,-0.07,si
+SS2015,color,Rosa,pink outfit,-3.06,0.231,0.049,si
+SS2015,color,Rojo,red outfit,-0.83,0.0,-0.064,si
+SS2015,color,Metalizado,silver outfit,-1.94,0.151,-0.147,si
+SS2015,prenda,Falda,skirt,-3.08,-0.345,-0.03,si
+SS2015,prenda,Tejido/Sweater,sweater,-0.84,-0.223,0.046,si
+SS2015,silueta,Estructurada,tailored,-9.17,-0.36,-0.104,si
+SS2015,prenda,Pantalon,trousers,0.54,-0.18,0.0,si
+SS2015,color,Blanco,white outfit,1.95,0.289,0.212,si
+FW2015,color,Beige/Crema,beige outfit,3.06,0.417,0.27,si
+FW2015,color,Negro,black outfit,-11.95,0.256,0.193,si
+FW2015,prenda,Blazer/Saco,blazer,-1.12,-0.251,-0.189,si
+FW2015,prenda,Top/Blusa/Camisa,blouse,0.83,0.118,0.0,si
+FW2015,color,Azul,blue outfit,-2.5,0.166,0.265,si
+FW2015,silueta,Ajustada,bodycon dress,0.28,-0.082,0.029,si
+FW2015,color,Marron,brown outfit,6.39,0.162,0.187,si
+FW2015,prenda,Abrigo/Campera,coat,2.77,-0.212,-0.144,si
+FW2015,prenda,Vestido,dress,-4.45,-0.28,-0.081,si
+FW2015,silueta,Fluida/Drapeada,flowy dress,-6.95,-0.042,0.27,si
+FW2015,color,Gris,gray outfit,0.0,0.388,0.159,si
+FW2015,color,Verde,green outfit,1.94,0.371,0.049,si
+FW2015,prenda,Mono,jumpsuit,0.0,0.05,0.143,si
+FW2015,largo,Midi,midi skirt,-3.51,-0.037,0.43,si
+FW2015,largo,Mini,mini skirt,6.03,-0.366,-0.112,si
+FW2015,color,Naranja,orange outfit,0.56,-0.196,-0.007,si
+FW2015,silueta,Amplia/Oversized,oversized,9.17,0.012,-0.097,si
+FW2015,color,Rosa,pink outfit,-0.28,0.282,0.103,si
+FW2015,color,Rojo,red outfit,4.45,0.0,-0.044,si
+FW2015,color,Metalizado,silver outfit,1.67,0.204,-0.109,si
+FW2015,prenda,Falda,skirt,-1.39,-0.291,-0.084,si
+FW2015,prenda,Tejido/Sweater,sweater,1.95,-0.156,-0.089,si
+FW2015,silueta,Estructurada,tailored,-11.11,-0.276,-0.189,si
+FW2015,prenda,Pantalon,trousers,-3.06,-0.091,-0.049,si
+FW2015,color,Blanco,white outfit,-3.62,0.301,0.161,si
+SS2016,color,Beige/Crema,beige outfit,-3.05,0.167,0.387,si
+SS2016,color,Negro,black outfit,-2.21,0.095,0.199,si
+SS2016,prenda,Blazer/Saco,blazer,-0.58,-0.259,-0.186,si
+SS2016,prenda,Top/Blusa/Camisa,blouse,1.39,0.039,0.185,si
+SS2016,color,Azul,blue outfit,1.94,0.047,0.109,si
+SS2016,silueta,Ajustada,bodycon dress,-8.05,-0.058,-0.139,si
+SS2016,color,Marron,brown outfit,0.83,0.036,0.137,si
+SS2016,prenda,Abrigo/Campera,coat,3.86,-0.188,-0.153,si
+SS2016,prenda,Vestido,dress,0.18,-0.309,-0.112,si
+SS2016,silueta,Fluida/Drapeada,flowy dress,17.22,-0.144,0.019,si
+SS2016,color,Gris,gray outfit,-2.22,0.187,0.414,si
+SS2016,color,Verde,green outfit,-1.11,0.317,0.017,si
+SS2016,prenda,Mono,jumpsuit,3.05,0.015,0.015,si
+SS2016,largo,Midi,midi skirt,-4.77,-0.277,0.182,si
+SS2016,largo,Mini,mini skirt,-12.97,-0.329,-0.218,si
+SS2016,color,Naranja,orange outfit,-1.39,-0.088,-0.059,si
+SS2016,silueta,Amplia/Oversized,oversized,0.28,0.076,-0.104,si
+SS2016,color,Rosa,pink outfit,0.83,0.261,0.062,si
+SS2016,color,Rojo,red outfit,2.5,-0.079,0.0,si
+SS2016,color,Metalizado,silver outfit,-1.11,0.336,-0.113,si
+SS2016,prenda,Falda,skirt,-1.97,-0.277,-0.174,si
+SS2016,prenda,Tejido/Sweater,sweater,0.55,-0.103,-0.154,si
+SS2016,silueta,Estructurada,tailored,-4.45,-0.197,-0.193,si
+SS2016,prenda,Pantalon,trousers,-1.13,0.0,-0.106,si
+SS2016,color,Blanco,white outfit,3.89,0.136,0.119,si
+FW2016,color,Beige/Crema,beige outfit,5.0,0.125,0.241,si
+FW2016,color,Negro,black outfit,-10.28,0.019,0.193,si
+FW2016,prenda,Blazer/Saco,blazer,-1.67,-0.222,-0.116,si
+FW2016,prenda,Top/Blusa/Camisa,blouse,-0.56,0.035,0.041,si
+FW2016,color,Azul,blue outfit,1.39,0.01,0.092,si
+FW2016,silueta,Ajustada,bodycon dress,8.89,-0.129,-0.061,si
+FW2016,color,Marron,brown outfit,1.11,-0.029,0.065,si
+FW2016,prenda,Abrigo/Campera,coat,-6.66,-0.128,-0.128,si
+FW2016,prenda,Vestido,dress,8.05,-0.287,-0.151,si
+FW2016,silueta,Fluida/Drapeada,flowy dress,5.0,-0.194,0.0,si
+FW2016,color,Gris,gray outfit,-5.28,0.061,0.316,si
+FW2016,color,Verde,green outfit,0.0,0.192,0.118,si
+FW2016,prenda,Mono,jumpsuit,-0.56,0.037,0.035,si
+FW2016,largo,Midi,midi skirt,1.96,-0.312,0.092,si
+FW2016,largo,Mini,mini skirt,-10.62,-0.333,-0.172,si
+FW2016,color,Naranja,orange outfit,-0.83,-0.066,-0.106,si
+FW2016,silueta,Amplia/Oversized,oversized,-1.95,0.086,-0.079,si
+FW2016,color,Rosa,pink outfit,0.55,0.174,0.113,si
+FW2016,color,Rojo,red outfit,-3.06,0.0,-0.006,si
+FW2016,color,Metalizado,silver outfit,2.22,0.166,0.061,si
+FW2016,prenda,Falda,skirt,0.84,-0.27,-0.158,si
+FW2016,prenda,Tejido/Sweater,sweater,-1.95,-0.116,-0.105,si
+FW2016,silueta,Estructurada,tailored,-4.17,-0.127,-0.147,si
+FW2016,prenda,Pantalon,trousers,2.5,0.056,-0.063,si
+FW2016,color,Blanco,white outfit,-4.17,0.047,0.19,si
+SS2017,color,Beige/Crema,beige outfit,13.61,0.069,0.166,si
+SS2017,color,Negro,black outfit,-5.0,-0.002,0.167,si
+SS2017,prenda,Blazer/Saco,blazer,-2.79,-0.062,-0.148,si
+SS2017,prenda,Top/Blusa/Camisa,blouse,0.55,0.125,-0.06,si
+SS2017,color,Azul,blue outfit,-1.39,0.034,0.089,si
+SS2017,silueta,Ajustada,bodycon dress,6.66,-0.146,0.034,si
+SS2017,color,Marron,brown outfit,-1.94,-0.048,0.105,si
+SS2017,prenda,Abrigo/Campera,coat,4.7,-0.031,-0.132,si
+SS2017,prenda,Vestido,dress,-3.44,-0.171,-0.167,si
+SS2017,silueta,Fluida/Drapeada,flowy dress,11.67,-0.102,-0.095,si
+SS2017,color,Gris,gray outfit,0.55,-0.017,0.233,si
+SS2017,color,Verde,green outfit,1.66,0.085,0.236,si
+SS2017,prenda,Mono,jumpsuit,0.54,0.224,0.041,si
+SS2017,largo,Midi,midi skirt,1.33,-0.13,-0.111,si
+SS2017,largo,Mini,mini skirt,-16.31,-0.216,-0.194,si
+SS2017,color,Naranja,orange outfit,-0.56,0.137,-0.062,si
+SS2017,silueta,Amplia/Oversized,oversized,2.77,0.197,0.0,si
+SS2017,color,Rosa,pink outfit,2.23,0.11,0.195,si
+SS2017,color,Rojo,red outfit,0.83,0.061,0.026,si
+SS2017,color,Metalizado,silver outfit,1.39,0.034,0.289,si
+SS2017,prenda,Falda,skirt,-0.02,-0.178,-0.146,si
+SS2017,prenda,Tejido/Sweater,sweater,6.94,-0.03,-0.044,si
+SS2017,silueta,Estructurada,tailored,-3.06,0.034,-0.142,si
+SS2017,prenda,Pantalon,trousers,1.93,0.133,-0.049,si
+SS2017,color,Blanco,white outfit,-9.44,0.0,0.196,si
+FW2017,color,Beige/Crema,beige outfit,-3.34,-0.013,0.17,si
+FW2017,color,Negro,black outfit,-2.5,-0.012,0.057,si
+FW2017,prenda,Blazer/Saco,blazer,1.39,0.017,-0.141,si
+FW2017,prenda,Top/Blusa/Camisa,blouse,3.06,0.122,0.071,si
+FW2017,color,Azul,blue outfit,11.11,0.0,0.068,si
+FW2017,silueta,Ajustada,bodycon dress,-4.45,-0.103,-0.027,si
+FW2017,color,Marron,brown outfit,-5.28,-0.111,0.091,si
+FW2017,prenda,Abrigo/Campera,coat,-1.39,-0.022,-0.09,si
+FW2017,prenda,Vestido,dress,3.89,-0.164,-0.135,si
+FW2017,silueta,Fluida/Drapeada,flowy dress,7.78,-0.16,-0.048,si
+FW2017,color,Gris,gray outfit,-3.61,-0.046,0.065,si
+FW2017,color,Verde,green outfit,-3.05,-0.026,0.247,si
+FW2017,prenda,Mono,jumpsuit,0.83,0.256,0.008,si
+FW2017,largo,Midi,midi skirt,2.02,0.032,-0.135,si
+FW2017,largo,Mini,mini skirt,-14.06,-0.174,-0.201,si
+FW2017,color,Naranja,orange outfit,-0.56,0.271,-0.096,si
+FW2017,silueta,Amplia/Oversized,oversized,4.16,0.144,0.085,si
+FW2017,color,Rosa,pink outfit,-0.28,0.017,0.163,si
+FW2017,color,Rojo,red outfit,3.34,0.179,0.0,si
+FW2017,color,Metalizado,silver outfit,1.67,0.014,0.137,si
+FW2017,prenda,Falda,skirt,-4.72,-0.141,-0.139,si
+FW2017,prenda,Tejido/Sweater,sweater,-1.39,0.005,-0.057,si
+FW2017,silueta,Estructurada,tailored,-5.0,0.096,-0.135,si
+FW2017,prenda,Pantalon,trousers,1.39,0.122,-0.034,si
+FW2017,color,Blanco,white outfit,-3.33,-0.02,0.105,si
+SS2018,color,Beige/Crema,beige outfit,-4.17,0.095,0.057,si
+SS2018,color,Negro,black outfit,-9.44,-0.012,-0.018,si
+SS2018,prenda,Blazer/Saco,blazer,0.26,0.19,-0.056,si
+SS2018,prenda,Top/Blusa/Camisa,blouse,4.72,0.094,0.154,si
+SS2018,color,Azul,blue outfit,-0.0,0.008,0.013,si
+SS2018,silueta,Ajustada,bodycon dress,-0.56,-0.171,-0.037,si
+SS2018,color,Marron,brown outfit,1.94,-0.027,-0.014,si
+SS2018,prenda,Abrigo/Campera,coat,-0.86,-0.012,-0.001,si
+SS2018,prenda,Vestido,dress,-4.27,-0.135,-0.086,si
+SS2018,silueta,Fluida/Drapeada,flowy dress,1.95,-0.113,0.007,si
+SS2018,color,Gris,gray outfit,2.23,-0.085,0.01,si
+SS2018,color,Verde,green outfit,-0.0,0.0,0.136,si
+SS2018,prenda,Mono,jumpsuit,-1.4,0.229,0.029,si
+SS2018,largo,Midi,midi skirt,-2.55,0.353,-0.111,si
+SS2018,largo,Mini,mini skirt,2.98,-0.14,-0.08,si
+SS2018,color,Naranja,orange outfit,2.77,0.233,0.029,si
+SS2018,silueta,Amplia/Oversized,oversized,-1.39,0.11,0.131,si
+SS2018,color,Rosa,pink outfit,3.06,-0.063,0.121,si
+SS2018,color,Rojo,red outfit,0.55,0.207,-0.05,si
+SS2018,color,Metalizado,silver outfit,-0.28,-0.072,0.102,si
+SS2018,prenda,Falda,skirt,0.81,-0.102,-0.076,si
+SS2018,prenda,Tejido/Sweater,sweater,1.66,0.043,-0.004,si
+SS2018,silueta,Estructurada,tailored,1.95,0.155,0.0,si
+SS2018,prenda,Pantalon,trousers,0.26,0.078,0.104,si
+SS2018,color,Blanco,white outfit,-7.78,-0.009,-0.004,si
+FW2018,color,Beige/Crema,beige outfit,-0.27,0.131,0.0,si
+FW2018,color,Negro,black outfit,-7.77,-0.066,0.007,si
+FW2018,prenda,Blazer/Saco,blazer,0.83,0.215,-0.036,si
+FW2018,prenda,Top/Blusa/Camisa,blouse,0.28,0.123,0.01,si
+FW2018,color,Azul,blue outfit,2.23,0.023,-0.012,si
+FW2018,silueta,Ajustada,bodycon dress,-1.39,-0.141,-0.057,si
+FW2018,color,Marron,brown outfit,1.95,-0.023,-0.075,si
+FW2018,prenda,Abrigo/Campera,coat,3.34,-0.044,0.007,si
+FW2018,prenda,Vestido,dress,-9.72,-0.093,-0.106,si
+FW2018,silueta,Fluida/Drapeada,flowy dress,-1.94,-0.083,-0.1,si
+FW2018,color,Gris,gray outfit,-0.56,-0.165,0.041,si
+FW2018,color,Verde,green outfit,2.22,0.027,-0.009,si
+FW2018,prenda,Mono,jumpsuit,-0.56,0.166,0.074,si
+FW2018,largo,Midi,midi skirt,-7.15,0.44,-0.131,si
+FW2018,largo,Mini,mini skirt,-2.91,-0.138,-0.087,si
+FW2018,color,Naranja,orange outfit,0.56,0.221,0.076,si
+FW2018,silueta,Amplia/Oversized,oversized,20.0,0.14,0.047,si
+FW2018,color,Rosa,pink outfit,-1.67,-0.09,0.056,si
+FW2018,color,Rojo,red outfit,-1.95,0.021,0.045,si
+FW2018,color,Metalizado,silver outfit,-2.22,-0.083,0.074,si
+FW2018,prenda,Falda,skirt,-1.11,-0.094,-0.085,si
+FW2018,prenda,Tejido/Sweater,sweater,2.78,0.0,-0.014,si
+FW2018,silueta,Estructurada,tailored,0.28,0.168,0.054,si
+FW2018,prenda,Pantalon,trousers,1.11,0.025,0.135,si
+FW2018,color,Blanco,white outfit,-0.56,-0.012,-0.013,si
+SS2019,color,Beige/Crema,beige outfit,-3.05,0.087,0.031,si
+SS2019,color,Negro,black outfit,8.05,-0.079,0.035,si
+SS2019,prenda,Blazer/Saco,blazer,8.89,0.177,0.013,si
+SS2019,prenda,Top/Blusa/Camisa,blouse,0.84,-0.016,-0.01,si
+SS2019,color,Azul,blue outfit,4.17,-0.075,0.04,si
+SS2019,silueta,Ajustada,bodycon dress,6.39,-0.155,-0.09,si
+SS2019,color,Marron,brown outfit,0.28,-0.049,-0.016,si
+SS2019,prenda,Abrigo/Campera,coat,-3.89,0.088,-0.01,si
+SS2019,prenda,Vestido,dress,-3.89,-0.131,-0.066,si
+SS2019,silueta,Fluida/Drapeada,flowy dress,-9.44,0.065,-0.09,si
+SS2019,color,Gris,gray outfit,-0.56,-0.206,-0.007,si
+SS2019,color,Verde,green outfit,-1.67,0.05,-0.032,si
+SS2019,prenda,Mono,jumpsuit,1.11,-0.087,0.214,si
+SS2019,largo,Midi,midi skirt,9.16,0.293,0.0,si
+SS2019,largo,Mini,mini skirt,-1.21,0.008,-0.117,si
+SS2019,color,Naranja,orange outfit,1.11,0.145,0.127,si
+SS2019,silueta,Amplia/Oversized,oversized,12.5,0.304,0.085,si
+SS2019,color,Rosa,pink outfit,-0.0,-0.085,0.008,si
+SS2019,color,Rojo,red outfit,2.51,0.0,0.13,si
+SS2019,color,Metalizado,silver outfit,0.28,-0.264,-0.049,si
+SS2019,prenda,Falda,skirt,0.56,-0.02,-0.082,si
+SS2019,prenda,Tejido/Sweater,sweater,1.11,0.141,-0.006,si
+SS2019,silueta,Estructurada,tailored,5.56,0.129,0.053,si
+SS2019,prenda,Pantalon,trousers,-1.39,0.037,0.048,si
+SS2019,color,Blanco,white outfit,-3.61,-0.075,0.024,si
+FW2019,color,Beige/Crema,beige outfit,3.89,0.161,0.0,si
+FW2019,color,Negro,black outfit,-1.39,-0.078,-0.005,si
+FW2019,prenda,Blazer/Saco,blazer,6.11,0.148,0.066,si
+FW2019,prenda,Top/Blusa/Camisa,blouse,-1.39,-0.098,0.125,si
+FW2019,color,Azul,blue outfit,-4.17,-0.118,0.026,si
+FW2019,silueta,Ajustada,bodycon dress,-4.44,-0.288,-0.033,si
+FW2019,color,Marron,brown outfit,-5.28,0.023,-0.022,si
+FW2019,prenda,Abrigo/Campera,coat,-3.05,0.092,-0.016,si
+FW2019,prenda,Vestido,dress,-4.17,-0.143,-0.045,si
+FW2019,silueta,Fluida/Drapeada,flowy dress,1.11,0.138,-0.047,si
+FW2019,color,Gris,gray outfit,3.34,-0.295,-0.073,si
+FW2019,color,Verde,green outfit,3.62,0.051,-0.004,si
+FW2019,prenda,Mono,jumpsuit,0.56,-0.193,0.195,si
+FW2019,largo,Midi,midi skirt,-0.7,0.113,0.177,si
+FW2019,largo,Mini,mini skirt,5.2,0.067,-0.074,si
+FW2019,color,Naranja,orange outfit,0.56,0.06,0.208,si
+FW2019,silueta,Amplia/Oversized,oversized,6.11,0.466,0.111,si
+FW2019,color,Rosa,pink outfit,-0.56,-0.015,-0.026,si
+FW2019,color,Rojo,red outfit,2.22,-0.142,0.147,si
+FW2019,color,Metalizado,silver outfit,-2.22,-0.308,-0.047,si
+FW2019,prenda,Falda,skirt,6.11,-0.008,-0.043,si
+FW2019,prenda,Tejido/Sweater,sweater,-1.95,0.138,0.033,si
+FW2019,silueta,Estructurada,tailored,5.56,0.0,0.055,si
+FW2019,prenda,Pantalon,trousers,-1.67,0.11,0.0,si
+FW2019,color,Blanco,white outfit,5.84,-0.079,0.006,si
+SS2020,color,Beige/Crema,beige outfit,2.22,0.303,0.065,si
+SS2020,color,Negro,black outfit,6.39,-0.014,-0.045,si
+SS2020,prenda,Blazer/Saco,blazer,4.17,0.077,0.179,si
+SS2020,prenda,Top/Blusa/Camisa,blouse,-4.17,-0.166,0.105,si
+SS2020,color,Azul,blue outfit,-0.0,0.034,-0.03,si
+SS2020,silueta,Ajustada,bodycon dress,-6.11,-0.078,-0.08,si
+SS2020,color,Marron,brown outfit,-0.83,0.163,-0.01,si
+SS2020,prenda,Abrigo/Campera,coat,0.83,-0.048,0.0,si
+SS2020,prenda,Vestido,dress,1.38,-0.094,-0.068,si
+SS2020,silueta,Fluida/Drapeada,flowy dress,-1.39,0.288,-0.022,si
+SS2020,color,Gris,gray outfit,-1.11,-0.288,-0.076,si
+SS2020,color,Verde,green outfit,7.22,0.052,0.033,si
+SS2020,prenda,Mono,jumpsuit,-2.78,-0.225,0.016,si
+SS2020,largo,Midi,midi skirt,-5.57,-0.125,0.355,si
+SS2020,largo,Mini,mini skirt,6.63,0.0,-0.022,si
+SS2020,color,Naranja,orange outfit,-0.28,0.137,0.108,si
+SS2020,silueta,Amplia/Oversized,oversized,4.45,0.376,0.027,si
+SS2020,color,Rosa,pink outfit,0.28,0.027,-0.069,si
+SS2020,color,Rojo,red outfit,-3.05,-0.14,0.079,si
+SS2020,color,Metalizado,silver outfit,0.0,-0.174,-0.022,si
+SS2020,prenda,Falda,skirt,0.0,-0.081,-0.018,si
+SS2020,prenda,Tejido/Sweater,sweater,-3.33,0.008,0.051,si
+SS2020,silueta,Estructurada,tailored,10.28,-0.125,0.104,si
+SS2020,prenda,Pantalon,trousers,-3.06,0.091,0.032,si
+SS2020,color,Blanco,white outfit,-2.78,0.005,-0.031,si
+FW2020,color,Beige/Crema,beige outfit,2.22,0.375,0.159,si
+FW2020,color,Negro,black outfit,14.45,0.039,-0.032,si
+FW2020,prenda,Blazer/Saco,blazer,4.45,0.054,0.176,si
+FW2020,prenda,Top/Blusa/Camisa,blouse,3.34,-0.224,0.026,si
+FW2020,color,Azul,blue outfit,-1.11,0.053,0.026,si
+FW2020,silueta,Ajustada,bodycon dress,-0.56,-0.017,-0.081,si
+FW2020,color,Marron,brown outfit,2.5,0.258,0.027,si
+FW2020,prenda,Abrigo/Campera,coat,0.55,-0.104,0.0,si
+FW2020,prenda,Vestido,dress,-8.61,-0.11,-0.021,si
+FW2020,silueta,Fluida/Drapeada,flowy dress,-6.66,0.289,-0.009,si
+FW2020,color,Gris,gray outfit,3.62,-0.238,-0.064,si
+FW2020,color,Verde,green outfit,-0.28,0.125,0.059,si
+FW2020,prenda,Mono,jumpsuit,0.56,-0.233,-0.002,si
+FW2020,largo,Midi,midi skirt,0.51,-0.193,0.292,si
+FW2020,largo,Mini,mini skirt,-7.01,0.04,-0.036,si
+FW2020,color,Naranja,orange outfit,0.56,0.171,0.04,si
+FW2020,silueta,Amplia/Oversized,oversized,4.44,0.277,0.057,si
+FW2020,color,Rosa,pink outfit,-0.56,0.044,-0.036,si
+FW2020,color,Rojo,red outfit,0.27,-0.048,-0.098,si
+FW2020,color,Metalizado,silver outfit,-1.67,-0.2,-0.009,si
+FW2020,prenda,Falda,skirt,-1.95,-0.105,-0.023,si
+FW2020,prenda,Tejido/Sweater,sweater,-1.11,0.0,-0.005,si
+FW2020,silueta,Estructurada,tailored,6.11,-0.145,0.141,si
+FW2020,prenda,Pantalon,trousers,1.39,0.019,0.053,si
+FW2020,color,Blanco,white outfit,-0.83,-0.012,0.01,si
+SS2021,color,Beige/Crema,beige outfit,-2.5,0.584,0.038,si
+SS2021,color,Negro,black outfit,-6.11,0.101,-0.018,si
+SS2021,prenda,Blazer/Saco,blazer,3.89,0.144,0.014,si
+SS2021,prenda,Top/Blusa/Camisa,blouse,2.23,-0.013,-0.104,si
+SS2021,color,Azul,blue outfit,1.12,0.194,-0.029,si
+SS2021,silueta,Ajustada,bodycon dress,-7.5,0.0,-0.059,si
+SS2021,color,Marron,brown outfit,3.89,0.379,-0.023,si
+SS2021,prenda,Abrigo/Campera,coat,-0.56,-0.263,0.104,si
+SS2021,prenda,Vestido,dress,-12.77,-0.026,-0.047,si
+SS2021,silueta,Fluida/Drapeada,flowy dress,-7.22,0.259,0.102,si
+SS2021,color,Gris,gray outfit,-0.28,-0.03,-0.114,si
+SS2021,color,Verde,green outfit,-0.28,0.287,0.033,si
+SS2021,prenda,Mono,jumpsuit,0.55,-0.151,-0.088,si
+SS2021,largo,Midi,midi skirt,12.73,-0.096,-0.045,si
+SS2021,largo,Mini,mini skirt,-10.04,-0.002,0.046,si
+SS2021,color,Naranja,orange outfit,1.66,0.255,0.052,si
+SS2021,silueta,Amplia/Oversized,oversized,18.88,0.026,0.293,si
+SS2021,color,Rosa,pink outfit,-1.12,0.188,0.0,si
+SS2021,color,Rojo,red outfit,-0.0,-0.021,-0.063,si
+SS2021,color,Metalizado,silver outfit,-1.39,0.028,-0.226,si
+SS2021,prenda,Falda,skirt,-2.51,-0.165,0.014,si
+SS2021,prenda,Tejido/Sweater,sweater,-1.11,-0.18,0.106,si
+SS2021,silueta,Estructurada,tailored,-3.88,-0.183,0.042,si
+SS2021,prenda,Pantalon,trousers,1.94,-0.044,0.021,si
+SS2021,color,Blanco,white outfit,5.83,0.11,-0.028,si
+FW2021,color,Beige/Crema,beige outfit,2.22,0.468,0.03,si
+FW2021,color,Negro,black outfit,-3.62,0.052,-0.018,si
+FW2021,prenda,Blazer/Saco,blazer,3.61,0.021,0.0,si
+FW2021,prenda,Top/Blusa/Camisa,blouse,-2.23,-0.08,-0.096,si
+FW2021,color,Azul,blue outfit,-1.66,0.18,-0.116,si
+FW2021,silueta,Ajustada,bodycon dress,-4.99,-0.038,-0.18,si
+FW2021,color,Marron,brown outfit,5.83,0.311,0.024,si
+FW2021,prenda,Abrigo/Campera,coat,6.11,-0.397,0.12,si
+FW2021,prenda,Vestido,dress,-9.17,-0.108,-0.094,si
+FW2021,silueta,Fluida/Drapeada,flowy dress,-1.67,0.128,0.175,si
+FW2021,color,Gris,gray outfit,1.11,0.081,-0.203,si
+FW2021,color,Verde,green outfit,-2.5,0.245,0.021,si
+FW2021,prenda,Mono,jumpsuit,2.5,-0.179,-0.163,si
+FW2021,largo,Midi,midi skirt,-8.73,-0.135,-0.151,si
+FW2021,largo,Mini,mini skirt,13.81,-0.113,0.132,si
+FW2021,color,Naranja,orange outfit,-0.83,0.201,0.048,si
+FW2021,silueta,Amplia/Oversized,oversized,9.45,-0.26,0.437,si
+FW2021,color,Rosa,pink outfit,-2.5,0.137,0.049,si
+FW2021,color,Rojo,red outfit,-2.78,0.0,-0.016,si
+FW2021,color,Metalizado,silver outfit,1.39,0.15,-0.272,si
+FW2021,prenda,Falda,skirt,2.23,-0.303,0.043,si
+FW2021,prenda,Tejido/Sweater,sweater,-2.22,-0.337,0.171,si
+FW2021,silueta,Estructurada,tailored,-0.84,-0.191,-0.113,si
+FW2021,prenda,Pantalon,trousers,-1.94,-0.246,0.085,si
+FW2021,color,Blanco,white outfit,1.12,0.079,-0.061,si
+SS2022,color,Beige/Crema,beige outfit,0.56,0.359,0.262,si
+SS2022,color,Negro,black outfit,1.67,0.061,0.0,si
+SS2022,prenda,Blazer/Saco,blazer,-2.77,-0.119,0.058,si
+SS2022,prenda,Top/Blusa/Camisa,blouse,-3.06,-0.072,-0.065,si
+SS2022,color,Azul,blue outfit,-4.17,0.109,0.059,si
+SS2022,silueta,Ajustada,bodycon dress,4.17,-0.211,-0.022,si
+SS2022,color,Marron,brown outfit,1.39,0.224,0.182,si
+SS2022,prenda,Abrigo/Campera,coat,8.06,-0.228,-0.156,si
+SS2022,prenda,Vestido,dress,-11.66,-0.138,-0.051,si
+SS2022,silueta,Fluida/Drapeada,flowy dress,-7.23,0.0,0.182,si
+SS2022,color,Gris,gray outfit,5.28,0.147,-0.178,si
+SS2022,color,Verde,green outfit,0.84,0.282,0.015,si
+SS2022,prenda,Mono,jumpsuit,3.89,-0.143,-0.141,si
+SS2022,largo,Midi,midi skirt,-17.42,-0.031,-0.084,si
+SS2022,largo,Mini,mini skirt,11.52,0.092,-0.05,si
+SS2022,color,Naranja,orange outfit,0.83,0.162,0.08,si
+SS2022,silueta,Amplia/Oversized,oversized,4.44,-0.107,0.08,si
+SS2022,color,Rosa,pink outfit,-1.95,0.312,0.024,si
+SS2022,color,Rojo,red outfit,-3.33,0.06,-0.081,si
+SS2022,color,Metalizado,silver outfit,0.28,0.351,0.048,si
+SS2022,prenda,Falda,skirt,-1.95,-0.16,-0.098,si
+SS2022,prenda,Tejido/Sweater,sweater,0.0,-0.215,-0.102,si
+SS2022,silueta,Estructurada,tailored,-0.84,-0.136,-0.171,si
+SS2022,prenda,Pantalon,trousers,-0.28,-0.257,0.067,si
+SS2022,color,Blanco,white outfit,0.83,0.039,0.029,si
+FW2022,color,Beige/Crema,beige outfit,-2.78,0.276,0.361,si
+FW2022,color,Negro,black outfit,6.66,0.0,0.073,si
+FW2022,prenda,Blazer/Saco,blazer,1.11,-0.241,0.07,si
+FW2022,prenda,Top/Blusa/Camisa,blouse,-2.5,-0.073,-0.111,si
+FW2022,color,Azul,blue outfit,0.28,0.079,0.185,si
+FW2022,silueta,Ajustada,bodycon dress,7.23,-0.3,0.179,si
+FW2022,color,Marron,brown outfit,-1.94,0.134,0.249,si
+FW2022,prenda,Abrigo/Campera,coat,1.1,-0.195,-0.208,si
+FW2022,prenda,Vestido,dress,-3.61,-0.159,0.0,si
+FW2022,silueta,Fluida/Drapeada,flowy dress,-6.39,-0.03,0.13,si
+FW2022,color,Gris,gray outfit,-1.11,0.142,-0.019,si
+FW2022,color,Verde,green outfit,-3.89,0.215,0.12,si
+FW2022,prenda,Mono,jumpsuit,1.94,-0.189,-0.054,si
+FW2022,largo,Midi,midi skirt,-6.78,0.017,-0.027,si
+FW2022,largo,Mini,mini skirt,-10.27,0.163,-0.076,si
+FW2022,color,Naranja,orange outfit,-0.83,0.088,0.139,si
+FW2022,silueta,Amplia/Oversized,oversized,5.83,-0.041,-0.144,si
+FW2022,color,Rosa,pink outfit,7.23,0.32,0.011,si
+FW2022,color,Rojo,red outfit,2.78,0.024,-0.016,si
+FW2022,color,Metalizado,silver outfit,-0.56,0.484,0.088,si
+FW2022,prenda,Falda,skirt,-2.5,-0.099,-0.133,si
+FW2022,prenda,Tejido/Sweater,sweater,-1.95,-0.165,-0.155,si
+FW2022,silueta,Estructurada,tailored,5.0,-0.148,-0.016,si
+FW2022,prenda,Pantalon,trousers,4.17,-0.208,-0.05,si
+FW2022,color,Blanco,white outfit,0.28,0.013,0.065,si
+SS2023,color,Beige/Crema,beige outfit,3.18,0.11,0.27,si
+SS2023,color,Negro,black outfit,4.24,-0.04,0.049,si
+SS2023,prenda,Blazer/Saco,blazer,-3.27,-0.408,0.034,si
+SS2023,prenda,Top/Blusa/Camisa,blouse,-3.88,-0.338,0.0,si
+SS2023,color,Azul,blue outfit,0.9,0.055,0.082,si
+SS2023,silueta,Ajustada,bodycon dress,4.66,-0.292,-0.03,si
+SS2023,color,Marron,brown outfit,-1.08,0.076,0.145,si
+SS2023,prenda,Abrigo/Campera,coat,2.96,-0.122,-0.159,si
+SS2023,prenda,Vestido,dress,5.46,-0.161,-0.028,si
+SS2023,silueta,Fluida/Drapeada,flowy dress,8.08,0.155,0.025,si
+SS2023,color,Gris,gray outfit,2.3,0.086,0.095,si
+SS2023,color,Verde,green outfit,-4.16,0.071,0.22,si
+SS2023,prenda,Mono,jumpsuit,-0.52,-0.266,-0.062,si
+SS2023,largo,Midi,midi skirt,-8.88,0.033,-0.065,si
+SS2023,largo,Mini,mini skirt,-4.25,0.269,-0.005,si
+SS2023,color,Naranja,orange outfit,-0.25,-0.057,0.123,si
+SS2023,silueta,Amplia/Oversized,oversized,-5.06,-0.021,-0.107,si
+SS2023,color,Rosa,pink outfit,-3.32,0.128,0.113,si
+SS2023,color,Rojo,red outfit,3.12,0.053,0.008,si
+SS2023,color,Metalizado,silver outfit,0.29,0.484,-0.073,si
+SS2023,prenda,Falda,skirt,1.17,0.0,-0.119,si
+SS2023,prenda,Tejido/Sweater,sweater,-0.8,-0.082,-0.13,si
+SS2023,silueta,Estructurada,tailored,-5.67,0.055,-0.065,si
+SS2023,prenda,Pantalon,trousers,-4.42,-0.125,-0.163,si
+SS2023,color,Blanco,white outfit,-4.38,-0.017,0.029,si
+FW2023,color,Beige/Crema,beige outfit,-1.67,0.014,0.129,no
+FW2023,color,Negro,black outfit,2.22,-0.061,0.0,no
+FW2023,prenda,Blazer/Saco,blazer,3.05,-0.437,-0.028,no
+FW2023,prenda,Top/Blusa/Camisa,blouse,-0.83,-0.494,0.052,no
+FW2023,color,Azul,blue outfit,-2.5,0.033,0.016,no
+FW2023,silueta,Ajustada,bodycon dress,4.73,-0.267,-0.196,no
+FW2023,color,Marron,brown outfit,0.0,0.043,0.083,no
+FW2023,prenda,Abrigo/Campera,coat,-8.61,-0.073,-0.168,no
+FW2023,prenda,Vestido,dress,3.05,-0.119,-0.087,no
+FW2023,silueta,Fluida/Drapeada,flowy dress,1.95,0.194,0.018,no
+FW2023,color,Gris,gray outfit,4.16,-0.007,0.121,no
+FW2023,color,Verde,green outfit,-0.56,0.0,0.145,no
+FW2023,prenda,Mono,jumpsuit,0.0,-0.337,-0.103,no
+FW2023,largo,Midi,midi skirt,4.5,0.016,-0.087,no
+FW2023,largo,Mini,mini skirt,-4.18,0.277,-0.016,no
+FW2023,color,Naranja,orange outfit,-0.56,-0.154,0.083,no
+FW2023,silueta,Amplia/Oversized,oversized,-6.94,0.017,-0.094,no
+FW2023,color,Rosa,pink outfit,-2.22,0.033,0.147,no
+FW2023,color,Rojo,red outfit,0.55,0.036,0.037,no
+FW2023,color,Metalizado,silver outfit,0.56,0.33,0.083,no
+FW2023,prenda,Falda,skirt,0.84,0.045,-0.15,no
+FW2023,prenda,Tejido/Sweater,sweater,5.0,-0.009,-0.161,no
+FW2023,silueta,Estructurada,tailored,-0.55,0.206,-0.154,no
+FW2023,prenda,Pantalon,trousers,-0.0,-0.089,-0.175,no
+FW2023,color,Blanco,white outfit,-0.28,-0.057,0.035,no
+SS2024,color,Beige/Crema,beige outfit,3.85,-0.031,0.079,no
+SS2024,color,Negro,black outfit,4.91,-0.024,0.003,no
+SS2024,prenda,Blazer/Saco,blazer,-4.19,-0.33,-0.162,no
+SS2024,prenda,Top/Blusa/Camisa,blouse,7.5,-0.424,-0.082,no
+SS2024,color,Azul,blue outfit,-3.07,0.078,0.017,no
+SS2024,silueta,Ajustada,bodycon dress,2.73,-0.216,-0.191,no
+SS2024,color,Marron,brown outfit,-1.12,0.158,0.069,no
+SS2024,prenda,Abrigo/Campera,coat,5.51,-0.071,-0.08,no
+SS2024,prenda,Vestido,dress,0.72,-0.084,-0.12,no
+SS2024,silueta,Fluida/Drapeada,flowy dress,2.14,0.248,-0.035,no
+SS2024,color,Gris,gray outfit,-0.85,0.03,0.042,no
+SS2024,color,Verde,green outfit,-3.06,-0.027,0.052,no
+SS2024,prenda,Mono,jumpsuit,-3.62,-0.401,-0.091,no
+SS2024,largo,Midi,midi skirt,14.68,0.007,0.024,no
+SS2024,largo,Mini,mini skirt,-14.5,0.159,0.086,no
+SS2024,color,Naranja,orange outfit,-1.39,-0.152,0.03,no
+SS2024,silueta,Amplia/Oversized,oversized,1.06,0.023,-0.01,no
+SS2024,color,Rosa,pink outfit,0.83,-0.13,0.189,no
+SS2024,color,Rojo,red outfit,0.81,0.058,0.042,no
+SS2024,color,Metalizado,silver outfit,0.28,0.165,0.413,no
+SS2024,prenda,Falda,skirt,-0.02,0.012,-0.05,no
+SS2024,prenda,Tejido/Sweater,sweater,-1.39,0.0,-0.096,no
+SS2024,silueta,Estructurada,tailored,-2.26,0.39,-0.082,no
+SS2024,prenda,Pantalon,trousers,-2.23,-0.02,-0.104,no
+SS2024,color,Blanco,white outfit,-1.4,0.016,0.0,no
