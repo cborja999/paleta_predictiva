@@ -60,3 +60,8 @@ Se descartaron los Trends sueltos de colores y prendas del Drive (8 terminos ele
 - Validación de Gemini en 40 fotos: largo 90%, color 82%, prenda 70%, silueta 58%. Silueta no se presenta como dato duro. La columna "confianza" de Gemini es "alta" en casi todo y no se usa.
 - Foco propuesto para la próxima entrega: una marca, una temporada, tres atributos (color, largo, prenda). Pendiente de decisión del grupo.
 - Conocido: `analisis/chequeo_adelante.py` necesita los CSV crudos de Trends que no están en el repo; el resultado (7 de 14) está en `chequeo_adelante.csv`.
+
+## Corpus de medios y marcas (octubre 2026) - piloto
+- Idea de Borja: reunir a mano notas, reseñas y videos de medios y marcas (incluidos argentinos) para tener datos de Argentina y otra medida de repercusión. Se hace como corpus con protocolo, no como entrenamiento de un modelo.
+- Pregunta, muestreo y período fijados antes de cargar (ver `datasets/corpus_medios/PROTOCOLO.md`). Se reporta el resultado sea cual sea.
+- Pendiente: el grupo confirma la lista de fuentes (`fuentes.md`).
