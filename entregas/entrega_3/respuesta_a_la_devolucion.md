@@ -6,7 +6,7 @@
 | **Evidencia real** de runways pasados que se dispararon (runways, ventas, Trends) y **niveles de confianza** | 3 casos con Trends + backtest de 20 temporadas con tasa de acierto por nivel | `analisis/casos_resumen.md`, `analisis/backtest_resumen.md` | Fotos de runway de cada caso al lado de la curva (para la presentación) |
 | **No mostraron datasets/atributos**; ¿T-Fashion es API o manual?; ¿cómo se convierten datos en siluetas? | Inventario de datasets con fuente y método; T-Fashion = carga manual de reportes públicos; siluetas = Gemini con lista cerrada | `entregas/entrega_3/proceso_y_criterios.md`, `datasets/diccionario.md` | Mostrar 1 tabla de datos en pantalla en la presentación |
 | **IA sin criterios** ni indicadores | Tabla de qué decide la IA y qué decide una regla fija, con umbrales | `proceso_y_criterios.md`, sección 2 | Que el equipo valide los umbrales |
-| **Diseño/UX visual**, Figma con alternativas, validar con coolhunters o empresas | Guion de pantallas con contenido visual por pantalla | `guion_pantallas.md` | **Figma con 2-3 alternativas (lo hace el equipo)**; hablar con al menos 2 marcas o coolhunters |
+| **Diseño/UX visual**, Figma con alternativas | Guion de pantallas con contenido visual por pantalla | `guion_pantallas.md` | **Figma con 2-3 alternativas (lo hace el equipo)**. La validación se hace con datos históricos (backtest y casos), sin entrevistas |
 | **Comunicación**: estructura, sub-instancias, más pantallas | El guion propone el flujo completo | `guion_pantallas.md` | Ensayar |
 
 ## Propuesta de foco (para decidir)

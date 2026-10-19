@@ -11,4 +11,4 @@ Principio de los docentes: **la plataforma tiene que ser visual, no textual**. C
 | 5 | Cómo se calculó | Fuentes, método y límites en lenguaje simple; cuánto acertamos antes | `proceso_y_criterios.md` |
 | 6 | Mi paleta / exportar | Armar y guardar la selección de la marca | — |
 
-Para validar (pedido de los docentes): hablar con **2 o más** marcas locales o coolhunters y preguntarles qué decisión toman hoy con esta información, qué usan y cuánto pagan. Guardar las respuestas en `entregas/entrega_3/entrevistas.md`.
+Para validar: no usamos entrevistas. Todo se valida con datos reales de la web y con historia: el backtest de temporadas pasadas (`backtest_resumen.md`), los casos reales (`casos_resumen.md`) y la validación de Gemini contra etiquetado humano (`validacion_gemini_resumen.md`).
