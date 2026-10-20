@@ -1,0 +1,17 @@
+REGLAS DE LA REPLICA M2 (fijadas 20/10/2026 DESPUES de ver M1 y ANTES de bajar los datos de M2). No se cambian despues.
+
+POR QUE
+M1 dio en la direccion esperada (+22 pts) pero no alcanzo p < 0.05 (16 casos en SUBE). Se decidio, despues de ver M1, sumar una
+muestra NUEVA e independiente para ver si el patron se repite. Esto se declara asi: la decision de ampliar vino despues de ver M1.
+
+MUESTRA
+- Fuente: listas "The Top 20 Runway Trends" de Sandra's Closet (blog de moda, 20 tendencias por temporada), SS2020 a SS2023
+  (7 temporadas; SS2019 y FW2019 no se pudieron abrir). fuentes_listas_m2.csv.
+- Mismo mapeo que M1 (literal, colores como "<color> dress", descartar lo no buscable y lo repetido).
+- Se excluye TODO termino que ya este en M1: M2 son solo terminos nuevos. terminos_declarados_m2.csv.
+- Ojo: este blog publica a veces meses despues del desfile. Igual se usa el mes del desfile como e (misma regla del proyecto).
+
+MEDIDAS, GRUPOS, RESULTADO Y CRITERIO
+Identicos a REGLAS_MICROTENDENCIAS.txt (B0, B1, B2; g1 y c2 restando la mediana de la temporada; SUBE/PLANO/CAE; se queda = c2 >= -0.10;
+Fisher dos colas; apoya si >= +10 pts y p < 0.05). Solo busqueda web MUNDO (Shopping tiene demasiados ceros).
+Ademas se informa M1+M2 juntos como resumen descriptivo (la mediana de temporada se calcula dentro de cada muestra por separado).

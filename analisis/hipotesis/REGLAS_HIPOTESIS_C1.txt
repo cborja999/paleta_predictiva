@@ -1,0 +1,32 @@
+PRUEBA CONFIRMATORIA C1 - REGLAS FIJADAS ANTES DE BAJAR LOS DATOS (20/10/2026). No se cambian despues.
+
+HIPOTESIS (formulada el 20/10/2026 mirando los datos 2019-2023 de analisis/microtendencias/; por eso se prueba con datos nuevos)
+"Una tendencia de pasarela que gana busquedas en su primer anio rara vez se desploma en el segundo.
+ Las que las pierden tienen mas del triple de chances de ser pasajeras."
+
+MUESTRA NUEVA (no usada para formular la hipotesis)
+- Listas de tendencias de Sandra's Closet (FW2016 a FW2018), W Magazine (FW2017, SS2018, FW2018) y Fashionista (FW2017).
+  fuentes_listas_c1.csv. SS2016 de Sandra's Closet no se pudo abrir. Si dos medios nombran lo mismo, entra una sola vez (primera aparicion).
+  (Version final de la muestra, cerrada antes de bajar cualquier dato.)
+- Mismo mapeo literal que M1/M2 (terminos_declarados_c1.csv): colores como "<color> dress", descartar lo no buscable y lo repetido.
+- Algunos terminos tambien aparecen en M1/M2 con otra temporada. Se dejan (es otra aparicion, otros anios) y se corre una
+  sensibilidad SIN esos terminos.
+
+DATOS Y MEDIDAS (identicos a analisis/microtendencias/REGLAS_MICROTENDENCIAS.txt)
+- Google Trends, web, MUNDO, mensual 2011-2024, un termino por consulta. Usable: <= 12 meses en cero en e-12..e+23 y B0,B1,B2 > 0.
+- e = mes del desfile (SS -> octubre del anio anterior; FW -> marzo). B0=[e-12,e-1], B1=[e,e+11], B2=[e+12,e+23].
+- g1 = log(B1/B0) - mediana de la temporada; c2 = log(B2/B1) - mediana de la temporada.
+- SUBE: g1 >= 0.10 | PLANO: entre -0.10 y 0.10 | CAE: g1 <= -0.10
+- PASAJERA: c2 < -0.10 (en el segundo anio pierde mas de ~10% contra el resto). SE QUEDA: c2 >= -0.10.
+
+CRITERIOS (se informan siempre, den lo que den)
+- H-a "rara vez se desploma": % de pasajeras en SUBE <= 20%.
+- H-b "mas del triple": % pasajeras en CAE >= 3 x % pasajeras en SUBE  Y  Fisher exacto dos colas (CAE vs SUBE) p < 0.05.
+- CONFIRMA si se cumplen H-a y H-b. CONFIRMA EN PARTE si se cumple H-a y CAE > SUBE pero falla el triple o p.
+  NO CONFIRMA si CAE <= SUBE o falla H-a.
+- Se informa tambien PLANO, el cociente CAE/SUBE con intervalo de confianza 95% (bootstrap, 5000 remuestreos, semilla 1),
+  y el resultado de cada temporada por separado.
+
+LIMITES DECLARADOS
+- Un solo medio (blog) para 2016-2018; terminos en ingles; busquedas no son ventas; tendencias de una temporada no son independientes.
+- Si quedan menos de 8 casos en SUBE o en CAE, se dice que la prueba no tiene suficientes casos.

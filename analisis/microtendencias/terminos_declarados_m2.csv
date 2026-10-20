@@ -1,0 +1,141 @@
+temporada,mes_desfile,tendencia_fuente,termino,tipo,nota
+SS2020,2019-10,Classic Blue,classic blue dress,color,
+SS2020,2019-10,Total Denim,denim outfit,material,
+SS2020,2019-10,Power Shoulders,power shoulders,detalle,
+SS2020,2019-10,Tropical Prints,tropical print,estampado,
+SS2020,2019-10,Neon,neon dress,color,
+SS2020,2019-10,White Suiting,white suit,prenda,
+SS2020,2019-10,Hot Pants,hot pants,prenda,
+SS2020,2019-10,Polka Dots,polka dot dress,estampado,
+SS2020,2019-10,Roses,rose print,estampado,
+SS2020,2019-10,Tiers,tiered dress,detalle,
+SS2020,2019-10,Bermuda Short Suit,,,descartada: ya esta en M1
+SS2020,2019-10,Waistcoats,,,descartada: ya esta en M1
+SS2020,2019-10,Buttery Leather,,,descartada: ya esta en M1
+SS2020,2019-10,Crochet,,,descartada: ya esta en M1
+SS2020,2019-10,Gypset,,,descartada: no nombra algo buscable
+SS2020,2019-10,Sixties Wallpaper Motif,,,descartada: no nombra algo buscable
+SS2020,2019-10,Disco Collar,,,descartada: ya esta en M1 (big collar)
+SS2020,2019-10,Shorts-Pants Hybrid,,,descartada: no nombra algo buscable
+SS2020,2019-10,Bra Tops,,,descartada: ya esta en M1
+SS2020,2019-10,Feathers,,,descartada: ya esta en M1
+FW2020,2020-03,Skirt suits,skirt suit,prenda,
+FW2020,2020-03,Vinyl,vinyl dress,material,
+FW2020,2020-03,Bohemian chic,boho dress,estetica,
+FW2020,2020-03,Shearling,shearling coat,material,
+FW2020,2020-03,1940s,40s fashion,estetica,
+FW2020,2020-03,Silver,silver dress,color,
+FW2020,2020-03,Mullet dresses,mullet dress,prenda,
+FW2020,2020-03,Strong shoulders,,,descartada: repetida (power shoulders)
+FW2020,2020-03,Ruffles,,,descartada: ya esta en M1
+FW2020,2020-03,Fringes,,,descartada: ya esta en M1
+FW2020,2020-03,Horse girls,,,descartada: no nombra algo buscable
+FW2020,2020-03,Mini checks,,,descartada: no nombra algo buscable sin ruido
+FW2020,2020-03,Ivy League,,,descartada: ya esta en M1 (preppy outfit)
+FW2020,2020-03,Color blocking,,,descartada: ya esta en M1
+FW2020,2020-03,Dolls,,,descartada: no nombra algo buscable
+FW2020,2020-03,Lingerie,,,descartada: paraguas
+FW2020,2020-03,Black leather,,,descartada: ya esta en M1
+FW2020,2020-03,Capes,,,descartada: ya esta en M1
+FW2020,2020-03,Evening cutouts,,,descartada: ya esta en M1
+FW2020,2020-03,Bubble hems,,,descartada: ya esta en M1
+SS2021,2020-10,Logomania with a twist,logomania,estetica,
+SS2021,2020-10,Orange,orange dress,color,
+SS2021,2020-10,Tie-dye,tie dye,estampado,
+SS2021,2020-10,Monochrome,monochrome outfit,estetica,
+SS2021,2020-10,Wide-leg trousers,wide leg pants,prenda,
+SS2021,2020-10,Fishnet,fishnet top,material,
+SS2021,2020-10,Bralettes,bralette,prenda,
+SS2021,2020-10,Balloon shoulders,puff sleeve,detalle,
+SS2021,2020-10,Tulle fairytale gowns,tulle dress,material,
+SS2021,2020-10,Uplifting colors and vibrant prints,,,descartada: no nombra algo buscable
+SS2021,2020-10,Color of the year,,,descartada: no nombra algo buscable
+SS2021,2020-10,Candy tones,,,descartada: no nombra algo buscable
+SS2021,2020-10,Capes,,,descartada: ya esta en M1
+SS2021,2020-10,Minimalism,,,descartada: no nombra algo buscable
+SS2021,2020-10,Denim,,,descartada: repetida (denim outfit)
+SS2021,2020-10,Tracksuits,,,descartada: ya esta en M1
+SS2021,2020-10,Midriff flossing,,,descartada: no nombra algo buscable
+SS2021,2020-10,Corsets,,,descartada: ya esta en M1
+SS2021,2020-10,Romantic bohemian,,,descartada: repetida (boho dress)
+SS2021,2020-10,Shiny silver,,,descartada: repetida (silver dress)
+FW2021,2021-03,Blankets/Puffcho,blanket coat,prenda,
+FW2021,2021-03,Patchwork,patchwork,estampado,
+FW2021,2021-03,Knitwear,knitwear,material,
+FW2021,2021-03,Pleated skirt suits,pleated skirt,prenda,
+FW2021,2021-03,Cropped tops and jackets,cropped jacket,prenda,
+FW2021,2021-03,Clueless,clueless outfit,estetica,
+FW2021,2021-03,Sixties,60s fashion,estetica,
+FW2021,2021-03,Miami Vice (1980s),80s fashion,estetica,
+FW2021,2021-03,Roaring 20s,20s fashion,estetica,
+FW2021,2021-03,One-piece wonders,jumpsuit,prenda,
+FW2021,2021-03,Optimistic fashion,,,descartada: no nombra algo buscable
+FW2021,2021-03,Fake fur,,,descartada: ya esta en M1
+FW2021,2021-03,Futurewear,,,descartada: no nombra algo buscable
+FW2021,2021-03,Leather,,,descartada: ya esta en M1
+FW2021,2021-03,Ski chic,,,descartada: ya esta en M1
+FW2021,2021-03,Logomania,,,descartada: repetida
+FW2021,2021-03,Suit coat,,,descartada: no nombra algo buscable
+FW2021,2021-03,Wide-leg jeans,,,descartada: ya esta en M1
+FW2021,2021-03,Flashbulbs,,,descartada: no nombra algo buscable
+FW2021,2021-03,Sequins party,,,descartada: ya esta en M1
+SS2022,2021-10,Biker Jacket,biker jacket,prenda,
+SS2022,2021-10,Black Catsuit,catsuit,prenda,
+SS2022,2021-10,Pastel,pastel dress,color,
+SS2022,2021-10,Marabou,marabou,material,
+SS2022,2021-10,Goth Gala,goth outfit,estetica,
+SS2022,2021-10,Y2K,,,descartada: ya esta en M1
+SS2022,2021-10,Bra Tops,,,descartada: ya esta en M1
+SS2022,2021-10,Micro Mini,,,descartada: ya esta en M1
+SS2022,2021-10,Crochet,,,descartada: ya esta en M1
+SS2022,2021-10,Power Blazer,,,descartada: ya esta en M1
+SS2022,2021-10,White Monochromes,,,descartada: repetida (monochrome)
+SS2022,2021-10,Bold Monochrome,,,descartada: repetida (monochrome)
+SS2022,2021-10,Color Block,,,descartada: ya esta en M1
+SS2022,2021-10,Cut-Out,,,descartada: ya esta en M1
+SS2022,2021-10,New Sexy,,,descartada: no nombra algo buscable
+SS2022,2021-10,Sixties,,,descartada: repetida
+SS2022,2021-10,Fringed Stripes,,,descartada: no nombra algo buscable
+SS2022,2021-10,Back Drama,,,descartada: ya esta en M1 (backless)
+SS2022,2021-10,Crystal Clear,,,descartada: no nombra algo buscable
+SS2022,2021-10,Glam Night,,,descartada: no nombra algo buscable
+FW2022,2022-03,Take flight,bomber jacket,prenda,
+FW2022,2022-03,Leopard (Catwomen),leopard print,estampado,
+FW2022,2022-03,Punk,punk outfit,estetica,
+FW2022,2022-03,Schoolgirl,schoolgirl outfit,estetica,
+FW2022,2022-03,Lady in red,red dress,color,
+FW2022,2022-03,White tank top,,,descartada: ya esta en M1
+FW2022,2022-03,Biker,,,descartada: repetida
+FW2022,2022-03,Faux fur,,,descartada: ya esta en M1
+FW2022,2022-03,Leather,,,descartada: ya esta en M1
+FW2022,2022-03,Knitwear combinations,,,descartada: repetida
+FW2022,2022-03,Strong shoulders,,,descartada: repetida
+FW2022,2022-03,Wild tailoring,,,descartada: no nombra algo buscable
+FW2022,2022-03,Rainbow spectrum,,,descartada: no nombra algo buscable
+FW2022,2022-03,Transparency,,,descartada: ya esta en M1 (sheer)
+FW2022,2022-03,Y2K revival,,,descartada: ya esta en M1
+FW2022,2022-03,Great lengths,,,descartada: ya esta en M1 (maxi)
+FW2022,2022-03,Corseted gown,,,descartada: ya esta en M1
+FW2022,2022-03,Fashion people,,,descartada: no nombra algo buscable
+FW2022,2022-03,Modern romance,,,descartada: no nombra algo buscable
+FW2022,2022-03,Great Gatsby,,,descartada: repetida (20s fashion)
+SS2023,2022-10,Cargo pants,cargo pants,prenda,
+SS2023,2022-10,Flannel shirts and 90s grunge,grunge outfit,estetica,
+SS2023,2022-10,Denim and bumsters,low rise jeans,prenda,
+SS2023,2022-10,Baby blue,baby blue dress,color,
+SS2023,2022-10,Lilac,lilac dress,color,
+SS2023,2022-10,Beige monochrome,beige outfit,color,
+SS2023,2022-10,Crinolines,crinoline,detalle,
+SS2023,2022-10,Poodle skirt,poodle skirt,prenda,
+SS2023,2022-10,Neon,,,descartada: repetida
+SS2023,2022-10,Magenta and red,,,descartada: repetida (red dress)
+SS2023,2022-10,Crochet,,,descartada: ya esta en M1
+SS2023,2022-10,Fringing,,,descartada: ya esta en M1
+SS2023,2022-10,Twenties glamour,,,descartada: repetida
+SS2023,2022-10,Biker jackets,,,descartada: repetida
+SS2023,2022-10,Soft goth,,,descartada: repetida
+SS2023,2022-10,Transparency,,,descartada: ya esta en M1
+SS2023,2022-10,Optical illusions,,,descartada: no nombra algo buscable
+SS2023,2022-10,3D and tropical florals,,,descartada: no nombra algo buscable
+SS2023,2022-10,Hoods,,,descartada: no nombra algo buscable sin ruido
+SS2023,2022-10,Cutouts,,,descartada: ya esta en M1

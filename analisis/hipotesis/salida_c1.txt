@@ -1,0 +1,32 @@
+==============================================================================
+PRUEBA CONFIRMATORIA C1 (2016-2018, muestra nueva) - Google busqueda web, MUNDO
+  terminos: 57 | descartados por volumen: 1
+     descartado: bubblegum pink dress (volumen bajo (17 meses en cero))
+  PRINCIPAL
+     usables: 56 | SUBE 17 | PLANO 28 | CAE 11
+     pasajeras: SUBE 1/17 = 6% | PLANO 5/28 = 18% | CAE 2/11 = 18%
+     cociente CAE/SUBE = 3.1 (IC95% bootstrap 0.0 a infinito) | Fisher CAE vs SUBE p=0.543
+     H-a (SUBE pasajeras <= 20%): si | H-b (CAE >= 3x SUBE y p<0.05): no  ->  CONFIRMA EN PARTE
+  SENSIBILIDAD: sin terminos que ya estaban en M1/M2
+     usables: 30 | SUBE 9 | PLANO 12 | CAE 9
+     pasajeras: SUBE 0/9 = 0% | PLANO 3/12 = 25% | CAE 1/9 = 11%
+     cociente CAE/SUBE: no se puede calcular (0 pasajeras en SUBE) | Fisher CAE vs SUBE p=1.000
+     H-a (SUBE pasajeras <= 20%): si | H-b (CAE >= 3x SUBE y p<0.05): no  ->  CONFIRMA EN PARTE
+  Por temporada (descriptivo):
+     FW2016: n=12 | pasajeras SUBE 0/4 | CAE 1/3
+     SS2017: n=12 | pasajeras SUBE 1/5 | CAE 0/2
+     FW2017: n=15 | pasajeras SUBE 0/4 | CAE 1/3
+     SS2018: n=7 | pasajeras SUBE 0/2 | CAE 0/0
+     FW2018: n=10 | pasajeras SUBE 0/2 | CAE 0/3
+==============================================================================
+TOTAL TRES MUESTRAS (descriptivo: M1 y M2 son de donde salio la hipotesis)
+  pasajeras: SUBE 5/50 = 10% | PLANO 22/90 = 24% | CAE 13/38 = 34% | Fisher CAE vs SUBE p=0.007
+  Ciclos (anio de la temporada -> anio siguiente):
+     2016 -> 2017 (C1): n=12 | pasajeras SUBE 0/4 | PLANO 2/5 | CAE 1/3
+     2017 -> 2018 (C1): n=27 | pasajeras SUBE 1/9 | PLANO 2/13 | CAE 1/5
+     2018 -> 2019 (C1): n=17 | pasajeras SUBE 0/4 | PLANO 1/10 | CAE 0/3
+     2019 -> 2020 (M1): n=8 | pasajeras SUBE 0/2 | PLANO 3/5 | CAE 0/1
+     2020 -> 2021 (M1+M2): n=40 | pasajeras SUBE 2/12 | PLANO 4/18 | CAE 2/10
+     2021 -> 2022 (M1+M2): n=35 | pasajeras SUBE 1/9 | PLANO 6/18 | CAE 5/8
+     2022 -> 2023 (M1+M2): n=24 | pasajeras SUBE 0/5 | PLANO 3/14 | CAE 2/5
+     2023 -> 2024 (M1+M2): n=15 | pasajeras SUBE 1/5 | PLANO 1/7 | CAE 2/3

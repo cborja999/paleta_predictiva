@@ -1,0 +1,69 @@
+temporada,termino,tipo,tendencia_fuente,usable,B0,B1,B2,g1,c2,grupo,se_queda
+SS2019,bike shorts,prenda,Bike shorts,si,23.25,28.92,49.75,0.162,0.523,SUBE,si
+SS2019,feather dress,detalle,Feathers as the main focus,si,26.00,28.00,25.58,0.018,-0.109,PLANO,no
+SS2019,ruffle dress,detalle,Exaggerated volume and ruffles,si,43.00,44.67,38.00,-0.018,-0.181,PLANO,no
+SS2019,crochet top,material,Handcraft and crochet,si,27.08,23.08,26.25,-0.216,0.109,CAE,si
+FW2019,leather outfit,material,A Full Leather Look,si,45.58,45.33,41.00,-0.017,0.024,PLANO,si
+FW2019,pistachio dress,color,Pistachio,si,22.25,29.08,28.42,0.256,0.101,SUBE,si
+FW2019,trench coat,prenda,Reinvented Trench Coats,si,43.33,44.58,38.42,0.017,-0.024,PLANO,si
+FW2019,scarf print,estampado,Scarf Prints,si,49.92,46.17,33.08,-0.090,-0.209,PLANO,no
+SS2020,garter belt,accesorio,Garters,si,61.25,58.67,65.92,-0.061,0.043,PLANO,si
+SS2020,slip dress,prenda,Chemise (slip) dresses,si,53.17,52.92,64.67,-0.022,0.127,PLANO,si
+SS2020,bra top,prenda,Bra tops,si,46.58,52.75,63.67,0.107,0.114,SUBE,si
+SS2020,three piece suit,prenda,Three-piece suits,si,66.00,59.50,61.92,-0.121,-0.034,CAE,si
+SS2020,bermuda shorts,prenda,Bermuda shorts,si,34.33,40.58,43.58,0.150,-0.002,SUBE,si
+SS2020,waistcoat,prenda,Vests and waistcoats,si,56.92,43.50,46.08,-0.286,-0.016,CAE,si
+SS2020,pinstripe,estampado,Pinstripes,si,39.50,33.83,30.25,-0.172,-0.186,CAE,no
+SS2020,70s fashion,estetica,1970s style,si,57.17,47.08,45.08,-0.212,-0.117,CAE,no
+SS2020,big collar,detalle,Big collars,si,47.08,49.00,55.00,0.022,0.042,PLANO,si
+SS2020,fringe jacket,detalle,Suede and fringe,si,43.25,49.67,53.58,0.121,0.002,SUBE,si
+SS2020,raffia bag,material,Raffia and natural materials,si,6.50,7.42,13.25,0.114,0.507,SUBE,si
+SS2020,fruit print,estampado,Tropical and fruit prints,si,50.67,54.42,53.58,0.054,-0.089,PLANO,si
+SS2020,short shorts,prenda,Short shorts,si,53.67,59.00,60.00,0.077,-0.057,PLANO,si
+SS2020,tube top,prenda,Tube tops,si,33.17,30.67,26.17,-0.096,-0.232,PLANO,no
+SS2020,mint green dress,color,Mint,si,30.67,24.50,29.00,-0.242,0.095,CAE,si
+SS2020,satin dress,material,Satin,si,39.00,40.83,58.42,0.028,0.284,PLANO,si
+FW2020,opera gloves,accesorio,Opera gloves,si,35.92,31.58,43.25,0.012,0.000,PLANO,si
+FW2020,chain necklace,accesorio,Chains,si,55.75,70.25,71.50,0.372,-0.297,SUBE,no
+FW2020,over the knee boots,calzado,Over-the-knee boots,si,20.08,15.83,14.58,-0.097,-0.397,PLANO,no
+FW2020,cut out dress,detalle,Cutouts,si,24.75,20.08,59.42,-0.068,0.770,PLANO,si
+FW2020,blazer,prenda,Reworked blazers,si,65.50,54.75,77.08,-0.038,0.028,PLANO,si
+FW2020,chocolate brown dress,color,Chocolate brown,si,14.00,15.92,35.42,0.269,0.485,SUBE,si
+FW2020,cape coat,prenda,Capes,si,36.75,31.92,34.42,0.000,-0.239,PLANO,no
+SS2021,strappy heels,calzado,Strappy heels with toe loops,si,42.00,58.00,69.58,0.131,-0.102,SUBE,no
+SS2021,bubblegum pink dress,color,Bubblegum pink,si,26.58,32.50,71.08,0.009,0.498,PLANO,si
+SS2021,micro mini skirt,prenda,Microscopic miniskirts,si,23.92,25.83,46.00,-0.115,0.293,CAE,si
+SS2021,long necklace,accesorio,Long draped necklaces,si,59.58,69.25,76.58,-0.042,-0.184,PLANO,no
+SS2021,slippers,calzado,House shoes and slippers,si,36.25,42.83,42.58,-0.025,-0.290,PLANO,no
+SS2021,tracksuit,prenda,Sporty pieces / tracksuits,si,48.50,62.42,61.42,0.060,-0.301,PLANO,no
+SS2021,backless dress,detalle,Fully exposed open backs,si,41.33,50.08,73.67,0.000,0.101,PLANO,si
+SS2021,oversized suit,prenda,Relaxed slouchy suiting,si,30.42,39.25,66.50,0.063,0.243,PLANO,si
+SS2021,mesh top,prenda,Second-skin tops,si,54.00,50.42,67.00,-0.261,0.000,CAE,si
+FW2021,cable knit sweater,prenda,Cable-knit knitwear,si,22.08,26.75,32.42,-0.031,0.015,PLANO,si
+FW2021,y2k fashion,estetica,Early-2000s (Y2K) revival,si,23.50,54.58,82.25,0.620,0.232,SUBE,si
+FW2021,faux fur coat,material,Luxe comfort with faux fur,si,7.75,8.00,6.67,-0.191,-0.360,CAE,no
+FW2021,oversized bag,accesorio,Oversized handbags,si,36.58,43.75,55.67,-0.044,0.063,PLANO,si
+FW2021,knee high boots,calzado,Knee-high boots,si,32.50,43.83,40.58,0.077,-0.255,PLANO,no
+FW2021,ski sweater,prenda,Ski and slope style,si,9.83,14.58,17.42,0.172,0.000,SUBE,si
+FW2021,cloud coat,prenda,Cloud coats,si,29.08,36.33,40.92,0.000,-0.059,PLANO,si
+SS2022,saffron dress,color,Saffron and bold color,si,54.33,67.67,70.00,0.000,0.000,PLANO,si
+SS2022,preppy outfit,estetica,Preppy back-to-school styling,si,18.50,37.58,42.92,0.489,0.099,SUBE,si
+SS2022,bodycon dress,prenda,Romantic draping and body-con,si,66.17,81.83,74.00,-0.007,-0.135,PLANO,no
+SS2022,90s fashion,estetica,Nostalgic early-aughts and 90s revival,si,45.00,55.00,45.83,-0.019,-0.216,PLANO,no
+SS2022,maxi skirt,prenda,Maxi hemlines,si,22.75,28.92,44.33,0.020,0.393,PLANO,si
+FW2022,tank top,prenda,Basic Tanks,si,59.42,65.83,67.00,-0.070,0.021,PLANO,si
+FW2022,moto jacket,prenda,Oversize Moto Jackets,si,42.50,42.75,42.58,-0.167,0.000,CAE,si
+FW2022,wide leg jeans,prenda,Super-Wide-Leg Jeans,si,38.92,47.83,60.00,0.034,0.231,PLANO,si
+FW2022,corset top,prenda,Corset Layers,si,45.33,63.92,60.42,0.171,-0.052,SUBE,si
+FW2022,duster coat,prenda,Duster Coats,si,44.17,41.50,36.83,-0.235,-0.115,CAE,no
+FW2022,cobalt blue dress,color,Cobalt Blue,si,52.25,62.08,58.08,0.000,-0.063,PLANO,si
+FW2022,sequin dress,material,Sheer Sequins,si,45.58,54.42,59.50,0.005,0.093,PLANO,si
+FW2022,dress over pants,detalle,Dresses Over Pants,si,47.50,64.67,69.50,0.136,0.076,SUBE,si
+FW2022,houndstooth,estampado,Houndstooth,si,57.92,59.42,58.75,-0.147,-0.007,CAE,si
+SS2023,metallic dress,material,Metallics,si,54.67,70.25,77.42,0.192,0.000,SUBE,si
+SS2023,skinny pants,prenda,Skinny Pants,si,67.00,56.58,50.83,-0.228,-0.204,CAE,no
+SS2023,color block,estampado,Color-Blocking,si,92.00,82.00,77.75,-0.174,-0.150,CAE,no
+SS2023,tube dress,prenda,Strapless Tube Dresses,si,28.08,33.17,39.33,0.108,0.073,SUBE,si
+SS2023,sheer dress,material,Sheer Gauzy Knits,si,33.50,36.50,38.33,0.027,-0.048,PLANO,si
+SS2023,knee length skirt,prenda,Knee-Length Skirts,si,69.67,73.58,85.67,-0.004,0.055,PLANO,si
+SS2023,bubble hem,detalle,Bubble Hems,si,33.17,35.17,62.00,0.000,0.470,PLANO,si

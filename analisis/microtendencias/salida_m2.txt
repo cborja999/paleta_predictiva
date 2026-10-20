@@ -1,0 +1,33 @@
+==============================================================================
+M2 - REPLICA (Sandra's Closet), busqueda web MUNDO  (trends_microtendencias_web_m2.csv)
+  terminos: 54 | usables: 54 | descartados: 0
+  PRINCIPAL: se queda = c2 >= -0.10
+     SUBE : se queda 15/17 = 88%
+     PLANO: se queda 19/24 = 79%
+     CAE  : se queda 8/13 = 62%
+     SUBE 88% vs PLANO+CAE 73% -> diferencia +15 pts | Fisher p=0.300
+  SECUNDARIO 1: c2 > 0
+     SUBE : se queda 10/17 = 59%
+     PLANO: se queda 12/24 = 50%
+     CAE  : se queda 3/13 = 23%
+     SUBE 59% vs PLANO+CAE 41% -> diferencia +18 pts | Fisher p=0.250
+  SECUNDARIO 2: B2/B1 >= 0.9 (sin restar mediana)
+     SUBE : se queda 15/17 = 88%
+     PLANO: se queda 23/24 = 96%
+     CAE  : se queda 9/13 = 69%
+     SUBE 88% vs PLANO+CAE 86% -> diferencia +2 pts | Fisher p=1.000
+  Spearman g1 vs c2 (continuo): rho=0.24, p=0.089
+  CRITERIO (>= +10 pts y p < 0.05): NO APOYA
+==============================================================================
+M1 + M2 JUNTOS (descriptivo; mediana de temporada calculada dentro de cada muestra)
+  PRINCIPAL: se queda = c2 >= -0.10
+     SUBE : se queda 29/33 = 88%
+     PLANO: se queda 45/62 = 73%
+     CAE  : se queda 16/27 = 59%
+     SUBE 88% vs PLANO+CAE 69% -> diferencia +19 pts | Fisher p=0.037
+  SECUNDARIO 1: c2 > 0
+     SUBE : se queda 20/33 = 61%
+     PLANO: se queda 30/62 = 48%
+     CAE  : se queda 6/27 = 22%
+     SUBE 61% vs PLANO+CAE 40% -> diferencia +20 pts | Fisher p=0.065
+  Spearman g1 vs c2: rho=0.26, p=0.004  (n=122)

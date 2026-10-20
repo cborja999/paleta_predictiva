@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paleta predictiva</title>
+<meta name="description" content="Brief de tendencias para marcas argentinas de indumentaria: pasarela, prensa y búsquedas.">
+<style>
+:root{
+  --bg:#f6f2ea; --paper:#fffdf8; --ink:#1d1b18; --muted:#6c665c; --line:#e3dccf;
+  --accent:#9c3d2a; --up:#2f6b46; --down:#8a8378; --warn:#a8741a; --chip:#efe8da;
+  --serif:Georgia,"Times New Roman",serif; --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#171512;--paper:#201d19;--ink:#f0ebe1;--muted:#a49c8e;--line:#3a352d;--accent:#e08a74;--up:#6fc08d;--down:#9a9284;--warn:#e0b25a;--chip:#2b2721}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px 64px}
+header{padding:40px 0 20px}
+.kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(30px,5vw,48px);line-height:1.1;margin:10px 0 12px;letter-spacing:-.01em}
+.lead{max-width:62ch;color:var(--muted);font-size:17px;margin:0}
+.flow{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none;counter-reset:s}
+.flow li{counter-increment:s;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 10px;font-size:14px}
+.flow li::before{content:counter(s);display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border-radius:50%;background:var(--ink);color:var(--bg);font-size:12px;margin-right:8px}
+.honest{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:28px 0}
+.honest>div{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:16px}
+.honest h3{margin:0 0 6px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.honest .big{font-family:var(--serif);font-size:26px;line-height:1.15;margin:0 0 6px}
+.honest p{margin:0;font-size:14px;color:var(--muted)}
+.tag-ok{color:var(--up)} .tag-no{color:var(--accent)} .tag-mid{color:var(--warn)}
+.tabs{display:flex;gap:6px;margin:34px 0 14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tabs button{font:inherit;background:none;border:0;border-bottom:2px solid transparent;padding:10px 14px;cursor:pointer;color:var(--muted);font-size:15px}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
+.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.note{font-size:13px;color:var(--muted);margin:0 0 16px;max-width:75ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.top{display:flex;align-items:center;gap:12px}
+.sw{width:34px;height:34px;border-radius:50%;border:1px solid rgba(0,0,0,.2);flex:none}
+.name{font-family:var(--serif);font-size:21px;margin:0;line-height:1.2;flex:1}
+.score{display:flex;gap:4px;align-items:center;font-size:12px;color:var(--muted);white-space:nowrap}
+.dot{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--ink);display:inline-block}
+.dot.on{background:var(--ink)}
+.row{border-top:1px solid var(--line);padding-top:10px}
+.lab{display:flex;justify-content:space-between;gap:8px;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.lab b{font-weight:600;color:var(--ink);letter-spacing:0;text-transform:none;font-size:13px}
+.bars{display:grid;gap:4px}
+.bar{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+.bar i{display:block;height:8px;border-radius:4px;background:var(--ink);min-width:2px}
+.bar i.old{background:var(--line);}
+.bar span.t{width:64px;flex:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;padding:3px 9px;border-radius:999px;background:var(--chip);border:1px solid var(--line)}
+.chip.up{color:var(--up);border-color:currentColor;background:transparent}
+.chip.dn{color:var(--down)}
+.chip.faint{opacity:.8;border-style:dashed}
+.spark{width:100%;height:48px;display:block;margin-top:8px}
+.spark path{fill:none;stroke-width:1.6}
+.spark .w{stroke:var(--accent)} .spark .a{stroke:var(--ink);opacity:.55}
+.spark line{stroke:var(--line);stroke-dasharray:3 3}
+.leg{font-size:11px;color:var(--muted);display:flex;gap:12px;margin-top:2px;flex-wrap:wrap}
+.leg b{display:inline-block;width:14px;height:3px;vertical-align:middle;margin-right:4px}
+.verd{font-size:13px;font-weight:600;padding:6px 10px;border-radius:8px;background:var(--chip);border:1px solid var(--line)}
+.v-gano{color:var(--up);border-color:currentColor;background:transparent}
+.v-perdio{color:var(--down)}
+.sec{margin-top:56px}
+.sec h2{font-family:var(--serif);font-weight:400;font-size:28px;margin:0 0 12px}
+.sec p,.sec li{max-width:72ch;font-size:15px}
+.sec li{margin-bottom:6px}
+table{border-collapse:collapse;font-size:14px;margin:12px 0;background:var(--paper);border:1px solid var(--line);border-radius:8px;overflow:hidden;width:100%;max-width:640px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}
+.tw{overflow-x:auto;max-width:100%}
+th{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:600}
+code{font-size:13px;background:var(--chip);padding:1px 5px;border-radius:4px;word-break:break-all}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.draft{display:inline-block;background:var(--chip);border:1px solid var(--line);color:var(--muted);font-size:12px;padding:2px 10px;border-radius:999px;margin-left:8px;letter-spacing:.04em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">Paleta predictiva <span class="draft">versión de prueba · 20/10/2026</span></div>
+  <h1>Qué se queda y qué pasa de moda en las fashion weeks</h1>
+  <p class="lead">Un brief de colores, prendas y largos que se vieron en las semanas de la moda de Nueva York, Londres, Milán y París, con una lectura de cuáles ganaron interés en las búsquedas del mundo y tienden a mantenerse. Pensado para marcas de ropa argentinas que no pueden ir a los desfiles ni pagar un servicio de tendencias.</p>
+  <ol class="flow" aria-label="Recorrido de la señal">
+    <li>Se vio en pasarela</li><li>Las búsquedas globales suben</li><li>Se queda o pasa</li>
+  </ol>
+</header>
+
+<section aria-labelledby="honesto">
+  <h2 id="honesto" class="kicker" style="margin:26px 0 0">Qué podemos afirmar y qué no</h2>
+  <div class="honest">
+    <div>
+      <h3>Lo que gana interés se queda</h3>
+      <p class="big tag-ok">Se sostiene en el mundo</p>
+      <p>En búsquedas globales, lo que ganó interés se mantuvo en <b>84%</b> de los casos, contra <b>70%</b> de lo que no se movió (+14 puntos, test limpio).</p>
+    </div>
+    <div>
+      <h3>Argentina</h3>
+      <p class="big tag-mid">Mismo ritmo, sin validación propia</p>
+      <p>Argentina se mueve casi a la par que el mundo (sin retraso de 12 a 18 meses). Pero con búsquedas argentinas la regla no se confirmó (67% contra 73%), así que <b>no lo presentamos como validado para el mercado local</b>.</p>
+    </div>
+    <div>
+      <h3>Pasarela</h3>
+      <p class="big tag-mid">Contexto visual</p>
+      <p>Lo que se ve en pasarela solo acierta 51% (azar) para predecir búsquedas. Sirve para mostrar qué se vio, no para predecir por sí sola.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="margin-top:36px" aria-labelledby="resumen">
+  <h2 id="resumen" style="font-size:24px">El brief en pocas líneas</h2>
+  <ul id="resumen-lista"></ul>
+</section>
+
+<main>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <p class="note" id="nota"></p>
+  <div class="grid" id="grid" role="tabpanel"></div>
+</main>
+
+<section class="sec" aria-labelledby="como">
+  <h2 id="como">Cómo se lee cada tarjeta</h2>
+  <ul>
+    <li><b>Se vio en pasarela:</b> porcentaje de looks de Vogue Runway (15 casas) con esa categoría, promedio de las <span id="m-rec"></span> contra las <span id="m-ant"></span>. “Sube” o “baja” solo si cambió 1 punto o más. Clasificado con Gemini; hay una validación de 40 fotos.</li>
+    <li><b>Búsquedas del mundo:</b> Google Trends mensual. Se usan dos formas de buscar (por ejemplo <i>gray dress</i> y <i>gray outfit</i>). “Ganó interés” significa que el último año subió al menos 0,10 (en log) respecto del anterior, descontando lo que subió el conjunto. “Perdió interés” es lo contrario. Entre medio, “sin cambio claro”.</li>
+    <li><b>Veredicto:</b> “Ganó interés” solo si las dos formas de buscar lo dicen. Si discrepan, lo decimos y no lo empujamos. La cifra de 84% contra 70% viene de casos así.</li>
+    <li><b>Nivel de confianza:</b> alta, media o baja según qué tan grande es el movimiento comparado con el historial de la misma regla.</li>
+    <li><b>Gráfico:</b> búsquedas mensuales desde 2019. La línea punteada marca enero de 2025, cuando Google cambió cómo mide; la regla se probó hasta diciembre de 2024.</li>
+    <li><b>Prensa argentina:</b> no entra como señal. Muchas notas locales se apoyan en informes de desfiles (no todas), la muestra es chica y desigual, y el grupo todavía está depurando la planilla. Queda como contexto en <code>datasets/prensa_argentina/</code>.</li>
+  </ul>
+</section>
+
+<section class="sec" aria-labelledby="pruebas">
+  <h2 id="pruebas">Las pruebas detrás</h2>
+  <p>Probamos si lo que gana interés en búsquedas se mantiene. Las reglas se escribieron antes de correr cada prueba y no se cambiaron.</p>
+  <div class="tw"><table>
+    <tr><th>Búsquedas</th><th>Ganó interés</th><th>Control</th><th>Diferencia</th></tr>
+    <tr><td>Mundo, familia original</td><td>84%</td><td>70%</td><td>+14 pts</td></tr>
+    <tr><td>Mundo, familia nueva</td><td>84%</td><td>69%</td><td>+14 pts</td></tr>
+    <tr><td>Argentina</td><td>67%</td><td>73%</td><td>−7 pts</td></tr>
+    <tr><td>Shopping Argentina</td><td>69%</td><td>76%</td><td>−7 pts</td></tr>
+  </table></div>
+  <p>Argentina se mueve casi a la par que el mundo; no hay evidencia de un retraso de 12 a 18 meses. La hipótesis original (pasarela predice búsquedas 12 a 18 meses después) no se sostuvo.</p>
+</section>
+
+<section class="sec" aria-labelledby="replica">
+  <h2 id="replica">¿Se repite en otros años?</h2>
+  <p>El profesor pidió repetir con 2022-2023 lo que mostramos para 2023-2024. Armamos el brief como se habría armado en octubre de 2022 (y de 2021 y 2020) y miramos si lo que decía “sube” subió después. El ciclo 2023-2024 todavía no se puede evaluar: su resultado cae en 2025, cuando Google cambió cómo mide.</p>
+  <div class="tw"><table>
+    <tr><th>Brief armado en</th><th>Mundo, forma 1</th><th>Mundo, forma 2</th><th>Argentina</th></tr>
+    <tr><td><b>Oct 2022</b> (2022-2023)</td><td>40% contra 60%</td><td>67% contra 31%</td><td>44% contra 56%</td></tr>
+    <tr><td>Oct 2021</td><td>80% contra 20%</td><td>67% contra 31%</td><td>44% contra 56%</td></tr>
+    <tr><td>Oct 2020</td><td>60% contra 40%</td><td>50% contra 46%</td><td>44% contra 56%</td></tr>
+    <tr><td><b>Los tres juntos</b></td><td>60% contra 40%</td><td>61% contra 36%</td><td>44% contra 56%</td></tr>
+  </table></div>
+  <p style="font-size:13px;color:var(--muted)">Cada celda compara el % que subió entre lo que decía “sube” y lo que decía “no sube”. Si la regla sirve, el primer número tiene que ser más alto.</p>
+  <ul>
+    <li><b>2022-2023 da un resultado mixto:</b> a favor con la forma 2 de buscar y en contra con la forma 1. No lo presentamos como una confirmación.</li>
+    <li><b>Sumando los tres ciclos</b> la regla se ve en el mundo, con pocos casos. En Argentina no aparece en ninguno.</li>
+    <li><b>Pasarela:</b> sumarla a las búsquedas que suben mejora el resultado (73% contra 52% y 77% contra 47%), pero con tan pocos casos no se distingue del azar.</li>
+    <li><b>Prensa internacional (15 notas de 2021-2022):</b> con todas las notas la prensa parece sumar (67% contra 17%), pero al sacar dos galerías de looks que listan casi todo, se da vuelta (43% contra 57%). No lo usamos como señal.</li>
+  </ul>
+</section>
+
+<section class="sec" aria-labelledby="lim">
+  <h2 id="lim">Límites</h2>
+  <ul>
+    <li>Google Trends mide búsquedas, no ventas. No hay datos públicos de ventas argentinas por color o prenda.</li>
+    <li>Entre 20 y 27 temporadas, y las categorías de una temporada no son independientes.</li>
+    <li>La pasarela son 15 casas de lujo; faltan varias que hoy pesan en Lyst.</li>
+    <li>Con búsquedas argentinas la regla no se confirmó. Por eso el brief se presenta como lectura de las fashion weeks y del interés global, no como predicción validada para Argentina.</li>
+    <li>El color de cada muestra se midió en las fotos de pasarela que Gemini etiquetó así (entre 14 y 370 fotos; marrón, gris, beige y metalizado varían bastante dentro de la misma etiqueta). Es un color aproximado de la prenda, no un código de tinta.</li>
+    <li>Las fotos de pasarela no se muestran acá (derechos).</li>
+  </ul>
+  <p><b>Predicción congelada el 19/10/2026</b> (63 filas), con huella <code>{{SHA}}</code>. Chequeo principal en octubre de 2028; chequeo intermedio exploratorio en octubre de 2027.</p>
+</section>
+
+<footer>Proyecto de la materia K576 · Universidad de San Andrés · Beltrán Martínez, Borja Centeno, Luigi Bonomi. Datos y código en la carpeta <code>analisis/</code> de la repo.</footer>
+</div>
+
+<script id="datos" type="application/json">/*DATOS*/null</script>
+<script>
+(function(){
+var D=JSON.parse(document.getElementById('datos').textContent);
+var items=D.items, meta=D.meta;
+var SWOLD={'Negro':'#1a1a1a','Blanco':'#f6f3ec','Gris':'#8a8d91','Beige/Crema':'#d9c6a5','Marron':'#6b4a35','Rojo':'#b3202a','Rosa':'#e8a3b8','Naranja':'#e07a2d','Verde':'#3f7d4e','Azul':'#2f4f8f','Metalizado':'linear-gradient(135deg,#f2f2f2,#9aa0a6 50%,#e5e7ea)'};
+var NOM={'Marron':'Marrón','Beige/Crema':'Beige / crema','Pantalon':'Pantalón','Blazer/Saco':'Blazer / saco','Abrigo/Campera':'Abrigo / campera','Tejido/Sweater':'Tejido / sweater','Top/Blusa/Camisa':'Top / blusa / camisa','Mini':'Mini','Midi':'Midi'};
+var TABS=[['color','Colores','La muestra de cada color es la mediana medida en las fotos de pasarela con esa etiqueta (pasá el mouse para ver cuántas).'],['prenda','Prendas','Hay prendas sin dato de búsqueda en alguna de las dos formas del mundo (por ejemplo, vestido).'],['largo','Largos','Solo hay dos largos con búsquedas comparables (mini y midi).']];
+function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e}
+function nom(c){return NOM[c]||c}
+function spark(w,a){
+  var W=300,H=48,n=(w||a).length;
+  function path(s,cls){
+    if(!s)return '';
+    var mx=Math.max.apply(null,s)||1,d='';
+    s.forEach(function(v,i){var x=i*(W/(n-1)),y=H-3-(v/mx)*(H-8);d+=(i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1)});
+    return '<path class="'+cls+'" d="'+d+'"/>';
+  }
+  var i25=meta.meses.indexOf('2025-01'),x25=i25*(W/(n-1));
+  return '<svg class="spark" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" role="img" aria-label="Búsquedas mensuales desde 2019">'+
+    '<line x1="'+x25+'" x2="'+x25+'" y1="0" y2="'+H+'"/>'+path(w,'w')+path(a,'a')+'</svg>'+
+    '<div class="leg">'+(w?'<span><b style="background:var(--accent)"></b>Mundo</span>':'')+(a?'<span><b style="background:var(--ink);opacity:.55"></b>Argentina</span>':'')+'<span>cada serie en su propia escala · punteada: ene-2025</span></div>';
+}
+function estado(f){if(!f)return null;return f.inercia>=0.10?'gano':(f.inercia<=-0.10?'perdio':'estable')}
+var ETQ={gano:'ganó interés',perdio:'perdió interés',estable:'sin cambio claro'};
+function veredicto(it){
+  var e=[estado(it.nueva),estado(it.original)].filter(Boolean);
+  if(!e.length)return {k:'sin',t:'Sin dato de búsquedas'};
+  if(e.length===2){
+    if(e[0]==='gano'&&e[1]==='gano')return {k:'gano',t:'Ganó interés · tiende a quedarse'};
+    if(e[0]==='perdio'&&e[1]==='perdio')return {k:'perdio',t:'Perdió interés'};
+    return {k:'mixto',t:e[0]===e[1]?'Sin cambio claro':'Las dos formas de buscar no coinciden'};
+  }
+  var u=e[0];
+  return {k:'una',t:'Una sola forma de buscar: '+ETQ[u]};
+}
+function chip(fam,label){
+  if(!fam)return '<span class="chip faint">'+label+': sin dato</span>';
+  var s=estado(fam),cls=s==='gano'?'up':(s==='perdio'?'dn':'');
+  var conf=fam.confianza?' · confianza '+fam.confianza.toLowerCase():'';
+  return '<span class="chip '+cls+'">'+label+': '+ETQ[s]+conf+'</span>';
+}
+function card(it){
+  var c=el('article','card');
+  var v=veredicto(it); it._v=v;
+  var sw=it.tipo==='color'&&it.hex?'<span class="sw" style="background:'+it.hex+'" title="Color medido en '+it.fotos_color+' fotos de pasarela" aria-hidden="true"></span>':'';
+  var mx=Math.max(it.pasarela_reciente,it.pasarela_previo,0.5);
+  var d=it.pasarela_reciente-it.pasarela_previo, pl=d>=1?'sube':(d<=-1?'baja':'estable');
+  var pas='<div class="bars">'+
+    '<div class="bar"><span class="t">antes</span><i class="old" style="width:'+(it.pasarela_previo/mx*60)+'%"></i>'+it.pasarela_previo+'%</div>'+
+    '<div class="bar"><span class="t">reciente</span><i style="width:'+(it.pasarela_reciente/mx*60)+'%"></i>'+it.pasarela_reciente+'%</div></div>';
+  var coin=(v.k==='gano'&&pl==='sube')?'<div class="leg" style="margin-top:6px"><b style="background:var(--up)"></b>Pasarela y búsquedas coinciden</div>':'';
+  var bus='<div class="chips">'+chip(it.nueva,'Forma 1')+chip(it.original,'Forma 2')+'</div>'+(it.serie_mundo?spark(it.serie_mundo,null):'');
+  c.innerHTML='<div class="top">'+sw+'<h3 class="name">'+nom(it.categoria)+'</h3></div>'+
+    '<div class="verd v-'+v.k+'">'+v.t+'</div>'+
+    '<div class="row"><div class="lab"><span>Se vio en pasarela</span><b>'+pl+'</b></div>'+pas+coin+'</div>'+
+    '<div class="row"><div class="lab"><span>Búsquedas del mundo</span><b>'+(v.k==='sin'?'sin dato':'Google Trends')+'</b></div>'+bus+'</div>';
+  return c;
+}
+var ORD={gano:0,una:1,mixto:1,sin:1,perdio:2};
+var cur='color';
+function render(){
+  var g=document.getElementById('grid');g.innerHTML='';
+  var list=items.filter(function(i){return i.tipo===cur});
+  list.forEach(function(i){i._v=veredicto(i)});
+  list.sort(function(a,b){return ORD[a._v.k]-ORD[b._v.k]||b.pasarela_reciente-a.pasarela_reciente});
+  list.forEach(function(i){g.appendChild(card(i))});
+  TABS.forEach(function(t){if(t[0]===cur)document.getElementById('nota').textContent='Primero lo que ganó interés, al final lo que lo perdió. '+t[2]});
+  Array.prototype.forEach.call(document.querySelectorAll('#tabs button'),function(b){b.setAttribute('aria-selected',b.dataset.k===cur)});
+}
+(function(){
+  var L=[];
+  function names(f){return items.filter(f).map(function(i){return nom(i.categoria).toLowerCase()}).join(', ')}
+  var g=names(function(i){return veredicto(i).k==='gano'}), p=names(function(i){return veredicto(i).k==='perdio'});
+  var ps=names(function(i){return i.pasarela_reciente-i.pasarela_previo>=1}), pb=names(function(i){return i.pasarela_reciente-i.pasarela_previo<=-1});
+  var u=items.filter(function(i){return veredicto(i).k==='una'}).map(function(i){return nom(i.categoria).toLowerCase()+' ('+ETQ[estado(i.nueva||i.original)]+')'}).join(', ');
+  L.push('<b>Ganó interés en las dos formas de buscar y tiende a quedarse:</b> '+(g||'ninguna')+'.');
+  L.push('<b>Perdió interés en las dos formas:</b> '+(p||'ninguna')+'.');
+  if(u)L.push('<b>Con una sola forma de buscar (señal más débil):</b> '+u+'.');
+  L.push('<b>Subió en pasarela:</b> '+ps+'. <b>Bajó:</b> '+pb+'.');
+  L.push('Para el resto, las dos formas de buscar no coinciden o no hay cambio claro: no damos veredicto.');
+  document.getElementById('resumen-lista').innerHTML=L.map(function(x){return '<li>'+x+'</li>'}).join('');
+})();
+var tb=document.getElementById('tabs');
+TABS.forEach(function(t){var b=el('button',null,t[1]);b.setAttribute('role','tab');b.dataset.k=t[0];b.onclick=function(){cur=t[0];render()};tb.appendChild(b)});
+document.getElementById('m-rec').textContent=meta.pasarela_recientes.join(', ');
+document.getElementById('m-ant').textContent=meta.pasarela_previas.join(', ');
+render();
+})();
+</script>
+</body>
+</html>

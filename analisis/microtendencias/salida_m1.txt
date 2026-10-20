@@ -1,0 +1,45 @@
+==============================================================================
+M1 - Google busqueda web, MUNDO  (trends_microtendencias_web.csv)
+  terminos: 68 | usables: 68 | descartados: 0
+  PRINCIPAL: se queda = c2 >= -0.10
+     SUBE : se queda 14/16 = 88%
+     PLANO: se queda 26/38 = 68%
+     CAE  : se queda 8/14 = 57%
+     SUBE 88% vs PLANO+CAE 65% -> diferencia +22 pts | Fisher p=0.121
+  SECUNDARIO 1: c2 > 0
+     SUBE : se queda 10/16 = 62%
+     PLANO: se queda 18/38 = 47%
+     CAE  : se queda 3/14 = 21%
+     SUBE 62% vs PLANO+CAE 40% -> diferencia +22 pts | Fisher p=0.156
+  SECUNDARIO 2: B2/B1 >= 0.9 (sin restar mediana)
+     SUBE : se queda 16/16 = 100%
+     PLANO: se queda 33/38 = 87%
+     CAE  : se queda 10/14 = 71%
+     SUBE 100% vs PLANO+CAE 83% -> diferencia +17 pts | Fisher p=0.103
+  Spearman g1 vs c2 (continuo): rho=0.28, p=0.020
+  CRITERIO (>= +10 pts y p < 0.05): NO APOYA
+==============================================================================
+SECUNDARIO 3 - Google Shopping, MUNDO  (trends_microtendencias_shopping.csv)
+  terminos: 68 | usables: 52 | descartados: 16
+     descartado: pistachio dress (volumen bajo (35 meses en cero))
+     descartado: big collar (volumen bajo (13 meses en cero))
+     descartado: raffia bag (volumen bajo (26 meses en cero))
+     descartado: fruit print (volumen bajo (30 meses en cero))
+     descartado: opera gloves (volumen bajo (34 meses en cero))
+     descartado: chocolate brown dress (volumen bajo (35 meses en cero))
+     descartado: bubblegum pink dress (volumen bajo (36 meses en cero))
+     descartado: micro mini skirt (volumen bajo (35 meses en cero))
+     descartado: oversized suit (volumen bajo (29 meses en cero))
+     descartado: y2k fashion (volumen bajo (17 meses en cero))
+     descartado: ski sweater (volumen bajo (22 meses en cero))
+     descartado: cloud coat (volumen bajo (36 meses en cero))
+     descartado: saffron dress (volumen bajo (35 meses en cero))
+     descartado: preppy outfit (volumen bajo (36 meses en cero))
+     descartado: dress over pants (volumen bajo (33 meses en cero))
+     descartado: bubble hem (volumen bajo (26 meses en cero))
+  PRINCIPAL: se queda = c2 >= -0.10
+     SUBE : se queda 12/13 = 92%
+     PLANO: se queda 15/24 = 62%
+     CAE  : se queda 11/15 = 73%
+     SUBE 92% vs PLANO+CAE 67% -> diferencia +26 pts | Fisher p=0.145
+  CRITERIO (>= +10 pts y p < 0.05): NO APOYA

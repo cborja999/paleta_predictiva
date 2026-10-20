@@ -1,0 +1,58 @@
+temporada,termino,tipo,tendencia_fuente,usable,B0,B1,B2,g1,c2,grupo,se_queda
+FW2016,velvet dress,material,Velvet,si,15.25,31.58,41.50,0.630,0.126,SUBE,si
+FW2016,biker jacket,prenda,Biker Girls,si,51.08,60.00,70.00,0.062,0.007,PLANO,si
+FW2016,beige outfit,color,Beigemania,si,14.08,18.75,21.58,0.188,-0.007,SUBE,si
+FW2016,trench coat,prenda,Shiny Trench Coats,si,39.42,39.75,41.92,-0.090,-0.094,PLANO,si
+FW2016,puffer jacket,prenda,Puff Daddy,si,3.50,6.25,11.17,0.481,0.433,SUBE,si
+FW2016,one shoulder dress,prenda,80s Power One-Shoulder,si,25.25,23.50,27.83,-0.170,0.022,CAE,si
+FW2016,cape coat,prenda,Capes,si,45.58,42.08,41.50,-0.178,-0.161,CAE,no
+FW2016,bubblegum pink dress,color,Bubblegum,no,,,,,,,
+FW2016,turtleneck,prenda,Turtlenecks with Zippers,si,24.83,28.58,32.83,0.042,-0.009,PLANO,si
+FW2016,long scarf,accesorio,Long Scarfs,si,35.92,38.00,37.67,-0.042,-0.156,PLANO,no
+FW2016,pinstripe suit,prenda,Pinstripe Suiting,si,42.67,40.83,51.25,-0.142,0.080,CAE,si
+FW2016,fur stole,accesorio,Fur Stoles,si,42.25,44.42,42.25,-0.049,-0.197,PLANO,no
+FW2016,fur coat,prenda,Statement Furs,si,20.75,27.50,35.42,0.183,0.106,SUBE,si
+SS2017,pink dress,color,Think Pink,si,42.42,46.33,48.25,-0.016,0.003,PLANO,si
+SS2017,statement sleeves,detalle,High-Volume Sleeves,si,1.33,14.00,24.08,2.247,0.505,SUBE,si
+SS2017,lame dress,material,80s Lame,si,62.33,70.25,70.17,0.016,-0.039,PLANO,si
+SS2017,op art,estampado,Op Art,si,65.42,57.92,56.00,-0.226,-0.072,CAE,si
+SS2017,70s fashion,estetica,70s Flower Power,si,50.67,52.50,57.67,-0.068,0.056,PLANO,si
+SS2017,power shoulders,detalle,Square-Shouldered,si,49.75,52.58,47.67,-0.049,-0.136,PLANO,no
+SS2017,slogan t shirt,prenda,Slogan Tops,si,36.17,57.67,83.83,0.363,0.336,SUBE,si
+SS2017,bralette,prenda,Bralettes,si,57.75,83.33,77.92,0.263,-0.105,SUBE,no
+SS2017,metallic dress,material,Deep Sea Metallics,si,43.75,55.75,57.75,0.138,-0.003,SUBE,si
+SS2017,striped dress,estampado,Graphic Stripes,si,49.25,49.33,60.50,-0.102,0.166,CAE,si
+SS2017,ruffle dress,detalle,Modern Ruffles,si,18.25,30.33,43.25,0.404,0.317,SUBE,si
+SS2017,sheer dress,material,Transparent,si,33.58,34.75,33.42,-0.070,-0.077,PLANO,si
+FW2017,red dress,color,Power Red,si,71.00,71.17,70.92,-0.071,-0.004,PLANO,si
+FW2017,silver dress,color,Futuristic Silver,si,63.83,67.50,67.42,-0.017,-0.001,PLANO,si
+FW2017,cowboy boots,calzado,Wild West,si,43.58,42.42,42.00,-0.100,-0.010,CAE,si
+FW2017,plaid blazer,estampado,70s Plaid,si,16.25,23.83,38.67,0.310,0.484,SUBE,si
+FW2017,feather dress,detalle,Feathers,si,24.17,24.58,26.42,-0.056,0.072,PLANO,si
+FW2017,leisure suit,prenda,Leisure Suits,si,17.25,20.50,17.42,0.099,-0.163,PLANO,no
+FW2017,lace dress,material,Lace Overlay,si,87.58,82.17,67.33,-0.137,-0.199,CAE,no
+FW2017,floral dress,estampado,Wallpaper Florals,si,36.42,48.92,50.08,0.222,0.024,SUBE,si
+FW2017,denim suit,prenda,Denim Suits,si,44.92,48.33,54.33,0.000,0.117,PLANO,si
+FW2017,fringe jacket,detalle,Feathers and Fringe (W) / Fringes (SC SS2018),si,34.08,34.83,39.33,-0.052,0.121,PLANO,si
+FW2017,80s fashion,estetica,The '80s (Fashionista) / 80s Denim (SC SS2018),si,39.92,52.50,50.75,0.201,-0.034,SUBE,si
+FW2017,shearling coat,material,Shearling (Fashionista) / Shearling (SC FW2018),si,36.58,41.83,41.83,0.061,0.000,PLANO,si
+FW2017,power suit,prenda,Power Suit (W),si,31.25,28.75,27.92,-0.157,-0.029,CAE,si
+FW2017,corduroy,material,Corduroy (Fashionista),si,23.25,26.75,36.00,0.067,0.297,PLANO,si
+FW2017,track pants,prenda,Track Pants (Fashionista),si,27.42,51.42,64.83,0.555,0.232,SUBE,si
+SS2018,marabou,material,Marabou,si,26.67,26.17,26.17,-0.031,-0.023,PLANO,si
+SS2018,lavender dress,color,Lavender,si,37.50,41.33,43.67,0.085,0.032,PLANO,si
+SS2018,vinyl dress,material,Life in Plastic,si,36.17,50.50,55.50,0.322,0.071,SUBE,si
+SS2018,slip dress,prenda,Slip Dress Redux (W),si,44.17,43.92,53.17,-0.018,0.168,PLANO,si
+SS2018,parka,prenda,Perfect Parkas (W),si,44.08,43.83,42.25,-0.018,-0.060,PLANO,si
+SS2018,punk outfit,estetica,The Return of Punk (W),si,20.67,20.92,20.67,0.000,-0.035,PLANO,si
+SS2018,logomania,estetica,Logo Mania (W),si,11.50,14.33,14.67,0.208,0.000,SUBE,si
+FW2018,faux fur coat,material,Fake Fur,si,12.83,12.50,11.17,-0.086,-0.143,PLANO,no
+FW2018,leather outfit,material,Black Leather,si,42.17,45.33,45.25,0.013,-0.032,PLANO,si
+FW2018,pajama dressing,estetica,Pajama Dressing,si,46.17,53.58,59.00,0.090,0.066,PLANO,si
+FW2018,60s fashion,estetica,60s,si,60.00,56.25,58.58,-0.124,0.011,CAE,si
+FW2018,silk scarf,accesorio,Silk Scarfs,si,47.83,51.58,51.67,0.016,-0.028,PLANO,si
+FW2018,long white dress,prenda,Long White Dresses,si,52.08,48.25,49.58,-0.136,-0.003,CAE,si
+FW2018,holographic,material,Hologram,si,83.50,75.83,78.33,-0.156,0.003,CAE,si
+FW2018,neon dress,color,Neon (W),si,22.67,32.08,74.92,0.288,0.818,SUBE,si
+FW2018,animal print,estampado,Animalia (W),si,42.75,57.83,83.50,0.243,0.337,SUBE,si
+FW2018,skirt suit,prenda,The Skirt Suit (W),si,68.67,71.92,69.17,-0.013,-0.069,PLANO,si

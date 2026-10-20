@@ -1,0 +1,124 @@
+temporada,mes_desfile,tendencia_fuente,termino,tipo,nota
+FW2016,2016-03,Velvet,velvet dress,material,
+FW2016,2016-03,Biker Girls,biker jacket,prenda,
+FW2016,2016-03,Beigemania,beige outfit,color,
+FW2016,2016-03,Shiny Trench Coats,trench coat,prenda,
+FW2016,2016-03,Puff Daddy,puffer jacket,prenda,
+FW2016,2016-03,80s Power One-Shoulder,one shoulder dress,prenda,
+FW2016,2016-03,Capes,cape coat,prenda,
+FW2016,2016-03,Bubblegum,bubblegum pink dress,color,
+FW2016,2016-03,Turtlenecks with Zippers,turtleneck,prenda,
+FW2016,2016-03,Long Scarfs,long scarf,accesorio,
+FW2016,2016-03,Pinstripe Suiting,pinstripe suit,prenda,
+FW2016,2016-03,Fur Stoles,fur stole,accesorio,
+FW2016,2016-03,Statement Furs,fur coat,prenda,
+FW2016,2016-03,Checkmate,,,descartada: no nombra algo buscable sin ruido
+FW2016,2016-03,Alice in Wonderland,,,descartada: no nombra algo buscable
+FW2016,2016-03,On Duty,,,descartada: no nombra algo buscable
+FW2016,2016-03,Extra Long Sleeves,,,descartada: no nombra algo buscable sin ruido
+FW2016,2016-03,Bondage,,,descartada: termino con ruido fuera de moda
+FW2016,2016-03,Tinsel,,,descartada: termino con ruido fuera de moda
+FW2016,2016-03,Modern Nymphs,,,descartada: no nombra algo buscable
+SS2017,2016-10,Think Pink,pink dress,color,
+SS2017,2016-10,High-Volume Sleeves,statement sleeves,detalle,
+SS2017,2016-10,80s Lame,lame dress,material,
+SS2017,2016-10,Op Art,op art,estampado,
+SS2017,2016-10,70s Flower Power,70s fashion,estetica,
+SS2017,2016-10,Square-Shouldered,power shoulders,detalle,
+SS2017,2016-10,Slogan Tops,slogan t shirt,prenda,
+SS2017,2016-10,Bralettes,bralette,prenda,
+SS2017,2016-10,Deep Sea Metallics,metallic dress,material,
+SS2017,2016-10,Graphic Stripes,striped dress,estampado,
+SS2017,2016-10,Modern Ruffles,ruffle dress,detalle,
+SS2017,2016-10,Transparent,sheer dress,material,
+SS2017,2016-10,Swim Addict,,,descartada: no nombra algo buscable
+SS2017,2016-10,Sport Spirit,,,descartada: no nombra algo buscable
+FW2017,2017-03,Power Red,red dress,color,
+FW2017,2017-03,Futuristic Silver,silver dress,color,
+FW2017,2017-03,Wild West,cowboy boots,calzado,
+FW2017,2017-03,70s Plaid,plaid blazer,estampado,
+FW2017,2017-03,Feathers,feather dress,detalle,
+FW2017,2017-03,Leisure Suits,leisure suit,prenda,
+FW2017,2017-03,Lace Overlay,lace dress,material,
+FW2017,2017-03,Wallpaper Florals,floral dress,estampado,
+FW2017,2017-03,Denim Suits,denim suit,prenda,
+FW2017,2017-03,Feathers and Fringe (W) / Fringes (SC SS2018),fringe jacket,detalle,
+FW2017,2017-03,The '80s (Fashionista) / 80s Denim (SC SS2018),80s fashion,estetica,
+FW2017,2017-03,Shearling (Fashionista) / Shearling (SC FW2018),shearling coat,material,
+FW2017,2017-03,Power Suit (W),power suit,prenda,
+FW2017,2017-03,Corduroy (Fashionista),corduroy,material,
+FW2017,2017-03,Track Pants (Fashionista),track pants,prenda,
+FW2017,2017-03,New Transparency,,,descartada: repetida (sheer dress)
+FW2017,2017-03,Folklore,,,descartada: termino con ruido fuera de moda
+FW2017,2017-03,Evening Velvet,,,descartada: repetida (velvet dress)
+FW2017,2017-03,Retro Fur,,,descartada: repetida (fur coat)
+FW2017,2017-03,Broad Shoulders,,,descartada: repetida (power shoulders)
+FW2017,2017-03,Recycling,,,descartada: no nombra algo buscable
+FW2017,2017-03,Plaids and Checks (W),,,descartada: repetida
+FW2017,2017-03,Homespun Treasures (W),,,descartada: no nombra algo buscable
+FW2017,2017-03,Lady In Red (W),,,descartada: repetida
+FW2017,2017-03,American Spirit (W),,,descartada: no nombra algo buscable
+FW2017,2017-03,Velvet (Fashionista),,,descartada: repetida
+FW2017,2017-03,Statement Sleeves (Fashionista),,,descartada: repetida
+FW2017,2017-03,Protest (Fashionista),,,descartada: no nombra algo buscable
+FW2017,2017-03,Silver (Fashionista),,,descartada: repetida
+FW2017,2017-03,Power Suits (Fashionista),,,descartada: repetida
+FW2017,2017-03,Puffers (Fashionista),,,descartada: repetida
+FW2017,2017-03,Canadian Tuxedos (Fashionista),,,descartada: repetida (denim suit)
+FW2017,2017-03,Plaids (Fashionista),,,descartada: repetida
+FW2017,2017-03,Red (Fashionista),,,descartada: repetida
+SS2018,2017-10,Marabou,marabou,material,
+SS2018,2017-10,Lavender,lavender dress,color,
+SS2018,2017-10,Life in Plastic,vinyl dress,material,
+SS2018,2017-10,Slip Dress Redux (W),slip dress,prenda,
+SS2018,2017-10,Perfect Parkas (W),parka,prenda,
+SS2018,2017-10,The Return of Punk (W),punk outfit,estetica,
+SS2018,2017-10,Logo Mania (W),logomania,estetica,
+SS2018,2017-10,Silk Road,,,descartada: no nombra algo buscable
+SS2018,2017-10,Art Lovers,,,descartada: no nombra algo buscable
+SS2018,2017-10,In Full Bloom,,,descartada: repetida (floral dress)
+SS2018,2017-10,Workout,,,descartada: no nombra algo buscable
+SS2018,2017-10,Plaid Please,,,descartada: repetida (plaid blazer)
+SS2018,2017-10,The Trench,,,descartada: repetida (trench coat)
+SS2018,2017-10,Show Your Undies,,,descartada: no nombra algo buscable
+SS2018,2017-10,Rainbow,,,descartada: no nombra algo buscable
+SS2018,2017-10,White at Night,,,descartada: no nombra algo buscable
+SS2018,2017-10,Mise-en-scene,,,descartada: no nombra algo buscable
+SS2018,2017-10,Art-Inspired (W),,,descartada: no nombra algo buscable
+SS2018,2017-10,Chic Bling (W),,,descartada: no nombra algo buscable
+SS2018,2017-10,Sheer (W),,,descartada: repetida
+SS2018,2017-10,Fantastic Plastic (W),,,descartada: repetida (vinyl dress)
+SS2018,2017-10,Sorbet Shades (W),,,descartada: no nombra algo buscable
+SS2018,2017-10,The Updated Trench (W),,,descartada: repetida
+SS2018,2017-10,Birds of a Feather (W),,,descartada: repetida
+SS2018,2017-10,Fringe (W),,,descartada: repetida
+SS2018,2017-10,'60s Florals (W),,,descartada: repetida
+SS2018,2017-10,Shorts (W),,,descartada: no nombra algo buscable sin ruido
+SS2018,2017-10,Brand Essentials (W),,,descartada: no nombra algo buscable
+FW2018,2018-03,Fake Fur,faux fur coat,material,
+FW2018,2018-03,Black Leather,leather outfit,material,
+FW2018,2018-03,Pajama Dressing,pajama dressing,estetica,
+FW2018,2018-03,60s,60s fashion,estetica,
+FW2018,2018-03,Silk Scarfs,silk scarf,accesorio,
+FW2018,2018-03,Long White Dresses,long white dress,prenda,
+FW2018,2018-03,Hologram,holographic,material,
+FW2018,2018-03,Neon (W),neon dress,color,
+FW2018,2018-03,Animalia (W),animal print,estampado,
+FW2018,2018-03,The Skirt Suit (W),skirt suit,prenda,
+FW2018,2018-03,Layering,,,descartada: no nombra algo buscable
+FW2018,2018-03,Capes,,,descartada: repetida (cape coat)
+FW2018,2018-03,Check,,,descartada: no nombra algo buscable sin ruido
+FW2018,2018-03,Saville Row,,,descartada: no nombra algo buscable
+FW2018,2018-03,Cowgirl,,,descartada: repetida (cowboy boots)
+FW2018,2018-03,Florals,,,descartada: repetida (floral dress)
+FW2018,2018-03,Couture Frills,,,descartada: no nombra algo buscable
+FW2018,2018-03,'80s Excess (W),,,descartada: repetida
+FW2018,2018-03,Exaggerated Fringe (W),,,descartada: repetida
+FW2018,2018-03,Protective Layers (W),,,descartada: no nombra algo buscable
+FW2018,2018-03,Foils & Plastics (W),,,descartada: repetida
+FW2018,2018-03,New Romantics (W),,,descartada: no nombra algo buscable
+FW2018,2018-03,Capes (W),,,descartada: repetida
+FW2018,2018-03,Leather Dressing (W),,,descartada: repetida
+FW2018,2018-03,Faux Fur (W),,,descartada: repetida
+FW2018,2018-03,Novelty Knits (W),,,descartada: no nombra algo buscable sin ruido
+FW2018,2018-03,Western Details (W),,,descartada: repetida

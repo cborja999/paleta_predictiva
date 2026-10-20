@@ -1,0 +1,30 @@
+REGLAS DE LA REPLICA 2022-2023 (fijadas 20/10/2026 antes de correr). No se cambian despues de ver resultados.
+Pedido del profesor: repetir con 2022-2023 lo que hoy solo mostramos para 2023-2024, para dar mas confianza.
+
+QUE SE REPLICA
+El brief de la pagina (app/) se arma a una fecha d0 = octubre, despues del desfile SS del anio siguiente (como la prediccion congelada: d0 = oct-2026).
+"2023-2024" = brief con d0 = oct-2023 (la pagina). "2022-2023" = brief con d0 = oct-2022. Su resultado (oct-2023 a sep-2024) ya existe y esta dentro de la ventana limpia (datos limpios hasta dic-2024).
+d0 = oct-2023 NO se puede evaluar limpio (el resultado cae en 2025, cuando Google cambio como mide). Se informa asi, no se rellena.
+
+CICLO PRINCIPAL: d0 = oct-2022 (temporada SS2023 en los scripts).
+CICLOS SECUNDARIOS (se informan siempre, aunque den mal): d0 = oct-2021 (SS2022) y oct-2020 (SS2021). Son descriptivos, no cambian la conclusion del principal.
+
+SENALES (identicas a las de la pagina, calculadas solo con datos anteriores a d0)
+1. Pasarela: promedio de participacion de la categoria en las 3 temporadas de desfile mas recientes antes de d0, menos el de las 3 anteriores. Senal si la diferencia es de 1,0 punto o mas.
+2. Busquedas del mundo: inercia = log prom[d0-12,d0-1] / prom[d0-24,d0-13], menos la mediana de las categorias de esa familia (original y nueva). Senal "sube" si inercia > 0. Se evalua por familia (par categoria x familia).
+3. Prensa argentina: la categoria aparece en al menos 25% de las notas aprobadas de las 3 temporadas mas recientes. Solo si la cobertura alcanza (al menos 10 notas en total para el ciclo); si no alcanza, se informa "cobertura insuficiente" y la senal no se usa.
+
+RESULTADO A PREDECIR (el mismo de la prediccion congelada)
+cambio = log prom[d0+12,d0+23] / prom[d0-12,d0-1], menos la mediana de las categorias de la familia. "Sube" si cambio > 0.
+
+PREGUNTAS (se responden con conteos; no se hace ninguna otra comparacion)
+P1. Entre los pares con busquedas "sube": % que efectivamente sube. Referencia: lo mismo en los pares con busquedas "no sube".
+P2. Entre los pares con busquedas "sube": agregar pasarela (diferencia >= 1 punto) cambia ese %? Se compara con pasarela si vs no.
+P3. Cuando las dos familias del mundo coinciden en "sube" para la misma categoria, que % sube en las dos? (acuerdo vs desacuerdo)
+P4. Argentina (exploratorio): lo mismo que P1 con las series de Argentina.
+Se informan conteos y p de Fisher (dos colas). Con pocos casos no se saca conclusion fuerte; se dice.
+
+LIMITES DECLARADOS
+- Pocos casos por ciclo (unos 20 a 40 pares), categorias no independientes.
+- Prensa: SS2022 tiene 1 nota y FW2022 ninguna en la planilla actual; hace falta cargar notas de 2021-2022 para usar la senal 3.
+- Se mide busquedas, no ventas.

@@ -1,0 +1,21 @@
+
+======================================================================
+PRINCIPAL (todas las notas) | notas: 15 {'SS2022': 7, 'FW2022': 5, 'SS2023': 3}
+C1 busquedas "sube": con prensa -> sube 10/15 = 67% | sin prensa -> sube 1/6 = 17% | Fisher p=0.063
+C2 coincidencia completa (prensa+pasarela+busquedas) -> sube 3/3 = 100% | resto -> sube 17/38 = 45% | Fisher p=0.107
+   pares con coincidencia completa: [('original', 'Rosa', 'sube'), ('original', 'Rojo', 'sube'), ('nueva', 'Rosa', 'sube')]
+   categorias con prensa (>=25%): ['Abrigo/Campera', 'Azul', 'Beige/Crema', 'Blanco', 'Blazer/Saco', 'Falda', 'Marron', 'Metalizado', 'Mini', 'Pantalon', 'Rojo', 'Rosa', 'Tejido/Sweater', 'Top/Blusa/Camisa', 'Verde', 'Vestido']
+   categorias SIN prensa: ['Gris', 'Midi', 'Mono', 'Naranja', 'Negro']
+
+======================================================================
+SENSIBILIDAD (sin las 2 galerias de Vogue Scandinavia) | notas: 13 {'SS2022': 5, 'FW2022': 5, 'SS2023': 3}
+C1 busquedas "sube": con prensa -> sube 3/7 = 43% | sin prensa -> sube 8/14 = 57% | Fisher p=0.659
+C2 coincidencia completa (prensa+pasarela+busquedas) -> sube 0/0 = n/a | resto -> sube 20/41 = 49% | Fisher p=nan
+   pares con coincidencia completa: []
+   categorias con prensa (>=25%): ['Abrigo/Campera', 'Blazer/Saco', 'Falda', 'Marron', 'Mini', 'Pantalon', 'Tejido/Sweater', 'Top/Blusa/Camisa', 'Verde', 'Vestido']
+   categorias SIN prensa: ['Azul', 'Beige/Crema', 'Blanco', 'Gris', 'Metalizado', 'Midi', 'Mono', 'Naranja', 'Negro', 'Rojo', 'Rosa']
+
+Detalle por categoria (principal): % de notas que la nombran
+  color {'Azul': '33%', 'Beige/Crema': '27%', 'Blanco': '33%', 'Marron': '40%', 'Metalizado': '33%', 'Naranja': '20%', 'Negro': '20%', 'Rojo': '27%', 'Rosa': '33%', 'Verde': '47%'}
+  prenda {'Abrigo/Campera': '67%', 'Blazer/Saco': '60%', 'Falda': '80%', 'Mono': '20%', 'Pantalon': '80%', 'Tejido/Sweater': '67%', 'Top/Blusa/Camisa': '87%', 'Vestido': '100%'}
+  largo {'Maxi': '47%', 'Midi': '20%', 'Mini': '73%'}

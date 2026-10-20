@@ -74,3 +74,22 @@ Se descartaron los Trends sueltos de colores y prendas del Drive (8 terminos ele
 - Prediccion congelada el 19/10/2026 (63 filas, sha256 en `SHA256_prediccion_congelada.txt`). Chequeo principal: octubre de 2028; intermedio exploratorio: octubre de 2027.
 - Prensa: 83 filas cargadas por el grupo, 70 de medios aprobados. Se guardan sin corregir y se listan los problemas de carga (`datasets/prensa_argentina/README.md`). Pendiente revisar 5 notas automaticas.
 - Ventas: no hay datos publicos de ventas argentinas por color o prenda; Shopping Argentina mide busquedas de compra, no compras.
+
+## 20 de octubre de 2026 (tarde): réplica en 2022-2023
+El profesor pidió repetir con 2022-2023 lo que mostrábamos para 2023-2024. Se escribieron las reglas antes de correr (`analisis/persistencia/REGLAS_REPLICA_2022_2023.txt`) y se corrió la misma regla del brief en tres ciclos (oct-2022, oct-2021, oct-2020). Resultado: mixto en el ciclo principal, a favor en el mundo al sumar los tres, sin efecto en Argentina; la prensa no se pudo evaluar por falta de notas de 2021-2022. Detalle en `analisis/persistencia/resumen.md`.
+
+## 20 de octubre de 2026 (mediodía): el brief pasa a ser de fashion weeks, no solo de Argentina
+Como Argentina se mueve casi a la par que el mundo (sin retraso de 12 a 18 meses) y la regla no se confirmó con búsquedas argentinas, la página se presenta como un brief de las fashion weeks con lectura de búsquedas globales (qué ganó interés y tiende a quedarse), pensado para marcas argentinas pero sin decir que está validado en Argentina. La prensa argentina sale de la señal (queda como contexto en `datasets/prensa_argentina/`). El veredicto "ganó interés" exige que las dos formas de buscar coincidan.
+
+## 20 de octubre de 2026 (tarde): tendencias puntuales (prendas, detalles, estéticas)
+- Pregunta de Borja: ¿las prendas que aumentan después de aparecer en las fashion weeks persisten, y las que caen o quedan planas son pasajeras?
+- Se usaron tendencias **elegidas por medios en su momento** (no por nosotros): Who What Wear SS2019-SS2023 (68 términos, M1) y, como réplica decidida después de ver M1, Sandra's Closet SS2020-SS2023 (54 términos nuevos, M2). Reglas escritas antes de bajar cada tanda de datos (`analisis/microtendencias/REGLAS_*.txt`, huellas sha256).
+- Resultado: en las dos muestras las que subieron el primer año se quedaron 88% (M1 +22 pts, p=0,12; M2 +15 pts, p=0,30). Ninguna sola pasa el criterio. Juntas: +19 pts, p=0,037 (descriptivo). Las planas se quedan 73%: **la segunda mitad de la hipótesis no se sostiene**. El riesgo de pasajera está en lo que cae (41% contra 12%).
+- Hipótesis reformulada: lo que gana búsquedas en su primer año rara vez se desploma en el segundo; lo que las pierde tiene más del triple de chances de ser pasajero.
+- Página: nueva sección "Tendencias puntuales" con las 122 curvas y filtros (`app/armar_microtendencias.py`).
+
+## 20 de octubre de 2026 (tarde): la hipótesis pasa a ser la del proyecto y se prueba con datos nuevos
+- Borja decide reestructurar el proyecto alrededor de: "Una tendencia de pasarela que gana búsquedas en su primer año rara vez se desploma en el segundo. Las que las pierden tienen más del triple de chances de ser pasajeras".
+- Como la frase salió de mirar 2019-2023, se probó con una muestra nueva: 57 tendencias de 2016-2018 (Sandra's Closet, W Magazine, Fashionista). Reglas y criterios fijados antes de bajar los datos (`analisis/hipotesis/REGLAS_HIPOTESIS_C1.txt`, sha256).
+- Resultado: CONFIRMA EN PARTE. Las que subieron: 1/17 pasajeras (6%, criterio ≤ 20%). Las que cayeron: 2/11 (18%), no llega al triple con p < 0,05 (p = 0,54). En los 8 ciclos 2016-2024 las que subieron nunca pasaron de 20% de pasajeras.
+- La hipótesis queda con una parte principal (confirmada) y una secundaria (no confirmada). Documento central: `hipotesis.md`. La página se reordenó con la hipótesis al frente.

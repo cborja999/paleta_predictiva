@@ -1,0 +1,67 @@
+Las series de busqueda tienen datos limpios hasta dic-2024; ciclo d0=oct-2023 no se evalua (resultado cae en 2025).
+
+==============================================================================
+CICLO d0 = oct-2022 (PRINCIPAL, 2022-2023) | resultado = cambio oct-2023 a sep-2024 vs oct-2021 a sep-2022
+temporadas "recientes" de pasarela: ['SS2022', 'FW2022', 'SS2023']
+
+  [original] pares: 25
+   P1 busquedas "sube" -> sube: 8/12 = 67% | busquedas "no sube" -> sube: 4/13 = 31% | Fisher p=0.115
+   P2 dentro de "sube": con pasarela -> sube: 4/4 = 100% | sin pasarela -> sube: 4/8 = 50% | Fisher p=0.208
+      pasarela sola (todos los pares): con pasarela -> sube 5/8 = 62% | sin -> sube 7/17 = 41%
+
+  [nueva] pares: 20
+   P1 busquedas "sube" -> sube: 4/10 = 40% | busquedas "no sube" -> sube: 6/10 = 60% | Fisher p=0.656
+   P2 dentro de "sube": con pasarela -> sube: 1/2 = 50% | sin pasarela -> sube: 3/8 = 38% | Fisher p=1.000
+      pasarela sola (todos los pares): con pasarela -> sube 2/5 = 40% | sin -> sube 8/15 = 53%
+
+  [AR] pares: 18
+   P1 busquedas "sube" -> sube: 4/9 = 44% | busquedas "no sube" -> sube: 5/9 = 56% | Fisher p=1.000
+
+  P3 categorias en ambas familias: 20 | las dos "sube" -> las dos suben: 3/7 = 43% | resto -> las dos suben: 4/13 = 31% | Fisher p=0.651
+     categorias con las dos "sube": ['Beige/Crema', 'Negro', 'Blazer/Saco', 'Marron', 'Verde', 'Naranja', 'Rosa']
+==============================================================================
+CICLO d0 = oct-2021 (secundario) | resultado = cambio oct-2022 a sep-2023 vs oct-2020 a sep-2021
+temporadas "recientes" de pasarela: ['SS2021', 'FW2021', 'SS2022']
+
+  [original] pares: 25
+   P1 busquedas "sube" -> sube: 8/12 = 67% | busquedas "no sube" -> sube: 4/13 = 31% | Fisher p=0.115
+   P2 dentro de "sube": con pasarela -> sube: 3/5 = 60% | sin pasarela -> sube: 5/7 = 71% | Fisher p=1.000
+      pasarela sola (todos los pares): con pasarela -> sube 4/7 = 57% | sin -> sube 8/18 = 44%
+
+  [nueva] pares: 20
+   P1 busquedas "sube" -> sube: 8/10 = 80% | busquedas "no sube" -> sube: 2/10 = 20% | Fisher p=0.023
+   P2 dentro de "sube": con pasarela -> sube: 4/5 = 80% | sin pasarela -> sube: 4/5 = 80% | Fisher p=1.000
+      pasarela sola (todos los pares): con pasarela -> sube 5/6 = 83% | sin -> sube 5/14 = 36%
+
+  [AR] pares: 18
+   P1 busquedas "sube" -> sube: 4/9 = 44% | busquedas "no sube" -> sube: 5/9 = 56% | Fisher p=1.000
+
+  P3 categorias en ambas familias: 20 | las dos "sube" -> las dos suben: 5/9 = 56% | resto -> las dos suben: 2/11 = 18% | Fisher p=0.160
+     categorias con las dos "sube": ['Beige/Crema', 'Blazer/Saco', 'Azul', 'Marron', 'Verde', 'Naranja', 'Rosa', 'Pantalon', 'Blanco']
+==============================================================================
+CICLO d0 = oct-2020 (secundario) | resultado = cambio oct-2021 a sep-2022 vs oct-2019 a sep-2020
+temporadas "recientes" de pasarela: ['SS2020', 'FW2020', 'SS2021']
+
+  [original] pares: 25
+   P1 busquedas "sube" -> sube: 6/12 = 50% | busquedas "no sube" -> sube: 6/13 = 46% | Fisher p=1.000
+   P2 dentro de "sube": con pasarela -> sube: 4/6 = 67% | sin pasarela -> sube: 2/6 = 33% | Fisher p=0.567
+      pasarela sola (todos los pares): con pasarela -> sube 7/10 = 70% | sin -> sube 5/15 = 33%
+
+  [nueva] pares: 20
+   P1 busquedas "sube" -> sube: 6/10 = 60% | busquedas "no sube" -> sube: 4/10 = 40% | Fisher p=0.656
+   P2 dentro de "sube": con pasarela -> sube: 5/6 = 83% | sin pasarela -> sube: 1/4 = 25% | Fisher p=0.190
+      pasarela sola (todos los pares): con pasarela -> sube 6/8 = 75% | sin -> sube 4/12 = 33%
+
+  [AR] pares: 18
+   P1 busquedas "sube" -> sube: 4/9 = 44% | busquedas "no sube" -> sube: 5/9 = 56% | Fisher p=1.000
+
+  P3 categorias en ambas familias: 20 | las dos "sube" -> las dos suben: 3/6 = 50% | resto -> las dos suben: 4/14 = 29% | Fisher p=0.613
+     categorias con las dos "sube": ['Beige/Crema', 'Blazer/Saco', 'Abrigo/Campera', 'Verde', 'Mini', 'Tejido/Sweater']
+
+==============================================================================
+TOTAL de los 3 ciclos (descriptivo; los pares de un mismo ciclo no son independientes)
+ [original] P1: "sube"->sube 22/36 = 61% | "no sube"->sube 14/39 = 36% | Fisher p=0.038
+       P2: con pasarela 11/15 = 73% | sin pasarela 11/21 = 52% | Fisher p=0.302
+ [nueva] P1: "sube"->sube 18/30 = 60% | "no sube"->sube 12/30 = 40% | Fisher p=0.196
+       P2: con pasarela 10/13 = 77% | sin pasarela 8/17 = 47% | Fisher p=0.141
+ [AR] P1: "sube"->sube 12/27 = 44% | "no sube"->sube 15/27 = 56% | Fisher p=0.587

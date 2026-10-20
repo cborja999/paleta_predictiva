@@ -1,0 +1,29 @@
+REGLAS DE LA CAPA DE PRENSA INTERNACIONAL, CICLO 2022-2023 (fijadas 20/10/2026 antes de leer notas). No se cambian despues de ver resultados.
+Pregunta (pedido de Borja): si miramos todo el mundo, lo que la prensa de moda internacional nombra de las semanas de la moda, junto con las busquedas, coincide con lo que despues se mantuvo o subio?
+
+CICLO: d0 = oct-2022. Temporadas: SS2022 (desfiles sep-oct 2021), FW2022 (feb-mar 2022) y SS2023 (sep-oct 2022). Son las 3 temporadas "recientes" de la regla de la pagina para ese brief.
+Resultado a predecir: el mismo de la prediccion congelada (cambio oct-2023 a sep-2024 contra oct-2021 a sep-2022, menos la mediana de la familia; "sube" si > 0). Ya existe y esta dentro de la ventana limpia.
+
+FUENTES (internacionales, de moda): Vogue (todas las ediciones), Harper's Bazaar, Elle, Vogue Scandinavia, Russh, AE World, Who What Wear, Fashionista, InStyle, Glamour, Marie Claire, WWD, Business of Fashion. Se usan solo las paginas que la herramienta de lectura puede abrir. No se rodean bloqueos (si una pagina no abre, no entra).
+NO entran: street style solo, celebridades/alfombra roja, contenido patrocinado o de marca, notas sin relacion con desfiles, notas de hombre.
+TIPO DE NOTA: resumen de tendencias de la temporada o resena de una semana de la moda (ciudad). Una nota por medio y temporada como maximo para resumenes; las resenas de ciudad cuentan como notas distintas.
+VENTANA: desde el inicio de las semanas de la moda hasta 3 meses despues. SS: 8 sep a 5 oct (+3 meses); FW: 10 feb a 8 mar (+3 meses). La fecha se toma de la pagina; si no se puede verificar, la nota no se usa.
+
+ETIQUETADO: solo categorias del diccionario del proyecto (colores: Negro, Blanco, Gris, Beige/Crema, Marron, Rojo, Rosa, Naranja, Verde, Azul, Metalizado, etc.; prendas: Vestido, Falda, Pantalon, Blazer/Saco, Abrigo/Campera, Tejido/Sweater, Top/Blusa/Camisa, Mono; largos: Mini, Midi, Maxi). Se lee con la herramienta y se pide solo etiquetas cortas; no se copia texto. Todas las etiquetas son automaticas ("leida (auto)") y se marcan asi.
+Se cuenta una categoria en una nota solo si la nota la nombra como tendencia o como presencia destacada de los desfiles (no si aparece de pasada).
+
+COBERTURA MINIMA: al menos 12 notas en total y al menos 3 por temporada. Si no se llega, se informa "cobertura insuficiente" y no se calcula la senal de prensa.
+
+SENAL DE PRENSA: una categoria "tiene prensa" si aparece en al menos 25% de las notas del ciclo (las 3 temporadas juntas).
+COINCIDENCIA: la categoria tiene prensa Y la pasarela sube (>= 1 punto, regla de la pagina para d0 = oct-2022) Y las busquedas "suben" (inercia > 0) en la familia que se evalua.
+
+COMPARACION (unica):
+C1. Entre pares (categoria x familia del mundo) con busquedas "sube": % que efectivamente sube si ademas tiene prensa, contra si no tiene prensa. Conteos y p de Fisher.
+C2. Entre pares con coincidencia completa (prensa + pasarela + busquedas): % que sube, contra el resto. Conteos y p de Fisher.
+No se hace ninguna otra comparacion. Con pocos casos no se saca conclusion fuerte; se dice.
+
+LIMITES DECLARADOS
+- Etiquetas automaticas, no revisadas por una persona.
+- Pocas notas, medios que pueden abrir las herramientas (sesgo de seleccion).
+- Los pares de un mismo ciclo no son independientes.
+- Se mide busquedas, no ventas.

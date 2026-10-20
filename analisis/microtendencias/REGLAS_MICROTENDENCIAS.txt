@@ -1,0 +1,51 @@
+REGLAS FIJADAS ANTES DE BAJAR LOS DATOS (20/10/2026). No se cambian despues de ver resultados.
+Prueba M1: ¿las tendencias de pasarela que GANAN interes despues de aparecer se quedan, y las que caen o quedan planas son pasajeras?
+
+POR QUE ESTA PRUEBA
+Las pruebas anteriores usaban ~20 categorias amplias (colores, prendas basicas). Una "moda pasajera" es algo puntual (una prenda, un detalle,
+una estetica). Aca la muestra son las tendencias que un medio nombro como las mas importantes de cada fashion week, elegidas por el medio
+en su momento (no por nosotros con el diario del lunes).
+
+MUESTRA
+- Fuente: las listas "biggest trends" de Who What Wear de 9 temporadas, SS2019 a SS2023 (fuentes_listas.csv). Un solo medio, mismo formato.
+- Cada tendencia se pasa a UN termino de busqueda en ingles (terminos_declarados.csv), escrito antes de bajar nada:
+  colores como "<color> dress"; prendas y detalles con su nombre literal; se descarta lo que no nombra algo buscable
+  (p. ej. "Pretty things", "Dark romance") y las repetidas (entra solo la primera aparicion). 102 tendencias -> 68 terminos.
+- Si un termino no se puede usar (ver abajo) se descarta sin reemplazo.
+
+DATOS
+- Google Trends, busqueda web, MUNDO, mensual, ene-2011 a dic-2024 (despues de 2025 Google cambio como mide). Un termino por consulta.
+- Sensibilidad: lo mismo con Google Shopping (MUNDO).
+- Termino usable si en los 36 meses de analisis (e-12 a e+23) hay como maximo 12 meses en cero y B0, B1 y B2 son mayores que cero.
+
+MEDIDAS (e = mes del desfile: SS -> octubre del anio anterior, FW -> marzo; igual que el resto del proyecto)
+- B0 = promedio [e-12, e-1]  (anio antes del desfile)
+- B1 = promedio [e, e+11]    (primer anio despues de aparecer)
+- B2 = promedio [e+12, e+23] (segundo anio: el "anio mas")
+  Siempre 12 meses completos para que la estacion se cancele.
+- g1 = log(B1/B0) - mediana de g1 entre los terminos de la misma temporada (saca lo que movio a toda la moda, p. ej. la pandemia).
+- c2 = log(B2/B1) - mediana de c2 entre los terminos de la misma temporada.
+
+GRUPOS (segun g1, lo que paso en el primer anio)
+- SUBE: g1 >= +0.10   |   PLANO: -0.10 < g1 < +0.10   |   CAE: g1 <= -0.10
+
+RESULTADO ("se mantiene por lo menos un anio mas")
+- Principal: SE QUEDA si c2 >= -0.10 (en el segundo anio no pierde mas de ~10% contra el resto de las tendencias). PASAJERA si c2 < -0.10.
+  Ojo: comparar B2 contra B1 juega EN CONTRA de los que suben (si B1 salio alto por azar, B2 tiende a bajar). Es una prueba exigente a proposito.
+- Secundario 1: c2 > 0 (sigue ganando contra el resto).
+- Secundario 2 (sin restar mediana): B2/B1 >= 0.9.
+- Secundario 3: Google Shopping con el resultado principal.
+
+PRUEBA Y CRITERIO
+- % que SE QUEDA en SUBE contra % en PLANO+CAE. Fisher exacto a dos colas.
+- Apoya la hipotesis si la diferencia es >= 10 puntos con p < 0.05 en el resultado principal.
+- Se informa igual SUBE vs PLANO vs CAE por separado, y una correlacion de Spearman entre g1 y c2 (continuo).
+- Si da en contra o plano, se dice asi.
+
+LIMITES DECLARADOS
+- Un solo medio (Who What Wear) y terminos en ingles: mide el mercado global de habla inglesa.
+- El paso tendencia -> termino es una decision nuestra (documentada fila por fila).
+- Terminos de una misma temporada no son independientes.
+- Busquedas no son ventas.
+- Conocemos de antemano como les fue a algunas tendencias (sesgo de conocimiento previo); por eso la lista la eligio el medio y el
+  mapeo es literal.
