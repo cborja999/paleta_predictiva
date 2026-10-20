@@ -1,0 +1,59 @@
+shopping pink dress           ceros=0%
+shopping red dress            ceros=0%
+shopping black dress          ceros=0%
+shopping white dress          ceros=0%
+shopping blue dress           ceros=0%
+shopping green dress          ceros=0%
+shopping brown dress          ceros=0%
+shopping beige dress          ceros=3%
+shopping orange dress         ceros=0%
+shopping gray dress           ceros=11%
+shopping silver dress         ceros=0%
+shopping skirt outfit         ceros=19%
+shopping midi skirt outfit    ceros=95%
+shopping mini skirt outfit    ceros=80%
+shopping blazer outfit        ceros=50%
+shopping trousers outfit      ceros=68%
+shopping coat outfit          ceros=51%
+shopping sweater outfit       ceros=44%
+shopping jumpsuit outfit      ceros=38%
+shopping blouse outfit        ceros=68%
+=== P3 PISOS (casos desde FW2015 aprox, comun a todas las reglas; B3 pide 36 meses de historia)
+Familia original casos 450
+  A tracción (inercia 12m)     290/450 = 64.4%
+  B1 popular sigue creciendo   184/450 = 40.9%
+  B2 momentum corto (6m)       259/450 = 57.6%
+  B3 tendencia lineal 36m      272/450 = 60.4%
+  B4 siempre SUBE              216/450 = 48.0%
+  A vs B1 popular sigue creciendo +23.6 pts -> supera
+  A vs B2 momentum corto (6m)     +6.9 pts -> supera
+  A vs B3 tendencia lineal 36m    +4.0 pts -> supera
+  A vs B4 siempre SUBE            +16.4 pts -> supera
+Familia nueva casos 360
+  A tracción (inercia 12m)     248/360 = 68.9%
+  B1 popular sigue creciendo   150/360 = 41.7%
+  B2 momentum corto (6m)       217/360 = 60.3%
+  B3 tendencia lineal 36m      242/360 = 67.2%
+  B4 siempre SUBE              180/360 = 50.0%
+  A vs B1 popular sigue creciendo +27.2 pts -> supera
+  A vs B2 momentum corto (6m)     +8.6 pts -> supera
+  A vs B3 tendencia lineal 36m    +1.7 pts -> no se distingue
+  A vs B4 siempre SUBE            +18.9 pts -> supera
+=== P4 NIVELES DE CONFIANZA (terciles de |inercia| por familia, casos completos)
+Familia original cortes |inercia|: 0.048 / 0.120
+  Baja   94/166 = 57% | SUBE  40/ 70 = 57% | NO SUBE  54/ 96 = 56%
+  Media 113/167 = 68% | SUBE  43/ 68 = 63% | NO SUBE  70/ 99 = 71%
+  Alta  120/167 = 72% | SUBE  70/101 = 69% | NO SUBE  50/ 66 = 76%
+  creciente: True | Alta-Baja = +15 pts
+Familia nueva cortes |inercia|: 0.049 / 0.127
+  Baja   79/133 = 59% | SUBE  33/ 59 = 56% | NO SUBE  46/ 74 = 62%
+  Media  96/133 = 72% | SUBE  39/ 56 = 70% | NO SUBE  57/ 77 = 74%
+  Alta  101/134 = 75% | SUBE  66/ 85 = 78% | NO SUBE  35/ 49 = 71%
+  creciente: True | Alta-Baja = +16 pts
+=== P5 ARGENTINA (tracción)
+Total 176/360 = 49% p=0.679
+Solo series con <25% ceros (15 series): 156/300 = 52% p=0.297
+   series usadas en la sensibilidad: ['Abrigo/Campera', 'Azul', 'Blanco', 'Blazer/Saco', 'Falda', 'Gris', 'Mono', 'Naranja', 'Negro', 'Pantalon', 'Rojo', 'Rosa', 'Tejido/Sweater', 'Top/Blusa/Camisa', 'Verde']
+=== P6 SHOPPING
+categorias usables: 14 casos 280
+Total 170/280 = 61% p=0.000

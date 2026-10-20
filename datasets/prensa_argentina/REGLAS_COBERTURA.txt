@@ -1,0 +1,12 @@
+REGLAS DE COBERTURA DE TEMPORADA (fijadas 19/10/2026 antes de juntar). Fuera del repo.
+Pregunta: cuando la prensa argentina publica la nota de tendencias de cada temporada, respecto de las semanas de la moda de NY/Londres/Milan/Paris, y que colores/prendas destaca.
+Temporadas: SS2023..SS2027 (desfiles sep-oct 2022..2026) y FW2023..FW2026 (desfiles feb-mar 2023..2026) = 9.
+Medios aprobados: Infobae, La Nacion, Clarin (incl. Elle Argentina), La Gaceta, Diario de Cuyo, Marie Claire Argentina.
+Por medio x temporada: la nota MAS TEMPRANA que resuma tendencias de esa temporada a partir de desfiles internacionales (publicada desde el inicio del ciclo de desfiles hasta 6 meses despues). Si no se encuentra, "sin nota encontrada" (no se rellena).
+Ventana del ciclo de desfiles (aproximada, +-1 semana): SS = 8 sep a 5 oct; FW = 10 feb a 8 mar (del anio de la temporada).
+Categoria de demora: durante el ciclo / 0-1 mes despues / 1-3 meses despues / mas de 3 meses despues.
+Se registra SOLO: medio, temporada, fecha, url, titulo, colores_mencionados, prendas_mencionadas, largos_mencionados, cita_fuente (desfile/casa/Pantone/WGSN/Heuritech/ninguna). No se copia texto.
+Colores/prendas: solo categorias del diccionario del proyecto (Rosa, Rojo, Negro, Blanco, Azul, Verde, Marron, Beige/Crema, Naranja, Gris, Metalizado, ...; Falda, Vestido, Blazer, Pantalon, Abrigo, Sweater, Mono, Top/Blusa; Mini, Midi, Largo).
+Si la fecha no es verificable (URL o pagina) la nota no se usa.
+Lectura: cobertura de prensa (no demanda). El desfase medido es de la prensa. Muestra chica, sin prueba estadistica.
+Verificacion: reabrir 5 notas al azar para confirmar fecha y etiquetas.

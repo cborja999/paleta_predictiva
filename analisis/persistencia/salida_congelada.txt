@@ -1,0 +1,47 @@
+filas 63
+sha256 3b022ec2c78b9f937097cb0ad1e9a9e2b77c4c2bf15b8aae335fabf9a2e9bac8
+nueva     color   Gris              gray dress             +1.46 SUBE    Alta
+nueva     color   Metalizado        silver dress           +0.98 SUBE    Alta
+nueva     color   Beige/Crema       beige dress            +0.65 SUBE    Alta
+nueva     color   Marron            brown dress            +0.38 SUBE    Alta
+nueva     color   Naranja           orange dress           +0.25 SUBE    Alta
+nueva     largo   Midi              midi skirt outfit      +0.18 SUBE    Alta
+nueva     color   Azul              blue dress             +0.12 SUBE    Media
+nueva     color   Negro             black dress            +0.11 SUBE    Media
+nueva     color   Verde             green dress            +0.09 SUBE    Media
+nueva     color   Blanco            white dress            +0.01 SUBE    Baja
+nueva     prenda  Pantalon          trousers outfit        -0.01 NO SUBE Baja
+nueva     color   Rojo              red dress              -0.01 NO SUBE Baja
+nueva     prenda  Top/Blusa/Camisa  blouse outfit          -0.02 NO SUBE Baja
+nueva     color   Rosa              pink dress             -0.04 NO SUBE Baja
+nueva     largo   Mini              mini skirt outfit      -0.04 NO SUBE Baja
+nueva     prenda  Abrigo/Campera    coat outfit            -0.09 NO SUBE Media
+nueva     prenda  Blazer/Saco       blazer outfit          -0.14 NO SUBE Alta
+nueva     prenda  Tejido/Sweater    sweater outfit         -0.15 NO SUBE Alta
+nueva     prenda  Falda             skirt outfit           -0.24 NO SUBE Alta
+nueva     prenda  Mono              jumpsuit outfit        -0.39 NO SUBE Alta
+original  largo   Midi              midi skirt             +0.81 SUBE    Alta
+original  largo   Mini              mini skirt             +0.44 SUBE    Alta
+original  silueta Estructurada      tailored               +0.42 SUBE    Alta
+original  color   Metalizado        silver outfit          +0.33 SUBE    Alta
+original  silueta Amplia/Oversized  oversized              +0.30 SUBE    Alta
+original  silueta Ajustada          bodycon dress          +0.14 SUBE    Alta
+original  silueta Fluida/Drapeada   flowy dress            +0.08 SUBE    Media
+original  prenda  Blazer/Saco       blazer                 +0.03 SUBE    Baja
+original  prenda  Pantalon          trousers               +0.03 SUBE    Baja
+original  color   Gris              gray outfit            +0.03 SUBE    Baja
+original  color   Marron            brown outfit           +0.02 SUBE    Baja
+original  prenda  Falda             skirt                  +0.01 SUBE    Baja
+original  color   Naranja           orange outfit          +0.00 NO SUBE Baja
+original  prenda  Tejido/Sweater    sweater                -0.01 NO SUBE Baja
+original  color   Negro             black outfit           -0.02 NO SUBE Baja
+original  color   Azul              blue outfit            -0.04 NO SUBE Baja
+original  color   Rosa              pink outfit            -0.04 NO SUBE Baja
+original  prenda  Abrigo/Campera    coat                   -0.07 NO SUBE Media
+original  color   Rojo              red outfit             -0.07 NO SUBE Media
+original  color   Verde             green outfit           -0.08 NO SUBE Media
+original  color   Blanco            white outfit           -0.08 NO SUBE Media
+original  prenda  Vestido           dress                  -0.18 NO SUBE Alta
+original  color   Beige/Crema       beige outfit           -0.18 NO SUBE Alta
+original  prenda  Top/Blusa/Camisa  blouse                 -0.20 NO SUBE Alta
+original  prenda  Mono              jumpsuit               -0.30 NO SUBE Alta

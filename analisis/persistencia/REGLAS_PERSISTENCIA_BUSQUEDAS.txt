@@ -1,0 +1,10 @@
+REGLAS FIJADAS ANTES DE CORRER (19/10/2026): P8 - ¿Lo que gana interes en busquedas se QUEDA?
+Por categoria y fecha de desfile d (mismas temporadas y ventana limpia FW2013..SS2023; minimo 8 categorias por temporada):
+  L0 = prom[d-24,d-13]; L1 = prom[d-12,d-1]; L2 = prom[d+12,d+23].
+  g1 = log(L1/L0) - mediana de la temporada; g2 = log(L2/L0) - mediana de la temporada.
+  "Gano interes" = g1 >= 0.10. Control = |g1| < 0.10.
+  "Se queda" (S1) = g2 > 0 (un anio despues sigue por encima del nivel previo a la suba).
+  "Se queda fuerte" (S2) = g2 >= 0.5 * g1 (conserva al menos la mitad de la suba), solo para los que ganaron interes.
+  "Moda pasajera" = gano interes y g2 <= 0.
+Prueba: % de S1 en "gano interes" vs control; p por mezcla de etiquetas (2000). Familias: original (X outfit) y nueva (X dress / X outfit).
+Criterio: apoya "lo que gana interes se queda" si S1(gano) supera a control por >= 10 puntos con p < 0.05 en AMBAS familias.

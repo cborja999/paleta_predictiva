@@ -1,0 +1,8 @@
+REGLAS FIJADAS ANTES DE CORRER (20/10/2026). Datos: Google Trends, geo=AR, categoria Compras (18), 2011-01..2026-09, bajados el 20/10/2026 desde Chrome. 20 terminos de TERMINOS_DECLARADOS.txt (version AR).
+Un termino con mas de 50% de meses en cero se marca "no usable" y no se reemplaza (misma regla que Shopping mundo). Minimo 8 categorias por temporada.
+Pruebas (mismas ventanas L0/L1/L2, FW2013..SS2023, ventana limpia hasta 2024-12):
+ T1 "se queda" original: g2=log(L2/L0)-mediana > 0 en los que ganaron interes (g1>=0.10) vs control (|g1|<0.10).
+ T2 "se queda" limpio: h=log(L2/L1)-mediana >= -0.10 en los que ganaron interes vs control.
+ Criterio de apoyo (igual que antes): ganaron supera al control por >=10 puntos con p<0.05 (permutacion 2000).
+ T3 retraso: Spearman entre la suba mundial en busqueda general (familia 'nueva') en d y la suba de Shopping AR medida en d+k, k=0,6,12,18 (misma regla declarada: retraso solo si k supera a k=0 en >=0,10 con p<0,05).
+No se cambian terminos ni umbrales despues de ver resultados.

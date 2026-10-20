@@ -1,0 +1,26 @@
+REGLAS FIJADAS ANTES DE CORRER (19/10/2026, fase 2). No se cambian despues de ver resultados.
+Marco comun: "Tracción (A)" = regla ya usada: SUBE si inercia previa > 0 (log prom[d-12,d-1]/prom[d-24,d-13], menos mediana de la temporada); si no, NO SUBE.
+Acierto: SUBE y cambio relativo > 0, o NO SUBE y cambio relativo <= 0. Cambio = log prom[d+12,d+23]/prom[d-12,d-1], menos mediana de la temporada.
+Casos: temporadas FW2013..SS2023 con ventana limpia (resultado termina <= dic-2024), minimo 8 categorias por temporada.
+
+P3 - PISOS (¿A supera reglas simples sin pasarela?) familia original (500 casos) y familia nueva:
+  B1 "popular sigue creciendo": SUBE si el nivel de los 12 meses previos esta por encima de la mediana de la temporada.
+  B2 "momentum corto": SUBE si log prom[d-6,d-1]/prom[d-12,d-7], menos mediana de la temporada, > 0.
+  B3 "tendencia lineal 36 meses": SUBE si la pendiente de regresion lineal de los 36 meses previos a d (sobre log), menos mediana de la temporada, > 0.
+  B4 "siempre SUBE".
+  Mismo criterio de acierto. A "supera" a un piso si lo supera por >= 3 puntos porcentuales; si no, "no se distingue".
+
+P4 - NIVELES DE CONFIANZA: tres niveles segun |inercia previa| (terciles de |inercia| sobre todos los casos; se fijan sin mirar resultados): Baja, Media, Alta.
+  Se reporta % de acierto por nivel, por familia (original y nueva) y por direccion (SUBE / NO SUBE).
+  Los niveles son utiles si el acierto crece de Baja a Alta en ambas familias y Alta - Baja >= 8 puntos en ambas. Si no, no se ofrecen niveles de confianza por tracción.
+
+P5 - ARGENTINA: tracción (A) sobre series AR (terminos en espanol) mapeadas a las mismas categorias:
+  colores vestido rosa/rojo/negro/blanco/azul/verde/beige/naranja/gris/plateado; pollera->Falda, pollera mini->Mini, blazer, pantalon, sweater->Tejido, tapado->Abrigo, camisa->Top/Blusa/Camisa, enterito->Mono.
+  Excluidas: vestido marron, pollera midi (>50% ceros). Sensibilidad declarada: solo series con <25% de meses en cero.
+  Criterio: confirmada si acierta >= 58% con p < 0.05 (permutacion dentro de temporada, 2000).
+
+P6 - SHOPPING (otra fuente): mismos 20 terminos globales, propiedad Google Shopping, mensual 2011-2026. Excluida la serie con >50% de ceros. Si quedan menos de 8 categorias utiles por temporada, no se puede testear y se reporta. Mismo criterio que P5.
+
+P7 - PREDICCION CONGELADA (fecha 19/10/2026): con datos hasta sep-2026. d = oct-2026.
+  Inercia = log prom[oct-2025..sep-2026] / prom[oct-2024..sep-2025], menos mediana del bloque (por familia: original, nueva, AR). SUBE si > 0. Nivel segun los cortes de P4 (terciles de las 500 filas historicas).
+  Chequeo principal: oct-2028 (cambio de oct-2027..sep-2028 vs oct-2025..sep-2026). Chequeo intermedio exploratorio: oct-2027 (oct-2026..sep-2027 vs los 12 meses previos). Se guarda con hash sha256.

@@ -1,0 +1,11 @@
+TEST 1 - se queda LIMPIO (h=log(L2/L1)-mediana; no retrocede si h>=-0.10)
+original  gano n=120: no retrocede 84% | control n=287: 70% | dif +14 pts p=0.001 | mediana h gano +0.08
+nueva     gano n=106: no retrocede 84% | control n=226: 69% | dif +14 pts p=0.003 | mediana h gano +0.13
+AR        gano n=96: no retrocede 67% | control n=177: 73% | dif -7 pts p=0.906 | mediana h gano +0.03
+
+TEST 2 - Argentina vs mundo, retraso k meses
+categorias comunes: 18
+k= 0 meses | n=396 | Spearman 0.092 p=0.028 | mundo gano => AR gano: 30% (n=97) vs base AR 26%
+k= 6 meses | n=396 | Spearman 0.062 p=0.109 | mundo gano => AR gano: 31% (n=97) vs base AR 27%
+k=12 meses | n=396 | Spearman -0.019 p=0.652 | mundo gano => AR gano: 25% (n=97) vs base AR 23%
+k=18 meses | n=378 | Spearman -0.022 p=0.655 | mundo gano => AR gano: 24% (n=96) vs base AR 26%

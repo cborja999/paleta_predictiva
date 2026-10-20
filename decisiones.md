@@ -65,3 +65,12 @@ Se descartaron los Trends sueltos de colores y prendas del Drive (8 terminos ele
 - Idea de Borja: reunir a mano notas, reseñas y videos de medios y marcas (incluidos argentinos) para tener datos de Argentina y otra medida de repercusión. Se hace como corpus con protocolo, no como entrenamiento de un modelo.
 - Pregunta, muestreo y período fijados antes de cargar (ver `datasets/corpus_medios/PROTOCOLO.md`). Se reporta el resultado sea cual sea.
 - Pendiente: el grupo confirma la lista de fuentes (`fuentes.md`).
+
+## Persistencia en busquedas, Argentina y prensa (20 de octubre de 2026)
+- Decision: dejar de buscar que la pasarela prediga las busquedas (51%, azar) y probar si lo que gana interes en busquedas se queda. Usamos solo datos reales de la web; sin entrevistas ni ventas.
+- Reglas escritas antes de correr cada prueba (`analisis/persistencia/REGLAS_*.txt`). Se reporta el resultado sea cual sea.
+- Resultado: en el mundo, +14 puntos con el test limpio (84% contra 70%). El +45 de la primera version estaba inflado por la base compartida. En Argentina (busquedas generales y Shopping) no se sostiene (-7 puntos). No hay retraso de 12 a 18 meses entre el mundo y Argentina.
+- Producto: la senal principal es la busqueda; la pasarela es contexto visual; la prensa argentina es contexto local con confianza menor. En Argentina no se ofrece nivel de confianza.
+- Prediccion congelada el 19/10/2026 (63 filas, sha256 en `SHA256_prediccion_congelada.txt`). Chequeo principal: octubre de 2028; intermedio exploratorio: octubre de 2027.
+- Prensa: 83 filas cargadas por el grupo, 70 de medios aprobados. Se guardan sin corregir y se listan los problemas de carga (`datasets/prensa_argentina/README.md`). Pendiente revisar 5 notas automaticas.
+- Ventas: no hay datos publicos de ventas argentinas por color o prenda; Shopping Argentina mide busquedas de compra, no compras.

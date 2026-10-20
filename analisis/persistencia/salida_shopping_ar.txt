@@ -1,0 +1,27 @@
+vestido rosa       ceros=3% 
+vestido rojo       ceros=0% 
+vestido negro      ceros=0% 
+vestido blanco     ceros=1% 
+vestido azul       ceros=2% 
+vestido verde      ceros=2% 
+vestido beige      ceros=55% NO USABLE
+vestido naranja    ceros=55% NO USABLE
+vestido gris       ceros=37% 
+vestido plateado   ceros=61% NO USABLE
+pollera            ceros=0% 
+pollera mini       ceros=61% NO USABLE
+blazer             ceros=0% 
+pantalon           ceros=0% 
+sweater            ceros=0% 
+tapado             ceros=3% 
+camisa             ceros=0% 
+enterito           ceros=1% 
+usables: 14
+T1 se queda (original, base L0): casos=280 | gano n=61: 89% | control n=168: 44% | dif +44 pts p=0.000
+T2 se queda limpio (L2 vs L1): casos=280 | gano n=61: 69% | control n=168: 76% | dif -7 pts p=0.892
+
+T3 retraso: suba mundial (busqueda general) vs suba Shopping AR
+k= 0 | n=308 | Spearman 0.265 p=0.000 | mundo gano => Shopping AR gano: 32% (n=78) vs base 22%
+k= 6 | n=308 | Spearman 0.185 p=0.001 | mundo gano => Shopping AR gano: 31% (n=78) vs base 23%
+k=12 | n=308 | Spearman 0.039 p=0.253 | mundo gano => Shopping AR gano: 22% (n=78) vs base 21%
+k=18 | n=294 | Spearman 0.060 p=0.173 | mundo gano => Shopping AR gano: 23% (n=78) vs base 23%

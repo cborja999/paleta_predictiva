@@ -12,6 +12,12 @@ Beltran Martinez, Borja Centeno y Luigi Bonomi.
 
 Los colores, siluetas y tipos de prenda dominantes en las pasarelas de las principales fashion weeks (Nueva York, Londres, Milan, Paris) anticipan los colores, siluetas y prendas mas vendidas en retail de moda masivo, con un desfasaje de entre 12 y 18 meses.
 
+**Hipotesis original: no se sostuvo** (la pasarela sola acierta 51%, como el azar). Ver mas abajo.
+
+## Hipotesis actual (20/10/2026)
+
+Los colores, prendas y largos cuyas busquedas **ganan interes** tienden a **quedarse** mas que los que no se movieron. En busquedas del mundo la ventaja es de unos 14 puntos con el test limpio (84% contra 70%). **En Argentina no se confirmo** (busquedas generales y de Shopping). Argentina se mueve casi a la par que el mundo; no hay evidencia de un retraso de 12 a 18 meses. La pasarela queda como contexto visual y la prensa argentina como contexto local. Recorrido del producto: se vio en pasarela, la prensa lo nombra y las busquedas suben. Detalle en `analisis/persistencia/resumen.md`. La prediccion quedo congelada el 19/10/2026 (`analisis/persistencia/prediccion_congelada_2026-10-19.csv`, con huella sha256); chequeo principal en octubre de 2028.
+
 ## Sitio
 
 Link al sitio: pendiente (se publica en Netlify desde la carpeta app/). Captura: pendiente.
@@ -57,3 +63,9 @@ Dataset del proyecto CICLO (Berney, Dobler, Dottori Greco). Las casas que tenemo
 
 ## Respuesta a la devolución de la Entrega 2 (octubre 2026)
 Carpeta `entregas/entrega_3/`: qué observaron los docentes, qué hicimos (`respuesta_a_la_devolucion.md`), proceso y criterios (`proceso_y_criterios.md`) y guion de pantallas (`guion_pantallas.md`). Nuevos análisis: `analisis/backtest_resumen.md` (acierto histórico por nivel de confianza) y `analisis/validacion_gemini_resumen.md` (validación de 40 fotos).
+
+
+## Persistencia en busquedas y prensa argentina (octubre 2026)
+- `analisis/persistencia/`: reglas fijadas antes de correr, scripts, resultados y prediccion congelada. Los datos nuevos de Google Trends (mundo, Argentina y Shopping, mensual 2011 a sep 2026) estan en `analisis/persistencia/datos/`.
+- `datasets/prensa_argentina/`: planilla de notas de prensa argentina cargada por el grupo (83 filas) con la lista de problemas de carga detectados.
+- Limites: Trends mide busquedas y no ventas; 20 a 27 temporadas; la muestra de prensa es chica y desigual entre temporadas.

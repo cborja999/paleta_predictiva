@@ -1,0 +1,27 @@
+shopping pink dress           ceros=0%
+shopping red dress            ceros=0%
+shopping black dress          ceros=0%
+shopping white dress          ceros=0%
+shopping blue dress           ceros=0%
+shopping green dress          ceros=0%
+shopping brown dress          ceros=0%
+shopping beige dress          ceros=3%
+shopping orange dress         ceros=0%
+shopping gray dress           ceros=11%
+shopping silver dress         ceros=0%
+shopping skirt outfit         ceros=19%
+shopping midi skirt outfit    ceros=95%
+shopping mini skirt outfit    ceros=80%
+shopping blazer outfit        ceros=50%
+shopping trousers outfit      ceros=68%
+shopping coat outfit          ceros=51%
+shopping sweater outfit       ceros=44%
+shopping jumpsuit outfit      ceros=38%
+shopping blouse outfit        ceros=68%
+original  casos=500 | gano interes n=120: se queda 88%, se queda fuerte 80%, moda pasajera 12% | control n=287: 43% | dif +45 pts p=0.000
+nueva     casos=400 | gano interes n=106: se queda 91%, se queda fuerte 82%, moda pasajera 9% | control n=226: 42% | dif +48 pts p=0.000
+AR        casos=360 | gano interes n=96: se queda 86%, se queda fuerte 69%, moda pasajera 14% | control n=177: 45% | dif +41 pts p=0.000
+original/color casos=220 | gano interes n=30: se queda 97%, se queda fuerte 83%, moda pasajera 3% | control n=153: 44% | dif +52 pts p=0.000
+original/prenda casos=200 | gano interes n=38: se queda 89%, se queda fuerte 79%, moda pasajera 11% | control n=147: 42% | dif +47 pts p=0.000
+nueva/color casos=220 | gano interes n=23: se queda 91%, se queda fuerte 70%, moda pasajera 9% | control n=168: 47% | dif +44 pts p=0.000
+nueva/prenda casos=180 | gano interes n=35: se queda 77%, se queda fuerte 57%, moda pasajera 23% | control n=116: 42% | dif +35 pts p=0.000

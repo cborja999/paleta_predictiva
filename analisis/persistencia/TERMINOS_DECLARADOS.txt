@@ -1,0 +1,11 @@
+Declarado 2026-10-19 ANTES de bajar datos. No se cambia la lista despues de ver resultados.
+Periodo: 2011-01 a 2026-09, mensual, categoria moda/todas (sin filtro), una consulta por termino.
+
+GLOBAL (confirmar A con familia distinta de "X outfit"), geo=mundo:
+ colores: pink dress, red dress, black dress, white dress, blue dress, green dress, brown dress, beige dress, orange dress, gray dress, silver dress
+ prendas/largos: midi skirt outfit, mini skirt outfit, skirt outfit, blazer outfit, trousers outfit, coat outfit, sweater outfit, jumpsuit outfit, blouse outfit
+
+ARGENTINA (para C), geo=AR, terminos en espanol:
+ colores: vestido rosa, vestido rojo, vestido negro, vestido blanco, vestido azul, vestido verde, vestido marron, vestido beige, vestido naranja, vestido gris, vestido plateado
+ prendas/largos: pollera midi, pollera mini, pollera, blazer, pantalon, sweater, tapado, camisa, enterito
+Si un termino da casi todo ceros se marca "no usable" y se reporta, no se reemplaza por otro.

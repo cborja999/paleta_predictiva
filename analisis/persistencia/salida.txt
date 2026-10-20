@@ -1,0 +1,60 @@
+=== PRUEBA A2: traccion con familia nueva (X dress / X outfit)
+Total: 276 de 400 = 69%  p=0.000
+  mitad vieja: 150 de 200 = 75%
+  mitad nueva: 126 de 200 = 63%
+  solo colores: 155 de 220 = 70%
+  solo prendas+largos: 121 de 180 = 67%
+Referencia familia original (mismas categorias): 257 de 400 = 64%
+
+=== PRUEBA B2: gano presencia en pasarela -> exito en busquedas (cambio relativo>0), vs control
+terminos originales: gano 101 casos, exito 45% | control 285 casos, exito 53% | dif -8 pts | p=0.948
+terminos nuevos: gano 67 casos, exito 54% | control 259 casos, exito 51% | dif +3 pts | p=0.365
+
+=== PRUEBA C0: Argentina vs mundo (desfase)
+Excluidos (>50% de meses en cero): [('vestido marron', 0.68), ('pollera midi', 0.85)]
+Pares usados: 18
+  L=-12  corr media=-0.045
+  L=-11  corr media=-0.029
+  L=-10  corr media=+0.012
+  L= -9  corr media=+0.041
+  L= -8  corr media=+0.048
+  L= -7  corr media=+0.047
+  L= -6  corr media=-0.034
+  L= -5  corr media=-0.082
+  L= -4  corr media=-0.116
+  L= -3  corr media=-0.081
+  L= -2  corr media=-0.037
+  L= -1  corr media=+0.104
+  L= +0  corr media=+0.252
+  L= +1  corr media=+0.099
+  L= +2  corr media=-0.032
+  L= +3  corr media=-0.039
+  L= +4  corr media=+0.015
+  L= +5  corr media=+0.043
+  L= +6  corr media=+0.063
+  L= +7  corr media=+0.029
+  L= +8  corr media=-0.079
+  L= +9  corr media=-0.134
+  L=+10  corr media=-0.114
+  L=+11  corr media=-0.072
+  L=+12  corr media=+0.032
+Pico del perfil promedio en L=+0 (corr 0.252); L=0: 0.252
+L optimo >0: 9 | <0: 2 | =0: 7 | prueba de signos bilateral p=0.065
+   vestido rosa       L optimo=+0
+   vestido rojo       L optimo=+5
+   vestido negro      L optimo=+0
+   vestido blanco     L optimo=+0
+   vestido azul       L optimo=+0
+   vestido verde      L optimo=+4
+   vestido beige      L optimo=+1
+   vestido naranja    L optimo=+6
+   vestido gris       L optimo=-5
+   vestido plateado   L optimo=+6
+   pollera            L optimo=+1
+   pollera mini       L optimo=+0
+   blazer             L optimo=+0
+   pantalon           L optimo=+7
+   sweater            L optimo=+6
+   tapado             L optimo=-5
+   camisa             L optimo=+0
+   enterito           L optimo=+5

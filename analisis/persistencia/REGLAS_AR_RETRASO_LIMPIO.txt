@@ -1,0 +1,16 @@
+REGLAS FIJADAS ANTES DE CORRER (20/10/2026, antes de ver resultados)
+Mismas temporadas y ventana limpia (FW2013..SS2023, datos hasta 2024-12), mismos terminos de TERMINOS_DECLARADOS.txt. Ventanas de 12 meses: cancelan la estacionalidad (clima).
+
+TEST 1 - "SE QUEDA" LIMPIO (sin base compartida), familias original/nueva/AR:
+  h = log(L2/L1) - mediana de la temporada (L2 = prom[d+12,d+23], L1 = prom[d-12,d-1]).
+  Entre los que "ganaron interes" (g1>=0.10) vs control (|g1|<0.10):
+  "no retrocede" = h >= -0.10.
+  Apoya la hipotesis si: % no retrocede (gano) >= 60% y no menor que el control. p por mezcla de etiquetas (2000).
+
+TEST 2 - ARGENTINA VS MUNDO CON RETRASO (pares: misma categoria en mundo 'nueva' y AR; solo categorias con ambas):
+  gM(d)  = suba mundial a la fecha d (log(L1/L0) - mediana de temporada).
+  gAR(d+k) = suba argentina medida con las ventanas corridas k meses: log(prom[d+k-12,d+k-1]/prom[d+k-24,d+k-13]) - mediana, k = 0, 6, 12, 18.
+  Se reporta la correlacion de Spearman entre gM(d) y gAR(d+k) para cada k y el % de casos en que "mundo gano interes" => "AR gano interes en d+k" contra la base (% general de AR que gana).
+  p por permutacion de etiquetas (2000). Solo se usan d con d+k-1 <= 2024-12.
+  Se declara "AR sigue al mundo con retraso k" solo si la correlacion en k es > a la de k=0 en al menos 0,10 y p<0,05. Si no, "simultaneo" (si k=0 es significativa) o "sin relacion clara".
+No se cambian k, umbrales ni terminos despues de ver los resultados.

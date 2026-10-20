@@ -35,8 +35,12 @@ Resultados en `analisis/backtest_resumen.md`. En la ventana limpia (20 temporada
 **Qué significa para el producto:** hoy, con estos datos, **no podemos prometer confianza alta** a partir de la pasarela sola. Lo honesto es mostrar el nivel de confianza como "baja a media" y explicar por qué. Lo que sí tiene respaldo es mostrar la **evidencia concreta** de casos (ver `analisis/casos_resumen.md`) y combinar con la inercia de búsquedas.
 
 ## 4. Límites que hay que decir en voz alta
-- Búsquedas en inglés y a nivel mundial; todavía no medimos Argentina salvo marcas.
+- Argentina: la regla "lo que gana interés se queda" vale en búsquedas del mundo (+14 puntos con el test limpio), pero no se confirmó en búsquedas de Argentina ni en Shopping Argentina (`analisis/persistencia/resumen.md`).
 - Los umbrales (3 y 6 puntos) se fijaron antes de calcular, pero son arbitrarios.
 - 20 a 27 temporadas es poco; las categorías de una temporada no son independientes entre sí.
 - Los casos ilustrativos fueron elegidos porque ya sabíamos que "funcionaron" (sesgo de selección).
 - Google Trends tuvo un salto de medición en 2025; los análisis principales lo evitan.
+
+
+## 5. Segunda etapa (20/10/2026)
+El producto ahora combina tres señales: se vio en pasarela, la prensa argentina lo nombra y las búsquedas suben. La señal principal es la búsqueda. Resultados, reglas y la predicción congelada están en `analisis/persistencia/`; la prensa, en `datasets/prensa_argentina/`.

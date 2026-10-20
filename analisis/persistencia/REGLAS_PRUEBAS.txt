@@ -1,0 +1,25 @@
+REGLAS FIJADAS ANTES DE CORRER (19/10/2026, no se cambian despues de ver resultados)
+Datos nuevos: trends_nuevos_2026-10-19.csv (40 series mensuales 2011-01 a 2026-09; 20 MUNDO, 20 AR).
+Series AR con mas de 50% de meses en cero se marcan "no usable" y se excluyen (se reporta cuales).
+
+PRUEBA A2 - Traccion con otra familia de terminos (robustez, NO es dato independiente en el tiempo)
+  Misma regla del backtest de traccion: prediccion SUBE si inercia previa (log prom[d-12,d-1]/prom[d-24,d-13], menos mediana de la temporada) > 0; si no, NO SUBE.
+  Acierto: SUBE y cambio relativo > 0, o NO SUBE y cambio relativo <= 0. Cambio = log prom[d+12,d+23]/prom[d-12,d-1] menos mediana de la temporada.
+  Ventana limpia (resultado termina <= dic-2024), temporadas FW2013..SS2023 que ya usamos. Permutacion dentro de temporada, 2000.
+  Terminos nuevos MUNDO: colores "X dress" (pink,red,black,white,blue,green,brown,beige,orange,gray,silver); prendas/largos "X outfit"
+  (skirt, midi skirt, mini skirt, blazer, trousers, coat, sweater, jumpsuit, blouse). Se omite Vestido (no hay termino nuevo).
+  Criterio: la traccion se considera confirmada si acierta >= 58% con p < 0.05; si da 52-58% o p>=0.05 = no confirmada; < 52% = no se sostiene.
+
+PRUEBA B2 - Lo que gana presencia en pasarela, gana busquedas despues? (con control)
+  "Gano presencia" = % de la categoria en la temporada - promedio de las 4 temporadas previas del mismo tipo >= +3 pts. Control = entre -3 y +3.
+  Resultado de busquedas = mismo cambio relativo de arriba (terminos ORIGINALES "X outfit" de trends_unificado, y por separado terminos nuevos de A2).
+  Exito = cambio relativo > 0. Se compara % de exito de "gano presencia" vs control; p por mezcla de etiquetas (2000). Ventana limpia.
+  Criterio: apoya si gano supera a control por >= 10 puntos con p < 0.05; si no, no hay evidencia.
+
+PRUEBA C0 - Argentina va detras del mundo?
+  Pares AR/MUNDO: colores "vestido X" (AR) vs "X dress" (MUNDO): rosa, rojo, negro, blanco, azul, verde, beige, naranja, gris, plateado (marron excluido si no usable).
+  Prendas: pollera/skirt outfit, pollera mini/mini skirt outfit, blazer/blazer outfit, pantalon/trousers outfit, sweater/sweater outfit, tapado/coat outfit, camisa/blouse outfit, enterito/jumpsuit outfit.
+  (pollera midi se excluye si no usable.)
+  Serie ajustada = log1p(valor) - media movil centrada de 13 meses, menos media del mismo mes calendario. Periodo: 2011-01 a 2024-12 (limpio).
+  Correlacion AR(t) vs MUNDO(t-L), L = -12..+12. L positivo = Argentina llega L meses despues. Se reporta perfil promedio y L optimo por par.
+  Criterio: hipotesis C apoyada si el pico del perfil promedio esta entre +1 y +12 Y la prueba de signos (pares con L optimo > 0 vs < 0) da p < 0.05. Si no: sin evidencia de desfase.
