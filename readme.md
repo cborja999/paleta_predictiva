@@ -11,6 +11,8 @@ Integrantes: Beltrán Martínez, Borja Centeno y Luigi Bonomi.
 
 **Confirmada con datos nuevos.** En 57 tendencias de 2016-2018 (no usadas para formular la hipótesis, reglas fijadas antes de bajar los datos), de las que ganaron búsquedas el primer año solo **1 de 17 (6%)** fue pasajera. En los 8 ciclos de 2016→2017 a 2023→2024 nunca pasó del 20%. En total, **9 de cada 10** tendencias que ganan búsquedas siguen ahí al segundo año.
 
+**Las que pierden búsquedas:** los datos de 2021 a 2024 muestran que las tendencias que pierden búsquedas en su primer año tienen más del triple de chances de ser pasajeras: **9 de 16 (56%)** contra **2 de 19 (11%)** de las que las ganan.
+
 Definiciones, resultados ciclo por ciclo y límites: **[`hipotesis.md`](hipotesis.md)**.
 
 ## Cómo se mide

@@ -44,10 +44,24 @@ Estado: **confirmada con datos nuevos** (tendencias de 2016 a 2018 que no se usa
 
 **En una frase:** 9 de cada 10 tendencias de pasarela que ganan búsquedas en su primer año siguen ahí al segundo.
 
+## Lo que muestran los últimos años: las que pierden búsquedas (2021 a 2024)
+
+> **Los datos de 2021 a 2024 muestran que las tendencias que pierden búsquedas en su primer año tienen más del triple de chances de ser pasajeras que las que las ganan.**
+
+| Colecciones | Pasajeras entre las que perdieron búsquedas | Pasajeras entre las que las ganaron |
+|---|---|---|
+| 2021 → 2022 | 5 de 8 | 1 de 9 |
+| 2022 → 2023 | 2 de 5 | 0 de 5 |
+| 2023 → 2024 | 2 de 3 | 1 de 5 |
+| **Total** | **9 de 16 = 56%** | **2 de 19 = 11%** |
+
+Más de la mitad de las que perdieron búsquedas fueron pasajeras, contra 1 de cada 10 de las que las ganaron (unas 5 veces más; Fisher p = 0,009). Datos: `analisis/hipotesis/ciclos.csv`. Se sigue midiendo con cada temporada nueva.
+
 ## Cómo lo usa el producto
 
 - **Ganó búsquedas el primer año** → "tiende a quedarse".
-- **Sin cambio claro o en baja** → no se da veredicto de permanencia.
+- **Perdió búsquedas el primer año** → "riesgo de moda pasajera" (en 2021-2024, más de la mitad lo fueron).
+- **Sin cambio claro** → no se da veredicto.
 - La pasarela muestra qué se vio en cada fashion week; la señal para el veredicto son las búsquedas.
 
 ## Límites

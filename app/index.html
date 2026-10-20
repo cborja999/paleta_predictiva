@@ -131,6 +131,11 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-si
       <p>Con tendencias nuevas de 2016 a 2018, de las que ganaron búsquedas el primer año solo <b>1 de 17</b> fue pasajera (6%). En los 8 ciclos de 2016 a 2024 nunca pasó del 20%.</p>
     </div>
     <div>
+      <h3>Las que pierden búsquedas</h3>
+      <p class="big tag-no">Riesgo de pasajera</p>
+      <p>Los datos de 2021 a 2024 muestran que las que pierden búsquedas en su primer año fueron pasajeras <b>9 de 16</b> veces (56%), contra <b>2 de 19</b> (11%) de las que las ganaron.</p>
+    </div>
+    <div>
       <h3>Argentina</h3>
       <p class="big tag-mid">Mismo ritmo, sin validación propia</p>
       <p>Argentina se mueve casi a la par que el mundo (sin retraso de 12 a 18 meses). Con búsquedas argentinas no se confirmó la regla, así que <b>no lo presentamos como validado para el mercado local</b>.</p>
@@ -150,6 +155,13 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-si
   <h3 class="msub">Prueba con datos nuevos: 2016 a 2018</h3>
   <div class="mtiles" id="mi-tiles"></div>
   <div class="mverd"><p style="margin:0 0 6px"><b>Veredicto: se confirma.</b> Las tendencias que ganan búsquedas en su primer año casi nunca se desploman en el segundo: 9 de cada 10 siguen ahí.</p><p style="margin:0;font-size:13px;color:var(--muted)" id="mi-nums"></p></div>
+  <h3 class="msub">Las que pierden búsquedas: 2021 a 2024</h3>
+  <div class="mtiles">
+    <div class="mtile"><h3>Perdieron búsquedas el primer año</h3><p class="big tag-no">56%</p><p class="sub">fueron pasajeras · 9 de 16</p><div class="track tag-no"><i style="width:56%"></i></div></div>
+    <div class="mtile"><h3>Ganaron búsquedas el primer año</h3><p class="big tag-ok">11%</p><p class="sub">fueron pasajeras · 2 de 19</p><div class="track tag-ok"><i style="width:11%"></i></div></div>
+  </div>
+  <div class="mverd"><p style="margin:0 0 6px"><b>Los datos de 2021 a 2024 muestran</b> que una tendencia que pierde búsquedas en su primer año tiene más del triple de chances de ser pasajera que una que las gana.</p><p style="margin:0;font-size:13px;color:var(--muted)">2021→2022: 5 de 8 contra 1 de 9 · 2022→2023: 2 de 5 contra 0 de 5 · 2023→2024: 2 de 3 contra 1 de 5. Fisher p = 0,009. Se sigue midiendo con cada temporada nueva.</p></div>
+
   <h3 class="msub">Ciclo por ciclo</h3>
   <p class="note">Porcentaje de pasajeras en cada grupo, por año de las colecciones. 2016 a 2018 es la prueba; 2019 a 2023 es donde nació la hipótesis.</p>
   <div class="tw"><table id="mi-ciclos"></table></div>
@@ -167,7 +179,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-si
 
 <section class="sec" style="margin-top:36px" aria-labelledby="resumen">
   <h2 id="resumen" style="font-size:24px">El brief de hoy: colores, prendas y largos</h2>
-  <p class="note" style="margin-top:0">Aplicamos la misma lectura a las categorías amplias: lo que ganó búsquedas tiende a quedarse.</p>
+  <p class="note" style="margin-top:0">Aplicamos la misma lectura a las categorías amplias: lo que ganó búsquedas tiende a quedarse; lo que las perdió tiene riesgo de ser pasajero.</p>
   <ul id="resumen-lista"></ul>
 </section>
 
@@ -182,7 +194,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-si
   <ul>
     <li><b>Se vio en pasarela:</b> porcentaje de looks de Vogue Runway (15 casas) con esa categoría, promedio de las <span id="m-rec"></span> contra las <span id="m-ant"></span>. “Sube” o “baja” solo si cambió 1 punto o más. Clasificado con Gemini; hay una validación de 40 fotos.</li>
     <li><b>Búsquedas del mundo:</b> Google Trends mensual. Se usan dos formas de buscar (por ejemplo <i>gray dress</i> y <i>gray outfit</i>). “Ganó interés” significa que el último año subió al menos 0,10 (en log) respecto del anterior, descontando lo que subió el conjunto. “Perdió interés” es lo contrario. Entre medio, “sin cambio claro”.</li>
-    <li><b>Veredicto:</b> “Ganó interés · tiende a quedarse” solo si las dos formas de buscar lo dicen (es lo que dice la hipótesis). Si las dos formas discrepan, no damos veredicto.</li>
+    <li><b>Veredicto:</b> “Ganó interés · tiende a quedarse” solo si las dos formas de buscar lo dicen (es lo que dice la hipótesis). “Perdió interés · riesgo de moda pasajera” si las dos coinciden en que bajó. Si discrepan, no damos veredicto.</li>
     <li><b>Nivel de confianza:</b> alta, media o baja según qué tan grande es el movimiento comparado con el historial de la misma regla.</li>
     <li><b>Gráfico:</b> búsquedas mensuales desde 2019. La línea punteada marca enero de 2025, cuando Google cambió cómo mide; la regla se probó hasta diciembre de 2024.</li>
     <li><b>Prensa argentina:</b> no entra como señal. Muchas notas locales se apoyan en informes de desfiles (no todas), la muestra es chica y desigual, y el grupo todavía está depurando la planilla. Queda como contexto en <code>datasets/prensa_argentina/</code>.</li>
@@ -271,7 +283,7 @@ function veredicto(it){
   if(!e.length)return {k:'sin',t:'Sin dato de búsquedas'};
   if(e.length===2){
     if(e[0]==='gano'&&e[1]==='gano')return {k:'gano',t:'Ganó interés · tiende a quedarse'};
-    if(e[0]==='perdio'&&e[1]==='perdio')return {k:'perdio',t:'Perdió interés'};
+    if(e[0]==='perdio'&&e[1]==='perdio')return {k:'perdio',t:'Perdió interés · riesgo de moda pasajera'};
     return {k:'mixto',t:e[0]===e[1]?'Sin cambio claro':'Las dos formas de buscar no coinciden'};
   }
   var u=e[0];
