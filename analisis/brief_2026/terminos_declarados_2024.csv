@@ -1,0 +1,37 @@
+temporada,mes_desfile,medio,tendencia_fuente,termino,tipo,nota
+SS2024,2023-10,Who What Wear,Black cherry and oxblood red,burgundy dress,color,color del titulo con su nombre de busqueda comun
+SS2024,2023-10,Who What Wear,Feminine skirts and dresses with edge,pencil skirt,prenda,primer item nombrado
+SS2024,2023-10,Who What Wear,Hot pants and matching sets,hot pants,prenda,el titulo nombra la prenda
+SS2024,2023-10,Who What Wear,Modest sheer,sheer skirt,material,primer item nombrado
+SS2024,2023-10,Who What Wear,Contrasting pairings,slip skirt,prenda,primer item nombrado
+SS2024,2023-10,Who What Wear,Built-in knots and ties,halter dress,prenda,primer item nombrado
+SS2024,2023-10,Who What Wear,Oversized bags,oversized bag,accesorio,el titulo nombra la prenda
+SS2024,2023-10,Who What Wear,Fringe,fringe jacket,detalle,convencion del proyecto para fringe
+SS2024,2023-10,Who What Wear,Statement outerwear,satin coat,prenda,primer item nombrado
+SS2024,2023-10,Who What Wear,Belts as focal points,statement belt,accesorio,el titulo nombra la prenda
+SS2024,2023-10,CBC Life,Short cuts,mini dress,prenda,primer item nombrado
+SS2024,2023-10,CBC Life,Spring roses,rose print,estampado,convencion del proyecto para rosas
+SS2024,2023-10,CBC Life,Sheer dresses,sheer dress,material,el titulo nombra la prenda
+SS2024,2023-10,CBC Life,Lavender haze,lavender dress,color,color del titulo
+SS2024,2023-10,CBC Life,Shorts suits,shorts suit,prenda,el titulo nombra la prenda
+SS2024,2023-10,CBC Life,Dresses over pants,dress over pants,detalle,el titulo nombra la combinacion
+FW2024,2024-03,Who What Wear,Funnel-neck outerwear,funnel neck coat,prenda,el titulo nombra la prenda
+FW2024,2024-03,Who What Wear,Statement accessories,pillbox hat,accesorio,primer item nombrado
+FW2024,2024-03,Who What Wear,Swaddle season wraps,scarf coat,prenda,primer item nombrado
+FW2024,2024-03,Who What Wear,New silhouettes,cigarette pants,prenda,primer item nombrado
+FW2024,2024-03,Who What Wear,Furry textures,faux fur coat,material,primer item nombrado
+FW2024,2024-03,Who What Wear,American sportswear,tailored trousers,prenda,primer item nombrado
+FW2024,2024-03,Who What Wear,Liquid leather,leather dress,material,primer item nombrado
+FW2024,2024-03,Who What Wear,Turtleneck styling,turtleneck,prenda,el titulo nombra la prenda
+FW2024,2024-03,Who What Wear,Swan-inspired eveningwear,,,descartada: vestidos de fiesta variados sin un item buscable
+FW2024,2024-03,Yahoo Lifestyle,Coat of Arms,peacoat,prenda,primer item nombrado
+FW2024,2024-03,Yahoo Lifestyle,Feather Weather,feather dress,detalle,primer item buscable
+FW2024,2024-03,Yahoo Lifestyle,Green with Envy,green dress,color,color del titulo
+FW2024,2024-03,Yahoo Lifestyle,Wild Card,leopard print,estampado,primer item nombrado
+FW2024,2024-03,Yahoo Lifestyle,Ladylike Suiting,tea length dress,prenda,primer item nombrado
+FW2024,2024-03,Yahoo Lifestyle,Luxurious Knits,cashmere pants,prenda,primer item nombrado
+FW2024,2024-03,Yahoo Lifestyle,No Pants? No Problem.,balloon pants,prenda,primer item nombrado
+FW2024,2024-03,Yahoo Lifestyle,Fur Frenzy,,,descartada: repetida (faux fur coat)
+FW2024,2024-03,Yahoo Lifestyle,Layering Pro,,,descartada: layering no nombra algo buscable (convencion del proyecto)
+FW2024,2024-03,Yahoo Lifestyle,On the Fringe,,,descartada: repetida (fringe jacket)
+FW2024,2024-03,Yahoo Lifestyle,Sheer Force,,,descartada: repetida (sheer dress)

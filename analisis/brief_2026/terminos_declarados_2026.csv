@@ -1,0 +1,45 @@
+temporada,mes_desfile,medio,tendencia_fuente,termino,tipo,nota
+SS2026,2025-10,Who What Wear,Sexually Explicit,leather mini skirt,prenda,primer item nombrado
+SS2026,2025-10,Who What Wear,Gone Bourgeois,satin scarf,accesorio,primer item nombrado
+SS2026,2025-10,Who What Wear,Optimism! Joy! Delight!,floral print,estampado,primer item buscable (los colores brillantes no son un item)
+SS2026,2025-10,Who What Wear,Advanced Layering,poplin shirt,prenda,primer item nombrado
+SS2026,2025-10,Who What Wear,About the Coat,trench coat,prenda,primer item nombrado
+SS2026,2025-10,Who What Wear,'80s Rewind,80s fashion,estetica,el titulo nombra la estetica
+SS2026,2025-10,Who What Wear,Color Clash,lilac dress,color,primer color nombrado
+SS2026,2025-10,Who What Wear,A+ Prep,preppy outfit,estetica,el titulo nombra la estetica
+SS2026,2025-10,Who What Wear,The Great Debut,,,descartada: no nombra prendas (habla de debuts de disenadores)
+SS2026,2025-10,Who What Wear,Off-Kilter,,,descartada: no nombra algo buscable sin ruido
+SS2026,2025-10,W Magazine,Back to the Archives,tweed suit,prenda,primer item nombrado
+SS2026,2025-10,W Magazine,The Age of Enlightenment,bell sleeve,detalle,primer item buscable
+SS2026,2025-10,W Magazine,The New Eveningwear,feather skirt,prenda,primer item nombrado
+SS2026,2025-10,W Magazine,Primary School,yellow dress,color,primer color nombrado
+SS2026,2025-10,W Magazine,Medieval Core,chainmail dress,prenda,primer item nombrado
+SS2026,2025-10,W Magazine,In Motion,ruffle dress,detalle,primer item nombrado
+SS2026,2025-10,W Magazine,Hotsy-Totsy,flapper dress,prenda,primer item nombrado
+SS2026,2025-10,W Magazine,The Helmut Lang Effect,spaghetti strap top,prenda,primer item nombrado
+SS2026,2025-10,W Magazine,OnlyFashions,low rise pants,prenda,primer item nombrado
+SS2026,2025-10,W Magazine,Working Girl,power shoulders,detalle,primer item nombrado
+FW2026,2026-03,Marie Claire,Fair Isle Sweaters,fair isle sweater,prenda,el titulo nombra la prenda
+FW2026,2026-03,Marie Claire,Tactile Textures and Embellished Fabrics,brocade,material,primer item nombrado
+FW2026,2026-03,Marie Claire,Sharp Tailoring,tailored coat,prenda,primer item nombrado
+FW2026,2026-03,Marie Claire,Statement Coats,statement coat,prenda,el titulo nombra la prenda
+FW2026,2026-03,Marie Claire,Sport-Inspired Separates,polo shirt,prenda,primer item nombrado
+FW2026,2026-03,Marie Claire,Unexpected Layering,satin dress,prenda,primer item nombrado
+FW2026,2026-03,Coveteur,Long Exit,silk shirt,prenda,primer item nombrado
+FW2026,2026-03,Coveteur,Tactile Texture,fur coat,prenda,primer item nombrado
+FW2026,2026-03,Coveteur,Pin It,brooch,accesorio,primer item buscable
+FW2026,2026-03,Coveteur,Checked Out,check shirt,estampado,primer item nombrado
+FW2026,2026-03,Coveteur,Dark Romance,,,descartada: primer item repetido (lace dress)
+FW2026,2026-03,Coveteur,Statement Fur,,,descartada: repetida (fur coat)
+FW2026,2026-03,Coveteur,The New Suit,,,descartada: repetida (skirt suit)
+FW2026,2026-03,Coveteur,Open Season,,,descartada: solo nombra bolsos de marca
+FW2026,2026-03,Who What Wear,Royal purple,purple dress,color,color del titulo
+FW2026,2026-03,Who What Wear,Skirt suits,skirt suit,prenda,el titulo nombra la prenda
+FW2026,2026-03,Who What Wear,Bulky sculptural scarves,chunky scarf,accesorio,el titulo nombra la prenda
+FW2026,2026-03,Who What Wear,Draped fluid shearling outerwear,shearling coat,prenda,el titulo nombra la prenda
+FW2026,2026-03,Who What Wear,The return of romance,,,descartada: no nombra algo buscable
+FW2026,2026-03,The Impression,Romantic Drama,lace dress,material,primer item buscable (trains es ambiguo)
+FW2026,2026-03,The Impression,Surface as Statement,fringe jacket,detalle,primer item nombrado
+FW2026,2026-03,The Impression,Controlled Sensuality,sheer dress,material,primer item nombrado
+FW2026,2026-03,The Impression,Color with Conviction,pink dress,color,primer color nombrado
+FW2026,2026-03,The Impression,The Return of Structured Power,,,descartada: primer item repetido (skirt suit)

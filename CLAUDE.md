@@ -23,7 +23,11 @@ Proyecto de la materia K576 (UdeSA) de Beltrán Martínez, Borja Centeno y Luigi
 
 - Va en la carpeta `prototipo/`. Ver `prototipo/README.md` para el brief.
 - La página actual (`app/index.html`) es la versión "informe": sirve como base de datos y textos, no como diseño final.
-- Los datos listos para usar están en `app/datos/brief.json` (colores, prendas y largos con su lectura de búsquedas) y `app/datos/microtendencias.json` (las 178 tendencias con su curva, grupo y si se quedó).
+- Los datos listos para usar:
+  - `app/datos/brief_temporada.json` (**el brief principal**): 31 tendencias puntuales de SS2024 y FW2024 con veredicto, confianza, aviso y curva (`items`), más 36 de SS2026 y FW2026 sin veredicto, como "lo que se vio" (`vistas_2026`). Detalle en `analisis/brief_2026/LEEME.md`.
+  - `app/datos/microtendencias.json`: las 178 tendencias de la prueba con su curva, grupo y si se quedó (para la pantalla de evidencia).
+  - `app/datos/brief.json`: colores, prendas y largos amplios. Solo 3 de 21 tienen veredicto; sirve para la paleta de colores y los hex, no para veredictos.
+- Desde mediados de 2025 Google Trends infla los términos de poco volumen. Nunca mostrar veredicto para 2026 ni comparar búsquedas de antes y después de 2025.
 - Para verla: abrir el HTML en el panel de navegador de la app (o `python3 -m http.server` desde la raíz y entrar a `http://localhost:8000/prototipo/`).
 - Pedido de los profes en la Entrega 2: interfaz más visual, criterios de la IA y niveles de confianza explícitos, y alternativas de diseño (Figma).
 - Referencias de diseño elegidas por el grupo: The Lyst Index, Spotify Wrapped, TradingView y Pantone Color of the Year.

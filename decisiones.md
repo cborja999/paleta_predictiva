@@ -93,3 +93,7 @@ Como Argentina se mueve casi a la par que el mundo (sin retraso de 12 a 18 meses
 - Como la frase salió de mirar 2019-2023, se probó con una muestra nueva: 57 tendencias de 2016-2018 (Sandra's Closet, W Magazine, Fashionista). Reglas y criterios fijados antes de bajar los datos (`analisis/hipotesis/REGLAS_HIPOTESIS_C1.txt`, sha256).
 - Resultado: CONFIRMA EN PARTE. Las que subieron: 1/17 pasajeras (6%, criterio ≤ 20%). Las que cayeron: 2/11 (18%), no llega al triple con p < 0,05 (p = 0,54). En los 8 ciclos 2016-2024 las que subieron nunca pasaron de 20% de pasajeras.
 - La hipótesis queda con una parte principal (confirmada) y una secundaria (no confirmada). Documento central: `hipotesis.md`. La página se reordenó con la hipótesis al frente.
+
+## 2026-10-27 Brief de la temporada con tendencias puntuales
+
+Las categorías amplias (colores, prendas) daban veredicto en solo 3 de 21, porque las dos formas de buscar no coincidían. Se pasó a tendencias puntuales de las listas de los medios, como en la hipótesis. Al medir SS2026 y FW2026 apareció un problema de Google Trends desde mediados de 2025 que infla los términos de poco volumen (`analisis/brief_2026/DIAGNOSTICO_2026.md`), así que esas tendencias se muestran sin veredicto. Los veredictos de la página salen de SS2024 y FW2024, la última temporada limpia (`app/datos/brief_temporada.json`). Una primera corrida contó como cero ene-feb 2025 por un error en la bajada; se corrigió y quedó registrada.

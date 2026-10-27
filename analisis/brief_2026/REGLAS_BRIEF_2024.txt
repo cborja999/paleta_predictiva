@@ -1,0 +1,39 @@
+BRIEF CON LA ULTIMA TEMPORADA LIMPIA (SS2024 y FW2024) - REGLAS FIJADAS ANTES DE BAJAR LOS DATOS (27/10/2026).
+
+POR QUE
+Los datos de Google Trends desde mediados de 2025 no sirven para comparar (DIAGNOSTICO_2026.md). La ultima temporada cuyo primer
+anio se puede medir con datos limpios es SS2024 (primer anio oct-2023 a sep-2024) y FW2024 (mar-2024 a feb-2025; ene-feb 2025 ya es
+posterior al cambio de Google pero el diagnostico no muestra salto en esos meses). Las tendencias de SS2026 y FW2026 se muestran en la
+pagina como "lo que se vio", sin veredicto.
+
+MUESTRA: fuentes_listas_2024.csv y terminos_declarados_2024.csv (mismo mapeo que en las pruebas).
+
+MEDICION (identica a la hipotesis)
+- e = mes del desfile (SS2024 -> oct-2023; FW2024 -> mar-2024). B0 = prom[e-12, e-1]; B1 = prom[e, e+11].
+- g1 = log(B1/B0) - mediana de g1 de la temporada.
+- Usable: en e-12..e+11 como maximo 8 meses en cero y B0, B1 > 0.
+- Datos: Google Trends web MUNDO mensual ene-2011 a sep-2026 (solo se usan los meses de la ventana).
+
+VEREDICTO: g1 >= 0.10 "Tiende a quedarse"; g1 <= -0.10 "Riesgo de moda pasajera"; si no, "Sin senal clara".
+CONFIANZA: Alta si |g1| >= 0.30; Media si |g1| entre 0.10 y 0.30. "Sin senal clara" sin confianza.
+CONTROL: se informa la correlacion de Spearman entre g1 y el nivel de busquedas del termino en B0. Si |rho| >= 0.5 se avisa que
+el veredicto puede estar sesgado por el volumen (como paso con 2026).
+
+LIMITES: es la lectura del primer anio de tendencias de hace dos temporadas; muestra como funciona el metodo con datos limpios.
+El segundo anio (que diria si se quedaron) cae en 2025-2026 y no se puede medir limpio.
+
+AJUSTE ANTES DE CALCULAR (27/10/2026, antes de ver ningun resultado):
+- La primera bajada (ene-2011 a sep-2026) quedo escalada al salto de 2026: los meses 2022-2024 quedaban en valores 1 a 5 y se
+  perdia precision. Se vuelve a bajar con ene-2011 a dic-2024, igual que en las pruebas de la hipotesis (datos/trends_2024_web.csv).
+  Nada mas cambia.
+
+CORRECCION (27/10/2026, DESPUES de una primera corrida):
+- El ajuste anterior corto los datos en dic-2024, pero la ventana de FW2024 (B1 = mar-2024 a feb-2025, como dice arriba) necesita
+  ene y feb de 2025. El script relleno esos dos meses con cero sin avisar. Se baja de nuevo ene-2011 a feb-2025 y el script ahora
+  frena si falta un mes de la ventana. La regla no cambia: se arregla el dato para que cumpla la regla escrita.
+- La primera corrida (con el error) queda en salida_brief_2024_corrida_con_error.txt para que se vea la diferencia.
+
+AVISO DESCRIPTIVO (agregado DESPUES de ver los resultados; no cambia ningun veredicto):
+- Si en el anio previo o en el primer anio un solo mes vale 5 veces o mas la mediana de ese anio, se marca "lectura apoyada en un
+  pico de un solo mes" y la pagina lo muestra junto al veredicto. Sale porque pillbox hat (nov-2024) y faux fur coat (sep-2023)
+  tienen un mes aislado en 100 con el resto entre 2 y 8. Los abrigos con pico de invierno no llegan a 5 veces.

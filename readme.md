@@ -47,6 +47,16 @@ Todos los datasets están en la repo, salvo los que no se pueden redistribuir (v
 | `analisis/microtendencias/fuentes_listas.csv`, `fuentes_listas_m2.csv` | Listas de 2019-2023, con fecha y link | Who What Wear, Sandra's Closet |
 | `analisis/microtendencias/terminos_declarados*.csv`, `m1_detalle.csv`, `m2_detalle.csv` | Términos y resultado por tendencia | Elaboración propia |
 
+### Brief de la temporada
+
+| Archivo | Qué es | Fuente |
+|---|---|---|
+| `analisis/brief_2026/datos/trends_2024_web.csv` | Google Trends mensual 2011-feb 2025 de 31 tendencias de SS2024 y FW2024 | Google Trends (bajado el 27/10/2026) |
+| `analisis/brief_2026/fuentes_listas_2024.csv`, `terminos_declarados_2024.csv` | Listas de SS2024 y FW2024 y su término de búsqueda | Who What Wear, CBC Life, Yahoo Lifestyle |
+| `analisis/brief_2026/datos/trends_2026_web.csv` | Google Trends 2011-sep 2026 de 36 tendencias de SS2026 y FW2026 | Google Trends (bajado el 27/10/2026) |
+| `analisis/brief_2026/fuentes_listas_2026.csv`, `terminos_declarados_2026.csv` | Listas de SS2026 y FW2026 | Who What Wear, W Magazine, Marie Claire, Coveteur, The Impression |
+| `app/datos/brief_temporada.json` | Brief que usa la página (con veredicto 2024, sin veredicto 2026) | `brief_temporada.py` |
+
 ### Pasarela
 
 | Archivo | Qué es | Fuente |

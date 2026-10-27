@@ -1,0 +1,42 @@
+BRIEF 2026 - REGLAS FIJADAS ANTES DE BAJAR LOS DATOS (27/10/2026). No se cambian despues.
+
+QUE ES
+La lectura que muestra la pagina para las tendencias de la temporada actual, con el mismo metodo con que se probo la hipotesis
+(analisis/hipotesis/ y analisis/microtendencias/). No es una prueba: es la aplicacion del metodo. Queda congelada para chequearla.
+
+MUESTRA
+- Listas de tendencias publicadas por medios para SS2026 (desfiles sep-oct 2025) y FW2026 (desfiles feb-mar 2026): fuentes_listas_2026.csv.
+- Cada tendencia -> UN termino de busqueda en ingles (terminos_declarados_2026.csv): si el titulo nombra una prenda, color o estetica
+  buscable, se usa el titulo; si no, el primer item concreto que nombra el texto. Colores como "<color> dress". Se descartan las que no
+  nombran nada buscable y las repetidas (entra la primera aparicion).
+
+DATOS
+- Google Trends, busqueda web, MUNDO, mensual, ene-2011 a sep-2026 (oct-2026 esta incompleto y no se usa). Un termino por consulta.
+- Usable: en la ventana de medicion como maximo 1/3 de meses en cero y los dos promedios > 0. Si no, se descarta sin reemplazo.
+
+MEDICION (e = mes del desfile: SS2026 -> oct-2025; FW2026 -> mar-2026)
+- SS2026 (primer anio completo): B0 = prom[oct-2024, sep-2025], B1 = prom[oct-2025, sep-2026].
+- FW2026 (primer anio parcial, 7 de 12 meses): B0 = prom[mar-2025, sep-2025], B1 = prom[mar-2026, sep-2026] (mismos meses del anio
+  anterior, asi la estacion se cancela).
+- g1 = log(B1/B0) - mediana de g1 de las tendencias de la misma temporada.
+
+VEREDICTO (la misma regla de la hipotesis)
+- g1 >= +0.10 -> "Tiende a quedarse"
+- g1 <= -0.10 -> "Riesgo de moda pasajera"
+- en el medio -> "Sin senal clara"
+
+CONFIANZA
+- Sensibilidad por el cambio de Google de ene-2025 (B0 de SS2026 tiene 3 meses previos al cambio): SS2026 recalculado con
+  ene-sep 2026 contra ene-sep 2025 (todo posterior al cambio), restando su mediana.
+- Alta: |g1| >= 0.30 y la sensibilidad da el mismo veredicto. Media: |g1| entre 0.10 y 0.30 y misma sensibilidad.
+  Baja: la sensibilidad da otro veredicto. FW2026 como maximo Media (lectura parcial).
+- "Sin senal clara" no lleva confianza.
+
+CHEQUEO A FUTURO (lectura congelada con sha256)
+- SS2026: segundo anio = oct-2026 a sep-2027; se chequea en oct-2027. FW2026: segundo anio = mar-2027 a feb-2028; chequeo en mar-2028.
+- Se queda = c2 >= -0.10 (igual que en la hipotesis). Se informa como salga.
+
+LIMITES
+- Desde 2025 Google mide distinto; las comparaciones dentro de 2025-2026 se suponen consistentes entre si.
+- FW2026 es una lectura parcial.
+- Busquedas no son ventas; terminos en ingles = interes global.

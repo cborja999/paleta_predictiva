@@ -1,0 +1,40 @@
+BRIEF ULTIMA TEMPORADA LIMPIA (reglas en REGLAS_BRIEF_2024.txt)
+======================================================================
+SS2024: 16 terminos, 16 usables
+   sheer skirt          g1 +0.23  Tiende a quedarse        Media
+   mini dress           g1 +0.19  Tiende a quedarse        Media
+   slip skirt           g1 +0.14  Tiende a quedarse        Media
+   halter dress         g1 +0.12  Tiende a quedarse        Media
+   statement belt       g1 +0.07  Sin señal clara          
+   burgundy dress       g1 +0.05  Sin señal clara          
+   satin coat           g1 +0.03  Sin señal clara          
+   oversized bag        g1 +0.01  Sin señal clara          
+   dress over pants     g1 -0.01  Sin señal clara          
+   rose print           g1 -0.03  Sin señal clara          
+   sheer dress          g1 -0.05  Sin señal clara          
+   shorts suit          g1 -0.06  Sin señal clara          
+   lavender dress       g1 -0.11  Riesgo de moda pasajera  Media
+   pencil skirt         g1 -0.19  Riesgo de moda pasajera  Media
+   hot pants            g1 -0.19  Riesgo de moda pasajera  Media
+   fringe jacket        g1 -0.25  Riesgo de moda pasajera  Media
+   total: Riesgo de moda pasajera: 4 | Sin señal clara: 8 | Tiende a quedarse: 4
+   control: Spearman nivel B0 vs g1 = -0.04 (p=0.866)  -> sin sesgo por volumen
+======================================================================
+FW2024: 15 terminos, 15 usables
+   pillbox hat          g1 +1.02  Tiende a quedarse        Alta
+   leopard print        g1 +0.61  Tiende a quedarse        Alta
+   tailored trousers    g1 +0.22  Tiende a quedarse        Media
+   cashmere pants       g1 +0.22  Tiende a quedarse        Media
+   balloon pants        g1 +0.14  Tiende a quedarse        Media
+   scarf coat           g1 +0.11  Tiende a quedarse        Media
+   peacoat              g1 +0.05  Sin señal clara          
+   leather dress        g1 +0.00  Sin señal clara          
+   funnel neck coat     g1 -0.00  Sin señal clara          
+   green dress          g1 -0.01  Sin señal clara          
+   tea length dress     g1 -0.06  Sin señal clara          
+   turtleneck           g1 -0.15  Riesgo de moda pasajera  Media
+   feather dress        g1 -0.24  Riesgo de moda pasajera  Media
+   cigarette pants      g1 -0.47  Riesgo de moda pasajera  Alta
+   faux fur coat        g1 -0.92  Riesgo de moda pasajera  Alta
+   total: Riesgo de moda pasajera: 4 | Sin señal clara: 5 | Tiende a quedarse: 6
+   control: Spearman nivel B0 vs g1 = -0.12 (p=0.674)  -> sin sesgo por volumen
