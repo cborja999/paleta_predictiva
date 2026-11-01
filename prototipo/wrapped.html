@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paleta predictiva</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Archivo:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --azul:#1E2BFF; --rosa:#FF6FB5; --amarillo:#FFE14A; --menta:#3DDC97;
+  --naranja:#FF5B1F; --negro:#111111; --vino:#5B0E2D; --blanco:#FFFFFF;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --texto:"Archivo",system-ui,sans-serif;
+  --mono:"Space Mono",ui-monospace,monospace;
+  --bg:var(--azul); --fg:var(--blanco); --acento:var(--amarillo);
+}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--texto);transition:background .5s ease;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+
+/* Escenario tipo celular */
+.escenario{position:relative;width:min(100vw,460px);height:min(100dvh,940px);overflow:hidden;
+  background:var(--bg);color:var(--fg);transition:background .5s ease,color .5s ease}
+@media (min-width:600px){.escenario{border-radius:28px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+  body{background:color-mix(in srgb,var(--bg) 70%,#000)}}
+
+.barras{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;gap:3px;padding:12px 14px 0}
+.barras i{flex:1;height:3px;border-radius:2px;background:color-mix(in srgb,var(--fg) 30%,transparent);overflow:hidden}
+.barras i.hecha{background:var(--fg)}
+.barras i.actual{background:var(--fg)}
+.arriba{position:absolute;top:22px;left:14px;right:14px;z-index:5;display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.arriba .marca{font-weight:700}
+.arriba button{border:1.5px solid currentColor;border-radius:999px;padding:5px 11px;font-family:var(--mono);font-size:11px;
+  text-transform:uppercase;letter-spacing:.06em}
+
+.pantalla{position:absolute;inset:0;padding:64px 22px 26px;display:flex;flex-direction:column;
+  opacity:0;visibility:hidden;transition:opacity .35s ease,visibility 0s .35s}
+.pantalla.activa{opacity:1;visibility:visible;transition:opacity .35s ease}
+
+/* Tipografía */
+.gigante{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 75,"opsz" 96;
+  text-transform:uppercase;line-height:.86;letter-spacing:-.01em}
+.chico{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase}
+.texto{font-size:16px;line-height:1.4;max-width:34ch}
+
+/* Entradas */
+.entra{opacity:0;transform:translateY(24px)}
+.activa .entra{opacity:1;transform:none;transition:opacity .5s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.activa .d1{transition-delay:.12s}.activa .d2{transition-delay:.3s}.activa .d3{transition-delay:.5s}.activa .d4{transition-delay:.7s}
+
+/* Inicio */
+.inicio{justify-content:space-between}
+.inicio h1{font-size:clamp(64px,21vw,104px);margin-top:28px}
+.inicio h1 em{font-style:normal;color:var(--acento)}
+.boton{display:inline-flex;align-items:center;gap:10px;background:var(--fg);color:var(--bg);border-radius:999px;
+  padding:15px 24px;font-family:var(--display);font-weight:700;font-size:18px;font-variation-settings:"wdth" 90}
+
+/* Rubro */
+.rubro h2{font-size:clamp(54px,17vw,84px);margin:28px 0 14px}
+.opciones{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.opciones button{border:2px solid currentColor;border-radius:999px;padding:12px 18px;font-family:var(--display);
+  font-weight:700;font-size:19px;font-variation-settings:"wdth" 85}
+.opciones button[aria-pressed="true"],.opciones button:hover{background:var(--fg);color:var(--bg)}
+
+/* Número */
+.numero h2{font-size:clamp(40px,12vw,58px);margin-top:24px}
+.cifra{display:flex;align-items:baseline;gap:14px;margin-top:22px}
+.cifra b{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 75,"opsz" 96;font-size:clamp(130px,42vw,200px);line-height:.8}
+.cifra span{font-family:var(--display);font-weight:700;font-size:26px;line-height:1;font-variation-settings:"wdth" 80;text-transform:uppercase}
+
+/* Tendencia */
+.tendencia{padding-top:58px}
+.meta{display:flex;justify-content:space-between;gap:10px;margin-bottom:12px}
+.foto{position:relative;flex:1;min-height:0;display:flex;justify-content:center;align-items:flex-start;padding-top:6px}
+.sticker{position:relative;height:100%;max-height:430px;aspect-ratio:2/3;background:var(--fg);padding:8px;border-radius:6px;
+  transform:rotate(-3deg);box-shadow:0 14px 30px rgba(0,0,0,.25)}
+.sticker img,.sticker .falta{width:100%;height:100%;object-fit:cover;border-radius:3px;display:block}
+.sticker .falta{background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--bg) 22%,var(--fg)) 0 12px,color-mix(in srgb,var(--bg) 32%,var(--fg)) 12px 24px);
+  color:var(--bg);display:flex;flex-direction:column;justify-content:flex-start;padding:12px;font-family:var(--mono);font-size:11px;line-height:1.35}
+.activa .sticker{animation:pega .7s cubic-bezier(.2,.9,.25,1.2) both}
+@keyframes pega{from{transform:rotate(-12deg) scale(.85);opacity:0}to{transform:rotate(-3deg) scale(1);opacity:1}}
+.sello{position:absolute;right:4px;top:-4px;width:112px;height:112px;border-radius:50%;background:var(--acento);color:var(--bg);
+  display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 75;
+  font-size:30px;line-height:.85;text-transform:uppercase;transform:rotate(12deg)}
+.activa .sello{animation:cae .5s .45s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes cae{from{transform:rotate(30deg) scale(2.2);opacity:0}to{transform:rotate(12deg) scale(1);opacity:1}}
+.nombre{font-size:clamp(46px,14.5vw,72px);margin:-20px 0 10px;position:relative;z-index:2;text-wrap:balance}
+.curva{width:100%;height:64px;display:block;overflow:visible}
+.curva .linea{fill:none;stroke:var(--fg);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:1;stroke-dashoffset:1}
+.activa .curva .linea{animation:dibuja 1.4s .5s ease-out forwards}
+@keyframes dibuja{to{stroke-dashoffset:0}}
+.curva .despues{fill:color-mix(in srgb,var(--fg) 12%,transparent)}
+.curva .corte{stroke:var(--fg);stroke-width:1.5;stroke-dasharray:3 3}
+.eje{display:flex;justify-content:space-between;margin:4px 0 12px;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;opacity:.8}
+.lectura{font-size:15px;line-height:1.38}
+.pildoras{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.pildora{border:1.5px solid currentColor;border-radius:999px;padding:4px 10px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+.pildora.llena{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+
+/* Cambio de ritmo */
+.ojo{justify-content:center}
+.ojo h2{font-size:clamp(62px,19vw,96px)}
+.ojo h2 em{font-style:normal;color:var(--acento)}
+
+/* Cómo lo decidimos */
+.como h2{font-size:clamp(48px,15vw,72px);margin:22px 0 18px}
+.como ol{list-style:none;padding:0;display:grid;gap:14px;counter-reset:p}
+.como li{counter-increment:p;display:grid;grid-template-columns:34px 1fr;gap:10px;font-size:15px;line-height:1.38}
+.como li::before{content:counter(p);font-family:var(--display);font-weight:800;font-size:30px;line-height:.9;font-variation-settings:"wdth" 75}
+
+/* Evidencia */
+.evidencia h2{font-size:clamp(44px,13vw,64px);margin:22px 0 16px}
+.puntos{display:grid;grid-template-columns:repeat(10,1fr);gap:7px;max-width:330px}
+.puntos i{aspect-ratio:1;border-radius:50%;border:2.5px solid var(--fg)}
+.puntos i.si{background:var(--acento);border-color:var(--acento)}
+.activa .puntos i{animation:aparece .3s both}
+@keyframes aparece{from{transform:scale(0)}to{transform:scale(1)}}
+.comparo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.comparo .puntos{grid-template-columns:repeat(8,1fr);gap:4px}
+.comparo .puntos i{border-width:2px}
+.comparo b{display:block;font-family:var(--display);font-weight:800;font-size:40px;line-height:.9;font-variation-settings:"wdth" 75;margin:10px 0 4px}
+
+/* 2026 */
+.vistas{justify-content:space-between;padding-left:0;padding-right:0}
+.vistas .pad{padding:0 22px}
+.vistas h2{font-size:clamp(52px,16vw,80px);margin-top:22px}
+.cinta{overflow:hidden;white-space:nowrap;font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 75;
+  text-transform:uppercase;font-size:40px;line-height:1.05}
+.cinta div{display:inline-block;animation:corre 70s linear infinite}
+.cinta:nth-child(2) div{animation-direction:reverse;color:var(--acento)}
+.cinta span::after{content:"✳";margin:0 .35em;font-size:.6em;vertical-align:middle;opacity:.7}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+/* Cierre */
+.cierre h2{font-size:clamp(56px,17vw,84px);margin:18px 0 6px}
+.grilla{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:18px 0}
+.grilla figure{margin:0;min-width:0;transform:rotate(var(--r))}
+.grilla .marco{aspect-ratio:2/3;background:var(--fg);padding:4px;border-radius:4px}
+.grilla img,.grilla .falta{width:100%;height:100%;object-fit:cover;display:block;border-radius:2px}
+.grilla .falta{background:color-mix(in srgb,var(--bg) 30%,var(--fg));font-size:0;padding:0}
+.grilla figcaption{font-family:var(--mono);font-size:9px;line-height:1.15;margin-top:6px;text-transform:uppercase}
+.acciones{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.boton.borde{background:none;color:var(--fg);border:2px solid var(--fg)}
+
+/* Índice */
+.indice{position:absolute;inset:0;z-index:20;background:var(--negro);color:var(--blanco);overflow-y:auto;padding:22px 18px 40px;
+  transform:translateY(100%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.indice.abierto{transform:none}
+.indice header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.indice h2{font-size:52px}
+.indice h3{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 75;text-transform:uppercase;font-size:26px;margin:24px 0 8px;
+  display:flex;align-items:center;gap:10px}
+.indice h3 i{width:14px;height:14px;border-radius:50%;display:inline-block}
+.fila{display:grid;grid-template-columns:44px 1fr 72px;gap:12px;align-items:center;width:100%;text-align:left;padding:10px 0;
+  border-top:1px solid rgba(255,255,255,.18)}
+.fila .mini{width:44px;height:58px;border-radius:3px;object-fit:cover;background:#333;display:block;font-size:0;padding:0}
+.fila b{display:block;font-family:var(--display);font-weight:700;font-size:19px;line-height:1.05;font-variation-settings:"wdth" 85}
+.fila small{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;opacity:.7}
+.fila svg{width:72px;height:28px;overflow:visible}
+.fila svg path{fill:none;stroke-width:2;stroke-linecap:round}
+
+/* Flechas en compu */
+.flecha{position:fixed;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;
+  background:rgba(255,255,255,.16);color:#fff;font-size:22px;display:none}
+@media (min-width:700px){.flecha{display:grid;place-items:center}}
+.flecha.izq{left:calc(50% - 300px)}.flecha.der{right:calc(50% - 300px)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .curva .linea{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<button class="flecha izq" id="ant" aria-label="Pantalla anterior">←</button>
+<main class="escenario" id="escenario" aria-live="polite">
+  <div class="barras" id="barras" aria-hidden="true"></div>
+  <div class="arriba"><span class="marca">Paleta predictiva</span><button id="abrirIndice">Ver todas</button></div>
+  <div id="pantallas"></div>
+  <section class="indice" id="indice" aria-label="Todas las tendencias" aria-hidden="true"></section>
+</main>
+<button class="flecha der" id="sig" aria-label="Pantalla siguiente">→</button>
+
+<script src="datos.js"></script>
+<script>
+(function(){
+var D = window.DATOS;
+var C = {azul:'#1E2BFF',rosa:'#FF6FB5',amarillo:'#FFE14A',menta:'#3DDC97',naranja:'#FF5B1F',negro:'#111111',vino:'#5B0E2D',blanco:'#FFFFFF'};
+// Colores de cada pantalla: [fondo, texto, acento]
+var QUEDA = [[C.azul,C.blanco,C.amarillo],[C.rosa,C.negro,C.azul],[C.amarillo,C.negro,C.azul],[C.menta,C.negro,C.rosa]];
+var RIESGO = [[C.negro,C.blanco,C.naranja],[C.naranja,C.negro,C.negro],[C.vino,C.rosa,C.naranja]];
+var RUBROS = [['vestidos','Vestidos'],['polleras','Polleras'],['pantalones','Pantalones'],['abrigos','Abrigos y tejidos'],['accesorios','Accesorios'],['todo','De todo un poco']];
+var TEMP = {SS2024:'Primavera 2024',FW2024:'Otoño 2024',SS2026:'Primavera 2026',FW2026:'Otoño 2026'};
+var MES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+
+var rubro = 'todo', pantallas = [], actual = 0;
+var $ = function(s){return document.querySelector(s)};
+function el(html){var t=document.createElement('template');t.innerHTML=html.trim();return t.content.firstChild}
+function foto(t){return 'fotos/'+t.id+'.jpg'}
+function mes(m){var p=m.split('-');return MES[+p[1]-1]+' '+p[0]}
+function ordenadas(v){
+  return D.tendencias.filter(function(t){return t.veredicto===v}).sort(function(a,b){
+    var ra=(a.rubro===rubro||a.rubro==='todo')?0:1, rb=(b.rubro===rubro||b.rubro==='todo')?0:1;
+    if(rubro==='todo'){ra=rb=0}
+    return ra-rb || (a.confianza==='Alta'?0:1)-(b.confianza==='Alta'?0:1);
+  });
+}
+
+// Curva: 12 meses antes y 12 después del desfile, cada serie en su escala
+function trazo(serie,W,H){
+  var v=serie.filter(function(x){return x!=null}), mx=Math.max.apply(null,v)||1, mn=Math.min.apply(null,v), d='';
+  serie.forEach(function(y,i){ if(y==null)return;
+    var px=i*(W/(serie.length-1)), py=H-((y-mn)/((mx-mn)||1))*H;
+    d+=(d?'L':'M')+px.toFixed(1)+' '+py.toFixed(1)});
+  return d;
+}
+function curva(t){
+  var W=400,H=60,x=12*(W/23);
+  return '<svg class="curva" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" aria-hidden="true">'+
+    '<rect class="despues" x="'+x+'" y="-6" width="'+(W-x)+'" height="'+(H+12)+'"/>'+
+    '<line class="corte" x1="'+x+'" x2="'+x+'" y1="-6" y2="'+(H+6)+'"/>'+
+    '<path class="linea" pathLength="1" d="'+trazo(t.serie,W,H)+'"/></svg>';
+}
+function imagen(t,clase){
+  return '<img src="'+foto(t)+'" alt="Look de pasarela: '+t.nombre+'" class="'+(clase||'')+'" '+
+    'onerror="this.outerHTML=\'<div class=&quot;falta '+(clase||'')+'&quot;>Falta la foto<br>'+foto(t)+'</div>\'">';
+}
+
+function pTendencia(t,i){
+  var col=(t.veredicto==='queda'?QUEDA:RIESGO)[i%(t.veredicto==='queda'?QUEDA.length:RIESGO.length)];
+  var lectura = t.veredicto==='queda'
+    ? 'El año después del desfile se buscó más que el anterior. Lo que gana búsquedas así suele quedarse.'
+    : 'El año después del desfile se buscó menos que el anterior. Más de la mitad de las que caen así pasan de moda.';
+  var conf = t.confianza==='Alta' ? 'Confianza alta · se movió 30% o más' : 'Confianza media · se movió entre 10% y 30%';
+  return {col:col, html:
+    '<section class="pantalla tendencia">'+
+      '<div class="meta chico entra"><span>'+TEMP[t.temporada]+'</span><span>Desfile · '+mes(t.mes_desfile)+'</span></div>'+
+      '<div class="foto"><div class="sticker">'+imagen(t)+'</div>'+
+        '<div class="sello">'+(t.veredicto==='queda'?'Se<br>queda':'Ojo')+'</div></div>'+
+      '<h2 class="gigante nombre entra d1">'+t.nombre+'</h2>'+
+      '<div class="entra d2">'+curva(t)+'<div class="eje"><span>Año antes</span><span>Desfile</span><span>Año después</span></div></div>'+
+      '<p class="lectura entra d3">'+lectura+'</p>'+
+      '<div class="pildoras entra d4"><span class="pildora llena">'+conf+'</span>'+
+        (t.aviso?'<span class="pildora">Ojo: se apoya en un pico de un mes</span>':'')+
+        '<span class="pildora">Lo nombró '+t.medio+'</span></div>'+
+    '</section>'};
+}
+
+function armar(){
+  var q=ordenadas('queda'), r=ordenadas('riesgo');
+  pantallas=[];
+  pantallas.push({col:[C.azul,C.blanco,C.amarillo],html:
+    '<section class="pantalla inicio"><div><p class="chico entra">Fashion weeks · primavera y otoño 2024</p>'+
+    '<h1 class="gigante entra d1">La pasarela habló. <em>Las búsquedas también.</em></h1></div>'+
+    '<div class="entra d2"><p class="texto" style="margin-bottom:22px">Qué se vio en los desfiles, qué tiende a quedarse y qué puede pasar de moda antes de que lo produzcas.</p>'+
+    '<button class="boton" data-sig>Empezar →</button></div></section>'});
+  pantallas.push({col:[C.amarillo,C.negro,C.azul],html:
+    '<section class="pantalla rubro"><p class="chico entra">Antes de arrancar</p>'+
+    '<h2 class="gigante entra d1">¿Qué hace tu marca?</h2><p class="texto entra d2">Te mostramos primero lo que te toca. Igual vas a ver todo.</p>'+
+    '<div class="opciones entra d3">'+RUBROS.map(function(x){return '<button data-rubro="'+x[0]+'" aria-pressed="'+(x[0]===rubro)+'">'+x[1]+'</button>'}).join('')+'</div></section>'});
+  pantallas.push({col:[C.rosa,C.negro,C.azul],html:
+    '<section class="pantalla numero"><p class="chico entra">La temporada en números</p>'+
+    '<h2 class="gigante entra d1">Seguimos '+D.tendencias.length+' tendencias de pasarela.</h2>'+
+    '<div class="cifra entra d2"><b data-cuenta="'+q.length+'">0</b><span>se<br>quedan</span></div>'+
+    '<div class="cifra entra d3"><b data-cuenta="'+r.length+'">0</b><span>pueden<br>pasar</span></div></section>'});
+  q.forEach(function(t,i){pantallas.push(pTendencia(t,i))});
+  pantallas.push({col:[C.negro,C.blanco,C.naranja],html:
+    '<section class="pantalla ojo"><h2 class="gigante entra">Ahora, las que conviene <em>mirar con cuidado.</em></h2>'+
+    '<p class="texto entra d2" style="margin-top:20px">Perdieron búsquedas el año del desfile. No quiere decir que no las hagas: quiere decir que no apuestes fuerte.</p></section>'});
+  r.forEach(function(t,i){pantallas.push(pTendencia(t,i))});
+  pantallas.push({col:[C.blanco,C.negro,C.azul],html:
+    '<section class="pantalla como"><p class="chico entra">Sin magia</p><h2 class="gigante entra d1">Cómo lo decidimos</h2><ol class="entra d2">'+
+    '<li>Tomamos las tendencias que nombraron '+D.medios.join(', ').replace(/, ([^,]*)$/,' y $1')+' después de cada fashion week.</li>'+
+    '<li>Comparamos sus búsquedas en Google, en todo el mundo, el año después del desfile contra el año anterior, descontando lo que se movió el resto de la temporada.</li>'+
+    '<li>Si subieron 10% o más: se queda. Si bajaron 10% o más: ojo. En el medio no damos veredicto (quedaron '+D.sin_senal+' así).</li>'+
+    '<li>Mide interés, no ventas. Y es el interés del mundo: con búsquedas argentinas la regla no se confirmó.</li></ol></section>'});
+  pantallas.push({col:[C.azul,C.blanco,C.amarillo],html:
+    '<section class="pantalla evidencia"><p class="chico entra">¿Por qué creerle?</p>'+
+    '<h2 class="gigante entra d1">9 de cada 10 se quedan.</h2>'+
+    '<div class="puntos entra d2">'+Array.from({length:10},function(_,i){return '<i class="'+(i<9?'si':'')+'" style="animation-delay:'+(.4+i*.07)+'s"></i>'}).join('')+'</div>'+
+    '<p class="texto entra d2" style="margin-top:12px">De las tendencias que ganaron búsquedas en su primer año, 9 de cada 10 seguían ahí al segundo. Lo probamos con 178 tendencias de 2016 a 2024.</p>'+
+    '<div class="comparo entra d3">'+
+      '<div><p class="chico">Perdieron búsquedas</p><b>9 de 16</b>'+puntos(16,9)+'<p class="chico" style="margin-top:6px">pasaron de moda</p></div>'+
+      '<div><p class="chico">Ganaron búsquedas</p><b>2 de 19</b>'+puntos(19,2)+'<p class="chico" style="margin-top:6px">pasaron de moda</p></div>'+
+    '</div><p class="chico entra d4" style="margin-top:14px;opacity:.8">Colecciones 2021 a 2024</p></section>'});
+  var mitad=Math.ceil(D.vistas_2026.length/2);
+  function cinta(lista){var s=lista.map(function(v){return '<span>'+v.nombre+'</span>'}).join('');return '<div class="cinta"><div>'+s+s+'</div></div>'}
+  pantallas.push({col:[C.negro,C.blanco,C.rosa],html:
+    '<section class="pantalla vistas"><div class="pad"><p class="chico entra">Lo último</p>'+
+    '<h2 class="gigante entra d1">Visto en pasarela 2026</h2></div>'+
+    '<div class="entra d2">'+cinta(D.vistas_2026.slice(0,mitad))+cinta(D.vistas_2026.slice(mitad))+'</div>'+
+    '<p class="texto pad entra d3">'+D.vistas_2026.length+' tendencias de primavera y otoño 2026. Todavía no les damos veredicto: desde mediados de 2025 Google mide distinto y las búsquedas no se pueden comparar con años anteriores.</p></section>'});
+  var rot=[-4,3,-2,5,-3,2,-5,4];
+  pantallas.push({col:[C.rosa,C.negro,C.azul],html:
+    '<section class="pantalla cierre"><p class="chico entra">Para guardar o mandar al taller</p>'+
+    '<h2 class="gigante entra d1">Tu temporada</h2><p class="texto entra d1">Las '+q.length+' tendencias de 2024 que ganaron búsquedas'+(rubro!=='todo'?', con lo tuyo primero':'')+'.</p>'+
+    '<div class="grilla entra d2">'+q.map(function(t,i){return '<figure style="--r:'+rot[i%rot.length]+'deg"><div class="marco">'+imagen(t)+'</div><figcaption>'+t.nombre+'</figcaption></figure>'}).join('')+'</div>'+
+    '<div class="acciones entra d3"><button class="boton" data-indice>Ver todas</button><button class="boton borde" data-ir="0">Volver a empezar</button></div></section>'});
+
+  $('#pantallas').innerHTML=pantallas.map(function(p){return p.html}).join('');
+  $('#barras').innerHTML=pantallas.map(function(){return '<i></i>'}).join('');
+  armarIndice(q,r);
+}
+function puntos(n,k){return '<div class="puntos">'+Array.from({length:n},function(_,i){return '<i class="'+(i<k?'si':'')+'" style="animation-delay:'+(.7+i*.03)+'s"></i>'}).join('')+'</div>'}
+
+function armarIndice(q,r){
+  function filas(lista,color){return lista.map(function(t){
+    var idx=pantallas.findIndex(function(p){return p.html.indexOf('>'+t.nombre+'</h2>')>-1});
+    return '<button class="fila" data-ir="'+idx+'">'+imagen(t,'mini')+
+      '<span><b>'+t.nombre+'</b><small>'+TEMP[t.temporada]+' · confianza '+t.confianza.toLowerCase()+'</small></span>'+
+      '<svg viewBox="0 0 72 28" preserveAspectRatio="none" aria-hidden="true"><path stroke="'+color+'" d="'+trazo(t.serie,72,28)+'"/></svg></button>'}).join('')}
+  $('#indice').innerHTML='<header><h2 class="gigante">Todas</h2><button class="pildora" id="cerrarIndice">Cerrar</button></header>'+
+    '<p class="lectura" style="opacity:.8">Las '+D.tendencias.length+' tendencias de 2024 con veredicto. Tocá una para verla.</p>'+
+    '<h3><i style="background:'+C.amarillo+'"></i>Se quedan · '+q.length+'</h3>'+filas(q,C.amarillo)+
+    '<h3><i style="background:'+C.naranja+'"></i>Ojo · '+r.length+'</h3>'+filas(r,C.naranja);
+}
+
+function ir(n){
+  n=Math.max(0,Math.min(pantallas.length-1,n)); actual=n;
+  var col=pantallas[n].col, raiz=document.documentElement.style;
+  raiz.setProperty('--bg',col[0]); raiz.setProperty('--fg',col[1]); raiz.setProperty('--acento',col[2]);
+  document.querySelectorAll('.pantalla').forEach(function(p,i){p.classList.toggle('activa',i===n);p.setAttribute('aria-hidden',i!==n)});
+  document.querySelectorAll('.barras i').forEach(function(b,i){b.className=i<n?'hecha':(i===n?'actual':'')});
+  document.querySelectorAll('.pantalla.activa [data-cuenta]').forEach(contar);
+}
+function contar(e){
+  var fin=+e.dataset.cuenta, t0=null;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){e.textContent=fin;return}
+  e.textContent='0';
+  function paso(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/900);e.textContent=Math.round(fin*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(paso)}
+  setTimeout(function(){requestAnimationFrame(paso)},350);
+}
+function indice(abrir){var x=$('#indice');x.classList.toggle('abierto',abrir);x.setAttribute('aria-hidden',!abrir);if(abrir)$('#cerrarIndice').focus()}
+
+// Navegación: tocar a la derecha avanza, a la izquierda vuelve; flechas del teclado; deslizar
+var esc=$('#escenario'), x0=null, deslizo=false;
+esc.addEventListener('click',function(e){
+  if(deslizo){deslizo=false;return}
+  var b=e.target.closest('button,a');
+  if(b){
+    if(b.dataset.rubro){rubro=b.dataset.rubro;armar();ir(2);return}
+    if(b.hasAttribute('data-sig')){ir(actual+1);return}
+    if(b.dataset.ir!=null){indice(false);ir(+b.dataset.ir);return}
+    if(b.hasAttribute('data-indice')||b.id==='abrirIndice'){indice(true);return}
+    if(b.id==='cerrarIndice'){indice(false);return}
+    return;
+  }
+  if(e.target.closest('.indice'))return;
+  var r=esc.getBoundingClientRect();
+  ir(e.clientX-r.left<r.width*0.3?actual-1:actual+1);
+});
+esc.addEventListener('pointerdown',function(e){x0=e.clientX});
+esc.addEventListener('pointerup',function(e){if(x0!=null&&Math.abs(e.clientX-x0)>50){deslizo=true;ir(actual+(e.clientX<x0?1:-1))}x0=null});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape')indice(false);
+  if($('#indice').classList.contains('abierto'))return;
+  if(e.key==='ArrowRight')ir(actual+1); if(e.key==='ArrowLeft')ir(actual-1);
+});
+$('#ant').onclick=function(){ir(actual-1)}; $('#sig').onclick=function(){ir(actual+1)};
+
+armar(); ir(0);
+})();
+</script>
+</body>
+</html>

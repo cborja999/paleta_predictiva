@@ -1,0 +1,11 @@
+C1 SS2017: n=11  Spearman 12m vs oct-dic = +0.93  mismo veredicto 91%  opuestos 0
+C1 SS2018: n= 7  Spearman 12m vs oct-dic = +0.79  mismo veredicto 57%  opuestos 0
+M1 SS2020: n=16  Spearman 12m vs oct-dic = +0.36  mismo veredicto 31%  opuestos 2
+M1 SS2021: n= 9  Spearman 12m vs oct-dic = -0.03  mismo veredicto 33%  opuestos 1
+M1 SS2023: n= 7  Spearman 12m vs oct-dic = +0.68  mismo veredicto 71%  opuestos 0
+M2 SS2020: n=10  Spearman 12m vs oct-dic = +0.01  mismo veredicto 50%  opuestos 1
+M2 SS2021: n= 9  Spearman 12m vs oct-dic = +0.00  mismo veredicto 44%  opuestos 3
+M2 SS2023: n= 8  Spearman 12m vs oct-dic = +0.83  mismo veredicto 75%  opuestos 0
+B24 SS2024: n=16  Spearman 12m vs oct-dic = +0.75  mismo veredicto 88%  opuestos 0
+MINIMO Spearman en temporadas SS limpias: -0.03 | mediana +0.68
+Mismo veredicto: minimo 31% | mediana 57%

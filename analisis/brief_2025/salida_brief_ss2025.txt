@@ -1,0 +1,47 @@
+BRIEF SS2025 (reglas en REGLAS_BRIEF_2025.txt)
+
+SS2025: 26 terminos, 26 usables
+   statement sunglasses g1 +0.95  Tiende a quedarse        Alta   vol   0.005  Lectura apoyada en un pico de un solo mes (primer año: 2025-09)
+   pillbox hat          g1 +0.91  Tiende a quedarse        Alta   vol   0.039  Lectura apoyada en un pico de un solo mes (primer año: 2024-11)
+   bubble skirt         g1 +0.65  Tiende a quedarse        Alta   vol   0.094  
+   polka dot            g1 +0.34  Tiende a quedarse        Alta   vol   1.184  
+   chiffon cape         g1 +0.29  Tiende a quedarse        Media  vol   0.005  
+   wide leg jeans       g1 +0.15  Tiende a quedarse        Media  vol   1.308  
+   one leg pants        g1 +0.12  Tiende a quedarse        Media  vol   0.030  
+   dress over pants     g1 +0.11  Tiende a quedarse        Media  vol   0.018  
+   sheer dress          g1 +0.07  Sin señal clara                 vol   0.344  
+   lace dress           g1 +0.07  Sin señal clara                 vol   1.635  
+   mini dress           g1 +0.06  Sin señal clara                 vol   4.193  
+   utility jacket       g1 +0.01  Sin señal clara                 vol   0.170  
+   trench coat          g1 +0.00  Sin señal clara                 vol   2.354  
+   fringe jacket        g1 -0.00  Sin señal clara                 vol   0.116  
+   ruffle skirt         g1 -0.01  Sin señal clara                 vol   0.219  
+   bow blouse           g1 -0.07  Sin señal clara                 vol   0.084  
+   plaid jacket         g1 -0.07  Sin señal clara                 vol   0.214  
+   brocade jacket       g1 -0.08  Sin señal clara                 vol   0.004  
+   light pink dress     g1 -0.08  Sin señal clara                 vol   0.217  
+   floral dress         g1 -0.09  Sin señal clara                 vol   2.408  
+   peep toe heels       g1 -0.09  Sin señal clara                 vol   0.054  
+   pencil skirt         g1 -0.12  Riesgo de moda pasajera  Media  vol   0.422  
+   tutu skirt           g1 -0.16  Riesgo de moda pasajera  Media  vol   0.114  
+   breton sweater       g1 -0.17  Riesgo de moda pasajera  Media  vol   0.003  
+   sequin dress         g1 -0.18  Riesgo de moda pasajera  Media  vol   1.317  
+   80s blazer           g1 -0.18  Riesgo de moda pasajera  Media  vol   0.000  
+   total: Riesgo de moda pasajera: 5 | Sin señal clara: 13 | Tiende a quedarse: 8
+
+CHEQUEO DE VALIDEZ (falla si |rho| >= 0.5)
+   V1 g1 vs volumen:            SS2025 -0.01 (p=0.966, n=26)  -> pasa   | referencia 2024 -0.22 (p=0.224, n=31)
+   V2 g1 vs salto feb-may 2026: SS2025 -0.08 (p=0.680, n=26)  -> pasa   | referencia 2024 +0.02 (p=0.936, n=31)
+   V3 paso ene-2025 vs volumen: SS2025 +0.26 (p=0.197, n=26)  -> pasa   | pase ene-2024 (2024) +0.04 (p=0.820, n=31) | todos los terminos con A +0.21 (p=0.128, n=58)
+   mediana del paso ene-2025 (contra el pase del anio anterior): -0.07 (lo descuenta la mediana de la temporada)
+   RESULTADO: PASA: SS2025 lleva veredicto
+
+SENSIBILIDADES (descriptivas)
+   S1 oct-dic (no cruza ene-2025): Spearman con g1 +0.67 (p=0.001, n=26) (referencia limpia: mediana +0.68, minimo -0.03); en sentido contrario: ninguno
+   S2 oct-jul (sin la suba de ago-2025): Spearman con g1 +0.93 (p=0.000, n=26); veredictos que cambian: 5 de 26
+
+SEGUNDO ANIO: factibilidad de corregir por volumen
+   J26 (feb-may 2026 vs 2025): n=81, mediana +1.28, pendiente vs log(volumen) -0.14, desvio de residuos 0.59
+   J24 (feb-may 2024 vs 2023): n=81, mediana +0.08, pendiente vs log(volumen) +0.00, desvio de residuos 0.18
+   cociente 3.22 (limite 1.25) -> NO FACTIBLE: el segundo anio no se puede chequear limpio con Google Trends
+   (Spearman volumen real vs J26: -0.36 (p=0.002, n=81))

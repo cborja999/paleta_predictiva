@@ -19,15 +19,20 @@ Proyecto de la materia K576 (UdeSA) de Beltrán Martínez, Borja Centeno y Luigi
 - No subir nada a GitHub (commit/push) sin que Borja lo pida. Trabajar en una rama, no en `main`.
 - Nunca pegar ni subir claves de API.
 
-## El prototipo (tarea actual)
+## El prototipo (Entrega 3: ver `entrega3/`)
 
-- Va en la carpeta `prototipo/`. Ver `prototipo/README.md` para el brief.
+- Va en la carpeta `prototipo/`. Ver `prototipo/README.md` para el brief y cómo seguir.
+- **El diseño que se edita es el editorial (`prototipo/index.html`).** `prototipo/wrapped.html` es la alternativa descartada: no tocarla.
+- Se trabaja en la rama `entrega-3` (Netlify publica desde ahí). Pasar a `main` solo cuando el diseño esté terminado y Borja lo pida.
 - La página actual (`app/index.html`) es la versión "informe": sirve como base de datos y textos, no como diseño final.
 - Los datos listos para usar:
   - `app/datos/brief_temporada.json` (**el brief principal**): 31 tendencias puntuales de SS2024 y FW2024 con veredicto, confianza, aviso y curva (`items`), más 36 de SS2026 y FW2026 sin veredicto, como "lo que se vio" (`vistas_2026`). Detalle en `analisis/brief_2026/LEEME.md`.
+  - `app/datos/brief_ss2025.json`: 26 tendencias de SS2025 con veredicto (pasaron el chequeo de `analisis/brief_2025/`), con la nota de las que cambian sin ago-sep 2025.
+  - `prototipo/armar_datos.py` junta todo en `prototipo/datos.js` (página) y `prototipo/datos.json` (lo lee la IA).
   - `app/datos/microtendencias.json`: las 178 tendencias de la prueba con su curva, grupo y si se quedó (para la pantalla de evidencia).
   - `app/datos/brief.json`: colores, prendas y largos amplios. Solo 3 de 21 tienen veredicto; sirve para la paleta de colores y los hex, no para veredictos.
-- Desde mediados de 2025 Google Trends infla los términos de poco volumen. Nunca mostrar veredicto para 2026 ni comparar búsquedas de antes y después de 2025.
+- Desde mediados de 2025 Google Trends mide distinto (salto de 3 a 4 veces en feb-may 2026, distinto en cada término). Nunca mostrar veredicto para 2026 ni medir el segundo año de 2024-2025 con Google: se probó y no se puede.
+- La IA: `netlify/functions/lectura.mjs` (Groq, clave en la variable `GROQ_API_KEY` de Netlify) y su prompt en `netlify/functions/prompt.mjs`. Documentado en `entrega3/IA.md`. La IA no calcula ni cambia veredictos.
 - Para verla: abrir el HTML en el panel de navegador de la app (o `python3 -m http.server` desde la raíz y entrar a `http://localhost:8000/prototipo/`).
 - Pedido de los profes en la Entrega 2: interfaz más visual, criterios de la IA y niveles de confianza explícitos, y alternativas de diseño (Figma).
 - Referencias de diseño elegidas por el grupo: The Lyst Index, Spotify Wrapped, TradingView y Pantone Color of the Year.
@@ -39,7 +44,9 @@ Proyecto de la materia K576 (UdeSA) de Beltrán Martínez, Borja Centeno y Luigi
 | `hipotesis.md` | Hipótesis, definiciones, resultados y límites |
 | `readme.md` | Resumen del proyecto y lista completa de datasets con fuentes |
 | `app/` | Página actual y scripts que arman sus datos (`armar_datos.py`, `armar_microtendencias.py`) |
-| `prototipo/` | El prototipo nuevo |
+| `prototipo/` | La app (publicada en Netlify) |
+| `netlify/`, `netlify.toml` | Función de la IA y configuración de Netlify |
+| `entrega3/` | Documentación de la Entrega 3 (IA, diseño, guion) |
 | `analisis/` | Pruebas, reglas (`REGLAS_*.txt`) y salidas |
 | `datasets/`, `datasets_procesados/` | Datos de entrada |
 | `decisiones.md` | Registro de decisiones con fecha |

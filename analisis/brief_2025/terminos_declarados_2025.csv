@@ -1,0 +1,32 @@
+temporada,mes_desfile,medio,tendencia_fuente,termino,tipo,nota
+SS2025,2024-10,Who What Wear,Soft power (corporate tailoring softened),trench coat,prenda,primer item nombrado
+SS2025,2024-10,Who What Wear,Powder pink,light pink dress,color,color del tema con su nombre de busqueda comun
+SS2025,2024-10,Who What Wear,Individuality and personal style,pillbox hat,accesorio,primer item nombrado
+SS2025,2024-10,Who What Wear,The modern socialite,pencil skirt,prenda,"primer item especifico (antes nombra ""shirt"", generico)"
+SS2025,2024-10,Who What Wear,Opulence,brocade jacket,prenda,primer item nombrado
+SS2025,2024-10,Who What Wear,Peep-toe shoes,peep toe heels,calzado,el tema nombra la prenda
+SS2025,2024-10,Who What Wear,Romance in chiffon,chiffon cape,material,material del tema + primer item nombrado (como sheer skirt en 2024)
+SS2025,2024-10,Who What Wear,Wrong-jacket theory,sequin dress,prenda,primer item nombrado
+SS2025,2024-10,Who What Wear,Tactile textiles,fringe jacket,detalle,"primera prenda nombrada (fringe coats), convencion del proyecto para fringe"
+SS2025,2024-10,CBC Life,Sleek and structured minidresses,mini dress,prenda,el titulo nombra la prenda
+SS2025,2024-10,CBC Life,'80s blazers,80s blazer,prenda,el titulo nombra la prenda
+SS2025,2024-10,CBC Life,Bubble hems,bubble skirt,prenda,primer item nombrado (bubble-hem skirt) con su nombre de busqueda comun
+SS2025,2024-10,CBC Life,Beyond basic blue jeans,wide leg jeans,prenda,el item del tema (wide-leg blue jeans)
+SS2025,2024-10,CBC Life,Sheer perfection,sheer dress,material,el titulo y el texto nombran la prenda
+SS2025,2024-10,CBC Life,Otherworldly eyewear,statement sunglasses,accesorio,"el titulo nombra el accesorio (""statement-making pairs of optical and sunglasses"")"
+SS2025,2024-10,Yahoo Lifestyle,The Utility of Glamour,utility jacket,prenda,primer item nombrado
+SS2025,2024-10,Yahoo Lifestyle,"One Leg In, One Leg Out",one leg pants,prenda,"primer item buscable (""one-legged pants"")"
+SS2025,2024-10,Yahoo Lifestyle,Ornate Ornaments,,,descartada: repetida (brocade jacket)
+SS2025,2024-10,Yahoo Lifestyle,Very Demure,bow blouse,prenda,primer item nombrado (bowtie blouses)
+SS2025,2024-10,Yahoo Lifestyle,Hello Moto,,,"descartada: solo nombra ""sporty daywear"", sin item buscable"
+SS2025,2024-10,Yahoo Lifestyle,Cuckoo for Tutus,tutu skirt,prenda,el titulo nombra la prenda
+SS2025,2024-10,Yahoo Lifestyle,Bloom Time,floral dress,estampado,estampado del tema + primer item nombrado (dress)
+SS2025,2024-10,Yahoo Lifestyle,Dresses Over Pants,dress over pants,detalle,el titulo nombra la combinacion
+SS2025,2024-10,Yahoo Lifestyle,Boudoir Lace,lace dress,material,material del tema + primer item especifico (evening dresses)
+SS2025,2024-10,Yahoo Lifestyle,Soft Dressing,,,"descartada: solo nombra ""hemlines"" y ""train"", sin item buscable"
+SS2025,2024-10,Yahoo Lifestyle,Polka Dots Mark the Spot,polka dot,estampado,nombre del estampado (como leopard print)
+SS2025,2024-10,Yahoo Lifestyle,For the Frill of it,ruffle skirt,detalle,detalle del tema + primer item nombrado (skirts)
+SS2025,2024-10,Yahoo Lifestyle,Power Plaid,plaid jacket,estampado,estampado del tema + primer item nombrado (jackets)
+SS2025,2024-10,Yahoo Lifestyle,Transparent Genius,,,descartada: repetida (sheer dress)
+SS2025,2024-10,Yahoo Lifestyle,50 Shades of Sailor Stripes,breton sweater,prenda,primer item nombrado
+SS2025,2024-10,Yahoo Lifestyle,Fringe Benefits,,,descartada: repetida (fringe jacket)

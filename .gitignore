@@ -9,3 +9,6 @@ listado_cache.json
 multiTimeline*.csv
 dress*.csv
 datasets/lyst/
+
+# Fotos de desfiles para el prototipo (derechos de autor, no subir)
+prototipo/fotos/

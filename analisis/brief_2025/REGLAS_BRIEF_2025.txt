@@ -1,0 +1,66 @@
+BRIEF SS2025 - REGLAS FIJADAS ANTES DE BAJAR LOS DATOS (27/10/2026)
+
+POR QUE HACE FALTA UN CHEQUEO
+SS2025 se desfilo en sep-oct 2024. Su primer anio (oct-2024 a sep-2025) se compara con el anio previo (oct-2023 a sep-2024), asi que
+la comparacion cruza ene-2025 y toca la suba general de Google Trends desde ago-2025. En 2026 ese problema hizo que el veredicto
+quedara explicado por el salto de medicion (DIAGNOSTICO_2026.md). Estas reglas dicen de antemano cuando la lectura de SS2025 se usa
+y cuando no.
+
+MUESTRA
+- fuentes_listas_2025.csv: los mismos medios que en 2024 (Who What Wear, CBC Life, Yahoo Lifestyle), notas publicadas al cerrar la
+  temporada de desfiles (oct-2024).
+- terminos_declarados_2025.csv: 26 terminos, mismo criterio de mapeo que en terminos_declarados_2024.csv (5 temas descartados).
+- No se cambian terminos despues de ver los datos.
+
+DATOS A BAJAR (Google Trends, busqueda web, MUNDO, cada termino en su propia consulta salvo que se diga otra cosa)
+- A (principal): ene-2011 a sep-2025, mensual. Termina en sep-2025 para que la escala 0-100 no la fije el salto de 2026.
+- B (2024-2026): 1-ene-2024 a 30-sep-2026 (Google la da semanal). Se pasa a meses (promedio de las semanas que empiezan en cada mes)
+  y se lleva a la escala de A con el cociente de sumas en los meses que comparten (ene-2024 al ultimo mes de A).
+- V (volumen): cada termino junto con el ancla "midi skirt" en la misma consulta (ancla + hasta 4 terminos), 1-oct-2023 a
+  30-sep-2024. Volumen = suma del termino / suma del ancla. Si el termino da todo cero, volumen = 0 (queda ultimo en el ranking).
+- Para las referencias (ver abajo) se bajan tambien V y B de los 31 terminos de 2024 y de los 36 de 2026, y A (ene-2011 a sep-2025)
+  de los 36 de 2026.
+
+MEDICION (identica a la hipotesis y a 2024)
+- e = oct-2024. B0 = prom[oct-2023, sep-2024]; B1 = prom[oct-2024, sep-2025] (datos A).
+- g1 = log(B1/B0) - mediana de g1 de SS2025.
+- Usable: en la ventana como maximo 8 meses en cero y B0, B1 > 0.
+- Veredicto: g1 >= 0.10 "Tiende a quedarse"; g1 <= -0.10 "Riesgo de moda pasajera"; si no, "Sin senal clara".
+- Confianza: Alta si |g1| >= 0.30; Media si |g1| entre 0.10 y 0.30.
+- Aviso de pico (ya fijado en 2024): si en B0 o B1 un solo mes vale 5 veces o mas la mediana de ese anio, se marca
+  "lectura apoyada en un pico de un solo mes".
+
+CHEQUEO DE VALIDEZ (decide si SS2025 lleva veredicto; si falla UNO, no se usa)
+- V1 volumen: Spearman entre g1 y el volumen V. Si |rho| >= 0.5, el veredicto depende del tamanio del termino: no se usa.
+- V2 salto 2026: salto = log(prom feb-may 2026 / prom oct-2025 a ene-2026), datos B. Mide cuanto le pega a cada termino el problema
+  de Google, en meses que no estan en B0 ni en B1. Si |Spearman(g1, salto)| >= 0.5: no se usa.
+  Referencia: el mismo Spearman con los 31 terminos de 2024 (g1 limpio de brief_2024_detalle.csv). Si en 2024 tambien da
+  |rho| >= 0.5, V2 no sirve para separar el problema de una tendencia real que sigue: se informa como no concluyente y se decide con
+  V1 y V3.
+- V3 cambio de ene-2025: paso = log(prom ene-mar 2025 / prom oct-dic 2024) - log(prom ene-mar 2024 / prom oct-dic 2023), datos A
+  (el mismo pase de anio, contra el anio anterior). Si |Spearman(paso, volumen V)| >= 0.5, el cambio de ene-2025 pega distinto segun el
+  tamanio del termino: no se usa. La mediana de paso se informa (un cambio parejo para todos lo descuenta la mediana de la temporada).
+- Se informan tambien V1 y V3 con los terminos de 2024 como referencia limpia (V3 con el pase ene-2024, en lugar de ene-2025).
+
+SENSIBILIDAD (descriptiva, no decide)
+- S1 sin cruzar ene-2025: oct-dic 2024 contra oct-dic 2023, descontando la mediana de la temporada. En temporadas SS limpias esta
+  lectura corta coincide poco con la de 12 meses (referencia_lectura_corta.py: Spearman mediano 0.68, minimo -0.03; mismo veredicto
+  mediano 57%), asi que no puede decidir. Si un termino da "Tiende a quedarse" en 12 meses y <= -0.10 en S1 (o al reves), se marca
+  "la lectura de oct-dic va en sentido contrario".
+- S2 sin la suba de ago-2025: oct-2024 a jul-2025 contra oct-2023 a jul-2024. Se informa cuantos veredictos cambian.
+
+SI PASA EL CHEQUEO: los veredictos de SS2025 van a app/datos/brief_ss2025.json (mismo formato que items de brief_temporada.json).
+SI NO PASA: SS2025 va a app/datos/brief_ss2025.json como "visto en pasarela", con veredicto null y el motivo. No se fuerza.
+
+SEGUNDO ANIO ("se quedo en 2026?")
+- c2 = log(B2/B1) - mediana, B2 = prom[oct-2025, sep-2026]: cae entero en el periodo inflado. No se usa tal cual.
+- Prueba de factibilidad de una correccion por volumen (con todos los terminos con datos: 26 + 31 + 36):
+  J26 = log(prom feb-may 2026 / prom feb-may 2025) y J24 = log(prom feb-may 2024 / prom feb-may 2023).
+  A cada uno se le ajusta una recta contra log(volumen) (volumen 0 se excluye) y se mide el desvio de los residuos.
+  Si desvio(J26) <= 1.25 x desvio(J24): el volumen explica el problema casi entero y se puede comparar cada termino contra los de
+  volumen parecido; se calcula c2 corregido para SS2025 y se informa como lectura experimental.
+  Si no: el segundo anio de SS2025 no se puede chequear limpio con Google Trends y se dice asi.
+
+LIMITES
+- La muestra es chica (26 terminos): un Spearman de 0.5 con n=26 tiene p cerca de 0.01.
+- El volumen se mide contra un ancla: los terminos mucho mas chicos que "midi skirt" quedan con poca precision.

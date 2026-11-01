@@ -1,0 +1,8 @@
+# Netlify: publica el prototipo y la funcion de la IA.
+# La clave de Groq va en Site configuration > Environment variables > GROQ_API_KEY (nunca en el repo).
+[build]
+  publish = "prototipo"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"

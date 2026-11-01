@@ -97,3 +97,15 @@ Como Argentina se mueve casi a la par que el mundo (sin retraso de 12 a 18 meses
 ## 2026-10-27 Brief de la temporada con tendencias puntuales
 
 Las categorías amplias (colores, prendas) daban veredicto en solo 3 de 21, porque las dos formas de buscar no coincidían. Se pasó a tendencias puntuales de las listas de los medios, como en la hipótesis. Al medir SS2026 y FW2026 apareció un problema de Google Trends desde mediados de 2025 que infla los términos de poco volumen (`analisis/brief_2026/DIAGNOSTICO_2026.md`), así que esas tendencias se muestran sin veredicto. Los veredictos de la página salen de SS2024 y FW2024, la última temporada limpia (`app/datos/brief_temporada.json`). Una primera corrida contó como cero ene-feb 2025 por un error en la bajada; se corrigió y quedó registrada.
+
+## 2026-10-27 SS2025: reglas fijadas antes de bajar datos
+
+Se arma SS2025 con los mismos tres medios (Who What Wear, CBC Life, Yahoo Lifestyle/Harper's Bazaar; 26 términos). Como el primer año (oct-2024 a sep-2025) cruza el cambio de Google de ene-2025 y la suba desde ago-2025, las reglas (`analisis/brief_2025/REGLAS_BRIEF_2025.txt`, con sha256) fijan de antemano un chequeo: si el veredicto se explica por el volumen real del término (medido contra un ancla), por cuánto le pega el salto de 2026, o si el cambio de ene-2025 depende del volumen (|Spearman| ≥ 0,5 en cualquiera), SS2025 va sin veredicto. La lectura que no cruza ene-2025 (oct-dic) queda solo como sensibilidad: en temporadas limpias coincide poco con la de 12 meses. El segundo año solo se lee si una prueba fijada de antemano muestra que corregir por volumen limpia el salto de 2026. Datos pendientes de bajar (Google Trends no es accesible desde el entorno de Claude; se baja con `descargar_trends.js` en Chrome).
+
+## 2026-11-01 SS2025 con veredicto; el segundo año no se puede medir
+
+SS2025 pasó el chequeo fijado de antemano (V1 −0,01, V2 −0,08, V3 +0,26, límite 0,5): 8 tienden a quedarse, 5 en riesgo, 13 sin señal. Se suma al prototipo. Como sin agosto-septiembre de 2025 cambian 3 de los 8 "se queda", la app lo muestra como nota en cada uno (agregado después de ver los resultados, no cambia veredictos). La prueba del segundo año no pasa (dispersión 3,2 veces la de un año limpio): con Google Trends no se puede saber si las tendencias de 2024-2025 se quedaron en 2026. Se corrige el diagnóstico de 2026: el efecto del volumen existe pero es más débil (−0,36, no −0,84). Detalle en `analisis/brief_2025/LEEME.md`.
+
+## 2026-11-01 Entrega 3: IA con Groq, app en Netlify
+
+La app principal es la versión editorial (`prototipo/index.html`); el Wrapped queda como alternativa de diseño. La IA (GPT-OSS 120B vía Groq, función de Netlify; Llama 3.3 70B se apagó en Groq el 16/08/2026) solo traduce los datos calculados a una recomendación por rubro; no calcula ni cambia veredictos, y un control revisa que no invente números. Las fotos de pasarela se reemplazan por la curva de búsquedas porque no se pueden publicar. No hubo Figma: el diseño se hizo en código (ver `entrega3/DISENO.md`).

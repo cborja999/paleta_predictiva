@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paleta predictiva</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --negro:#0a0a0a; --blanco:#ffffff; --gris:#6b6b6b; --linea:#d9d9d9; --foto:#f1f0ec; --rojo:#b3121f; --ia:#3b3fd6; --ia-fondo:#f3f3fd;
+  --didone:"Bodoni Moda",Didot,"Bodoni 72",Georgia,serif;
+  --sans:"Jost",Futura,"Century Gothic",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--blanco);color:var(--negro);font-family:var(--sans);font-weight:400;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0;text-transform:inherit;letter-spacing:inherit}
+img{display:block}
+:focus-visible{outline:1.5px solid var(--negro);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.wrap{max-width:1320px;margin:0 auto;padding:0 32px}
+@media (max-width:700px){.wrap{padding:0 16px}}
+
+/* Etiquetas en versalitas */
+.caps{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase}
+.gris{color:var(--gris)}
+
+/* Cabecera tipo revista */
+.cabecera{border-bottom:1px solid var(--negro);background:var(--blanco);position:sticky;top:0;z-index:30}
+.cabecera .fila1{display:flex;justify-content:space-between;align-items:center;padding:12px 0 0}
+.masthead{display:block;text-align:center;text-decoration:none;font-family:var(--didone);font-weight:500;font-variation-settings:"opsz" 96;
+  font-size:clamp(34px,6.4vw,84px);letter-spacing:.06em;line-height:1;text-transform:uppercase;padding:6px 0 12px;transition:font-size .3s ease,padding .3s ease}
+.compacta .masthead{font-size:clamp(24px,3vw,32px);padding:4px 0 8px}
+.nav{display:flex;justify-content:center;gap:34px;padding:10px 0 12px;border-top:1px solid var(--linea)}
+.nav a{text-decoration:none}
+.nav a:hover{text-decoration:underline;text-underline-offset:5px}
+.nav a{white-space:nowrap}
+@media (max-width:700px){
+  .nav{gap:22px;overflow-x:auto;justify-content:flex-start;padding-inline:16px;scrollbar-width:none}
+  .cabecera .fila1{justify-content:center}.cabecera .fila1 .der{display:none}
+  .masthead{font-size:clamp(26px,8.6vw,44px);white-space:nowrap;letter-spacing:.03em}
+  .compacta .masthead{font-size:22px}
+}
+
+/* Portada */
+.portada{display:grid;grid-template-columns:7fr 5fr;gap:48px;padding:40px 0 64px;border-bottom:1px solid var(--negro)}
+.portada .grande{position:relative}
+.portada .grande .foto{aspect-ratio:4/5}
+.portada .texto{display:flex;flex-direction:column;justify-content:space-between;padding-top:6px}
+.portada h1{font-family:var(--didone);font-weight:400;font-variation-settings:"opsz" 96;font-size:clamp(46px,6vw,92px);line-height:.98;letter-spacing:-.01em;margin:22px 0 22px}
+.portada h1 i{font-weight:400}
+.portada .bajada{font-size:17px;font-weight:300;max-width:40ch}
+.sumario{list-style:none;padding:0;margin-top:36px;border-top:1px solid var(--negro)}
+.sumario li{border-bottom:1px solid var(--linea)}
+.sumario button{display:grid;grid-template-columns:64px 1fr auto;gap:16px;align-items:center;width:100%;text-align:left;padding:14px 0}
+.sumario .mini{aspect-ratio:3/4;width:64px}
+.sumario b{display:block;font-family:var(--didone);font-weight:400;font-size:24px;line-height:1.1;font-variation-settings:"opsz" 40}
+.sumario button:hover b{font-style:italic}
+@media (max-width:900px){.portada{grid-template-columns:1fr;gap:28px;padding-top:24px}.portada .texto{order:-1}.portada h1{margin:14px 0}}
+
+/* Fotos */
+.foto{position:relative;overflow:hidden;background:var(--foto)}
+.foto img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.foto .falta{position:absolute;inset:0;display:flex;align-items:flex-end;padding:12px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#9a9a96;line-height:1.5}
+.pieza:hover .foto img{transform:scale(1.035)}
+.credito{position:absolute;left:12px;bottom:10px;color:#fff;mix-blend-mode:difference}
+
+/* Lamina: la curva de busquedas en lugar de la foto (las fotos de desfile no se pueden publicar) */
+.lamina{display:flex;flex-direction:column;justify-content:space-between;gap:10px;padding:18px 18px 20px;color:var(--negro)}
+.lamina.riesgo{color:var(--rojo)}
+.lamina .l-num{font-family:var(--didone);font-weight:400;font-variation-settings:"opsz" 96;font-size:clamp(44px,4.6vw,76px);line-height:.95;letter-spacing:-.02em}
+.lamina .l-sub{color:var(--gris);max-width:24ch;line-height:1.5}
+.lamina svg{width:100%;flex:1;min-height:60px;max-height:62%;overflow:visible}
+.lamina svg path{fill:none;stroke:currentColor;stroke-width:1.6;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.lamina svg line{stroke:var(--negro);stroke-width:1;vector-effect:non-scaling-stroke;stroke-dasharray:3 3}
+.lamina.mini{padding:6px;justify-content:center}
+.lamina.mini svg{max-height:none;min-height:0}
+.principal .lamina .l-num,.portada .lamina .l-num,.nota .lamina .l-num{font-size:clamp(64px,8vw,132px)}
+.pieza:hover .lamina svg path{stroke-width:2.4}
+
+/* Dato calculado vs inferencia de la IA */
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:4px 8px;border:1px solid var(--negro);line-height:1.2;white-space:nowrap}
+.tag::before{content:"";width:7px;height:7px;background:currentColor}
+.tag.ia{background:var(--ia);border-color:var(--ia);color:#fff}
+.tag.ia::before{border-radius:50%;background:#fff}
+.leyenda-fuente{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:14px 0 0;font-size:13px;color:var(--gris)}
+
+/* Veredicto */
+.veredicto{display:inline-flex;align-items:center;gap:8px}
+.veredicto::before{content:"";width:22px;height:1.5px;background:currentColor}
+.veredicto.riesgo{color:var(--rojo)}
+
+/* Secciones */
+.seccion{padding:72px 0 80px;border-bottom:1px solid var(--negro);scroll-margin-top:110px}
+.seccion-cabeza{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;margin-bottom:40px}
+.seccion h2{font-family:var(--didone);font-weight:400;font-variation-settings:"opsz" 96;font-size:clamp(44px,6.5vw,96px);line-height:.95;letter-spacing:-.01em;margin-top:14px}
+.seccion h2 i{font-weight:400}
+.seccion .intro{max-width:46ch;font-weight:300;font-size:16px}
+@media (max-width:800px){.seccion-cabeza{grid-template-columns:1fr}.seccion{padding:52px 0 60px}}
+
+/* Filtro por rubro */
+.filtro{display:flex;flex-wrap:wrap;gap:6px 26px;padding:16px 0;border-bottom:1px solid var(--linea)}
+.filtro button{color:var(--gris);padding:4px 0;border-bottom:1.5px solid transparent}
+.filtro button[aria-pressed="true"]{color:var(--negro);border-bottom-color:var(--negro)}
+
+/* Grilla editorial */
+.grilla{display:grid;grid-template-columns:repeat(4,1fr);gap:48px 28px;margin-top:36px}
+.pieza{text-align:left;display:block;width:100%}
+.pieza .foto{aspect-ratio:3/4}
+.pieza.principal{grid-column:span 2;grid-row:span 2}
+.pieza.principal .foto{aspect-ratio:auto;height:calc(100% - 128px);min-height:420px}
+.pie{padding-top:14px}
+.pie .nombre{font-family:var(--didone);font-weight:400;font-size:26px;line-height:1.08;margin:8px 0 10px;font-variation-settings:"opsz" 48}
+.principal .pie .nombre{font-size:clamp(34px,3.6vw,52px)}
+.pieza:hover .nombre{font-style:italic}
+.pie .datos{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--linea);padding-top:10px}
+.spark{width:84px;height:22px;overflow:visible}
+.spark path{fill:none;stroke:currentColor;stroke-width:1.3;vector-effect:non-scaling-stroke}
+.vacio{grid-column:1/-1;padding:40px 0;color:var(--gris)}
+@media (max-width:1000px){.grilla{grid-template-columns:repeat(2,1fr);gap:36px 16px}.pieza.principal{grid-row:auto}.pieza.principal .foto{height:auto;aspect-ratio:4/5;min-height:0}}
+@media (max-width:520px){.pie .nombre{font-size:21px}.spark{width:56px}.pie .datos{flex-wrap:wrap}}
+
+/* Cita / evidencia */
+.cita{padding:96px 0;border-bottom:1px solid var(--negro);text-align:center}
+.cita blockquote{font-family:var(--didone);font-style:italic;font-weight:400;font-size:clamp(28px,3.6vw,50px);line-height:1.18;max-width:24ch;margin:22px auto 0;font-variation-settings:"opsz" 72}
+.cifras{display:grid;grid-template-columns:repeat(3,1fr);margin-top:72px;border-top:1px solid var(--negro)}
+.cifras div{padding:28px 20px 0;border-left:1px solid var(--linea)}
+.cifras div:first-child{border-left:0}
+.cifras b{display:block;font-family:var(--didone);font-weight:400;font-size:clamp(54px,6.5vw,104px);line-height:1;font-variation-settings:"opsz" 96}
+.cifras p{max-width:30ch;margin:14px auto 0;font-weight:300;font-size:15px}
+@media (max-width:800px){.cifras{grid-template-columns:1fr}.cifras div{border-left:0;border-bottom:1px solid var(--linea);padding:28px 0}}
+
+/* Visto en 2026 */
+.indice{columns:3 260px;column-gap:48px;border-top:1px solid var(--negro)}
+.indice li{list-style:none;break-inside:avoid;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 0;border-bottom:1px solid var(--linea)}
+.indice b{font-family:var(--didone);font-weight:400;font-size:22px;line-height:1.15}
+.indice ul{padding:0}
+
+/* Método */
+.metodo{display:grid;grid-template-columns:5fr 7fr;gap:64px}
+@media (max-width:900px){.metodo{grid-template-columns:1fr;gap:40px}}
+.pasos{list-style:none;padding:0;counter-reset:p;border-top:1px solid var(--negro)}
+.pasos li{counter-increment:p;display:grid;grid-template-columns:44px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid var(--linea);font-weight:300}
+.pasos li::before{content:counter(p,upper-roman);font-family:var(--didone);font-size:22px;line-height:1.2}
+.ciclos{border-top:1px solid var(--negro)}
+.ciclo{display:grid;grid-template-columns:110px 1fr 56px;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--linea)}
+.ciclo .barras{display:grid;gap:5px}
+.barra{position:relative;height:6px;background:#f1f1f0}
+.barra i{position:absolute;left:0;top:0;bottom:0;background:var(--negro)}
+.barra.cae i{background:var(--rojo)}
+.barra .umbral{position:absolute;left:20%;top:-5px;bottom:-5px;border-left:1px solid var(--negro)}
+.ciclo .n{font-size:12px;color:var(--gris);text-align:right;line-height:1.5;font-variant-numeric:tabular-nums}
+.leyenda{display:flex;gap:22px;flex-wrap:wrap;padding:12px 0}
+.leyenda span::before{content:"";display:inline-block;width:18px;height:6px;margin-right:8px;background:var(--negro);vertical-align:2px}
+.leyenda span.r::before{background:var(--rojo)}
+.leyenda span.u::before{width:1px;height:12px;vertical-align:-1px}
+.limites{margin-top:44px;padding-left:18px;font-weight:300;max-width:62ch}
+.limites li{margin-bottom:8px}
+
+/* Nota de detalle */
+.nota{position:fixed;inset:0;z-index:60;background:var(--blanco);overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility 0s .35s}
+.nota.abierta{opacity:1;visibility:visible;transition:opacity .35s ease}
+.nota .barra-nota{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:16px 32px;background:var(--blanco);border-bottom:1px solid var(--negro)}
+.nota .barra-nota .marca{font-family:var(--didone);font-size:20px;letter-spacing:.06em;text-transform:uppercase}
+.nota .cuerpo{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 58px)}
+.nota .cuerpo>.foto{position:sticky;top:58px;height:calc(100vh - 58px)}
+.nota .texto{padding:56px 56px 80px;max-width:640px}
+.nota h3{font-family:var(--didone);font-weight:400;font-variation-settings:"opsz" 96;font-size:clamp(48px,5.6vw,88px);line-height:.95;margin:20px 0 22px}
+.nota .lead{font-family:var(--didone);font-size:22px;line-height:1.4;font-variation-settings:"opsz" 24}
+.nota .grafico{margin:40px 0 0;border-top:1px solid var(--negro);padding-top:14px}
+.nota .grafico svg{width:100%;height:170px;display:block;margin-top:16px;overflow:visible}
+.nota .ejes{display:flex;justify-content:space-between;margin-top:8px}
+.ficha{margin-top:36px;border-top:1px solid var(--negro)}
+.ficha div{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--linea);font-weight:300}
+.ficha dt{margin:0}
+.ficha dd{margin:0}
+.aviso{margin-top:28px;padding:16px 0 0;border-top:1.5px solid var(--rojo);color:var(--rojo);font-size:15px}
+.bloque-cab{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+
+/* Bloque de la IA */
+.ia-caja{margin-top:48px;background:var(--ia-fondo);border-top:2px solid var(--ia);padding:24px 24px 28px}
+.ia-caja h4{font-family:var(--didone);font-weight:400;font-size:clamp(28px,3vw,40px);line-height:1.05;margin:16px 0 8px;font-variation-settings:"opsz" 48}
+.ia-caja .explica{font-size:14px;font-weight:300;color:#3c3c4a;max-width:52ch}
+.ia-form{display:grid;gap:14px;margin-top:20px}
+.ia-form label{display:grid;gap:6px}
+.ia-form select,.ia-form textarea{font:inherit;font-size:15px;font-weight:300;color:var(--negro);background:#fff;border:1px solid #c9c9dc;border-radius:0;padding:10px 12px}
+.ia-form textarea{min-height:76px;resize:vertical}
+.ia-form select:focus,.ia-form textarea:focus{outline:1.5px solid var(--ia);outline-offset:0;border-color:var(--ia)}
+.boton{display:inline-flex;align-items:center;justify-content:center;gap:10px;justify-self:start;background:var(--ia);color:#fff;padding:13px 22px;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase}
+.boton:hover{background:#2b2fb8}
+.boton[disabled]{opacity:.55;cursor:progress}
+.boton.secundario{background:none;color:var(--ia);border:1px solid var(--ia)}
+.ia-resp{margin-top:22px}
+.ia-resp:empty{display:none}
+.ia-resp .lectura{font-family:var(--didone);font-size:21px;line-height:1.4;font-variation-settings:"opsz" 24}
+.ia-resp h5{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;margin:22px 0 8px;color:var(--ia)}
+.ia-resp ul{padding-left:18px;font-weight:300}
+.ia-resp li{margin-bottom:6px}
+.apuesta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-top:22px;padding:14px 0;border-top:1px solid #c9c9dc;border-bottom:1px solid #c9c9dc}
+.apuesta b{font-family:var(--didone);font-weight:400;font-size:30px;line-height:1;text-transform:capitalize}
+.apuesta span{font-weight:300;font-size:15px;flex:1;min-width:200px}
+.ia-ojo{margin-top:16px;font-size:15px;font-weight:300}
+.ia-ojo strong{font-weight:500}
+.ia-control{margin-top:16px;font-size:13px;color:#7a5a00;background:#fff7dd;padding:10px 12px}
+.ia-error{color:var(--rojo);font-size:15px}
+.cargando{display:grid;gap:10px}
+.cargando i{display:block;height:12px;background:linear-gradient(90deg,#e3e3f6 0,#f7f7ff 50%,#e3e3f6 100%);background-size:200% 100%;animation:brillo 1.2s linear infinite}
+.cargando i:nth-child(2){width:86%}.cargando i:nth-child(3){width:64%}
+@keyframes brillo{to{background-position:-200% 0}}
+details.envio{margin-top:20px;font-size:13px}
+details.envio summary{cursor:pointer;color:var(--ia);letter-spacing:.14em;text-transform:uppercase;font-size:11px;font-weight:500}
+details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-family:ui-monospace,Menlo,monospace;font-size:12px;line-height:1.5;background:#fff;border:1px solid #d9d9ea;padding:12px;margin-top:10px;max-height:340px;overflow:auto}
+@media (max-width:860px){.ia-caja{padding:20px 16px 24px;margin-left:-16px;margin-right:-16px}}
+
+/* Metodo: que cambio, limites e IA */
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:64px;padding-top:28px;border-top:1px solid var(--negro)}
+.tres h3{font-family:var(--didone);font-weight:400;font-size:30px;line-height:1.1;margin:12px 0 14px;font-variation-settings:"opsz" 48}
+.tres ol,.tres ul{padding-left:18px;font-weight:300;font-size:15px}
+.tres li{margin-bottom:10px}
+.tres p{font-weight:300;font-size:15px;margin-bottom:10px}
+.prompt{margin-top:14px}
+@media (max-width:900px){.tres{grid-template-columns:1fr;gap:36px}}
+@media (max-width:860px){
+  .nota .cuerpo{grid-template-columns:1fr}
+  .nota .cuerpo>.foto{position:relative;top:0;height:72vh}
+  .nota .texto{padding:32px 16px 64px}
+  .nota .barra-nota{padding:14px 16px}
+  .ficha div{grid-template-columns:110px 1fr}
+}
+
+footer{padding:40px 0 56px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer .masthead{font-size:28px;padding:0;text-align:left}
+</style>
+</head>
+<body>
+<header class="cabecera" id="cabecera">
+  <div class="wrap">
+    <div class="fila1 caps"><span>Informe de temporada · 2024-2025</span><span class="der">Para marcas argentinas</span></div>
+    <a class="masthead" href="#">Paleta Predictiva</a>
+  </div>
+  <nav class="nav caps" aria-label="Secciones">
+    <a href="#se-quedan">Se quedan</a>
+    <a href="#en-riesgo">En riesgo</a>
+    <a href="#visto-2026">Visto en 2026</a>
+    <a href="#metodo">Método</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="portada" aria-label="Portada">
+    <div class="grande" id="portada-foto"></div>
+    <div class="texto">
+      <div>
+        <p class="caps">Fashion weeks · Primavera 2024 a primavera 2025</p>
+        <h1>Qué se queda y qué <i>pasa de moda</i></h1>
+        <p class="bajada" id="bajada"></p>
+      </div>
+      <ul class="sumario" id="sumario"></ul>
+    </div>
+  </section>
+
+  <div class="filtro caps" id="filtro" role="group" aria-label="Filtrar por rubro"></div>
+  <div class="leyenda-fuente"><span class="tag">Calculado</span><span>veredictos, confianza, curvas y porcentajes: salen de los datos, con reglas fijas.</span><span class="tag ia">Inferencia de la IA</span><span>recomendaciones para tu marca: las escribe un modelo de lenguaje a partir de esos datos.</span></div>
+
+  <section class="seccion" id="se-quedan">
+    <div class="seccion-cabeza">
+      <div><p class="caps" id="n-queda"></p><h2>Lo que <i>se queda</i></h2></div>
+      <p class="intro">Ganaron búsquedas el año después del desfile. De las tendencias que suben así, 9 de cada 10 siguen ahí al año siguiente.</p>
+    </div>
+    <div class="grilla" id="grilla-queda"></div>
+  </section>
+
+  <section class="cita" aria-label="La hipótesis">
+    <p class="caps">La hipótesis</p>
+    <blockquote>“Lo que gana búsquedas en su primer año rara vez se desploma en el segundo.”</blockquote>
+    <div class="cifras">
+      <div><p class="caps gris">Las que ganaron búsquedas</p><b>9 de 10</b><p>seguían ahí al segundo año. 178 tendencias de 2016 a 2024.</p></div>
+      <div><p class="caps gris">Las que perdieron búsquedas</p><b>9 de 16</b><p>fueron moda pasajera, contra 2 de 19 de las que ganaron. Colecciones 2021 a 2024.</p></div>
+      <div><p class="caps gris">En ocho ciclos</p><b>≤ 20%</b><p>de pasajeras entre las que subieron, en cada ciclo de 2016 a 2024. Nunca más.</p></div>
+    </div>
+  </section>
+
+  <section class="seccion" id="en-riesgo">
+    <div class="seccion-cabeza">
+      <div><p class="caps" id="n-riesgo" style="color:var(--rojo)"></p><h2>Lo que puede <i>pasar</i></h2></div>
+      <p class="intro">Perdieron búsquedas el año después del desfile. No quiere decir que no las hagas: quiere decir que no apuestes fuerte.</p>
+    </div>
+    <div class="grilla" id="grilla-riesgo"></div>
+  </section>
+
+  <section class="seccion" id="visto-2026">
+    <div class="seccion-cabeza">
+      <div><p class="caps">Lo último</p><h2>Visto en <i>pasarela</i> 2026</h2></div>
+      <p class="intro" id="intro-2026"></p>
+    </div>
+    <div class="indice" id="indice"></div>
+  </section>
+
+  <section class="seccion" id="metodo">
+    <div class="seccion-cabeza">
+      <div><p class="caps">Método</p><h2>Cómo <i>lo sabemos</i></h2></div>
+      <p class="intro">Probamos primero si la pasarela anticipaba las búsquedas, con más de 2.000 looks de Vogue Runway clasificados con IA. Acertaba la mitad de las veces, como una moneda. Lo que sí daba pistas era lo que pasaba con las búsquedas después del desfile.</p>
+    </div>
+    <div class="metodo">
+      <ol class="pasos" id="pasos"></ol>
+      <div>
+        <p class="caps">Ciclo por ciclo · cuántas fueron moda pasajera al segundo año</p>
+        <div class="leyenda caps gris"><span>Ganaron búsquedas</span><span class="r">Perdieron búsquedas</span><span class="u">20%</span></div>
+        <div class="ciclos" id="ciclos"></div>
+      </div>
+    </div>
+    <div class="tres">
+      <div>
+        <p class="caps">La hipótesis</p><h3>Qué cambió y por qué</h3>
+        <ol>
+          <li><b>Al principio</b> creíamos que la pasarela anticipa las ventas masivas 12 a 18 meses después.</li>
+          <li><b>Lo probamos</b> con 2.430 looks de Vogue Runway clasificados con IA contra Google Trends: no apareció ningún desfase y acertaba 7 de 14, como tirar una moneda. Lo presentamos como resultado nulo.</li>
+          <li><b>Lo que sí funcionó</b> fue mirar qué pasa con las búsquedas el primer año después del desfile. Probamos que lo que sube se queda con tendencias nuevas de 2016 a 2018, que no habíamos usado para armar la idea: solo 1 de 17 fue pasajera.</li>
+          <li><b>Lo que descartamos:</b> que lo que se mantiene plano sea pasajero. No se sostuvo: las planas se quedaron 73% de las veces, no tan lejos del 88% de las que suben. El riesgo está en lo que cae.</li>
+        </ol>
+      </div>
+      <div>
+        <p class="caps">Los datos</p><h3>Lo que no dicen</h3>
+        <ul>
+          <li>Google mide búsquedas, es decir, interés. No ventas.</li>
+          <li>Son búsquedas de todo el mundo. Con búsquedas solo de Argentina la regla no se confirmó.</li>
+          <li>Las tendencias las eligieron medios de moda en inglés (Who What Wear, CBC Life, Yahoo Lifestyle). No las elegimos nosotros, pero tampoco son todas las que hubo.</li>
+          <li>El veredicto es la lectura del primer año. El segundo año de estas tendencias no se puede medir limpio con Google: lo probamos y el ruido de 2026 es más de tres veces el de un año normal.</li>
+          <li>Primavera 2025 pasó un chequeo fijado de antemano (el veredicto no depende del tamaño de la búsqueda ni del salto de 2026), pero su primer año toca meses en que Google empezó a medir distinto. En 3 de sus 8 “se queda” la lectura cambia sin agosto y septiembre de 2025; lo marcamos en cada una.</li>
+          <li>Desde mediados de 2025 Google Trends mide distinto y las búsquedas no se pueden comparar con los años anteriores. Por eso 2026 va sin veredicto.</li>
+          <li>Las muestras son chicas: de 15 a 68 tendencias por prueba.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="caps">La IA</p><h3>Qué hace y qué no</h3>
+        <p>Cuando abrís una tendencia, podés pedirle a la IA qué haría una marca de tu rubro con ella. Le mandamos el veredicto, la confianza, el cambio de búsquedas, los avisos, la evidencia y los límites de los datos. Devuelve una lectura, ideas de producto y cuánto apostar.</p>
+        <p>No calcula nada ni cambia el veredicto. Un control automático revisa que no invente números y que la apuesta sea coherente con el veredicto; si falla, le pide que corrija una vez.</p>
+        <p id="ia-modelo" class="caps gris">Modelo: GPT-OSS 120B (abierto, de OpenAI), vía Groq</p>
+        <div class="prompt"><button class="boton secundario" id="ver-prompt">Ver qué le pedimos a la IA</button><div id="prompt-texto"></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="masthead">Paleta Predictiva</span>
+    <p class="caps gris">K576 · Universidad de San Andrés · Martínez, Centeno, Bonomi<br>Prototipo de clase. Datos: Google Trends y listas de medios de moda. Código y análisis en <a href="https://github.com/cborja999/paleta_predictiva">GitHub</a>.</p>
+  </div>
+</footer>
+
+<article class="nota" id="nota" aria-hidden="true" aria-label="Detalle de la tendencia">
+  <div class="barra-nota"><span class="marca">Paleta Predictiva</span><button class="caps" id="cerrar">Cerrar ✕</button></div>
+  <div id="nota-cuerpo"></div>
+</article>
+
+<script src="datos.js"></script>
+<script>
+(function(){
+  "use strict";
+  var D = window.DATOS, T = D.tendencias;
+  var TEMP = {SS2024:'Primavera 2024', FW2024:'Otoño 2024', SS2025:'Primavera 2025', SS2026:'Primavera 2026', FW2026:'Otoño 2026'};
+  var ORDEN_T = {SS2025:0, FW2024:1, SS2024:2};
+  var MES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  var RUBROS = [['', 'Todo'], ['vestidos', 'Vestidos'], ['polleras', 'Polleras'], ['pantalones', 'Pantalones'], ['abrigos', 'Abrigos y tejidos'], ['accesorios', 'Accesorios y estampados']];
+  var rubro = '';
+  function $(id){ return document.getElementById(id); }
+  function mes(m){ var p = m.split('-'); return MES[+p[1]-1] + ' de ' + p[0]; }
+  function lista(xs){ return xs.join(', ').replace(/, ([^,]*)$/, ' y $1'); }
+  function verd(t){ return '<span class="caps veredicto ' + t.veredicto + '">' + (t.veredicto === 'queda' ? 'Se queda' : 'En riesgo') + '</span>'; }
+  function pct(n){ return (n > 0 ? '+' : n < 0 ? '−' : '') + Math.abs(n) + '%'; }
+  function esc(x){ return String(x).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  // Lamina: la curva de busquedas y el cambio calculado, en lugar de una foto de pasarela
+  function foto(t, clase){
+    var W = 240, H = 100, x = (12 * W / 23).toFixed(1), mini = clase === 'mini';
+    var curva = '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" aria-hidden="true">' +
+      '<line x1="' + x + '" x2="' + x + '" y1="0" y2="' + H + '"/><path d="' + trazo(t.serie, W, H) + '"/></svg>';
+    if (mini) return '<div class="foto lamina mini ' + t.veredicto + '">' + curva + '</div>';
+    return '<div class="foto lamina ' + (clase || '') + ' ' + t.veredicto + '" role="img" aria-label="Búsquedas de ' + esc(t.nombre) + ': ' + pct(t.cambio_pct) + ' el año después del desfile">' +
+      '<span class="caps gris">Búsquedas en Google</span>' +
+      '<div><b class="l-num">' + pct(t.cambio_pct) + '</b><p class="caps l-sub">el año después del desfile, descontada la temporada</p></div>' + curva + '</div>';
+  }
+  function trazo(serie, W, H){
+    var v = serie.filter(function(x){ return x != null; }), mx = Math.max.apply(null, v), mn = Math.min.apply(null, v), d = '';
+    serie.forEach(function(y, i){ if (y == null) return;
+      d += (d ? 'L' : 'M') + (i * W / (serie.length - 1)).toFixed(1) + ' ' + (H - (y - mn) / ((mx - mn) || 1) * H).toFixed(1); });
+    return d;
+  }
+  function cuidado(t){ return t.aviso || t.nota ? 1 : 0; }
+  function orden(a, b){ return cuidado(a) - cuidado(b) || ORDEN_T[a.temporada] - ORDEN_T[b.temporada] || (a.confianza === 'Alta' ? 0 : 1) - (b.confianza === 'Alta' ? 0 : 1) || Math.abs(b.g1) - Math.abs(a.g1); }
+  var Q = T.filter(function(t){ return t.veredicto === 'queda'; }).sort(orden);
+  var R = T.filter(function(t){ return t.veredicto === 'riesgo'; }).sort(orden);
+
+  // Portada: la más firme que se queda en grande; en el sumario, otras tres firmes
+  function firme(t){ return !cuidado(t); }
+  var tapa = Q.filter(firme)[0];
+  var sumario = [Q.filter(firme)[1], R.filter(firme)[0], R.filter(firme)[1]];
+  $('portada-foto').innerHTML = '<button class="pieza" data-id="' + tapa.id + '">' + foto(tapa) +
+    '<div class="pie"><div class="datos" style="border:0;padding:0">' + verd(tapa) + '<span class="caps gris">' + TEMP[tapa.temporada] + '</span></div>' +
+    '<p class="nombre" style="font-size:clamp(30px,3.4vw,46px)">' + tapa.nombre + '</p></div></button>';
+  $('bajada').textContent = 'Revisamos las ' + (T.length + D.sin_senal) + ' tendencias que nombraron ' + lista(D.medios) + ' y miramos qué pasó con sus búsquedas el año después del desfile. ' + Q.length + ' tienden a quedarse; ' + R.length + ' pueden ser moda pasajera.';
+  $('sumario').innerHTML = sumario.map(function(t){
+    return '<li><button data-id="' + t.id + '">' + foto(t, 'mini') + '<span>' + verd(t) + '<b>' + t.nombre + '</b></span><span class="caps gris">' + TEMP[t.temporada].split(' ')[0] + '</span></button></li>';
+  }).join('');
+
+  // Grillas
+  function pieza(t, principal){
+    return '<button class="pieza' + (principal ? ' principal' : '') + '" data-id="' + t.id + '">' + foto(t) +
+      '<div class="pie">' + verd(t) + '<p class="nombre">' + t.nombre + '</p>' +
+      '<div class="datos"><span class="caps gris">' + TEMP[t.temporada] + ' · Confianza ' + t.confianza.toLowerCase() + '</span>' +
+      '<svg class="spark" viewBox="0 0 84 22" preserveAspectRatio="none" aria-hidden="true" style="color:' + (t.veredicto === 'queda' ? 'var(--negro)' : 'var(--rojo)') + '"><path d="' + trazo(t.serie, 84, 22) + '"/></svg></div></div></button>';
+  }
+  function pasa(t){ return !rubro || t.rubro === rubro || (rubro === 'accesorios' && t.rubro === 'todo'); }
+  function grilla(id, lista){
+    var l = lista.filter(pasa);
+    $(id).innerHTML = l.length ? l.map(function(t, i){ return pieza(t, i === 0 && l.length > 2); }).join('')
+      : '<p class="vacio caps">No hay tendencias de este rubro en esta sección.</p>';
+  }
+  function pintar(){
+    grilla('grilla-queda', Q); grilla('grilla-riesgo', R);
+    $('n-queda').textContent = Q.filter(pasa).length + ' tendencias';
+    $('n-riesgo').textContent = R.filter(pasa).length + ' tendencias';
+    $('filtro').innerHTML = '<span class="gris">Tu rubro:</span>' + RUBROS.map(function(r){
+      return '<button data-rubro="' + r[0] + '" aria-pressed="' + (r[0] === rubro) + '">' + r[1] + '</button>'; }).join('');
+  }
+  pintar();
+
+  // Visto en 2026
+  $('intro-2026').textContent = D.vistas_2026.length + ' tendencias de las fashion weeks de 2026. Te contamos qué se vio, sin veredicto: desde mediados de 2025 Google Trends mide distinto y las búsquedas no se pueden comparar con los años anteriores.';
+  $('indice').innerHTML = '<ul>' + D.vistas_2026.map(function(v){
+    return '<li><b>' + v.nombre + '</b><span class="caps gris">' + TEMP[v.temporada].split(' ')[0] + '</span></li>'; }).join('') + '</ul>';
+
+  // Método
+  $('pasos').innerHTML = [
+    'Tomamos las tendencias que nombraron ' + lista(D.medios) + ' después de cada fashion week. No las elegimos nosotros.',
+    'Comparamos sus búsquedas en Google, en todo el mundo, el año después del desfile contra el año anterior, descontando lo que se movió el resto de la temporada.',
+    'Si subieron 10% o más, tiende a quedarse. Si bajaron 10% o más, está en riesgo. En el medio no damos veredicto (' + D.sin_senal + ' quedaron así).',
+    'Confianza alta si el movimiento fue de 30% o más; media si fue de entre 10% y 30%. Las reglas se escribieron antes de mirar los datos.'
+  ].map(function(p){ return '<li>' + p + '</li>'; }).join('');
+  $('ciclos').innerHTML = D.ciclos.map(function(c){
+    function b(k, n, cl){ return '<div class="barra ' + cl + '"><i style="width:' + (n ? k / n * 100 : 0) + '%"></i><span class="umbral"></span></div>'; }
+    return '<div class="ciclo"><span class="caps">' + c.ciclo.replace('-', ' → ') + '</span><div class="barras">' +
+      b(c.sube_pasajeras, c.sube_n, 'sube') + b(c.cae_pasajeras, c.cae_n, 'cae') + '</div>' +
+      '<span class="n">' + c.sube_pasajeras + '/' + c.sube_n + '<br>' + c.cae_pasajeras + '/' + c.cae_n + '</span></div>';
+  }).join('');
+
+  // Nota de detalle
+  var nota = $('nota');
+  function abrir(t){
+    var W = 600, H = 150, x = (12 * W / 23).toFixed(1);
+    var col = t.veredicto === 'queda' ? 'var(--negro)' : 'var(--rojo)';
+    var lead = t.veredicto === 'queda'
+      ? 'El año después del desfile se buscó más que el anterior, descontando lo que se movió el resto de la temporada. De las tendencias que ganan búsquedas así, nueve de cada diez siguen vigentes al segundo año.'
+      : 'El año después del desfile se buscó menos que el anterior, descontando lo que se movió el resto de la temporada. De las tendencias de 2021 a 2024 que perdieron búsquedas así, nueve de dieciséis fueron moda pasajera.';
+    $('nota-cuerpo').innerHTML = '<div class="cuerpo">' + foto(t) + '<div class="texto">' +
+      '<p class="caps gris">' + TEMP[t.temporada] + ' · Desfiles de ' + mes(t.mes_desfile) + '</p>' +
+      '<h3>' + t.nombre + '</h3>' + verd(t) +
+      '<p class="lead" style="margin-top:22px">' + lead + '</p>' +
+      '<div class="grafico"><div class="bloque-cab"><p class="caps">Búsquedas en Google · todo el mundo</p><span class="tag">Calculado</span></div>' +
+        '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" role="img" aria-label="Búsquedas de ' + t.nombre + ' el año antes y el año después del desfile">' +
+        '<line x1="' + x + '" x2="' + x + '" y1="-8" y2="' + (H + 8) + '" stroke="var(--negro)" stroke-width="1" vector-effect="non-scaling-stroke"/>' +
+        '<line x1="0" x2="' + W + '" y1="' + H + '" y2="' + H + '" stroke="var(--linea)" vector-effect="non-scaling-stroke"/>' +
+        '<path d="' + trazo(t.serie, W, H) + '" fill="none" stroke="' + col + '" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg>' +
+        '<div class="ejes caps gris"><span>Año antes</span><span>Desfile</span><span>Año después</span></div></div>' +
+      (t.aviso ? '<p class="aviso">Ojo: la lectura se apoya en un pico de un solo mes. El veredicto es el mismo, pero conviene tomarlo con más cuidado.</p>' : '') +
+      (t.nota ? '<p class="aviso">Ojo: ' + esc(t.nota.charAt(0).toLowerCase() + t.nota.slice(1)) + ' El veredicto sale de las reglas fijadas antes de mirar los datos, pero conviene tomarlo con más cuidado.</p>' : '') +
+      '<dl class="ficha">' +
+        '<div><dt class="caps gris">Cambio</dt><dd>' + pct(t.cambio_pct) + ' de búsquedas el año después del desfile contra el año anterior, descontando lo que se movió el resto de la temporada</dd></div>' +
+        '<div><dt class="caps gris">Confianza</dt><dd>' + t.confianza + ' · ' + (t.confianza === 'Alta' ? 'se movió 30% o más' : 'se movió entre 10% y 30%') + '</dd></div>' +
+        '<div><dt class="caps gris">Búsqueda</dt><dd>“' + t.termino + '”</dd></div>' +
+        '<div><dt class="caps gris">La nombró</dt><dd><a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a>, como “' + t.tendencia_fuente + '”</dd></div>' +
+      '</dl>' + bloqueIA(t) + '</div></div>';
+    $('ia-pedir').addEventListener('click', function(){ pedirIA(t); });
+    nota.classList.add('abierta'); nota.setAttribute('aria-hidden', 'false'); nota.scrollTop = 0;
+    document.body.style.overflow = 'hidden'; $('cerrar').focus();
+  }
+  function cerrar(){ nota.classList.remove('abierta'); nota.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
+  $('cerrar').addEventListener('click', cerrar);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') cerrar(); });
+  document.addEventListener('click', function(e){
+    var r = e.target.closest('[data-rubro]');
+    if (r){ rubro = r.dataset.rubro; pintar(); return; }
+    var b = e.target.closest('[data-id]');
+    if (b && !nota.contains(b)) abrir(T.filter(function(t){ return t.id === b.dataset.id; })[0]);
+  });
+
+  // IA: recomendacion para la marca (funcion de Netlify -> Groq). La IA no calcula ni cambia el veredicto.
+  var API = '/api/lectura', online = location.protocol !== 'file:';
+  function bloqueIA(t){
+    return '<section class="ia-caja" aria-label="Recomendación de la IA">' +
+      '<div class="bloque-cab"><span class="tag ia">Inferencia de la IA</span><span class="caps gris">No cambia el veredicto</span></div>' +
+      '<h4>¿Qué hago con esto en mi marca?</h4>' +
+      '<p class="explica">La IA lee los datos calculados de arriba y te sugiere cómo usarlos según tu rubro. Es una sugerencia, no un dato.</p>' +
+      '<div class="ia-form">' +
+        '<label><span class="caps gris">Tu rubro</span><select id="ia-rubro">' + RUBROS.map(function(r){
+          return '<option value="' + r[0] + '"' + (r[0] === rubro ? ' selected' : '') + '>' + (r[0] ? r[1] : 'Varios rubros') + '</option>'; }).join('') + '</select></label>' +
+        '<label><span class="caps gris">Tu marca, en una línea (opcional)</span><textarea id="ia-marca" maxlength="280" placeholder="Ej.: ropa de mujer de 25 a 40, básicos de algodón, vendemos online"></textarea></label>' +
+        '<button class="boton" id="ia-pedir">Pedir recomendación</button>' +
+      '</div><div class="ia-resp" id="ia-resp" aria-live="polite"></div></section>';
+  }
+  function pedirIA(t){
+    var resp = $('ia-resp'), boton = $('ia-pedir');
+    if (!online){ resp.innerHTML = '<p class="ia-error">La IA funciona en la versión online de la página (necesita el servidor). Abrila desde el link de Netlify.</p>'; return; }
+    boton.disabled = true; boton.textContent = 'Pensando…';
+    resp.innerHTML = '<p class="caps gris" style="margin-bottom:12px">La IA está leyendo los datos de ' + esc(t.nombre) + '…</p><div class="cargando"><i></i><i></i><i></i></div>';
+    var ctrl = window.AbortController ? new AbortController() : null, reloj = setTimeout(function(){ if (ctrl) ctrl.abort(); }, 45000);
+    fetch(API, {method:'POST', headers:{'content-type':'application/json'}, signal: ctrl && ctrl.signal,
+      body: JSON.stringify({id: t.id, rubro: $('ia-rubro').value, marca: $('ia-marca').value})})
+      .then(function(r){ return r.json().catch(function(){ return {error: 'Respuesta inválida del servidor (' + r.status + ').'}; }); })
+      .then(function(j){
+        if (j.error) throw new Error(j.error);
+        var s = j.salida;
+        resp.innerHTML = '<p class="lectura">' + esc(s.lectura) + '</p>' +
+          '<h5>Para tu marca</h5><p>' + esc(s.para_tu_marca) + '</p>' +
+          '<h5>Ideas</h5><ul>' + (s.ideas || []).map(function(i){ return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>' +
+          '<div class="apuesta"><span class="caps gris" style="flex:0 0 auto;min-width:0">Apuesta sugerida</span><b>' + esc(s.apuesta) + '</b><span>' + esc(s.por_que_apuesta) + '</span></div>' +
+          '<p class="ia-ojo"><strong>Ojo:</strong> ' + esc(s.ojo) + '</p>' +
+          (j.problemas && j.problemas.length ? '<p class="ia-control">El control automático marcó: ' + esc(j.problemas.join('; ')) + '. Tomalo con más cuidado.</p>' : '') +
+          '<details class="envio"><summary>Qué le mandamos a la IA</summary><pre>' + esc(JSON.stringify(j.contexto, null, 2)) + '</pre><p class="caps gris" style="margin-top:8px">Modelo: ' + esc(j.modelo) + ' · Groq</p></details>';
+      })
+      .catch(function(e){
+        var msg = e.name === 'AbortError' ? 'La IA tardó demasiado.' : (e.message || 'No pudimos conectar con la IA.');
+        if (e instanceof TypeError) msg = 'No pudimos conectar con la IA. Revisá tu conexión.';
+        resp.innerHTML = '<p class="ia-error">' + esc(msg) + '</p><p class="explica" style="margin-top:6px">Los datos calculados de arriba siguen valiendo; lo que falló es solo la sugerencia.</p>';
+      })
+      .then(function(){ clearTimeout(reloj); boton.disabled = false; boton.textContent = 'Pedir otra recomendación'; });
+  }
+  // Metodo: mostrar el system prompt y el modelo
+  $('ver-prompt').addEventListener('click', function(){
+    var caja = $('prompt-texto');
+    if (caja.innerHTML){ caja.innerHTML = ''; return; }
+    if (!online){ caja.innerHTML = '<p class="explica" style="margin-top:10px">Se ve en la versión online. También está en <a href="https://github.com/cborja999/paleta_predictiva/blob/main/entrega3/IA.md">entrega3/IA.md</a>.</p>'; return; }
+    caja.innerHTML = '<p class="caps gris" style="margin-top:10px">Cargando…</p>';
+    fetch(API).then(function(r){ return r.json(); }).then(function(j){
+      $('ia-modelo').textContent = 'Modelo: ' + j.modelo + ' · ' + j.proveedor;
+      caja.innerHTML = '<pre>' + esc(j.system_prompt) + '</pre>';
+    }).catch(function(){ caja.innerHTML = '<p class="ia-error" style="margin-top:10px">No pudimos traer el prompt.</p>'; });
+  });
+
+  // La cabecera se achica al bajar
+  var cab = $('cabecera');
+  addEventListener('scroll', function(){ cab.classList.toggle('compacta', scrollY > 80); }, {passive:true});
+})();
+</script>
+</body>
+</html>
