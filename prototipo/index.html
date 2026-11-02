@@ -45,26 +45,29 @@ img{display:block}
   .nav{padding-block:8px}
 }
 
-/* Portada: tira de tres fotos, como el encabezado de las notas de WGSN */
-.portada{display:grid;grid-template-columns:7fr 5fr;gap:48px;padding:40px 0 64px;border-bottom:1px solid var(--negro)}
-.tira{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:start}
-.t-foto{display:block;text-align:left}
-.t-foto .foto{aspect-ratio:2/3;margin-bottom:12px}
-.t-foto:nth-child(2){margin-top:48px}
-.t-foto b{display:block;font-family:var(--didone);font-weight:400;font-size:clamp(20px,1.9vw,28px);line-height:1.08;margin-top:6px;font-variation-settings:"opsz" 40}
-.t-foto:hover b{font-style:italic}
-.portada .texto{display:flex;flex-direction:column;justify-content:space-between;padding-top:6px}
-.portada h1{font-family:var(--didone);font-weight:400;font-variation-settings:"opsz" 96;font-size:clamp(46px,6vw,92px);line-height:.98;letter-spacing:-.01em;margin:22px 0 22px}
-.portada h1 i{font-weight:400}
-.portada .bajada{font-size:17px;font-weight:300;max-width:40ch}
-.sumario{list-style:none;padding:0;margin-top:36px;border-top:1px solid var(--negro)}
-.sumario li{border-bottom:1px solid var(--linea)}
-.sumario button{display:grid;grid-template-columns:56px 1fr auto;gap:16px;align-items:center;width:100%;text-align:left;padding:12px 0}
-.sumario .mini{aspect-ratio:3/4;width:56px}
-.sumario b{display:block;font-family:var(--didone);font-weight:400;font-size:24px;line-height:1.1;font-variation-settings:"opsz" 40}
-.sumario button:hover b{font-style:italic}
-@media (max-width:900px){.portada{grid-template-columns:1fr;gap:28px;padding-top:24px}.portada .texto{order:-1}.portada h1{margin:14px 0}}
-@media (max-width:520px){.tira{gap:6px}.t-foto b{font-size:16px}.t-foto .veredicto::before{width:10px}}
+/* Home: el nombre, la frase y la paleta de la pasarela como imagen */
+.home{min-height:100svh;display:flex;flex-direction:column;border-bottom:1px solid var(--negro)}
+.home-centro{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding-top:48px;padding-bottom:40px}
+.home-marca{font-family:var(--didone);font-weight:400;font-variation-settings:"opsz" 96;font-size:clamp(52px,11.5vw,176px);line-height:.92;letter-spacing:.02em;text-transform:uppercase;margin:26px 0 22px}
+.home-frase{font-family:var(--didone);font-size:clamp(30px,4.2vw,60px);line-height:1.05;font-variation-settings:"opsz" 72}
+.home-frase i{font-weight:400}
+.home-bajada{max-width:54ch;margin:24px auto 0;font-weight:300;font-size:17px}
+.home-acciones{display:flex;gap:16px 32px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:36px}
+.boton-home{background:var(--negro);color:#fff;padding:16px 30px;font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
+.boton-home:hover{background:#333}
+.link-ant{text-underline-offset:6px}
+.home-paleta{display:flex;height:clamp(56px,10vh,110px)}
+.home-paleta span{display:block;height:100%;transform-origin:bottom;animation:sube .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes sube{from{transform:scaleY(0)}}
+.home-pie{display:flex;justify-content:space-between;gap:16px;padding:12px 32px 14px;font-size:10px}
+.home-pie a{text-decoration:none;color:var(--negro);white-space:nowrap}
+@media (max-width:700px){.home-pie{padding:10px 16px}.home-pie .solo-compu{display:none}}
+
+/* Selector de temporada: la más nueva por defecto, las anteriores a un clic */
+.temporadas-nav{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 26px;margin:-8px 0 0;padding:14px 0;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.temporadas-nav button{color:var(--gris);padding:4px 0;border-bottom:1.5px solid transparent}
+.temporadas-nav button[aria-pressed="true"]{color:var(--negro);border-bottom-color:var(--negro)}
+.temporadas-nav sup{font-size:8px;letter-spacing:.14em;margin-left:6px;color:var(--rojo);vertical-align:4px}
 
 /* Fotos: la del look si está en fotos/; si no, el nombre en tipografía */
 .foto{position:relative;overflow:hidden;background:var(--foto)}
@@ -100,7 +103,7 @@ img{display:block}
 .tag::before{content:"";width:7px;height:7px;background:currentColor}
 .tag.ia{background:var(--ia);border-color:var(--ia);color:#fff}
 .tag.ia::before{border-radius:50%;background:#fff}
-.leyenda-fuente{display:flex;flex-wrap:wrap;align-items:center;gap:10px 36px;padding:12px 0;border-bottom:1px solid var(--linea);font-size:13px;color:var(--gris)}
+.leyenda-fuente{display:flex;flex-wrap:wrap;align-items:center;gap:10px 36px;padding:12px 0;margin-bottom:36px;border-bottom:1px solid var(--linea);font-size:13px;color:var(--gris)}
 .leyenda-fuente .lf{display:inline-flex;align-items:center;gap:10px}
 @media (max-width:700px){.leyenda-fuente .lf{display:flex;align-items:flex-start}}
 
@@ -132,8 +135,7 @@ img{display:block}
 /* Índice por temporada (como la lista de WGSN: foto, título y el número dentro de la frase) */
 .vacio{padding:40px 0;color:var(--gris)}
 .t-bloque+.t-bloque{margin-top:72px}
-.t-cab{display:flex;justify-content:space-between;align-items:baseline;gap:8px 24px;flex-wrap:wrap;border-top:1px solid var(--negro);padding-top:14px;margin-bottom:28px}
-.t-cab h3{font-family:var(--didone);font-weight:400;font-size:clamp(34px,4vw,56px);line-height:1;font-variation-settings:"opsz" 96}
+.t-cuenta{margin-bottom:28px}
 .indice-grilla{display:grid;grid-template-columns:repeat(4,1fr);gap:48px 24px}
 .ficha-t{display:block;text-align:left;min-width:0}
 .ficha-t .foto{aspect-ratio:3/4;margin-bottom:14px}
@@ -273,13 +275,25 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
 </style>
 </head>
 <body>
-<header class="cabecera" id="cabecera">
+<section class="home" id="home" aria-label="Inicio">
+  <div class="home-centro wrap">
+    <p class="caps">Fashion weeks · Nueva York, Londres, Milán y París</p>
+    <h1 class="home-marca">Paleta Predictiva</h1>
+    <p class="home-frase">Qué se queda <i>y qué se va.</i></p>
+    <p class="home-bajada" id="bajada"></p>
+    <div class="home-acciones"><a class="boton-home" href="#indice">Ver primavera 2025</a><a class="caps link-ant" href="#indice" data-ir-temp="FW2024">Temporadas anteriores</a></div>
+  </div>
+  <div class="home-paleta" id="home-paleta" role="img" aria-label="Los colores de la pasarela, cada uno del ancho de cuánto se vio"></div>
+  <div class="home-pie caps gris"><span id="home-paleta-pie">La paleta de la pasarela: cada franja es un color, del ancho de cuánto se vio</span><a href="#indice">Bajá ↓</a></div>
+</section>
+
+<header class="cabecera compacta" id="cabecera">
   <div class="wrap">
     <div class="fila1 caps"><span>Informe de temporada · 2024-2025</span><span class="der">Para marcas argentinas</span></div>
     <a class="masthead" href="#">Paleta Predictiva</a>
   </div>
   <nav class="nav caps" aria-label="Secciones">
-    <a href="#indice">Índice</a>
+    <a href="#indice">La temporada</a>
     <a href="#colores">Colores</a>
     <a href="#visto-2026">Visto en 2026</a>
     <a href="#metodo">Método</a>
@@ -287,26 +301,15 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
 </header>
 
 <main class="wrap">
-  <section class="portada" aria-label="Portada">
-    <div class="tira" id="tira"></div>
-    <div class="texto">
-      <div>
-        <p class="caps">Fashion weeks · Primavera 2024 a primavera 2025</p>
-        <h1>Qué se queda y qué <i>pasa de moda</i></h1>
-        <p class="bajada" id="bajada"></p>
-      </div>
-      <ul class="sumario" id="sumario"></ul>
-    </div>
-  </section>
-
-  <div class="filtro caps" id="filtro"></div>
-  <div class="leyenda-fuente"><span class="lf"><span class="tag">Calculado</span>veredictos, números y curvas: salen de los datos con reglas fijas</span><span class="lf"><span class="tag ia">Inferencia de la IA</span>sugerencias para tu marca, siempre aparte</span></div>
 
   <section class="seccion" id="indice">
     <div class="seccion-cabeza">
-      <div><p class="caps" id="n-indice"></p><h2>El <i>índice</i></h2></div>
+      <div><p class="caps" id="n-indice"></p><h2 id="t-titulo"></h2></div>
       <p class="intro">Cada tendencia que nombraron los medios, con lo que pasó con sus búsquedas el año después del desfile. <b>Se queda:</b> se buscó más que el resto de su temporada. <b>En riesgo:</b> se buscó menos. <b>Sin señal:</b> casi igual, no alcanza para decir nada.</p>
     </div>
+    <div class="temporadas-nav caps" id="temporadas-nav"></div>
+    <div class="filtro caps" id="filtro"></div>
+    <div class="leyenda-fuente"><span class="lf"><span class="tag">Calculado</span>veredictos, números y curvas: salen de los datos con reglas fijas</span><span class="lf"><span class="tag ia">Inferencia de la IA</span>sugerencias para tu marca, siempre aparte</span></div>
     <div id="temporadas"></div>
   </section>
 
@@ -405,8 +408,9 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   var ORDEN_T = {SS2025:0, FW2024:1, SS2024:2};
   var MES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
   var RUBROS = [['', 'Todo'], ['vestidos', 'Vestidos'], ['polleras', 'Polleras'], ['pantalones', 'Pantalones'], ['abrigos', 'Abrigos y tejidos'], ['accesorios', 'Accesorios y estampados']];
-  var rubro = '', temporada = '';
-  var TEMPORADAS = [['', 'Todas'], ['SS2025', 'Primavera 2025'], ['FW2024', 'Otoño 2024'], ['SS2024', 'Primavera 2024']];
+  // La página abre en la temporada más nueva con veredicto; las anteriores se eligen arriba del índice
+  var rubro = '', temporada = 'SS2025';
+  var TEMPORADAS = [['SS2025', 'Primavera 2025'], ['FW2024', 'Otoño 2024'], ['SS2024', 'Primavera 2024']];
   function $(id){ return document.getElementById(id); }
   function mes(m){ var p = m.split('-'); return MES[+p[1]-1] + ' de ' + p[0]; }
   function lista(xs){ return xs.join(', ').replace(/, ([^,]*)$/, ' y $1'); }
@@ -457,15 +461,14 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   var ETIQ = {queda:'Se queda', riesgo:'En riesgo', sin:'Sin señal'};
   function num(n, d){ return n.toLocaleString('es-AR', {minimumFractionDigits:d, maximumFractionDigits:d}); }
 
-  // Portada: tres fotos firmes arriba y tres más en el sumario
-  function firme(t){ return !cuidado(t); }
-  var QF = Q.filter(firme), RF = R.filter(firme);
-  $('tira').innerHTML = [QF[0], RF[0], QF[1]].map(function(t){
-    return '<button class="t-foto" data-id="' + t.id + '">' + foto(t) + '<span class="caps veredicto ' + t.veredicto + '">' + ETIQ[t.veredicto] + '</span><b>' + t.nombre + '</b></button>';
-  }).join('');
-  $('bajada').textContent = 'Revisamos las ' + (T.length + S.length) + ' tendencias que nombraron ' + lista(D.medios) + ' y miramos qué pasó con sus búsquedas el año después del desfile. ' + Q.length + ' tienden a quedarse; ' + R.length + ' pueden ser moda pasajera.';
-  $('sumario').innerHTML = [QF[2], RF[1], RF[2]].map(function(t){
-    return '<li><button data-id="' + t.id + '">' + foto(t, 'mini') + '<span><span class="caps veredicto ' + t.veredicto + '">' + ETIQ[t.veredicto] + '</span><b>' + t.nombre + '</b></span><span class="caps gris">' + TEMP[t.temporada] + '</span></button></li>';
+  // Home: la frase con los números de la temporada más nueva y la paleta de la pasarela
+  function cuenta(s, v){ return Q.concat(R).filter(function(t){ return t.temporada === s && t.veredicto === v; }).length; }
+  $('bajada').textContent = 'Repasamos las tendencias que nombraron los medios después de cada fashion week y miramos si la gente las siguió buscando. ' +
+    'En primavera 2025, ' + cuenta('SS2025', 'queda') + ' se quedan y ' + cuenta('SS2025', 'riesgo') + ' pueden pasar de moda.';
+  $('home-paleta-pie').innerHTML = 'La paleta de la pasarela, ' + D.colores_meta.recientes.map(function(c){ return (c.slice(0, 2) === 'SS' ? 'primavera ' : 'otoño ') + c.slice(2); }).join(' a ').replace(/ a [^a]* a /, ' a ') +
+    '<span class="solo-compu">: cada franja es un color, del ancho de cuánto se vio</span>';
+  $('home-paleta').innerHTML = D.colores.slice().sort(function(a, b){ return b.reciente - a.reciente; }).map(function(c, i){
+    return '<span style="flex:' + c.reciente + ';background:' + c.hex + ';animation-delay:' + (i * 0.06) + 's" title="' + c.nombre + ' · ' + num(c.reciente, 1) + '% de los looks"></span>';
   }).join('');
 
   // Índice: por temporada, como la lista de WGSN. Foto, veredicto, nombre y el número dentro de la frase.
@@ -495,23 +498,25 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   var enPagina = [];
   function pintar(){
     enPagina = [];
-    var html = ['SS2025', 'FW2024', 'SS2024'].filter(function(s){ return !temporada || s === temporada; }).map(function(s){
+    var html = [temporada].map(function(s){
       var l = Q.concat(R, S).filter(function(t){ return t.temporada === s && pasa(t); });
       if (!l.length) return '';
       enPagina = enPagina.concat(l.filter(function(t){ return t.veredicto !== 'sin'; }));
       function n(v){ return l.filter(function(t){ return t.veredicto === v; }).length; }
-      return '<div class="t-bloque"><div class="t-cab"><h3>' + TEMP[s].replace(' ', ' <i>') + '</i></h3>' +
-        '<p class="caps gris">Desfiles de ' + mes(l[0].mes_desfile) + ' · ' + n('queda') + ' se quedan · ' + n('riesgo') + ' en riesgo · ' + n('sin') + ' sin señal' +
-        (s === 'SS2025' ? ' · <span style="color:var(--rojo)">La más nueva</span>' : '') + '</p></div>' +
+      return '<div class="t-bloque"><p class="caps gris t-cuenta">Desfiles de ' + mes(l[0].mes_desfile) + ' · ' + n('queda') + ' se quedan · ' + n('riesgo') + ' en riesgo · ' + n('sin') + ' sin señal</p>' +
         '<div class="indice-grilla">' + l.filter(function(t){ return t.veredicto !== 'sin'; }).map(ficha).join('') + '</div>' + sinSenal(l) + '</div>';
     }).join('');
     $('temporadas').innerHTML = html || '<p class="vacio caps">No hay tendencias con estos filtros.</p>';
-    $('n-indice').textContent = Q.concat(R, S).filter(pasa).length + ' de ' + (T.length + S.length) + ' tendencias';
+    $('t-titulo').innerHTML = TEMP[temporada].replace(' ', ' <i>') + '</i>';
+    $('n-indice').textContent = temporada === 'SS2025' ? 'La temporada más nueva' : 'Temporada anterior';
+    $('temporadas-nav').innerHTML = '<span class="gris">Estás viendo:</span>' + TEMPORADAS.map(function(r, i){
+      return (i === 1 ? '<span class="gris">· Temporadas anteriores:</span>' : '') +
+        '<button data-temp="' + r[0] + '" aria-pressed="' + (r[0] === temporada) + '">' + r[1] + (i === 0 ? '<sup>la más nueva</sup>' : '') + '</button>'; }).join('');
     function grupo(nombre, clave, opciones, valor){
       return '<div class="f-grupo" role="group" aria-label="Filtrar por ' + nombre.toLowerCase() + '"><span class="gris">' + nombre + ':</span>' + opciones.map(function(r){
-        return '<button data-' + clave + '="' + r[0] + '" aria-pressed="' + (r[0] === valor) + '">' + r[1] + (r[0] === 'SS2025' ? '<sup>la más nueva</sup>' : '') + '</button>'; }).join('') + '</div>';
+        return '<button data-' + clave + '="' + r[0] + '" aria-pressed="' + (r[0] === valor) + '">' + r[1] + '</button>'; }).join('') + '</div>';
     }
-    $('filtro').innerHTML = grupo('Tu rubro', 'rubro', RUBROS, rubro) + grupo('Temporada', 'temp', TEMPORADAS, temporada) + grupo('Veredicto', 'ver', VEREDICTOS, veredicto);
+    $('filtro').innerHTML = grupo('Tu rubro', 'rubro', RUBROS, rubro) + grupo('Veredicto', 'ver', VEREDICTOS, veredicto);
   }
   pintar();
 
@@ -605,6 +610,8 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   document.addEventListener('click', function(e){
     var r = e.target.closest('[data-rubro]');
     if (r){ rubro = r.dataset.rubro; pintar(); return; }
+    var it = e.target.closest('[data-ir-temp]');
+    if (it){ temporada = it.dataset.irTemp; pintar(); }
     var tp = e.target.closest('[data-temp]');
     if (tp){ temporada = tp.dataset.temp; pintar(); return; }
     var vr = e.target.closest('[data-ver]');
@@ -666,9 +673,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
     }).catch(function(){ caja.innerHTML = '<p class="ia-error" style="margin-top:10px">No pudimos traer el prompt.</p>'; });
   });
 
-  // La cabecera se achica al bajar
-  var cab = $('cabecera');
-  addEventListener('scroll', function(){ cab.classList.toggle('compacta', scrollY > 80); }, {passive:true});
+
 })();
 </script>
 </body>
