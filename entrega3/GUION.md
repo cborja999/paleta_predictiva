@@ -1,11 +1,11 @@
 # Entrega 3: guion de 15 minutos y preguntas probables
 
 Antes de la clase:
-- tener abierta la app online (link y QR en `entrega3/README.md`);
+- presentar desde la compu de Borja, con las fotos de 2025 en `prototipo/fotos/` y la IA andando (`netlify dev`); tener abierto el link online como respaldo (en `entrega3/README.md`);
 - pedir una recomendación de prueba, para que la IA no arranque en frío;
-- tener a mano la captura `entrega3/capturas/4_editorial_nota.png` por si falla internet.
+- tener a mano la captura `entrega3/capturas/5_nota.png` por si falla internet.
 
-Los números salen de `hipotesis.md`, `analisis/brief_2026/salida_brief_2024.txt` y `analisis/brief_2025/salida_brief_ss2025.txt`. No los redondeen distinto.
+Los números salen de `hipotesis.md`, `analisis/brief_2026/salida_brief_2024.txt`, `analisis/brief_2025/salida_brief_ss2025.txt` y `analisis/brief_fw2025/salida_brief_fw2025.txt`. No los redondeen distinto.
 
 ---
 
@@ -30,34 +30,38 @@ Paleta predictiva le dice qué tendencias de pasarela tienden a quedarse y cuál
 
 ## 3:00 a 7:00: demo en vivo
 
-1. **Portada.** "Revisamos las 57 tendencias que nombraron Who What Wear, CBC Life y Yahoo Lifestyle. 16 tienden a quedarse y 16 pueden ser moda pasajera." Las otras 25 no dan señal clara y no las mostramos como recomendación.
-2. **Rubro.** Elegir "Polleras": la página reordena las tendencias.
-3. **Etiquetas.** Mostrar la leyenda: **Calculado** (recuadro negro) contra **Inferencia de la IA** (azul).
-4. **Una tendencia que se queda.** Abrir "Pollera balón": +92% de búsquedas el año después del desfile, confianza alta. Mostrar la curva y la línea del desfile.
-5. **Pedir recomendación.** Escribir una línea de marca, por ejemplo "Ropa de mujer, vendemos por Instagram". Mostrar:
+1. **Home.** "Paleta Predictiva. Qué se queda y qué se va." Leer la línea: en otoño 2025, 7 se quedan y 6 pueden pasar de moda. Abajo, la franja con los colores de la pasarela, cada uno del ancho de cuánto se vio. Tocar **Ver otoño 2025**.
+2. **El índice.** Abre en la temporada más nueva, otoño 2025. Cada tendencia tiene la foto del desfile, el veredicto y el número dentro de la frase, como en las notas de análisis de WGSN. Las que no se movieron lo suficiente van abajo, en "Sin señal clara". Arriba se eligen las temporadas anteriores: primavera 2025, otoño 2024 y primavera 2024.
+3. **Rubro.** Elegir "Vestidos": la página deja solo lo de ese rubro.
+4. **Etiquetas.** Mostrar la leyenda: **Calculado** (recuadro negro) contra **Inferencia de la IA** (azul).
+5. **Una tendencia que se queda.** Abrir "Lunares" (otoño 2025, confianza alta): las fotos de Dries Van Noten y Balenciaga, y la frase "se buscó 132% más que el año anterior, más de lo que se movió el resto de la temporada (+34%)". Mostrar el gráfico: las tres líneas son lo que compara la regla (el año antes, el año después y dónde estaría si se hubiera movido como la temporada).
+6. **Pedir recomendación.** Escribir una línea de marca, por ejemplo "Ropa de mujer, vendemos por Instagram". Mostrar:
    - la lectura y las ideas de producto;
    - la apuesta;
    - "Qué le mandamos a la IA", con el JSON exacto.
-6. **Una en riesgo.** Abrir una en rojo, por ejemplo "Pantalón cigarette", −46%. La IA solo puede recomendar apuesta baja.
-7. **Visto en 2026.** Explicar que hay tendencias sin veredicto y por qué (ver punto 2).
-8. **Método.** Ahí están la regla, la evidencia, "Lo que no dicen" y "Ver qué le pedimos a la IA".
+7. **Una en riesgo.** Con "Siguiente" o abriendo "Botas bucaneras": se buscaron 2% menos mientras la temporada subió 34%, quedó 27% atrás. La IA solo puede recomendar apuesta baja.
+8. **Una con aviso.** Abrir "Tapado protagonista": sale "se queda", pero el aviso dice que con solo marzo a julio de 2025 da "sin señal clara". Lo mostramos para que se vea que no escondemos los casos dudosos.
+9. **Colores y Visto en 2026.** Los colores de la pasarela dicen qué se vio, no qué se queda. Lo de 2026 va sin veredicto (ver punto 2).
+10. **Método.** Ahí están la regla, la evidencia, "Lo que no dicen" y "Ver qué le pedimos a la IA".
 
 Si la IA no responde, decirlo tranquilos: la página lo avisa y los datos calculados siguen valiendo. Mostrar "Qué le mandamos a la IA" y seguir.
 
 ## 7:00 a 10:00: rigor con los datos (punto 2)
 
 - **Datasets definitivos:**
-  - listas de tendencias de Who What Wear, CBC Life y Yahoo Lifestyle de primavera 2024, otoño 2024 y primavera 2025;
+  - listas de tendencias de Who What Wear, CBC Life y Yahoo Lifestyle de primavera 2024, otoño 2024, primavera 2025 y otoño 2025: 77 tendencias, 45 con veredicto (23 se quedan, 22 en riesgo) y 32 sin señal clara;
   - Google Trends mundial y mensual.
 - **El cálculo, sobre los datos:** búsquedas del año después del desfile contra el año anterior, descontando lo que se movió el resto de la temporada (la mediana).
   - "Se queda" desde +10%; "en riesgo" desde −10%.
   - Confianza alta desde ±30%.
-- **Verificable:** las reglas se escribieron y se firmaron con sha256 antes de bajar los datos, y cada número sale de un script (`brief_temporada.py`, `brief_ss2025.py`, `armar_datos.py`).
+- **Verificable:** las reglas se escribieron y se firmaron con sha256 antes de bajar los datos, y cada número sale de un script (`brief_temporada.py`, `brief_ss2025.py`, `brief_fw2025.py`, `armar_datos.py`).
 - **Lo que encontramos y lo que hicimos con eso:**
   - **El problema de Google.** Desde mediados de 2025 Google Trends mide distinto: en feb-may 2026 todas las búsquedas saltan entre 3 y 4 veces, y distinto en cada término.
   - **2026 va sin veredicto.** Se muestra como "visto en pasarela".
   - **Primavera 2025 tuvo que pasar un chequeo fijado de antemano.** El veredicto no puede depender del volumen del término, ni de cuánto se infló en 2026, ni del cambio de enero de 2025. Pasó (los tres por debajo de 0,5): 8 se quedan, 5 en riesgo, 13 sin señal.
   - **Primavera 2025 tiene un cuidado.** Tres de sus "se queda" dependen de agosto y septiembre de 2025, y la app lo avisa en cada una.
+  - **Otoño 2025 tuvo un chequeo más estricto,** porque 7 de los 12 meses de su primer año caen en el período malo. Además de los anteriores, la lectura de 12 meses tenía que coincidir con la de marzo a julio de 2025 (antes de la suba de Google) al menos como en las temporadas de otoño limpias de 2016 a 2024: Spearman de 0,50 o más y como mucho un veredicto opuesto. Habíamos decidido de antemano que, si no pasaba, no iba a la página. Pasó: +0,70 y ningún opuesto. 7 se quedan, 6 en riesgo, 7 sin señal.
+  - **Otoño 2025 es la lectura menos firme.** En 8 de sus 13 veredictos, mirando solo marzo a julio da "sin señal clara" (ninguno se da vuelta), y la app lo avisa en cada una.
   - **El segundo año no se puede medir.** Probamos corregir el salto de 2026 por volumen y no alcanza: la dispersión es 3,2 veces la de un año limpio. Todavía no sabemos si las tendencias de 2024 y 2025 se quedaron.
 - **Limitaciones** (en la app, Método → "Lo que no dicen"):
   - búsquedas no son ventas;
@@ -85,13 +89,15 @@ Si la IA no responde, decirlo tranquilos: la página lo avisa y los datos calcul
   - el brief (para quién, qué preguntas tiene que responder);
   - las referencias: Lyst Index, Spotify Wrapped, TradingView y Pantone;
   - el pedido de la Entrega 2: más visual, confianza a la vista, alternativas.
-- **Dos alternativas:** editorial y Wrapped (capturas 1 y 5). Elegimos la editorial porque entraban el método, los límites y la IA sin cortar el relato.
+- **Dos alternativas:** editorial y Wrapped (capturas 1 y 6). Elegimos la editorial porque entraban el método, los límites y la IA sin cortar el relato.
 - **Decisiones que tomamos en código:**
-  - **Láminas en lugar de fotos.** Las fotos de pasarela no se pueden publicar, así que el dato es la imagen: el porcentaje grande y la curva.
+  - **Fotos de pasarela, como WGSN.** Mirando las notas de análisis de WGSN vimos que no usan gráficos grandes: foto, título y el número en la frase. Pasamos a un índice así, con dos fotos por tendencia de dos desfiles distintos para mostrar que se vio en más de una pasarela. Las fotos tienen derechos: se usan en la presentación y no se suben al repo público.
+  - **El gráfico muestra lo que compara la regla,** porque la curva sola podía contradecir el veredicto (algo que sube poco cuando la temporada sube mucho queda "en riesgo").
+  - **Un home y la temporada más nueva primero;** las anteriores, a un clic.
   - **Rojo solo para el riesgo, y sin verde**, para que "se queda" no se lea como "comprá".
   - **Estados de la IA:** cargando, error, sin servidor y control de números.
   - **Responsive** a 390 px y **accesibilidad**.
-- **Contra la Entrega 2** (captura 6): antes había 21 categorías amplias con 3 veredictos; ahora son tendencias puntuales con veredicto y confianza, y la IA está adentro de la app.
+- **Contra la Entrega 2** (captura 7): antes había 21 categorías amplias con 3 veredictos; ahora son tendencias puntuales con veredicto, confianza y fotos, y la IA está adentro de la app.
 
 Detalle en `entrega3/DISENO.md`.
 
@@ -121,6 +127,9 @@ Desde mediados de 2025 Google mide distinto. En feb-may 2026 todos los términos
 **¿Y primavera 2025, que también toca 2025?**
 Antes de mirar los datos escribimos tres chequeos. El veredicto no podía depender del volumen del término, ni de cuánto se infló en 2026, ni del cambio de enero de 2025. Los tres dieron por debajo del límite (0,5). Igual, tres de sus "se queda" cambian si sacamos agosto y septiembre de 2025, y la app lo marca.
 
+**¿Y otoño 2025, si casi todo su primer año cae en el período malo?**
+Por eso le pusimos un chequeo más: la lectura de 12 meses tenía que coincidir con la de marzo a julio, que es antes de la suba de Google, al menos como coinciden en temporadas de otoño limpias. Lo fijamos antes de bajar los datos y dijimos que si no pasaba no lo mostrábamos. Pasó (+0,70, ningún veredicto opuesto), pero es la lectura menos firme: 8 de 13 dan "sin señal" con solo marzo a julio, y está marcado en cada una.
+
 **¿Saben si las tendencias se quedaron?**
 Todavía no. El segundo año cae entero en el período en que Google mide distinto. Probamos corregirlo por volumen y no alcanza. Lo decimos en la app.
 
@@ -139,8 +148,8 @@ Se recorta a 280 caracteres y el prompt le dice a la IA que la tome solo como co
 **¿Por qué no hay Figma?**
 Diseñamos directamente en código con un agente de IA, porque las pantallas dependían de datos reales. Las alternativas, las decisiones y las diferencias están documentadas con capturas en `entrega3/DISENO.md`.
 
-**¿Por qué no hay fotos de los desfiles?**
-Las fotos de Vogue Runway tienen derechos y no se pueden publicar. Las reemplazamos por la curva de búsquedas.
+**¿De dónde salen las fotos?**
+Son looks de los desfiles que nombra la nota del medio de cada tendencia (o, si la nota no se pudo abrir, otras notas de la misma temporada); la lista está en `prototipo/FOTOS.md`. Tienen derechos: las usamos en la presentación de clase y no están en el repo público.
 
 **¿Funciona para Argentina?**
 Con búsquedas solo de Argentina la regla no se confirmó. Argentina se mueve casi a la par que el mundo, así que usamos datos mundiales y lo aclaramos.

@@ -56,17 +56,18 @@ El agente propuso **dos alternativas** y elegimos una:
 
 ## Diferencias entre el prototipo de la Entrega 2 y esta versión
 
-- Antes la página tenía colores, prendas y largos amplios; solo 3 de 21 tenían veredicto. Ahora son 19 tendencias puntuales con veredicto, que es lo que la marca puede producir.
+- Antes la página tenía colores, prendas y largos amplios; solo 3 de 21 tenían veredicto. Ahora son 45 tendencias puntuales con veredicto en cuatro temporadas (de primavera 2024 a otoño 2025), que es lo que la marca puede producir, con foto de dos desfiles cada una.
 - Antes no había IA dentro de la app. Ahora hay una recomendación por tendencia, separada de los datos.
 - Antes no se veía la confianza; ahora cada tarjeta dice "Confianza alta" o "media" y la nota explica qué significa.
 
 ## Capturas
 
-En `entrega3/capturas/`:
+En `entrega3/capturas/` (2/11/2026, antes de tener las fotos: los recuadros grises son donde van):
 
-1. `1_editorial_escritorio.png`: portada de la versión elegida.
-2. `2_editorial_celular.png`: la misma portada a 390 px.
-3. `3_editorial_grilla.png`: filtro por rubro, leyenda Calculado / Inferencia de la IA y grilla de "Lo que se queda".
-4. `4_editorial_nota.png`: nota de una tendencia, con la lámina y la curva.
-5. `5_alternativa_wrapped_celular.png`: la alternativa descartada. Se capturó sin la tipografía de la web, por eso el título se corta.
-6. `6_entrega2_informe.png`: la página de la Entrega 2, para comparar.
+1. `1_home_escritorio.png`: el home, con la paleta de la pasarela abajo.
+2. `2_home_celular.png`: el mismo home a 390 px.
+3. `3_indice.png`: el índice de otoño 2025, con las temporadas anteriores, los filtros y la leyenda Calculado / Inferencia de la IA.
+4. `4_colores.png`: los colores de la pasarela.
+5. `5_nota.png`: la nota de una tendencia (Lunares, otoño 2025): las dos fotos con su desfile, la frase con los números y el gráfico que muestra lo que compara la regla.
+6. `6_alternativa_wrapped_celular.png`: la alternativa descartada. Se capturó sin la tipografía de la web, por eso el título se corta.
+7. `7_entrega2_informe.png`: la página de la Entrega 2, para comparar.

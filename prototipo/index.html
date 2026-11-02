@@ -662,6 +662,12 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
       })
       .then(function(){ clearTimeout(reloj); boton.disabled = false; boton.textContent = 'Pedir otra recomendación'; });
   }
+  // Link directo a una tendencia: #nota-<id> abre su nota (sirve para compartirla y para las capturas)
+  var pedida = location.hash.indexOf('#nota-') === 0 ? T.filter(function(t){ return t.id === location.hash.slice(6); })[0] : null;
+  if (pedida){ temporada = pedida.temporada; pintar(); abrir(pedida); }
+  // Un link a una sección (#indice, #colores...) llega después de que se arma la página: bajar a mano
+  else if (location.hash.length > 1 && document.getElementById(location.hash.slice(1))) document.getElementById(location.hash.slice(1)).scrollIntoView();
+
   // Metodo: mostrar el system prompt y el modelo
   $('ver-prompt').addEventListener('click', function(){
     var caja = $('prompt-texto');
