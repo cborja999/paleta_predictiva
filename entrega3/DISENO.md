@@ -24,6 +24,10 @@ El agente propuso **dos alternativas** y elegimos una:
 - **Una sola explicación y una sola curva.** La leyenda "cómo leer cada lámina" aparece una vez, arriba de la grilla, en lugar de repetirse en cada tarjeta. Se sacó la curva chica del pie de cada tarjeta y el segundo gráfico de la nota, que repetían la misma curva.
 - **Cinco grandes y el resto en lista.** Cada sección muestra 5 tendencias como láminas y las demás en una lista compacta tipo índice de Lyst (curva chica, nombre, temporada, confianza y número). La página bajó de unos 11.000 a 9.700 px de alto en escritorio y de 17.500 a 15.300 en celular.
 - **La tapa no se repite.** La tendencia de la portada ya no abre la grilla de "Lo que se queda": pasa al segundo lugar.
+- **Filtro por temporada.** Además del rubro, la marca puede ver solo primavera 2025 (marcada como "la más nueva"), otoño 2024 o primavera 2024. El sumario de la portada y la lista de 2026 muestran la temporada con el año.
+- **Anterior / siguiente en la nota.** Se pasa de una tendencia a otra sin cerrar la nota, con botones o con las flechas del teclado, en el mismo orden de la página y respetando los filtros ("3 de 13").
+- **Cabecera más chica en celular.** Se saca la línea de arriba y se achica el nombre: pasa de 122 a 81 px de alto. Los filtros se deslizan de costado en una línea por grupo.
+- **Leyenda "Calculado / Inferencia de la IA" en una línea**, con textos más cortos, debajo de los filtros.
 - **Calculado contra IA.** Dos etiquetas: "Calculado" (recuadro negro) e "Inferencia de la IA" (azul). Todo lo que escribe la IA vive en un bloque azul aparte, nunca mezclado con los veredictos.
 - **Rojo solo para el riesgo.** Lo que se queda va en negro; lo que puede pasar, en rojo. Sin verde: no queremos que "se queda" se lea como "comprá".
 - **Filtro por rubro.** La marca elige su rubro y la página reordena las tendencias; el mismo rubro pasa como contexto a la IA.
