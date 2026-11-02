@@ -200,8 +200,10 @@ button.ficha-t:hover .f-nombre{font-style:italic}
 .nav-nota button:hover span{text-decoration:underline;text-underline-offset:5px}
 @media (max-width:700px){.nota .barra-nota .marca{display:none}.nav-nota{gap:14px}.nav-nota button span{display:none}.nav-nota button{font-size:16px;padding:2px 6px}}
 .nota .cuerpo{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 58px)}
-.nota .cuerpo>.foto{position:sticky;top:58px;height:calc(100vh - 58px)}
-.nota .cuerpo>.foto .falta i{font-size:clamp(36px,4vw,64px)}
+.nota .fotos-nota{position:sticky;top:58px;height:calc(100vh - 58px);display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.nota .fotos-nota .falta i{font-size:clamp(20px,2vw,30px)}
+.credito{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 10px;color:#fff;font-size:10px;background:linear-gradient(transparent,rgba(0,0,0,.55))}
+.sin-foto .credito{background:none;color:var(--gris);bottom:auto;top:0}
 .nota .texto{padding:56px 56px 80px;max-width:640px}
 .nota h3{font-family:var(--didone);font-weight:400;font-variation-settings:"opsz" 96;font-size:clamp(48px,5.6vw,88px);line-height:.95;margin:20px 0 22px}
 .nota .lead{font-family:var(--didone);font-size:22px;line-height:1.4;font-variation-settings:"opsz" 24}
@@ -259,7 +261,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 @media (max-width:900px){.tres{grid-template-columns:1fr;gap:36px}}
 @media (max-width:860px){
   .nota .cuerpo{grid-template-columns:1fr}
-  .nota .cuerpo>.foto{position:relative;top:0;height:72vh}
+  .nota .fotos-nota{position:relative;top:0;height:62vh}
   .nota .texto{padding:32px 16px 64px}
   .nota .barra-nota{padding:14px 16px}
   .ficha div{grid-template-columns:110px 1fr}
@@ -423,12 +425,20 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
       '<line class="g-esperado" x1="' + xd + '" x2="' + W + '" y1="' + y(t.esperado) + '" y2="' + y(t.esperado) + '"/>' +
       '<line class="g-despues" x1="' + xd + '" x2="' + W + '" y1="' + y(t.b1) + '" y2="' + y(t.b1) + '"/></svg>';
   }
-  // Foto del look: prototipo/fotos/<id>.jpg (no se sube a GitHub). Si no está, queda el nombre en tipografía.
-  function foto(t, clase){
-    var r = 'fotos/' + t.id + '.jpg';
-    return '<div class="foto ' + (clase || '') + '"><img src="' + r + '" alt="Look de pasarela: ' + esc(t.nombre) + '" loading="lazy" ' +
+  // Fotos del look: prototipo/fotos/<id>-1.jpg y <id>-2.jpg, de dos desfiles distintos (no se suben a GitHub).
+  // Si no están, queda el lugar con el nombre del archivo. La lista está en prototipo/FOTOS.md.
+  function foto(t, clase, n){
+    n = n || 1;
+    var r = 'fotos/' + t.id + '-' + n + '.jpg', d = (t.desfiles || [])[n - 1];
+    var credito = d ? d.marca + ' · ' + TEMP[t.temporada] : '';
+    return '<div class="foto ' + (clase || '') + '"><img src="' + r + '" alt="Look de pasarela: ' + esc(t.nombre) + (credito ? ', ' + esc(credito) : '') + '" loading="lazy" ' +
       'onerror="this.parentNode.classList.add(\'sin-foto\');this.remove()">' +
+      (credito && clase === 'con-credito' ? '<span class="credito caps">' + esc(credito) + '</span>' : '') +
       '<span class="falta" aria-hidden="true"><i>' + t.nombre + '</i><small>' + r + '</small></span></div>';
+  }
+  // En la nota: las dos fotos, cada una con el desfile de donde sale
+  function fotosNota(t){
+    return '<div class="fotos-nota">' + foto(t, 'con-credito', 1) + foto(t, 'con-credito', 2) + '</div>';
   }
   function trazo(serie, W, H, mn, mx){
     var v = serie.filter(function(x){ return x != null; }), d = '';
@@ -558,7 +568,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
     var lead = t.veredicto === 'queda'
       ? sus + ', más de lo que se movió el resto de la temporada (' + pct(t.temporada_pct) + '). De las tendencias que ganan búsquedas así, nueve de cada diez siguen vigentes al segundo año.'
       : sus + (t.bruto_pct > 0 ? ', pero ' : ', mientras ') + temp + ': quedó atrás. De las tendencias de 2021 a 2024 que perdieron búsquedas así, nueve de dieciséis fueron moda pasajera.';
-    $('nota-cuerpo').innerHTML = '<div class="cuerpo">' + foto(t) + '<div class="texto">' +
+    $('nota-cuerpo').innerHTML = '<div class="cuerpo">' + fotosNota(t) + '<div class="texto">' +
       '<p class="caps gris">' + TEMP[t.temporada] + ' · Desfiles de ' + mes(t.mes_desfile) + '</p>' +
       '<h3>' + t.nombre + '</h3>' + verd(t) +
       '<p class="lead" style="margin-top:22px">' + lead + '</p>' +

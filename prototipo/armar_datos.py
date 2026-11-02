@@ -80,6 +80,49 @@ VISTAS = {
     "sheer dress": "Vestido transparente", "pink dress": "Vestido rosa",
 }
 
+# Dos desfiles por tendencia para buscar las fotos (prototipo/FOTOS.md). "nota": la marca sale de la nota del medio que
+# nombró la tendencia. "otra": esa nota no se pudo abrir o no nombra marcas, y salen de otras notas de la misma temporada.
+DESFILES = {
+    "pencil-skirt": (["Altuzarra", "Khaite"], "nota"), "hot-pants": (["Tom Ford", "Gucci"], "nota"),
+    "sheer-skirt": (["Altuzarra", "Carven"], "nota"), "slip-skirt": (["Prada", "Tory Burch"], "nota"),
+    "halter-dress": (["Proenza Schouler", "Bottega Veneta"], "nota"), "fringe-jacket": (["Khaite", "Gucci"], "nota"),
+    "mini-dress": (["Valentino", "Marni"], "otra"), "lavender-dress": (["Michael Kors", "Phillip Lim"], "otra"),
+    "pillbox-hat": (["Prada", "Altuzarra"], "nota"), "cigarette-pants": (["Altuzarra", "Khaite"], "nota"),
+    "faux-fur-coat": (["Louis Vuitton", "Gucci"], "nota"), "tailored-trousers": (["Hermès", "Tory Burch"], "nota"),
+    "leather-dress": (["Proenza Schouler", "Bottega Veneta"], "nota"), "turtleneck": (["Proenza Schouler", "Prada"], "nota"),
+    "feather-dress": (["Givenchy", "Bottega Veneta"], "nota"), "green-dress": (["Chloé", "Saint Laurent"], "nota"),
+    "leopard-print": (["Versace", "Dior"], "nota"), "tea-length-dress": (["Loro Piana", "Prada"], "nota"),
+    "cashmere-pants": (["The Row", "Balmain"], "nota"),
+    "pillbox-hat-ss2025": (["Prada", "Valentino"], "nota"), "pencil-skirt-ss2025": (["Max Mara", "Toteme"], "nota"),
+    "chiffon-cape-ss2025": (["Chanel", "Chloé"], "nota"), "sequin-dress-ss2025": (["Prada", "Rabanne"], "nota"),
+    "80s-blazer-ss2025": (["Bottega Veneta", "Rabanne"], "otra"), "bubble-skirt-ss2025": (["Chloé", "Alaïa"], "otra"),
+    "wide-leg-jeans-ss2025": (["Stella McCartney", "Sacai"], "otra"), "statement-sunglasses-ss2025": (["Prada", "McQueen"], "otra"),
+    "one-leg-pants-ss2025": (["Rick Owens", "Courrèges"], "nota"), "tutu-skirt-ss2025": (["Carven", "Dries Van Noten"], "nota"),
+    "dress-over-pants-ss2025": (["Fendi", "Phoebe Philo"], "nota"), "polka-dot-ss2025": (["Marc Jacobs", "Nina Ricci"], "nota"),
+    "breton-sweater-ss2025": (["Proenza Schouler", "Max Mara"], "nota"),
+    "leather-mini-skirt-ss2026": (["Hermès", "Mugler"], "nota"), "satin-scarf-ss2026": (["Celine", "Kallmeyer"], "nota"),
+    "floral-print-ss2026": (["Chanel", "Balenciaga"], "nota"), "poplin-shirt-ss2026": (["Loewe", "Prada"], "nota"),
+    "trench-coat-ss2026": (["Tom Ford", "Saint Laurent"], "nota"), "80s-fashion-ss2026": (["Saint Laurent", "Versace"], "nota"),
+    "lilac-dress-ss2026": (["Versace", "Loewe"], "nota"), "preppy-outfit-ss2026": (["Miu Miu", "Loewe"], "nota"),
+    "tweed-suit-ss2026": (["Chanel", "Dior"], "nota"), "bell-sleeve-ss2026": (["Gucci", "Saint Laurent"], "nota"),
+    "feather-skirt-ss2026": (["Chanel", "Bottega Veneta"], "nota"), "yellow-dress-ss2026": (["Fendi", "Jil Sander"], "nota"),
+    "chainmail-dress-ss2026": (["Burberry", "Conner Ives"], "nota"), "ruffle-dress-ss2026": (["Chanel", "McQueen"], "nota"),
+    "flapper-dress-ss2026": (["Tory Burch", "Versace"], "nota"), "spaghetti-strap-top-ss2026": (["Eckhaus Latta", "Jil Sander"], "nota"),
+    "low-rise-pants-ss2026": (["McQueen", "Prada"], "nota"), "power-shoulders-ss2026": (["Versace", "Saint Laurent"], "nota"),
+    "fair-isle-sweater-fw2026": (["Altuzarra", "Khaite"], "nota"), "brocade-fw2026": (["Dior", "Bottega Veneta"], "nota"),
+    "tailored-coat-fw2026": (["Jil Sander", "Tod's"], "nota"), "statement-coat-fw2026": (["Bottega Veneta", "Giorgio Armani"], "otra"),
+    "polo-shirt-fw2026": (["Tory Burch", "Marni"], "nota"), "satin-dress-fw2026": (["Chloé", "Prada"], "nota"),
+    "silk-shirt-fw2026": (["Kallmeyer", "Dior"], "nota"), "fur-coat-fw2026": (["Louis Vuitton", "Bottega Veneta"], "nota"),
+    "brooch-fw2026": (["Khaite", "Simone Rocha"], "nota"), "check-shirt-fw2026": (["Chloé", "Acne Studios"], "nota"),
+    "purple-dress-fw2026": (["Loewe", "Celine"], "nota"), "skirt-suit-fw2026": (["Jil Sander", "Tom Ford"], "otra"),
+    "chunky-scarf-fw2026": (["Loewe", "Celine"], "nota"), "shearling-coat-fw2026": (["Dior", "Miu Miu"], "nota"),
+    "lace-dress-fw2026": (["Gabriela Hearst", "Saint Laurent"], "otra"), "fringe-jacket-fw2026": (["Altuzarra", "Akris"], "otra"),
+    "sheer-dress-fw2026": (["Khaite", "Prada"], "otra"), "pink-dress-fw2026": ([], "otra"),
+}
+def desfiles(i):
+    marcas, origen = DESFILES[i]
+    return [{"marca": m, "archivo": f"{i}-{k}.jpg", "origen": origen} for k, m in enumerate(marcas, 1)]
+
 d = json.loads(ENTRADA.read_text(encoding="utf-8"))
 d25 = json.loads((RAIZ / "app" / "datos" / "brief_ss2025.json").read_text(encoding="utf-8"))
 assert d25["meta"]["meses"] == d["meta"]["meses"]
@@ -127,6 +170,7 @@ for t in tendencias:
     t["bruto_pct"] = round((t["b1"] / t["b0"] - 1) * 100)        # cuánto cambiaron sus búsquedas, sin descontar nada
     t["temporada_pct"] = round((math.exp(med) - 1) * 100)         # cuánto se movió la temporada (mediana)
     t["esperado"] = round(t["b0"] * math.exp(med), 2)             # dónde estaría si se hubiera movido como la temporada
+    t["desfiles"] = desfiles(t["id"])
 
 def fid(termino, temporada):
     # Mismo id que usan las fotos: prototipo/fotos/<id>.jpg
@@ -143,6 +187,8 @@ sin_senal_items = [{
 vistas = [{"id": fid(v["termino"], v["temporada"]), "nombre": VISTAS[v["termino"]], "termino": v["termino"],
            "temporada": v["temporada"], "medio": v.get("medio", ""), "tendencia_fuente": v.get("tendencia_fuente", ""),
            "url_fuente": v.get("url_fuente", "")} for v in d["vistas_2026"]]
+for v in vistas:
+    v["desfiles"] = desfiles(v["id"])
 
 # Colores de pasarela (brief.json): % de looks con ese color, temporadas recientes contra previas, y el color medido
 NOM_COLOR = {"Marron": "Marrón", "Beige/Crema": "Beige y crema"}
@@ -170,18 +216,29 @@ SALIDA.write_text("// Generado por prototipo/armar_datos.py. No editar a mano.\n
 print(f"{len(tendencias)} tendencias con veredicto y {len(vistas)} vistas en 2026 -> {SALIDA.relative_to(RAIZ)}")
 
 # Lista de fotos que hacen falta (prototipo/FOTOS.md). Las fotos van en prototipo/fotos/, que no se sube a GitHub.
-TEMP = {"SS2024": ("Primavera 2024", "spring 2024"), "FW2024": ("Otoño 2024", "fall 2024"), "SS2025": ("Primavera 2025", "spring 2025"),
-        "SS2026": ("Primavera 2026", "spring 2026"), "FW2026": ("Otoño 2026", "fall 2026")}
+TEMP = {"SS2024": ("Primavera 2024", "Spring 2024"), "FW2024": ("Otoño 2024", "Fall 2024"), "SS2025": ("Primavera 2025", "Spring 2025"),
+        "SS2026": ("Primavera 2026", "Spring 2026"), "FW2026": ("Otoño 2026", "Fall 2026")}
 lineas = ["# Fotos para el prototipo", "",
-          "Las fotos van en `prototipo/fotos/` con el nombre exacto de la columna **Archivo** (en `.jpg`). Esa carpeta está en "
-          "`.gitignore`: **no se sube a GitHub** (el repo es público y las fotos tienen derechos). La página muestra la foto si "
-          "está y, si no, deja el lugar vacío con el nombre del archivo.", "",
-          "Cómo elegir: un look de desfile de esa temporada, vertical y de cuerpo entero, donde la prenda se vea clara. La nota "
-          "del medio que nombró la tendencia suele tener la foto justa.", "",
+          "Dos fotos por tendencia, de **dos desfiles distintos** de esa temporada, para respaldar que la tendencia se vio en más "
+          "de una pasarela. Van en `prototipo/fotos/` con el nombre exacto de la columna **Archivo** (en `.jpg`). Esa carpeta está en "
+          "`.gitignore`: **no se sube a GitHub** (el repo es público y las fotos tienen derechos).", "",
+          "Cómo buscarlas: en Vogue Runway (vogue.com/fashion-shows) entrá a la colección de la columna **Desfile** y elegí un look "
+          "vertical, de cuerpo entero, donde se vea la tendencia. O buscá en Google Imágenes el texto de la columna **Buscar**.", "",
+          "**De dónde sale la marca:** *nota* = la nombra la nota del medio que eligió la tendencia; *otra* = esa nota no se pudo "
+          "abrir o no nombra marcas, y la marca sale de otras notas de la misma temporada.", "",
           "Este archivo lo arma `prototipo/armar_datos.py`: no editarlo a mano.", ""]
-for titulo, lista in ((f"Con veredicto ({len(tendencias)})", tendencias), (f"Visto en 2026 ({len(vistas)})", vistas)):
-    lineas += [f"## {titulo}", "", "| Archivo | Tendencia | Temporada | Buscar en Google Imágenes | Nota del medio |", "|---|---|---|---|---|"]
-    lineas += [f"| `{t['id']}.jpg` | {t['nombre']} | {TEMP[t['temporada']][0]} | {t['termino']} runway {TEMP[t['temporada']][1]} "
-               f"| [{t['medio']}]({t['url_fuente']}) |" for t in lista]
-    lineas.append("")
+for titulo, lista in ((f"Con veredicto ({len(tendencias)} tendencias)", tendencias), (f"Visto en 2026 ({len(vistas)} tendencias)", vistas)):
+    for temp in ("SS2025", "FW2024", "SS2024", "SS2026", "FW2026"):
+        grupo = [t for t in lista if t["temporada"] == temp]
+        if not grupo:
+            continue
+        lineas += [f"## {titulo} · {TEMP[temp][0]}", "", "| Archivo | Tendencia | Desfile | Buscar | Marca sale de |", "|---|---|---|---|---|"]
+        for t in grupo:
+            if not t["desfiles"]:
+                lineas.append(f"| `{t['id']}-1.jpg` y `{t['id']}-2.jpg` | {t['nombre']} | Ninguna nota nombra marcas: elegí dos en Vogue Runway | "
+                              f"{t['termino']} runway {TEMP[temp][1].lower()} | – |")
+            for f in t["desfiles"]:
+                lineas.append(f"| `{f['archivo']}` | {t['nombre']} | {f['marca']} {TEMP[temp][1]} Ready-to-Wear | "
+                              f"{f['marca']} {TEMP[temp][1].lower()} {t['termino']} | {f['origen']} |")
+        lineas.append("")
 (RAIZ / "prototipo" / "FOTOS.md").write_text("\n".join(lineas), encoding="utf-8")
