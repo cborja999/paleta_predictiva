@@ -1,0 +1,681 @@
+geo,termino,mes,valor,semanas
+MUNDO,brooch,2023-12,14.00,1
+MUNDO,brooch,2024-01,13.75,4
+MUNDO,brooch,2024-02,14.25,4
+MUNDO,brooch,2024-03,13.80,5
+MUNDO,brooch,2024-04,12.75,4
+MUNDO,brooch,2024-05,11.75,4
+MUNDO,brooch,2024-06,11.40,5
+MUNDO,brooch,2024-07,12.50,4
+MUNDO,brooch,2024-08,12.50,4
+MUNDO,brooch,2024-09,13.00,5
+MUNDO,brooch,2024-10,13.75,4
+MUNDO,brooch,2024-11,15.75,4
+MUNDO,brooch,2024-12,16.00,5
+MUNDO,brooch,2025-01,15.00,4
+MUNDO,brooch,2025-02,15.25,4
+MUNDO,brooch,2025-03,14.40,5
+MUNDO,brooch,2025-04,14.50,4
+MUNDO,brooch,2025-05,14.00,4
+MUNDO,brooch,2025-06,13.80,5
+MUNDO,brooch,2025-07,13.50,4
+MUNDO,brooch,2025-08,21.60,5
+MUNDO,brooch,2025-09,16.25,4
+MUNDO,brooch,2025-10,17.75,4
+MUNDO,brooch,2025-11,19.00,5
+MUNDO,brooch,2025-12,17.50,4
+MUNDO,brooch,2026-01,17.25,4
+MUNDO,brooch,2026-02,64.50,4
+MUNDO,brooch,2026-03,19.00,5
+MUNDO,brooch,2026-04,24.00,4
+MUNDO,brooch,2026-05,20.20,5
+MUNDO,brooch,2026-06,16.25,4
+MUNDO,brooch,2026-07,15.50,4
+MUNDO,brooch,2026-08,17.80,5
+MUNDO,brooch,2026-09,20.25,4
+MUNDO,peplum,2023-12,22.00,1
+MUNDO,peplum,2024-01,22.00,4
+MUNDO,peplum,2024-02,22.00,4
+MUNDO,peplum,2024-03,25.40,5
+MUNDO,peplum,2024-04,23.75,4
+MUNDO,peplum,2024-05,22.75,4
+MUNDO,peplum,2024-06,21.80,5
+MUNDO,peplum,2024-07,24.50,4
+MUNDO,peplum,2024-08,23.75,4
+MUNDO,peplum,2024-09,22.40,5
+MUNDO,peplum,2024-10,23.00,4
+MUNDO,peplum,2024-11,22.00,4
+MUNDO,peplum,2024-12,21.80,5
+MUNDO,peplum,2025-01,21.25,4
+MUNDO,peplum,2025-02,23.00,4
+MUNDO,peplum,2025-03,26.60,5
+MUNDO,peplum,2025-04,28.25,4
+MUNDO,peplum,2025-05,27.00,4
+MUNDO,peplum,2025-06,27.00,5
+MUNDO,peplum,2025-07,29.50,4
+MUNDO,peplum,2025-08,34.40,5
+MUNDO,peplum,2025-09,33.00,4
+MUNDO,peplum,2025-10,30.25,4
+MUNDO,peplum,2025-11,32.40,5
+MUNDO,peplum,2025-12,29.25,4
+MUNDO,peplum,2026-01,32.00,4
+MUNDO,peplum,2026-02,55.00,4
+MUNDO,peplum,2026-03,53.20,5
+MUNDO,peplum,2026-04,86.50,4
+MUNDO,peplum,2026-05,65.60,5
+MUNDO,peplum,2026-06,46.00,4
+MUNDO,peplum,2026-07,38.00,4
+MUNDO,peplum,2026-08,50.20,5
+MUNDO,peplum,2026-09,54.75,4
+MUNDO,black lace,2023-12,10.00,1
+MUNDO,black lace,2024-01,9.75,4
+MUNDO,black lace,2024-02,10.50,4
+MUNDO,black lace,2024-03,10.40,5
+MUNDO,black lace,2024-04,10.75,4
+MUNDO,black lace,2024-05,10.50,4
+MUNDO,black lace,2024-06,10.40,5
+MUNDO,black lace,2024-07,10.75,4
+MUNDO,black lace,2024-08,11.00,4
+MUNDO,black lace,2024-09,12.40,5
+MUNDO,black lace,2024-10,13.75,4
+MUNDO,black lace,2024-11,12.75,4
+MUNDO,black lace,2024-12,12.40,5
+MUNDO,black lace,2025-01,11.75,4
+MUNDO,black lace,2025-02,11.50,4
+MUNDO,black lace,2025-03,12.40,5
+MUNDO,black lace,2025-04,12.25,4
+MUNDO,black lace,2025-05,12.00,4
+MUNDO,black lace,2025-06,12.20,5
+MUNDO,black lace,2025-07,13.25,4
+MUNDO,black lace,2025-08,17.80,5
+MUNDO,black lace,2025-09,19.00,4
+MUNDO,black lace,2025-10,21.75,4
+MUNDO,black lace,2025-11,21.20,5
+MUNDO,black lace,2025-12,17.00,4
+MUNDO,black lace,2026-01,17.00,4
+MUNDO,black lace,2026-02,63.00,4
+MUNDO,black lace,2026-03,36.00,5
+MUNDO,black lace,2026-04,80.50,4
+MUNDO,black lace,2026-05,64.60,5
+MUNDO,black lace,2026-06,39.50,4
+MUNDO,black lace,2026-07,25.25,4
+MUNDO,black lace,2026-08,44.20,5
+MUNDO,black lace,2026-09,66.75,4
+MUNDO,shearling jacket,2023-12,45.00,1
+MUNDO,shearling jacket,2024-01,39.25,4
+MUNDO,shearling jacket,2024-02,24.75,4
+MUNDO,shearling jacket,2024-03,15.20,5
+MUNDO,shearling jacket,2024-04,11.00,4
+MUNDO,shearling jacket,2024-05,8.50,4
+MUNDO,shearling jacket,2024-06,9.00,5
+MUNDO,shearling jacket,2024-07,10.00,4
+MUNDO,shearling jacket,2024-08,15.00,4
+MUNDO,shearling jacket,2024-09,27.80,5
+MUNDO,shearling jacket,2024-10,40.00,4
+MUNDO,shearling jacket,2024-11,59.50,4
+MUNDO,shearling jacket,2024-12,65.40,5
+MUNDO,shearling jacket,2025-01,44.75,4
+MUNDO,shearling jacket,2025-02,26.75,4
+MUNDO,shearling jacket,2025-03,15.60,5
+MUNDO,shearling jacket,2025-04,11.00,4
+MUNDO,shearling jacket,2025-05,9.25,4
+MUNDO,shearling jacket,2025-06,10.40,5
+MUNDO,shearling jacket,2025-07,12.25,4
+MUNDO,shearling jacket,2025-08,25.00,5
+MUNDO,shearling jacket,2025-09,38.50,4
+MUNDO,shearling jacket,2025-10,58.25,4
+MUNDO,shearling jacket,2025-11,82.60,5
+MUNDO,shearling jacket,2025-12,69.25,4
+MUNDO,shearling jacket,2026-01,50.50,4
+MUNDO,shearling jacket,2026-02,57.75,4
+MUNDO,shearling jacket,2026-03,50.60,5
+MUNDO,shearling jacket,2026-04,91.75,4
+MUNDO,shearling jacket,2026-05,73.20,5
+MUNDO,shearling jacket,2026-06,21.75,4
+MUNDO,shearling jacket,2026-07,16.75,4
+MUNDO,shearling jacket,2026-08,30.20,5
+MUNDO,shearling jacket,2026-09,49.00,4
+MUNDO,orange dress,2023-12,12.00,1
+MUNDO,orange dress,2024-01,14.00,4
+MUNDO,orange dress,2024-02,15.50,4
+MUNDO,orange dress,2024-03,18.20,5
+MUNDO,orange dress,2024-04,19.25,4
+MUNDO,orange dress,2024-05,19.25,4
+MUNDO,orange dress,2024-06,19.60,5
+MUNDO,orange dress,2024-07,19.50,4
+MUNDO,orange dress,2024-08,19.00,4
+MUNDO,orange dress,2024-09,18.80,5
+MUNDO,orange dress,2024-10,16.25,4
+MUNDO,orange dress,2024-11,11.75,4
+MUNDO,orange dress,2024-12,10.40,5
+MUNDO,orange dress,2025-01,13.75,4
+MUNDO,orange dress,2025-02,15.00,4
+MUNDO,orange dress,2025-03,17.80,5
+MUNDO,orange dress,2025-04,19.50,4
+MUNDO,orange dress,2025-05,18.75,4
+MUNDO,orange dress,2025-06,19.00,5
+MUNDO,orange dress,2025-07,20.25,4
+MUNDO,orange dress,2025-08,23.20,5
+MUNDO,orange dress,2025-09,22.25,4
+MUNDO,orange dress,2025-10,18.75,4
+MUNDO,orange dress,2025-11,17.00,5
+MUNDO,orange dress,2025-12,12.50,4
+MUNDO,orange dress,2026-01,15.75,4
+MUNDO,orange dress,2026-02,48.50,4
+MUNDO,orange dress,2026-03,38.00,5
+MUNDO,orange dress,2026-04,86.50,4
+MUNDO,orange dress,2026-05,70.80,5
+MUNDO,orange dress,2026-06,32.50,4
+MUNDO,orange dress,2026-07,22.50,4
+MUNDO,orange dress,2026-08,30.60,5
+MUNDO,orange dress,2026-09,39.50,4
+MUNDO,fair isle sweater,2023-12,33.00,1
+MUNDO,fair isle sweater,2024-01,21.00,4
+MUNDO,fair isle sweater,2024-02,10.75,4
+MUNDO,fair isle sweater,2024-03,6.80,5
+MUNDO,fair isle sweater,2024-04,5.25,4
+MUNDO,fair isle sweater,2024-05,4.50,4
+MUNDO,fair isle sweater,2024-06,4.40,5
+MUNDO,fair isle sweater,2024-07,6.25,4
+MUNDO,fair isle sweater,2024-08,9.00,4
+MUNDO,fair isle sweater,2024-09,16.60,5
+MUNDO,fair isle sweater,2024-10,30.75,4
+MUNDO,fair isle sweater,2024-11,57.25,4
+MUNDO,fair isle sweater,2024-12,70.20,5
+MUNDO,fair isle sweater,2025-01,29.25,4
+MUNDO,fair isle sweater,2025-02,15.25,4
+MUNDO,fair isle sweater,2025-03,8.00,5
+MUNDO,fair isle sweater,2025-04,5.75,4
+MUNDO,fair isle sweater,2025-05,5.25,4
+MUNDO,fair isle sweater,2025-06,7.80,5
+MUNDO,fair isle sweater,2025-07,8.25,4
+MUNDO,fair isle sweater,2025-08,16.20,5
+MUNDO,fair isle sweater,2025-09,22.00,4
+MUNDO,fair isle sweater,2025-10,40.50,4
+MUNDO,fair isle sweater,2025-11,87.00,5
+MUNDO,fair isle sweater,2025-12,78.00,4
+MUNDO,fair isle sweater,2026-01,33.75,4
+MUNDO,fair isle sweater,2026-02,64.25,4
+MUNDO,fair isle sweater,2026-03,27.00,5
+MUNDO,fair isle sweater,2026-04,59.50,4
+MUNDO,fair isle sweater,2026-05,41.60,5
+MUNDO,fair isle sweater,2026-06,13.25,4
+MUNDO,fair isle sweater,2026-07,11.50,4
+MUNDO,fair isle sweater,2026-08,18.40,5
+MUNDO,fair isle sweater,2026-09,30.00,4
+MUNDO,statement coat,2023-12,5.00,1
+MUNDO,statement coat,2024-01,9.50,4
+MUNDO,statement coat,2024-02,9.50,4
+MUNDO,statement coat,2024-03,9.00,5
+MUNDO,statement coat,2024-04,9.25,4
+MUNDO,statement coat,2024-05,6.25,4
+MUNDO,statement coat,2024-06,4.80,5
+MUNDO,statement coat,2024-07,4.75,4
+MUNDO,statement coat,2024-08,5.75,4
+MUNDO,statement coat,2024-09,10.20,5
+MUNDO,statement coat,2024-10,9.50,4
+MUNDO,statement coat,2024-11,9.75,4
+MUNDO,statement coat,2024-12,9.00,5
+MUNDO,statement coat,2025-01,10.75,4
+MUNDO,statement coat,2025-02,12.00,4
+MUNDO,statement coat,2025-03,9.80,5
+MUNDO,statement coat,2025-04,10.25,4
+MUNDO,statement coat,2025-05,9.00,4
+MUNDO,statement coat,2025-06,5.40,5
+MUNDO,statement coat,2025-07,8.00,4
+MUNDO,statement coat,2025-08,32.60,5
+MUNDO,statement coat,2025-09,51.50,4
+MUNDO,statement coat,2025-10,48.50,4
+MUNDO,statement coat,2025-11,55.80,5
+MUNDO,statement coat,2025-12,37.75,4
+MUNDO,statement coat,2026-01,36.50,4
+MUNDO,statement coat,2026-02,72.25,4
+MUNDO,statement coat,2026-03,57.20,5
+MUNDO,statement coat,2026-04,68.75,4
+MUNDO,statement coat,2026-05,78.20,5
+MUNDO,statement coat,2026-06,41.00,4
+MUNDO,statement coat,2026-07,25.00,4
+MUNDO,statement coat,2026-08,23.20,5
+MUNDO,statement coat,2026-09,41.50,4
+MUNDO,cardigan,2023-12,42.00,1
+MUNDO,cardigan,2024-01,40.25,4
+MUNDO,cardigan,2024-02,37.75,4
+MUNDO,cardigan,2024-03,37.00,5
+MUNDO,cardigan,2024-04,37.25,4
+MUNDO,cardigan,2024-05,33.00,4
+MUNDO,cardigan,2024-06,31.20,5
+MUNDO,cardigan,2024-07,32.00,4
+MUNDO,cardigan,2024-08,38.50,4
+MUNDO,cardigan,2024-09,50.20,5
+MUNDO,cardigan,2024-10,52.25,4
+MUNDO,cardigan,2024-11,58.00,4
+MUNDO,cardigan,2024-12,56.20,5
+MUNDO,cardigan,2025-01,46.75,4
+MUNDO,cardigan,2025-02,41.75,4
+MUNDO,cardigan,2025-03,40.80,5
+MUNDO,cardigan,2025-04,41.00,4
+MUNDO,cardigan,2025-05,37.75,4
+MUNDO,cardigan,2025-06,33.40,5
+MUNDO,cardigan,2025-07,35.00,4
+MUNDO,cardigan,2025-08,49.40,5
+MUNDO,cardigan,2025-09,59.25,4
+MUNDO,cardigan,2025-10,61.25,4
+MUNDO,cardigan,2025-11,67.00,5
+MUNDO,cardigan,2025-12,58.00,4
+MUNDO,cardigan,2026-01,51.25,4
+MUNDO,cardigan,2026-02,81.25,4
+MUNDO,cardigan,2026-03,57.80,5
+MUNDO,cardigan,2026-04,79.00,4
+MUNDO,cardigan,2026-05,65.80,5
+MUNDO,cardigan,2026-06,42.00,4
+MUNDO,cardigan,2026-07,37.25,4
+MUNDO,cardigan,2026-08,50.00,5
+MUNDO,cardigan,2026-09,67.25,4
+MUNDO,red dress,2023-12,22.00,1
+MUNDO,red dress,2024-01,25.50,4
+MUNDO,red dress,2024-02,26.50,4
+MUNDO,red dress,2024-03,22.80,5
+MUNDO,red dress,2024-04,24.00,4
+MUNDO,red dress,2024-05,23.50,4
+MUNDO,red dress,2024-06,23.00,5
+MUNDO,red dress,2024-07,23.00,4
+MUNDO,red dress,2024-08,24.00,4
+MUNDO,red dress,2024-09,26.60,5
+MUNDO,red dress,2024-10,30.25,4
+MUNDO,red dress,2024-11,32.25,4
+MUNDO,red dress,2024-12,33.00,5
+MUNDO,red dress,2025-01,27.25,4
+MUNDO,red dress,2025-02,27.75,4
+MUNDO,red dress,2025-03,25.60,5
+MUNDO,red dress,2025-04,25.75,4
+MUNDO,red dress,2025-05,26.75,4
+MUNDO,red dress,2025-06,25.20,5
+MUNDO,red dress,2025-07,27.00,4
+MUNDO,red dress,2025-08,32.80,5
+MUNDO,red dress,2025-09,33.50,4
+MUNDO,red dress,2025-10,34.25,4
+MUNDO,red dress,2025-11,39.60,5
+MUNDO,red dress,2025-12,35.25,4
+MUNDO,red dress,2026-01,31.50,4
+MUNDO,red dress,2026-02,72.75,4
+MUNDO,red dress,2026-03,43.60,5
+MUNDO,red dress,2026-04,78.75,4
+MUNDO,red dress,2026-05,65.60,5
+MUNDO,red dress,2026-06,41.50,4
+MUNDO,red dress,2026-07,31.75,4
+MUNDO,red dress,2026-08,39.20,5
+MUNDO,red dress,2026-09,49.75,4
+MUNDO,thigh high boots,2023-12,41.00,1
+MUNDO,thigh high boots,2024-01,42.50,4
+MUNDO,thigh high boots,2024-02,36.00,4
+MUNDO,thigh high boots,2024-03,27.20,5
+MUNDO,thigh high boots,2024-04,22.75,4
+MUNDO,thigh high boots,2024-05,20.00,4
+MUNDO,thigh high boots,2024-06,21.00,5
+MUNDO,thigh high boots,2024-07,21.50,4
+MUNDO,thigh high boots,2024-08,29.75,4
+MUNDO,thigh high boots,2024-09,41.80,5
+MUNDO,thigh high boots,2024-10,55.50,4
+MUNDO,thigh high boots,2024-11,53.50,4
+MUNDO,thigh high boots,2024-12,50.00,5
+MUNDO,thigh high boots,2025-01,39.75,4
+MUNDO,thigh high boots,2025-02,31.25,4
+MUNDO,thigh high boots,2025-03,27.20,5
+MUNDO,thigh high boots,2025-04,22.25,4
+MUNDO,thigh high boots,2025-05,22.25,4
+MUNDO,thigh high boots,2025-06,20.40,5
+MUNDO,thigh high boots,2025-07,22.25,4
+MUNDO,thigh high boots,2025-08,30.00,5
+MUNDO,thigh high boots,2025-09,41.25,4
+MUNDO,thigh high boots,2025-10,51.75,4
+MUNDO,thigh high boots,2025-11,51.20,5
+MUNDO,thigh high boots,2025-12,42.50,4
+MUNDO,thigh high boots,2026-01,33.50,4
+MUNDO,thigh high boots,2026-02,46.50,4
+MUNDO,thigh high boots,2026-03,40.20,5
+MUNDO,thigh high boots,2026-04,45.50,4
+MUNDO,thigh high boots,2026-05,44.40,5
+MUNDO,thigh high boots,2026-06,33.75,4
+MUNDO,thigh high boots,2026-07,27.75,4
+MUNDO,thigh high boots,2026-08,34.80,5
+MUNDO,thigh high boots,2026-09,69.75,4
+MUNDO,asymmetric jacket,2023-12,4.00,1
+MUNDO,asymmetric jacket,2024-01,3.25,4
+MUNDO,asymmetric jacket,2024-02,3.00,4
+MUNDO,asymmetric jacket,2024-03,3.40,5
+MUNDO,asymmetric jacket,2024-04,0.75,4
+MUNDO,asymmetric jacket,2024-05,0.75,4
+MUNDO,asymmetric jacket,2024-06,0.60,5
+MUNDO,asymmetric jacket,2024-07,0.00,4
+MUNDO,asymmetric jacket,2024-08,0.75,4
+MUNDO,asymmetric jacket,2024-09,4.40,5
+MUNDO,asymmetric jacket,2024-10,4.25,4
+MUNDO,asymmetric jacket,2024-11,5.25,4
+MUNDO,asymmetric jacket,2024-12,5.80,5
+MUNDO,asymmetric jacket,2025-01,5.50,4
+MUNDO,asymmetric jacket,2025-02,6.00,4
+MUNDO,asymmetric jacket,2025-03,3.40,5
+MUNDO,asymmetric jacket,2025-04,3.00,4
+MUNDO,asymmetric jacket,2025-05,2.50,4
+MUNDO,asymmetric jacket,2025-06,1.40,5
+MUNDO,asymmetric jacket,2025-07,3.25,4
+MUNDO,asymmetric jacket,2025-08,8.00,5
+MUNDO,asymmetric jacket,2025-09,12.75,4
+MUNDO,asymmetric jacket,2025-10,13.00,4
+MUNDO,asymmetric jacket,2025-11,18.20,5
+MUNDO,asymmetric jacket,2025-12,12.00,4
+MUNDO,asymmetric jacket,2026-01,10.50,4
+MUNDO,asymmetric jacket,2026-02,33.00,4
+MUNDO,asymmetric jacket,2026-03,32.00,5
+MUNDO,asymmetric jacket,2026-04,81.50,4
+MUNDO,asymmetric jacket,2026-05,68.60,5
+MUNDO,asymmetric jacket,2026-06,16.00,4
+MUNDO,asymmetric jacket,2026-07,9.25,4
+MUNDO,asymmetric jacket,2026-08,28.20,5
+MUNDO,asymmetric jacket,2026-09,46.50,4
+MUNDO,ruffle collar,2023-12,6.00,1
+MUNDO,ruffle collar,2024-01,6.00,4
+MUNDO,ruffle collar,2024-02,7.00,4
+MUNDO,ruffle collar,2024-03,6.40,5
+MUNDO,ruffle collar,2024-04,6.75,4
+MUNDO,ruffle collar,2024-05,6.50,4
+MUNDO,ruffle collar,2024-06,6.20,5
+MUNDO,ruffle collar,2024-07,6.25,4
+MUNDO,ruffle collar,2024-08,6.25,4
+MUNDO,ruffle collar,2024-09,8.60,5
+MUNDO,ruffle collar,2024-10,13.25,4
+MUNDO,ruffle collar,2024-11,8.50,4
+MUNDO,ruffle collar,2024-12,7.40,5
+MUNDO,ruffle collar,2025-01,12.50,4
+MUNDO,ruffle collar,2025-02,8.25,4
+MUNDO,ruffle collar,2025-03,8.20,5
+MUNDO,ruffle collar,2025-04,7.75,4
+MUNDO,ruffle collar,2025-05,8.75,4
+MUNDO,ruffle collar,2025-06,7.00,5
+MUNDO,ruffle collar,2025-07,8.00,4
+MUNDO,ruffle collar,2025-08,12.00,5
+MUNDO,ruffle collar,2025-09,14.50,4
+MUNDO,ruffle collar,2025-10,19.50,4
+MUNDO,ruffle collar,2025-11,15.40,5
+MUNDO,ruffle collar,2025-12,10.25,4
+MUNDO,ruffle collar,2026-01,11.00,4
+MUNDO,ruffle collar,2026-02,42.25,4
+MUNDO,ruffle collar,2026-03,33.40,5
+MUNDO,ruffle collar,2026-04,84.00,4
+MUNDO,ruffle collar,2026-05,59.00,5
+MUNDO,ruffle collar,2026-06,19.75,4
+MUNDO,ruffle collar,2026-07,10.50,4
+MUNDO,ruffle collar,2026-08,20.20,5
+MUNDO,ruffle collar,2026-09,32.50,4
+MUNDO,floral print,2023-12,3.00,1
+MUNDO,floral print,2024-01,3.00,4
+MUNDO,floral print,2024-02,3.00,4
+MUNDO,floral print,2024-03,4.00,5
+MUNDO,floral print,2024-04,4.00,4
+MUNDO,floral print,2024-05,4.00,4
+MUNDO,floral print,2024-06,4.00,5
+MUNDO,floral print,2024-07,4.00,4
+MUNDO,floral print,2024-08,3.75,4
+MUNDO,floral print,2024-09,3.00,5
+MUNDO,floral print,2024-10,3.00,4
+MUNDO,floral print,2024-11,3.00,4
+MUNDO,floral print,2024-12,2.80,5
+MUNDO,floral print,2025-01,3.00,4
+MUNDO,floral print,2025-02,3.25,4
+MUNDO,floral print,2025-03,4.00,5
+MUNDO,floral print,2025-04,4.25,4
+MUNDO,floral print,2025-05,4.25,4
+MUNDO,floral print,2025-06,4.00,5
+MUNDO,floral print,2025-07,4.50,4
+MUNDO,floral print,2025-08,5.60,5
+MUNDO,floral print,2025-09,5.25,4
+MUNDO,floral print,2025-10,4.25,4
+MUNDO,floral print,2025-11,4.20,5
+MUNDO,floral print,2025-12,3.00,4
+MUNDO,floral print,2026-01,4.50,4
+MUNDO,floral print,2026-02,60.50,4
+MUNDO,floral print,2026-03,13.80,5
+MUNDO,floral print,2026-04,33.25,4
+MUNDO,floral print,2026-05,24.40,5
+MUNDO,floral print,2026-06,12.00,4
+MUNDO,floral print,2026-07,5.25,4
+MUNDO,floral print,2026-08,11.60,5
+MUNDO,floral print,2026-09,15.25,4
+MUNDO,pearl necklace,2023-12,23.00,1
+MUNDO,pearl necklace,2024-01,23.25,4
+MUNDO,pearl necklace,2024-02,23.25,4
+MUNDO,pearl necklace,2024-03,21.60,5
+MUNDO,pearl necklace,2024-04,23.00,4
+MUNDO,pearl necklace,2024-05,23.00,4
+MUNDO,pearl necklace,2024-06,23.00,5
+MUNDO,pearl necklace,2024-07,24.00,4
+MUNDO,pearl necklace,2024-08,24.25,4
+MUNDO,pearl necklace,2024-09,22.80,5
+MUNDO,pearl necklace,2024-10,23.00,4
+MUNDO,pearl necklace,2024-11,27.25,4
+MUNDO,pearl necklace,2024-12,31.00,5
+MUNDO,pearl necklace,2025-01,24.00,4
+MUNDO,pearl necklace,2025-02,28.25,4
+MUNDO,pearl necklace,2025-03,22.40,5
+MUNDO,pearl necklace,2025-04,24.50,4
+MUNDO,pearl necklace,2025-05,24.75,4
+MUNDO,pearl necklace,2025-06,24.40,5
+MUNDO,pearl necklace,2025-07,25.00,4
+MUNDO,pearl necklace,2025-08,28.20,5
+MUNDO,pearl necklace,2025-09,25.75,4
+MUNDO,pearl necklace,2025-10,26.00,4
+MUNDO,pearl necklace,2025-11,27.20,5
+MUNDO,pearl necklace,2025-12,28.00,4
+MUNDO,pearl necklace,2026-01,24.25,4
+MUNDO,pearl necklace,2026-02,67.50,4
+MUNDO,pearl necklace,2026-03,39.40,5
+MUNDO,pearl necklace,2026-04,74.25,4
+MUNDO,pearl necklace,2026-05,60.00,5
+MUNDO,pearl necklace,2026-06,38.50,4
+MUNDO,pearl necklace,2026-07,27.75,4
+MUNDO,pearl necklace,2026-08,38.40,5
+MUNDO,pearl necklace,2026-09,40.50,4
+MUNDO,pencil skirt,2023-12,8.00,1
+MUNDO,pencil skirt,2024-01,8.50,4
+MUNDO,pencil skirt,2024-02,8.00,4
+MUNDO,pencil skirt,2024-03,8.00,5
+MUNDO,pencil skirt,2024-04,9.25,4
+MUNDO,pencil skirt,2024-05,8.00,4
+MUNDO,pencil skirt,2024-06,8.00,5
+MUNDO,pencil skirt,2024-07,7.75,4
+MUNDO,pencil skirt,2024-08,8.50,4
+MUNDO,pencil skirt,2024-09,9.20,5
+MUNDO,pencil skirt,2024-10,12.00,4
+MUNDO,pencil skirt,2024-11,10.75,4
+MUNDO,pencil skirt,2024-12,9.40,5
+MUNDO,pencil skirt,2025-01,8.25,4
+MUNDO,pencil skirt,2025-02,8.00,4
+MUNDO,pencil skirt,2025-03,8.00,5
+MUNDO,pencil skirt,2025-04,8.25,4
+MUNDO,pencil skirt,2025-05,8.25,4
+MUNDO,pencil skirt,2025-06,8.80,5
+MUNDO,pencil skirt,2025-07,9.00,4
+MUNDO,pencil skirt,2025-08,10.40,5
+MUNDO,pencil skirt,2025-09,10.25,4
+MUNDO,pencil skirt,2025-10,11.75,4
+MUNDO,pencil skirt,2025-11,12.60,5
+MUNDO,pencil skirt,2025-12,9.00,4
+MUNDO,pencil skirt,2026-01,8.75,4
+MUNDO,pencil skirt,2026-02,23.25,4
+MUNDO,pencil skirt,2026-03,27.80,5
+MUNDO,pencil skirt,2026-04,70.00,4
+MUNDO,pencil skirt,2026-05,61.40,5
+MUNDO,pencil skirt,2026-06,15.25,4
+MUNDO,pencil skirt,2026-07,11.25,4
+MUNDO,pencil skirt,2026-08,14.00,5
+MUNDO,pencil skirt,2026-09,17.00,4
+MUNDO,neon dress,2023-12,11.00,1
+MUNDO,neon dress,2024-01,12.50,4
+MUNDO,neon dress,2024-02,13.00,4
+MUNDO,neon dress,2024-03,15.20,5
+MUNDO,neon dress,2024-04,16.50,4
+MUNDO,neon dress,2024-05,14.75,4
+MUNDO,neon dress,2024-06,14.60,5
+MUNDO,neon dress,2024-07,15.50,4
+MUNDO,neon dress,2024-08,16.25,4
+MUNDO,neon dress,2024-09,17.40,5
+MUNDO,neon dress,2024-10,14.00,4
+MUNDO,neon dress,2024-11,11.75,4
+MUNDO,neon dress,2024-12,10.80,5
+MUNDO,neon dress,2025-01,13.00,4
+MUNDO,neon dress,2025-02,12.75,4
+MUNDO,neon dress,2025-03,13.00,5
+MUNDO,neon dress,2025-04,13.25,4
+MUNDO,neon dress,2025-05,12.75,4
+MUNDO,neon dress,2025-06,12.00,5
+MUNDO,neon dress,2025-07,12.75,4
+MUNDO,neon dress,2025-08,14.80,5
+MUNDO,neon dress,2025-09,14.25,4
+MUNDO,neon dress,2025-10,12.50,4
+MUNDO,neon dress,2025-11,12.60,5
+MUNDO,neon dress,2025-12,9.00,4
+MUNDO,neon dress,2026-01,10.75,4
+MUNDO,neon dress,2026-02,48.25,4
+MUNDO,neon dress,2026-03,33.40,5
+MUNDO,neon dress,2026-04,81.50,4
+MUNDO,neon dress,2026-05,63.40,5
+MUNDO,neon dress,2026-06,25.50,4
+MUNDO,neon dress,2026-07,13.50,4
+MUNDO,neon dress,2026-08,26.40,5
+MUNDO,neon dress,2026-09,37.50,4
+MUNDO,polka dot,2023-12,12.00,1
+MUNDO,polka dot,2024-01,12.25,4
+MUNDO,polka dot,2024-02,13.25,4
+MUNDO,polka dot,2024-03,14.00,5
+MUNDO,polka dot,2024-04,14.75,4
+MUNDO,polka dot,2024-05,14.50,4
+MUNDO,polka dot,2024-06,15.40,5
+MUNDO,polka dot,2024-07,15.25,4
+MUNDO,polka dot,2024-08,14.75,4
+MUNDO,polka dot,2024-09,13.80,5
+MUNDO,polka dot,2024-10,13.25,4
+MUNDO,polka dot,2024-11,13.00,4
+MUNDO,polka dot,2024-12,19.20,5
+MUNDO,polka dot,2025-01,20.75,4
+MUNDO,polka dot,2025-02,17.50,4
+MUNDO,polka dot,2025-03,20.00,5
+MUNDO,polka dot,2025-04,23.25,4
+MUNDO,polka dot,2025-05,27.75,4
+MUNDO,polka dot,2025-06,30.20,5
+MUNDO,polka dot,2025-07,37.25,4
+MUNDO,polka dot,2025-08,38.60,5
+MUNDO,polka dot,2025-09,33.75,4
+MUNDO,polka dot,2025-10,33.25,4
+MUNDO,polka dot,2025-11,35.40,5
+MUNDO,polka dot,2025-12,37.50,4
+MUNDO,polka dot,2026-01,41.25,4
+MUNDO,polka dot,2026-02,84.50,4
+MUNDO,polka dot,2026-03,68.00,5
+MUNDO,polka dot,2026-04,84.75,4
+MUNDO,polka dot,2026-05,76.00,5
+MUNDO,polka dot,2026-06,62.50,4
+MUNDO,polka dot,2026-07,64.25,4
+MUNDO,polka dot,2026-08,60.60,5
+MUNDO,polka dot,2026-09,60.00,4
+MUNDO,trench coat,2023-12,26.00,1
+MUNDO,trench coat,2024-01,25.00,4
+MUNDO,trench coat,2024-02,25.25,4
+MUNDO,trench coat,2024-03,27.80,5
+MUNDO,trench coat,2024-04,25.50,4
+MUNDO,trench coat,2024-05,17.25,4
+MUNDO,trench coat,2024-06,14.80,5
+MUNDO,trench coat,2024-07,15.25,4
+MUNDO,trench coat,2024-08,19.75,4
+MUNDO,trench coat,2024-09,36.80,5
+MUNDO,trench coat,2024-10,36.75,4
+MUNDO,trench coat,2024-11,37.25,4
+MUNDO,trench coat,2024-12,36.00,5
+MUNDO,trench coat,2025-01,31.50,4
+MUNDO,trench coat,2025-02,28.75,4
+MUNDO,trench coat,2025-03,32.60,5
+MUNDO,trench coat,2025-04,27.75,4
+MUNDO,trench coat,2025-05,20.50,4
+MUNDO,trench coat,2025-06,17.60,5
+MUNDO,trench coat,2025-07,19.50,4
+MUNDO,trench coat,2025-08,34.20,5
+MUNDO,trench coat,2025-09,46.25,4
+MUNDO,trench coat,2025-10,51.50,4
+MUNDO,trench coat,2025-11,48.60,5
+MUNDO,trench coat,2025-12,39.50,4
+MUNDO,trench coat,2026-01,34.75,4
+MUNDO,trench coat,2026-02,52.75,4
+MUNDO,trench coat,2026-03,60.60,5
+MUNDO,trench coat,2026-04,89.25,4
+MUNDO,trench coat,2026-05,69.40,5
+MUNDO,trench coat,2026-06,28.75,4
+MUNDO,trench coat,2026-07,24.75,4
+MUNDO,trench coat,2026-08,35.60,5
+MUNDO,trench coat,2026-09,50.50,4
+MUNDO,jogging pants,2023-12,35.00,1
+MUNDO,jogging pants,2024-01,33.75,4
+MUNDO,jogging pants,2024-02,30.25,4
+MUNDO,jogging pants,2024-03,29.20,5
+MUNDO,jogging pants,2024-04,25.75,4
+MUNDO,jogging pants,2024-05,23.25,4
+MUNDO,jogging pants,2024-06,21.60,5
+MUNDO,jogging pants,2024-07,22.75,4
+MUNDO,jogging pants,2024-08,31.25,4
+MUNDO,jogging pants,2024-09,33.60,5
+MUNDO,jogging pants,2024-10,37.50,4
+MUNDO,jogging pants,2024-11,43.25,4
+MUNDO,jogging pants,2024-12,44.20,5
+MUNDO,jogging pants,2025-01,36.50,4
+MUNDO,jogging pants,2025-02,31.00,4
+MUNDO,jogging pants,2025-03,29.20,5
+MUNDO,jogging pants,2025-04,26.75,4
+MUNDO,jogging pants,2025-05,25.50,4
+MUNDO,jogging pants,2025-06,25.00,5
+MUNDO,jogging pants,2025-07,27.25,4
+MUNDO,jogging pants,2025-08,34.60,5
+MUNDO,jogging pants,2025-09,34.00,4
+MUNDO,jogging pants,2025-10,39.50,4
+MUNDO,jogging pants,2025-11,45.60,5
+MUNDO,jogging pants,2025-12,41.25,4
+MUNDO,jogging pants,2026-01,35.50,4
+MUNDO,jogging pants,2026-02,75.25,4
+MUNDO,jogging pants,2026-03,41.20,5
+MUNDO,jogging pants,2026-04,60.75,4
+MUNDO,jogging pants,2026-05,54.80,5
+MUNDO,jogging pants,2026-06,32.25,4
+MUNDO,jogging pants,2026-07,30.50,4
+MUNDO,jogging pants,2026-08,36.60,5
+MUNDO,jogging pants,2026-09,40.00,4
+MUNDO,scarf,2023-12,39.00,1
+MUNDO,scarf,2024-01,36.75,4
+MUNDO,scarf,2024-02,28.50,4
+MUNDO,scarf,2024-03,26.20,5
+MUNDO,scarf,2024-04,25.25,4
+MUNDO,scarf,2024-05,23.50,4
+MUNDO,scarf,2024-06,23.60,5
+MUNDO,scarf,2024-07,23.75,4
+MUNDO,scarf,2024-08,23.50,4
+MUNDO,scarf,2024-09,29.00,5
+MUNDO,scarf,2024-10,36.75,4
+MUNDO,scarf,2024-11,52.75,4
+MUNDO,scarf,2024-12,64.80,5
+MUNDO,scarf,2025-01,45.75,4
+MUNDO,scarf,2025-02,35.75,4
+MUNDO,scarf,2025-03,31.00,5
+MUNDO,scarf,2025-04,31.00,4
+MUNDO,scarf,2025-05,29.75,4
+MUNDO,scarf,2025-06,30.80,5
+MUNDO,scarf,2025-07,31.00,4
+MUNDO,scarf,2025-08,36.00,5
+MUNDO,scarf,2025-09,40.00,4
+MUNDO,scarf,2025-10,49.50,4
+MUNDO,scarf,2025-11,74.80,5
+MUNDO,scarf,2025-12,77.75,4
+MUNDO,scarf,2026-01,54.25,4
+MUNDO,scarf,2026-02,79.00,4
+MUNDO,scarf,2026-03,44.80,5
+MUNDO,scarf,2026-04,52.75,4
+MUNDO,scarf,2026-05,49.40,5
+MUNDO,scarf,2026-06,43.50,4
+MUNDO,scarf,2026-07,39.25,4
+MUNDO,scarf,2026-08,46.20,5
+MUNDO,scarf,2026-09,51.00,4

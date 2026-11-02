@@ -8,7 +8,38 @@ Cómo buscarlas: en Vogue Runway (vogue.com/fashion-shows) entrá a la colecció
 
 Este archivo lo arma `prototipo/armar_datos.py`: no editarlo a mano.
 
-## Con veredicto (32 tendencias) · Primavera 2025
+## Con veredicto (45 tendencias) · Otoño 2025
+
+| Archivo | Tendencia | Desfile | Buscar | Marca sale de |
+|---|---|---|---|---|
+| `brooch-fw2025-1.jpg` | Broche | Prada Fall 2025 Ready-to-Wear | Prada fall 2025 brooch | nota |
+| `brooch-fw2025-2.jpg` | Broche | Miu Miu Fall 2025 Ready-to-Wear | Miu Miu fall 2025 brooch | nota |
+| `black-lace-fw2025-1.jpg` | Encaje negro | Alaïa Fall 2025 Ready-to-Wear | Alaïa fall 2025 black lace | nota |
+| `black-lace-fw2025-2.jpg` | Encaje negro | Dior Fall 2025 Ready-to-Wear | Dior fall 2025 black lace | nota |
+| `statement-coat-fw2025-1.jpg` | Tapado protagonista | Roksanda Fall 2025 Ready-to-Wear | Roksanda fall 2025 statement coat | nota |
+| `statement-coat-fw2025-2.jpg` | Tapado protagonista | Altuzarra Fall 2025 Ready-to-Wear | Altuzarra fall 2025 statement coat | nota |
+| `cardigan-fw2025-1.jpg` | Cárdigan | Christopher John Rogers Fall 2025 Ready-to-Wear | Christopher John Rogers fall 2025 cardigan | nota |
+| `cardigan-fw2025-2.jpg` | Cárdigan | Tibi Fall 2025 Ready-to-Wear | Tibi fall 2025 cardigan | nota |
+| `thigh-high-boots-fw2025-1.jpg` | Botas bucaneras | Stella McCartney Fall 2025 Ready-to-Wear | Stella McCartney fall 2025 thigh high boots | nota |
+| `thigh-high-boots-fw2025-2.jpg` | Botas bucaneras | Balmain Fall 2025 Ready-to-Wear | Balmain fall 2025 thigh high boots | nota |
+| `asymmetric-jacket-fw2025-1.jpg` | Saco asimétrico | Givenchy Fall 2025 Ready-to-Wear | Givenchy fall 2025 asymmetric jacket | nota |
+| `asymmetric-jacket-fw2025-2.jpg` | Saco asimétrico | Sacai Fall 2025 Ready-to-Wear | Sacai fall 2025 asymmetric jacket | nota |
+| `ruffle-collar-fw2025-1.jpg` | Cuello con volados | McQueen Fall 2025 Ready-to-Wear | McQueen fall 2025 ruffle collar | nota |
+| `ruffle-collar-fw2025-2.jpg` | Cuello con volados | Dior Fall 2025 Ready-to-Wear | Dior fall 2025 ruffle collar | nota |
+| `floral-print-fw2025-1.jpg` | Estampado floral | Prada Fall 2025 Ready-to-Wear | Prada fall 2025 floral print | nota |
+| `floral-print-fw2025-2.jpg` | Estampado floral | Erdem Fall 2025 Ready-to-Wear | Erdem fall 2025 floral print | nota |
+| `pearl-necklace-fw2025-1.jpg` | Collar de perlas | Chanel Fall 2025 Ready-to-Wear | Chanel fall 2025 pearl necklace | nota |
+| `pearl-necklace-fw2025-2.jpg` | Collar de perlas | Vaquera Fall 2025 Ready-to-Wear | Vaquera fall 2025 pearl necklace | nota |
+| `pencil-skirt-fw2025-1.jpg` | Pollera lápiz | Ferragamo Fall 2025 Ready-to-Wear | Ferragamo fall 2025 pencil skirt | nota |
+| `pencil-skirt-fw2025-2.jpg` | Pollera lápiz | Miu Miu Fall 2025 Ready-to-Wear | Miu Miu fall 2025 pencil skirt | nota |
+| `neon-dress-fw2025-1.jpg` | Vestido flúor | Marni Fall 2025 Ready-to-Wear | Marni fall 2025 neon dress | nota |
+| `neon-dress-fw2025-2.jpg` | Vestido flúor | Saint Laurent Fall 2025 Ready-to-Wear | Saint Laurent fall 2025 neon dress | nota |
+| `polka-dot-fw2025-1.jpg` | Lunares | Dries Van Noten Fall 2025 Ready-to-Wear | Dries Van Noten fall 2025 polka dot | nota |
+| `polka-dot-fw2025-2.jpg` | Lunares | Balenciaga Fall 2025 Ready-to-Wear | Balenciaga fall 2025 polka dot | nota |
+| `jogging-pants-fw2025-1.jpg` | Pantalón jogging | Miu Miu Fall 2025 Ready-to-Wear | Miu Miu fall 2025 jogging pants | nota |
+| `jogging-pants-fw2025-2.jpg` | Pantalón jogging | Tom Ford Fall 2025 Ready-to-Wear | Tom Ford fall 2025 jogging pants | nota |
+
+## Con veredicto (45 tendencias) · Primavera 2025
 
 | Archivo | Tendencia | Desfile | Buscar | Marca sale de |
 |---|---|---|---|---|
@@ -39,7 +70,7 @@ Este archivo lo arma `prototipo/armar_datos.py`: no editarlo a mano.
 | `breton-sweater-ss2025-1.jpg` | Sweater marinero a rayas | Proenza Schouler Spring 2025 Ready-to-Wear | Proenza Schouler spring 2025 breton sweater | nota |
 | `breton-sweater-ss2025-2.jpg` | Sweater marinero a rayas | Max Mara Spring 2025 Ready-to-Wear | Max Mara spring 2025 breton sweater | nota |
 
-## Con veredicto (32 tendencias) · Otoño 2024
+## Con veredicto (45 tendencias) · Otoño 2024
 
 | Archivo | Tendencia | Desfile | Buscar | Marca sale de |
 |---|---|---|---|---|
@@ -66,7 +97,7 @@ Este archivo lo arma `prototipo/armar_datos.py`: no editarlo a mano.
 | `cashmere-pants-1.jpg` | Pantalón de cashmere | The Row Fall 2024 Ready-to-Wear | The Row fall 2024 cashmere pants | nota |
 | `cashmere-pants-2.jpg` | Pantalón de cashmere | Balmain Fall 2024 Ready-to-Wear | Balmain fall 2024 cashmere pants | nota |
 
-## Con veredicto (32 tendencias) · Primavera 2024
+## Con veredicto (45 tendencias) · Primavera 2024
 
 | Archivo | Tendencia | Desfile | Buscar | Marca sale de |
 |---|---|---|---|---|

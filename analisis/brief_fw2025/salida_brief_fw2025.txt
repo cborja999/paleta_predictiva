@@ -1,0 +1,32 @@
+BRIEF FW2025 (reglas en REGLAS_BRIEF_FW2025.txt)
+
+FW2025: 20 terminos, 20 usables
+   statement coat     g1 +0.97  Tiende a quedarse        Alta   mar-jul  +0.04  vol   0.000  
+   asymmetric jacket  g1 +0.79  Tiende a quedarse        Alta   mar-jul  +0.28  vol   0.000  
+   floral print       g1 +0.67  Tiende a quedarse        Alta   mar-jul  -0.07  vol   0.522  Lectura apoyada en un pico de un solo mes (primer año: 2026-02)
+   polka dot          g1 +0.55  Tiende a quedarse        Alta   mar-jul  +0.46  vol   1.298  
+   black lace         g1 +0.24  Tiende a quedarse        Media  mar-jul  +0.07  vol   1.259  
+   ruffle collar      g1 +0.22  Tiende a quedarse        Media  mar-jul  +0.10  vol   0.028  
+   brooch             g1 +0.11  Tiende a quedarse        Media  mar-jul  +0.00  vol   1.119  
+   fair isle sweater  g1 +0.08  Sin señal clara                 mar-jul  +0.09  vol   0.075  Lectura apoyada en un pico de un solo mes (año previo: 2024-12; primer año: 2025-11)
+   peplum             g1 +0.03  Sin señal clara                 mar-jul  +0.04  vol   0.627  
+   scarf              g1 +0.02  Sin señal clara                 mar-jul  +0.09  vol   8.800  
+   shearling jacket   g1 -0.02  Sin señal clara                 mar-jul  -0.04  vol   0.217  
+   trench coat        g1 -0.04  Sin señal clara                 mar-jul  +0.02  vol   2.542  
+   red dress          g1 -0.05  Sin señal clara                 mar-jul  -0.01  vol   5.037  
+   orange dress       g1 -0.06  Sin señal clara                 mar-jul  -0.16  vol   0.980  
+   pencil skirt       g1 -0.11  Riesgo de moda pasajera  Media  mar-jul  -0.11  vol   0.429  
+   cardigan           g1 -0.11  Riesgo de moda pasajera  Media  mar-jul  -0.00  vol  11.436  
+   pearl necklace     g1 -0.13  Riesgo de moda pasajera  Media  mar-jul  -0.06  vol   1.186  
+   jogging pants      g1 -0.15  Riesgo de moda pasajera  Media  mar-jul  -0.03  vol   0.190  
+   neon dress         g1 -0.22  Riesgo de moda pasajera  Media  mar-jul  -0.30  vol   0.136  
+   thigh high boots   g1 -0.32  Riesgo de moda pasajera  Alta   mar-jul  -0.14  vol   0.310  
+   total: Riesgo de moda pasajera: 6 | Sin señal clara: 7 | Tiende a quedarse: 7
+
+CHEQUEO DE VALIDEZ
+   V1 g1 vs volumen (falla si |rho| >= 0.5):          -0.21 (p=0.387, n=20)  -> pasa
+   V3 paso ene-2025 vs volumen (falla si |rho| >= 0.5): -0.16 (p=0.507, n=20)  -> pasa
+   V4 12 meses vs mar-jul (falla si rho < 0.50 o mas de 1 opuesto): +0.70 (p=0.001, n=20); opuestos: ninguno  -> pasa
+      referencia limpia (temporadas FW 2016-2024): mediana +0.75, minimo +0.05; 8 de 9 dan +0.50 o mas
+   V2 g1 vs salto feb-may 2026 (solo se informa, no decide): +0.18 (p=0.442, n=20)
+   RESULTADO: PASA: FW2025 lleva veredicto

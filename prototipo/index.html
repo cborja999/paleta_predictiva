@@ -281,7 +281,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
     <h1 class="home-marca">Paleta Predictiva</h1>
     <p class="home-frase">Qué se queda <i>y qué se va.</i></p>
     <p class="home-bajada" id="bajada"></p>
-    <div class="home-acciones"><a class="boton-home" href="#indice">Ver primavera 2025</a><a class="caps link-ant" href="#indice" data-ir-temp="FW2024">Temporadas anteriores</a></div>
+    <div class="home-acciones"><a class="boton-home" href="#indice">Ver otoño 2025</a><a class="caps link-ant" href="#indice" data-ir-temp="SS2025">Temporadas anteriores</a></div>
   </div>
   <div class="home-paleta" id="home-paleta" role="img" aria-label="Los colores de la pasarela, cada uno del ancho de cuánto se vio"></div>
   <div class="home-pie caps gris"><span id="home-paleta-pie">La paleta de la pasarela: cada franja es un color, del ancho de cuánto se vio</span><a href="#indice">Bajá ↓</a></div>
@@ -369,6 +369,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
           <li>Son búsquedas de todo el mundo. Con búsquedas solo de Argentina la regla no se confirmó.</li>
           <li>Las tendencias las eligieron medios de moda en inglés (Who What Wear, CBC Life, Yahoo Lifestyle). No las elegimos nosotros, pero tampoco son todas las que hubo.</li>
           <li>El veredicto es la lectura del primer año. El segundo año de estas tendencias no se puede medir limpio con Google: lo probamos y el ruido de 2026 es más de tres veces el de un año normal.</li>
+          <li>Otoño 2025 pasó un chequeo más estricto, fijado de antemano, porque 7 de los 12 meses de su primer año caen en el período en que Google empezó a medir distinto. Pasó, pero en 8 de sus 13 veredictos la lectura con solo marzo a julio de 2025 da “sin señal clara” (ninguno se da vuelta); lo marcamos en cada una.</li>
           <li>Primavera 2025 pasó un chequeo fijado de antemano (el veredicto no depende del tamaño de la búsqueda ni del salto de 2026), pero su primer año toca meses en que Google empezó a medir distinto. En 3 de sus 8 “se queda” la lectura cambia sin agosto y septiembre de 2025; lo marcamos en cada una.</li>
           <li>Desde mediados de 2025 Google Trends mide distinto y las búsquedas no se pueden comparar con los años anteriores. Por eso 2026 va sin veredicto.</li>
           <li>Las muestras son chicas: de 15 a 68 tendencias por prueba.</li>
@@ -404,13 +405,13 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
 (function(){
   "use strict";
   var D = window.DATOS, T = D.tendencias;
-  var TEMP = {SS2024:'Primavera 2024', FW2024:'Otoño 2024', SS2025:'Primavera 2025', SS2026:'Primavera 2026', FW2026:'Otoño 2026'};
-  var ORDEN_T = {SS2025:0, FW2024:1, SS2024:2};
+  var TEMP = {SS2024:'Primavera 2024', FW2024:'Otoño 2024', SS2025:'Primavera 2025', FW2025:'Otoño 2025', SS2026:'Primavera 2026', FW2026:'Otoño 2026'};
+  var ORDEN_T = {FW2025:0, SS2025:1, FW2024:2, SS2024:3};
   var MES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
   var RUBROS = [['', 'Todo'], ['vestidos', 'Vestidos'], ['polleras', 'Polleras'], ['pantalones', 'Pantalones'], ['abrigos', 'Abrigos y tejidos'], ['accesorios', 'Accesorios y estampados']];
   // La página abre en la temporada más nueva con veredicto; las anteriores se eligen arriba del índice
-  var rubro = '', temporada = 'SS2025';
-  var TEMPORADAS = [['SS2025', 'Primavera 2025'], ['FW2024', 'Otoño 2024'], ['SS2024', 'Primavera 2024']];
+  var rubro = '', temporada = 'FW2025';
+  var TEMPORADAS = [['FW2025', 'Otoño 2025'], ['SS2025', 'Primavera 2025'], ['FW2024', 'Otoño 2024'], ['SS2024', 'Primavera 2024']];
   function $(id){ return document.getElementById(id); }
   function mes(m){ var p = m.split('-'); return MES[+p[1]-1] + ' de ' + p[0]; }
   function lista(xs){ return xs.join(', ').replace(/, ([^,]*)$/, ' y $1'); }
@@ -464,7 +465,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   // Home: la frase con los números de la temporada más nueva y la paleta de la pasarela
   function cuenta(s, v){ return Q.concat(R).filter(function(t){ return t.temporada === s && t.veredicto === v; }).length; }
   $('bajada').textContent = 'Repasamos las tendencias que nombraron los medios después de cada fashion week y miramos si la gente las siguió buscando. ' +
-    'En primavera 2025, ' + cuenta('SS2025', 'queda') + ' se quedan y ' + cuenta('SS2025', 'riesgo') + ' pueden pasar de moda.';
+    'En otoño 2025, ' + cuenta('FW2025', 'queda') + ' se quedan y ' + cuenta('FW2025', 'riesgo') + ' pueden pasar de moda.';
   $('home-paleta-pie').innerHTML = 'La paleta de la pasarela, ' + D.colores_meta.recientes.map(function(c){ return (c.slice(0, 2) === 'SS' ? 'primavera ' : 'otoño ') + c.slice(2); }).join(' a ').replace(/ a [^a]* a /, ' a ') +
     '<span class="solo-compu">: cada franja es un color, del ancho de cuánto se vio</span>';
   $('home-paleta').innerHTML = D.colores.slice().sort(function(a, b){ return b.reciente - a.reciente; }).map(function(c, i){
@@ -508,7 +509,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
     }).join('');
     $('temporadas').innerHTML = html || '<p class="vacio caps">No hay tendencias con estos filtros.</p>';
     $('t-titulo').innerHTML = TEMP[temporada].replace(' ', ' <i>') + '</i>';
-    $('n-indice').textContent = temporada === 'SS2025' ? 'La temporada más nueva' : 'Temporada anterior';
+    $('n-indice').textContent = temporada === TEMPORADAS[0][0] ? 'La temporada más nueva' : 'Temporada anterior';
     $('temporadas-nav').innerHTML = '<span class="gris">Estás viendo:</span>' + TEMPORADAS.map(function(r, i){
       return (i === 1 ? '<span class="gris">· Temporadas anteriores:</span>' : '') +
         '<button data-temp="' + r[0] + '" aria-pressed="' + (r[0] === temporada) + '">' + r[1] + (i === 0 ? '<sup>la más nueva</sup>' : '') + '</button>'; }).join('');

@@ -1,0 +1,50 @@
+BRIEF FW2025 - REGLAS FIJADAS ANTES DE BAJAR LOS DATOS (02/11/2026). No se cambian despues.
+
+POR QUE HACE FALTA UN CHEQUEO MAS ESTRICTO QUE EN SS2025
+FW2025 se desfilo en feb-mar 2025. Su primer anio (mar-2025 a feb-2026) se compara con el anio previo (mar-2024 a feb-2025). La
+comparacion cruza ene-2025 (B0 ya tiene ene-feb 2025) y 7 de los 12 meses de B1 (ago-2025 a feb-2026) caen en el periodo en que
+Google Trends empezo a medir distinto (suba general desde ago-2025; salto grande desde feb-2026). En SS2025 eran 2 de 12.
+Decision de Borja: si FW2025 no pasa el chequeo, no va a la pagina (ni siquiera como "visto en pasarela").
+
+MUESTRA
+- fuentes_listas_fw2025.csv: los mismos medios que en 2024 y SS2025 (Who What Wear, CBC Life, Yahoo Lifestyle), notas publicadas al
+  cerrar la temporada de desfiles (mar-2025).
+- terminos_declarados_fw2025.csv: 20 terminos, mismo criterio de mapeo que 2024 y SS2025 (titulo buscable o primer item concreto;
+  colores como "<color> dress"; se descartan lo no buscable y lo repetido). 9 temas descartados, cada uno con su motivo.
+- No se cambian terminos despues de ver los datos.
+
+DATOS A BAJAR (Google Trends, busqueda web, MUNDO, cada termino en su propia consulta salvo V)
+- A: ene-2011 a sep-2025, mensual. Termina en sep-2025 para que la escala 0-100 no la fije el salto de 2026.
+- B: 1-ene-2024 a 30-sep-2026 (Google la da semanal). Se pasa a meses (promedio de las semanas que empiezan en cada mes) y se lleva a
+  la escala de A con el cociente de sumas en los meses que comparten (ene-2024 a sep-2025).
+- V (volumen): cada termino junto con el ancla "midi skirt" en la misma consulta (ancla + hasta 4 terminos), 1-mar-2024 a
+  28-feb-2025 (el anio previo). Volumen = suma del termino / suma del ancla.
+
+MEDICION (identica a la hipotesis, 2024 y SS2025)
+- e = mar-2025. B0 = prom[mar-2024, feb-2025] (A). B1 = prom[mar-2025, feb-2026]: mar a sep 2025 de A y oct-2025 a feb-2026 de B
+  llevada a la escala de A.
+- g1 = log(B1/B0) - mediana de g1 de FW2025.
+- Usable: en la ventana como maximo 8 meses en cero y B0, B1 > 0.
+- Veredicto: g1 >= 0.10 "Tiende a quedarse"; g1 <= -0.10 "Riesgo de moda pasajera"; si no, "Sin senal clara".
+- Confianza: Alta si |g1| >= 0.30; Media si |g1| entre 0.10 y 0.30.
+- Aviso de pico (fijado en 2024): si en B0 o B1 un solo mes vale 5 veces o mas la mediana de ese anio, se marca
+  "lectura apoyada en un pico de un solo mes".
+
+CHEQUEO DE VALIDEZ (decide si FW2025 lleva veredicto; si falla UNO, no se usa)
+- V1 volumen: Spearman entre g1 y el volumen V. Si |rho| >= 0.5, el veredicto depende del tamanio del termino: no se usa.
+- V3 cambio de ene-2025: paso = log(prom ene-feb 2025 / prom oct-dic 2024) - log(prom ene-feb 2024 / prom oct-dic 2023), datos A.
+  Si |Spearman(paso, volumen V)| >= 0.5: no se usa.
+- V4 lectura corta (nuevo, por los 7 meses en el periodo malo): g1 corto = log(prom mar-jul 2025 / prom mar-jul 2024) menos su
+  mediana. No toca la suba de ago-2025 (si cruza ene-2025, como SS2025). Referencia limpia ya calculada antes de bajar datos
+  (referencia_lectura_corta_fw.py, temporadas FW 2016-2024): Spearman 12 meses vs mar-jul entre +0.05 y +0.96, mediana +0.75;
+  8 de 9 temporadas dan +0.50 o mas; como maximo 1 veredicto opuesto (se queda contra riesgo) por temporada.
+  FALLA si Spearman(g1, g1 corto) < 0.50, o si hay mas de 1 termino con veredictos opuestos entre las dos lecturas.
+- V2 (salto 2026) se informa pero NO decide: en FW2025 el primer anio ya incluye meses de 2026, asi que cualquier medida del salto
+  se superpone con B1 y la correlacion sale en parte por construccion.
+
+SI PASA: los veredictos de FW2025 van a app/datos/brief_fw2025.json (mismo formato que brief_ss2025.json) y la pagina los suma.
+SI NO PASA: se escribe app/datos/brief_fw2025.json con con_veredicto=false y el motivo, y la pagina NO muestra FW2025.
+
+LIMITES
+- La muestra es chica (20 terminos): un Spearman de 0.5 con n=20 tiene p cerca de 0.03.
+- El segundo anio (mar-2026 a feb-2027) cae entero en el periodo inflado y no se mide (ver analisis/brief_2025/LEEME.md).

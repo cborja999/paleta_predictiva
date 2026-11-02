@@ -1,0 +1,11 @@
+C1 FW2016: n=12  Spearman 12m vs mar-jul = +0.88  mismo veredicto 75%  opuestos 0
+C1 FW2017: n=15  Spearman 12m vs mar-jul = +0.80  mismo veredicto 53%  opuestos 0
+C1 FW2018: n=10  Spearman 12m vs mar-jul = +0.05  mismo veredicto 40%  opuestos 1
+M1 FW2020: n= 7  Spearman 12m vs mar-jul = +0.61  mismo veredicto 57%  opuestos 1
+M1 FW2021: n= 7  Spearman 12m vs mar-jul = +0.54  mismo veredicto 71%  opuestos 1
+M1 FW2022: n= 9  Spearman 12m vs mar-jul = +0.92  mismo veredicto 78%  opuestos 0
+M2 FW2020: n= 7  Spearman 12m vs mar-jul = +0.96  mismo veredicto 57%  opuestos 0
+M2 FW2021: n=10  Spearman 12m vs mar-jul = +0.52  mismo veredicto 40%  opuestos 0
+B24 FW2024: n=15  Spearman 12m vs mar-jul = +0.75  mismo veredicto 60%  opuestos 0
+MINIMO Spearman en temporadas FW limpias: +0.05 | mediana +0.75
+Mismo veredicto: minimo 40% | mediana 57%

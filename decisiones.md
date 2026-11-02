@@ -109,3 +109,12 @@ SS2025 pasó el chequeo fijado de antemano (V1 −0,01, V2 −0,08, V3 +0,26, l�
 ## 2026-11-01 Entrega 3: IA con Groq, app en Netlify
 
 La app principal es la versión editorial (`prototipo/index.html`); el Wrapped queda como alternativa de diseño. La IA (GPT-OSS 120B vía Groq, función de Netlify; Llama 3.3 70B se apagó en Groq el 16/08/2026) solo traduce los datos calculados a una recomendación por rubro; no calcula ni cambia veredictos, y un control revisa que no invente números. Las fotos de pasarela se reemplazan por la curva de búsquedas porque no se pueden publicar. No hubo Figma: el diseño se hizo en código (ver `entrega3/DISENO.md`).
+
+## 2026-11-02 Otoño 2025 (FW2025) con veredicto
+
+- Borja: sumar la colección de otoño-invierno 2025, pero solo si pasa un chequeo; si no pasa, no va a la página.
+- Como 7 de los 12 meses de su primer año (mar-2025 a feb-2026) caen en el período en que Google mide distinto, se sumó al chequeo de SS2025 uno nuevo (V4): la lectura de 12 meses tiene que coincidir con la de mar-jul 2025 al menos como en temporadas FW limpias (Spearman >= 0,50, como mucho 1 veredicto opuesto). La referencia limpia y las reglas se fijaron antes de bajar datos (`analisis/brief_fw2025/`, con huellas sha256).
+- Mismos medios (Who What Wear y CBC Life por copias de Wayback de marzo de 2025; Harper's Bazaar en Yahoo). 20 términos.
+- Resultado: pasa (V1 −0,21, V3 −0,16, V4 +0,70 sin opuestos). 7 tienden a quedarse, 6 en riesgo, 7 sin señal clara.
+- Cuidado: en 8 de los 13 veredictos la lectura con solo mar-jul da "sin señal clara" (ninguno se da vuelta), y los dos "se queda" más fuertes son términos muy chicos. La app lo marca en cada tendencia. Detalle en `analisis/brief_fw2025/LEEME.md`.
+- En la página, otoño 2025 pasa a ser la temporada más nueva (la que abre por defecto).

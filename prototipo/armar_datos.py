@@ -47,6 +47,13 @@ NOMBRES = {
     "dress over pants": ("Vestido sobre pantalón", "vestidos"),
     "tutu skirt": ("Pollera tutú", "polleras"),
     "breton sweater": ("Sweater marinero a rayas", "abrigos"),
+    # FW2025
+    "brooch": ("Broche", "accesorios"), "black lace": ("Encaje negro", "vestidos"),
+    "statement coat": ("Tapado protagonista", "abrigos"), "cardigan": ("Cárdigan", "abrigos"),
+    "thigh high boots": ("Botas bucaneras", "accesorios"), "asymmetric jacket": ("Saco asimétrico", "abrigos"),
+    "ruffle collar": ("Cuello con volados", "abrigos"), "floral print": ("Estampado floral", "todo"),
+    "pearl necklace": ("Collar de perlas", "accesorios"), "neon dress": ("Vestido flúor", "vestidos"),
+    "jogging pants": ("Pantalón jogging", "pantalones"),
     "sequin dress": ("Vestido de lentejuelas", "vestidos"),
     "80s blazer": ("Blazer ochentoso", "abrigos"),
 }
@@ -64,6 +71,9 @@ SIN_SENAL = {
     "utility jacket": ("Campera utilitaria", "abrigos"), "bow blouse": ("Blusa con moño", "abrigos"),
     "floral dress": ("Vestido floreado", "vestidos"), "lace dress": ("Vestido de encaje", "vestidos"),
     "ruffle skirt": ("Pollera con volados", "polleras"), "plaid jacket": ("Saco escocés", "abrigos"),
+    "fair isle sweater": ("Sweater fair isle", "abrigos"), "peplum": ("Peplum", "abrigos"), "scarf": ("Bufanda", "accesorios"),
+    "shearling jacket": ("Campera de corderito", "abrigos"), "red dress": ("Vestido rojo", "vestidos"),
+    "orange dress": ("Vestido naranja", "vestidos"),
 }
 VISTAS = {
     "leather mini skirt": "Minifalda de cuero", "satin scarf": "Pañuelo de satén", "floral print": "Estampado floral",
@@ -118,6 +128,13 @@ DESFILES = {
     "chunky-scarf-fw2026": (["Loewe", "Celine"], "nota"), "shearling-coat-fw2026": (["Dior", "Miu Miu"], "nota"),
     "lace-dress-fw2026": (["Gabriela Hearst", "Saint Laurent"], "otra"), "fringe-jacket-fw2026": (["Altuzarra", "Akris"], "otra"),
     "sheer-dress-fw2026": (["Khaite", "Prada"], "otra"), "pink-dress-fw2026": ([], "otra"),
+    "brooch-fw2025": (["Prada", "Miu Miu"], "nota"), "black-lace-fw2025": (["Alaïa", "Dior"], "nota"),
+    "statement-coat-fw2025": (["Roksanda", "Altuzarra"], "nota"), "cardigan-fw2025": (["Christopher John Rogers", "Tibi"], "nota"),
+    "thigh-high-boots-fw2025": (["Stella McCartney", "Balmain"], "nota"), "asymmetric-jacket-fw2025": (["Givenchy", "Sacai"], "nota"),
+    "ruffle-collar-fw2025": (["McQueen", "Dior"], "nota"), "floral-print-fw2025": (["Prada", "Erdem"], "nota"),
+    "pearl-necklace-fw2025": (["Chanel", "Vaquera"], "nota"), "pencil-skirt-fw2025": (["Ferragamo", "Miu Miu"], "nota"),
+    "neon-dress-fw2025": (["Marni", "Saint Laurent"], "nota"), "polka-dot-fw2025": (["Dries Van Noten", "Balenciaga"], "nota"),
+    "jogging-pants-fw2025": (["Miu Miu", "Tom Ford"], "nota"),
 }
 def desfiles(i):
     marcas, origen = DESFILES[i]
@@ -126,7 +143,10 @@ def desfiles(i):
 d = json.loads(ENTRADA.read_text(encoding="utf-8"))
 d25 = json.loads((RAIZ / "app" / "datos" / "brief_ss2025.json").read_text(encoding="utf-8"))
 assert d25["meta"]["meses"] == d["meta"]["meses"]
-items = d["items"] + (d25["items"] if d25["meta"]["con_veredicto"] else [])
+# FW2025 entra solo si pasó su chequeo (analisis/brief_fw2025/): si no, no va a la página
+dfw = json.loads((RAIZ / "app" / "datos" / "brief_fw2025.json").read_text(encoding="utf-8"))
+assert dfw["meta"]["meses"] == d["meta"]["meses"]
+items = d["items"] + (d25["items"] if d25["meta"]["con_veredicto"] else []) + (dfw["items"] if dfw["meta"]["con_veredicto"] else [])
 meses = d["meta"]["meses"]
 tendencias = []
 for it in items:
@@ -134,11 +154,13 @@ for it in items:
         continue
     nombre, rubro = NOMBRES[it["termino"]]
     j = meses.index(it["mes_desfile"])
-    sin = it.get("sin_ago_sep_2025")
+    sin, mj = it.get("sin_ago_sep_2025"), it.get("lectura_marjul")
     tendencias.append({
-        "id": it["termino"].replace(" ", "-") + ("-ss2025" if it["temporada"] == "SS2025" else ""),
+        "id": it["termino"].replace(" ", "-") + ("" if it["temporada"] in ("SS2024", "FW2024") else "-" + it["temporada"].lower()),
         "nota": (f"Sin agosto y septiembre de 2025, cuando Google empezó a medir distinto, la lectura da “{sin.lower()}”."
-                 if sin and sin != it["veredicto"] else ""),
+                 if sin and sin != it["veredicto"] else
+                 f"Con solo marzo a julio de 2025, antes de que Google empezara a medir distinto, la lectura da “{mj.lower()}”."
+                 if mj and mj != it["veredicto"] else ""),
         "nombre": nombre,
         "termino": it["termino"],
         "rubro": rubro,
@@ -217,6 +239,7 @@ print(f"{len(tendencias)} tendencias con veredicto y {len(vistas)} vistas en 202
 
 # Lista de fotos que hacen falta (prototipo/FOTOS.md). Las fotos van en prototipo/fotos/, que no se sube a GitHub.
 TEMP = {"SS2024": ("Primavera 2024", "Spring 2024"), "FW2024": ("Otoño 2024", "Fall 2024"), "SS2025": ("Primavera 2025", "Spring 2025"),
+        "FW2025": ("Otoño 2025", "Fall 2025"),
         "SS2026": ("Primavera 2026", "Spring 2026"), "FW2026": ("Otoño 2026", "Fall 2026")}
 lineas = ["# Fotos para el prototipo", "",
           "Dos fotos por tendencia, de **dos desfiles distintos** de esa temporada, para respaldar que la tendencia se vio en más "
@@ -228,7 +251,7 @@ lineas = ["# Fotos para el prototipo", "",
           "abrir o no nombra marcas, y la marca sale de otras notas de la misma temporada.", "",
           "Este archivo lo arma `prototipo/armar_datos.py`: no editarlo a mano.", ""]
 for titulo, lista in ((f"Con veredicto ({len(tendencias)} tendencias)", tendencias), (f"Visto en 2026 ({len(vistas)} tendencias)", vistas)):
-    for temp in ("SS2025", "FW2024", "SS2024", "SS2026", "FW2026"):
+    for temp in ("FW2025", "SS2025", "FW2024", "SS2024", "SS2026", "FW2026"):
         grupo = [t for t in lista if t["temporada"] == temp]
         if not grupo:
             continue

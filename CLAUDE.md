@@ -28,6 +28,7 @@ Proyecto de la materia K576 (UdeSA) de Beltrán Martínez, Borja Centeno y Luigi
 - Los datos listos para usar:
   - `app/datos/brief_temporada.json` (**el brief principal**): 31 tendencias puntuales de SS2024 y FW2024 con veredicto, confianza, aviso y curva (`items`), más 36 de SS2026 y FW2026 sin veredicto, como "lo que se vio" (`vistas_2026`). Detalle en `analisis/brief_2026/LEEME.md`.
   - `app/datos/brief_ss2025.json`: 26 tendencias de SS2025 con veredicto (pasaron el chequeo de `analisis/brief_2025/`), con la nota de las que cambian sin ago-sep 2025.
+  - `app/datos/brief_fw2025.json`: 20 tendencias de FW2025 con veredicto (pasaron el chequeo más estricto de `analisis/brief_fw2025/`), con la nota de las que cambian con solo mar-jul 2025. Si no pasara, no va a la página.
   - `prototipo/armar_datos.py` junta todo en `prototipo/datos.js` (página) y `prototipo/datos.json` (lo lee la IA).
   - `app/datos/microtendencias.json`: las 178 tendencias de la prueba con su curva, grupo y si se quedó (para la pantalla de evidencia).
   - `app/datos/brief.json`: colores, prendas y largos amplios. Solo 3 de 21 tienen veredicto; sirve para la paleta de colores y los hex, no para veredictos.
