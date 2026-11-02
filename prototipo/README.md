@@ -25,7 +25,7 @@ Dueños o diseñadores de marcas de ropa argentinas chicas y medianas. No saben 
 - La app es `index.html` (versión editorial). `wrapped.html` queda como alternativa de diseño.
 - Los datos los arma `armar_datos.py` en `datos.js` (página) y `datos.json` (lo lee la IA): SS2024, FW2024 y SS2025 con veredicto, y 2026 sin veredicto.
 - La IA está en `../netlify/functions/` y se documenta en `../entrega3/IA.md`.
-- Para probar la IA en local hace falta Netlify CLI (`netlify dev`) y la variable `GROQ_API_KEY`. Si abrís el HTML como archivo, la página anda pero la IA avisa que funciona en la versión online.
+- Para probar la IA en local: Netlify CLI (`npm install -g netlify-cli`) y la clave en un archivo `.env` en la raíz (`GROQ_API_KEY=...`, está en `.gitignore`). Desde la raíz: `netlify dev --offline --port 8888` y abrir http://localhost:8888. Si abrís el HTML como archivo, la página anda pero la IA avisa que funciona en la versión online.
 
 ## Datos
 

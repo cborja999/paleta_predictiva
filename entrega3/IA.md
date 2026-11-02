@@ -33,7 +33,7 @@ Ejemplo real (pantalón cigarette, rubro pantalones):
     "la_nombro": "Who What Wear, como \"New silhouettes\"",
     "veredicto": "en riesgo de ser moda pasajera",
     "confianza": "Alta",
-    "cambio_de_busquedas": "-46% el año después del desfile contra el año anterior, descontando lo que se movió el resto de la temporada",
+    "cambio_de_busquedas": "-36% el año después del desfile contra el año anterior; las demás tendencias de su temporada, +19%",
     "busquedas_promedio_0_a_100": { "anio_antes": 55, "anio_despues": 35 },
     "aviso": "ninguno"
   },

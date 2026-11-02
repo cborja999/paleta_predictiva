@@ -8,7 +8,8 @@ const RUBROS = { "": "todo tipo de ropa", vestidos: "vestidos", polleras: "polle
   abrigos: "abrigos y tejidos", accesorios: "accesorios y estampados" };
 const TEMP = { SS2024: "primavera-verano 2024 (desfiles de octubre de 2023, hemisferio norte)",
   FW2024: "otoño-invierno 2024 (desfiles de marzo de 2024, hemisferio norte)",
-  SS2025: "primavera-verano 2025 (desfiles de septiembre y octubre de 2024, hemisferio norte)" };
+  SS2025: "primavera-verano 2025 (desfiles de septiembre y octubre de 2024, hemisferio norte)",
+  FW2025: "otoño-invierno 2025 (desfiles de febrero y marzo de 2025, hemisferio norte)" };
 const LIMITES = [
   "Google mide búsquedas en todo el mundo, es decir interés, no ventas.",
   "Con búsquedas solo de Argentina la regla no se confirmó.",
@@ -33,7 +34,8 @@ export function armarContexto(t, rubro, marca) {
       la_nombro: `${t.medio}, como "${t.tendencia_fuente}"`,
       veredicto: t.veredicto === "queda" ? "se queda (tiende a quedarse)" : "en riesgo de ser moda pasajera",
       confianza: t.confianza,
-      cambio_de_busquedas: `${t.cambio_pct > 0 ? "+" : ""}${t.cambio_pct}% el año después del desfile contra el año anterior, descontando lo que se movió el resto de la temporada`,
+      // Los mismos números que muestra la página: cuánto cambió esta tendencia y cuánto su temporada
+      cambio_de_busquedas: `${t.bruto_pct > 0 ? "+" : ""}${t.bruto_pct}% el año después del desfile contra el año anterior; las demás tendencias de su temporada, ${t.temporada_pct > 0 ? "+" : ""}${t.temporada_pct}%`,
       busquedas_promedio_0_a_100: { anio_antes: prom(s.slice(0, 12)), anio_despues: prom(s.slice(12)) },
       aviso: [t.aviso, t.nota].filter(Boolean).join(" ") || "ninguno",
     },

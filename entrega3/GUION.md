@@ -1,7 +1,7 @@
 # Entrega 3: guion de 15 minutos y preguntas probables
 
 Antes de la clase:
-- presentar desde la compu de Borja, con las fotos de 2025 en `prototipo/fotos/` y la IA andando (`netlify dev`); tener abierto el link online como respaldo (en `entrega3/README.md`);
+- presentar desde la compu de Borja, con las fotos de 2025 en `prototipo/fotos/` y la IA andando: en la Terminal, desde la carpeta del proyecto, `netlify dev --offline --port 8888`, y abrir http://localhost:8888 (la clave de Groq está en `.env`, que no se sube); tener abierto el link online como respaldo (en `entrega3/README.md`);
 - pedir una recomendación de prueba, para que la IA no arranque en frío;
 - tener a mano la captura `entrega3/capturas/5_nota.png` por si falla internet.
 
