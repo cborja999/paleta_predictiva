@@ -67,18 +67,33 @@ img{display:block}
 .pieza:hover .foto img{transform:scale(1.035)}
 .credito{position:absolute;left:12px;bottom:10px;color:#fff;mix-blend-mode:difference}
 
-/* Lamina: la curva de busquedas en lugar de la foto (las fotos de desfile no se pueden publicar) */
-.lamina{display:flex;flex-direction:column;justify-content:space-between;gap:10px;padding:18px 18px 20px;color:var(--negro)}
+/* Lamina: la curva de busquedas en lugar de la foto (las fotos de desfile no se pueden publicar).
+   Muestra lo que compara la regla: promedio del año antes, promedio del año despues y donde estaria si se hubiera
+   movido como la temporada. El numero es la distancia entre las dos ultimas. */
+.lamina{display:flex;flex-direction:column;justify-content:space-between;gap:12px;padding:18px 18px 20px;color:var(--negro)}
 .lamina.riesgo{color:var(--rojo)}
-.lamina .l-num{font-family:var(--didone);font-weight:400;font-variation-settings:"opsz" 96;font-size:clamp(44px,4.6vw,76px);line-height:.95;letter-spacing:-.02em}
-.lamina .l-sub{color:var(--gris);max-width:24ch;line-height:1.5}
+.lamina .l-num{display:block;font-family:var(--didone);font-weight:400;font-variation-settings:"opsz" 96;font-size:clamp(44px,4.6vw,76px);line-height:.95;letter-spacing:-.02em}
+.lamina .l-sub{display:block;color:var(--gris);margin-top:8px}
 .lamina svg{width:100%;flex:1;min-height:60px;max-height:62%;overflow:visible}
-.lamina svg path{fill:none;stroke:currentColor;stroke-width:1.6;vector-effect:non-scaling-stroke;stroke-linejoin:round}
-.lamina svg line{stroke:var(--negro);stroke-width:1;vector-effect:non-scaling-stroke;stroke-dasharray:3 3}
+.g-curva{fill:none;stroke:currentColor;stroke-width:1.2;opacity:.32;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.g-desfile{stroke:var(--negro);stroke-width:1;opacity:.45;vector-effect:non-scaling-stroke;stroke-dasharray:2 3}
+.g-antes{stroke:#7d7d7d;stroke-width:2;vector-effect:non-scaling-stroke}
+.g-esperado{stroke:#7d7d7d;stroke-width:2;vector-effect:non-scaling-stroke;stroke-dasharray:5 4}
+.g-despues{stroke:currentColor;stroke-width:3;vector-effect:non-scaling-stroke}
 .lamina.mini{padding:6px;justify-content:center}
 .lamina.mini svg{max-height:none;min-height:0}
 .principal .lamina .l-num,.portada .lamina .l-num,.nota .lamina .l-num{font-size:clamp(64px,8vw,132px)}
-.pieza:hover .lamina svg path{stroke-width:2.4}
+.pieza:hover .g-curva{opacity:.6}
+
+/* Como leer la lamina (una sola vez) */
+.como-leer{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;padding:14px 0;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);font-size:13px;color:var(--gris)}
+.como-leer i{display:inline-block;width:22px;height:0;border-top:2px solid #7d7d7d;vertical-align:middle;margin-right:8px}
+.como-leer i.esp{border-top-style:dashed}
+.como-leer i.des{border-top-width:3px;border-top-color:var(--negro)}
+.como-leer i.cur{border-top:1.2px solid #b7b7b7}
+.nota .como-leer{border:0;padding:0;margin-top:auto;color:var(--gris)}
+.lamina.riesgo .como-leer i.des{border-top-color:var(--rojo)}
+.lamina.riesgo .como-leer i.cur{border-top-color:#e6b4b8}
 
 /* Dato calculado vs inferencia de la IA */
 .tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:4px 8px;border:1px solid var(--negro);line-height:1.2;white-space:nowrap}
@@ -119,6 +134,25 @@ img{display:block}
 .spark{width:84px;height:22px;overflow:visible}
 .spark path{fill:none;stroke:currentColor;stroke-width:1.3;vector-effect:non-scaling-stroke}
 .vacio{grid-column:1/-1;padding:40px 0;color:var(--gris)}
+
+/* Lista compacta (el resto de cada seccion) */
+.lista{margin-top:56px;border-top:1px solid var(--negro)}
+.lista:empty{display:none}
+.lista .l-tit{padding:14px 0 6px}
+.fila-t{display:grid;grid-template-columns:88px 1fr 190px 90px;gap:20px;align-items:center;width:100%;text-align:left;padding:12px 0;border-bottom:1px solid var(--linea)}
+.fila-t .foto{aspect-ratio:auto;height:52px}
+.fila-t b{display:block;font-family:var(--didone);font-weight:400;font-size:24px;line-height:1.1;margin-top:4px;font-variation-settings:"opsz" 40}
+.fila-t:hover b{font-style:italic}
+.fila-t .f-temp{line-height:1.7}
+.f-num{font-family:var(--didone);font-size:32px;line-height:1;text-align:right;font-variation-settings:"opsz" 72}
+.f-num.riesgo{color:var(--rojo)}
+@media (max-width:700px){
+  .fila-t{grid-template-columns:64px 1fr auto;gap:12px}
+  .fila-t .foto{height:44px}
+  .fila-t .f-temp{grid-column:2;grid-row:2;margin-top:-6px}
+  .fila-t .f-num{grid-column:3;grid-row:1/3;font-size:26px}
+  .fila-t b{font-size:20px}
+}
 @media (max-width:1000px){.grilla{grid-template-columns:repeat(2,1fr);gap:36px 16px}.pieza.principal{grid-row:auto}.pieza.principal .foto{height:auto;aspect-ratio:4/5;min-height:0}}
 @media (max-width:520px){.pie .nombre{font-size:21px}.spark{width:56px}.pie .datos{flex-wrap:wrap}}
 
@@ -165,7 +199,8 @@ img{display:block}
 .nota .barra-nota{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:16px 32px;background:var(--blanco);border-bottom:1px solid var(--negro)}
 .nota .barra-nota .marca{font-family:var(--didone);font-size:20px;letter-spacing:.06em;text-transform:uppercase}
 .nota .cuerpo{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 58px)}
-.nota .cuerpo>.foto{position:sticky;top:58px;height:calc(100vh - 58px)}
+.nota .cuerpo>.foto{position:sticky;top:58px;height:calc(100vh - 58px);padding:32px 36px}
+.nota .lamina svg{max-height:48%}
 .nota .texto{padding:56px 56px 80px;max-width:640px}
 .nota h3{font-family:var(--didone);font-weight:400;font-variation-settings:"opsz" 96;font-size:clamp(48px,5.6vw,88px);line-height:.95;margin:20px 0 22px}
 .nota .lead{font-family:var(--didone);font-size:22px;line-height:1.4;font-variation-settings:"opsz" 24}
@@ -224,7 +259,8 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 @media (max-width:900px){.tres{grid-template-columns:1fr;gap:36px}}
 @media (max-width:860px){
   .nota .cuerpo{grid-template-columns:1fr}
-  .nota .cuerpo>.foto{position:relative;top:0;height:72vh}
+  .nota .cuerpo>.foto{position:relative;top:0;height:auto;min-height:62vh;padding:20px 16px}
+  .nota .lamina svg{min-height:180px}
   .nota .texto{padding:32px 16px 64px}
   .nota .barra-nota{padding:14px 16px}
   .ficha div{grid-template-columns:110px 1fr}
@@ -270,7 +306,9 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
       <div><p class="caps" id="n-queda"></p><h2>Lo que <i>se queda</i></h2></div>
       <p class="intro">Ganaron búsquedas el año después del desfile. De las tendencias que suben así, 9 de cada 10 siguen ahí al año siguiente.</p>
     </div>
+    <div class="como-leer" id="como-leer"></div>
     <div class="grilla" id="grilla-queda"></div>
+    <div class="lista" id="lista-queda"></div>
   </section>
 
   <section class="cita" aria-label="La hipótesis">
@@ -289,6 +327,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
       <p class="intro">Perdieron búsquedas el año después del desfile. No quiere decir que no las hagas: quiere decir que no apuestes fuerte.</p>
     </div>
     <div class="grilla" id="grilla-riesgo"></div>
+    <div class="lista" id="lista-riesgo"></div>
   </section>
 
   <section class="seccion" id="visto-2026">
@@ -373,22 +412,33 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   function verd(t){ return '<span class="caps veredicto ' + t.veredicto + '">' + (t.veredicto === 'queda' ? 'Se queda' : 'En riesgo') + '</span>'; }
   function pct(n){ return (n > 0 ? '+' : n < 0 ? '−' : '') + Math.abs(n) + '%'; }
   function esc(x){ return String(x).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
-  // Lamina: la curva de busquedas y el cambio calculado, en lugar de una foto de pasarela
-  function foto(t, clase){
-    var W = 240, H = 100, x = (12 * W / 23).toFixed(1), mini = clase === 'mini';
-    var curva = '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" aria-hidden="true">' +
-      '<line x1="' + x + '" x2="' + x + '" y1="0" y2="' + H + '"/><path d="' + trazo(t.serie, W, H) + '"/></svg>';
-    if (mini) return '<div class="foto lamina mini ' + t.veredicto + '">' + curva + '</div>';
-    return '<div class="foto lamina ' + (clase || '') + ' ' + t.veredicto + '" role="img" aria-label="Búsquedas de ' + esc(t.nombre) + ': ' + pct(t.cambio_pct) + ' el año después del desfile">' +
-      '<span class="caps gris">Búsquedas en Google</span>' +
-      '<div><b class="l-num">' + pct(t.cambio_pct) + '</b><p class="caps l-sub">el año después del desfile, descontada la temporada</p></div>' + curva + '</div>';
+  // Lamina: en lugar de una foto de pasarela, la comparacion que hace la regla dibujada sobre la curva
+  function grafico(t, W, H){
+    var v = t.serie.filter(function(x){ return x != null; }).concat([t.b0, t.b1, t.esperado]);
+    var mx = Math.max.apply(null, v), mn = Math.min.apply(null, v), xd = (12 * W / 23).toFixed(1);
+    function y(n){ return (H - (n - mn) / ((mx - mn) || 1) * H).toFixed(1); }
+    return '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" aria-hidden="true">' +
+      '<line class="g-desfile" x1="' + xd + '" x2="' + xd + '" y1="-6" y2="' + (H + 6) + '"/>' +
+      '<path class="g-curva" d="' + trazo(t.serie, W, H, mn, mx) + '"/>' +
+      '<line class="g-antes" x1="0" x2="' + xd + '" y1="' + y(t.b0) + '" y2="' + y(t.b0) + '"/>' +
+      '<line class="g-esperado" x1="' + xd + '" x2="' + W + '" y1="' + y(t.esperado) + '" y2="' + y(t.esperado) + '"/>' +
+      '<line class="g-despues" x1="' + xd + '" x2="' + W + '" y1="' + y(t.b1) + '" y2="' + y(t.b1) + '"/></svg>';
   }
-  function trazo(serie, W, H){
-    var v = serie.filter(function(x){ return x != null; }), mx = Math.max.apply(null, v), mn = Math.min.apply(null, v), d = '';
+  function foto(t, clase){
+    if (clase === 'mini') return '<div class="foto lamina mini ' + t.veredicto + '">' + grafico(t, 240, 100) + '</div>';
+    return '<div class="foto lamina ' + (clase || '') + ' ' + t.veredicto + '" role="img" aria-label="' + esc(t.nombre) + ': sus búsquedas quedaron ' +
+      pct(t.cambio_pct) + ' frente a lo que se movió la temporada">' +
+      '<div><b class="l-num">' + pct(t.cambio_pct) + '</b><span class="caps l-sub">frente a la temporada</span></div>' + grafico(t, 240, 100) + '</div>';
+  }
+  function trazo(serie, W, H, mn, mx){
+    var v = serie.filter(function(x){ return x != null; }), d = '';
+    if (mn == null){ mx = Math.max.apply(null, v); mn = Math.min.apply(null, v); }
     serie.forEach(function(y, i){ if (y == null) return;
       d += (d ? 'L' : 'M') + (i * W / (serie.length - 1)).toFixed(1) + ' ' + (H - (y - mn) / ((mx - mn) || 1) * H).toFixed(1); });
     return d;
   }
+  var LEYENDA = '<span><i class="cur"></i>Búsquedas mes a mes</span><span><i></i>Promedio del año antes</span>' +
+    '<span><i class="des"></i>Promedio del año después</span><span><i class="esp"></i>Dónde estaría si se movía como la temporada</span>';
   function cuidado(t){ return t.aviso || t.nota ? 1 : 0; }
   function orden(a, b){ return cuidado(a) - cuidado(b) || ORDEN_T[a.temporada] - ORDEN_T[b.temporada] || (a.confianza === 'Alta' ? 0 : 1) - (b.confianza === 'Alta' ? 0 : 1) || Math.abs(b.g1) - Math.abs(a.g1); }
   var Q = T.filter(function(t){ return t.veredicto === 'queda'; }).sort(orden);
@@ -406,27 +456,39 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
     return '<li><button data-id="' + t.id + '">' + foto(t, 'mini') + '<span>' + verd(t) + '<b>' + t.nombre + '</b></span><span class="caps gris">' + TEMP[t.temporada].split(' ')[0] + '</span></button></li>';
   }).join('');
 
-  // Grillas
+  // Grillas: las cinco primeras grandes, el resto en lista
+  var GRANDES = 5;
   function pieza(t, principal){
     return '<button class="pieza' + (principal ? ' principal' : '') + '" data-id="' + t.id + '">' + foto(t) +
       '<div class="pie">' + verd(t) + '<p class="nombre">' + t.nombre + '</p>' +
-      '<div class="datos"><span class="caps gris">' + TEMP[t.temporada] + ' · Confianza ' + t.confianza.toLowerCase() + '</span>' +
-      '<svg class="spark" viewBox="0 0 84 22" preserveAspectRatio="none" aria-hidden="true" style="color:' + (t.veredicto === 'queda' ? 'var(--negro)' : 'var(--rojo)') + '"><path d="' + trazo(t.serie, 84, 22) + '"/></svg></div></div></button>';
+      '<div class="datos"><span class="caps gris">' + TEMP[t.temporada] + ' · Confianza ' + t.confianza.toLowerCase() + '</span></div></div></button>';
+  }
+  function fila(t){
+    return '<button class="fila-t" data-id="' + t.id + '">' + foto(t, 'mini') +
+      '<span class="f-nom">' + verd(t) + '<b>' + t.nombre + '</b></span>' +
+      '<span class="caps gris f-temp">' + TEMP[t.temporada] + '<br>Confianza ' + t.confianza.toLowerCase() + '</span>' +
+      '<span class="f-num ' + t.veredicto + '">' + pct(t.cambio_pct) + '</span></button>';
   }
   function pasa(t){ return !rubro || t.rubro === rubro || (rubro === 'accesorios' && t.rubro === 'todo'); }
   function grilla(id, lista){
     var l = lista.filter(pasa);
-    $(id).innerHTML = l.length ? l.map(function(t, i){ return pieza(t, i === 0 && l.length > 2); }).join('')
+    // La tapa de la portada no abre la grilla: va segunda
+    if (l[0] === tapa && l.length > 1) l = [l[1], l[0]].concat(l.slice(2));
+    $('grilla-' + id).innerHTML = l.length ? l.slice(0, GRANDES).map(function(t, i){ return pieza(t, i === 0 && l.length > 2); }).join('')
       : '<p class="vacio caps">No hay tendencias de este rubro en esta sección.</p>';
+    var resto = l.slice(GRANDES);
+    $('lista-' + id).innerHTML = resto.length ? '<p class="caps gris l-tit">Y ' + resto.length + ' más</p>' + resto.map(fila).join('') : '';
   }
   function pintar(){
-    grilla('grilla-queda', Q); grilla('grilla-riesgo', R);
+    grilla('queda', Q); grilla('riesgo', R);
     $('n-queda').textContent = Q.filter(pasa).length + ' tendencias';
     $('n-riesgo').textContent = R.filter(pasa).length + ' tendencias';
     $('filtro').innerHTML = '<span class="gris">Tu rubro:</span>' + RUBROS.map(function(r){
       return '<button data-rubro="' + r[0] + '" aria-pressed="' + (r[0] === rubro) + '">' + r[1] + '</button>'; }).join('');
   }
   pintar();
+  $('como-leer').innerHTML = '<span class="caps" style="color:var(--negro)">Cómo leer cada lámina</span>' + LEYENDA +
+    '<span>El número grande es la distancia entre las dos líneas de la derecha.</span>';
 
   // Visto en 2026
   $('intro-2026').textContent = D.vistas_2026.length + ' tendencias de las fashion weeks de 2026. Te contamos qué se vio, sin veredicto: desde mediados de 2025 Google Trends mide distinto y las búsquedas no se pueden comparar con los años anteriores.';
@@ -450,25 +512,27 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   // Nota de detalle
   var nota = $('nota');
   function abrir(t){
-    var W = 600, H = 150, x = (12 * W / 23).toFixed(1);
-    var col = t.veredicto === 'queda' ? 'var(--negro)' : 'var(--rojo)';
+    // Primera frase con las cuentas de la regla: cuánto cambió, cuánto se movió la temporada y quién ganó
+    var sus = 'Después del desfile se buscó ' + Math.abs(t.bruto_pct) + '% ' + (t.bruto_pct >= 0 ? 'más' : 'menos') + ' que el año anterior';
+    var temp = 'el resto de la temporada ' + (t.temporada_pct >= 0 ? 'subió ' : 'bajó ') + Math.abs(t.temporada_pct) + '%';
     var lead = t.veredicto === 'queda'
-      ? 'El año después del desfile se buscó más que el anterior, descontando lo que se movió el resto de la temporada. De las tendencias que ganan búsquedas así, nueve de cada diez siguen vigentes al segundo año.'
-      : 'El año después del desfile se buscó menos que el anterior, descontando lo que se movió el resto de la temporada. De las tendencias de 2021 a 2024 que perdieron búsquedas así, nueve de dieciséis fueron moda pasajera.';
-    $('nota-cuerpo').innerHTML = '<div class="cuerpo">' + foto(t) + '<div class="texto">' +
+      ? sus + ', más de lo que se movió el resto de la temporada (' + pct(t.temporada_pct) + '). De las tendencias que ganan búsquedas así, nueve de cada diez siguen vigentes al segundo año.'
+      : sus + (t.bruto_pct > 0 ? ', pero ' : ', mientras ') + temp + ': quedó atrás. De las tendencias de 2021 a 2024 que perdieron búsquedas así, nueve de dieciséis fueron moda pasajera.';
+    var lamina = '<div class="foto lamina ' + t.veredicto + '" role="img" aria-label="' + esc(t.nombre) + ': sus búsquedas quedaron ' + pct(t.cambio_pct) + ' frente a lo que se movió la temporada">' +
+      '<div class="bloque-cab"><span class="caps gris">Búsquedas en Google · todo el mundo</span><span class="tag">Calculado</span></div>' +
+      '<div><b class="l-num">' + pct(t.cambio_pct) + '</b><span class="caps l-sub">frente a la temporada</span></div>' +
+      grafico(t, 240, 100) + '<div class="ejes caps gris"><span>Año antes</span><span>Desfile</span><span>Año después</span></div>' +
+      '<div class="como-leer">' + LEYENDA + '</div></div>';
+    $('nota-cuerpo').innerHTML = '<div class="cuerpo">' + lamina + '<div class="texto">' +
       '<p class="caps gris">' + TEMP[t.temporada] + ' · Desfiles de ' + mes(t.mes_desfile) + '</p>' +
       '<h3>' + t.nombre + '</h3>' + verd(t) +
       '<p class="lead" style="margin-top:22px">' + lead + '</p>' +
-      '<div class="grafico"><div class="bloque-cab"><p class="caps">Búsquedas en Google · todo el mundo</p><span class="tag">Calculado</span></div>' +
-        '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" role="img" aria-label="Búsquedas de ' + t.nombre + ' el año antes y el año después del desfile">' +
-        '<line x1="' + x + '" x2="' + x + '" y1="-8" y2="' + (H + 8) + '" stroke="var(--negro)" stroke-width="1" vector-effect="non-scaling-stroke"/>' +
-        '<line x1="0" x2="' + W + '" y1="' + H + '" y2="' + H + '" stroke="var(--linea)" vector-effect="non-scaling-stroke"/>' +
-        '<path d="' + trazo(t.serie, W, H) + '" fill="none" stroke="' + col + '" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg>' +
-        '<div class="ejes caps gris"><span>Año antes</span><span>Desfile</span><span>Año después</span></div></div>' +
       (t.aviso ? '<p class="aviso">Ojo: la lectura se apoya en un pico de un solo mes. El veredicto es el mismo, pero conviene tomarlo con más cuidado.</p>' : '') +
       (t.nota ? '<p class="aviso">Ojo: ' + esc(t.nota.charAt(0).toLowerCase() + t.nota.slice(1)) + ' El veredicto sale de las reglas fijadas antes de mirar los datos, pero conviene tomarlo con más cuidado.</p>' : '') +
       '<dl class="ficha">' +
-        '<div><dt class="caps gris">Cambio</dt><dd>' + pct(t.cambio_pct) + ' de búsquedas el año después del desfile contra el año anterior, descontando lo que se movió el resto de la temporada</dd></div>' +
+        '<div><dt class="caps gris">Sus búsquedas</dt><dd>' + pct(t.bruto_pct) + ' el año después del desfile contra el año anterior</dd></div>' +
+        '<div><dt class="caps gris">La temporada</dt><dd>' + pct(t.temporada_pct) + ': lo típico entre todas las tendencias de ' + TEMP[t.temporada].toLowerCase() + '</dd></div>' +
+        '<div><dt class="caps gris">Frente a la temporada</dt><dd><b style="font-weight:500">' + pct(t.cambio_pct) + '</b> · es lo que decide el veredicto (los números están redondeados)</dd></div>' +
         '<div><dt class="caps gris">Confianza</dt><dd>' + t.confianza + ' · ' + (t.confianza === 'Alta' ? 'se movió 30% o más' : 'se movió entre 10% y 30%') + '</dd></div>' +
         '<div><dt class="caps gris">Búsqueda</dt><dd>“' + t.termino + '”</dd></div>' +
         '<div><dt class="caps gris">La nombró</dt><dd><a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a>, como “' + t.tendencia_fuente + '”</dd></div>' +

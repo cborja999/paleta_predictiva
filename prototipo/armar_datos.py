@@ -97,6 +97,22 @@ for it in items:
         "desde": meses[j - 12],
         "serie": it["serie"][j - 12:j + 12],
     })
+# Lo que compara la regla, para dibujarlo: promedio del año antes (b0) y del año después (b1) en la escala de la
+# curva, y cuánto se movió la temporada. g1 = log(b1/b0) - mediana de la temporada, así que la mediana sale de cada
+# curva como log(b1/b0) - g1 (da lo mismo en toda la temporada, salvo redondeo de g1).
+def promedio(xs):
+    xs = [x for x in xs if x is not None]
+    return sum(xs) / len(xs)
+med_temp = {}
+for t in tendencias:
+    t["b0"], t["b1"] = round(promedio(t["serie"][:12]), 2), round(promedio(t["serie"][12:]), 2)
+    med_temp.setdefault(t["temporada"], []).append(math.log(t["b1"] / t["b0"]) - t["g1"])
+for t in tendencias:
+    med = sum(med_temp[t["temporada"]]) / len(med_temp[t["temporada"]])
+    t["bruto_pct"] = round((t["b1"] / t["b0"] - 1) * 100)        # cuánto cambiaron sus búsquedas, sin descontar nada
+    t["temporada_pct"] = round((math.exp(med) - 1) * 100)         # cuánto se movió la temporada (mediana)
+    t["esperado"] = round(t["b0"] * math.exp(med), 2)             # dónde estaría si se hubiera movido como la temporada
+
 vistas = [{"nombre": VISTAS[v["termino"]], "temporada": v["temporada"]} for v in d["vistas_2026"]]
 
 # Ciclo por ciclo: pasajeras entre las que ganaron y entre las que perdieron búsquedas (hipotesis.md)
