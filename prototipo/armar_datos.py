@@ -50,6 +50,21 @@ NOMBRES = {
     "sequin dress": ("Vestido de lentejuelas", "vestidos"),
     "80s blazer": ("Blazer ochentoso", "abrigos"),
 }
+# Las que no se movieron lo suficiente ("Sin señal clara"): van al índice sin veredicto
+SIN_SENAL = {
+    "burgundy dress": ("Vestido bordó", "vestidos"), "oversized bag": ("Cartera grande", "accesorios"),
+    "satin coat": ("Tapado de satén", "abrigos"), "statement belt": ("Cinturón protagonista", "accesorios"),
+    "rose print": ("Estampado de rosas", "todo"), "sheer dress": ("Vestido transparente", "vestidos"),
+    "shorts suit": ("Traje con short", "pantalones"), "dress over pants": ("Vestido sobre pantalón", "vestidos"),
+    "funnel neck coat": ("Tapado de cuello alto", "abrigos"), "scarf coat": ("Tapado bufanda", "abrigos"),
+    "peacoat": ("Saco marinero", "abrigos"), "balloon pants": ("Pantalón globo", "pantalones"),
+    "trench coat": ("Trench", "abrigos"), "light pink dress": ("Vestido rosa claro", "vestidos"),
+    "brocade jacket": ("Saco de brocado", "abrigos"), "peep toe heels": ("Zapatos peep toe", "accesorios"),
+    "fringe jacket": ("Campera con flecos", "abrigos"), "mini dress": ("Minivestido", "vestidos"),
+    "utility jacket": ("Campera utilitaria", "abrigos"), "bow blouse": ("Blusa con moño", "abrigos"),
+    "floral dress": ("Vestido floreado", "vestidos"), "lace dress": ("Vestido de encaje", "vestidos"),
+    "ruffle skirt": ("Pollera con volados", "polleras"), "plaid jacket": ("Saco escocés", "abrigos"),
+}
 VISTAS = {
     "leather mini skirt": "Minifalda de cuero", "satin scarf": "Pañuelo de satén", "floral print": "Estampado floral",
     "poplin shirt": "Camisa de popelín", "trench coat": "Trench", "80s fashion": "Estilo ochentas",
@@ -113,7 +128,30 @@ for t in tendencias:
     t["temporada_pct"] = round((math.exp(med) - 1) * 100)         # cuánto se movió la temporada (mediana)
     t["esperado"] = round(t["b0"] * math.exp(med), 2)             # dónde estaría si se hubiera movido como la temporada
 
-vistas = [{"nombre": VISTAS[v["termino"]], "temporada": v["temporada"]} for v in d["vistas_2026"]]
+def fid(termino, temporada):
+    # Mismo id que usan las fotos: prototipo/fotos/<id>.jpg
+    return termino.replace(" ", "-") + ("" if temporada in ("SS2024", "FW2024") else "-" + temporada.lower())
+
+# Sin señal clara: nombre, rubro, fuente y cuánto se movió frente a la temporada (no alcanza para veredicto)
+sin_senal_items = [{
+    "id": fid(it["termino"], it["temporada"]), "nombre": SIN_SENAL[it["termino"]][0], "rubro": SIN_SENAL[it["termino"]][1],
+    "termino": it["termino"], "temporada": it["temporada"], "veredicto": "sin", "g1": it["g1"],
+    "cambio_pct": round((math.exp(it["g1"]) - 1) * 100), "medio": it["medio"], "tendencia_fuente": it["tendencia_fuente"],
+    "url_fuente": it["url_fuente"], "mes_desfile": it["mes_desfile"],
+} for it in items if it["veredicto"] == "Sin señal clara"]
+
+vistas = [{"id": fid(v["termino"], v["temporada"]), "nombre": VISTAS[v["termino"]], "termino": v["termino"],
+           "temporada": v["temporada"], "medio": v.get("medio", ""), "tendencia_fuente": v.get("tendencia_fuente", ""),
+           "url_fuente": v.get("url_fuente", "")} for v in d["vistas_2026"]]
+
+# Colores de pasarela (brief.json): % de looks con ese color, temporadas recientes contra previas, y el color medido
+NOM_COLOR = {"Marron": "Marrón", "Beige/Crema": "Beige y crema"}
+b = json.loads((RAIZ / "app" / "datos" / "brief.json").read_text(encoding="utf-8"))
+colores = [{"nombre": NOM_COLOR.get(c["categoria"], c["categoria"]), "hex": c["hex"],
+            "reciente": c["pasarela_reciente"], "previo": c["pasarela_previo"],
+            "cambio_pts": round(c["pasarela_reciente"] - c["pasarela_previo"], 1)}
+           for c in b["items"] if c["tipo"] == "color"]
+colores_meta = {"recientes": b["meta"]["pasarela_recientes"], "previas": b["meta"]["pasarela_previas"]}
 
 # Ciclo por ciclo: pasajeras entre las que ganaron y entre las que perdieron búsquedas (hipotesis.md)
 micro = json.loads((RAIZ / "app" / "datos" / "microtendencias.json").read_text(encoding="utf-8"))
@@ -123,9 +161,27 @@ ciclos = [{"ciclo": c["ciclo"], "sube_pasajeras": int(c["sube_pasajeras"]), "sub
 sin_senal = sum(1 for it in items if it["veredicto"] == "Sin señal clara")
 medios = sorted({it["medio"] for it in items})
 
-datos = {"tendencias": tendencias, "vistas_2026": vistas, "sin_senal": sin_senal, "medios": medios, "ciclos": ciclos,
+datos = {"tendencias": tendencias, "sin_senal_items": sin_senal_items, "vistas_2026": vistas, "sin_senal": sin_senal,
+         "colores": colores, "colores_meta": colores_meta, "medios": medios, "ciclos": ciclos,
          "regla": d["meta"]["regla"], "confianza": d["meta"]["confianza"], "evidencia": d["meta"]["evidencia"]}
 (RAIZ / "prototipo" / "datos.json").write_text(json.dumps(datos, ensure_ascii=False), encoding="utf-8")  # lo lee la funcion de la IA
 SALIDA.write_text("// Generado por prototipo/armar_datos.py. No editar a mano.\nwindow.DATOS = "
                   + json.dumps(datos, ensure_ascii=False) + ";\n", encoding="utf-8")
 print(f"{len(tendencias)} tendencias con veredicto y {len(vistas)} vistas en 2026 -> {SALIDA.relative_to(RAIZ)}")
+
+# Lista de fotos que hacen falta (prototipo/FOTOS.md). Las fotos van en prototipo/fotos/, que no se sube a GitHub.
+TEMP = {"SS2024": ("Primavera 2024", "spring 2024"), "FW2024": ("Otoño 2024", "fall 2024"), "SS2025": ("Primavera 2025", "spring 2025"),
+        "SS2026": ("Primavera 2026", "spring 2026"), "FW2026": ("Otoño 2026", "fall 2026")}
+lineas = ["# Fotos para el prototipo", "",
+          "Las fotos van en `prototipo/fotos/` con el nombre exacto de la columna **Archivo** (en `.jpg`). Esa carpeta está en "
+          "`.gitignore`: **no se sube a GitHub** (el repo es público y las fotos tienen derechos). La página muestra la foto si "
+          "está y, si no, deja el lugar vacío con el nombre del archivo.", "",
+          "Cómo elegir: un look de desfile de esa temporada, vertical y de cuerpo entero, donde la prenda se vea clara. La nota "
+          "del medio que nombró la tendencia suele tener la foto justa.", "",
+          "Este archivo lo arma `prototipo/armar_datos.py`: no editarlo a mano.", ""]
+for titulo, lista in ((f"Con veredicto ({len(tendencias)})", tendencias), (f"Visto en 2026 ({len(vistas)})", vistas)):
+    lineas += [f"## {titulo}", "", "| Archivo | Tendencia | Temporada | Buscar en Google Imágenes | Nota del medio |", "|---|---|---|---|---|"]
+    lineas += [f"| `{t['id']}.jpg` | {t['nombre']} | {TEMP[t['temporada']][0]} | {t['termino']} runway {TEMP[t['temporada']][1]} "
+               f"| [{t['medio']}]({t['url_fuente']}) |" for t in lista]
+    lineas.append("")
+(RAIZ / "prototipo" / "FOTOS.md").write_text("\n".join(lineas), encoding="utf-8")
