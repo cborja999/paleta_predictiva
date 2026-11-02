@@ -118,3 +118,9 @@ La app principal es la versión editorial (`prototipo/index.html`); el Wrapped q
 - Resultado: pasa (V1 −0,21, V3 −0,16, V4 +0,70 sin opuestos). 7 tienden a quedarse, 6 en riesgo, 7 sin señal clara.
 - Cuidado: en 8 de los 13 veredictos la lectura con solo mar-jul da "sin señal clara" (ninguno se da vuelta), y los dos "se queda" más fuertes son términos muy chicos. La app lo marca en cada tendencia. Detalle en `analisis/brief_fw2025/LEEME.md`.
 - En la página, otoño 2025 pasa a ser la temporada más nueva (la que abre por defecto).
+
+## 2026-11-02 ¿Las tendencias de 2025 volvieron a la pasarela en 2026?
+
+- Idea de Borja: mostrar que las que "se quedan" en 2025 también se vieron en 2026, como prueba de la hipótesis.
+- Cruce: mismo término de búsqueda en las listas de SS2026 y FW2026 (regla simple, decidida al hacer el cruce, no antes). Volvieron 3 de 15 "se queda" (broche, tapado protagonista, estampado floral), 0 de 11 "en riesgo" y 6 de 20 "sin señal clara".
+- No prueba la hipótesis: la hipótesis mide búsquedas, no pasarelas, y las sin señal volvieron en mayor proporción que las que se quedan. La página lo muestra como pista, con los tres números.

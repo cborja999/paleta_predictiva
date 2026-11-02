@@ -34,14 +34,14 @@ Paleta predictiva le dice qué tendencias de pasarela tienden a quedarse y cuál
 2. **El índice.** Abre en la temporada más nueva, otoño 2025. Cada tendencia tiene la foto del desfile, el veredicto y el número dentro de la frase, como en las notas de análisis de WGSN. Las que no se movieron lo suficiente van abajo, en "Sin señal clara". Arriba se eligen las temporadas anteriores: primavera 2025, otoño 2024 y primavera 2024.
 3. **Rubro.** Elegir "Vestidos": la página deja solo lo de ese rubro.
 4. **Etiquetas.** Mostrar la leyenda: **Calculado** (recuadro negro) contra **Inferencia de la IA** (azul).
-5. **Una tendencia que se queda.** Abrir "Lunares" (otoño 2025, confianza alta): las fotos de Dries Van Noten y Balenciaga, y la frase "se buscó 132% más que el año anterior, más de lo que se movió el resto de la temporada (+34%)". Mostrar el gráfico: las tres líneas son lo que compara la regla (el año antes, el año después y dónde estaría si se hubiera movido como la temporada).
+5. **Una tendencia que se queda.** Abrir "Lunares" (otoño 2025, confianza alta): las fotos de Dries Van Noten y Balenciaga, y la frase "se buscó 132% más que el año anterior, más de lo que se movió el resto de la temporada (+34%)". Las dos barras son toda la regla: la tendencia contra su temporada. Creció más que el resto, se queda.
 6. **Pedir recomendación.** Escribir una línea de marca, por ejemplo "Ropa de mujer, vendemos por Instagram". Mostrar:
    - la lectura y las ideas de producto;
    - la apuesta;
    - "Qué le mandamos a la IA", con el JSON exacto.
 7. **Una en riesgo.** Con "Siguiente" o abriendo "Botas bucaneras": se buscaron 2% menos mientras la temporada subió 34%, quedó 27% atrás. La IA solo puede recomendar apuesta baja.
-8. **Una con aviso.** Abrir "Tapado protagonista": sale "se queda", pero el aviso dice que con solo marzo a julio de 2025 da "sin señal clara". Lo mostramos para que se vea que no escondemos los casos dudosos.
-9. **Colores y Visto en 2026.** Los colores de la pasarela dicen qué se vio, no qué se queda. Lo de 2026 va sin veredicto (ver punto 2).
+8. **Una "con cuidado".** Abrir "Tapado protagonista": sale "se queda", pero tiene la etiqueta "Con cuidado": mirando solo hasta julio de 2025 todavía no se notaba. Lo mostramos para que se vea que no escondemos los casos dudosos.
+9. **Por qué creerle, colores y 2026.** Los puntitos: de cada 10 que subieron, 9 seguían; de las que bajaron, 9 de 16 pasaron de moda. Los colores dicen qué se vio, no qué se queda. En 2026: de las 15 de 2025 que "se quedan", 3 volvieron a la pasarela (broche, tapado protagonista, estampado floral) y de las 11 en riesgo, ninguna; pero también volvieron 6 de las 20 sin señal, así que es una pista, no la prueba (ver preguntas).
 10. **Método.** Ahí están la regla, la evidencia, "Lo que no dicen" y "Ver qué le pedimos a la IA".
 
 Si la IA no responde, decirlo tranquilos: la página lo avisa y los datos calculados siguen valiendo. Mostrar "Qué le mandamos a la IA" y seguir.
@@ -129,6 +129,9 @@ Antes de mirar los datos escribimos tres chequeos. El veredicto no podía depend
 
 **¿Y otoño 2025, si casi todo su primer año cae en el período malo?**
 Por eso le pusimos un chequeo más: la lectura de 12 meses tenía que coincidir con la de marzo a julio, que es antes de la suba de Google, al menos como coinciden en temporadas de otoño limpias. Lo fijamos antes de bajar los datos y dijimos que si no pasaba no lo mostrábamos. Pasó (+0,70, ningún veredicto opuesto), pero es la lectura menos firme: 8 de 13 dan "sin señal" con solo marzo a julio, y está marcado en cada una.
+
+**¿Que vuelvan a la pasarela en 2026 no prueba la hipótesis?**
+No. La hipótesis habla de búsquedas, no de pasarelas. Además el cruce no da tan limpio: volvieron 3 de 15 de las que "se quedan" y 0 de 11 de las que están en riesgo, pero también 6 de 20 de las que no tenían señal. Lo mostramos como contexto y lo decimos así.
 
 **¿Saben si las tendencias se quedaron?**
 Todavía no. El segundo año cae entero en el período en que Google mide distinto. Probamos corregirlo por volumen y no alcanza. Lo decimos en la app.

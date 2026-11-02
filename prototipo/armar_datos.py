@@ -219,6 +219,13 @@ colores = [{"nombre": NOM_COLOR.get(c["categoria"], c["categoria"]), "hex": c["h
             "reciente": c["pasarela_reciente"], "previo": c["pasarela_previo"],
             "cambio_pts": round(c["pasarela_reciente"] - c["pasarela_previo"], 1)}
            for c in b["items"] if c["tipo"] == "color"]
+# ¿Volvió a la pasarela en 2026? Mismo término de búsqueda en las listas de SS2026 o FW2026 (solo para 2025).
+# Es contexto: volver a la pasarela no es seguir buscándose, que es lo que mide la hipótesis.
+t26 = {v["termino"] for v in vistas}
+for t in tendencias + sin_senal_items:
+    if t["temporada"] in ("SS2025", "FW2025"):
+        t["volvio_2026"] = t["termino"] in t26
+
 colores_meta = {"recientes": b["meta"]["pasarela_recientes"], "previas": b["meta"]["pasarela_previas"]}
 
 # Ciclo por ciclo: pasajeras entre las que ganaron y entre las que perdieron búsquedas (hipotesis.md)

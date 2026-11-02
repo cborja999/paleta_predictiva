@@ -81,22 +81,27 @@ img{display:block}
 .falta small{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#bdbbb4;position:absolute;bottom:10px;left:0;right:0}
 .ficha-t:hover .foto img,.t-foto:hover .foto img{transform:scale(1.035)}
 
-/* Gráfico de la nota: lo que compara la regla. Promedio del año antes, del año después y dónde estaría si se
-   hubiera movido como la temporada. */
-.g-caja svg{width:100%;height:120px;display:block;margin-top:16px;overflow:visible}
-.g-caja.riesgo{color:var(--rojo)}
-.g-curva{fill:none;stroke:currentColor;stroke-width:1.2;opacity:.32;vector-effect:non-scaling-stroke;stroke-linejoin:round}
-.g-desfile{stroke:var(--negro);stroke-width:1;opacity:.45;vector-effect:non-scaling-stroke;stroke-dasharray:2 3}
-.g-antes{stroke:#7d7d7d;stroke-width:2;vector-effect:non-scaling-stroke}
-.g-esperado{stroke:#7d7d7d;stroke-width:2;vector-effect:non-scaling-stroke;stroke-dasharray:5 4}
-.g-despues{stroke:currentColor;stroke-width:3;vector-effect:non-scaling-stroke}
-.como-leer{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin-top:12px;font-size:13px;color:var(--gris)}
-.como-leer i{display:inline-block;width:22px;height:0;border-top:2px solid #7d7d7d;vertical-align:middle;margin-right:8px}
-.como-leer i.esp{border-top-style:dashed}
-.como-leer i.des{border-top-width:3px;border-top-color:var(--negro)}
-.como-leer i.cur{border-top:1.2px solid #b7b7b7}
-.grafico.riesgo .como-leer i.des{border-top-color:var(--rojo)}
-.grafico.riesgo .como-leer i.cur{border-top-color:#e6b4b8}
+/* Nota: dos barras con la comparación que decide el veredicto */
+.barras-nota{margin-top:32px;border-top:1px solid var(--negro);padding-top:14px}
+.b-fila{display:grid;grid-template-columns:minmax(0,150px) 1fr 70px;gap:14px;align-items:center;margin-top:16px}
+.b-etiq{font-size:14px;line-height:1.2}
+.b-pista{position:relative;height:28px;background:var(--foto)}
+.b-pista i{position:absolute;top:0;bottom:0;background:#9a9a96}
+.b-fila.esta .b-pista i{background:var(--negro)}
+.riesgo .b-fila.esta .b-pista i{background:var(--rojo)}
+.b-cero{position:absolute;top:-4px;bottom:-4px;border-left:1px solid var(--negro)}
+.b-num{font-family:var(--sans);font-weight:500;font-size:20px;text-align:right;font-variant-numeric:tabular-nums}
+.riesgo .b-fila.esta .b-num{color:var(--rojo)}
+.b-concl{margin-top:16px;font-size:16px}
+.b-concl b{font-weight:500}
+.riesgo .b-concl b{color:var(--rojo)}
+.verd-fila{display:flex;align-items:center;flex-wrap:wrap;gap:10px 18px}
+.nota .verd-fila+.lead{margin-top:22px}
+.cuidado summary{cursor:pointer;list-style:none;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#8a6200;border:1px solid #d9b45a;padding:3px 8px}
+.cuidado summary::-webkit-details-marker{display:none}
+.cuidado summary::after{content:" ?";}
+.cuidado p{margin-top:8px;font-size:14px;color:#6b5200}
+@media (max-width:520px){.b-fila{grid-template-columns:1fr 60px}.b-etiq{grid-column:1/-1}}
 
 /* Dato calculado vs inferencia de la IA */
 .tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:4px 8px;border:1px solid var(--negro);line-height:1.2;white-space:nowrap}
@@ -158,19 +163,32 @@ button.ficha-t:hover .f-nombre{font-style:italic}
 /* Colores de la pasarela: la muestra es la imagen */
 .paleta{display:grid;grid-template-columns:repeat(6,1fr);gap:36px 16px}
 .color .muestra{aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:space-between;padding:12px;margin-bottom:12px;border:1px solid rgba(0,0,0,.06)}
-.color .muestra b{font-family:var(--didone);font-weight:400;font-size:clamp(30px,3vw,44px);line-height:1;font-variation-settings:"opsz" 96}
+.color .muestra{justify-content:flex-end;gap:4px}
+.color .muestra b{font-family:var(--didone);font-weight:400;font-size:clamp(22px,2.1vw,30px);line-height:1.05;font-variation-settings:"opsz" 72}
 @media (max-width:1000px){.paleta{grid-template-columns:repeat(4,1fr)}}
 @media (max-width:600px){.paleta{grid-template-columns:repeat(2,1fr)}}
 
 /* Cita / evidencia */
 .cita{padding:96px 0;border-bottom:1px solid var(--negro);text-align:center}
 .cita blockquote{font-family:var(--didone);font-style:italic;font-weight:400;font-size:clamp(28px,3.6vw,50px);line-height:1.18;max-width:24ch;margin:22px auto 0;font-variation-settings:"opsz" 72}
-.cifras{display:grid;grid-template-columns:repeat(3,1fr);margin-top:72px;border-top:1px solid var(--negro)}
-.cifras div{padding:28px 20px 0;border-left:1px solid var(--linea)}
-.cifras div:first-child{border-left:0}
-.cifras b{display:block;font-family:var(--didone);font-weight:400;font-size:clamp(54px,6.5vw,104px);line-height:1;font-variation-settings:"opsz" 96}
-.cifras p{max-width:30ch;margin:14px auto 0;font-weight:300;font-size:15px}
-@media (max-width:800px){.cifras{grid-template-columns:1fr}.cifras div{border-left:0;border-bottom:1px solid var(--linea);padding:28px 0}}
+.evid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:56px;border-top:1px solid var(--negro);padding-top:36px;text-align:left}
+.evid>div{min-width:0}
+.evid p{font-size:19px;line-height:1.35;margin-top:18px;max-width:30ch}
+.evid p b{font-family:var(--didone);font-weight:400;font-size:1.3em}
+.evid p.caps{font-size:10px;margin-top:10px;max-width:none}
+.puntos{display:flex;flex-wrap:wrap;gap:8px;max-width:360px}
+.puntos i{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--negro)}
+.puntos i.si{background:var(--negro)}
+.puntos.rojo i{border-color:var(--rojo)} .puntos.rojo i.si{background:var(--rojo)}
+@media (max-width:800px){.evid{grid-template-columns:1fr;gap:36px}}
+.volvieron{border-top:1px solid var(--negro);padding:14px 0 28px;margin-bottom:40px;border-bottom:1px solid var(--linea)}
+.v-grupos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:16px}
+.v-grupo b{display:block;font-family:var(--didone);font-weight:400;font-size:44px;line-height:1}
+.v-grupo.riesgo b,.v-grupo.riesgo .caps{color:var(--rojo)}
+.v-grupo.sin b,.v-grupo.sin .caps{color:var(--gris)}
+.v-grupo p{margin-top:8px;font-size:14px;font-weight:300}
+.v-pie{margin-top:18px;font-size:13px;color:var(--gris);max-width:70ch}
+@media (max-width:700px){.v-grupos{grid-template-columns:1fr;gap:18px}}
 
 /* Método */
 .metodo{display:grid;grid-template-columns:5fr 7fr;gap:64px}
@@ -305,7 +323,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   <section class="seccion" id="indice">
     <div class="seccion-cabeza">
       <div><p class="caps" id="n-indice"></p><h2 id="t-titulo"></h2></div>
-      <p class="intro">Cada tendencia que nombraron los medios, con lo que pasó con sus búsquedas el año después del desfile. <b>Se queda:</b> se buscó más que el resto de su temporada. <b>En riesgo:</b> se buscó menos. <b>Sin señal:</b> casi igual, no alcanza para decir nada.</p>
+      <p class="intro"><b>Se queda:</b> después del desfile se buscó más que el resto de su temporada. <b>En riesgo:</b> se buscó menos.</p>
     </div>
     <div class="temporadas-nav caps" id="temporadas-nav"></div>
     <div class="filtro caps" id="filtro"></div>
@@ -314,18 +332,17 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   </section>
 
   <section class="cita" aria-label="La hipótesis">
-    <p class="caps">La hipótesis</p>
-    <blockquote>“Lo que gana búsquedas en su primer año rara vez se desploma en el segundo.”</blockquote>
-    <div class="cifras">
-      <div><p class="caps gris">Las que ganaron búsquedas</p><b>9 de 10</b><p>seguían ahí al segundo año. 178 tendencias de 2016 a 2024.</p></div>
-      <div><p class="caps gris">Las que perdieron búsquedas</p><b>9 de 16</b><p>fueron moda pasajera, contra 2 de 19 de las que ganaron. Colecciones 2021 a 2024.</p></div>
-      <div><p class="caps gris">En ocho ciclos</p><b>≤ 20%</b><p>de pasajeras entre las que subieron, en cada ciclo de 2016 a 2024. Nunca más.</p></div>
+    <p class="caps">Por qué creerle</p>
+    <blockquote>“Lo que se busca más después del desfile, se queda.”</blockquote>
+    <div class="evid">
+      <div><div class="puntos" data-n="10" data-k="9"></div><p><b>9 de cada 10</b> tendencias que subieron seguían el año siguiente.</p><p class="caps gris">178 tendencias, 2016 a 2024</p></div>
+      <div><div class="puntos rojo" data-n="16" data-k="9"></div><p>De las que bajaron, <b>9 de 16</b> pasaron de moda.</p><p class="caps gris">De las que subieron, solo 2 de 19 · 2021 a 2024</p></div>
     </div>
   </section>
 
   <section class="seccion" id="colores">
     <div class="seccion-cabeza">
-      <div><p class="caps">En la pasarela</p><h2>Los <i>colores</i></h2></div>
+      <div><p class="caps">En la pasarela</p><h2>Los colores que <i>más se vieron</i></h2></div>
       <p class="intro" id="intro-colores"></p>
     </div>
     <div class="paleta" id="paleta"></div>
@@ -336,6 +353,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
       <div><p class="caps">Lo último</p><h2>Visto en <i>pasarela</i> 2026</h2></div>
       <p class="intro" id="intro-2026"></p>
     </div>
+    <div class="volvieron" id="volvieron"></div>
     <div class="indice-grilla" id="grilla-2026"></div>
   </section>
 
@@ -419,19 +437,24 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   function pct(n){ return (n > 0 ? '+' : n < 0 ? '−' : '') + Math.abs(n) + '%'; }
   function esc(x){ return String(x).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
   // Lamina: en lugar de una foto de pasarela, la comparacion que hace la regla dibujada sobre la curva
-  function grafico(t, W, H){
-    var v = t.serie.filter(function(x){ return x != null; }).concat([t.b0, t.b1, t.esperado]);
-    var mx = Math.max.apply(null, v), mn = Math.min.apply(null, v), xd = (12 * W / 23).toFixed(1);
-    function y(n){ return (H - (n - mn) / ((mx - mn) || 1) * H).toFixed(1); }
-    return '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" aria-hidden="true">' +
-      '<line class="g-desfile" x1="' + xd + '" x2="' + xd + '" y1="-6" y2="' + (H + 6) + '"/>' +
-      '<path class="g-curva" d="' + trazo(t.serie, W, H, mn, mx) + '"/>' +
-      '<line class="g-antes" x1="0" x2="' + xd + '" y1="' + y(t.b0) + '" y2="' + y(t.b0) + '"/>' +
-      '<line class="g-esperado" x1="' + xd + '" x2="' + W + '" y1="' + y(t.esperado) + '" y2="' + y(t.esperado) + '"/>' +
-      '<line class="g-despues" x1="' + xd + '" x2="' + W + '" y1="' + y(t.b1) + '" y2="' + y(t.b1) + '"/></svg>';
+  // La comparación que decide el veredicto: cuánto creció esta tendencia contra cuánto creció su temporada
+  function barras(t){
+    var a = t.bruto_pct, b = t.temporada_pct, mn = Math.min(0, a, b), mx = Math.max(0, a, b), r = (mx - mn) || 1;
+    function barra(etiq, v, cl){
+      var izq = (Math.min(0, v) - mn) / r * 100, ancho = Math.abs(v) / r * 100;
+      return '<div class="b-fila ' + cl + '"><span class="b-etiq">' + etiq + '</span><div class="b-pista"><i style="left:' + izq.toFixed(1) + '%;width:' + Math.max(ancho, 0.6).toFixed(1) + '%"></i>' +
+        (mn < 0 ? '<span class="b-cero" style="left:' + ((0 - mn) / r * 100).toFixed(1) + '%"></span>' : '') + '</div><b class="b-num">' + pct(v) + '</b></div>';
+    }
+    var concl = t.veredicto === 'queda' ? 'Creció más que el resto: <b>se queda</b>.'
+      : (a < 0 ? 'Bajó mientras el resto subía' : 'Creció menos que el resto') + ': <b>en riesgo</b>.';
+    return '<div class="barras-nota ' + t.veredicto + '"><div class="bloque-cab"><p class="caps">Búsquedas en Google, el año después del desfile</p><span class="tag">Calculado</span></div>' +
+      barra(t.nombre, a, 'esta') + barra('Su temporada', b, 'temp') + '<p class="b-concl">' + concl + '</p></div>';
   }
-  // Fotos del look: prototipo/fotos/<id>-1.jpg y <id>-2.jpg, de dos desfiles distintos (no se suben a GitHub).
-  // Si no están, queda el lugar con el nombre del archivo. La lista está en prototipo/FOTOS.md.
+  function cuidadoChip(t){
+    var txt = t.aviso ? 'Se apoya en un pico de un solo mes.'
+      : t.nota ? (t.nota.indexOf('agosto') > -1 ? 'Sin agosto y septiembre de 2025 todavía no se nota.' : 'Mirando solo hasta julio de 2025, todavía no se nota.') : '';
+    return txt ? '<details class="cuidado"><summary>Con cuidado</summary><p>' + txt + '</p></details>' : '';
+  }
   function foto(t, clase, n){
     n = n || 1;
     var r = 'fotos/' + t.id + '-' + n + '.jpg', d = (t.desfiles || [])[n - 1];
@@ -452,8 +475,6 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
       d += (d ? 'L' : 'M') + (i * W / (serie.length - 1)).toFixed(1) + ' ' + (H - (y - mn) / ((mx - mn) || 1) * H).toFixed(1); });
     return d;
   }
-  var LEYENDA = '<span><i class="cur"></i>Búsquedas mes a mes</span><span><i></i>Promedio del año antes</span>' +
-    '<span><i class="des"></i>Promedio del año después</span><span><i class="esp"></i>Dónde estaría si se movía como la temporada</span>';
   function cuidado(t){ return t.aviso || t.nota ? 1 : 0; }
   function orden(a, b){ return cuidado(a) - cuidado(b) || ORDEN_T[a.temporada] - ORDEN_T[b.temporada] || (a.confianza === 'Alta' ? 0 : 1) - (b.confianza === 'Alta' ? 0 : 1) || Math.abs(b.g1) - Math.abs(a.g1); }
   var Q = T.filter(function(t){ return t.veredicto === 'queda'; }).sort(orden);
@@ -476,15 +497,15 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   var veredicto = '';
   var VEREDICTOS = [['', 'Todas'], ['queda', 'Se quedan'], ['riesgo', 'En riesgo'], ['sin', 'Sin señal']];
   function frase(t){
-    if (t.veredicto === 'sin') return 'Se movió casi igual que su temporada (<b>' + pct(t.cambio_pct) + '</b>): no alcanza para un veredicto.';
-    return 'Se buscó <b>' + pct(t.bruto_pct) + '</b> el año después del desfile; su temporada, ' + pct(t.temporada_pct) + '.';
+    if (t.veredicto === 'sin') return 'Se movió casi igual que su temporada.';
+    return '<b>' + pct(t.bruto_pct) + '</b> de búsquedas · su temporada, ' + pct(t.temporada_pct);
   }
   function ficha(t){
     var abre = t.veredicto !== 'sin', tag = abre ? 'button' : 'div';
     return '<' + tag + ' class="ficha-t ' + t.veredicto + '"' + (abre ? ' data-id="' + t.id + '"' : '') + '>' + foto(t) +
       '<span class="caps veredicto ' + t.veredicto + '">' + ETIQ[t.veredicto] + '</span>' +
       '<b class="f-nombre">' + t.nombre + '</b><p class="frase">' + frase(t) + '</p>' +
-      '<p class="caps gris f-meta">' + (abre ? 'Confianza ' + t.confianza.toLowerCase() + (cuidado(t) ? ' · con aviso' : '') + ' · ' : '') + t.medio +
+      '<p class="caps gris f-meta">' + (abre ? 'Confianza ' + t.confianza.toLowerCase() + (cuidado(t) ? ' · con cuidado' : '') + ' · ' : '') + t.medio +
       (abre ? '' : ' · <a href="' + t.url_fuente + '" target="_blank" rel="noopener">ver la nota</a>') + '</p></' + tag + '>';
   }
   // Las que no se movieron lo suficiente van en una lista corta debajo de cada temporada, sin foto
@@ -521,21 +542,34 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   }
   pintar();
 
+  document.querySelectorAll('.puntos').forEach(function(p){
+    var n = +p.dataset.n, k = +p.dataset.k, h = '';
+    for (var i = 0; i < n; i++) h += '<i class="' + (i < k ? 'si' : '') + '"></i>';
+    p.innerHTML = h; p.setAttribute('role', 'img'); p.setAttribute('aria-label', k + ' de ' + n);
+  });
+
   // Colores de la pasarela: el color medido en las fotos y cuánto se vio, recientes contra previas
   var CM = D.colores_meta;
   function temps(xs){ return lista(xs.map(function(c){ return (c.slice(0, 2) === 'SS' ? 'primavera ' : 'otoño ') + c.slice(2); })); }
-  $('intro-colores').textContent = 'Qué parte de los looks de 15 casas de lujo en Vogue Runway tuvo cada color, en ' + temps(CM.recientes) +
-    ', contra ' + temps(CM.previas) + '. Lo clasificó una IA (Gemini) y en una prueba de 40 fotos acertó el color 82% de las veces. Dice qué se vio, no qué se queda.';
+  $('intro-colores').textContent = 'Cuánto aparecieron en los desfiles de ' + temps(CM.recientes) + '. Es lo que se vio, no si se queda.';
   function claro(hex){ var n = parseInt(hex.slice(1), 16); return (0.299 * (n >> 16) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255)) > 150; }
   $('paleta').innerHTML = D.colores.slice().sort(function(a, b){ return b.reciente - a.reciente; }).map(function(c){
-    var mov = Math.abs(c.cambio_pts) >= 1 ? (c.cambio_pts > 0 ? '+' : '−') + num(Math.abs(c.cambio_pts), 1) + ' puntos' : 'casi igual';
+    var cada = Math.round(100 / c.reciente), mov = c.cambio_pts >= 1 ? '↑ más que antes' : c.cambio_pts <= -1 ? '↓ menos que antes' : 'igual que antes';
     return '<div class="color"><div class="muestra" style="background:' + c.hex + ';color:' + (claro(c.hex) ? 'var(--negro)' : '#fff') + '">' +
-      '<span class="caps">' + c.hex.toUpperCase() + '</span><b>' + num(c.reciente, 1) + '%</b></div>' +
-      '<b class="f-nombre">' + c.nombre + '</b><p class="frase">' + num(c.reciente, 1) + '% de los looks, contra ' + num(c.previo, 1) + '% antes: <b>' + mov + '</b>.</p></div>';
+      '<b>1 de cada ' + cada + '</b><span class="caps">looks</span></div>' +
+      '<b class="f-nombre">' + c.nombre + '</b><p class="frase">' + mov + '</p></div>';
   }).join('');
 
   // Visto en 2026: foto y nombre, sin veredicto
-  $('intro-2026').textContent = D.vistas_2026.length + ' tendencias de las fashion weeks de 2026. Te contamos qué se vio, sin veredicto: desde mediados de 2025 Google Trends mide distinto y las búsquedas no se pueden comparar con los años anteriores.';
+  $('intro-2026').textContent = 'Lo que mostraron las pasarelas de 2026. Todavía sin veredicto: Google cambió cómo mide.';
+  // ¿Las de 2025 volvieron a la pasarela en 2026? (mismo término de búsqueda en las listas de 2026)
+  var D25 = T.concat(D.sin_senal_items).filter(function(t){ return t.volvio_2026 !== undefined; });
+  $('volvieron').innerHTML = '<p class="caps">¿Las de 2025 volvieron a la pasarela en 2026?</p><div class="v-grupos">' +
+    [['queda', 'Se quedaban'], ['riesgo', 'En riesgo'], ['sin', 'Sin señal']].map(function(g){
+      var l = D25.filter(function(t){ return t.veredicto === g[0]; }), v = l.filter(function(t){ return t.volvio_2026; });
+      return '<div class="v-grupo ' + g[0] + '"><b>' + v.length + ' de ' + l.length + '</b><span class="caps">' + g[1] + '</span><p>' +
+        (v.length ? v.map(function(t){ return t.nombre; }).filter(function(n, i, l){ return l.indexOf(n) === i; }).join(' · ') : 'ninguna') + '</p></div>';
+    }).join('') + '</div><p class="v-pie">Volver a una pasarela no es lo mismo que seguir buscándose, que es lo que mide la hipótesis. Es una pista, no la prueba.</p>';
   $('grilla-2026').innerHTML = D.vistas_2026.map(function(v){
     return '<div class="ficha-t vista">' + foto(v) + '<span class="caps gris">' + TEMP[v.temporada] + '</span><b class="f-nombre">' + v.nombre + '</b>' +
       '<p class="caps gris f-meta">' + v.medio + ' · <a href="' + v.url_fuente + '" target="_blank" rel="noopener">ver la nota</a></p></div>';
@@ -568,29 +602,17 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   }
   function abrir(t, navegando){
     abierta = t;
-    // Primera frase con las cuentas de la regla: cuánto cambió, cuánto se movió la temporada y quién ganó
-    var sus = 'Después del desfile se buscó ' + Math.abs(t.bruto_pct) + '% ' + (t.bruto_pct >= 0 ? 'más' : 'menos') + ' que el año anterior';
-    var temp = 'el resto de la temporada ' + (t.temporada_pct >= 0 ? 'subió ' : 'bajó ') + Math.abs(t.temporada_pct) + '%';
-    var lead = t.veredicto === 'queda'
-      ? sus + ', más de lo que se movió el resto de la temporada (' + pct(t.temporada_pct) + '). De las tendencias que ganan búsquedas así, nueve de cada diez siguen vigentes al segundo año.'
-      : sus + (t.bruto_pct > 0 ? ', pero ' : ', mientras ') + temp + ': quedó atrás. De las tendencias de 2021 a 2024 que perdieron búsquedas así, nueve de dieciséis fueron moda pasajera.';
+    // Una línea con las dos cuentas; el gráfico las pone una al lado de la otra
+    var sube = function(n){ return n >= 0 ? 'subieron ' + Math.abs(n) + '%' : 'bajaron ' + Math.abs(n) + '%'; };
+    var lead = 'Se buscó ' + Math.abs(t.bruto_pct) + '% ' + (t.bruto_pct >= 0 ? 'más' : 'menos') + ' que el año anterior. Las demás tendencias de la temporada ' + sube(t.temporada_pct) + '.';
     $('nota-cuerpo').innerHTML = '<div class="cuerpo">' + fotosNota(t) + '<div class="texto">' +
       '<p class="caps gris">' + TEMP[t.temporada] + ' · Desfiles de ' + mes(t.mes_desfile) + '</p>' +
-      '<h3>' + t.nombre + '</h3>' + verd(t) +
-      '<p class="lead" style="margin-top:22px">' + lead + '</p>' +
-      '<div class="grafico ' + t.veredicto + '"><div class="bloque-cab"><p class="caps">Búsquedas en Google · todo el mundo</p><span class="tag">Calculado</span></div>' +
-        '<div class="g-caja ' + t.veredicto + '">' + grafico(t, 600, 120) + '</div>' +
-        '<div class="ejes caps gris"><span>Año antes</span><span>Desfile</span><span>Año después</span></div>' +
-        '<div class="como-leer">' + LEYENDA + '</div></div>' +
-      (t.aviso ? '<p class="aviso">Ojo: la lectura se apoya en un pico de un solo mes. El veredicto es el mismo, pero conviene tomarlo con más cuidado.</p>' : '') +
-      (t.nota ? '<p class="aviso">Ojo: ' + esc(t.nota.charAt(0).toLowerCase() + t.nota.slice(1)) + ' El veredicto sale de las reglas fijadas antes de mirar los datos, pero conviene tomarlo con más cuidado.</p>' : '') +
+      '<h3>' + t.nombre + '</h3><div class="verd-fila">' + verd(t) + cuidadoChip(t) + '</div>' +
+      '<p class="lead">' + lead + '</p>' + barras(t) +
       '<dl class="ficha">' +
-        '<div><dt class="caps gris">Sus búsquedas</dt><dd>' + pct(t.bruto_pct) + ' el año después del desfile contra el año anterior</dd></div>' +
-        '<div><dt class="caps gris">La temporada</dt><dd>' + pct(t.temporada_pct) + ': lo típico entre todas las tendencias de ' + TEMP[t.temporada].toLowerCase() + '</dd></div>' +
-        '<div><dt class="caps gris">Frente a la temporada</dt><dd><b style="font-weight:500">' + pct(t.cambio_pct) + '</b> · es lo que decide el veredicto (los números están redondeados)</dd></div>' +
-        '<div><dt class="caps gris">Confianza</dt><dd>' + t.confianza + ' · ' + (t.confianza === 'Alta' ? 'se movió 30% o más' : 'se movió entre 10% y 30%') + '</dd></div>' +
-        '<div><dt class="caps gris">Búsqueda</dt><dd>“' + t.termino + '”</dd></div>' +
-        '<div><dt class="caps gris">La nombró</dt><dd><a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a>, como “' + t.tendencia_fuente + '”</dd></div>' +
+        '<div><dt class="caps gris">Confianza</dt><dd>' + t.confianza + (t.confianza === 'Alta' ? ': la diferencia es grande' : ': la diferencia es moderada') + '</dd></div>' +
+        '<div><dt class="caps gris">En Google</dt><dd>“' + t.termino + '”</dd></div>' +
+        '<div><dt class="caps gris">La nombró</dt><dd><a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a></dd></div>' +
       '</dl>' + bloqueIA(t) + '</div></div>';
     $('ia-pedir').addEventListener('click', function(){ pedirIA(t); });
     var l = recorrido();
