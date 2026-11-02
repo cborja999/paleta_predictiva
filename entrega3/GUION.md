@@ -30,7 +30,7 @@ Paleta predictiva le dice qué tendencias de pasarela tienden a quedarse y cuál
 
 ## 3:00 a 7:00: demo en vivo
 
-1. **Home.** "Paleta Predictiva. Qué se queda y qué se va." Leer la línea: en otoño 2025, 7 se quedan y 6 pueden pasar de moda. Abajo, la franja con los colores de la pasarela, cada uno del ancho de cuánto se vio. Tocar **Ver otoño 2025**.
+1. **Home.** "Paleta Predictiva. Qué se queda y qué se va." Pasar el cursor por el nombre: cada letra se pinta con un color de la pasarela. Abajo, la franja con esos colores, cada uno del ancho de cuánto se vio. Tocar **Ver otoño 2025** y bajar: cada bloque aparece a medida que entra en pantalla.
 2. **El índice.** Abre en la temporada más nueva, otoño 2025. Cada tendencia tiene la foto del desfile, el veredicto y el número dentro de la frase, como en las notas de análisis de WGSN. Las que no se movieron lo suficiente van abajo, en "Sin señal clara". Arriba se eligen las temporadas anteriores: primavera 2025, otoño 2024 y primavera 2024.
 3. **Rubro.** Elegir "Vestidos": la página deja solo lo de ese rubro.
 4. **Etiquetas.** Mostrar la leyenda: **Calculado** (recuadro negro) contra **Inferencia de la IA** (azul).
