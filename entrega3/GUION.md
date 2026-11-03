@@ -3,7 +3,7 @@
 Antes de la clase:
 - presentar desde la compu de Borja, con las fotos de 2025 en `prototipo/fotos/` y la IA andando: en la Terminal, desde la carpeta del proyecto, `netlify dev --offline --port 8888`, y abrir http://localhost:8888 (la clave de Groq está en `.env`, que no se sube); tener abierto el link online como respaldo (en `entrega3/README.md`);
 - pedir una recomendación de prueba, para que la IA no arranque en frío;
-- tener a mano la captura `entrega3/capturas/5_nota.png` por si falla internet.
+- tener a mano la captura `entrega3/capturas/con_fotos/5_nota.png` (o `5_nota.png` sin fotos) por si falla internet.
 
 Los números salen de `hipotesis.md`, `analisis/brief_2026/salida_brief_2024.txt`, `analisis/brief_2025/salida_brief_ss2025.txt` y `analisis/brief_fw2025/salida_brief_fw2025.txt`. No los redondeen distinto.
 

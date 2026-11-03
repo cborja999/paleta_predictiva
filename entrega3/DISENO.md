@@ -74,3 +74,5 @@ En `entrega3/capturas/` (2/11/2026, antes de tener las fotos: los recuadros gris
 5. `5_nota.png`: la nota de una tendencia (Lunares, otoño 2025): las dos fotos con su desfile, la frase con los números y las dos barras (la tendencia contra su temporada).
 6. `6_alternativa_wrapped_celular.png`: la alternativa descartada. Se capturó sin la tipografía de la web, por eso el título se corta.
 7. `7_entrega2_informe.png`: la página de la Entrega 2, para comparar.
+
+Las mismas capturas con las fotos de los desfiles (índice, Lunares en escritorio y celular, Pollera balón de primavera 2025) están en `entrega3/capturas/con_fotos/`, solo en la compu de Borja: no van al repo porque es público.
