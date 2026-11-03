@@ -143,7 +143,6 @@ img{display:block}
 /* Índice por temporada (como la lista de WGSN: foto, título y el número dentro de la frase) */
 .vacio{padding:40px 0;color:var(--gris)}
 .t-bloque+.t-bloque{margin-top:72px}
-.t-cuenta{margin-bottom:28px}
 .indice-grilla{display:grid;grid-template-columns:repeat(4,1fr);gap:48px 24px}
 .ficha-t{display:block;text-align:left;min-width:0}
 .ficha-t .foto{aspect-ratio:3/4;margin-bottom:14px}
@@ -545,9 +544,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
       var l = Q.concat(R, S).filter(function(t){ return t.temporada === s && pasa(t); });
       if (!l.length) return '';
       enPagina = enPagina.concat(l.filter(function(t){ return t.veredicto !== 'sin'; }));
-      function n(v){ return l.filter(function(t){ return t.veredicto === v; }).length; }
-      return '<div class="t-bloque"><p class="caps gris t-cuenta">Desfiles de ' + mes(l[0].mes_desfile) + ' · ' + n('queda') + ' se quedan · ' + n('riesgo') + ' en riesgo · ' + n('sin') + ' sin señal</p>' +
-        '<div class="indice-grilla">' + l.filter(function(t){ return t.veredicto !== 'sin'; }).map(ficha).join('') + '</div>' + sinSenal(l) + '</div>';
+      return '<div class="t-bloque"><div class="indice-grilla">' + l.filter(function(t){ return t.veredicto !== 'sin'; }).map(ficha).join('') + '</div>' + sinSenal(l) + '</div>';
     }).join('');
     $('temporadas').innerHTML = html || '<p class="vacio caps">No hay tendencias con estos filtros.</p>';
     $('t-titulo').innerHTML = TEMP[temporada].replace(' ', ' <i>') + '</i>';
@@ -724,7 +721,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   });
 
   // Al bajar, cada bloque aparece cuando entra en pantalla (sin efecto si el sistema pide menos movimiento)
-  var RV = '.seccion-cabeza, .temporadas-nav, .t-cuenta, .ficha-t, .sin-lista, .cita blockquote, .evid > div, .color, .volvieron, .pasos li, .ciclos, .tres > div';
+  var RV = '.seccion-cabeza, .temporadas-nav, .ficha-t, .sin-lista, .cita blockquote, .evid > div, .color, .volvieron, .pasos li, .ciclos, .tres > div';
   var mira = window.IntersectionObserver && !matchMedia('(prefers-reduced-motion: reduce)').matches
     ? new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('visto'); mira.unobserve(e.target); } }); }, {rootMargin: '0px 0px -8% 0px'})
     : null;
