@@ -130,3 +130,9 @@ La app principal es la versión editorial (`prototipo/index.html`); el Wrapped q
 - Sitio: https://paleta-predictiva.netlify.app (cuenta de Borja). La clave de Groq está en la variable `GROQ_API_KEY` del sitio, cargada desde el `.env` sin mostrarla.
 - Netlify lo creó protegido (solo miembros del equipo). Borja decidió abrirlo para que los profes entren con el link, y que muestre las fotos de los desfiles aunque tengan derechos.
 - Las fotos siguen fuera de GitHub. Por eso el sitio no se conecta al repo: se publica con `prototipo/publicar.sh`, que junta la rama `entrega-3` de GitHub con las fotos locales.
+
+## 2026-11-02 Índice solo con veredictos; sin el cruce con 2026
+
+- Borja: sacar de la página la lista "sin señal clara" y el bloque "¿Las de 2025 volvieron a la pasarela en 2026?".
+- Las 32 sin señal siguen contadas en Método. Del cruce con 2026 se sacó el bloque entero, no solo la columna que no favorecía (6 de 20 sin señal volvieron, más que 3 de 15 "se quedan"); el resultado queda en `entrega3/GUION.md` (preguntas) por si lo preguntan.
+- La evidencia de "Por qué creerle" pasa a comparar: las que bajan tienen unas 5 veces más chances de pasar de moda (9 de 16 contra 2 de 19, `hipotesis.md`).

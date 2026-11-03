@@ -189,14 +189,6 @@ button.ficha-t:hover .f-nombre{font-style:italic}
 .puntos.chico i{width:12px;height:12px;border-width:1.2px}
 @media (max-width:480px){.compara{grid-template-columns:64px 1fr;gap:6px 8px}.puntos.chico{gap:3px}.puntos.chico i{width:10px;height:10px}}
 @media (max-width:800px){.evid{grid-template-columns:1fr;gap:36px}}
-.volvieron{border-top:1px solid var(--negro);padding:14px 0 28px;margin-bottom:40px;border-bottom:1px solid var(--linea)}
-.v-grupos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:16px}
-.v-grupo b{display:block;font-family:var(--didone);font-weight:400;font-size:44px;line-height:1}
-.v-grupo.riesgo b,.v-grupo.riesgo .caps{color:var(--rojo)}
-.v-grupo.sin b,.v-grupo.sin .caps{color:var(--gris)}
-.v-grupo p{margin-top:8px;font-size:14px;font-weight:300}
-.v-pie{margin-top:18px;font-size:13px;color:var(--gris);max-width:70ch}
-@media (max-width:700px){.v-grupos{grid-template-columns:1fr;gap:18px}}
 
 /* Método */
 .metodo{display:grid;grid-template-columns:5fr 7fr;gap:64px}
@@ -363,7 +355,6 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
       <div><p class="caps">Lo último</p><h2>Visto en <i>pasarela</i> 2026</h2></div>
       <p class="intro" id="intro-2026"></p>
     </div>
-    <div class="volvieron" id="volvieron"></div>
     <div class="indice-grilla" id="grilla-2026"></div>
   </section>
 
@@ -524,7 +515,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
 
   // Índice: por temporada, como la lista de WGSN. Foto, veredicto, nombre y el número dentro de la frase.
   var veredicto = '';
-  var VEREDICTOS = [['', 'Todas'], ['queda', 'Se quedan'], ['riesgo', 'En riesgo'], ['sin', 'Sin señal']];
+  var VEREDICTOS = [['', 'Todas'], ['queda', 'Se quedan'], ['riesgo', 'En riesgo']];
   function frase(t){
     if (t.veredicto === 'sin') return 'Se movió casi igual que su temporada.';
     return '<b>' + pct(t.bruto_pct) + '</b> de búsquedas · su temporada, ' + pct(t.temporada_pct);
@@ -553,7 +544,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
       var l = Q.concat(R, S).filter(function(t){ return t.temporada === s && pasa(t); });
       if (!l.length) return '';
       enPagina = enPagina.concat(l.filter(function(t){ return t.veredicto !== 'sin'; }));
-      return '<div class="t-bloque"><div class="indice-grilla">' + l.filter(function(t){ return t.veredicto !== 'sin'; }).map(ficha).join('') + '</div>' + sinSenal(l) + '</div>';
+      return '<div class="t-bloque"><div class="indice-grilla">' + l.filter(function(t){ return t.veredicto !== 'sin'; }).map(ficha).join('') + '</div></div>';
     }).join('');
     $('temporadas').innerHTML = html || '<p class="vacio caps">No hay tendencias con estos filtros.</p>';
     $('t-titulo').innerHTML = TEMP[temporada].replace(' ', ' <i>') + '</i>';
@@ -589,14 +580,6 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
 
   // Visto en 2026: foto y nombre, sin veredicto
   $('intro-2026').textContent = 'Lo que mostraron las pasarelas de 2026. Todavía sin veredicto: Google cambió cómo mide.';
-  // ¿Las de 2025 volvieron a la pasarela en 2026? (mismo término de búsqueda en las listas de 2026)
-  var D25 = T.concat(D.sin_senal_items).filter(function(t){ return t.volvio_2026 !== undefined; });
-  $('volvieron').innerHTML = '<p class="caps">¿Las de 2025 volvieron a la pasarela en 2026?</p><div class="v-grupos">' +
-    [['queda', 'Se quedaban'], ['riesgo', 'En riesgo'], ['sin', 'Sin señal']].map(function(g){
-      var l = D25.filter(function(t){ return t.veredicto === g[0]; }), v = l.filter(function(t){ return t.volvio_2026; });
-      return '<div class="v-grupo ' + g[0] + '"><b>' + v.length + ' de ' + l.length + '</b><span class="caps">' + g[1] + '</span><p>' +
-        (v.length ? v.map(function(t){ return t.nombre; }).filter(function(n, i, l){ return l.indexOf(n) === i; }).join(' · ') : 'ninguna') + '</p></div>';
-    }).join('') + '</div><p class="v-pie">Volver a una pasarela no es lo mismo que seguir buscándose, que es lo que mide la hipótesis. Es una pista, no la prueba.</p>';
   $('grilla-2026').innerHTML = D.vistas_2026.map(function(v){
     return '<div class="ficha-t vista">' + foto(v) + '<span class="caps gris">' + TEMP[v.temporada] + '</span><b class="f-nombre">' + v.nombre + '</b>' +
       '<p class="caps gris f-meta">' + v.medio + ' · <a href="' + v.url_fuente + '" target="_blank" rel="noopener">ver la nota</a></p></div>';
@@ -730,7 +713,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   });
 
   // Al bajar, cada bloque aparece cuando entra en pantalla (sin efecto si el sistema pide menos movimiento)
-  var RV = '.seccion-cabeza, .temporadas-nav, .ficha-t, .sin-lista, .cita blockquote, .evid > div, .color, .volvieron, .pasos li, .ciclos, .tres > div';
+  var RV = '.seccion-cabeza, .temporadas-nav, .ficha-t, .sin-lista, .cita blockquote, .evid > div, .color, .pasos li, .ciclos, .tres > div';
   var mira = window.IntersectionObserver && !matchMedia('(prefers-reduced-motion: reduce)').matches
     ? new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('visto'); mira.unobserve(e.target); } }); }, {rootMargin: '0px 0px -8% 0px'})
     : null;
