@@ -182,6 +182,12 @@ button.ficha-t:hover .f-nombre{font-style:italic}
 .puntos i{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--negro)}
 .puntos i.si{background:var(--negro)}
 .puntos.rojo i{border-color:var(--rojo)} .puntos.rojo i.si{background:var(--rojo)}
+.evid p.evid-tit{margin:0 0 22px}
+.compara{display:grid;grid-template-columns:76px 1fr;gap:6px 12px;align-items:center;margin-bottom:16px}
+.compara .gris{grid-column:2}
+.puntos.chico{gap:4px;max-width:none}
+.puntos.chico i{width:12px;height:12px;border-width:1.2px}
+@media (max-width:480px){.compara{grid-template-columns:64px 1fr;gap:6px 8px}.puntos.chico{gap:3px}.puntos.chico i{width:10px;height:10px}}
 @media (max-width:800px){.evid{grid-template-columns:1fr;gap:36px}}
 .volvieron{border-top:1px solid var(--negro);padding:14px 0 28px;margin-bottom:40px;border-bottom:1px solid var(--linea)}
 .v-grupos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:16px}
@@ -337,7 +343,10 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
     <blockquote>“Lo que se busca más después del desfile, se queda.”</blockquote>
     <div class="evid">
       <div><div class="puntos" data-n="10" data-k="9"></div><p><b>9 de cada 10</b> tendencias que subieron seguían el año siguiente.</p><p class="caps gris">178 tendencias, 2016 a 2024</p></div>
-      <div><div class="puntos rojo" data-n="16" data-k="9"></div><p>De las que bajaron, <b>9 de 16</b> pasaron de moda.</p><p class="caps gris">De las que subieron, solo 2 de 19 · 2021 a 2024</p></div>
+      <div><p class="evid-tit">Las que bajan tienen <b>unas 5 veces más</b> chances de pasar de moda.</p>
+        <div class="compara"><span class="caps">Subieron</span><div class="puntos rojo chico" data-n="19" data-k="2"></div><span class="caps gris">2 de 19 pasaron de moda</span></div>
+        <div class="compara"><span class="caps">Bajaron</span><div class="puntos rojo chico" data-n="16" data-k="9"></div><span class="caps gris">9 de 16 pasaron de moda</span></div>
+        <p class="caps gris">2021 a 2024 · Por eso “en riesgo” no es “se va”: es apostar poco</p></div>
     </div>
   </section>
 
