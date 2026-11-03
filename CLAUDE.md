@@ -23,7 +23,7 @@ Proyecto de la materia K576 (UdeSA) de Beltrán Martínez, Borja Centeno y Luigi
 
 - Va en la carpeta `prototipo/`. Ver `prototipo/README.md` para el brief y cómo seguir.
 - **El diseño que se edita es el editorial (`prototipo/index.html`).** `prototipo/wrapped.html` es la alternativa descartada: no tocarla.
-- Se trabaja en la rama `entrega-3` (Netlify publica desde ahí). Pasar a `main` solo cuando el diseño esté terminado y Borja lo pida.
+- Se trabaja en la rama `entrega-3`. Online: https://paleta-predictiva.netlify.app, abierta y con fotos (decisión de Borja). No se actualiza sola con el push: se publica con `sh prototipo/publicar.sh` (lo de GitHub más las fotos locales). Pasar a `main` solo cuando el diseño esté terminado y Borja lo pida.
 - La página actual (`app/index.html`) es la versión "informe": sirve como base de datos y textos, no como diseño final.
 - Los datos listos para usar:
   - `app/datos/brief_temporada.json` (**el brief principal**): 31 tendencias puntuales de SS2024 y FW2024 con veredicto, confianza, aviso y curva (`items`), más 36 de SS2026 y FW2026 sin veredicto, como "lo que se vio" (`vistas_2026`). Detalle en `analisis/brief_2026/LEEME.md`.

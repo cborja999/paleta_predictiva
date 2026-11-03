@@ -52,8 +52,8 @@ Dueños o diseñadores de marcas de ropa argentinas chicas y medianas. No saben 
 - `datos.js` y `datos.json` no se editan a mano: los arma `python3 prototipo/armar_datos.py` desde `app/datos/`. Los nombres en castellano y el rubro de cada tendencia están en ese script.
 - No cambiar textos de números, veredictos ni límites sin chequearlos contra `hipotesis.md` y las salidas de `analisis/`.
 - Mantener lo que pide la entrega: etiquetas "Calculado" e "Inferencia de la IA", estados de la IA (cargando, error, sin servidor, aviso del control), responsive a 390 px y accesibilidad. Si cambia algo de diseño importante, anotarlo en `entrega3/DISENO.md` (la entrega pide documentar decisiones y diferencias).
-- Para ver la página: abrirla en el panel de navegador, o `python3 -m http.server` desde la raíz del repo y entrar a `http://localhost:8000/prototipo/`. La IA solo responde en la versión online (Netlify).
-- Trabajar en la rama `entrega-3`. Cada push a esa rama actualiza la página online.
+- Para ver la página: abrirla en el panel de navegador, o `python3 -m http.server` desde la raíz del repo y entrar a `http://localhost:8000/prototipo/`. La IA responde en la versión online (https://paleta-predictiva.netlify.app) o con `netlify dev`.
+- Trabajar en la rama `entrega-3`. La página online (https://paleta-predictiva.netlify.app) **no** se actualiza sola con cada push: después del push, publicar con `sh prototipo/publicar.sh` desde la raíz (sube lo de GitHub más las fotos locales).
 
 Prompt para arrancar una sesión:
 

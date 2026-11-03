@@ -1,6 +1,6 @@
 # Entrega 3: dónde está cada cosa
 
-App online: **(link de Netlify, pendiente)** · Repo: https://github.com/cborja999/paleta_predictiva
+App online: **https://paleta-predictiva.netlify.app** · Repo: https://github.com/cborja999/paleta_predictiva
 
 ## 1. Hipótesis y foco
 

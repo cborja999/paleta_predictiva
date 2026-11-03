@@ -124,3 +124,9 @@ La app principal es la versión editorial (`prototipo/index.html`); el Wrapped q
 - Idea de Borja: mostrar que las que "se quedan" en 2025 también se vieron en 2026, como prueba de la hipótesis.
 - Cruce: mismo término de búsqueda en las listas de SS2026 y FW2026 (regla simple, decidida al hacer el cruce, no antes). Volvieron 3 de 15 "se queda" (broche, tapado protagonista, estampado floral), 0 de 11 "en riesgo" y 6 de 20 "sin señal clara".
 - No prueba la hipótesis: la hipótesis mide búsquedas, no pasarelas, y las sin señal volvieron en mayor proporción que las que se quedan. La página lo muestra como pista, con los tres números.
+
+## 2026-11-02 App online en Netlify, abierta y con fotos
+
+- Sitio: https://paleta-predictiva.netlify.app (cuenta de Borja). La clave de Groq está en la variable `GROQ_API_KEY` del sitio, cargada desde el `.env` sin mostrarla.
+- Netlify lo creó protegido (solo miembros del equipo). Borja decidió abrirlo para que los profes entren con el link, y que muestre las fotos de los desfiles aunque tengan derechos.
+- Las fotos siguen fuera de GitHub. Por eso el sitio no se conecta al repo: se publica con `prototipo/publicar.sh`, que junta la rama `entrega-3` de GitHub con las fotos locales.
