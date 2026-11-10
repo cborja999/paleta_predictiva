@@ -8,7 +8,7 @@ Toma las tendencias de SS2024 y FW2024 con veredicto (se queda / riesgo) y los
 nombres de lo que se vio en SS2026 y FW2026 (sin veredicto). No cambia ningún dato:
 solo traduce los nombres y recorta la curva a 12 meses antes y 12 después del desfile.
 """
-import json
+import csv, json
 import math
 from pathlib import Path
 
@@ -215,10 +215,18 @@ for v in vistas:
 # Colores de pasarela (brief.json): % de looks con ese color, temporadas recientes contra previas, y el color medido
 NOM_COLOR = {"Marron": "Marrón", "Beige/Crema": "Beige y crema"}
 b = json.loads((RAIZ / "app" / "datos" / "brief.json").read_text(encoding="utf-8"))
-colores = [{"nombre": NOM_COLOR.get(c["categoria"], c["categoria"]), "hex": c["hex"],
-            "reciente": c["pasarela_reciente"], "previo": c["pasarela_previo"],
-            "cambio_pts": round(c["pasarela_reciente"] - c["pasarela_previo"], 1)}
-           for c in b["items"] if c["tipo"] == "color"]
+# % exacto (fotos / looks validos de cada temporada, promedio de las 3) para no redondear dos veces
+PART = list(csv.DictReader(open(RAIZ / "analisis" / "participacion_por_temporada.csv", encoding="utf-8")))
+def pct_exacto(cat, temps):
+    d = {x["temporada"]: 100 * int(x["fotos"]) / int(x["total_validas"]) for x in PART if x["tipo"] == "color" and x["categoria"] == cat}
+    return sum(d.get(t, 0) for t in temps) / len(temps)
+colores = []
+for c in b["items"]:
+    if c["tipo"] != "color": continue
+    rec, pre = pct_exacto(c["categoria"], b["meta"]["pasarela_recientes"]), pct_exacto(c["categoria"], b["meta"]["pasarela_previas"])
+    colores.append({"nombre": NOM_COLOR.get(c["categoria"], c["categoria"]), "hex": c["hex"],
+                    "reciente": round(rec, 1), "previo": round(pre, 1), "cambio_pts": round(rec - pre, 1),
+                    "cada": round(100 / rec)})   # "1 de cada N looks"
 # ¿Volvió a la pasarela en 2026? Mismo término de búsqueda en las listas de SS2026 o FW2026 (solo para 2025).
 # Es contexto: volver a la pasarela no es seguir buscándose, que es lo que mide la hipótesis.
 t26 = {v["termino"] for v in vistas}

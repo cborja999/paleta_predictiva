@@ -14,7 +14,7 @@ Genera dos archivos:
 - `numeros_de_la_pagina.csv`: una fila por número, con el valor en la página, el recalculado, si coincide, el archivo crudo del que sale y el cálculo.
 - `salida_verificacion.txt`: el resumen.
 
-**Resultado: 574 chequeos, 569 coinciden.** Los 5 que no coinciden se explican más abajo.
+**Resultado: 575 chequeos, los 575 coinciden.**
 
 ## Los números, uno por uno
 
@@ -69,7 +69,7 @@ Cada una tiene su huella sha256 en un archivo `SHA256_*.txt` de la misma carpeta
 
 | En la página | Cálculo |
 |---|---|
-| "1 de cada N looks" | 100 / (% de looks con ese color dominante, promedio de SS2023, FW2023 y SS2024). |
+| "1 de cada N looks" | 100 / (% exacto de looks con ese color dominante, promedio de SS2023, FW2023 y SS2024). |
 | ↑ / ↓ | Ese promedio contra el de FW2021, SS2022 y FW2022. |
 
 **Qué tan confiable es Gemini:** se revisaron a mano 40 fotos (`analisis/validacion_gemini_muestra.csv`). Coincidió en:
@@ -80,17 +80,15 @@ Cada una tiene su huella sha256 en un archivo `SHA256_*.txt` de la misma carpeta
 
 Por eso la página usa solo el color.
 
-### 4. El método ("7 de 14", "2.430 looks")
+### 4. El método ("2.430 looks", "122 tendencias")
 - **2.430 looks:** las filas de `resultados_gemini.csv`, todas sin error.
-- **7 de 14:** es la prueba de la Entrega 2 (¿la pasarela anticipa las búsquedas?). Sale de `analisis/chequeo_adelante.csv`, la cuenta de `acierta = si`. Es el único número que **no se puede rehacer desde lo crudo**: los CSV de Trends de esa prueba no están en el repo.
+- **122 tendencias:** las de M1 y M2 (2019 a 2023), de donde salió la idea. Sobre ellas están el 73% de las planas y el 88% de las que suben.
 
-## Lo que no coincide (y qué hacemos)
+## Correcciones que salieron de esta verificación
 
-1. **"1 de cada N looks" en 5 colores** (Gris, Naranja, Verde, Azul y Metalizado) está corrido en 1 o 2.
-   - **Por qué:** la página divide por el porcentaje ya redondeado a un decimal. Por ejemplo, Gris: 100 / 7,4 = 14, cuando el porcentaje exacto da 13.
-   - **Cómo se arregla:** calcularlo con el porcentaje sin redondear en `prototipo/armar_datos.py`.
-2. **"73% contra 88%"** coincide, pero hay que aclarar que son 122 tendencias (M1 + M2) y no las 178 del resto de la página.
-3. **"7 de 14"** se puede rehacer desde el CSV intermedio, pero no desde lo crudo. Hay que bajar de nuevo esas búsquedas o sacarlo de la página.
+1. **"1 de cada N looks":** la página dividía por el porcentaje ya redondeado y en 5 colores quedaba corrido en 1 o 2 (Gris decía 14 y es 13). Ahora se calcula con el porcentaje exacto (`prototipo/armar_datos.py`).
+2. **"73% contra 88%":** ahora la página aclara que son las 122 tendencias de 2019 a 2023. Con las 178 da 76% contra 90%.
+3. **"7 de 14" (Entrega 2) se sacó de la página.** No se podía rehacer desde lo crudo (las búsquedas de esa prueba no están en el repo) y además comparaba ene-sep 2026 contra 2025, el período en que Google cambió la forma de medir. La página dice solo que no apareció un desfase entre pasarela y búsquedas.
 
 ## Datos que juntamos y la página no usa
 

@@ -1,5 +1,5 @@
 VERIFICACION INDEPENDIENTE DE LOS NUMEROS DE LA PAGINA
-574 chequeos: 569 coinciden, 5 no
+575 chequeos: 575 coinciden, 0 no
 
 SS2024: 16 terminos declarados, 16 usables, mediana de la temporada +0.107 (= +11%)
 FW2024: 15 terminos declarados, 15 usables, mediana de la temporada +0.170 (= +19%)
@@ -14,8 +14,4 @@ Tamanio de cada muestra: {'M1': 68, 'M2': 54, 'C1': 56}; temporadas del brief: S
 Casas: 15; temporadas: 27
 
 NO COINCIDEN:
-Color · Gris | 1 de cada N looks: pagina 14, recalculado 13
-Color · Naranja | 1 de cada N looks: pagina 91, recalculado 89
-Color · Verde | 1 de cada N looks: pagina 53, recalculado 54
-Color · Azul | 1 de cada N looks: pagina 33, recalculado 34
-Color · Metalizado | 1 de cada N looks: pagina 91, recalculado 90
+ninguno

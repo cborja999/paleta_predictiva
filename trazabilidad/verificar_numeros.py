@@ -196,17 +196,17 @@ for c in pagina["colores"]:
     sec = f"Color · {c['nombre']}"
     chequear(sec, "% de looks (3 temporadas recientes)", round(rec, 1), c["reciente"], "resultados_gemini.csv (color_dominante)",
              "promedio de " + "+".join(meta["recientes"]), tol=0.1)
-    chequear(sec, "1 de cada N looks", round(100 / rec), round(100 / c["reciente"]), "idem", "100 / %")
-    chequear(sec, "cambio (puntos)", round(rec - pre, 1), c["cambio_pts"], "idem", "reciente - " + "+".join(meta["previas"]), tol=0.15)
+    chequear(sec, "1 de cada N looks", round(100 / rec), c["cada"], "idem", "100 / % exacto")
+    chequear(sec, "cambio (puntos)", round(rec - pre, 1), c["cambio_pts"], "idem", "reciente - " + "+".join(meta["previas"]))
 
 # =====================================================================
 # 4. NUMEROS ESCRITOS A MANO EN EL HTML: que esten y que coincidan
 # =====================================================================
-for frase in ["9 de cada 10", "178 tendencias", "2 de 19", "9 de 16", "unas 5 veces", "2.430 looks", "7 de 14", "1 de 17", "73%", "88%"]:
+for frase in ["9 de cada 10", "178 tendencias", "2 de 19", "9 de 16", "unas 5 veces", "2.430 looks", "1 de 17", "73%", "88%", "122 tendencias"]:
     chequear("Texto de la página", f"'{frase}' aparece", en_texto(frase), True, "prototipo/index.html", "busqueda de texto")
-ade = filas("analisis/chequeo_adelante.csv")
-chequear("Método", "'7 de 14' aciertos (Entrega 2)", f"{sum(r['acierta'] == 'si' for r in ade)} de {len(ade)}", "7 de 14",
-         "analisis/chequeo_adelante.csv (intermedio: los CSV crudos de esa prueba no estan en el repo)", "cuenta de acierta = si")
+# "7 de 14" (Entrega 2) se saco de la pagina: sus CSV crudos no estan en el repo y media 2026, cuando Google cambio la forma de medir
+chequear("Método", "'7 de 14' ya no esta en la pagina", en_texto("7 de 14"), False, "prototipo/index.html", "busqueda de texto")
+chequear("Método", "'122 tendencias' (M1 + M2)", len(mm), 122, "M1 + M2", "terminos usables")
 
 # =====================================================================
 os.makedirs(AQUI, exist_ok=True)

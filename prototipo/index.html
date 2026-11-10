@@ -361,7 +361,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   <section class="seccion" id="metodo">
     <div class="seccion-cabeza">
       <div><p class="caps">Método</p><h2>Cómo <i>lo sabemos</i></h2></div>
-      <p class="intro">Probamos primero si la pasarela anticipaba las búsquedas, con más de 2.000 looks de Vogue Runway clasificados con IA. Acertaba la mitad de las veces, como una moneda. Lo que sí daba pistas era lo que pasaba con las búsquedas después del desfile.</p>
+      <p class="intro">Probamos primero si la pasarela anticipaba las búsquedas, con 2.430 looks de Vogue Runway clasificados con IA. No apareció ningún desfase entre lo que se vio en la pasarela y lo que se buscó después. Lo que sí daba pistas era lo que pasaba con las búsquedas después del desfile.</p>
     </div>
     <div class="metodo">
       <ol class="pasos" id="pasos"></ol>
@@ -376,9 +376,9 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
         <p class="caps">La hipótesis</p><h3>Qué cambió y por qué</h3>
         <ol>
           <li><b>Al principio</b> creíamos que la pasarela anticipa las ventas masivas 12 a 18 meses después.</li>
-          <li><b>Lo probamos</b> con 2.430 looks de Vogue Runway clasificados con IA contra Google Trends: no apareció ningún desfase y acertaba 7 de 14, como tirar una moneda. Lo presentamos como resultado nulo.</li>
+          <li><b>Lo probamos</b> con 2.430 looks de Vogue Runway clasificados con IA contra Google Trends: no apareció ningún desfase. Lo presentamos como resultado nulo.</li>
           <li><b>Lo que sí funcionó</b> fue mirar qué pasa con las búsquedas el primer año después del desfile. Probamos que lo que sube se queda con tendencias nuevas de 2016 a 2018, que no habíamos usado para armar la idea: solo 1 de 17 fue pasajera.</li>
-          <li><b>Lo que descartamos:</b> que lo que se mantiene plano sea pasajero. No se sostuvo: las planas se quedaron 73% de las veces, no tan lejos del 88% de las que suben. El riesgo está en lo que cae.</li>
+          <li><b>Lo que descartamos:</b> que lo que se mantiene plano sea pasajero. No se sostuvo: las planas se quedaron 73% de las veces, no tan lejos del 88% de las que suben (122 tendencias de 2019 a 2023, de donde salió la idea). El riesgo está en lo que cae.</li>
         </ol>
       </div>
       <div>
@@ -572,7 +572,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   $('intro-colores').textContent = 'Cuánto aparecieron en los desfiles de ' + temps(CM.recientes) + '. Es lo que se vio, no si se queda.';
   function claro(hex){ var n = parseInt(hex.slice(1), 16); return (0.299 * (n >> 16) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255)) > 150; }
   $('paleta').innerHTML = D.colores.slice().sort(function(a, b){ return b.reciente - a.reciente; }).map(function(c){
-    var cada = Math.round(100 / c.reciente), mov = c.cambio_pts >= 1 ? '↑ más que antes' : c.cambio_pts <= -1 ? '↓ menos que antes' : 'igual que antes';
+    var cada = c.cada, mov = c.cambio_pts >= 1 ? '↑ más que antes' : c.cambio_pts <= -1 ? '↓ menos que antes' : 'igual que antes';
     return '<div class="color"><div class="muestra" style="background:' + c.hex + ';color:' + (claro(c.hex) ? 'var(--negro)' : '#fff') + '">' +
       '<b>1 de cada ' + cada + '</b><span class="caps">looks</span></div>' +
       '<b class="f-nombre">' + c.nombre + '</b><p class="frase">' + mov + '</p></div>';

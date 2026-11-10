@@ -8,7 +8,7 @@ App online: **https://paleta-predictiva.netlify.app** · Repo: https://github.co
 
 **Qué cambió y por qué**
 1. **Entrega 1:** "la pasarela anticipa las ventas masivas 12 a 18 meses después".
-2. **Entrega 2:** lo probamos con 2.430 looks de Vogue Runway clasificados con Gemini contra Google Trends. No apareció ningún desfase: acertaba 7 de 14, como una moneda. Lo presentamos como resultado nulo.
+2. **Entrega 2:** lo probamos con 2.430 looks de Vogue Runway clasificados con Gemini contra Google Trends. No apareció ningún desfase entre lo que se vio en la pasarela y lo que se buscó después. Lo presentamos como resultado nulo.
 3. **Lo que sí funcionó:** mirar las búsquedas del primer año después del desfile. Lo que sube se queda: lo probamos con tendencias nuevas de 2016 a 2018, con reglas escritas antes de bajar los datos, y solo 1 de 17 fue pasajera. En 8 ciclos de 2016 a 2024 nunca pasó del 20%.
 4. **Lo que descartamos:** "lo que queda plano es pasajero". No se sostuvo (las planas se quedan 73%). El riesgo está en lo que cae: de 2021 a 2024, 9 de 16 pasajeras, contra 2 de 19 de las que suben.
 

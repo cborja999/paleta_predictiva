@@ -530,37 +530,37 @@ Método · ciclos,2023-2024 suben pasajeras,1/5,1/5,si,analisis/microtendencias/
 Método · ciclos,2023-2024 bajan pasajeras,2/3,2/3,si,analisis/microtendencias/datos/*.csv + analisis/hipotesis/datos/trends_c1_web.csv,idem
 Método,looks de Vogue Runway clasificados,2430,2430,si,datasets_procesados/resultados_gemini.csv,filas sin error
 Color · Negro,% de looks (3 temporadas recientes),34.6,34.6,si,resultados_gemini.csv (color_dominante),promedio de SS2023+FW2023+SS2024
-Color · Negro,1 de cada N looks,3,3,si,idem,100 / %
-Color · Negro,cambio (puntos),1.3,1.2,si,idem,reciente - FW2021+SS2022+FW2022
+Color · Negro,1 de cada N looks,3,3,si,idem,100 / % exacto
+Color · Negro,cambio (puntos),1.2,1.2,si,idem,reciente - FW2021+SS2022+FW2022
 Color · Blanco,% de looks (3 temporadas recientes),6.3,6.3,si,resultados_gemini.csv (color_dominante),promedio de SS2023+FW2023+SS2024
-Color · Blanco,1 de cada N looks,16,16,si,idem,100 / %
+Color · Blanco,1 de cada N looks,16,16,si,idem,100 / % exacto
 Color · Blanco,cambio (puntos),-0.7,-0.7,si,idem,reciente - FW2021+SS2022+FW2022
 Color · Gris,% de looks (3 temporadas recientes),7.4,7.4,si,resultados_gemini.csv (color_dominante),promedio de SS2023+FW2023+SS2024
-Color · Gris,1 de cada N looks,14,13,NO,idem,100 / %
+Color · Gris,1 de cada N looks,13,13,si,idem,100 / % exacto
 Color · Gris,cambio (puntos),0.4,0.4,si,idem,reciente - FW2021+SS2022+FW2022
 Color · Beige y crema,% de looks (3 temporadas recientes),10.4,10.4,si,resultados_gemini.csv (color_dominante),promedio de SS2023+FW2023+SS2024
-Color · Beige y crema,1 de cada N looks,10,10,si,idem,100 / %
+Color · Beige y crema,1 de cada N looks,10,10,si,idem,100 / % exacto
 Color · Beige y crema,cambio (puntos),3.0,3.0,si,idem,reciente - FW2021+SS2022+FW2022
 Color · Marrón,% de looks (3 temporadas recientes),4.8,4.8,si,resultados_gemini.csv (color_dominante),promedio de SS2023+FW2023+SS2024
-Color · Marrón,1 de cada N looks,21,21,si,idem,100 / %
-Color · Marrón,cambio (puntos),-3.4,-3.3,si,idem,reciente - FW2021+SS2022+FW2022
+Color · Marrón,1 de cada N looks,21,21,si,idem,100 / % exacto
+Color · Marrón,cambio (puntos),-3.3,-3.3,si,idem,reciente - FW2021+SS2022+FW2022
 Color · Rojo,% de looks (3 temporadas recientes),4.5,4.5,si,resultados_gemini.csv (color_dominante),promedio de SS2023+FW2023+SS2024
-Color · Rojo,1 de cada N looks,22,22,si,idem,100 / %
-Color · Rojo,cambio (puntos),2.3,2.2,si,idem,reciente - FW2021+SS2022+FW2022
+Color · Rojo,1 de cada N looks,22,22,si,idem,100 / % exacto
+Color · Rojo,cambio (puntos),2.2,2.2,si,idem,reciente - FW2021+SS2022+FW2022
 Color · Rosa,% de looks (3 temporadas recientes),2.2,2.2,si,resultados_gemini.csv (color_dominante),promedio de SS2023+FW2023+SS2024
-Color · Rosa,1 de cada N looks,45,45,si,idem,100 / %
-Color · Rosa,cambio (puntos),-1.9,-1.8,si,idem,reciente - FW2021+SS2022+FW2022
+Color · Rosa,1 de cada N looks,45,45,si,idem,100 / % exacto
+Color · Rosa,cambio (puntos),-1.8,-1.8,si,idem,reciente - FW2021+SS2022+FW2022
 Color · Naranja,% de looks (3 temporadas recientes),1.1,1.1,si,resultados_gemini.csv (color_dominante),promedio de SS2023+FW2023+SS2024
-Color · Naranja,1 de cada N looks,91,89,NO,idem,100 / %
+Color · Naranja,1 de cada N looks,89,89,si,idem,100 / % exacto
 Color · Naranja,cambio (puntos),0.0,0.0,si,idem,reciente - FW2021+SS2022+FW2022
 Color · Verde,% de looks (3 temporadas recientes),1.9,1.9,si,resultados_gemini.csv (color_dominante),promedio de SS2023+FW2023+SS2024
-Color · Verde,1 de cada N looks,53,54,NO,idem,100 / %
-Color · Verde,cambio (puntos),-0.3,-0.4,si,idem,reciente - FW2021+SS2022+FW2022
+Color · Verde,1 de cada N looks,54,54,si,idem,100 / % exacto
+Color · Verde,cambio (puntos),-0.4,-0.4,si,idem,reciente - FW2021+SS2022+FW2022
 Color · Azul,% de looks (3 temporadas recientes),3.0,3.0,si,resultados_gemini.csv (color_dominante),promedio de SS2023+FW2023+SS2024
-Color · Azul,1 de cada N looks,33,34,NO,idem,100 / %
+Color · Azul,1 de cada N looks,34,34,si,idem,100 / % exacto
 Color · Azul,cambio (puntos),-1.1,-1.1,si,idem,reciente - FW2021+SS2022+FW2022
 Color · Metalizado,% de looks (3 temporadas recientes),1.1,1.1,si,resultados_gemini.csv (color_dominante),promedio de SS2023+FW2023+SS2024
-Color · Metalizado,1 de cada N looks,91,90,NO,idem,100 / %
+Color · Metalizado,1 de cada N looks,90,90,si,idem,100 / % exacto
 Color · Metalizado,cambio (puntos),0.0,0.0,si,idem,reciente - FW2021+SS2022+FW2022
 Texto de la página,'9 de cada 10' aparece,True,True,si,prototipo/index.html,busqueda de texto
 Texto de la página,'178 tendencias' aparece,True,True,si,prototipo/index.html,busqueda de texto
@@ -568,8 +568,9 @@ Texto de la página,'2 de 19' aparece,True,True,si,prototipo/index.html,busqueda
 Texto de la página,'9 de 16' aparece,True,True,si,prototipo/index.html,busqueda de texto
 Texto de la página,'unas 5 veces' aparece,True,True,si,prototipo/index.html,busqueda de texto
 Texto de la página,'2.430 looks' aparece,True,True,si,prototipo/index.html,busqueda de texto
-Texto de la página,'7 de 14' aparece,True,True,si,prototipo/index.html,busqueda de texto
 Texto de la página,'1 de 17' aparece,True,True,si,prototipo/index.html,busqueda de texto
 Texto de la página,'73%' aparece,True,True,si,prototipo/index.html,busqueda de texto
 Texto de la página,'88%' aparece,True,True,si,prototipo/index.html,busqueda de texto
-Método,'7 de 14' aciertos (Entrega 2),7 de 14,7 de 14,si,analisis/chequeo_adelante.csv (intermedio: los CSV crudos de esa prueba no estan en el repo),cuenta de acierta = si
+Texto de la página,'122 tendencias' aparece,True,True,si,prototipo/index.html,busqueda de texto
+Método,'7 de 14' ya no esta en la pagina,False,False,si,prototipo/index.html,busqueda de texto
+Método,'122 tendencias' (M1 + M2),122,122,si,M1 + M2,terminos usables

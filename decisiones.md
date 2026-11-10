@@ -136,3 +136,9 @@ La app principal es la versión editorial (`prototipo/index.html`); el Wrapped q
 - Borja: sacar de la página la lista "sin señal clara" y el bloque "¿Las de 2025 volvieron a la pasarela en 2026?".
 - Las 32 sin señal siguen contadas en Método. Del cruce con 2026 se sacó el bloque entero, no solo la columna que no favorecía (6 de 20 sin señal volvieron, más que 3 de 15 "se quedan"); el resultado queda en `entrega3/GUION.md` (preguntas) por si lo preguntan.
 - La evidencia de "Por qué creerle" pasa a comparar: las que bajan tienen unas 5 veces más chances de pasar de moda (9 de 16 contra 2 de 19, `hipotesis.md`).
+
+## 2026-11-10 Trazabilidad: cada número de la página se recalcula desde lo crudo
+
+- Por la devolución de la Entrega 3 (Rigor): `trazabilidad/verificar_numeros.py` recalcula cada número de la página desde los CSV crudos de Google Trends y de Gemini y lo compara. Detalle en `trazabilidad/LEEME.md`.
+- Correcciones: "1 de cada N looks" ahora usa el porcentaje exacto (estaba corrido 1 o 2 en 5 colores); el 73%/88% aclara que son 122 tendencias (M1 + M2); se sacó el "7 de 14" de la Entrega 2 porque no se puede rehacer desde lo crudo y medía 2026, cuando Google cambió la forma de medir.
+- Resultado: 575 de 575 chequeos coinciden.

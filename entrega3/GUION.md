@@ -20,7 +20,7 @@ Paleta predictiva le dice qué tendencias de pasarela tienden a quedarse y cuál
 > Una tendencia de pasarela que gana búsquedas en su primer año rara vez se desploma en el segundo, y las que las pierden tienen más del triple de chances de ser pasajeras.
 
 1. **Entrega 1:** "la pasarela anticipa las ventas 12 a 18 meses después".
-2. **Entrega 2:** lo probamos con 2.430 looks de Vogue Runway clasificados con Gemini contra Google Trends. No apareció ningún desfase: acertaba 7 de 14, como tirar una moneda. Lo presentamos como resultado nulo.
+2. **Entrega 2:** lo probamos con 2.430 looks de Vogue Runway clasificados con Gemini contra Google Trends. No apareció ningún desfase entre lo que se vio en la pasarela y lo que se buscó después. Lo presentamos como resultado nulo.
 3. **Qué aprendimos:** lo que sí sirve es mirar qué pasa con las búsquedas el primer año después del desfile.
    - **Lo que sube se queda.** Lo probamos con tendencias de 2016 a 2018 que no habíamos usado, con las reglas escritas antes de bajar los datos: solo 1 de 17 fue pasajera. En 8 ciclos, de 2016 a 2024, nunca pasó del 20%.
    - **Lo que cae.** De 2021 a 2024, 9 de 16 de las que perdieron búsquedas fueron pasajeras, contra 2 de 19 de las que ganaron.
