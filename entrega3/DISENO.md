@@ -2,7 +2,9 @@
 
 ## Cómo se hizo
 
-No hubo diseño en Figma: decidimos diseñar directamente en código con un agente de IA (Claude Code). Cada pantalla depende de datos reales (curvas de búsquedas, veredictos, confianza, respuestas de la IA con sus estados de carga y error) y en código las podíamos probar con esos datos desde el primer día, en celular y en escritorio. Lo que en un flujo con Figma sería "el diseño original" acá son el brief, las referencias y las dos alternativas que armó el agente (capturas abajo).
+Maquetas en baja en Figma: https://www.figma.com/design/T9rjlTSq9BcnjynoK2gRoU (alternativa editorial: home, índice y nota; alternativa Wrapped: tres pantallas de celular; con notas cortas que explican las decisiones). Muestran la estructura de cada alternativa.
+
+El diseño en sí no se hizo en Figma: decidimos diseñar directamente en código con un agente de IA (Claude Code). Cada pantalla depende de datos reales (curvas de búsquedas, veredictos, confianza, respuestas de la IA con sus estados de carga y error) y en código las podíamos probar con esos datos desde el primer día, en celular y en escritorio. Lo que en un flujo con Figma sería "el diseño original" acá son el brief, las referencias y las dos alternativas que armó el agente (capturas abajo).
 
 El diseño partió de:
 

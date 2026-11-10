@@ -84,7 +84,7 @@ Si la IA no responde, decirlo tranquilos: la página lo avisa y los datos calcul
 
 ## 12:30 a 14:30: diseño (punto 4)
 
-- **No hubo Figma: diseñamos en código con un agente de IA (Claude Code).** Lo decidimos así porque cada pantalla dependía de datos reales (curvas, veredictos, estados de la IA) y en código lo podíamos probar con esos datos desde el primer día.
+- **Diseñamos en código con un agente de IA (Claude Code); las maquetas en baja están en Figma** (https://www.figma.com/design/T9rjlTSq9BcnjynoK2gRoU), con la estructura de cada alternativa. Diseñamos en código porque cada pantalla dependía de datos reales (curvas, veredictos, estados de la IA) y en código lo podíamos probar con esos datos desde el primer día.
 - **Partimos de:**
   - el brief (para quién, qué preguntas tiene que responder);
   - las referencias: Lyst Index, Spotify Wrapped, TradingView y Pantone;
@@ -148,8 +148,8 @@ Groq es rápido y tiene capa gratuita. Empezamos con Llama 3.3 70B, pero Groq lo
 **¿Qué pasa si alguien escribe instrucciones en la descripción de la marca?**
 Se recorta a 280 caracteres y el prompt le dice a la IA que la tome solo como contexto. Igual, la apuesta y los números los controla el código, no la IA.
 
-**¿Por qué no hay Figma?**
-Diseñamos directamente en código con un agente de IA, porque las pantallas dependían de datos reales. Las alternativas, las decisiones y las diferencias están documentadas con capturas en `entrega3/DISENO.md`.
+**¿Por qué el Figma es solo en baja?**
+Diseñamos directamente en código con un agente de IA, porque las pantallas dependían de datos reales. Las maquetas en baja de Figma muestran la estructura de cada alternativa. Las alternativas, las decisiones y las diferencias están documentadas con capturas en `entrega3/DISENO.md`.
 
 **¿De dónde salen las fotos?**
 Son looks de los desfiles que nombra la nota del medio de cada tendencia (o, si la nota no se pudo abrir, otras notas de la misma temporada); la lista está en `prototipo/FOTOS.md`. Tienen derechos: las usamos en la presentación de clase y no están en el repo público.

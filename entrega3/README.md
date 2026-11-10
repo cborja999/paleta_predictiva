@@ -44,7 +44,7 @@ GPT-OSS 120B (modelo abierto de OpenAI) vía la API de Groq, en una función de 
 
 ## 4. Diseño / UX
 
-No hubo Figma: el diseño se hizo en código con un agente de IA (Claude Code), a partir del brief y las referencias. Se hicieron dos alternativas (editorial y Wrapped) y elegimos la editorial. La página abre con un home y un índice por temporada al estilo de las notas de análisis de WGSN (foto del desfile, veredicto y el número en la frase), con dos fotos por tendencia de dos desfiles distintos. Las decisiones de código (el gráfico que muestra lo que compara la regla, estados de carga y error de la IA, responsive, accesibilidad, fotos solo en la presentación) y las capturas están en `entrega3/DISENO.md`.
+Maquetas en baja en Figma: https://www.figma.com/design/T9rjlTSq9BcnjynoK2gRoU. El diseño se hizo en código con un agente de IA (Claude Code), a partir del brief y las referencias. Se hicieron dos alternativas (editorial y Wrapped) y elegimos la editorial. La página abre con un home y un índice por temporada al estilo de las notas de análisis de WGSN (foto del desfile, veredicto y el número en la frase), con dos fotos por tendencia de dos desfiles distintos. Las decisiones de código (el gráfico que muestra lo que compara la regla, estados de carga y error de la IA, responsive, accesibilidad, fotos solo en la presentación) y las capturas están en `entrega3/DISENO.md`.
 
 ## 5. Comunicación
 
