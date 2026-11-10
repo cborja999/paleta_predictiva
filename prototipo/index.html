@@ -263,7 +263,6 @@ button.ficha-t:hover .f-nombre{font-style:italic}
 .lectura-ia li{font-family:var(--didone);font-size:19px;line-height:1.4;margin-bottom:10px;font-variation-settings:"opsz" 24}
 .dato{font-family:var(--sans,inherit);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--negro);border:1px solid var(--linea);padding:2px 6px;white-space:nowrap;vertical-align:3px}
 .ia-resp h5 .gris{color:var(--gris);letter-spacing:.1em}
-.regla-ap{color:var(--gris);font-size:13px}
 .ia-ojo strong{font-weight:500}
 .ia-control{margin-top:16px;font-size:13px;color:#7a5a00;background:#fff7dd;padding:10px 12px}
 .ia-error{color:var(--rojo);font-size:15px}
@@ -626,7 +625,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
       '<p class="lead">' + lead + '</p>' + barras(t) +
       '<dl class="ficha">' +
         '<div><dt class="caps gris">Confianza</dt><dd>' + t.confianza + (t.confianza === 'Alta' ? ': la diferencia es grande' : ': la diferencia es moderada') + '</dd></div>' +
-        '<div><dt class="caps gris">Cuánto apostar</dt><dd>' + APUESTA[t.apuesta] + ' <span class="regla-ap">· regla fija, no la IA</span></dd></div>' +
+        '<div><dt class="caps gris">Cuánto apostar</dt><dd>' + APUESTA[t.apuesta] + '</dd></div>' +
         '<div><dt class="caps gris">En Google</dt><dd>“' + t.termino + '”</dd></div>' +
         '<div><dt class="caps gris">La nombró</dt><dd><a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a></dd></div>' +
       '</dl>' + bloqueIA(t) + '</div></div>';
