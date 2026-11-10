@@ -1,0 +1,21 @@
+VERIFICACION INDEPENDIENTE DE LOS NUMEROS DE LA PAGINA
+574 chequeos: 569 coinciden, 5 no
+
+SS2024: 16 terminos declarados, 16 usables, mediana de la temporada +0.107 (= +11%)
+FW2024: 15 terminos declarados, 15 usables, mediana de la temporada +0.170 (= +19%)
+SS2025: 26 terminos declarados, 26 usables, mediana de la temporada +0.209 (= +23%)
+FW2025: 20 terminos declarados, 20 usables, mediana de la temporada +0.294 (= +34%)
+Terminos declarados que no se usaron por poco volumen: ninguno
+Evidencia: 178 tendencias; suben 50, se quedan 45 (90%)
+Riesgo de las que bajan sobre las que suben (2021-2024): 5.34 veces
+   (con las 178, no solo M1+M2: planas 76%, suben 90%)
+Peor ciclo de las que suben: 20% pasajeras (la linea del grafico marca 20%)
+Tamanio de cada muestra: {'M1': 68, 'M2': 54, 'C1': 56}; temporadas del brief: SS2024 16, FW2024 15, SS2025 26, FW2025 20
+Casas: 15; temporadas: 27
+
+NO COINCIDEN:
+Color · Gris | 1 de cada N looks: pagina 14, recalculado 13
+Color · Naranja | 1 de cada N looks: pagina 91, recalculado 89
+Color · Verde | 1 de cada N looks: pagina 53, recalculado 54
+Color · Azul | 1 de cada N looks: pagina 33, recalculado 34
+Color · Metalizado | 1 de cada N looks: pagina 91, recalculado 90
