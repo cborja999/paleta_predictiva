@@ -259,6 +259,11 @@ button.ficha-t:hover .f-nombre{font-style:italic}
 .apuesta b{font-family:var(--didone);font-weight:400;font-size:30px;line-height:1;text-transform:capitalize}
 .apuesta span{font-weight:300;font-size:15px;flex:1;min-width:200px}
 .ia-ojo{margin-top:16px;font-size:15px;font-weight:300}
+.lectura-ia{list-style:none;padding:0!important}
+.lectura-ia li{font-family:var(--didone);font-size:19px;line-height:1.4;margin-bottom:10px;font-variation-settings:"opsz" 24}
+.dato{font-family:var(--sans,inherit);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--negro);border:1px solid var(--linea);padding:2px 6px;white-space:nowrap;vertical-align:3px}
+.ia-resp h5 .gris{color:var(--gris);letter-spacing:.1em}
+.regla-ap{color:var(--gris);font-size:13px}
 .ia-ojo strong{font-weight:500}
 .ia-control{margin-top:16px;font-size:13px;color:#7a5a00;background:#fff7dd;padding:10px 12px}
 .ia-error{color:var(--rojo);font-size:15px}
@@ -396,8 +401,8 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
       </div>
       <div>
         <p class="caps">La IA</p><h3>Qué hace y qué no</h3>
-        <p>Cuando abrís una tendencia, podés pedirle a la IA qué haría una marca de tu rubro con ella. Le mandamos el veredicto, la confianza, el cambio de búsquedas, los avisos, la evidencia y los límites de los datos. Devuelve una lectura, ideas de producto y cuánto apostar.</p>
-        <p>No calcula nada ni cambia el veredicto. Un control automático revisa que no invente números y que la apuesta sea coherente con el veredicto; si falla, le pide que corrija una vez.</p>
+        <p>Cuando abrís una tendencia, podés pedirle a la IA qué haría una marca de tu rubro con ella. Le mandamos el veredicto, la confianza, el cambio de búsquedas, los avisos, la evidencia y los límites de los datos. Explica los datos en palabras simples y sugiere ideas de producto.</p>
+        <p>No decide nada: el veredicto, la confianza y cuánto apostar los fijan reglas del código. Cada frase sobre los datos dice de qué dato sale, y un control automático revisa que cada número esté en ese dato; si falla, le pide que corrija una vez.</p>
         <p id="ia-modelo" class="caps gris">Modelo: GPT-OSS 120B (abierto, de OpenAI), vía Groq</p>
         <div class="prompt"><button class="boton secundario" id="ver-prompt">Ver qué le pedimos a la IA</button><div id="prompt-texto"></div></div>
       </div>
@@ -621,6 +626,7 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
       '<p class="lead">' + lead + '</p>' + barras(t) +
       '<dl class="ficha">' +
         '<div><dt class="caps gris">Confianza</dt><dd>' + t.confianza + (t.confianza === 'Alta' ? ': la diferencia es grande' : ': la diferencia es moderada') + '</dd></div>' +
+        '<div><dt class="caps gris">Cuánto apostar</dt><dd>' + APUESTA[t.apuesta] + ' <span class="regla-ap">· regla fija, no la IA</span></dd></div>' +
         '<div><dt class="caps gris">En Google</dt><dd>“' + t.termino + '”</dd></div>' +
         '<div><dt class="caps gris">La nombró</dt><dd><a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a></dd></div>' +
       '</dl>' + bloqueIA(t) + '</div></div>';
@@ -654,6 +660,9 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   });
 
   // IA: recomendacion para la marca (funcion de Netlify -> Groq). La IA no calcula ni cambia el veredicto.
+  var APUESTA = {baja: 'Probar poco', media: 'Moderada', alta: 'Fuerte'};
+  var DATO = {veredicto: 'veredicto', confianza: 'confianza', cambio_de_busquedas: 'búsquedas', busquedas_promedio_0_a_100: 'búsquedas',
+    aviso: 'aviso', apuesta: 'regla de apuesta', evidencia: 'evidencia 2016-2024', limites: 'límites de los datos'};
   var API = '/api/lectura', online = location.protocol !== 'file:';
   function bloqueIA(t){
     return '<section class="ia-caja" aria-label="Recomendación de la IA">' +
@@ -679,11 +688,11 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
       .then(function(j){
         if (j.error) throw new Error(j.error);
         var s = j.salida;
-        resp.innerHTML = '<p class="lectura">' + esc(s.lectura) + '</p>' +
-          '<h5>Para tu marca</h5><p>' + esc(s.para_tu_marca) + '</p>' +
-          '<h5>Ideas</h5><ul>' + (s.ideas || []).map(function(i){ return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>' +
-          '<div class="apuesta"><span class="caps gris" style="flex:0 0 auto;min-width:0">Apuesta sugerida</span><b>' + esc(s.apuesta) + '</b><span>' + esc(s.por_que_apuesta) + '</span></div>' +
-          '<p class="ia-ojo"><strong>Ojo:</strong> ' + esc(s.ojo) + '</p>' +
+        resp.innerHTML = '<h5>Qué dicen los datos <span class="gris">· cada frase dice de dónde sale</span></h5><ul class="lectura-ia">' +
+          (s.lectura || []).map(function(f){ return '<li>' + esc(f.texto) + ' <span class="dato">Dato: ' + esc(DATO[f.dato] || f.dato) + '</span></li>'; }).join('') + '</ul>' +
+          '<h5>Para tu marca <span class="gris">· sugerencia de la IA</span></h5><p>' + esc(s.para_tu_marca) + '</p>' +
+          '<h5>Ideas <span class="gris">· sugerencia de la IA</span></h5><ul>' + (s.ideas || []).map(function(i){ return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>' +
+          '<p class="ia-ojo">La apuesta (' + APUESTA[j.apuesta].toLowerCase() + ') no la eligió la IA: sale de una regla fija con el veredicto, la confianza y los avisos.</p>' +
           (j.problemas && j.problemas.length ? '<p class="ia-control">El control automático marcó: ' + esc(j.problemas.join('; ')) + '. Tomalo con más cuidado.</p>' : '') +
           '<details class="envio"><summary>Qué le mandamos a la IA</summary><pre>' + esc(JSON.stringify(j.contexto, null, 2)) + '</pre><p class="caps gris" style="margin-top:8px">Modelo: ' + esc(j.modelo) + ' · Groq</p></details>';
       })

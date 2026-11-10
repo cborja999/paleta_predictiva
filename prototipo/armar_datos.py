@@ -183,6 +183,13 @@ for it in items:
 def promedio(xs):
     xs = [x for x in xs if x is not None]
     return sum(xs) / len(xs)
+# Cuánto apostar: lo decide esta regla fija a partir del veredicto, la confianza y los avisos, nunca la IA.
+#   en riesgo -> "baja" (probar poco) · se queda con confianza alta y sin avisos -> "alta" · el resto de "se queda" -> "media"
+REGLA_APUESTA = ("En riesgo: probar poco. Se queda con confianza alta y sin avisos: apostar fuerte. "
+                 "Se queda con confianza media o con un aviso: apuesta moderada.")
+def apuesta(t):
+    if t["veredicto"] == "riesgo": return "baja"
+    return "alta" if t["confianza"] == "Alta" and not t["aviso"] and not t["nota"] else "media"
 med_temp = {}
 for t in tendencias:
     t["b0"], t["b1"] = round(promedio(t["serie"][:12]), 2), round(promedio(t["serie"][12:]), 2)
@@ -193,6 +200,8 @@ for t in tendencias:
     t["temporada_pct"] = round((math.exp(med) - 1) * 100)         # cuánto se movió la temporada (mediana)
     t["esperado"] = round(t["b0"] * math.exp(med), 2)             # dónde estaría si se hubiera movido como la temporada
     t["desfiles"] = desfiles(t["id"])
+    t["apuesta"] = apuesta(t)
+
 
 def fid(termino, temporada):
     # Mismo id que usan las fotos: prototipo/fotos/<id>.jpg
@@ -246,7 +255,7 @@ medios = sorted({it["medio"] for it in items})
 
 datos = {"tendencias": tendencias, "sin_senal_items": sin_senal_items, "vistas_2026": vistas, "sin_senal": sin_senal,
          "colores": colores, "colores_meta": colores_meta, "medios": medios, "ciclos": ciclos,
-         "regla": d["meta"]["regla"], "confianza": d["meta"]["confianza"], "evidencia": d["meta"]["evidencia"]}
+         "regla": d["meta"]["regla"], "regla_apuesta": REGLA_APUESTA, "confianza": d["meta"]["confianza"], "evidencia": d["meta"]["evidencia"]}
 (RAIZ / "prototipo" / "datos.json").write_text(json.dumps(datos, ensure_ascii=False), encoding="utf-8")  # lo lee la funcion de la IA
 SALIDA.write_text("// Generado por prototipo/armar_datos.py. No editar a mano.\nwindow.DATOS = "
                   + json.dumps(datos, ensure_ascii=False) + ";\n", encoding="utf-8")

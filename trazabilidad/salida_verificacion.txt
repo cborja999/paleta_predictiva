@@ -1,5 +1,5 @@
 VERIFICACION INDEPENDIENTE DE LOS NUMEROS DE LA PAGINA
-575 chequeos: 575 coinciden, 0 no
+620 chequeos: 620 coinciden, 0 no
 
 SS2024: 16 terminos declarados, 16 usables, mediana de la temporada +0.107 (= +11%)
 FW2024: 15 terminos declarados, 15 usables, mediana de la temporada +0.170 (= +19%)

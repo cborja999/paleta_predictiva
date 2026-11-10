@@ -142,3 +142,9 @@ La app principal es la versión editorial (`prototipo/index.html`); el Wrapped q
 - Por la devolución de la Entrega 3 (Rigor): `trazabilidad/verificar_numeros.py` recalcula cada número de la página desde los CSV crudos de Google Trends y de Gemini y lo compara. Detalle en `trazabilidad/LEEME.md`.
 - Correcciones: "1 de cada N looks" ahora usa el porcentaje exacto (estaba corrido 1 o 2 en 5 colores); el 73%/88% aclara que son 122 tendencias (M1 + M2); se sacó el "7 de 14" de la Entrega 2 porque no se puede rehacer desde lo crudo y medía 2026, cuando Google cambió la forma de medir.
 - Resultado: 575 de 575 chequeos coinciden.
+
+## 2026-11-10 La IA solo explica: la apuesta pasa a ser una regla fija
+
+- Por la devolución de la Entrega 3 (IA: "excesiva responsabilidad en las conclusiones, sin trazabilidad"), con el acuerdo de Borja.
+- Cuánto apostar lo fija `apuesta()` en `prototipo/armar_datos.py`: en riesgo, probar poco; se queda con confianza alta y sin avisos, fuerte; el resto de "se queda", moderada (es la más alta que antes permitía el código). Se ve en la ficha de cada tendencia, sin IA.
+- La IA devuelve la lectura frase por frase, con el dato del que sale cada una; el servidor revisa que cada número esté en ese dato. Ya no devuelve apuesta ni "ojo". Detalle en `entrega3/IA.md`.

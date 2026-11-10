@@ -14,7 +14,7 @@ Genera dos archivos:
 - `numeros_de_la_pagina.csv`: una fila por número, con el valor en la página, el recalculado, si coincide, el archivo crudo del que sale y el cálculo.
 - `salida_verificacion.txt`: el resumen.
 
-**Resultado: 575 chequeos, los 575 coinciden.**
+**Resultado: 620 chequeos, los 620 coinciden.**
 
 ## Los números, uno por uno
 
@@ -37,6 +37,7 @@ FW2025 usa dos descargas: la A hasta septiembre de 2025 y la B desde octubre, ll
 | "Las demás tendencias de la temporada, Y%" | La mediana de log(B1/B0) de todas las tendencias de esa temporada. Da +11% en SS2024, +19% en FW2024, +23% en SS2025 y +34% en FW2025. |
 | Veredicto | g1 = log(B1/B0) − la mediana de la temporada.<br>Si g1 ≥ +0,10, se queda.<br>Si g1 ≤ −0,10, en riesgo.<br>En el medio, sin señal clara. |
 | Confianza | Alta si \|g1\| ≥ 0,30. Media si no. |
+| Cuánto apostar | Regla fija, no la IA. En riesgo: probar poco. Se queda con confianza alta y sin avisos: fuerte. Resto de "se queda": moderada. |
 | La curva | Los 24 valores mensuales tal como los da Google Trends. |
 | Totales | 77 tendencias: 45 con veredicto (23 se quedan y 22 en riesgo) y 32 sin señal. Ninguna se descartó por volumen. |
 

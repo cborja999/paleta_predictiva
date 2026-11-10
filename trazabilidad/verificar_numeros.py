@@ -89,6 +89,8 @@ for t in pagina["tendencias"] + pagina["sin_senal_items"]:
     chequear(sec, "cambio descontando la temporada (%)", round((math.exp(d["g1"]) - 1) * 100), t["cambio_pct"], src, "exp(g1) - 1", tol=1)
     if t in pagina["tendencias"]:
         chequear(sec, "confianza", d["confianza"], t["confianza"], src, "Alta si |g1| >= 0.30; Media si no")
+        ap = "baja" if d["veredicto"] == "riesgo" else ("alta" if d["confianza"] == "Alta" and not t["aviso"] and not t["nota"] else "media")
+        chequear(sec, "cuánto apostar", ap, t["apuesta"], src, "riesgo: baja; queda, Alta y sin avisos: alta; si no: media")
         chequear(sec, "B0 (promedio 12 meses antes)", round(d["B0"], 2), t["b0"], src, "promedio de los 12 meses antes del desfile", tol=0.06)
         chequear(sec, "B1 (promedio 12 meses despues)", round(d["B1"], 2), t["b1"], src, "promedio de los 12 meses desde el desfile", tol=0.06)
         chequear(sec, "busquedas: cambio sin descontar (%)", round((d["B1"] / d["B0"] - 1) * 100), t["bruto_pct"], src, "B1/B0 - 1", tol=1)
