@@ -1,11 +1,30 @@
-// Funcion de Netlify: POST /api/lectura -> recomendacion de la IA (Groq) para una tendencia y una marca.
-// GET /api/lectura -> modelo y system prompt (para mostrarlos en la app).
+// Funcion de Netlify: POST /api/lectura -> recomendacion de la IA (Groq) para una marca.
+//   {id, perfil}                         -> lectura de una tendencia (modo "tendencia")
+//   {modo: "temporada", temporada, perfil} -> cuales tendencias de la temporada mirar (modo "temporada")
+// GET /api/lectura -> modelo y system prompts (para mostrarlos en la app).
 // La clave va en la variable de entorno GROQ_API_KEY de Netlify. Nunca en el codigo.
 import datos from "../../prototipo/datos.json";
-import { SYSTEM_PROMPT, MODELO_POR_DEFECTO } from "./prompt.mjs";
+import { SYSTEM_PROMPT, SYSTEM_PROMPT_TEMPORADA, MODELO_POR_DEFECTO } from "./prompt.mjs";
 
 const RUBROS = { "": "todo tipo de ropa", vestidos: "vestidos", polleras: "polleras", pantalones: "pantalones",
-  abrigos: "abrigos y tejidos", accesorios: "accesorios y estampados" };
+  abrigos: "abrigos y tejidos", accesorios: "accesorios y estampados", varios: "varios rubros", todo: "varios rubros" };
+const PRECIOS = { accesible: "accesible", medio: "medio", alto: "alto / premium" };
+const CANALES = { online: "online / Instagram", local: "local propio", mayorista: "mayorista", mixto: "varios canales" };
+
+// El perfil viene del navegador: se recorta y se arma de nuevo con campos conocidos. Es contexto, no instrucciones.
+const corto = (x, n) => String(x ?? "").replace(/\s+/g, " ").trim().slice(0, n);
+export function limpiarPerfil(p = {}, rubroViejo = "", marcaVieja = "") {
+  if (typeof p !== "object" || p === null) p = {};
+  const rubro = Object.hasOwn(RUBROS, p.rubro) ? p.rubro : (Object.hasOwn(RUBROS, rubroViejo) ? rubroViejo : "");
+  return {
+    rubro: RUBROS[rubro] ?? RUBROS[""],
+    nombre: corto(p.nombre, 60) || "sin nombre",
+    que_vende: corto(p.vende ?? marcaVieja, 140) || "sin descripción",
+    publico: corto(p.publico, 80) || "sin dato",
+    precio: PRECIOS[p.precio] || "sin dato",
+    canal: CANALES[p.canal] || "sin dato",
+  };
+}
 const TEMP = { SS2024: "primavera-verano 2024 (desfiles de octubre de 2023, hemisferio norte)",
   FW2024: "otoño-invierno 2024 (desfiles de marzo de 2024, hemisferio norte)",
   SS2025: "primavera-verano 2025 (desfiles de septiembre y octubre de 2024, hemisferio norte)",
@@ -24,7 +43,7 @@ const APUESTA = { baja: "probar poco", media: "apuesta moderada", alta: "apostar
 // De dónde puede salir cada frase de "lectura": un campo de "tendencia" o de la raíz del contexto
 export const DATOS = ["veredicto", "confianza", "cambio_de_busquedas", "busquedas_promedio_0_a_100", "aviso", "apuesta", "evidencia", "limites"];
 
-export function armarContexto(t, rubro, marca) {
+export function armarContexto(t, marca) {
   const s = t.serie, prom = a => Math.round(a.reduce((x, y) => x + y, 0) / a.length);
   return {
     tendencia: {
@@ -47,8 +66,50 @@ export function armarContexto(t, rubro, marca) {
       : t.temporada === "FW2025"
       ? [...LIMITES, "El primer año de otoño 2025 cae en buena parte en el período en que Google empezó a medir distinto. La lectura pasó un chequeo más estricto fijado de antemano, pero conviene tomarla con más cuidado que las de 2024."]
       : LIMITES,
-    marca: { rubro: RUBROS[rubro] ?? RUBROS[""], descripcion: marca || "sin descripción" },
+    marca,
   };
+}
+
+// Modo temporada: solo las tendencias con veredicto de esa temporada, con los mismos números que muestra la página
+export function armarContextoTemporada(temporada, marca) {
+  const ts = datos.tendencias.filter(t => t.temporada === temporada);
+  return {
+    temporada: TEMP[temporada],
+    tendencias: ts.map(t => ({
+      id: t.id, nombre: t.nombre, rubro: RUBROS[t.rubro] ?? "varios rubros",
+      veredicto: t.veredicto === "queda" ? "se queda" : "en riesgo",
+      confianza: t.confianza,
+      cambio_de_busquedas: `${t.bruto_pct > 0 ? "+" : ""}${t.bruto_pct}%; su temporada, ${t.temporada_pct > 0 ? "+" : ""}${t.temporada_pct}%`,
+      aviso: t.aviso || t.nota ? "sí: lectura con cautela" : "ninguno",
+      apuesta: APUESTA[t.apuesta],
+    })),
+    regla_de_apuesta: datos.regla_apuesta,
+    evidencia: "De las tendencias que ganan búsquedas, 9 de cada 10 siguen al segundo año (178 tendencias, 2016-2024). De 2021 a 2024, 9 de 16 de las que perdieron búsquedas fueron moda pasajera, contra 2 de 19 de las que ganaron.",
+    limites: LIMITES,
+    marca,
+  };
+}
+export const DATOS_TEMPORADA = ["veredicto", "confianza", "cambio_de_busquedas", "aviso", "apuesta", "rubro"];
+
+export function revisarTemporada(salida, contexto) {
+  const problemas = [], ids = new Map(contexto.tendencias.map(t => [t.id, t]));
+  if (typeof salida.resumen !== "string" || !salida.resumen.trim()) problemas.push("falta resumen");
+  const el = Array.isArray(salida.elegidas) ? salida.elegidas : [];
+  if (el.length < 2 || el.length > 5) problemas.push("tienen que ser de 2 a 5 tendencias elegidas");
+  const vistas = new Set();
+  for (const e of el) {
+    const t = ids.get(e?.id);
+    if (!t) { problemas.push(`la tendencia "${e?.id}" no está en la lista`); continue; }
+    if (vistas.has(e.id)) problemas.push(`"${e.id}" está repetida`); vistas.add(e.id);
+    if (typeof e.por_que !== "string" || !e.por_que.trim()) { problemas.push(`falta el por qué de "${e.id}"`); continue; }
+    if (!DATOS_TEMPORADA.includes(e.dato)) problemas.push(`el por qué de "${e.id}" no dice de qué dato sale`);
+    // Los números de cada por qué tienen que estar en esa tendencia
+    const permitidos = new Set(numeros(t)), malos = numeros(e.por_que).filter(n => !permitidos.has(n));
+    if (malos.length) problemas.push(`números que no están en "${e.id}": ${[...new Set(malos)].join(", ")}`);
+  }
+  const todos = new Set(numeros(contexto)), nuevos = numeros(salida.resumen || "").filter(n => !todos.has(n));
+  if (nuevos.length) problemas.push(`números del resumen que no están en los datos: ${[...new Set(nuevos)].join(", ")}`);
+  return problemas;
 }
 
 // El valor de un campo del contexto, como texto (para ver qué números contiene)
@@ -78,7 +139,7 @@ export function revisar(salida, contexto) {
   return problemas;
 }
 
-async function preguntar(key, modelo, contexto, extra) {
+async function preguntar(key, modelo, contexto, extra, prompt = SYSTEM_PROMPT) {
   const ctrl = new AbortController(); const reloj = setTimeout(() => ctrl.abort(), 20000);
   try {
     const r = await fetch("https://api.groq.com/openai/v1/chat/completions", {
@@ -88,7 +149,7 @@ async function preguntar(key, modelo, contexto, extra) {
         model: modelo, temperature: 0.4, max_completion_tokens: 2000, response_format: { type: "json_object" },
         // gpt-oss razona antes de contestar: razonamiento corto y sin devolverlo, para que la respuesta no se corte
         ...(modelo.startsWith("openai/gpt-oss") ? { reasoning_effort: "low", include_reasoning: false } : {}),
-        messages: [{ role: "system", content: SYSTEM_PROMPT },
+        messages: [{ role: "system", content: prompt },
           { role: "user", content: JSON.stringify(contexto) + (extra ? "\n\n" + extra : "") }],
       }),
     });
@@ -102,17 +163,36 @@ async function preguntar(key, modelo, contexto, extra) {
 
 export default async (req) => {
   const modelo = process.env.GROQ_MODEL || MODELO_POR_DEFECTO;
-  if (req.method === "GET") return json({ modelo, proveedor: "Groq", system_prompt: SYSTEM_PROMPT });
+  if (req.method === "GET") return json({ modelo, proveedor: "Groq", system_prompt: SYSTEM_PROMPT, system_prompt_temporada: SYSTEM_PROMPT_TEMPORADA });
   if (req.method !== "POST") return json({ error: "Método no permitido" }, 405);
   const key = process.env.GROQ_API_KEY;
   if (!key) return json({ error: "La IA no está configurada en este sitio (falta la clave)." }, 503);
   let pedido;
   try { pedido = await req.json(); } catch { return json({ error: "Pedido inválido" }, 400); }
+  const marca = limpiarPerfil(pedido.perfil, pedido.rubro, pedido.marca);
+  if (pedido.modo === "temporada") {
+    if (!datos.tendencias.some(t => t.temporada === pedido.temporada)) return json({ error: "No encontramos esa temporada" }, 404);
+    const contexto = armarContextoTemporada(pedido.temporada, marca);
+    try {
+      let salida = await preguntar(key, modelo, contexto, "", SYSTEM_PROMPT_TEMPORADA);
+      let problemas = revisarTemporada(salida, contexto);
+      if (problemas.length) {
+        salida = await preguntar(key, modelo, contexto, "Tu respuesta anterior tenía estos problemas, corregilos: " + problemas.join("; "), SYSTEM_PROMPT_TEMPORADA);
+        problemas = revisarTemporada(salida, contexto);
+      }
+      // Lo que no pasa el control no se muestra: solo tendencias de la lista, sin repetir
+      const ids = new Set(contexto.tendencias.map(t => t.id)), vistas = new Set();
+      salida.elegidas = (Array.isArray(salida.elegidas) ? salida.elegidas : [])
+        .filter(e => e && ids.has(e.id) && typeof e.por_que === "string" && !vistas.has(e.id) && vistas.add(e.id)).slice(0, 5);
+      return json({ salida, problemas, contexto, modelo });
+    } catch (e) {
+      const msg = e.name === "AbortError" ? "La IA tardó demasiado. Probá de nuevo." : e.message;
+      return json({ error: msg }, e.status || 502);
+    }
+  }
   const t = datos.tendencias.find(x => x.id === pedido.id);
   if (!t) return json({ error: "No encontramos esa tendencia" }, 404);
-  const rubro = Object.hasOwn(RUBROS, pedido.rubro) ? pedido.rubro : "";
-  const marca = String(pedido.marca || "").replace(/\s+/g, " ").trim().slice(0, 280);
-  const contexto = armarContexto(t, rubro, marca);
+  const contexto = armarContexto(t, marca);
   try {
     let salida = await preguntar(key, modelo, contexto);
     let problemas = revisar(salida, contexto);

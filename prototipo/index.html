@@ -6,422 +6,519 @@
 <title>Paleta predictiva</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+/* Colores y tipografía (Inter) del Figma (PALETA PREDICTIVA DISEÑO FINAL), también en el home. */
 :root{
-  --negro:#0a0a0a; --blanco:#ffffff; --gris:#6b6b6b; --linea:#d9d9d9; --foto:#f1f0ec; --rojo:#b3121f; --ia:#3b3fd6; --ia-fondo:#f3f3fd;
-  --didone:"Bodoni Moda",Didot,"Bodoni 72",Georgia,serif;
-  --sans:"Jost",Futura,"Century Gothic",system-ui,sans-serif;
+  --tinta:#111713; --oscuro:#071814; --azul:#142638; --pizarra:#3d444c; --mostaza:#b68a3a; --crema:#f2eee6; --pista:#ece9e2;
+  --linea:#b9b8b3; --gris:#5b605c; --blanco:#ffffff;
+  --q-bg:#ddeee5; --q:#15573d; --r-bg:#f9e1e1; --r:#902a32; --r-num:#8e2739; --s-bg:#e7eaf0; --s:#475569; --c-bg:#fff2d8; --c:#684500;
+  --ia:#3b3fd6; --ia-fondo:#f3f3fd;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
 }
 *{box-sizing:border-box;margin:0}
-body{background:var(--blanco);color:var(--negro);font-family:var(--sans);font-weight:400;line-height:1.55;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:auto}
+body{background:var(--blanco);color:var(--tinta);font-family:var(--sans);font-weight:500;line-height:1.4;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0;text-transform:inherit;letter-spacing:inherit}
+button,select{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer;padding:0}
 img{display:block}
-:focus-visible{outline:1.5px solid var(--negro);outline-offset:3px}
+:focus-visible{outline:2px solid var(--azul);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.wrap{max-width:1440px;margin:0 auto;padding:0 72px}
+@media (max-width:1000px){.wrap{padding:0 32px}}
+@media (max-width:700px){.wrap{padding:0 16px}}
+.oculto{display:none!important}
+/* Al bajar, cada bloque aparece cuando entra en pantalla (sin efecto si el sistema pide menos movimiento) */
 .js-rv .rv{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1) var(--rd,0s),transform .9s cubic-bezier(.2,.7,.2,1) var(--rd,0s)}
 .js-rv .rv.visto{opacity:1;transform:none}
-.wrap{max-width:1320px;margin:0 auto;padding:0 32px}
-@media (max-width:700px){.wrap{padding:0 16px}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* Etiquetas en versalitas */
-.caps{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase}
-.gris{color:var(--gris)}
-
-/* Cabecera tipo revista */
-.cabecera{border-bottom:1px solid var(--negro);background:var(--blanco);position:sticky;top:0;z-index:30}
-.cabecera .fila1{display:flex;justify-content:space-between;align-items:center;padding:12px 0 0}
-.masthead{display:block;text-align:center;text-decoration:none;font-family:var(--didone);font-weight:500;font-variation-settings:"opsz" 96;
-  font-size:clamp(34px,6.4vw,84px);letter-spacing:.06em;line-height:1;text-transform:uppercase;padding:6px 0 12px;transition:font-size .3s ease,padding .3s ease}
-.compacta .masthead{font-size:clamp(24px,3vw,32px);padding:4px 0 8px}
-.nav{display:flex;justify-content:center;gap:34px;padding:10px 0 12px;border-top:1px solid var(--linea)}
-.nav a{text-decoration:none}
-.nav a:hover{text-decoration:underline;text-underline-offset:5px}
-.nav a{white-space:nowrap}
-@media (max-width:700px){
-  .nav{gap:22px;overflow-x:auto;justify-content:flex-start;padding-inline:16px;scrollbar-width:none}
-  .cabecera .fila1{display:none}
-  .masthead{font-size:clamp(22px,7.2vw,36px);white-space:nowrap;letter-spacing:.03em;padding:10px 0 8px}
-  .compacta .masthead{font-size:20px;padding:6px 0 4px}
-  .nav{padding-block:8px}
-}
-
-/* Home: el nombre, la frase y la paleta de la pasarela como imagen */
-.home{min-height:100svh;display:flex;flex-direction:column;border-bottom:1px solid var(--negro)}
-.home-centro{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding-top:48px;padding-bottom:40px}
-.home-marca{font-family:var(--didone);font-weight:400;font-variation-settings:"opsz" 96;font-size:clamp(52px,11.5vw,176px);line-height:.92;letter-spacing:.02em;text-transform:uppercase;margin:26px 0 22px}
-.home-frase{font-family:var(--didone);font-size:clamp(30px,4.2vw,60px);line-height:1.05;font-variation-settings:"opsz" 72}
-.home-frase i{font-weight:400}
+/* ---------- Home (se mantiene del diseño anterior) ---------- */
+.home{min-height:100svh;display:flex;flex-direction:column;border-bottom:1px solid var(--tinta);font-family:var(--sans)}
+.home .caps{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.home-centro{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:48px 32px 40px}
+.home-marca{font-family:var(--sans);font-weight:700;font-size:clamp(48px,10.5vw,164px);line-height:.95;letter-spacing:-.02em;text-transform:uppercase;margin:26px 0 22px;color:var(--azul-s,#142638)}
+.home-frase{font-family:var(--sans);font-weight:500;font-size:clamp(26px,3.6vw,52px);line-height:1.1;letter-spacing:-.01em}
+.home-frase i{font-style:normal;font-weight:700}
 .home-marca .l{transition:color .45s ease}
 .home-marca .l.pinta{color:var(--c)}
 .home-acciones{display:flex;gap:16px 32px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:36px}
-.boton-home{background:var(--negro);color:#fff;padding:16px 30px;font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
-.boton-home:hover{background:#333}
+.boton-home{background:var(--azul-s,#142638);color:#fff;padding:15px 28px;font-size:15px;font-weight:700;text-decoration:none}
+.boton-home:hover{background:var(--oscuro)}
 .link-ant{text-underline-offset:6px}
 .home-paleta{display:flex;height:clamp(56px,10vh,110px)}
 .home-paleta span{display:block;height:100%;transform-origin:bottom;animation:sube .9s cubic-bezier(.2,.7,.2,1) both}
 @keyframes sube{from{transform:scaleY(0)}}
-.home-pie{display:flex;justify-content:space-between;gap:16px;padding:12px 32px 14px;font-size:10px}
-.home-pie a{text-decoration:none;color:var(--negro);white-space:nowrap}
-@media (max-width:700px){.home-pie{padding:10px 16px}.home-pie .solo-compu{display:none}}
+.home-pie{display:flex;justify-content:space-between;gap:16px;padding:12px 32px 14px;font-size:10px;color:var(--gris)}
+.home-pie a{text-decoration:none;color:var(--tinta);white-space:nowrap}
+@media (max-width:700px){.home-centro{padding:48px 16px 40px}.home-pie{padding:10px 16px}.home-pie .solo-compu{display:none}}
 
-/* Selector de temporada: la más nueva por defecto, las anteriores a un clic */
-.temporadas-nav{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 26px;margin:-8px 0 0;padding:14px 0;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
-.temporadas-nav button{color:var(--gris);padding:4px 0;border-bottom:1.5px solid transparent}
-.temporadas-nav button[aria-pressed="true"]{color:var(--negro);border-bottom-color:var(--negro)}
-.temporadas-nav sup{font-size:8px;letter-spacing:.14em;margin-left:6px;color:var(--rojo);vertical-align:4px}
+/* ---------- Cabecera de la app ---------- */
+.cab{position:sticky;top:0;z-index:30;background:var(--blanco)}
+.cab .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:96px;border-bottom:1px solid var(--tinta)}
+.logo{font-weight:700;font-size:20px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.menu{display:flex;gap:6px}
+.menu a{font-size:16px;font-weight:500;text-decoration:none;padding:10px 12px;white-space:nowrap}
+.menu a:hover{background:var(--crema)}
+.menu a[aria-current="page"]{background:var(--oscuro);color:#fff;font-weight:700}
+.cab-der{background:var(--oscuro);color:#fff;font-size:14px;padding:7px 12px;white-space:nowrap;text-decoration:none;max-width:260px;overflow:hidden;text-overflow:ellipsis}
+.cab-der:hover{background:var(--azul)}
+.cab-der[aria-current="page"]{outline:2px solid var(--oscuro);outline-offset:2px}
+@media (max-width:1100px){.menu a{font-size:15px;padding:8px 8px}}
+@media (max-width:900px){
+  .cab .wrap{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:0;row-gap:10px}
+  .logo{font-size:17px}
+  .menu{order:3;width:100%;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px 10px}
+  .menu a{font-size:14px;padding:8px 10px}
+  .cab-der{font-size:12px;padding:6px 10px}
+}
 
-/* Fotos: la del look si está en fotos/; si no, el nombre en tipografía */
-.foto{position:relative;overflow:hidden;background:var(--foto)}
-.foto img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-.foto img{color:transparent;font-size:0}
-.foto .falta{display:none}
-.foto.sin-foto .falta{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;padding:14px;text-align:center}
-.falta i{display:none;font-family:var(--didone);line-height:1.1;color:#b9b7b0}
-.nota .falta i{display:block}
-.mini .falta small{display:none}
-.falta small{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#bdbbb4;position:absolute;bottom:10px;left:0;right:0}
-.ficha-t:hover .foto img,.t-foto:hover .foto img{transform:scale(1.035)}
-
-/* Nota: dos barras con la comparación que decide el veredicto */
-.barras-nota{margin-top:32px;border-top:1px solid var(--negro);padding-top:14px}
-.b-fila{display:grid;grid-template-columns:minmax(0,150px) 1fr 70px;gap:14px;align-items:center;margin-top:16px}
-.b-etiq{font-size:14px;line-height:1.2}
-.b-pista{position:relative;height:28px;background:var(--foto)}
-.b-pista i{position:absolute;top:0;bottom:0;background:#9a9a96}
-.b-fila.esta .b-pista i{background:var(--negro)}
-.riesgo .b-fila.esta .b-pista i{background:var(--rojo)}
-.b-cero{position:absolute;top:-4px;bottom:-4px;border-left:1px solid var(--negro)}
-.b-num{font-family:var(--sans);font-weight:500;font-size:20px;text-align:right;font-variant-numeric:tabular-nums}
-.riesgo .b-fila.esta .b-num{color:var(--rojo)}
-.b-concl{margin-top:16px;font-size:16px}
-.b-concl b{font-weight:500}
-.riesgo .b-concl b{color:var(--rojo)}
-.verd-fila{display:flex;align-items:center;flex-wrap:wrap;gap:10px 18px}
-.nota .verd-fila+.lead{margin-top:22px}
-.cuidado summary{cursor:pointer;list-style:none;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#8a6200;border:1px solid #d9b45a;padding:3px 8px}
-.cuidado summary::-webkit-details-marker{display:none}
-.cuidado summary::after{content:" ?";}
-.cuidado p{margin-top:8px;font-size:14px;color:#6b5200}
-@media (max-width:520px){.b-fila{grid-template-columns:1fr 60px}.b-etiq{grid-column:1/-1}}
-
-/* Dato calculado vs inferencia de la IA */
-.tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:4px 8px;border:1px solid var(--negro);line-height:1.2;white-space:nowrap}
+/* ---------- Piezas comunes ---------- */
+.pantalla{padding-bottom:24px;animation:entra .35s ease both}
+@keyframes entra{from{opacity:.4;transform:translateY(6px)}}
+.kicker{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+.titulo{font-size:clamp(34px,4.6vw,58px);font-weight:700;line-height:1.1;text-transform:uppercase;letter-spacing:-.005em}
+.titulo:focus{outline:none}
+.subt{font-size:28px;font-weight:700;line-height:1.15;text-transform:uppercase;letter-spacing:.2px}
+.cabeza{padding:36px 0 22px;border-bottom:1px solid var(--tinta)}
+.cabeza .titulo{margin-top:8px}
+.bajada{font-size:17px;margin:22px 0 0;max-width:80ch}
+.boton{display:inline-flex;align-items:center;gap:10px;background:var(--azul);color:#fff;font-size:16px;font-weight:700;padding:11px 16px;text-decoration:none;border:1px solid var(--azul)}
+.boton:hover{background:var(--oscuro)}
+.boton.borde{background:none;border-color:currentColor;color:inherit}
+.boton.borde:hover{background:rgba(255,255,255,.08)}
+.boton[disabled]{opacity:.6;cursor:progress}
+.flecha::after{content:"→";margin-left:2px}
+.link{font-weight:700;text-decoration:none;color:var(--azul)}
+.link:hover{text-decoration:underline}
+.chip{display:inline-block;font-size:16px;font-weight:500;padding:5px 12px;min-width:120px;line-height:1.4}
+.chip.queda{background:var(--q-bg);color:var(--q)}
+.chip.riesgo{background:var(--r-bg);color:var(--r)}
+.chip.sin{background:var(--s-bg);color:var(--s)}
+.chip.cautela{background:var(--c-bg);color:var(--c);font-size:14px}
+.chip.chico{font-size:13px;padding:3px 10px;min-width:0}
+.chip.mio{background:var(--oscuro);color:#fff}
+.banda-cautela{display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:center;background:var(--c-bg);color:var(--c);padding:18px 20px;margin-top:32px}
+.banda-cautela b.n{font-size:40px;font-weight:700;line-height:1.15}
+.banda-cautela strong{display:block;font-size:18px;font-weight:700}
+.banda-cautela.fina{grid-template-columns:150px 1fr;padding:14px 20px;margin-top:18px;font-size:14px}
+.banda-cautela.fina b.n{font-size:13px;letter-spacing:.02em}
+@media (max-width:700px){.banda-cautela,.banda-cautela.fina{grid-template-columns:1fr;gap:6px}}
+.pie{margin-top:56px;border-top:1px solid var(--tinta)}
+.pie .wrap{display:flex;gap:24px 120px;flex-wrap:wrap;padding-top:22px;padding-bottom:40px;font-size:14px}
+.pie b{font-weight:700;letter-spacing:.5px}
+.leyenda-fuente{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:13px;color:var(--gris);margin-top:16px}
+.leyenda-fuente span{display:inline-flex;align-items:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--tinta);color:var(--tinta);white-space:nowrap;line-height:1.3}
 .tag::before{content:"";width:7px;height:7px;background:currentColor}
 .tag.ia{background:var(--ia);border-color:var(--ia);color:#fff}
 .tag.ia::before{border-radius:50%;background:#fff}
-.leyenda-fuente{display:flex;flex-wrap:wrap;align-items:center;gap:10px 36px;padding:12px 0;margin-bottom:36px;border-bottom:1px solid var(--linea);font-size:13px;color:var(--gris)}
-.leyenda-fuente .lf{display:inline-flex;align-items:center;gap:10px}
-@media (max-width:700px){.leyenda-fuente .lf{display:flex;align-items:flex-start}}
+.positivo{color:var(--tinta)} .negativo,.riesgo-num{color:var(--r-num)}
 
-/* Veredicto */
-.veredicto{display:inline-flex;align-items:center;gap:8px}
-.veredicto::before{content:"";width:22px;height:1.5px;background:currentColor}
-.veredicto.riesgo{color:var(--rojo)}
-
-/* Secciones */
-.seccion{padding:72px 0 80px;border-bottom:1px solid var(--negro);scroll-margin-top:110px}
-.seccion-cabeza{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;margin-bottom:40px}
-.seccion h2{font-family:var(--didone);font-weight:400;font-variation-settings:"opsz" 96;font-size:clamp(44px,6.5vw,96px);line-height:.95;letter-spacing:-.01em;margin-top:14px}
-.seccion h2 i{font-weight:400}
-.seccion .intro{max-width:46ch;font-weight:300;font-size:16px}
-@media (max-width:800px){.seccion-cabeza{grid-template-columns:1fr}.seccion{padding:52px 0 60px}}
-
-/* Filtro por rubro */
-.filtro{padding:12px 0;border-bottom:1px solid var(--linea)}
-.f-grupo{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 26px;padding:4px 0}
-.f-grupo>span{min-width:96px}
+/* ---------- 01 Resumen ---------- */
+.apertura{background:var(--mostaza);display:grid;grid-template-columns:1fr minmax(240px,30.5%);height:330px}
+.apertura .txt{padding:32px 32px 32px max(72px,calc((100vw - 1440px)/2 + 72px))}
+.apertura h1{font-size:clamp(38px,4.6vw,58px);font-weight:700;line-height:1.1;text-transform:uppercase;margin:16px 0 18px}
+.apertura p.linea{font-size:17px}
+.apertura .sel-temp{margin-top:22px}
+.apertura .foto-ap{position:relative;overflow:hidden;background:#8d6c2f}
+.apertura .foto-ap img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.apertura .foto-ap .cred{position:absolute;left:16px;bottom:10px;color:#fff;font-size:12px;text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.sel-temp select,.filtros select{appearance:none;-webkit-appearance:none;background:var(--oscuro) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0h10L5 6z' fill='%23fff'/%3E%3C/svg%3E") no-repeat right 12px center;color:#fff;border:0;border-radius:0;font-size:16px;font-weight:500;padding:6px 36px 6px 12px;min-width:203px;cursor:pointer}
+@media (max-width:900px){.apertura{grid-template-columns:1fr;height:auto}.apertura .txt{padding:28px 16px}.apertura .foto-ap{height:200px}}
+.conteo{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px}
+.conteo a{display:block;padding:12px 22px 22px;text-decoration:none;min-height:166px}
+.conteo a:hover{filter:brightness(.97)}
+.conteo b{display:block;font-size:58px;font-weight:700;line-height:1.15}
+.conteo strong{display:block;font-size:17px;font-weight:700;margin-top:6px}
+.conteo span{display:block;font-size:16px;margin-top:8px}
+.conteo .queda{background:var(--q-bg);color:var(--q)} .conteo .riesgo{background:var(--r-bg);color:var(--r)} .conteo .sin{background:var(--s-bg);color:var(--s)}
+@media (max-width:800px){.conteo{grid-template-columns:1fr;gap:12px}.conteo a{min-height:0}.conteo b{font-size:44px}}
+.res-grilla{display:grid;grid-template-columns:1fr 420px;gap:32px;margin-top:48px;align-items:start}
+@media (max-width:1000px){.res-grilla{grid-template-columns:1fr}}
+.res-cab{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.tabla{width:100%;border-collapse:collapse}
+.tabla th{font-size:14px;font-weight:700;text-align:left;text-transform:uppercase;padding:0 12px 8px 0;border-bottom:1px solid var(--linea)}
+.tabla td{padding:16px 12px 16px 0;border-bottom:1px solid var(--linea);font-size:16px;vertical-align:middle}
+.tabla td.nom{font-size:18px}
+.tabla td.nom a{text-decoration:none}
+.tabla td.nom a:hover{text-decoration:underline}
+.tabla td.num{font-size:24px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tabla tr.fila{cursor:pointer}
+.tabla tr.fila:hover td{background:#faf9f6}
+.nota-tabla{font-size:16px;margin-top:22px}
 @media (max-width:700px){
-  .f-grupo{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:20px;margin-right:-16px;padding-right:16px}
-  .f-grupo>*{flex:none}.f-grupo>span{min-width:0}
+  .tabla thead{display:none}
+  .tabla tr{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:14px 0;border-bottom:1px solid var(--linea)}
+  .tabla td{border:0;padding:0}
+  .tabla td.num{grid-row:1/3;grid-column:2;align-self:center}
+  .tabla td.lec{font-size:14px;color:var(--gris)}
 }
-.filtro sup{font-size:8px;letter-spacing:.14em;margin-left:6px;color:var(--rojo);vertical-align:4px}
-.filtro button{color:var(--gris);padding:4px 0;border-bottom:1.5px solid transparent}
-.filtro button[aria-pressed="true"]{color:var(--negro);border-bottom-color:var(--negro)}
+.panel{background:var(--pizarra);color:#fff;padding:26px 28px 28px}
+.panel .kicker{color:#fff}
+.panel .subt{margin:10px 0 16px}
+.panel p{font-size:17px}
+.panel ol{list-style:none;padding:0;margin:26px 0 30px;font-size:16px;line-height:1.4}
+.panel ol span{display:inline-block;width:32px}
+.banda-2026{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:var(--crema);padding:18px 24px;margin-top:40px}
+.banda-2026 b{display:block;font-size:21px;font-weight:700;text-transform:uppercase;margin-top:4px;letter-spacing:.2px}
 
-/* Índice por temporada (como la lista de WGSN: foto, título y el número dentro de la frase) */
-.vacio{padding:40px 0;color:var(--gris)}
-.t-bloque+.t-bloque{margin-top:72px}
-.indice-grilla{display:grid;grid-template-columns:repeat(4,1fr);gap:48px 24px}
-.ficha-t{display:block;text-align:left;min-width:0}
-.ficha-t .foto{aspect-ratio:3/4;margin-bottom:14px}
-.f-nombre{display:block;font-family:var(--didone);font-weight:400;font-size:26px;line-height:1.08;margin:8px 0 8px;font-variation-settings:"opsz" 48}
-button.ficha-t:hover .f-nombre{font-style:italic}
-.frase{font-size:14px;font-weight:300;line-height:1.5;color:#333}
-.frase b{font-weight:500;color:var(--negro)}
-.ficha-t.riesgo .frase b{color:var(--rojo)}
-.f-meta{margin-top:10px;padding-top:8px;border-top:1px solid var(--linea);font-size:10px;line-height:1.7}
-.f-meta a{color:inherit}
-.ficha-t.sin .veredicto,.ficha-t.sin .f-nombre{color:var(--gris)}
-.sin-lista{margin-top:48px;border-top:1px solid var(--linea);padding-top:12px}
-.sin-lista ul{list-style:none;padding:0;margin-top:6px;columns:3 240px;column-gap:40px}
-.sin-lista li{break-inside:avoid;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px solid var(--linea)}
-.sin-lista b{font-family:var(--didone);font-weight:400;font-size:20px;line-height:1.15;color:#555}
-.sin-lista a{color:inherit}
-@media (max-width:1100px){.indice-grilla{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:760px){.indice-grilla{grid-template-columns:repeat(2,1fr);gap:36px 14px}.f-nombre{font-size:20px}.frase{font-size:13px}}
+/* ---------- 02 Tendencias (variante compacta 02B) ---------- */
+.filtros{display:flex;flex-wrap:wrap;gap:12px 14px;align-items:center;margin-top:24px}
+.filtros label{display:block}
+.filtros select{background-color:#fff;color:var(--tinta);border:1px solid var(--linea);min-width:186px;padding:7px 36px 7px 12px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0h10L5 6z' fill='%23111713'/%3E%3C/svg%3E")}
+.filtros .cuenta{font-size:14px;margin-left:auto}
+@media (max-width:700px){.filtros label,.filtros select{width:100%}.filtros .cuenta{margin-left:0}}
+.grilla{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px}
+@media (max-width:1000px){.grilla{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.grilla{grid-template-columns:1fr}}
+.tarjeta{display:flex;flex-direction:column;border:1px solid #d8d6d0;background:#fff;text-decoration:none;min-width:0}
+.tarjeta:hover{border-color:var(--tinta)}
+.t-foto{position:relative;height:190px;background:var(--crema);display:flex;justify-content:center;overflow:hidden}
+.t-foto img{height:100%;width:auto;max-width:100%;object-fit:cover}
+.t-foto .cred{position:absolute;left:0;right:0;bottom:0;background:var(--pizarra);color:#fff;font-size:11px;padding:3px 6px}
+.t-foto.sin-foto::after{content:attr(data-nombre);align-self:center;color:#a9a59b;font-size:14px;text-transform:uppercase;letter-spacing:.1em}
+.t-cuerpo{padding:16px 14px 16px;flex:1;display:flex;flex-direction:column}
+.t-cuerpo h3{font-size:20px;font-weight:700;text-transform:uppercase;line-height:1.15;margin-bottom:18px}
+.t-cuerpo .grande{font-size:clamp(38px,3.4vw,46px);font-weight:700;line-height:1;margin-top:14px;font-variant-numeric:tabular-nums}
+.t-cuerpo .grande.riesgo-num{color:var(--r-num)}
+.t-cuerpo .bajo{font-size:14px;color:#3c403d;margin-top:10px}
+.t-cuerpo .conf{font-size:15px;font-weight:700;margin-top:10px}
+.t-cuerpo .boton{margin-top:16px;font-size:15px;padding:9px 12px;align-self:stretch}
+.t-pie{font-size:14px;padding:12px 12px 14px;background:var(--c-bg);color:var(--c)}
+.t-pie.limpio{background:#f2f3f5;color:#596170}
+.t-pie.vacio{display:none}
+.leyenda-senal{font-size:14px;margin-top:22px}
+.vacio-msg{padding:40px 0;font-size:17px;color:var(--gris)}
 
-/* Colores de la pasarela: la muestra es la imagen */
-.paleta{display:grid;grid-template-columns:repeat(6,1fr);gap:36px 16px}
-.color .muestra{aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:space-between;padding:12px;margin-bottom:12px;border:1px solid rgba(0,0,0,.06)}
-.color .muestra{justify-content:flex-end;gap:4px}
-.color .muestra b{font-family:var(--didone);font-weight:400;font-size:clamp(22px,2.1vw,30px);line-height:1.05;font-variation-settings:"opsz" 72}
-@media (max-width:1000px){.paleta{grid-template-columns:repeat(4,1fr)}}
-@media (max-width:600px){.paleta{grid-template-columns:repeat(2,1fr)}}
+/* ---------- 03 Ficha de tendencia ---------- */
+.miga{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding:30px 0 0;font-size:16px}
+.miga a{text-decoration:none}
+.miga a:hover{text-decoration:underline}
+.pasar{display:flex;gap:16px;align-items:center;font-size:14px}
+.pasar a{font-weight:700;text-decoration:none;padding:4px 2px}
+.ficha-t{display:grid;grid-template-columns:350px 1fr;gap:48px;margin-top:24px}
+@media (max-width:1000px){.ficha-t{grid-template-columns:1fr;gap:28px}}
+.ficha-t h1{font-size:clamp(40px,4.6vw,58px);font-weight:700;line-height:1.08;text-transform:uppercase;word-break:break-word}
+.ficha-t .donde{font-size:18px;margin-top:22px;line-height:1.4}
+.fotos-f{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:30px}
+.fotos-f .f{position:relative;aspect-ratio:2/3;background:var(--crema);overflow:hidden}
+.fotos-f img{width:100%;height:100%;object-fit:cover;object-position:top}
+.fotos-f .f.sin-foto::after{content:"Foto no disponible";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#a9a59b;font-size:12px;text-transform:uppercase}
+.cred-f{font-size:15px;margin-top:14px;line-height:1.45}
+@media (max-width:1000px){.fotos-f{max-width:300px}}
+.chips{display:flex;gap:12px;flex-wrap:wrap}
+.f-titular{font-size:clamp(24px,2.4vw,32px);font-weight:700;text-transform:uppercase;line-height:1.15;margin:22px 0 14px}
+.f-frase{font-size:17px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px 56px;margin-top:34px}
+.stats>div{min-width:0}
+.stats b{display:block;font-size:clamp(40px,4vw,56px);font-weight:700;line-height:1.05;border-bottom:1px solid var(--tinta);padding-bottom:6px;font-variant-numeric:tabular-nums}
+.stats strong{display:block;font-size:16px;font-weight:700;margin-top:12px}
+.stats span{display:block;font-size:14px;margin-top:14px;color:#3c403d}
+@media (max-width:700px){.stats{grid-template-columns:1fr;gap:22px}}
+.advertencia{background:var(--c-bg);color:var(--c);border:1px solid #f0dcae;padding:18px 20px 22px;margin-top:30px}
+.advertencia p:first-child{font-size:14px;font-weight:700;text-transform:uppercase}
+.advertencia p+p{font-size:17px;margin-top:10px}
+.vs{margin-top:34px;border-top:1px solid var(--tinta);padding-top:26px}
+.vs .bloque-cab{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.vs p.chica{font-size:16px;margin-top:10px}
+.barra-fila{display:grid;grid-template-columns:150px 1fr 70px;gap:16px;align-items:center;margin-top:22px}
+.barra-fila .pista{position:relative;height:26px;background:var(--pista)}
+.barra-fila .pista i{position:absolute;top:0;bottom:0}
+.barra-fila .pista .cero{position:absolute;top:-4px;bottom:-4px;border-left:1px solid var(--tinta)}
+.barra-fila b{font-size:18px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.vs .formula{font-size:16px;margin-top:22px}
+@media (max-width:560px){.barra-fila{grid-template-columns:1fr 64px}.barra-fila span{grid-column:1/-1}}
+.curva{margin-top:34px}
+.curva svg{width:100%;height:auto;display:block;margin-top:12px;overflow:visible}
+.curva .ref{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--gris);margin-top:8px}
+.curva .ref span::before{content:"";display:inline-block;width:18px;height:0;border-top:2px solid var(--tinta);margin-right:6px;vertical-align:4px}
+.curva .ref span.antes::before{border-color:#9a968c}
+.curva .ref span.esp::before{border-top:2px dashed var(--mostaza)}
+.datos-f{margin-top:30px;border-top:1px solid var(--tinta)}
+.datos-f div{display:grid;grid-template-columns:170px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--linea);font-size:16px}
+.datos-f dt{font-weight:700}
+.datos-f dd{margin:0}
 
-/* Cita / evidencia */
-.cita{padding:96px 0;border-bottom:1px solid var(--negro);text-align:center}
-.cita blockquote{font-family:var(--didone);font-style:italic;font-weight:400;font-size:clamp(28px,3.6vw,50px);line-height:1.18;max-width:24ch;margin:22px auto 0;font-variation-settings:"opsz" 72}
-.evid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:56px;border-top:1px solid var(--negro);padding-top:36px;text-align:left}
-.evid>div{min-width:0}
-.evid p{font-size:19px;line-height:1.35;margin-top:18px;max-width:30ch}
-.evid p b{font-family:var(--didone);font-weight:400;font-size:1.3em}
-.evid p.caps{font-size:10px;margin-top:10px;max-width:none}
-.puntos{display:flex;flex-wrap:wrap;gap:8px;max-width:360px}
-.puntos i{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--negro)}
-.puntos i.si{background:var(--negro)}
-.puntos.rojo i{border-color:var(--rojo)} .puntos.rojo i.si{background:var(--rojo)}
-.evid p.evid-tit{margin:0 0 22px}
-.compara{display:grid;grid-template-columns:76px 1fr;gap:6px 12px;align-items:center;margin-bottom:16px}
-.compara .gris{grid-column:2}
-.puntos.chico{gap:4px;max-width:none}
-.puntos.chico i{width:12px;height:12px;border-width:1.2px}
-@media (max-width:480px){.compara{grid-template-columns:64px 1fr;gap:6px 8px}.puntos.chico{gap:3px}.puntos.chico i{width:10px;height:10px}}
-@media (max-width:800px){.evid{grid-template-columns:1fr;gap:36px}}
-
-/* Método */
-.metodo{display:grid;grid-template-columns:5fr 7fr;gap:64px}
-@media (max-width:900px){.metodo{grid-template-columns:1fr;gap:40px}}
-.pasos{list-style:none;padding:0;counter-reset:p;border-top:1px solid var(--negro)}
-.pasos li{counter-increment:p;display:grid;grid-template-columns:44px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid var(--linea);font-weight:300}
-.pasos li::before{content:counter(p,upper-roman);font-family:var(--didone);font-size:22px;line-height:1.2}
-.ciclos{border-top:1px solid var(--negro)}
-.ciclo{display:grid;grid-template-columns:110px 1fr 56px;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--linea)}
-.ciclo .barras{display:grid;gap:5px}
-.barra{position:relative;height:6px;background:#f1f1f0}
-.barra i{position:absolute;left:0;top:0;bottom:0;background:var(--negro)}
-.barra.cae i{background:var(--rojo)}
-.barra .umbral{position:absolute;left:20%;top:-5px;bottom:-5px;border-left:1px solid var(--negro)}
-.ciclo .n{font-size:12px;color:var(--gris);text-align:right;line-height:1.5;font-variant-numeric:tabular-nums}
-.leyenda{display:flex;gap:22px;flex-wrap:wrap;padding:12px 0}
-.leyenda span::before{content:"";display:inline-block;width:18px;height:6px;margin-right:8px;background:var(--negro);vertical-align:2px}
-.leyenda span.r::before{background:var(--rojo)}
-.leyenda span.u::before{width:1px;height:12px;vertical-align:-1px}
-.limites{margin-top:44px;padding-left:18px;font-weight:300;max-width:62ch}
-.limites li{margin-bottom:8px}
-
-/* Nota de detalle */
-.nota{position:fixed;inset:0;z-index:60;background:var(--blanco);overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility 0s .35s}
-.nota.abierta{opacity:1;visibility:visible;transition:opacity .35s ease}
-.nota .barra-nota{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:16px 32px;background:var(--blanco);border-bottom:1px solid var(--negro)}
-.nota .barra-nota .marca{font-family:var(--didone);font-size:20px;letter-spacing:.06em;text-transform:uppercase}
-.nav-nota{display:flex;align-items:center;gap:22px}
-.nav-nota button:hover span{text-decoration:underline;text-underline-offset:5px}
-@media (max-width:700px){.nota .barra-nota .marca{display:none}.nav-nota{gap:14px}.nav-nota button span{display:none}.nav-nota button{font-size:16px;padding:2px 6px}}
-.nota .cuerpo{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 58px)}
-.nota .fotos-nota{position:sticky;top:58px;height:calc(100vh - 58px);display:grid;grid-template-columns:1fr 1fr;gap:4px}
-.nota .fotos-nota .falta i{font-size:clamp(20px,2vw,30px)}
-.credito{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 10px;color:#fff;font-size:10px;background:linear-gradient(transparent,rgba(0,0,0,.55))}
-.sin-foto .credito{background:none;color:var(--gris);bottom:auto;top:0}
-.nota .texto{padding:56px 56px 80px;max-width:640px}
-.nota h3{font-family:var(--didone);font-weight:400;font-variation-settings:"opsz" 96;font-size:clamp(48px,5.6vw,88px);line-height:.95;margin:20px 0 22px}
-.nota .lead{font-family:var(--didone);font-size:22px;line-height:1.4;font-variation-settings:"opsz" 24}
-.nota .grafico{margin:40px 0 0;border-top:1px solid var(--negro);padding-top:14px}
-.nota .ejes{display:flex;justify-content:space-between;margin-top:8px}
-.ficha{margin-top:36px;border-top:1px solid var(--negro)}
-.ficha div{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--linea);font-weight:300}
-.ficha dt{margin:0}
-.ficha dd{margin:0}
-.aviso{margin-top:28px;padding:16px 0 0;border-top:1.5px solid var(--rojo);color:var(--rojo);font-size:15px}
-.bloque-cab{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-
-/* Bloque de la IA */
-.ia-caja{margin-top:48px;background:var(--ia-fondo);border-top:2px solid var(--ia);padding:24px 24px 28px}
-.ia-caja h4{font-family:var(--didone);font-weight:400;font-size:clamp(28px,3vw,40px);line-height:1.05;margin:16px 0 8px;font-variation-settings:"opsz" 48}
-.ia-caja .explica{font-size:14px;font-weight:300;color:#3c3c4a;max-width:52ch}
-.ia-form{display:grid;gap:14px;margin-top:20px}
-.ia-form label{display:grid;gap:6px}
-.ia-form select,.ia-form textarea{font:inherit;font-size:15px;font-weight:300;color:var(--negro);background:#fff;border:1px solid #c9c9dc;border-radius:0;padding:10px 12px}
+/* Bloque de la IA (panel del Figma) */
+.ia-panel{background:var(--pizarra);color:#fff;margin-top:48px;padding:22px 24px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.ia-panel .kicker{color:#fff;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.ia-panel h2{font-size:clamp(24px,2.4vw,32px);font-weight:700;text-transform:uppercase;line-height:1.15;margin:8px 0 6px}
+.ia-panel p{font-size:17px}
+.ia-cuerpo{background:var(--ia-fondo);border-top:2px solid var(--ia);padding:22px 24px 26px;min-height:120px}
+.ia-temp{margin-top:32px}
+.ia-temp .ia-panel{margin-top:0}
+.chico-b{font-size:14px;padding:7px 12px}
+.ia-vacio{font-size:17px;max-width:60ch;margin-bottom:16px}
+.ia-meta{font-size:13px;color:var(--gris);margin-top:16px;font-weight:400}
+.ia-resumen{font-size:18px;line-height:1.45;max-width:75ch}
+.elegidas{list-style:none;padding:0;margin:18px 0 12px;counter-reset:el}
+.elegidas li{counter-increment:el;display:grid;grid-template-columns:36px 1fr;gap:4px 10px;padding:14px 0;border-top:1px solid #d9d9ea}
+.elegidas li::before{content:counter(el,decimal-leading-zero);font-weight:700;color:var(--ia);grid-row:1/3}
+.el-cab{display:flex;gap:10px 14px;align-items:center;flex-wrap:wrap}
+.el-cab a{font-size:18px;font-weight:700;text-decoration:none}
+.el-cab a:hover{text-decoration:underline}
+.el-num{font-weight:700;font-variant-numeric:tabular-nums}
+.elegidas p{font-size:16px;font-weight:400;grid-column:2}
+.ia-form{display:grid;gap:14px;max-width:720px}
+.ia-form label{display:grid;gap:6px;font-size:14px;font-weight:700}
+.ia-form select,.ia-form textarea{font:inherit;font-size:15px;font-weight:400;color:var(--tinta);background:#fff;border:1px solid #c9c9dc;border-radius:0;padding:10px 12px}
 .ia-form textarea{min-height:76px;resize:vertical}
-.ia-form select:focus,.ia-form textarea:focus{outline:1.5px solid var(--ia);outline-offset:0;border-color:var(--ia)}
-.boton{display:inline-flex;align-items:center;justify-content:center;gap:10px;justify-self:start;background:var(--ia);color:#fff;padding:13px 22px;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase}
-.boton:hover{background:#2b2fb8}
-.boton[disabled]{opacity:.55;cursor:progress}
-.boton.secundario{background:none;color:var(--ia);border:1px solid var(--ia)}
+.ia-form .boton{justify-self:start;background:var(--ia);border-color:var(--ia)}
 .ia-resp{margin-top:22px}
 .ia-resp:empty{display:none}
-.ia-resp .lectura{font-family:var(--didone);font-size:21px;line-height:1.4;font-variation-settings:"opsz" 24}
-.ia-resp h5{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;margin:22px 0 8px;color:var(--ia)}
-.ia-resp ul{padding-left:18px;font-weight:300}
+.ia-resp h5{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:22px 0 8px;color:var(--ia)}
+.ia-resp h5 .gris{color:var(--gris)}
+.ia-resp ul{padding-left:18px;font-weight:400}
 .ia-resp li{margin-bottom:6px}
-.apuesta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-top:22px;padding:14px 0;border-top:1px solid #c9c9dc;border-bottom:1px solid #c9c9dc}
-.apuesta b{font-family:var(--didone);font-weight:400;font-size:30px;line-height:1;text-transform:capitalize}
-.apuesta span{font-weight:300;font-size:15px;flex:1;min-width:200px}
-.ia-ojo{margin-top:16px;font-size:15px;font-weight:300}
 .lectura-ia{list-style:none;padding:0!important}
-.lectura-ia li{font-family:var(--didone);font-size:19px;line-height:1.4;margin-bottom:10px;font-variation-settings:"opsz" 24}
-.dato{font-family:var(--sans,inherit);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--negro);border:1px solid var(--linea);padding:2px 6px;white-space:nowrap;vertical-align:3px}
-.ia-resp h5 .gris{color:var(--gris);letter-spacing:.1em}
-.ia-ojo strong{font-weight:500}
+.lectura-ia li{font-size:18px;line-height:1.45;margin-bottom:10px}
+.dato{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:1px solid #c9c9dc;background:#fff;padding:2px 6px;white-space:nowrap;vertical-align:2px}
+.ia-ojo{margin-top:16px;font-size:15px;font-weight:400}
 .ia-control{margin-top:16px;font-size:13px;color:#7a5a00;background:#fff7dd;padding:10px 12px}
-.ia-error{color:var(--rojo);font-size:15px}
+.ia-error{color:var(--r);font-size:15px}
+.explica{font-size:14px;font-weight:400;color:#3c3c4a}
 .cargando{display:grid;gap:10px}
 .cargando i{display:block;height:12px;background:linear-gradient(90deg,#e3e3f6 0,#f7f7ff 50%,#e3e3f6 100%);background-size:200% 100%;animation:brillo 1.2s linear infinite}
 .cargando i:nth-child(2){width:86%}.cargando i:nth-child(3){width:64%}
 @keyframes brillo{to{background-position:-200% 0}}
 details.envio{margin-top:20px;font-size:13px}
-details.envio summary{cursor:pointer;color:var(--ia);letter-spacing:.14em;text-transform:uppercase;font-size:11px;font-weight:500}
-details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-family:ui-monospace,Menlo,monospace;font-size:12px;line-height:1.5;background:#fff;border:1px solid #d9d9ea;padding:12px;margin-top:10px;max-height:340px;overflow:auto}
-@media (max-width:860px){.ia-caja{padding:20px 16px 24px;margin-left:-16px;margin-right:-16px}}
+details.envio summary{cursor:pointer;color:var(--ia);letter-spacing:.06em;text-transform:uppercase;font-size:12px;font-weight:700}
+details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-family:ui-monospace,Menlo,monospace;font-size:12px;line-height:1.5;background:#fff;border:1px solid #d9d9ea;padding:12px;margin-top:10px;max-height:340px;overflow:auto;font-weight:400}
 
-/* Metodo: que cambio, limites e IA */
-.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:64px;padding-top:28px;border-top:1px solid var(--negro)}
-.tres h3{font-family:var(--didone);font-weight:400;font-size:30px;line-height:1.1;margin:12px 0 14px;font-variation-settings:"opsz" 48}
-.tres ol,.tres ul{padding-left:18px;font-weight:300;font-size:15px}
-.tres li{margin-bottom:10px}
-.tres p{font-weight:300;font-size:15px;margin-bottom:10px}
-.prompt{margin-top:14px}
-@media (max-width:900px){.tres{grid-template-columns:1fr;gap:36px}}
-@media (max-width:860px){
-  .nota .cuerpo{grid-template-columns:1fr}
-  .nota .fotos-nota{position:relative;top:0;height:62vh}
-  .nota .texto{padding:32px 16px 64px}
-  .nota .barra-nota{padding:14px 16px}
-  .ficha div{grid-template-columns:110px 1fr}
-}
+/* ---------- 04 Colores y 07 ficha de color ---------- */
+.periodo{display:flex;justify-content:space-between;gap:12px 40px;flex-wrap:wrap;background:var(--crema);padding:14px 20px;margin-top:34px;font-size:16px}
+.periodo b{display:block;font-size:14px;font-weight:700;text-transform:uppercase}
+.colores{display:grid;grid-template-columns:repeat(6,1fr);gap:40px 24px;margin-top:34px}
+@media (max-width:1100px){.colores{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:640px){.colores{grid-template-columns:repeat(2,1fr);gap:28px 14px}}
+.color{text-decoration:none;display:block}
+.color .muestra{aspect-ratio:1/1.05;padding:14px 16px;font-size:14px}
+.color .info{padding:0 16px}
+.color h3{font-size:20px;font-weight:700;text-transform:uppercase;margin-top:18px;line-height:1.15}
+.color .pct{font-size:clamp(34px,3vw,44px);font-weight:700;line-height:1.1;margin-top:10px;font-variant-numeric:tabular-nums}
+.color .de{font-size:16px;margin-top:4px}
+.color .var{font-size:14px;margin-top:14px;line-height:1.45}
+.color .boton{margin-top:20px;font-size:15px;padding:8px 12px}
+@media (max-width:640px){.color .info{padding:0}.color .boton{font-size:14px}}
+.nota-colores{font-size:16px;margin-top:40px}
+.dos-paneles{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+@media (max-width:860px){.dos-paneles{grid-template-columns:1fr}}
+.dos-paneles>div{padding:26px 24px 28px;min-height:240px}
+.dos-paneles .mostaza{background:var(--mostaza);color:var(--tinta)}
+.dos-paneles .pizarra{background:var(--pizarra);color:#fff}
+.dos-paneles .subt{margin:10px 0 18px}
+.dos-paneles p{font-size:17px;max-width:56ch}
+.dos-paneles .boton{margin-top:28px}
+.ficha-c{display:grid;grid-template-columns:395px 1fr;gap:46px;margin-top:22px}
+@media (max-width:1000px){.ficha-c{grid-template-columns:1fr;gap:28px}}
+.ficha-c h1{font-size:clamp(44px,5vw,64px);font-weight:700;line-height:1.05;text-transform:uppercase}
+.ficha-c .fam{font-size:14px;font-weight:700;text-transform:uppercase;padding:18px 0 14px;border-bottom:1px solid var(--tinta)}
+.bloque-color{margin-top:30px;min-height:470px;padding:24px 24px 30px;display:flex;flex-direction:column;justify-content:space-between}
+.bloque-color b{font-size:34px;font-weight:700;text-transform:uppercase}
+.bloque-color strong{display:block;font-size:clamp(56px,6vw,80px);font-weight:700;line-height:1;padding-bottom:14px;border-bottom:1px solid currentColor}
+.bloque-color span{display:block;font-size:14px;margin-top:14px;text-transform:uppercase}
+@media (max-width:700px){.bloque-color{min-height:300px}}
+.dos-num{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:22px}
+.dos-num b{display:block;font-size:clamp(46px,5vw,64px);font-weight:700;line-height:1.05;font-variant-numeric:tabular-nums}
+.dos-num span{display:block;font-size:16px;font-weight:700;margin-top:10px}
+.presencia{margin-top:36px;max-width:420px}
+.presencia .fila{display:flex;justify-content:space-between;font-size:16px;margin-top:18px}
+.presencia .fila b{font-size:18px;font-weight:700}
+.presencia .pista{height:22px;background:var(--pista);margin-top:8px;position:relative}
+.presencia .pista i{position:absolute;left:0;top:0;bottom:0}
+.presencia .chica{font-size:14px;margin-top:16px}
 
-footer{padding:40px 0 56px}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-footer .masthead{font-size:28px;padding:0;text-align:left}
+/* ---------- Alternativa "por año y season" (A01 a A05) ---------- */
+:root{--azul-s:#142638; --summer:#faeee3; --winter:#eaf2f8; --borde-s:#cfd5da; --crema-ini:#f7f3ec}
+.boton.claro{background:#fff;color:var(--azul-s);border-color:var(--azul-s)}
+.boton.claro:hover{background:#f3f5f7}
+.chica{font-size:14px;margin-top:18px}
+.sec-t{margin-top:56px}
+.ini-hero{background:var(--crema-ini)}
+.ini-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-top:38px;padding-bottom:36px;align-items:center}
+.ini-grid .titulo{max-width:14ch;color:var(--azul-s)}
+.ini-botones{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.ini-botones .boton{min-width:240px}
+.ini-pasos{list-style:none;padding:20px 0 0;margin:36px 0 0;border-top:1px solid var(--azul-s);display:flex;gap:12px 48px;flex-wrap:wrap;font-size:14px;font-weight:700}
+.ini-fotos{display:grid;grid-template-columns:1fr 1.15fr;gap:14px;align-items:end}
+.ini-foto{display:block;text-decoration:none}
+.ini-foto .f{display:block;aspect-ratio:3/4;background:var(--crema);overflow:hidden}
+.ini-foto.alto .f{aspect-ratio:2/3}
+.ini-foto img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .6s ease}
+.ini-foto:hover img{transform:scale(1.03)}
+.etq-f{display:block;font-size:13px;font-weight:700;text-transform:uppercase;margin-top:10px}
+@media (max-width:900px){.ini-grid{grid-template-columns:1fr}.ini-fotos{max-width:520px}}
+.dos-formas{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:22px}
+@media (max-width:860px){.dos-formas{grid-template-columns:1fr}}
+.forma{padding:20px 22px 22px}
+.forma h3{font-size:22px;font-weight:700;margin:8px 0 10px;color:var(--azul-s)}
+.forma p{font-size:16px}
+.forma .link{display:inline-block;margin-top:16px}
+.winter-suave{background:#eef3f7} .summer-suave{background:#fbefe6} .gris-suave{background:#f3f4f5}
+.botonera{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.botonera .boton{min-width:120px}
+.banda-azul{background:var(--azul-s);color:#fff;margin-top:64px}
+.banda-azul .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding-top:30px;padding-bottom:32px}
+.banda-azul p{font-size:16px;max-width:70ch;margin-top:10px}
+.pantalla:has(.banda-azul)+.pie,.pantalla:has(.s-pie)+.pie{margin-top:0}
+.orden{display:flex;gap:10px 24px;flex-wrap:wrap;background:#eef1f4;padding:12px 16px;margin-top:30px;font-size:16px;font-weight:700}
+.anio{display:grid;grid-template-columns:220px 1fr 1fr;gap:20px;border:1px solid var(--borde-s);padding:18px 20px;margin-top:22px}
+.anio.marcado{border-color:var(--azul-s);box-shadow:0 0 0 1px var(--azul-s)}
+.anio-n b{display:block;font-size:58px;font-weight:700;line-height:1.1;color:var(--azul-s);margin-top:6px}
+.anio-n span{display:block;font-size:16px;margin-top:10px}
+@media (max-width:1000px){.anio{grid-template-columns:1fr 1fr}.anio-n{grid-column:1/-1}}
+@media (max-width:640px){.anio{grid-template-columns:1fr}}
+.s-caja{padding:18px 20px 20px;display:flex;flex-direction:column;color:var(--azul-s)}
+.s-caja.summer{background:var(--summer)} .s-caja.winter{background:var(--winter)}
+.s-caja-cab{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.s-caja-cab b{font-size:30px;font-weight:700;text-transform:uppercase;line-height:1.1}
+.etq{background:#fff;font-size:13px;font-weight:700;text-transform:uppercase;padding:7px 12px}
+.s-caja strong{font-size:17px;margin-top:14px}
+.s-caja>span{font-size:15px;margin-top:8px;flex:1}
+.s-caja .boton{margin-top:18px;justify-content:space-between}
+.preferis{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#f3f4f5;padding:22px 22px;margin-top:40px}
+.preferis h2{font-size:22px;font-weight:700}
+.preferis p{font-size:16px;margin-top:6px}
+.ps-grilla{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
+@media (max-width:860px){.ps-grilla{grid-template-columns:1fr}}
+.ps{padding:24px 22px 26px;color:var(--azul-s)}
+.ps.summer{background:var(--summer)} .ps.winter{background:var(--winter)}
+.ps h2{font-size:clamp(40px,4vw,52px);font-weight:700;text-transform:uppercase;line-height:1.05}
+.ps-foto{display:block;margin-top:22px;height:360px;background:#fff;overflow:hidden}
+.ps-foto img{height:100%;width:auto;margin:0 auto;max-width:100%;object-fit:cover}
+.ps-dentro{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.ps-dentro a{background:#fff;padding:16px 14px;font-size:18px;font-weight:700;text-decoration:none}
+.ps-dentro a:hover{text-decoration:underline}
+/* Tono de la season: verano durazno, invierno celeste */
+.tono-summer{--tono:var(--summer)} .tono-winter{--tono:var(--winter)}
+.s-cab{background:var(--tono)}
+.s-cab .wrap{padding-top:30px;padding-bottom:26px;color:var(--azul-s)}
+.s-titulo{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-top:10px}
+.s-titulo .titulo{font-size:clamp(44px,5vw,64px)}
+.sel-anio select{appearance:none;-webkit-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0h10L5 6z' fill='%23142638'/%3E%3C/svg%3E") no-repeat right 14px center;border:1px solid var(--azul-s);border-radius:0;color:var(--azul-s);font-size:16px;font-weight:700;padding:9px 40px 9px 14px;min-width:220px;cursor:pointer}
+.s-tabs{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.s-tabs .boton{min-width:180px}
+.s-sec{scroll-margin-top:110px;margin-top:48px}
+.tono-summer .t-foto,.tono-winter .t-foto{height:280px;background:var(--tono)}
+.tono-summer .ia-cuerpo{background:#fdf6f0;border-top-color:var(--ia)}
+.tono-winter .ia-cuerpo{background:#f3f7fb}
+.s-pie{margin-top:64px}
+.s-pie.summer{background:#f3f4f5;color:var(--azul-s)} .s-pie.winter{background:var(--azul-s);color:#fff}
+.s-pie .wrap{padding-top:28px;padding-bottom:30px}
+.s-pie p{font-size:16px;margin-top:10px}
+.s-pie-acc{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:24px}
+.link-pie{font-weight:700;text-decoration:none}
+.link-pie:hover{text-decoration:underline}
+.ficha-tono .miga{background:var(--tono);margin:0 -24px;padding:16px 24px}
+@media (max-width:700px){.ficha-tono .miga{margin:0 -16px;padding:14px 16px}}
+.color .info .boton{font-size:14px;padding:7px 10px}
+
+/* ---------- Perfil de la marca ---------- */
+.perfil{display:grid;grid-template-columns:1fr 380px;gap:48px;margin-top:30px;align-items:start}
+@media (max-width:1000px){.perfil{grid-template-columns:1fr;gap:28px}}
+.form-perfil{display:grid;grid-template-columns:1fr 1fr;gap:22px 24px}
+@media (max-width:700px){.form-perfil{grid-template-columns:1fr}}
+.form-perfil label{display:grid;gap:8px;font-size:15px;font-weight:700}
+.form-perfil label.ancho{grid-column:1/-1}
+.form-perfil small{font-weight:400;color:var(--gris);font-size:13px}
+.form-perfil input,.form-perfil select,.form-perfil textarea{font:inherit;font-weight:400;font-size:16px;color:var(--tinta);background:#fff;border:1px solid var(--linea);border-radius:0;padding:11px 12px;width:100%}
+.form-perfil textarea{min-height:84px;resize:vertical}
+.form-perfil input:focus,.form-perfil select:focus,.form-perfil textarea:focus{outline:2px solid var(--azul);outline-offset:0;border-color:var(--azul)}
+.form-perfil .obligatorio{color:var(--r)}
+.form-perfil .error{color:var(--r);font-weight:500;font-size:14px}
+.acciones-perfil{grid-column:1/-1;display:flex;gap:14px 22px;flex-wrap:wrap;align-items:center;margin-top:6px}
+.boton.peligro{background:none;border-color:var(--r);color:var(--r)}
+.boton.peligro:hover{background:var(--r-bg)}
+.aviso-privado{background:var(--crema);padding:22px 22px 24px}
+.aviso-privado h2{font-size:18px;font-weight:700;text-transform:uppercase}
+.aviso-privado p{font-size:15px;font-weight:400;margin-top:10px}
+.aviso-privado ul{font-size:15px;font-weight:400;padding-left:18px;margin-top:10px}
+.guardado{background:var(--q-bg);color:var(--q);padding:12px 16px;font-size:15px;margin-top:18px}
+
+/* ---------- 05 Visto en 2026 ---------- */
+.grupo-26+.grupo-26{margin-top:48px}
+.grupo-26 h2{font-size:22px;font-weight:700;text-transform:uppercase;margin-top:40px}
+
+/* ---------- 06 Método ---------- */
+.pasos3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.pasos3>div{padding:22px 20px 30px;min-height:174px}
+.pasos3>div:nth-child(1){background:var(--crema)} .pasos3>div:nth-child(2){background:#e6e9ed} .pasos3>div:nth-child(3){background:#f2e5c6}
+.pasos3 h3{display:flex;gap:22px;align-items:baseline;font-size:20px;font-weight:700;text-transform:uppercase}
+.pasos3 h3 b{font-size:32px}
+.pasos3 p{font-size:16px;margin-top:22px}
+@media (max-width:860px){.pasos3{grid-template-columns:1fr;gap:12px}.pasos3>div{min-height:0}}
+.evid-grilla{display:grid;grid-template-columns:1fr 405px;gap:48px;margin-top:34px;align-items:start}
+@media (max-width:1000px){.evid-grilla{grid-template-columns:1fr}}
+.evid{padding:0 22px}
+.evid .fila1{display:grid;grid-template-columns:auto 1fr;gap:20px 56px;align-items:center;padding-bottom:26px;border-bottom:1px solid var(--tinta)}
+.evid .grande{font-size:clamp(40px,4vw,50px);font-weight:700;line-height:1.1}
+.evid .fila1 p{font-size:16px}
+.evid .barras{margin-top:26px}
+.evid .barra-fila{grid-template-columns:200px 1fr 80px}
+.evid .barra-fila span{font-size:16px}
+.evid .chica{font-size:16px;margin-top:22px}
+@media (max-width:700px){.evid{padding:0}.evid .fila1{grid-template-columns:1fr}.evid .barra-fila{grid-template-columns:1fr 64px}}
+.limites3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px 64px;margin-top:22px}
+.limites3>div{border-top:1px solid var(--tinta);padding-top:22px}
+.limites3 h3{font-size:17px;font-weight:700}
+.limites3 p{font-size:16px;margin-top:8px}
+@media (max-width:860px){.limites3{grid-template-columns:1fr}}
+.metodo-mas{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 64px;margin-top:56px}
+@media (max-width:900px){.metodo-mas{grid-template-columns:1fr}}
+.metodo-mas h3{font-size:20px;font-weight:700;text-transform:uppercase;padding-bottom:12px;border-bottom:1px solid var(--tinta)}
+.metodo-mas ol,.metodo-mas ul{padding-left:20px;margin-top:16px;font-size:16px;font-weight:400}
+.metodo-mas li{margin-bottom:10px}
+.metodo-mas p{font-size:16px;font-weight:400;margin-top:14px}
+.ciclos{margin-top:8px}
+.ciclo{display:grid;grid-template-columns:110px 1fr 56px;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--linea)}
+.ciclo .barras{display:grid;gap:5px}
+.barra{position:relative;height:8px;background:var(--pista)}
+.barra i{position:absolute;left:0;top:0;bottom:0;background:var(--oscuro)}
+.barra.cae i{background:#e99a8a}
+.barra .umbral{position:absolute;left:20%;top:-5px;bottom:-5px;border-left:1px solid var(--tinta)}
+.ciclo .n{font-size:12px;color:var(--gris);text-align:right;line-height:1.5;font-variant-numeric:tabular-nums}
+.ciclo>span:first-child{font-size:14px}
+.leyenda{display:flex;gap:22px;flex-wrap:wrap;padding:14px 0 6px;font-size:13px;color:var(--gris)}
+.leyenda span::before{content:"";display:inline-block;width:18px;height:8px;margin-right:8px;background:var(--oscuro);vertical-align:0}
+.leyenda span.r::before{background:#e99a8a}
+.leyenda span.u::before{width:1px;height:12px;vertical-align:-2px;background:var(--tinta)}
+.prompt{margin-top:18px}
 </style>
 </head>
 <body>
 <section class="home" id="home" aria-label="Inicio">
-  <div class="home-centro wrap">
+  <div class="home-centro">
     <p class="caps">Fashion weeks · Nueva York, Londres, Milán y París</p>
     <h1 class="home-marca">Paleta Predictiva</h1>
     <p class="home-frase">Qué se queda <i>y qué se va.</i></p>
-    <div class="home-acciones"><a class="boton-home" href="#indice">Ver otoño 2025</a><a class="caps link-ant" href="#indice" data-ir-temp="SS2025">Temporadas anteriores</a></div>
+    <div class="home-acciones" id="home-acciones"><a class="boton-home" href="#perfil">Creá el perfil de tu marca</a><a class="caps link-ant" href="#inicio">Ver sin perfil</a></div>
   </div>
   <div class="home-paleta" id="home-paleta" role="img" aria-label="Los colores de la pasarela, cada uno del ancho de cuánto se vio"></div>
-  <div class="home-pie caps gris"><span id="home-paleta-pie">La paleta de la pasarela: cada franja es un color, del ancho de cuánto se vio</span><a href="#indice">Bajá ↓</a></div>
+  <div class="home-pie caps"><span id="home-paleta-pie">La paleta de la pasarela: cada franja es un color, del ancho de cuánto se vio</span><a href="#inicio">Entrar →</a></div>
 </section>
 
-<header class="cabecera compacta" id="cabecera">
-  <div class="wrap">
-    <div class="fila1 caps"><span>Informe de temporada · 2024-2025</span><span class="der">Para marcas argentinas</span></div>
-    <a class="masthead" href="#">Paleta Predictiva</a>
-  </div>
-  <nav class="nav caps" aria-label="Secciones">
-    <a href="#indice">La temporada</a>
-    <a href="#colores">Colores</a>
-    <a href="#visto-2026">Visto en 2026</a>
-    <a href="#metodo">Método</a>
-  </nav>
-</header>
-
-<main class="wrap">
-
-  <section class="seccion" id="indice">
-    <div class="seccion-cabeza">
-      <div><p class="caps" id="n-indice"></p><h2 id="t-titulo"></h2></div>
-      <p class="intro"><b>Se queda:</b> después del desfile se buscó más que el resto de su temporada. <b>En riesgo:</b> se buscó menos.</p>
+<div id="app" class="oculto">
+  <header class="cab">
+    <div class="wrap">
+      <a class="logo" href="#">Paleta predictiva</a>
+      <nav class="menu" aria-label="Secciones">
+        <a href="#inicio" data-sec="inicio">Inicio</a>
+        <a href="#anio" data-sec="anio">Por año</a>
+        <a href="#por-season" data-sec="por-season">Por season</a>
+        <a href="#season/SS2025" data-sec="summer">Summer</a>
+        <a href="#season/FW2025" data-sec="winter">Winter</a>
+        <a href="#metodo" data-sec="metodo">Método</a>
+      </nav>
+      <a class="cab-der" id="cab-der" href="#perfil">Creá tu perfil</a>
     </div>
-    <div class="temporadas-nav caps" id="temporadas-nav"></div>
-    <div class="filtro caps" id="filtro"></div>
-    <div class="leyenda-fuente"><span class="lf"><span class="tag">Calculado</span>veredictos, números y curvas: salen de los datos con reglas fijas</span><span class="lf"><span class="tag ia">Inferencia de la IA</span>sugerencias para tu marca, siempre aparte</span></div>
-    <div id="temporadas"></div>
-  </section>
-
-  <section class="cita" aria-label="La hipótesis">
-    <p class="caps">Por qué creerle</p>
-    <blockquote>“Lo que se busca más después del desfile, se queda.”</blockquote>
-    <div class="evid">
-      <div><div class="puntos" data-n="10" data-k="9"></div><p><b>9 de cada 10</b> tendencias que subieron seguían el año siguiente.</p><p class="caps gris">178 tendencias, 2016 a 2024</p></div>
-      <div><p class="evid-tit">Las que bajan tienen <b>unas 5 veces más</b> chances de pasar de moda.</p>
-        <div class="compara"><span class="caps">Subieron</span><div class="puntos rojo chico" data-n="19" data-k="2"></div><span class="caps gris">2 de 19 pasaron de moda</span></div>
-        <div class="compara"><span class="caps">Bajaron</span><div class="puntos rojo chico" data-n="16" data-k="9"></div><span class="caps gris">9 de 16 pasaron de moda</span></div>
-        <p class="caps gris">2021 a 2024 · Por eso “en riesgo” no es “se va”: es apostar poco</p></div>
-    </div>
-  </section>
-
-  <section class="seccion" id="colores">
-    <div class="seccion-cabeza">
-      <div><p class="caps">En la pasarela</p><h2>Los colores que <i>más se vieron</i></h2></div>
-      <p class="intro" id="intro-colores"></p>
-    </div>
-    <div class="paleta" id="paleta"></div>
-  </section>
-
-  <section class="seccion" id="visto-2026">
-    <div class="seccion-cabeza">
-      <div><p class="caps">Lo último</p><h2>Visto en <i>pasarela</i> 2026</h2></div>
-      <p class="intro" id="intro-2026"></p>
-    </div>
-    <div class="indice-grilla" id="grilla-2026"></div>
-  </section>
-
-  <section class="seccion" id="metodo">
-    <div class="seccion-cabeza">
-      <div><p class="caps">Método</p><h2>Cómo <i>lo sabemos</i></h2></div>
-      <p class="intro">Probamos primero si la pasarela anticipaba las búsquedas, con 2.430 looks de Vogue Runway clasificados con IA. No apareció ningún desfase entre lo que se vio en la pasarela y lo que se buscó después. Lo que sí daba pistas era lo que pasaba con las búsquedas después del desfile.</p>
-    </div>
-    <div class="metodo">
-      <ol class="pasos" id="pasos"></ol>
-      <div>
-        <p class="caps">Ciclo por ciclo · cuántas fueron moda pasajera al segundo año</p>
-        <div class="leyenda caps gris"><span>Ganaron búsquedas</span><span class="r">Perdieron búsquedas</span><span class="u">20%</span></div>
-        <div class="ciclos" id="ciclos"></div>
-      </div>
-    </div>
-    <div class="tres">
-      <div>
-        <p class="caps">La hipótesis</p><h3>Qué cambió y por qué</h3>
-        <ol>
-          <li><b>Al principio</b> creíamos que la pasarela anticipa las ventas masivas 12 a 18 meses después.</li>
-          <li><b>Lo probamos</b> con 2.430 looks de Vogue Runway clasificados con IA contra Google Trends: no apareció ningún desfase. Lo presentamos como resultado nulo.</li>
-          <li><b>Lo que sí funcionó</b> fue mirar qué pasa con las búsquedas el primer año después del desfile. Probamos que lo que sube se queda con tendencias nuevas de 2016 a 2018, que no habíamos usado para armar la idea: solo 1 de 17 fue pasajera.</li>
-          <li><b>Lo que descartamos:</b> que lo que se mantiene plano sea pasajero. No se sostuvo: las planas se quedaron 73% de las veces, no tan lejos del 88% de las que suben (122 tendencias de 2019 a 2023, de donde salió la idea). El riesgo está en lo que cae.</li>
-        </ol>
-      </div>
-      <div>
-        <p class="caps">Los datos</p><h3>Lo que no dicen</h3>
-        <ul>
-          <li>Google mide búsquedas, es decir, interés. No ventas.</li>
-          <li>Son búsquedas de todo el mundo. Con búsquedas solo de Argentina la regla no se confirmó.</li>
-          <li>Las tendencias las eligieron medios de moda en inglés (Who What Wear, CBC Life, Yahoo Lifestyle). No las elegimos nosotros, pero tampoco son todas las que hubo.</li>
-          <li>El veredicto es la lectura del primer año. El segundo año de estas tendencias no se puede medir limpio con Google: lo probamos y el ruido de 2026 es más de tres veces el de un año normal.</li>
-          <li>Otoño 2025 pasó un chequeo más estricto, fijado de antemano, porque 7 de los 12 meses de su primer año caen en el período en que Google empezó a medir distinto. Pasó, pero en 8 de sus 13 veredictos la lectura con solo marzo a julio de 2025 da “sin señal clara” (ninguno se da vuelta); lo marcamos en cada una.</li>
-          <li>Primavera 2025 pasó un chequeo fijado de antemano (el veredicto no depende del tamaño de la búsqueda ni del salto de 2026), pero su primer año toca meses en que Google empezó a medir distinto. En 3 de sus 8 “se queda” la lectura cambia sin agosto y septiembre de 2025; lo marcamos en cada una.</li>
-          <li>Desde mediados de 2025 Google Trends mide distinto y las búsquedas no se pueden comparar con los años anteriores. Por eso 2026 va sin veredicto.</li>
-          <li>Las muestras son chicas: de 15 a 68 tendencias por prueba.</li>
-        </ul>
-      </div>
-      <div>
-        <p class="caps">La IA</p><h3>Qué hace y qué no</h3>
-        <p>Cuando abrís una tendencia, podés pedirle a la IA qué haría una marca de tu rubro con ella. Le mandamos el veredicto, la confianza, el cambio de búsquedas, los avisos, la evidencia y los límites de los datos. Explica los datos en palabras simples y sugiere ideas de producto.</p>
-        <p>No decide nada: el veredicto, la confianza y cuánto apostar los fijan reglas del código. Cada frase sobre los datos dice de qué dato sale, y un control automático revisa que cada número esté en ese dato; si falla, le pide que corrija una vez.</p>
-        <p id="ia-modelo" class="caps gris">Modelo: GPT-OSS 120B (abierto, de OpenAI), vía Groq</p>
-        <div class="prompt"><button class="boton secundario" id="ver-prompt">Ver qué le pedimos a la IA</button><div id="prompt-texto"></div></div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <span class="masthead">Paleta Predictiva</span>
-    <p class="caps gris">K576 · Universidad de San Andrés · Martínez, Centeno, Bonomi<br>Prototipo de clase. Datos: Google Trends y listas de medios de moda. Código y análisis en <a href="https://github.com/cborja999/paleta_predictiva">GitHub</a>.</p>
-  </div>
-</footer>
-
-<article class="nota" id="nota" aria-hidden="true" aria-label="Detalle de la tendencia">
-  <div class="barra-nota"><span class="marca">Paleta Predictiva</span>
-    <div class="nav-nota caps"><button id="anterior" aria-label="Tendencia anterior">← <span>Anterior</span></button><span id="posicion" class="gris"></span><button id="siguiente" aria-label="Tendencia siguiente"><span>Siguiente</span> →</button></div>
-    <button class="caps" id="cerrar">Cerrar ✕</button></div>
-  <div id="nota-cuerpo"></div>
-</article>
+  </header>
+  <main id="pantalla" tabindex="-1"></main>
+  <footer class="pie">
+    <div class="wrap"><b>PALETA PREDICTIVA</b><span>K576 · Universidad de San Andrés · Prototipo de clase · Martínez, Centeno, Bonomi</span><a href="https://github.com/cborja999/paleta_predictiva">Código y datos en GitHub</a></div>
+  </footer>
+</div>
 
 <script src="datos.js"></script>
 <script>
@@ -429,81 +526,68 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
   "use strict";
   var D = window.DATOS, T = D.tendencias;
   var TEMP = {SS2024:'Primavera 2024', FW2024:'Otoño 2024', SS2025:'Primavera 2025', FW2025:'Otoño 2025', SS2026:'Primavera 2026', FW2026:'Otoño 2026'};
-  var ORDEN_T = {FW2025:0, SS2025:1, FW2024:2, SS2024:3};
+  var TEMPORADAS = ['FW2025', 'SS2025', 'FW2024', 'SS2024'];
   var MES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
-  var RUBROS = [['', 'Todo'], ['vestidos', 'Vestidos'], ['polleras', 'Polleras'], ['pantalones', 'Pantalones'], ['abrigos', 'Abrigos y tejidos'], ['accesorios', 'Accesorios y estampados']];
-  // La página abre en la temporada más nueva con veredicto; las anteriores se eligen arriba del índice
-  var rubro = '', temporada = 'FW2025';
-  var TEMPORADAS = [['FW2025', 'Otoño 2025'], ['SS2025', 'Primavera 2025'], ['FW2024', 'Otoño 2024'], ['SS2024', 'Primavera 2024']];
+  var RUBROS = [['', 'Todos los rubros'], ['vestidos', 'Vestidos'], ['polleras', 'Polleras'], ['pantalones', 'Pantalones'], ['abrigos', 'Abrigos y tejidos'], ['accesorios', 'Accesorios y estampados']];
+  var RUBRO_NOM = {vestidos:'Vestidos', polleras:'Polleras', pantalones:'Pantalones', abrigos:'Abrigos y tejidos', accesorios:'Accesorios', todo:'Varios rubros'};
+  var ETIQ = {queda:'Se queda', riesgo:'En riesgo', sin:'Sin señal clara'};
+  var APUESTA = {baja:'Probar poco', media:'Moderada', alta:'Fuerte'};
+  var estado = {temporada:'FW2025', rubro:'', senal:''};
+  // Perfil de la marca: solo en este navegador (localStorage). Nada de contraseñas ni servidor.
+  var CLAVE_PERFIL = 'pp_perfil_v1';
+  function perfil(){ try { var p = JSON.parse(localStorage.getItem(CLAVE_PERFIL)); return p && p.rubro ? p : null; } catch (e){ return null; } }
+  function guardarPerfil(p){ try { localStorage.setItem(CLAVE_PERFIL, JSON.stringify(p)); return true; } catch (e){ return false; } }
+  function borrarPerfil(){ try { localStorage.removeItem(CLAVE_PERFIL); } catch (e){} }
+  function rubroPerfil(){ var p = perfil(); return p && p.rubro !== 'varios' ? p.rubro : ''; }
   function $(id){ return document.getElementById(id); }
   function mes(m){ var p = m.split('-'); return MES[+p[1]-1] + ' de ' + p[0]; }
   function lista(xs){ return xs.join(', ').replace(/, ([^,]*)$/, ' y $1'); }
-  function verd(t){ return '<span class="caps veredicto ' + t.veredicto + '">' + (t.veredicto === 'queda' ? 'Se queda' : 'En riesgo') + '</span>'; }
   function pct(n){ return (n > 0 ? '+' : n < 0 ? '−' : '') + Math.abs(n) + '%'; }
-  function esc(x){ return String(x).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
-  // Lamina: en lugar de una foto de pasarela, la comparacion que hace la regla dibujada sobre la curva
-  // La comparación que decide el veredicto: cuánto creció esta tendencia contra cuánto creció su temporada
-  function barras(t){
-    var a = t.bruto_pct, b = t.temporada_pct, mn = Math.min(0, a, b), mx = Math.max(0, a, b), r = (mx - mn) || 1;
-    function barra(etiq, v, cl){
-      var izq = (Math.min(0, v) - mn) / r * 100, ancho = Math.abs(v) / r * 100;
-      return '<div class="b-fila ' + cl + '"><span class="b-etiq">' + etiq + '</span><div class="b-pista"><i style="left:' + izq.toFixed(1) + '%;width:' + Math.max(ancho, 0.6).toFixed(1) + '%"></i>' +
-        (mn < 0 ? '<span class="b-cero" style="left:' + ((0 - mn) / r * 100).toFixed(1) + '%"></span>' : '') + '</div><b class="b-num">' + pct(v) + '</b></div>';
-    }
-    var concl = t.veredicto === 'queda' ? 'Creció más que el resto: <b>se queda</b>.'
-      : (a < 0 ? 'Bajó mientras el resto subía' : 'Creció menos que el resto') + ': <b>en riesgo</b>.';
-    return '<div class="barras-nota ' + t.veredicto + '"><div class="bloque-cab"><p class="caps">Búsquedas en Google, el año después del desfile</p><span class="tag">Calculado</span></div>' +
-      barra(t.nombre, a, 'esta') + barra('Su temporada', b, 'temp') + '<p class="b-concl">' + concl + '</p></div>';
-  }
-  function cuidadoChip(t){
-    var txt = t.aviso ? 'Se apoya en un pico de un solo mes.'
-      : t.nota ? (t.nota.indexOf('agosto') > -1 ? 'Sin agosto y septiembre de 2025 todavía no se nota.' : 'Mirando solo hasta julio de 2025, todavía no se nota.') : '';
-    return txt ? '<details class="cuidado"><summary>Con cuidado</summary><p>' + txt + '</p></details>' : '';
-  }
-  function foto(t, clase, n){
-    n = n || 1;
-    var r = 'fotos/' + t.id + '-' + n + '.jpg', d = (t.desfiles || [])[n - 1];
-    var credito = d ? d.marca + ' · ' + TEMP[t.temporada] : '';
-    return '<div class="foto ' + (clase || '') + '"><img src="' + r + '" alt="Look de pasarela: ' + esc(t.nombre) + (credito ? ', ' + esc(credito) : '') + '" loading="lazy" ' +
-      'onerror="this.parentNode.classList.add(\'sin-foto\');this.remove()">' +
-      (credito && clase === 'con-credito' ? '<span class="credito caps">' + esc(credito) + '</span>' : '') +
-      '<span class="falta" aria-hidden="true"><i>' + t.nombre + '</i><small>' + r + '</small></span></div>';
-  }
-  // En la nota: las dos fotos, cada una con el desfile de donde sale
-  function fotosNota(t){
-    return '<div class="fotos-nota">' + foto(t, 'con-credito', 1) + foto(t, 'con-credito', 2) + '</div>';
-  }
-  function trazo(serie, W, H, mn, mx){
-    var v = serie.filter(function(x){ return x != null; }), d = '';
-    if (mn == null){ mx = Math.max.apply(null, v); mn = Math.min.apply(null, v); }
-    serie.forEach(function(y, i){ if (y == null) return;
-      d += (d ? 'L' : 'M') + (i * W / (serie.length - 1)).toFixed(1) + ' ' + (H - (y - mn) / ((mx - mn) || 1) * H).toFixed(1); });
-    return d;
-  }
-  function cuidado(t){ return t.aviso || t.nota ? 1 : 0; }
-  function orden(a, b){ return cuidado(a) - cuidado(b) || ORDEN_T[a.temporada] - ORDEN_T[b.temporada] || (a.confianza === 'Alta' ? 0 : 1) - (b.confianza === 'Alta' ? 0 : 1) || Math.abs(b.g1) - Math.abs(a.g1); }
-  var Q = T.filter(function(t){ return t.veredicto === 'queda'; }).sort(orden);
-  var R = T.filter(function(t){ return t.veredicto === 'riesgo'; }).sort(orden);
-  var S = D.sin_senal_items.slice().sort(function(a, b){ return Math.abs(b.g1) - Math.abs(a.g1); });
-  var ETIQ = {queda:'Se queda', riesgo:'En riesgo', sin:'Sin señal'};
   function num(n, d){ return n.toLocaleString('es-AR', {minimumFractionDigits:d, maximumFractionDigits:d}); }
+  function pp(n){ return (n > 0 ? '+' : n < 0 ? '−' : '') + num(Math.abs(n), 1) + ' pp'; }
+  function esc(x){ return String(x).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function slug(s){ return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-'); }
+  function temps(xs){ return lista(xs.map(function(c){ return (c.slice(0, 2) === 'SS' ? 'primavera ' : 'otoño ') + c.slice(2); })); }
+  function claro(hex){ var n = parseInt(hex.slice(1), 16); return (0.299 * (n >> 16) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255)) > 150; }
+  function porId(id){ return T.filter(function(t){ return t.id === id; })[0]; }
+  function cuidado(t){ return !!(t.aviso || t.nota); }
+  function orden(a, b){ return (a.veredicto === 'queda' ? 0 : 1) - (b.veredicto === 'queda' ? 0 : 1) || (cuidado(a) ? 1 : 0) - (cuidado(b) ? 1 : 0) || (a.confianza === 'Alta' ? 0 : 1) - (b.confianza === 'Alta' ? 0 : 1) || Math.abs(b.g1) - Math.abs(a.g1); }
+  function deTemporada(s){ return T.filter(function(t){ return t.temporada === s; }).sort(orden); }
+  function sinDe(s){ return D.sin_senal_items.filter(function(t){ return t.temporada === s; }); }
+  // El aviso del análisis, en palabras: pico de un mes (aviso) o lectura sensible al período (nota)
+  function avisoTexto(t){
+    var a = t.aviso ? t.aviso.replace(/^Lectura apoyada en un pico de un solo mes \((.*)\)$/, function(_, x){
+      return 'La lectura se apoya en un pico de un solo mes (' + x.replace(/(\d{4})-(\d{2})/g, function(m){ return mes(m); }) + ').'; }) : '';
+    return [a, t.nota].filter(Boolean).join(' ');
+  }
+  function pieCautela(t){
+    if (t.aviso && t.nota) return 'Con cautela · pico de un mes y cambio de medición';
+    if (t.nota) return 'Con cautela · señal sensible al período';
+    if (t.aviso) return 'Con cautela · pico de un solo mes';
+    return '';
+  }
+  // Foto del desfile (si está en fotos/; si no, queda el lugar)
+  function img(t, n, alt){
+    var d = (t.desfiles || [])[n - 1];
+    return '<img src="fotos/' + t.id + '-' + n + '.jpg" alt="' + esc(alt || ('Look de pasarela: ' + t.nombre + (d ? ', ' + d.marca : ''))) + '" loading="lazy" onerror="this.parentNode.classList.add(\'sin-foto\');this.remove()">';
+  }
+  function marcaDesfile(t, n){ var d = (t.desfiles || [])[n - 1]; return d ? d.marca : ''; }
 
-  // Home: cada letra del nombre se pinta con un color de la pasarela al pasar el cursor
+  // ---------- Home: se mantiene (letras que se pintan y franja de colores) ----------
   (function(){
     var h = document.querySelector('.home-marca'), texto = h.textContent, k = 0;
     function luz(hex){ var n = parseInt(hex.slice(1), 16); return 0.299 * (n >> 16) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255); }
     var tonos = D.colores.filter(function(c){ return luz(c.hex) < 200; }).sort(function(a, b){ return b.reciente - a.reciente; }).map(function(c){ return c.hex; });
-    var orden = [6, 1, 3, 8, 0, 5, 2, 7, 4].filter(function(i){ return i < tonos.length; });   // salteado, para que dos vecinas no repitan familia
+    var ord = [6, 1, 3, 8, 0, 5, 2, 7, 4].filter(function(i){ return i < tonos.length; });
     h.setAttribute('aria-label', texto);
     h.innerHTML = texto.split('').map(function(ch){
       if (ch === ' ') return '<br>';
-      return '<span class="l" aria-hidden="true" style="--c:' + tonos[orden[k++ % orden.length]] + '">' + ch + '</span>';
+      return '<span class="l" aria-hidden="true" style="--c:' + tonos[ord[k++ % ord.length]] + '">' + ch + '</span>';
     }).join('');
     h.querySelectorAll('.l').forEach(function(l){
       l.addEventListener('mouseenter', function(){ clearTimeout(l._t); l.classList.add('pinta'); });
       l.addEventListener('mouseleave', function(){ l._t = setTimeout(function(){ l.classList.remove('pinta'); }, 900); });
     });
-    // En el celular no hay cursor: al tocar el nombre, las letras se pintan en ola
     h.addEventListener('touchstart', function(){
       h.querySelectorAll('.l').forEach(function(l, i){
         setTimeout(function(){ l.classList.add('pinta'); }, i * 55);
@@ -511,234 +595,566 @@ footer .masthead{font-size:28px;padding:0;text-align:left}
       });
     }, {passive:true});
   })();
-  $('home-paleta-pie').innerHTML = 'La paleta de la pasarela, ' + D.colores_meta.recientes.map(function(c){ return (c.slice(0, 2) === 'SS' ? 'primavera ' : 'otoño ') + c.slice(2); }).join(' a ').replace(/ a [^a]* a /, ' a ') +
+  $('home-paleta-pie').innerHTML = 'La paleta de la pasarela, ' + temps(D.colores_meta.recientes).replace(/, .* y /, ' a ') +
     '<span class="solo-compu">: cada franja es un color, del ancho de cuánto se vio</span>';
   $('home-paleta').innerHTML = D.colores.slice().sort(function(a, b){ return b.reciente - a.reciente; }).map(function(c, i){
     return '<span style="flex:' + c.reciente + ';background:' + c.hex + ';animation-delay:' + (i * 0.06) + 's" title="' + c.nombre + ' · ' + num(c.reciente, 1) + '% de los looks"></span>';
   }).join('');
+  function pintarHome(){
+    var p = perfil();
+    $('home-acciones').innerHTML = p
+      ? '<a class="boton-home" href="#inicio">Entrar como ' + esc(p.nombre || 'tu marca') + '</a><a class="caps link-ant" href="#perfil">Editar el perfil</a>'
+      : '<a class="boton-home" href="#perfil">Creá el perfil de tu marca</a><a class="caps link-ant" href="#inicio">Ver sin perfil</a>';
+  }
 
-  // Índice: por temporada, como la lista de WGSN. Foto, veredicto, nombre y el número dentro de la frase.
-  var veredicto = '';
-  var VEREDICTOS = [['', 'Todas'], ['queda', 'Se quedan'], ['riesgo', 'En riesgo']];
-  function frase(t){
-    if (t.veredicto === 'sin') return 'Se movió casi igual que su temporada.';
-    return '<b>' + pct(t.bruto_pct) + '</b> de búsquedas · su temporada, ' + pct(t.temporada_pct);
+  // ---------- Alternativa "por año y season" del Figma (A01 a A05) ----------
+  // Summer = primavera-verano (SS) y Winter = otoño-invierno (FW) del hemisferio norte, como las llama el Figma.
+  // Primero los años con veredicto (2025 y 2024); 2026 va al final porque es solo observación
+  var CON_VEREDICTO = ['FW2025', 'SS2025', 'FW2024', 'SS2024'], ANIOS = ['2025', '2024', '2026'];
+  function tipoS(s){ return s.slice(0, 2) === 'SS' ? 'summer' : 'winter'; }
+  function nomS(s){ return (s.slice(0, 2) === 'SS' ? 'Summer ' : 'Winter ') + s.slice(2); }
+  function largoS(s){ return (s.slice(0, 2) === 'SS' ? 'Primavera-verano ' : 'Otoño-invierno ') + s.slice(2) + ' del hemisferio norte'; }
+  function tieneVeredicto(s){ return CON_VEREDICTO.indexOf(s) > -1; }
+  function vistasDe(s){ return D.vistas_2026.filter(function(v){ return v.temporada === s; }); }
+  function mesDesfile(s){ var t = T.filter(function(x){ return x.temporada === s; })[0]; return t ? mes(t.mes_desfile) : (s.slice(0, 2) === 'SS' ? 'septiembre y octubre de ' + (+s.slice(2) - 1) : 'febrero y marzo de ' + s.slice(2)); }
+  function bandaCautela(s){
+    var v = deTemporada(s), n = v.filter(function(t){ return t.nota; }).length, a = v.filter(function(t){ return t.aviso; }).length;
+    if (!n && !a) return '';
+    var txt = n ? (s === 'FW2025' ? 'Pasan a «sin señal clara» al limitar la lectura a marzo–julio de 2025. Ninguna se da vuelta. No es una cuarta categoría.'
+                                  : 'Pasan a «sin señal clara» sin agosto y septiembre de 2025, cuando Google empezó a medir distinto. Ninguna se da vuelta.')
+                : 'Se apoyan en un pico de un solo mes. El veredicto no cambia, pero conviene mirar la curva.';
+    return '<div class="banda-cautela"><b class="n">' + (n || a) + ' de ' + v.length + '</b><div><strong>' + (n ? 'Lecturas sensibles al período' : 'Lecturas con un pico de un mes') + '</strong><span>' + txt + '</span></div></div>';
   }
-  function ficha(t){
-    var abre = t.veredicto !== 'sin', tag = abre ? 'button' : 'div';
-    return '<' + tag + ' class="ficha-t ' + t.veredicto + '"' + (abre ? ' data-id="' + t.id + '"' : '') + '>' + foto(t) +
-      '<span class="caps veredicto ' + t.veredicto + '">' + ETIQ[t.veredicto] + '</span>' +
-      '<b class="f-nombre">' + t.nombre + '</b><p class="frase">' + frase(t) + '</p>' +
-      '<p class="caps gris f-meta">' + (abre ? 'Confianza ' + t.confianza.toLowerCase() + (cuidado(t) ? ' · con cuidado' : '') + ' · ' : '') + t.medio +
-      (abre ? '' : ' · <a href="' + t.url_fuente + '" target="_blank" rel="noopener">ver la nota</a>') + '</p></' + tag + '>';
+  // Foto de portada de una season: la primera tendencia que se queda con confianza alta
+  function tapaDe(s){ var v = deTemporada(s); return v.filter(function(t){ return t.veredicto === 'queda' && t.confianza === 'Alta'; })[0] || v[0] || vistasDe(s)[0]; }
+  function cuentaS(s){
+    if (!tieneVeredicto(s)) return vistasDe(s).length + ' tendencias vistas · sin veredicto';
+    var v = deTemporada(s); return v.length + ' con veredicto · ' + v.filter(function(t){ return t.veredicto === 'queda'; }).length + ' se quedan · ' + v.filter(function(t){ return t.veredicto === 'riesgo'; }).length + ' en riesgo';
   }
-  // Las que no se movieron lo suficiente van en una lista corta debajo de cada temporada, sin foto
-  function sinSenal(l){
-    var x = l.filter(function(t){ return t.veredicto === 'sin'; });
-    if (!x.length) return '';
-    return '<div class="sin-lista"><p class="caps gris">Sin señal clara · se movieron casi igual que su temporada</p><ul>' + x.map(function(t){
-      return '<li><b>' + t.nombre + '</b><span class="caps gris">' + pct(t.cambio_pct) + ' · <a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a></span></li>';
-    }).join('') + '</ul></div>';
+  function tarjetaSeason(s, anio){
+    var k = tipoS(s), e = k === 'summer' ? 'Verano' : 'Invierno';
+    return '<div class="s-caja ' + k + '"><div class="s-caja-cab"><b>' + (k === 'summer' ? 'Summer' : 'Winter') + '</b><span class="etq">' + e + '</span></div>' +
+      '<strong>Prendas y Colores</strong><span>' + anio + ' · ' + e.toLowerCase() + ' · ' + cuentaS(s) + '</span>' +
+      '<a class="boton flecha" href="#season/' + s + '">Abrir ' + nomS(s) + ' </a></div>';
   }
-  function pasa(t){ return (!rubro || t.rubro === rubro || (rubro === 'accesorios' && t.rubro === 'todo')) && (!temporada || t.temporada === temporada) && (!veredicto || t.veredicto === veredicto); }
-  var enPagina = [];
-  function pintar(){
-    enPagina = [];
-    var html = [temporada].map(function(s){
-      var l = Q.concat(R, S).filter(function(t){ return t.temporada === s && pasa(t); });
-      if (!l.length) return '';
-      enPagina = enPagina.concat(l.filter(function(t){ return t.veredicto !== 'sin'; }));
-      return '<div class="t-bloque"><div class="indice-grilla">' + l.filter(function(t){ return t.veredicto !== 'sin'; }).map(ficha).join('') + '</div></div>';
-    }).join('');
-    $('temporadas').innerHTML = html || '<p class="vacio caps">No hay tendencias con estos filtros.</p>';
-    $('t-titulo').innerHTML = TEMP[temporada].replace(' ', ' <i>') + '</i>';
-    $('n-indice').textContent = temporada === TEMPORADAS[0][0] ? 'La temporada más nueva' : 'Temporada anterior';
-    $('temporadas-nav').innerHTML = '<span class="gris">Estás viendo:</span>' + TEMPORADAS.map(function(r, i){
-      return (i === 1 ? '<span class="gris">· Temporadas anteriores:</span>' : '') +
-        '<button data-temp="' + r[0] + '" aria-pressed="' + (r[0] === temporada) + '">' + r[1] + (i === 0 ? '<sup>la más nueva</sup>' : '') + '</button>'; }).join('');
-    function grupo(nombre, clave, opciones, valor){
-      return '<div class="f-grupo" role="group" aria-label="Filtrar por ' + nombre.toLowerCase() + '"><span class="gris">' + nombre + ':</span>' + opciones.map(function(r){
-        return '<button data-' + clave + '="' + r[0] + '" aria-pressed="' + (r[0] === valor) + '">' + r[1] + '</button>'; }).join('') + '</div>';
+
+  // A01 · Inicio
+  function pantallaInicio(){
+    var su = tapaDe('SS2025'), wi = tapaDe('FW2025'), p = perfil();
+    return '<div class="pantalla">' +
+      '<section class="ini-hero"><div class="wrap ini-grid"><div><p class="kicker">Inteligencia de moda / para marcas argentinas</p>' +
+        '<h1 class="titulo titulo-foco" tabindex="-1">Análisis de moda por año y season</h1>' +
+        '<p class="bajada">Reunimos las tendencias de las fashion weeks y lo que pasó con sus búsquedas en Google para que explores prendas y colores' + (p ? ' pensando en ' + esc(p.nombre || 'tu marca') : '') + '. Elegí un año y una season, revisá la evidencia y entendé sus límites antes de decidir.</p>' +
+        '<div class="ini-botones"><a class="boton flecha" href="#anio">Explorar por año </a><a class="boton claro flecha" href="#por-season">Explorar por season </a></div>' +
+        '<ol class="ini-pasos"><li><b>01</b> Elegí el año</li><li><b>02</b> Summer o Winter</li><li><b>03</b> Prendas y Colores</li></ol>' +
+        '<p class="chica">Analizamos señales; no garantizamos ventas.</p></div>' +
+        '<div class="ini-fotos"><a href="#season/SS2025" class="ini-foto"><span class="f">' + img(su, 1) + '</span><span class="etq-f">Summer / verano · ' + esc(marcaDesfile(su, 1)) + '</span></a>' +
+          '<a href="#season/FW2025" class="ini-foto alto"><span class="f">' + img(wi, 2) + '</span><span class="etq-f">Winter / invierno · ' + esc(marcaDesfile(wi, 2)) + '</span></a></div></div></section>' +
+      '<div class="wrap">' +
+        '<h2 class="subt sec-t">Dos formas de explorar</h2><p class="bajada" style="margin-top:8px">El resultado es el mismo: una season de un año concreto, con Prendas y Colores.</p>' +
+        '<div class="dos-formas"><div class="forma winter-suave"><p class="kicker">01 / Por año</p><h3>Primero elegí el año</h3><p>Después, Summer o Winter. Cada edición reúne sus prendas y sus colores.</p>' +
+          '<div class="botonera">' + ANIOS.map(function(a, i){ return '<a class="boton' + (i ? ' claro' : '') + '" href="#anio/' + a + '">' + a + '</a>'; }).join('') + '</div><p class="chica">Año → Season → Prendas y Colores</p></div>' +
+          '<div class="forma summer-suave"><p class="kicker">02 / Por season</p><h3>Primero elegí la season</h3><p>Después, el año. Compará distintas ediciones de verano o invierno.</p>' +
+          '<div class="botonera"><a class="boton flecha" href="#por-season">Summer </a><a class="boton claro flecha" href="#por-season">Winter </a></div><p class="chica">Season → Año → Prendas y Colores</p></div></div>' +
+        '<h2 class="subt sec-t">Dentro de cada season</h2>' +
+        '<div class="dos-formas"><div class="forma gris-suave"><h3>Prendas</h3><p>Las tendencias que nombraron los medios después de los desfiles, con su foto, su veredicto, cuánto cambiaron sus búsquedas y la confianza.</p><a class="link" href="#season/FW2025">Ver prendas de la season →</a></div>' +
+          '<div class="forma gris-suave"><h3>Colores</h3><p>La presencia de cada familia de color en la pasarela, medida en ' + num(2430, 0) + ' looks. Presencia no es permanencia: se distingue de las prendas.</p><a class="link" href="#season/FW2025/colores">Ver colores de la season →</a></div></div>' +
+        '<h2 class="subt sec-t">Cómo leer el análisis</h2>' +
+        '<div class="limites3"><div><p class="kicker">01 / Contexto</p><h3>Año y season primero</h3><p>Cada lectura muestra su período y su fuente. Las seasons no se mezclan al comparar.</p></div>' +
+          '<div><p class="kicker">02 / Evidencia</p><h3>Datos con su significado</h3><p>Pasarela y búsquedas son indicadores distintos. Los porcentajes siempre dicen qué miden.</p></div>' +
+          '<div><p class="kicker">03 / Decisión</p><h3>Confianza y advertencias</h3><p>El nivel de confianza no reemplaza las cautelas. Validá la lectura con tu producto y tu mercado.</p></div></div>' +
+      '</div>' +
+      '<section class="banda-azul"><div class="wrap"><div><h2 class="subt">Referencias de moda, no promesas de ventas</h2><p>La información orienta la exploración de una colección. No equivale a demanda argentina ni garantiza resultados comerciales. Las fotos son de los desfiles que nombran los medios.</p></div><a class="boton borde flecha" href="#metodo">Consultar método </a></div></section>' +
+      '</div>';
+  }
+
+  // A02 · Por año
+  function pantallaAnio(foco){
+    return '<div class="pantalla"><div class="wrap">' +
+      '<div class="cabeza"><p class="kicker">Inicio / explorar por año</p><h1 class="titulo titulo-foco" tabindex="-1">Elegí el año</h1></div>' +
+      '<p class="bajada">Entrá a Summer o Winter de esa edición. Dentro encontrás los apartados de Prendas y Colores.</p>' +
+      '<div class="orden"><span><b>01</b> Año</span><span>→</span><span><b>02</b> Summer / Winter</span><span>→</span><span><b>03</b> Prendas / Colores</span><span>→</span><span><b>04</b> Detalle</span></div>' +
+      ANIOS.map(function(a){
+        return '<section class="anio' + (a === foco ? ' marcado' : '') + '" id="anio-' + a + '"><div class="anio-n"><p class="kicker">Edición</p><b>' + a + '</b><span>' + (a === '2026' ? 'Solo observación: sin veredicto' : 'Elegí una season') + '</span></div>' +
+          tarjetaSeason('SS' + a, a) + tarjetaSeason('FW' + a, a) + '</section>';
+      }).join('') +
+      '<div class="preferis"><div><h2>¿Preferís empezar por la season?</h2><p>Summer y Winter también tienen su propio acceso por año.</p></div><a class="boton claro flecha" href="#por-season">Explorar por season </a></div>' +
+      '</div></div>';
+  }
+
+  // A03 · Por season
+  function pantallaPorSeason(){
+    function panel(k){
+      var pref = k === 'summer' ? 'SS' : 'FW', t = tapaDe(pref + '2025');
+      return '<section class="ps ' + k + '"><h2>' + (k === 'summer' ? 'Summer' : 'Winter') + '</h2><p class="kicker">' + (k === 'summer' ? 'Verano' : 'Invierno') + ' / elegí el año</p>' +
+        '<a class="ps-foto" href="#season/' + pref + '2025">' + img(t, 1) + '</a><p class="chica" style="margin-top:8px">' + esc(marcaDesfile(t, 1)) + ' · ' + esc(t.nombre) + ' · ' + nomS(pref + '2025') + '</p>' +
+        '<div class="botonera">' + ANIOS.map(function(a, i){ return '<a class="boton' + (i === 0 ? '' : ' claro') + ' flecha" href="#season/' + pref + a + '">' + a + ' </a>'; }).join('') + '</div>' +
+        '<p class="kicker" style="margin-top:22px">Dentro de cada edición:</p><div class="ps-dentro"><a href="#season/' + pref + '2025">Prendas</a><a href="#season/' + pref + '2025/colores">Colores</a></div></section>';
     }
-    $('filtro').innerHTML = grupo('Tu rubro', 'rubro', RUBROS, rubro) + grupo('Veredicto', 'ver', VEREDICTOS, veredicto);
+    return '<div class="pantalla"><div class="wrap">' +
+      '<div class="cabeza"><p class="kicker">Inicio / explorar por season</p><h1 class="titulo titulo-foco" tabindex="-1">Summer o Winter</h1></div>' +
+      '<p class="bajada">Elegí verano o invierno y después el año. Cada season mantiene separados sus apartados de Prendas y Colores. 2025 está marcado porque es la última con veredicto.</p>' +
+      '<div class="ps-grilla">' + panel('summer') + panel('winter') + '</div>' +
+      '<h2 class="subt sec-t">El contexto viaja con cada lectura</h2><p class="bajada" style="margin-top:8px">El año y la season se mantienen visibles al entrar a Prendas, Colores o al detalle. Cada indicador conserva su período, su fuente y sus advertencias.</p>' +
+      '</div></div>';
   }
-  pintar();
 
-  document.querySelectorAll('.puntos').forEach(function(p){
-    var n = +p.dataset.n, k = +p.dataset.k, h = '';
-    for (var i = 0; i < n; i++) h += '<i class="' + (i < k ? 'si' : '') + '"></i>';
-    p.innerHTML = h; p.setAttribute('role', 'img'); p.setAttribute('aria-label', k + ' de ' + n);
-  });
-
-  // Colores de la pasarela: el color medido en las fotos y cuánto se vio, recientes contra previas
-  var CM = D.colores_meta;
-  function temps(xs){ return lista(xs.map(function(c){ return (c.slice(0, 2) === 'SS' ? 'primavera ' : 'otoño ') + c.slice(2); })); }
-  $('intro-colores').textContent = 'Cuánto aparecieron en los desfiles de ' + temps(CM.recientes) + '. Es lo que se vio, no si se queda.';
-  function claro(hex){ var n = parseInt(hex.slice(1), 16); return (0.299 * (n >> 16) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255)) > 150; }
-  $('paleta').innerHTML = D.colores.slice().sort(function(a, b){ return b.reciente - a.reciente; }).map(function(c){
-    var cada = c.cada, mov = c.cambio_pts >= 1 ? '↑ más que antes' : c.cambio_pts <= -1 ? '↓ menos que antes' : 'igual que antes';
-    return '<div class="color"><div class="muestra" style="background:' + c.hex + ';color:' + (claro(c.hex) ? 'var(--negro)' : '#fff') + '">' +
-      '<b>1 de cada ' + cada + '</b><span class="caps">looks</span></div>' +
-      '<b class="f-nombre">' + c.nombre + '</b><p class="frase">' + mov + '</p></div>';
-  }).join('');
-
-  // Visto en 2026: foto y nombre, sin veredicto
-  $('intro-2026').textContent = 'Lo que mostraron las pasarelas de 2026. Todavía sin veredicto: Google cambió cómo mide.';
-  $('grilla-2026').innerHTML = D.vistas_2026.map(function(v){
-    return '<div class="ficha-t vista">' + foto(v) + '<span class="caps gris">' + TEMP[v.temporada] + '</span><b class="f-nombre">' + v.nombre + '</b>' +
-      '<p class="caps gris f-meta">' + v.medio + ' · <a href="' + v.url_fuente + '" target="_blank" rel="noopener">ver la nota</a></p></div>';
-  }).join('');
-
-  // Método
-  $('pasos').innerHTML = [
-    'Tomamos las tendencias que nombraron ' + lista(D.medios) + ' después de cada fashion week. No las elegimos nosotros.',
-    'Comparamos sus búsquedas en Google, en todo el mundo, el año después del desfile contra el año anterior, descontando lo que se movió el resto de la temporada.',
-    'Si subieron 10% o más, tiende a quedarse. Si bajaron 10% o más, está en riesgo. En el medio no damos veredicto (' + D.sin_senal + ' quedaron así).',
-    'Confianza alta si el movimiento fue de 30% o más; media si fue de entre 10% y 30%. Las reglas se escribieron antes de mirar los datos.'
-  ].map(function(p){ return '<li>' + p + '</li>'; }).join('');
-  $('ciclos').innerHTML = D.ciclos.map(function(c){
-    function b(k, n, cl){ return '<div class="barra ' + cl + '"><i style="width:' + (n ? k / n * 100 : 0) + '%"></i><span class="umbral"></span></div>'; }
-    return '<div class="ciclo"><span class="caps">' + c.ciclo.replace('-', ' → ') + '</span><div class="barras">' +
-      b(c.sube_pasajeras, c.sube_n, 'sube') + b(c.cae_pasajeras, c.cae_n, 'cae') + '</div>' +
-      '<span class="n">' + c.sube_pasajeras + '/' + c.sube_n + '<br>' + c.cae_pasajeras + '/' + c.cae_n + '</span></div>';
-  }).join('');
-
-  // Nota de detalle
-  var nota = $('nota'), abierta = null;
-  // El recorrido de la nota sigue el orden de la página, con los filtros que estén puestos
-  function recorrido(){
-    var l = enPagina.length ? enPagina : Q.concat(R);
-    return abierta && l.indexOf(abierta) === -1 ? [abierta].concat(l) : l;
+  // A04 / A05 · Una season: prendas, colores e IA, con el tono de verano o de invierno
+  function tarjeta(t){
+    var pie = pieCautela(t);
+    return '<a class="tarjeta" href="#t/' + t.id + '">' +
+      '<div class="t-foto" data-nombre="' + esc(t.nombre) + '">' + img(t, 1) + '<span class="cred">' + esc(marcaDesfile(t, 1)) + '</span></div>' +
+      '<div class="t-cuerpo"><h3>' + t.nombre + '</h3><span><span class="chip chico ' + t.veredicto + '">' + ETIQ[t.veredicto] + '</span>' + (deMiRubro(t) ? ' <span class="chip chico mio">Tu rubro</span>' : '') + '</span>' +
+        '<b class="grande' + (t.veredicto === 'riesgo' ? ' riesgo-num' : '') + '">' + pct(t.bruto_pct) + '</b>' +
+        '<span class="bajo">búsquedas · season ' + pct(t.temporada_pct) + '</span>' +
+        '<span class="conf">Confianza ' + t.confianza.toLowerCase() + '</span>' +
+        '<span class="boton flecha">Ver detalle de la prenda </span></div>' +
+      '<div class="t-pie' + (pie ? '' : ' limpio') + '">' + (pie || 'Sin advertencias adicionales') + '</div></a>';
   }
-  function mover(paso){
-    var l = recorrido(), i = l.indexOf(abierta);
-    if (l.length > 1) abrir(l[(i + paso + l.length) % l.length], true);
+  function tarjetaVista(v){
+    return '<div class="tarjeta"><div class="t-foto" data-nombre="' + esc(v.nombre) + '">' + img(v, 1) + '<span class="cred">' + esc(marcaDesfile(v, 1)) + '</span></div>' +
+      '<div class="t-cuerpo"><h3>' + v.nombre + '</h3><span><span class="chip chico sin">Sin veredicto</span></span>' +
+      '<span class="bajo" style="margin-top:14px">La nombró <a href="' + v.url_fuente + '" target="_blank" rel="noopener">' + v.medio + '</a>, como “' + esc(v.tendencia_fuente) + '”</span></div></div>';
   }
-  function abrir(t, navegando){
-    abierta = t;
-    // Una línea con las dos cuentas; el gráfico las pone una al lado de la otra
-    var sube = function(n){ return n >= 0 ? 'subieron ' + Math.abs(n) + '%' : 'bajaron ' + Math.abs(n) + '%'; };
-    var lead = 'Se buscó ' + Math.abs(t.bruto_pct) + '% ' + (t.bruto_pct >= 0 ? 'más' : 'menos') + ' que el año anterior. Las demás tendencias de la temporada ' + sube(t.temporada_pct) + '.';
-    $('nota-cuerpo').innerHTML = '<div class="cuerpo">' + fotosNota(t) + '<div class="texto">' +
-      '<p class="caps gris">' + TEMP[t.temporada] + ' · Desfiles de ' + mes(t.mes_desfile) + '</p>' +
-      '<h3>' + t.nombre + '</h3><div class="verd-fila">' + verd(t) + cuidadoChip(t) + '</div>' +
-      '<p class="lead">' + lead + '</p>' + barras(t) +
-      '<dl class="ficha">' +
-        '<div><dt class="caps gris">Confianza</dt><dd>' + t.confianza + (t.confianza === 'Alta' ? ': la diferencia es grande' : ': la diferencia es moderada') + '</dd></div>' +
-        '<div><dt class="caps gris">Cuánto apostar</dt><dd>' + APUESTA[t.apuesta] + '</dd></div>' +
-        '<div><dt class="caps gris">En Google</dt><dd>“' + t.termino + '”</dd></div>' +
-        '<div><dt class="caps gris">La nombró</dt><dd><a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a></dd></div>' +
-      '</dl>' + bloqueIA(t) + '</div></div>';
-    $('ia-pedir').addEventListener('click', function(){ pedirIA(t); });
-    var l = recorrido();
-    $('posicion').textContent = (l.indexOf(t) + 1) + ' de ' + l.length;
-    nota.classList.add('abierta'); nota.setAttribute('aria-hidden', 'false'); nota.scrollTop = 0;
-    document.body.style.overflow = 'hidden'; if (!navegando) $('cerrar').focus();
+  function deMiRubro(t){ var r = rubroPerfil(); return !!r && (t.rubro === r || (r === 'accesorios' && t.rubro === 'todo')); }
+  // Con perfil, las de su rubro van primero (sin esconder las demás)
+  function visibles(){ var l = deTemporada(estado.temporada); return l.filter(deMiRubro).concat(l.filter(function(t){ return !deMiRubro(t); })); }
+  function paletaSeason(){
+    return '<div class="colores">' + COL.map(function(c, i){
+      return '<a class="color" href="#color/' + slug(c.nombre) + '"><div class="muestra" style="background:' + c.hex + ';color:' + (claro(c.hex) ? 'var(--tinta)' : '#fff') + '">' + (i < 9 ? '0' : '') + (i + 1) + '</div>' +
+        '<div class="info"><h3>' + c.nombre + '</h3><p class="pct">' + num(c.reciente, 1) + '%</p><p class="de">de los looks · ' + pp(c.cambio_pts) + '</p><span class="boton claro flecha">Ver color </span></div></a>';
+    }).join('') + '</div>';
   }
-  function cerrar(){ abierta = null; nota.classList.remove('abierta'); nota.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
-  $('cerrar').addEventListener('click', cerrar);
-  $('anterior').addEventListener('click', function(){ mover(-1); });
-  $('siguiente').addEventListener('click', function(){ mover(1); });
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') cerrar();
-    if (!abierta || /SELECT|TEXTAREA|INPUT/.test(e.target.tagName)) return;
-    if (e.key === 'ArrowLeft') mover(-1);
-    if (e.key === 'ArrowRight') mover(1);
-  });
-  document.addEventListener('click', function(e){
-    var r = e.target.closest('[data-rubro]');
-    if (r){ rubro = r.dataset.rubro; pintar(); return; }
-    var it = e.target.closest('[data-ir-temp]');
-    if (it){ temporada = it.dataset.irTemp; pintar(); }
-    var tp = e.target.closest('[data-temp]');
-    if (tp){ temporada = tp.dataset.temp; pintar(); return; }
-    var vr = e.target.closest('[data-ver]');
-    if (vr){ veredicto = vr.dataset.ver; pintar(); return; }
-    var b = e.target.closest('[data-id]');
-    if (b && !nota.contains(b)) abrir(T.filter(function(t){ return t.id === b.dataset.id; })[0]);
-  });
+  function pantallaSeason(s){
+    var k = tipoS(s), anio = s.slice(2), otra = (k === 'summer' ? 'FW' : 'SS') + anio, conV = tieneVeredicto(s);
+    var anios = ANIOS.map(function(a){ return [s.slice(0, 2) + a, 'Año: ' + a]; });
+    var l = conV ? visibles() : vistasDe(s);
+    return '<div class="pantalla tono-' + k + '">' +
+      '<section class="s-cab"><div class="wrap"><p class="kicker">Inicio / seasons / ' + (k === 'summer' ? 'summer' : 'winter') + ' / ' + anio + '</p>' +
+        '<div class="s-titulo"><h1 class="titulo titulo-foco" tabindex="-1">' + nomS(s) + '</h1>' +
+        '<label class="sel-anio"><span class="sr">Año</span><select id="sel-anio">' + opciones(anios, s) + '</select></label></div>' +
+        '<p class="bajada">' + (k === 'summer' ? 'Explorá las prendas y los colores de esta edición de verano.' : 'Explorá las prendas y los colores de esta edición de invierno.') + '</p>' +
+        '<div class="s-tabs"><a class="boton" href="#season/' + s + '" data-ir-sec="s-prendas">Prendas</a><a class="boton claro" href="#season/' + s + '/colores" data-ir-sec="s-colores">Colores</a></div>' +
+        '<p class="chica">' + largoS(s) + ' · desfiles de ' + mesDesfile(s) + (conV ? ' · búsquedas en Google del año siguiente' : ' · sin veredicto: desde mediados de 2025 Google mide distinto') + '.</p></div></section>' +
+      '<div class="wrap">' +
+        (conV ? bloqueIATemporada(s) + bandaCautela(s) : '<div class="banda-cautela"><b class="n">2026</b><div><strong>Solo observación, sin veredicto</strong><span>Desde mediados de 2025 Google Trends mide distinto y las búsquedas de 2026 no se pueden comparar con años anteriores. Por eso estas tendencias van sin veredicto, y la IA no elige entre ellas.</span></div></div>') +
+        '<section id="s-prendas" class="s-sec"><h2 class="subt">01 / Prendas</h2>' +
+          '<p class="bajada" style="margin-top:8px">' + (conV ? l.length + ' tendencias con veredicto. Búsquedas en Google del año después del desfile, comparadas con el resto de la season. No son ventas.' : l.length + ' tendencias que nombraron los medios después de los desfiles. Sin veredicto.') + '</p>' +
+          (conV ? (rubroPerfil() ? '<p class="leyenda-fuente" style="color:var(--tinta)"><span class="chip chico mio">Tu rubro</span> Primero las de ' + nombreRubro(rubroPerfil()).toLowerCase() + ', según tu perfil. <a class="link" href="#perfil">Cambiar</a></p>' : '<p class="leyenda-fuente"><a class="link" href="#perfil">Creá tu perfil</a> y las de tu rubro aparecen primero.</p>') +
+            '<p class="leyenda-fuente"><span><span class="tag">Calculado</span>veredictos, números y curvas: salen de los datos con reglas fijas</span><span><span class="tag ia">Inferencia de la IA</span>sugerencias para tu marca, siempre aparte</span></p>' : '') +
+          '<div class="grilla">' + l.map(conV ? tarjeta : tarjetaVista).join('') + '</div>' +
+          (conV ? '<p class="leyenda-senal">SE QUEDA: supera a su season · EN RIESGO: queda por debajo · SIN SEÑAL: no alcanza el umbral de ±10% (no se muestran).</p>' : '') + '</section>' +
+        '<section id="s-colores" class="s-sec"><h2 class="subt">02 / Colores</h2>' +
+          '<p class="bajada" style="margin-top:8px">Presencia de cada familia de color en la pasarela, medida con Gemini en looks de Vogue Runway de ' + temps(CM.recientes).replace(/, .* y /, ' a ') + ' y comparada con ' + temps(CM.previas) + '. <b>Es la misma paleta en todas las seasons:</b> no tenemos colores medidos para ' + nomS(s) + '. Presencia no es permanencia.</p>' +
+          paletaSeason() + '<p class="nota-colores">Gemini acertó el color en 33 de 40 fotos revisadas a mano. pp = puntos porcentuales frente al período previo.</p></section>' +
+      '</div>' +
+      '<section class="s-pie ' + k + '"><div class="wrap"><h2 class="subt">' + (k === 'summer' ? 'El año y la season se mantienen al explorar' : 'Misma season, dos lecturas distintas') + '</h2>' +
+        '<p>' + (k === 'summer' ? 'Prendas y Colores pertenecen a ' + nomS(s) + '. Cambiar de apartado no mezcla períodos ni seasons.' : 'Las prendas muestran búsquedas en Google; los colores, presencia medida en la pasarela. Son indicadores distintos.') + '</p>' +
+        '<div class="s-pie-acc"><a class="link-pie" href="#anio">← Elegir otra season o año</a><a class="boton ' + (k === 'summer' ? 'claro' : 'borde') + ' flecha" href="#season/' + otra + '">Explorar ' + nomS(otra) + ' </a></div></div></section>' +
+      '</div>';
+  }
 
-  // IA: recomendacion para la marca (funcion de Netlify -> Groq). La IA no calcula ni cambia el veredicto.
-  var APUESTA = {baja: 'Probar poco', media: 'Moderada', alta: 'Fuerte'};
-  var DATO = {veredicto: 'veredicto', confianza: 'confianza', cambio_de_busquedas: 'búsquedas', busquedas_promedio_0_a_100: 'búsquedas',
-    aviso: 'aviso', apuesta: 'regla de apuesta', evidencia: 'evidencia 2016-2024', limites: 'límites de los datos'};
+  // ---------- 03 Ficha de una tendencia ----------
+  function barrasVs(etiqA, a, etiqB, b, colA){
+    var mn = Math.min(0, a, b), mx = Math.max(0, a, b), r = (mx - mn) || 1;
+    function fila(etiq, v, color){
+      var izq = (Math.min(0, v) - mn) / r * 100, ancho = Math.abs(v) / r * 100;
+      return '<div class="barra-fila"><span>' + etiq + '</span><div class="pista"><i style="left:' + izq.toFixed(1) + '%;width:' + Math.max(ancho, .8).toFixed(1) + '%;background:' + color + '"></i>' +
+        (mn < 0 ? '<span class="cero" style="left:' + ((0 - mn) / r * 100).toFixed(1) + '%"></span>' : '') + '</div><b>' + pct(v) + '</b></div>';
+    }
+    return fila(etiqA, a, colA) + fila(etiqB, b, 'var(--mostaza)');
+  }
+  function curva(t){
+    var s = t.serie.slice(-24), W = 640, H = 170, v = s.filter(function(x){ return x != null; });
+    var mx = Math.max.apply(null, v.concat([t.b1, t.esperado || 0])) * 1.08, mn = 0;
+    function x(i){ return (i / 23 * W).toFixed(1); } function y(val){ return (H - (val - mn) / (mx - mn) * H).toFixed(1); }
+    var d = ''; s.forEach(function(val, i){ if (val == null) return; d += (d ? 'L' : 'M') + x(i) + ' ' + y(val); });
+    var desde = mes(t.desde || t.mes_desfile), col = t.veredicto === 'riesgo' ? 'var(--r-num)' : 'var(--oscuro)';
+    return '<div class="curva"><div class="bloque-cab" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><p class="kicker">Curva de búsquedas · 12 meses antes y 12 después del desfile</p><span class="tag">Calculado</span></div>' +
+      '<svg viewBox="-4 -10 ' + (W + 8) + ' ' + (H + 34) + '" role="img" aria-label="Búsquedas mensuales de ' + esc(t.termino) + ': promedio ' + num(t.b0, 0) + ' el año antes y ' + num(t.b1, 0) + ' el año después, en una escala de 0 a 100">' +
+        '<line x1="' + x(11.5) + '" x2="' + x(11.5) + '" y1="-6" y2="' + H + '" stroke="#9a968c" stroke-dasharray="3 4"/>' +
+        '<text x="' + (+x(11.5) + 6) + '" y="2" font-size="12" fill="#5b605c">desfile</text>' +
+        '<path d="' + d + '" fill="none" stroke="#c9c5bb" stroke-width="2"/>' +
+        '<line x1="0" x2="' + x(11.5) + '" y1="' + y(t.b0) + '" y2="' + y(t.b0) + '" stroke="#9a968c" stroke-width="3"/>' +
+        '<line x1="' + x(11.5) + '" x2="' + W + '" y1="' + y(t.b1) + '" y2="' + y(t.b1) + '" stroke="' + col + '" stroke-width="3"/>' +
+        (t.esperado ? '<line x1="' + x(11.5) + '" x2="' + W + '" y1="' + y(t.esperado) + '" y2="' + y(t.esperado) + '" stroke="#b68a3a" stroke-width="2.5" stroke-dasharray="7 5"/>' : '') +
+        '<line x1="0" x2="' + W + '" y1="' + H + '" y2="' + H + '" stroke="#111713"/>' +
+        '<text x="0" y="' + (H + 20) + '" font-size="12" fill="#5b605c">' + desde + '</text>' +
+        '<text x="' + W + '" y="' + (H + 20) + '" font-size="12" fill="#5b605c" text-anchor="end">un año después del desfile</text></svg>' +
+      '<div class="ref"><span class="antes">promedio del año antes</span><span>promedio del año después</span><span class="esp">dónde estaría si se movía como la temporada</span></div></div>';
+  }
+  function recorrido(){ var l = visibles(); return l.length ? l : deTemporada(estado.temporada); }
+  function pantallaFicha(t){
+    var l = recorrido(); if (l.indexOf(t) === -1) l = [t].concat(l);
+    var i = l.indexOf(t), ant = l[(i - 1 + l.length) % l.length], sig = l[(i + 1) % l.length];
+    var sube = t.veredicto === 'queda';
+    var frase = (sube ? 'Supera a la temporada (' : 'Queda por debajo de la temporada (') + pct(t.temporada_pct) + '). El ajuste relativo es ' + pct(t.cambio_pct) + '; la confianza es ' + t.confianza.toLowerCase() + '.';
+    // La cuenta del ajuste, solo si con los números redondeados da lo mismo que el dato
+    var fa = 1 + t.bruto_pct / 100, fb = 1 + t.temporada_pct / 100, rel = Math.round((fa / fb - 1) * 100);
+    var formula = rel === t.cambio_pct
+      ? 'Ajuste relativo: (' + num(fa, 2) + ' ÷ ' + num(fb, 2) + ' − 1) × 100 ≈ ' + pct(t.cambio_pct) + '. No es una resta de puntos.'
+      : 'Ajuste relativo: ' + pct(t.cambio_pct) + ' (cuánto más o menos se buscó que si se hubiera movido como la temporada).';
+    var aviso = avisoTexto(t);
+    return '<div class="pantalla tono-' + tipoS(t.temporada) + ' ficha-tono"><div class="wrap">' +
+      '<nav class="miga" aria-label="Ubicación"><a href="#season/' + t.temporada + '">← Inicio / ' + nomS(t.temporada) + ' / Prendas / ' + (RUBRO_NOM[t.rubro] || '') + '</a>' +
+        '<span class="pasar"><a href="#t/' + ant.id + '" aria-label="Tendencia anterior: ' + esc(ant.nombre) + '">← Anterior</a><span>' + (i + 1) + ' de ' + l.length + '</span><a href="#t/' + sig.id + '" aria-label="Tendencia siguiente: ' + esc(sig.nombre) + '">Siguiente →</a></span></nav>' +
+      '<div class="ficha-t"><div>' +
+        '<h1 class="titulo-foco" tabindex="-1">' + t.nombre + '</h1>' +
+        '<p class="donde">' + nomS(t.temporada) + ' · ' + (RUBRO_NOM[t.rubro] || '') + '<br>Desfiles de ' + mes(t.mes_desfile) + '</p>' +
+        '<div class="fotos-f"><div class="f">' + img(t, 1) + '</div><div class="f">' + img(t, 2) + '</div></div>' +
+        '<p class="cred-f">' + lista([marcaDesfile(t, 1), marcaDesfile(t, 2)].filter(Boolean)) + ' · ' + TEMP[t.temporada] + '<br>Fuente de la tendencia: <a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a></p>' +
+      '</div><div>' +
+        '<div class="chips"><span class="chip ' + t.veredicto + '">' + ETIQ[t.veredicto] + '</span>' + (cuidado(t) ? '<span class="chip cautela">Cautela temporal</span>' : '') + '<span class="tag" style="align-self:center">Calculado</span></div>' +
+        '<h2 class="f-titular">' + t.nombre + ': ' + pct(t.bruto_pct) + ' en búsquedas</h2>' +
+        '<p class="f-frase">' + frase + '</p>' +
+        '<div class="stats">' +
+          '<div><b' + (t.bruto_pct < 0 ? ' class="riesgo-num"' : '') + '>' + pct(t.bruto_pct) + '</b><strong>Búsquedas de «' + esc(t.termino) + '»</strong><span>Cambio interanual bruto</span></div>' +
+          '<div><b' + (sube ? '' : ' class="riesgo-num"') + '>' + pct(t.cambio_pct) + '</b><strong>' + (sube ? 'Por encima' : 'Por debajo') + ' de su temporada</strong><span>Cambio relativo ajustado</span></div>' +
+          '<div><b>' + t.confianza + '</b><strong>Confianza del resultado</strong><span>Apuesta: ' + APUESTA[t.apuesta].toLowerCase() + '</span></div>' +
+        '</div>' +
+        (aviso ? '<div class="advertencia" role="note"><p>Advertencia · comparabilidad</p><p>' + esc(aviso) + '</p></div>' : '') +
+        '<section class="vs"><div class="bloque-cab"><div><h2 class="subt">Búsquedas: ' + t.nombre + ' vs. temporada</h2><p class="chica">Año posterior al desfile vs. año anterior · búsquedas globales</p></div></div>' +
+          barrasVs(t.nombre, t.bruto_pct, 'Su season', t.temporada_pct, sube ? 'var(--oscuro)' : 'var(--r-num)') +
+          '<p class="formula">' + formula + '</p></section>' +
+        curva(t) +
+        '<dl class="datos-f">' +
+          '<div><dt>En Google</dt><dd>“' + esc(t.termino) + '”</dd></div>' +
+          '<div><dt>La nombró</dt><dd><a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a>, como “' + esc(t.tendencia_fuente) + '”</dd></div>' +
+          '<div><dt>Cuánto apostar</dt><dd>' + APUESTA[t.apuesta] + '</dd></div>' +
+        '</dl>' +
+      '</div></div>' + bloqueIA(t) + '</div></div>';
+  }
+
+  // ---------- 04 Colores y 07 ficha de color ----------
+  var CM = D.colores_meta, COL = D.colores.slice().sort(function(a, b){ return b.reciente - a.reciente; });
+  function periodo(){
+    return '<div class="periodo"><div><b>Período observado</b>' + CM.recientes.map(function(c){ return (c.slice(0, 2) === 'SS' ? 'Primavera ' : 'Otoño ') + c.slice(2); }).join(' · ') + '</div><div style="align-self:end">Comparado con ' + temps(CM.previas) + '.</div></div>';
+  }
+  function pantallaColor(c){
+    var mx = Math.max(c.reciente, c.previo) * 1.15;
+    return '<div class="pantalla tono-' + tipoS(estado.temporada) + ' ficha-tono"><div class="wrap">' +
+      '<nav class="miga" aria-label="Ubicación"><a href="#season/' + estado.temporada + '/colores">← ' + nomS(estado.temporada) + ' / Colores / ' + c.nombre + '</a></nav>' +
+      '<div class="ficha-c"><div><h1 class="titulo-foco" tabindex="-1">' + c.nombre + '</h1><p class="fam">Familia de color / pasarela</p>' +
+        '<div class="bloque-color" style="background:' + c.hex + ';color:' + (claro(c.hex) ? 'var(--tinta)' : '#fff') + '"><b>' + c.nombre + '</b><div><strong>' + num(c.reciente, 1) + '%</strong><span>De los looks observados</span></div></div></div>' +
+      '<div><h2 class="subt">Presencia y variación</h2><span class="tag" style="margin-top:12px">Calculado</span>' +
+        '<div class="dos-num"><div><b>' + num(c.reciente, 1) + '%</b><span>Presencia en pasarela</span></div><div><b>' + pp(c.cambio_pts) + '</b><span>Frente al período previo</span></div></div>' +
+        periodo() +
+        '<div class="presencia"><p class="kicker" style="margin-top:8px">Presencia en los looks</p>' +
+          '<div class="fila"><span>Período previo</span><b>' + num(c.previo, 1) + '%</b></div><div class="pista"><i style="width:' + (c.previo / mx * 100).toFixed(1) + '%;background:#6b5546"></i></div>' +
+          '<div class="fila"><span>Período observado</span><b>' + num(c.reciente, 1) + '%</b></div><div class="pista"><i style="width:' + (c.reciente / mx * 100).toFixed(1) + '%;background:' + c.hex + ';outline:1px solid rgba(0,0,0,.08)"></i></div>' +
+          '<p class="chica">Promedio de las tres temporadas de cada período. La variación se calcula sin redondear, por eso puede no coincidir con la resta de los números redondeados.</p></div>' +
+        '<h2 class="subt" style="margin-top:40px;font-size:24px">Qué significa el ' + num(c.reciente, 1) + '%</h2>' +
+        '<p class="bajada" style="margin-top:12px">El ' + c.nombre.toLowerCase() + ' aparece en el ' + num(c.reciente, 1) + '% de los looks observados (1 de cada ' + c.cada + '). ' +
+          (Math.abs(c.cambio_pts) < 0.05 ? 'Su presencia no cambió frente al período previo.' : 'Su presencia ' + (c.cambio_pts > 0 ? 'aumenta ' : 'baja ') + num(Math.abs(c.cambio_pts), 1) + ' puntos porcentuales frente al período previo.') + '</p>' +
+      '</div></div>' +
+      '<div class="dos-paneles"><div class="pizarra"><h2 class="subt">Presencia no es demanda</h2><p>Estos porcentajes describen la pasarela. No estiman ventas ni deben trasladarse directamente al mix de una colección.</p></div>' +
+        '<div class="pizarra"><p class="kicker">Antes de producir</p><p style="margin-top:14px">Validá el color con tu producto y tu mercado. Lo clasificó una IA (Gemini) a partir de fotos: acertó el color en 33 de 40 revisadas a mano.</p><a class="boton borde flecha" href="#metodo">Consultar método y límites </a></div></div>' +
+      '<p style="margin-top:28px"><a class="link" href="#season/' + estado.temporada + '/colores">Volver a los colores de ' + nomS(estado.temporada) + ' →</a></p>' +
+      '</div></div>';
+  }
+
+  // ---------- 06 Método ----------
+  function pantallaMetodo(){
+    function barra(etiq, k, n, color, texto){ return '<div class="barra-fila"><span>' + etiq + '</span><div class="pista"><i style="left:0;width:' + (k / n * 100).toFixed(1) + '%;background:' + color + '"></i></div><b style="font-size:16px">' + texto + '</b></div>'; }
+    var ciclos = D.ciclos.map(function(c){
+      function b(k, n, cl){ return '<div class="barra ' + cl + '"><i style="width:' + (n ? k / n * 100 : 0) + '%"></i><span class="umbral"></span></div>'; }
+      return '<div class="ciclo"><span>' + c.ciclo.replace('-', ' → ') + '</span><div class="barras">' + b(c.sube_pasajeras, c.sube_n, 'sube') + b(c.cae_pasajeras, c.cae_n, 'cae') + '</div>' +
+        '<span class="n">' + c.sube_pasajeras + '/' + c.sube_n + '<br>' + c.cae_pasajeras + '/' + c.cae_n + '</span></div>';
+    }).join('');
+    return '<div class="pantalla"><div class="wrap">' +
+      '<div class="cabeza"><p class="kicker">Método / fuentes, reglas y límites</p><h1 class="titulo titulo-foco" tabindex="-1">Cómo se calcula cada señal</h1></div>' +
+      '<p class="bajada">Fuentes de tendencias, comparación de búsquedas y umbrales de clasificación.</p>' +
+      '<div class="pasos3">' +
+        '<div><h3><b>01</b>Seleccionamos</h3><p>Tendencias publicadas por ' + lista(D.medios) + ' después de cada fashion week. No las elegimos nosotros, y no son todas las que hubo.</p></div>' +
+        '<div><h3><b>02</b>Comparamos</h3><p>Búsquedas globales en Google del año posterior al desfile frente al anterior, ajustadas por lo que se movió su temporada.</p></div>' +
+        '<div><h3><b>03</b>Clasificamos</h3><p>Cambio relativo ≥ +10%: se queda. ≤ −10%: en riesgo. En el medio: sin señal clara (' + D.sin_senal + ' quedaron así). Confianza alta desde ±30%.</p></div>' +
+      '</div>' +
+      '<div class="evid-grilla"><section class="evid" aria-label="La evidencia histórica"><p class="kicker">La evidencia histórica</p>' +
+        '<div class="fila1"><b class="grande">9 de cada 10</b><p>tendencias que subieron seguían al año siguiente.<br>178 tendencias · 2016–2024</p></div>' +
+        '<div class="barras"><p style="font-size:16px">Pasaron de moda al segundo año · muestra 2021–2024</p>' +
+          barra('Ganaron búsquedas', 2, 19, 'var(--oscuro)', '2 de 19') + barra('Perdieron búsquedas', 9, 16, '#e99a8a', '9 de 16') + '</div>' +
+        '<p class="chica">Las que bajan tienen unas 5 veces más chances de pasar de moda. Es un resultado histórico agregado, no la probabilidad de éxito de una prenda: por eso “en riesgo” no es “se va”, es apostar poco.</p></section>' +
+        '<aside class="panel"><p class="kicker">2026 / sin veredicto</p><h2 class="subt" style="font-size:30px;text-transform:none">2026: datos no comparables</h2><p style="margin-top:40px">Google Trends cambió su medición desde mediados de 2025. Las cifras de 2026 no son comparables con años anteriores.</p></aside></div>' +
+      '<h2 class="subt" style="margin-top:48px">Límites de la lectura</h2>' +
+      '<div class="limites3"><div><h3>Interés ≠ ventas</h3><p>Google Trends mide búsquedas globales. La regla no se confirmó con datos solo de Argentina.</p></div>' +
+        '<div><h3>Muestras acotadas</h3><p>Entre 15 y 68 tendencias por prueba. La selección de los medios no representa todo el mercado.</p></div>' +
+        '<div><h3>La IA no decide la señal</h3><p>Las reglas fijan veredicto, confianza y apuesta. Las sugerencias para la marca se presentan siempre aparte.</p></div></div>' +
+      '<div class="metodo-mas">' +
+        '<section><h3>Ciclo por ciclo</h3><p>Cuántas fueron moda pasajera al segundo año, entre las que ganaron y las que perdieron búsquedas.</p>' +
+          '<div class="leyenda"><span>Ganaron búsquedas</span><span class="r">Perdieron búsquedas</span><span class="u">20%</span></div><div class="ciclos">' + ciclos + '</div></section>' +
+        '<section><h3>Qué cambió y por qué</h3><ol>' +
+          '<li><b>Al principio</b> creíamos que la pasarela anticipa las ventas masivas 12 a 18 meses después.</li>' +
+          '<li><b>Lo probamos</b> con 2.430 looks de Vogue Runway clasificados con IA contra Google Trends: no apareció ningún desfase. Lo presentamos como resultado nulo.</li>' +
+          '<li><b>Lo que sí funcionó</b> fue mirar qué pasa con las búsquedas el primer año después del desfile. Probamos que lo que sube se queda con tendencias nuevas de 2016 a 2018, que no habíamos usado para armar la idea: solo 1 de 17 fue pasajera.</li>' +
+          '<li><b>Lo que descartamos:</b> que lo que se mantiene plano sea pasajero. No se sostuvo: las planas se quedaron 73% de las veces, no tan lejos del 88% de las que suben (122 tendencias de 2019 a 2023, de donde salió la idea). El riesgo está en lo que cae.</li></ol></section>' +
+        '<section><h3>Lo que no dicen los datos</h3><ul>' +
+          '<li>Google mide búsquedas, es decir, interés. No ventas.</li>' +
+          '<li>Son búsquedas de todo el mundo. Con búsquedas solo de Argentina la regla no se confirmó.</li>' +
+          '<li>Las tendencias las eligieron medios de moda en inglés (Who What Wear, CBC Life, Yahoo Lifestyle). No las elegimos nosotros, pero tampoco son todas las que hubo.</li>' +
+          '<li>El veredicto es la lectura del primer año. El segundo año de estas tendencias no se puede medir limpio con Google: lo probamos y el ruido de 2026 es más de tres veces el de un año normal.</li>' +
+          '<li>Otoño 2025 pasó un chequeo más estricto, fijado de antemano, porque 7 de los 12 meses de su primer año caen en el período en que Google empezó a medir distinto. Pasó, pero en 8 de sus 13 veredictos la lectura con solo marzo a julio de 2025 da “sin señal clara” (ninguno se da vuelta); lo marcamos en cada una.</li>' +
+          '<li>Primavera 2025 pasó un chequeo fijado de antemano (el veredicto no depende del tamaño de la búsqueda ni del salto de 2026), pero su primer año toca meses en que Google empezó a medir distinto. En 3 de sus 8 “se queda” la lectura cambia sin agosto y septiembre de 2025; lo marcamos en cada una.</li>' +
+          '<li>Desde mediados de 2025 Google Trends mide distinto y las búsquedas no se pueden comparar con los años anteriores. Por eso 2026 va sin veredicto.</li>' +
+          '<li>Las muestras son chicas: de 15 a 68 tendencias por prueba.</li></ul></section>' +
+        '<section><h3>La IA: qué hace y qué no</h3>' +
+          '<p>Cuando abrís una tendencia o una temporada, la IA ya te da su sugerencia según el perfil de tu marca, sin que la pidas. En una tendencia le mandamos el veredicto, la confianza, el cambio de búsquedas, los avisos, la evidencia y los límites; explica los datos en palabras simples y sugiere ideas de producto. En una temporada le mandamos solo las tendencias con veredicto, y elige cuáles te conviene mirar y por qué.</p>' +
+          '<p>El perfil se le manda a la IA para personalizar la respuesta y no se guarda en ningún servidor. La respuesta queda guardada en tu navegador para no esperar la próxima vez; con “Actualizar” se pide de nuevo.</p>' +
+          '<p>No decide nada: el veredicto, la confianza y cuánto apostar los fijan reglas del código. Cada frase sobre los datos dice de qué dato sale, y un control automático revisa que cada número esté en ese dato; si falla, le pide que corrija una vez.</p>' +
+          '<p id="ia-modelo" style="font-size:14px;color:var(--gris)">Modelo: GPT-OSS 120B (abierto, de OpenAI), vía Groq</p>' +
+          '<div class="prompt"><button class="boton" id="ver-prompt">Ver qué le pedimos a la IA</button><div id="prompt-texto"></div></div></section>' +
+      '</div></div></div>';
+  }
+
+  // ---------- IA proactiva: se pide sola al abrir una ficha o una temporada ----------
+  // La respuesta queda guardada en el navegador para ese perfil; si el perfil cambia, se pide de nuevo.
+  var DATO = {veredicto:'veredicto', confianza:'confianza', cambio_de_busquedas:'búsquedas', busquedas_promedio_0_a_100:'búsquedas',
+    aviso:'aviso', apuesta:'regla de apuesta', evidencia:'evidencia 2016-2024', limites:'límites de los datos', rubro:'rubro'};
   var API = '/api/lectura', online = location.protocol !== 'file:';
+  var SIMULAR = (location.search.match(/[?&]simular=(\w+)/) || [])[1] || '';   // solo para probar en local: ?simular=1, error o saturada
+  var CACHE = 'pp_ia_v1|';
+  function huella(p){ var x = JSON.stringify([p.nombre, p.rubro, p.vende, p.publico, p.precio, p.canal]), h = 0; for (var k = 0; k < x.length; k++) h = (h * 31 + x.charCodeAt(k)) | 0; return (h >>> 0).toString(36); }
+  function leerCache(clave){ try { return JSON.parse(localStorage.getItem(clave)); } catch (e){ return null; } }
+  function escribirCache(clave, v){ try { localStorage.setItem(clave, JSON.stringify(v)); } catch (e){} }
+  function borrarCacheIA(){ try { Object.keys(localStorage).forEach(function(k){ if (k.indexOf(CACHE) === 0) localStorage.removeItem(k); }); } catch (e){} }
+  function claveIA(tipo, id){ var p = perfil(); return p ? CACHE + huella(p) + '|' + tipo + '|' + id : ''; }
+  function fecha(iso){ var d = new Date(iso); return d.toLocaleDateString('es-AR', {day:'numeric', month:'long'}) + ', ' + d.toLocaleTimeString('es-AR', {hour:'2-digit', minute:'2-digit'}); }
+  function cabIA(titulo, texto, conActualizar){
+    return '<div class="ia-panel"><div><p class="kicker">Para tu marca / sugerencia de IA <span class="tag ia">Inferencia de la IA</span></p>' +
+      '<h2>' + titulo + '</h2><p>' + texto + '</p></div>' +
+      (conActualizar ? '<button class="boton borde chico-b" data-ia-actualizar>Actualizar</button>' : '') + '</div>';
+  }
   function bloqueIA(t){
-    return '<section class="ia-caja" aria-label="Recomendación de la IA">' +
-      '<div class="bloque-cab"><span class="tag ia">Inferencia de la IA</span><span class="caps gris">No cambia el veredicto</span></div>' +
-      '<h4>¿Qué hago con esto en mi marca?</h4>' +
-      '<p class="explica">La IA lee los datos calculados de arriba y te sugiere cómo usarlos según tu rubro. Es una sugerencia, no un dato.</p>' +
-      '<div class="ia-form">' +
-        '<label><span class="caps gris">Tu rubro</span><select id="ia-rubro">' + RUBROS.map(function(r){
-          return '<option value="' + r[0] + '"' + (r[0] === rubro ? ' selected' : '') + '>' + (r[0] ? r[1] : 'Varios rubros') + '</option>'; }).join('') + '</select></label>' +
-        '<label><span class="caps gris">Tu marca, en una línea (opcional)</span><textarea id="ia-marca" maxlength="280" placeholder="Ej.: ropa de mujer de 25 a 40, básicos de algodón, vendemos online"></textarea></label>' +
-        '<button class="boton" id="ia-pedir">Pedir recomendación</button>' +
-      '</div><div class="ia-resp" id="ia-resp" aria-live="polite"></div></section>';
+    var p = perfil();
+    return '<section aria-label="Sugerencia de la IA para tu marca" class="ia-bloque">' +
+      cabIA(p ? 'Qué hacer con esto en ' + esc(p.nombre || 'tu marca') : 'Qué hacer con esto en tu marca', 'La IA lee los datos calculados de arriba y tu perfil. Es una sugerencia, no un dato: no cambia el veredicto.', !!p) +
+      '<div class="ia-cuerpo" id="ia-cuerpo" aria-live="polite" data-ia="t" data-id="' + t.id + '"></div></section>';
   }
-  function pedirIA(t){
-    var resp = $('ia-resp'), boton = $('ia-pedir');
-    if (!online){ resp.innerHTML = '<p class="ia-error">La IA funciona en la versión online de la página (necesita el servidor). Abrila desde el link de Netlify.</p>'; return; }
-    boton.disabled = true; boton.textContent = 'Pensando…';
-    resp.innerHTML = '<p class="caps gris" style="margin-bottom:12px">La IA está leyendo los datos de ' + esc(t.nombre) + '…</p><div class="cargando"><i></i><i></i><i></i></div>';
+  function bloqueIATemporada(s){
+    var p = perfil();
+    return '<section aria-label="Sugerencia de la IA para esta season" class="ia-bloque ia-temp">' +
+      cabIA(p ? 'Qué mirar de ' + nomS(s) + ' para ' + esc(p.nombre || 'tu marca') : 'Qué mirar de ' + nomS(s) + ' para tu marca', 'La IA elige entre las tendencias que ya tienen veredicto calculado. No cambia veredictos ni números.', !!p) +
+      '<div class="ia-cuerpo" id="ia-cuerpo" aria-live="polite" data-ia="temp" data-id="' + s + '"></div></section>';
+  }
+  function sinPerfil(tipo){
+    return '<p class="ia-vacio">' + (tipo === 'temp' ? 'Armá el perfil de tu marca y la IA te dice qué tendencias de esta temporada te conviene mirar, y por qué.' : 'Armá el perfil de tu marca y la IA te dice qué hacer con esta tendencia según tu rubro, tu público y tu canal.') +
+      '</p><a class="boton flecha" href="#perfil">Creá tu perfil </a><p class="explica" style="margin-top:10px">Lleva un minuto. Se guarda solo en este navegador.</p>';
+  }
+  function cargando(tipo){ return '<p class="explica" style="margin-bottom:12px">La IA está ' + (tipo === 'temp' ? 'leyendo las tendencias de la temporada' : 'leyendo los datos de esta tendencia') + ' con tu perfil…</p><div class="cargando"><i></i><i></i><i></i></div>'; }
+  function errorIA(e){
+    var sat = e.status === 429;
+    return '<p class="ia-error"><b>' + (sat ? 'La IA está saturada.' : 'No pudimos traer la sugerencia.') + '</b> ' +
+      esc(sat ? 'Hubo muchos pedidos en poco tiempo. Probá de nuevo en un minuto.' : (e.message || '')) + '</p>' +
+      '<p class="explica" style="margin-top:6px">Los datos calculados siguen valiendo; lo que falló es solo la sugerencia.</p>' +
+      '<button class="boton chico-b" style="margin-top:14px" data-ia-actualizar>Probar de nuevo</button>';
+  }
+  function pieIA(c, j){
+    return (j.problemas && j.problemas.length ? '<p class="ia-control">El control automático marcó: ' + esc(j.problemas.join('; ')) + '. Tomalo con más cuidado.</p>' : '') +
+      '<p class="ia-meta">' + (j.simulada ? '<b>Respuesta simulada para probar la página.</b> ' : '') + 'Sugerencia para tu perfil · ' + fecha(c.fecha) + ' · Modelo: ' + esc(j.modelo) + ' · Groq</p>' +
+      '<details class="envio"><summary>Qué le mandamos a la IA</summary><pre>' + esc(JSON.stringify(j.contexto, null, 2)) + '</pre></details>';
+  }
+  function verFicha(c){
+    var j = c.j, s = j.salida;
+    return '<h5>Qué dicen los datos <span class="gris">· cada frase dice de dónde sale</span></h5><ul class="lectura-ia">' +
+      (s.lectura || []).map(function(f){ return '<li>' + esc(f.texto) + ' <span class="dato">Dato: ' + esc(DATO[f.dato] || f.dato) + '</span></li>'; }).join('') + '</ul>' +
+      '<h5>Para tu marca <span class="gris">· sugerencia de la IA</span></h5><p>' + esc(s.para_tu_marca) + '</p>' +
+      '<h5>Ideas <span class="gris">· sugerencia de la IA</span></h5><ul>' + (s.ideas || []).map(function(i){ return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>' +
+      '<p class="ia-ojo">La apuesta (' + APUESTA[j.apuesta].toLowerCase() + ') no la eligió la IA: sale de una regla fija con el veredicto, la confianza y los avisos.</p>' + pieIA(c, j);
+  }
+  function verTemporada(c){
+    var j = c.j, s = j.salida;
+    // Solo se muestran tendencias que existen y tienen veredicto; el veredicto sale de los datos, no de la IA
+    var el = (s.elegidas || []).map(function(e){ return [e, porId(e.id)]; }).filter(function(x){ return x[1]; });
+    return '<p class="ia-resumen">' + esc(s.resumen || '') + '</p><ol class="elegidas">' + el.map(function(x){
+      var e = x[0], t = x[1];
+      return '<li><div class="el-cab"><a href="#t/' + t.id + '">' + t.nombre + '</a><span class="chip chico ' + t.veredicto + '">' + ETIQ[t.veredicto] + '</span><span class="el-num">' + pct(t.bruto_pct) + '</span></div>' +
+        '<p>' + esc(e.por_que) + ' <span class="dato">Dato: ' + esc(DATO[e.dato] || e.dato || 'sin dato') + '</span></p></li>';
+    }).join('') + '</ol><p class="explica">El veredicto y el número de cada una son calculados; la elección y el porqué son de la IA.</p>' + pieIA(c, j);
+  }
+  // Respuesta de prueba (solo con ?simular=...): misma forma que la de la función
+  function simulada(tipo, id){
+    return new Promise(function(ok, mal){ setTimeout(function(){
+      if (SIMULAR === 'error') return mal(Object.assign(new Error('La IA respondió con error 502.'), {status: 502}));
+      if (SIMULAR === 'saturada') return mal(Object.assign(new Error('La IA está saturada.'), {status: 429}));
+      var p = perfil(), base = {simulada: true, modelo: 'simulación local', problemas: [], contexto: {nota: 'respuesta simulada en el navegador', perfil: p}};
+      if (tipo === 'temp'){
+        var l = deTemporada(id); var mio = l.filter(deMiRubro), resto = l.filter(function(t){ return !deMiRubro(t); });
+        var el = mio.concat(resto).slice(0, 4);
+        return ok(Object.assign(base, {salida: {resumen: 'Simulación: estas son las tendencias de ' + TEMP[id].toLowerCase() + ' más cercanas a tu rubro.', elegidas: el.map(function(t){ return {id: t.id, por_que: 'Simulación: ' + (t.veredicto === 'queda' ? 'se queda' : 'está en riesgo, conviene probar poco') + '.', dato: 'veredicto'}; })}}));
+      }
+      var t = porId(id);
+      ok(Object.assign(base, {apuesta: t.apuesta, salida: {lectura: [{texto: 'Simulación: ' + t.nombre + (t.veredicto === 'queda' ? ' tiende a quedarse.' : ' está en riesgo.'), dato: 'veredicto'}, {texto: 'Simulación: la confianza es ' + t.confianza.toLowerCase() + '.', dato: 'confianza'}],
+        para_tu_marca: 'Simulación: acá iría la sugerencia de la IA para tu marca.', ideas: ['Idea simulada 1', 'Idea simulada 2', 'Idea simulada 3']}}));
+    }, 900); });
+  }
+  function llamar(cuerpo){
     var ctrl = window.AbortController ? new AbortController() : null, reloj = setTimeout(function(){ if (ctrl) ctrl.abort(); }, 45000);
-    fetch(API, {method:'POST', headers:{'content-type':'application/json'}, signal: ctrl && ctrl.signal,
-      body: JSON.stringify({id: t.id, rubro: $('ia-rubro').value, marca: $('ia-marca').value})})
-      .then(function(r){ return r.json().catch(function(){ return {error: 'Respuesta inválida del servidor (' + r.status + ').'}; }); })
-      .then(function(j){
-        if (j.error) throw new Error(j.error);
-        var s = j.salida;
-        resp.innerHTML = '<h5>Qué dicen los datos <span class="gris">· cada frase dice de dónde sale</span></h5><ul class="lectura-ia">' +
-          (s.lectura || []).map(function(f){ return '<li>' + esc(f.texto) + ' <span class="dato">Dato: ' + esc(DATO[f.dato] || f.dato) + '</span></li>'; }).join('') + '</ul>' +
-          '<h5>Para tu marca <span class="gris">· sugerencia de la IA</span></h5><p>' + esc(s.para_tu_marca) + '</p>' +
-          '<h5>Ideas <span class="gris">· sugerencia de la IA</span></h5><ul>' + (s.ideas || []).map(function(i){ return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>' +
-          '<p class="ia-ojo">La apuesta (' + APUESTA[j.apuesta].toLowerCase() + ') no la eligió la IA: sale de una regla fija con el veredicto, la confianza y los avisos.</p>' +
-          (j.problemas && j.problemas.length ? '<p class="ia-control">El control automático marcó: ' + esc(j.problemas.join('; ')) + '. Tomalo con más cuidado.</p>' : '') +
-          '<details class="envio"><summary>Qué le mandamos a la IA</summary><pre>' + esc(JSON.stringify(j.contexto, null, 2)) + '</pre><p class="caps gris" style="margin-top:8px">Modelo: ' + esc(j.modelo) + ' · Groq</p></details>';
+    return fetch(API, {method:'POST', headers:{'content-type':'application/json'}, signal: ctrl && ctrl.signal, body: JSON.stringify(cuerpo)})
+      .then(function(r){
+        if (r.status === 404 || r.status === 501 || r.status === 405) throw Object.assign(new Error('La IA no está conectada en esta versión: responde en la página online.'), {status: r.status});
+        return r.json().catch(function(){ return {error: 'Respuesta inválida del servidor (' + r.status + ').', status: r.status}; }).then(function(j){ if (j.error) throw Object.assign(new Error(j.error), {status: r.status}); return j; });
       })
-      .catch(function(e){
-        var msg = e.name === 'AbortError' ? 'La IA tardó demasiado.' : (e.message || 'No pudimos conectar con la IA.');
-        if (e instanceof TypeError) msg = 'No pudimos conectar con la IA. Revisá tu conexión.';
-        resp.innerHTML = '<p class="ia-error">' + esc(msg) + '</p><p class="explica" style="margin-top:6px">Los datos calculados de arriba siguen valiendo; lo que falló es solo la sugerencia.</p>';
-      })
-      .then(function(){ clearTimeout(reloj); boton.disabled = false; boton.textContent = 'Pedir otra recomendación'; });
+      .catch(function(e){ if (e.name === 'AbortError') e = Object.assign(new Error('La IA tardó demasiado. Probá de nuevo.'), {status: 504}); else if (e instanceof TypeError) e = new Error('No pudimos conectar con la IA. Revisá tu conexión.'); throw e; })
+      .then(function(j){ clearTimeout(reloj); return j; }, function(e){ clearTimeout(reloj); throw e; });
   }
-  // Link directo a una tendencia: #nota-<id> abre su nota (sirve para compartirla y para las capturas)
-  var pedida = location.hash.indexOf('#nota-') === 0 ? T.filter(function(t){ return t.id === location.hash.slice(6); })[0] : null;
-  if (pedida){ temporada = pedida.temporada; pintar(); abrir(pedida); }
-  // Un link a una sección (#indice, #colores...) llega después de que se arma la página: bajar a mano
-  else if (location.hash.length > 1 && document.getElementById(location.hash.slice(1))) document.getElementById(location.hash.slice(1)).scrollIntoView();
+  function pedirIA(forzar){
+    var caja = $('ia-cuerpo'); if (!caja) return;
+    var tipo = caja.dataset.ia, id = caja.dataset.id, p = perfil();
+    if (!p){ caja.innerHTML = sinPerfil(tipo); return; }
+    var clave = claveIA(tipo, id), c = !forzar && leerCache(clave);
+    if (c && c.j){ caja.innerHTML = tipo === 'temp' ? verTemporada(c) : verFicha(c); return; }
+    if (!online && !SIMULAR){ caja.innerHTML = errorIA(new Error('La IA funciona en la versión online de la página (necesita el servidor).')); return; }
+    caja.innerHTML = cargando(tipo);
+    var cuerpo = tipo === 'temp' ? {modo: 'temporada', temporada: id, perfil: p} : {id: id, perfil: p};
+    (SIMULAR ? simulada(tipo, id) : llamar(cuerpo)).then(function(j){
+      var nuevo = {fecha: new Date().toISOString(), j: j};
+      if (!j.simulada) escribirCache(clave, nuevo);
+      var aca = $('ia-cuerpo'); if (aca && aca.dataset.id === id) aca.innerHTML = tipo === 'temp' ? verTemporada(nuevo) : verFicha(nuevo);
+    }, function(e){
+      var aca = $('ia-cuerpo'); if (aca && aca.dataset.id === id) aca.innerHTML = errorIA(e);
+    });
+  }
 
-  // Metodo: mostrar el system prompt y el modelo
-  $('ver-prompt').addEventListener('click', function(){
-    var caja = $('prompt-texto');
-    if (caja.innerHTML){ caja.innerHTML = ''; return; }
-    if (!online){ caja.innerHTML = '<p class="explica" style="margin-top:10px">Se ve en la versión online. También está en <a href="https://github.com/cborja999/paleta_predictiva/blob/main/entrega3/IA.md">entrega3/IA.md</a>.</p>'; return; }
-    caja.innerHTML = '<p class="caps gris" style="margin-top:10px">Cargando…</p>';
-    fetch(API).then(function(r){ return r.json(); }).then(function(j){
-      $('ia-modelo').textContent = 'Modelo: ' + j.modelo + ' · ' + j.proveedor;
-      caja.innerHTML = '<pre>' + esc(j.system_prompt) + '</pre>';
-    }).catch(function(){ caja.innerHTML = '<p class="ia-error" style="margin-top:10px">No pudimos traer el prompt.</p>'; });
-  });
+  // ---------- Perfil de la marca (solo el rubro es obligatorio) ----------
+  var PRECIOS = [['', 'Elegí una opción'], ['accesible', 'Accesible'], ['medio', 'Medio'], ['alto', 'Alto / premium']];
+  var CANALES = [['', 'Elegí una opción'], ['online', 'Online / Instagram'], ['local', 'Local propio'], ['mayorista', 'Mayorista'], ['mixto', 'Varios canales']];
+  var RUBROS_PERFIL = [['', 'Elegí el rubro'], ['vestidos', 'Vestidos'], ['polleras', 'Polleras'], ['pantalones', 'Pantalones'], ['abrigos', 'Abrigos y tejidos'], ['accesorios', 'Accesorios y estampados'], ['varios', 'Varios rubros']];
+  function nombreRubro(r){ var x = RUBROS_PERFIL.filter(function(o){ return o[0] === r; })[0]; return x ? x[1] : ''; }
+  function opciones(lista, valor){ return lista.map(function(o){ return '<option value="' + o[0] + '"' + (o[0] === valor ? ' selected' : '') + '>' + o[1] + '</option>'; }).join(''); }
+  function pantallaPerfil(){
+    var p = perfil() || {};
+    return '<div class="pantalla"><div class="wrap">' +
+      '<div class="cabeza"><p class="kicker">Tu marca / perfil</p><h1 class="titulo titulo-foco" tabindex="-1">' + (perfil() ? 'Editá tu perfil' : 'Creá el perfil de tu marca') + '</h1></div>' +
+      '<p class="bajada">Con tu rubro ordenamos las tendencias para vos, y la IA usa el perfil para que sus sugerencias hablen de tu marca. Lleva un minuto. Solo el rubro es obligatorio.</p>' +
+      '<div class="perfil"><form class="form-perfil" id="form-perfil" novalidate>' +
+        '<label>Nombre de la marca <small>Opcional</small><input id="p-nombre" maxlength="60" autocomplete="organization" value="' + esc(p.nombre || '') + '" placeholder="Ej.: Lúa"></label>' +
+        '<label><span>Rubro <span class="obligatorio" aria-hidden="true">*</span><span class="sr">(obligatorio)</span></span><select id="p-rubro" required aria-describedby="p-error">' + opciones(RUBROS_PERFIL, p.rubro || '') + '</select><span class="error" id="p-error" aria-live="polite"></span></label>' +
+        '<label class="ancho">Qué vende <small>Opcional · en una línea</small><textarea id="p-vende" maxlength="140" placeholder="Ej.: vestidos de lino y básicos de algodón">' + esc(p.vende || '') + '</textarea></label>' +
+        '<label>Público <small>Opcional</small><input id="p-publico" maxlength="80" value="' + esc(p.publico || '') + '" placeholder="Ej.: mujeres de 25 a 40"></label>' +
+        '<label>Rango de precio <small>Opcional</small><select id="p-precio">' + opciones(PRECIOS, p.precio || '') + '</select></label>' +
+        '<label>Canal de venta <small>Opcional</small><select id="p-canal">' + opciones(CANALES, p.canal || '') + '</select></label>' +
+        '<div class="acciones-perfil"><button class="boton flecha" type="submit">Guardar y ver la temporada </button>' +
+          (perfil() ? '<button class="boton peligro" type="button" id="p-borrar">Borrar el perfil</button>' : '<a class="link" href="#inicio">Seguir sin perfil →</a>') + '</div>' +
+      '</form>' +
+      '<aside class="aviso-privado" aria-label="Qué pasa con tus datos"><h2>Qué pasa con tus datos</h2>' +
+        '<ul><li>El perfil se guarda <b>solo en este navegador</b>. No hay cuentas ni contraseñas.</li>' +
+        '<li>Cuando la IA arma una sugerencia, <b>le mandamos el perfil</b> (vía Groq) para personalizarla. No lo guardamos en ningún servidor.</li>' +
+        '<li>No pongas datos personales: alcanza con describir la marca.</li>' +
+        '<li>Lo podés editar o borrar cuando quieras desde el botón de arriba a la derecha.</li></ul></aside></div>' +
+      '</div></div>';
+  }
+  function conectarPerfil(){
+    var f = $('form-perfil'); if (!f) return;
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      var rubro = $('p-rubro').value;
+      if (!rubro){ $('p-error').textContent = 'Elegí un rubro para seguir.'; $('p-rubro').setAttribute('aria-invalid', 'true'); $('p-rubro').focus(); return; }
+      function v(id){ return $(id).value.replace(/\s+/g, ' ').trim(); }
+      var ok = guardarPerfil({nombre: v('p-nombre'), rubro: rubro, vende: v('p-vende'), publico: v('p-publico'), precio: $('p-precio').value, canal: $('p-canal').value, guardado: new Date().toISOString().slice(0, 10)});
+      borrarCacheIA();
+      if (!ok){ $('p-error').textContent = 'Este navegador no deja guardar datos (¿modo privado?). Podés seguir sin perfil.'; return; }
+      estado.rubro = '';
+      location.hash = '#inicio';
+    });
+    var b = $('p-borrar');
+    if (b) b.addEventListener('click', function(){
+      if (!confirm('¿Borrar el perfil de este navegador?')) return;
+      borrarPerfil(); borrarCacheIA(); estado.rubro = ''; pintarCabecera(); location.hash = '#perfil'; ir();
+    });
+  }
+  function pintarCabecera(){
+    var p = perfil(), c = $('cab-der');
+    c.textContent = p ? (p.nombre || 'Tu marca') + ' · ' + nombreRubro(p.rubro) : 'Creá tu perfil';
+    c.setAttribute('aria-label', p ? 'Tu perfil: ' + (p.nombre || 'tu marca') + ', ' + nombreRubro(p.rubro) + '. Editar o borrar' : 'Creá el perfil de tu marca');
+  }
 
-  // Al bajar, cada bloque aparece cuando entra en pantalla (sin efecto si el sistema pide menos movimiento)
-  var RV = '.seccion-cabeza, .temporadas-nav, .ficha-t, .sin-lista, .cita blockquote, .evid > div, .color, .pasos li, .ciclos, .tres > div';
+  // ---------- Navegación entre pantallas (una por dirección: #inicio, #anio, #por-season, #season/FW2025, #t/<id>, #color/<nombre>...) ----------
+  var app = $('app'), home = $('home'), main = $('pantalla');
+  function ir(){
+    var h = decodeURIComponent(location.hash.slice(1)), p = h.split('/'), html = '', sec = p[0];
+    // Direcciones viejas que pueden estar compartidas
+    if (h.indexOf('nota-') === 0){ location.replace('#t/' + h.slice(5)); return; }
+    // Direcciones de la versión anterior (Resumen, Tendencias, Colores, Visto en 2026)
+    if (sec === 'resumen' || sec === 'tendencias' || sec === 'indice'){ location.replace('#season/' + (TEMP[p[1]] ? p[1] : 'FW2025')); return; }
+    if (sec === 'colores'){ location.replace('#season/' + estado.temporada + '/colores'); return; }
+    if (sec === 'visto-2026'){ location.replace('#season/SS2026'); return; }
+    var bajarA = '';
+    if (!sec){ pintarHome(); home.classList.remove('oculto'); app.classList.add('oculto'); document.title = 'Paleta predictiva'; window.scrollTo(0, 0); return; }
+    if (sec === 'inicio') html = pantallaInicio();
+    else if (sec === 'anio'){ html = pantallaAnio(p[1]); if (p[1]) bajarA = 'anio-' + p[1]; }
+    else if (sec === 'por-season') html = pantallaPorSeason();
+    else if (sec === 'season'){
+      if (!TEMP[p[1]]){ location.replace('#season/FW2025'); return; }
+      estado.temporada = p[1]; html = pantallaSeason(p[1]); sec = tipoS(p[1]);
+      if (p[2] === 'colores') bajarA = 's-colores';
+    }
+    else if (sec === 't'){ var t = porId(p[1]); if (!t){ location.replace('#inicio'); return; } estado.temporada = t.temporada; html = pantallaFicha(t); sec = tipoS(t.temporada); }
+    else if (sec === 'color'){ var c = COL.filter(function(x){ return slug(x.nombre) === p[1]; })[0]; if (!c){ location.replace('#season/' + estado.temporada + '/colores'); return; } html = pantallaColor(c); sec = tipoS(estado.temporada); }
+    else if (sec === 'metodo') html = pantallaMetodo();
+    else if (sec === 'perfil') html = pantallaPerfil();
+    else { location.replace('#inicio'); return; }
+    home.classList.add('oculto'); app.classList.remove('oculto');
+    main.innerHTML = html;
+    document.querySelectorAll('.menu a').forEach(function(a){ if (a.dataset.sec === sec) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    var activo = document.querySelector('.menu a[aria-current]'), menu = document.querySelector('.menu');
+    if (activo && menu.scrollWidth > menu.clientWidth) menu.scrollLeft = activo.offsetLeft - (menu.clientWidth - activo.offsetWidth) / 2;
+    pintarCabecera(); if (sec === 'perfil') $('cab-der').setAttribute('aria-current', 'page'); else $('cab-der').removeAttribute('aria-current');
+    var foco = main.querySelector('.titulo-foco');
+    document.title = (foco ? foco.innerText.replace(/\s+/g, ' ').trim() + ' · ' : '') + 'Paleta predictiva';
+    window.scrollTo(0, 0);
+    if (foco && ir.yaEntro) foco.focus({preventScroll:true});
+    if (bajarA && $(bajarA)) $(bajarA).scrollIntoView();
+    ir.yaEntro = true;
+    conectar(h);
+  }
+  // Efecto de scroll: los bloques de cada pantalla aparecen al entrar en pantalla
+  var RV = '.forma, .limites3 > div, .anio, .preferis, .ps, .tarjeta, .color, .s-sec > h2, .banda-cautela, .ia-bloque, .elegidas li, .stats > div, .advertencia, .vs, .curva, .datos-f, .pasos3 > div, .evid, .metodo-mas > section, .dos-paneles > div, .presencia, .banda-azul .wrap, .s-pie .wrap';
   var mira = window.IntersectionObserver && !matchMedia('(prefers-reduced-motion: reduce)').matches
     ? new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('visto'); mira.unobserve(e.target); } }); }, {rootMargin: '0px 0px -8% 0px'})
     : null;
   function revelar(){
     if (!mira) return;
+    // Si la pestaña no está visible (capturas, pestaña de fondo), no se anima: todo se muestra directo
+    if (document.visibilityState === 'hidden'){ document.documentElement.classList.remove('js-rv'); return; }
     document.documentElement.classList.add('js-rv');
-    document.querySelectorAll(RV).forEach(function(el){
+    main.querySelectorAll(RV).forEach(function(el){
       if (el.classList.contains('rv')) return;
       el.classList.add('rv');
-      var hermanos = el.parentNode ? Array.prototype.indexOf.call(el.parentNode.children, el) : 0;
-      el.style.setProperty('--rd', (hermanos % 4) * 0.08 + 's');
+      var i = el.parentNode ? Array.prototype.indexOf.call(el.parentNode.children, el) : 0;
+      el.style.setProperty('--rd', (i % 3) * 0.08 + 's');   // en una grilla, las de la misma fila entran escalonadas
       mira.observe(el);
     });
   }
-  var pintarBase = pintar;
-  pintar = function(){ pintarBase(); revelar(); };
-  revelar();
+  // Lo que cada pantalla necesita después de pintarse
+  function conectar(h){
+    revelar();
+    conectarPerfil();
+    var sa = $('sel-anio'); if (sa) sa.addEventListener('change', function(){ location.hash = '#season/' + sa.value; });
+    main.querySelectorAll('[data-ir-sec]').forEach(function(a){ a.addEventListener('click', function(e){ var d = $(a.dataset.irSec); if (d){ e.preventDefault(); d.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); history.replaceState(null, '', a.getAttribute('href')); } }); });
+    pedirIA(false);
+    var vp = $('ver-prompt');
+    if (vp) vp.addEventListener('click', function(){
+      var caja = $('prompt-texto');
+      if (caja.innerHTML){ caja.innerHTML = ''; return; }
+      if (!online){ caja.innerHTML = '<p class="explica" style="margin-top:10px">Se ve en la versión online. También está en <a href="https://github.com/cborja999/paleta_predictiva/blob/main/entrega3/IA.md">entrega3/IA.md</a>.</p>'; return; }
+      caja.innerHTML = '<p class="explica" style="margin-top:10px">Cargando…</p>';
+      fetch(API).then(function(r){ return r.json(); }).then(function(j){
+        $('ia-modelo').textContent = 'Modelo: ' + j.modelo + ' · ' + j.proveedor;
+        caja.innerHTML = '<p class="kicker" style="margin-top:14px">Al abrir una tendencia</p><pre>' + esc(j.system_prompt) + '</pre>' + (j.system_prompt_temporada ? '<p class="kicker" style="margin-top:14px">Al abrir una temporada</p><pre>' + esc(j.system_prompt_temporada) + '</pre>' : '');
+      }).catch(function(){ caja.innerHTML = '<p class="ia-error" style="margin-top:10px">No pudimos traer el prompt.</p>'; });
+    });
+  }
+  // Un solo listener para los botones de Actualizar / Probar de nuevo (el del panel y el del error)
+  main.addEventListener('click', function(e){ if (e.target.closest('[data-ia-actualizar]')) pedirIA(true); });
+  document.addEventListener('keydown', function(e){
+    if (/SELECT|TEXTAREA|INPUT/.test(e.target.tagName)) return;
+    var pasar = main.querySelector('.pasar'); if (!pasar || app.classList.contains('oculto')) return;
+    var a = pasar.querySelectorAll('a');
+    if (e.key === 'ArrowLeft') location.hash = a[0].getAttribute('href');
+    if (e.key === 'ArrowRight') location.hash = a[1].getAttribute('href');
+  });
+  document.addEventListener('visibilitychange', function(){ if (document.visibilityState === 'hidden') document.documentElement.classList.remove('js-rv'); });
+  window.addEventListener('hashchange', ir);
+  ir();
 })();
 </script>
 </body>
