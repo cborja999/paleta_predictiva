@@ -588,6 +588,44 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
   .bh-pie{padding:10px 20px 12px;font-size:9.5px}
 }
 
+
+/* ---------- Racional ---------- */
+.rac{display:grid;grid-template-columns:230px 1fr;gap:48px;margin-top:34px;align-items:start}
+.rac-indice{position:sticky;top:116px}
+.rac-indice ol{list-style:none;padding:0;border-top:1.5px solid var(--tinta)}
+.rac-indice a{display:block;padding:9px 0;border-bottom:1px solid var(--linea);text-decoration:none;font-size:15px}
+.rac-indice a b{display:inline-block;width:30px;color:var(--gris)}
+.rac-indice a:hover{text-decoration:underline}
+.rac-cuerpo{min-width:0}
+.rac-sec{scroll-margin-top:110px;padding-bottom:40px;margin-bottom:12px}
+.rac-sec+.rac-sec{border-top:1px solid var(--linea);padding-top:34px}
+.rac-sec h3{font-size:19px;font-weight:700;margin:26px 0 10px}
+.rac-sec p,.rac-sec li{font-size:16px;font-weight:400;line-height:1.55;max-width:78ch}
+.rac-sec p{margin-top:12px}
+.rac-sec ul,.rac-sec ol{padding-left:20px;margin-top:10px}
+.rac-sec li{margin-bottom:8px}
+.rac-cita{font-size:clamp(20px,2.2vw,28px);font-weight:600;line-height:1.3;border-left:4px solid var(--azul-s);padding:6px 0 6px 18px;margin:20px 0}
+.rac-dos{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.rac-repo{font-size:14px!important;color:var(--gris)}
+.rac-tabla-cont{overflow-x:auto;margin-top:12px}
+.rac-tabla{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+.rac-tabla th{text-align:left;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:8px 10px 8px 0;border-bottom:1.5px solid var(--tinta)}
+.rac-tabla td{padding:10px 12px 10px 0;border-bottom:1px solid var(--linea);vertical-align:top;font-weight:400;line-height:1.45}
+.esq{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:center;margin-top:18px}
+.esq-col{display:grid;gap:8px}
+.esq-caja{border:1px solid var(--tinta);padding:10px 12px;background:#fff}
+.esq-caja b{display:block;font-size:15px}
+.esq-caja span{display:block;font-size:13px;font-weight:400;color:#3c403d;margin-top:2px}
+.esq-caja.calc{border-width:2px}
+.esq-caja.ia{border-color:var(--ia);background:var(--ia-fondo)}
+.esq-flecha{font-size:28px;color:var(--gris);text-align:center}
+.flujo{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:18px}
+.flujo .paso{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--tinta);padding:8px 12px;font-size:14px;font-weight:600}
+.flujo .paso b{display:inline-flex;width:22px;height:22px;border-radius:50%;background:var(--azul-s);color:#fff;font-size:12px;align-items:center;justify-content:center}
+.flujo .esq-flecha{font-size:20px}
+@media (max-width:1000px){.rac{grid-template-columns:1fr;gap:20px}.rac-indice{position:static}.rac-indice ol{display:flex;flex-wrap:wrap;gap:0 18px;border-top:0}.rac-indice a{border-bottom:0;padding:4px 0}}
+@media (max-width:760px){.esq{grid-template-columns:1fr}.esq-flecha{transform:rotate(90deg)}.rac-dos{grid-template-columns:1fr}}
+
 /* ---------- Perfil de la marca ---------- */
 .perfil{display:grid;grid-template-columns:1fr 380px;gap:48px;margin-top:30px;align-items:start}
 @media (max-width:1000px){.perfil{grid-template-columns:1fr;gap:28px}}
@@ -682,7 +720,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
         <a href="#por-season" data-sec="por-season">Por season</a>
         <a href="#season/SS2025" data-sec="summer">Summer</a>
         <a href="#season/FW2025" data-sec="winter">Winter</a>
-        <a href="#metodo" data-sec="metodo">Método</a>
+        <a href="#racional" data-sec="racional">Racional</a>
       </nav>
       <a class="cab-der" id="cab-der" href="#perfil">Creá tu perfil</a>
     </div>
@@ -840,7 +878,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
           '<div><p class="kicker">02 / Evidencia</p><h3>Datos con su significado</h3><p>Pasarela y búsquedas son indicadores distintos. Los porcentajes siempre dicen qué miden.</p></div>' +
           '<div><p class="kicker">03 / Decisión</p><h3>Confianza y advertencias</h3><p>El nivel de confianza no reemplaza las cautelas. Validá la lectura con tu producto y tu mercado.</p></div></div>' +
       '</div>' +
-      '<section class="banda-azul"><div class="wrap"><div><h2 class="subt">Referencias de moda, no promesas de ventas</h2><p>La información orienta la exploración de una colección. No equivale a demanda argentina ni garantiza resultados comerciales. Las fotos son de los desfiles que nombran los medios.</p></div><a class="boton borde flecha" href="#metodo">Consultar método </a></div></section>' +
+      '<section class="banda-azul"><div class="wrap"><div><h2 class="subt">Referencias de moda, no promesas de ventas</h2><p>La información orienta la exploración de una colección. No equivale a demanda argentina ni garantiza resultados comerciales. Las fotos son de los desfiles que nombran los medios.</p></div><a class="boton borde flecha" href="#racional">Consultar el racional </a></div></section>' +
       '</div>';
   }
 
@@ -1101,46 +1139,133 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
           (Math.abs(c.cambio_pts) < 0.05 ? 'Su presencia no cambió frente al período previo.' : 'Su presencia ' + (c.cambio_pts > 0 ? 'aumenta ' : 'baja ') + num(Math.abs(c.cambio_pts), 1) + ' puntos porcentuales frente al período previo.') + '</p>' +
       '</div></div>' +
       '<div class="dos-paneles"><div class="pizarra"><h2 class="subt">Presencia no es demanda</h2><p>Estos porcentajes describen la pasarela. No estiman ventas ni deben trasladarse directamente al mix de una colección.</p></div>' +
-        '<div class="pizarra"><p class="kicker">Antes de producir</p><p style="margin-top:14px">Validá el color con tu producto y tu mercado. Lo clasificó una IA (Gemini) a partir de fotos: acertó el color en 33 de 40 revisadas a mano.</p><a class="boton borde flecha" href="#metodo">Consultar método y límites </a></div></div>' +
+        '<div class="pizarra"><p class="kicker">Antes de producir</p><p style="margin-top:14px">Validá el color con tu producto y tu mercado. Lo clasificó una IA (Gemini) a partir de fotos: acertó el color en 33 de 40 revisadas a mano.</p><a class="boton borde flecha" href="#racional">Consultar método y límites </a></div></div>' +
       '<p style="margin-top:28px"><a class="link" href="#season/' + estado.temporada + '/colores">Volver a los colores de ' + nomS(estado.temporada) + ' →</a></p>' +
       '</div></div>';
   }
 
-  // ---------- 06 Método ----------
-  function pantallaMetodo(){
+
+
+  // ---------- Racional: por qué la herramienta es como es (consigna de la Entrega 4, 8 ítems) ----------
+  function pantallaRacional(){
+    var SEC = [['r-problema', 'Problema y contexto'], ['r-hipotesis', 'Hipótesis'], ['r-datos', 'Datos y trazabilidad'], ['r-modelo', 'Modelo'],
+      ['r-usuario', 'Usuario y recorrido'], ['r-diseno', 'Decisiones de diseño'], ['r-alcance', 'Recorte de alcance'], ['r-ia', 'Proceso y uso de IA']];
+    function tabla(cab, filas){ return '<div class="rac-tabla-cont"><table class="rac-tabla"><thead><tr>' + cab.map(function(c){ return '<th>' + c + '</th>'; }).join('') + '</tr></thead><tbody>' +
+      filas.map(function(f){ return '<tr>' + f.map(function(c){ return '<td>' + c + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table></div>'; }
+    function caja(t, d, cl){ return '<div class="esq-caja ' + (cl || '') + '"><b>' + t + '</b><span>' + d + '</span></div>'; }
+    function repo(ruta, txt){ return '<a href="https://github.com/cborja999/paleta_predictiva/blob/main/' + ruta + '" target="_blank" rel="noopener">' + (txt || ruta) + '</a>'; }
     function barra(etiq, k, n, color, texto){ return '<div class="barra-fila"><span>' + etiq + '</span><div class="pista"><i style="left:0;width:' + (k / n * 100).toFixed(1) + '%;background:' + color + '"></i></div><b style="font-size:16px">' + texto + '</b></div>'; }
     var ciclos = D.ciclos.map(function(c){
       function b(k, n, cl){ return '<div class="barra ' + cl + '"><i style="width:' + (n ? k / n * 100 : 0) + '%"></i><span class="umbral"></span></div>'; }
       return '<div class="ciclo"><span>' + c.ciclo.replace('-', ' → ') + '</span><div class="barras">' + b(c.sube_pasajeras, c.sube_n, 'sube') + b(c.cae_pasajeras, c.cae_n, 'cae') + '</div>' +
         '<span class="n">' + c.sube_pasajeras + '/' + c.sube_n + '<br>' + c.cae_pasajeras + '/' + c.cae_n + '</span></div>';
     }).join('');
+    var nV = T.length, nQ = T.filter(function(t){ return t.veredicto === 'queda'; }).length, nR = nV - nQ;
     return '<div class="pantalla"><div class="wrap">' +
-      '<div class="cabeza"><p class="kicker">Método / fuentes, reglas y límites</p><h1 class="titulo titulo-foco" tabindex="-1">Cómo se calcula cada señal</h1></div>' +
-      '<p class="bajada">Fuentes de tendencias, comparación de búsquedas y umbrales de clasificación.</p>' +
-      '<div class="pasos3">' +
-        '<div><h3><b>01</b>Seleccionamos</h3><p>Tendencias publicadas por ' + lista(D.medios) + ' después de cada fashion week. No las elegimos nosotros, y no son todas las que hubo.</p></div>' +
-        '<div><h3><b>02</b>Comparamos</h3><p>Búsquedas globales en Google del año posterior al desfile frente al anterior, ajustadas por lo que se movió su temporada.</p></div>' +
-        '<div><h3><b>03</b>Clasificamos</h3><p>Cambio relativo ≥ +10%: se queda. ≤ −10%: en riesgo. En el medio: sin señal clara (' + D.sin_senal + ' quedaron así). Confianza alta desde ±30%.</p></div>' +
-      '</div>' +
-      '<div class="evid-grilla"><section class="evid" aria-label="La evidencia histórica"><p class="kicker">La evidencia histórica</p>' +
-        '<div class="fila1"><b class="grande">9 de cada 10</b><p>tendencias que subieron seguían al año siguiente.<br>178 tendencias · 2016–2024</p></div>' +
-        '<div class="barras"><p style="font-size:16px">Pasaron de moda al segundo año · muestra 2021–2024</p>' +
-          barra('Ganaron búsquedas', 2, 19, 'var(--oscuro)', '2 de 19') + barra('Perdieron búsquedas', 9, 16, '#e99a8a', '9 de 16') + '</div>' +
-        '<p class="chica">Las que bajan tienen unas 5 veces más chances de pasar de moda. Es un resultado histórico agregado, no la probabilidad de éxito de una prenda: por eso “en riesgo” no es “se va”, es apostar poco.</p></section>' +
-        '<aside class="panel"><p class="kicker">2026 / sin veredicto</p><h2 class="subt" style="font-size:30px;text-transform:none">2026: datos no comparables</h2><p style="margin-top:40px">Google Trends cambió su medición desde mediados de 2025. Las cifras de 2026 no son comparables con años anteriores.</p></aside></div>' +
-      '<h2 class="subt" style="margin-top:48px">Límites de la lectura</h2>' +
-      '<div class="limites3"><div><h3>Interés ≠ ventas</h3><p>Google Trends mide búsquedas globales. La regla no se confirmó con datos solo de Argentina.</p></div>' +
-        '<div><h3>Muestras acotadas</h3><p>Entre 15 y 68 tendencias por prueba. La selección de los medios no representa todo el mercado.</p></div>' +
-        '<div><h3>La IA no decide la señal</h3><p>Las reglas fijan veredicto, confianza y apuesta. Las sugerencias para la marca se presentan siempre aparte.</p></div></div>' +
-      '<div class="metodo-mas">' +
-        '<section><h3>Ciclo por ciclo</h3><p>Cuántas fueron moda pasajera al segundo año, entre las que ganaron y las que perdieron búsquedas.</p>' +
-          '<div class="leyenda"><span>Ganaron búsquedas</span><span class="r">Perdieron búsquedas</span><span class="u">20%</span></div><div class="ciclos">' + ciclos + '</div></section>' +
-        '<section><h3>Qué cambió y por qué</h3><ol>' +
-          '<li><b>Al principio</b> creíamos que la pasarela anticipa las ventas masivas 12 a 18 meses después.</li>' +
-          '<li><b>Lo probamos</b> con 2.430 looks de Vogue Runway clasificados con IA contra Google Trends: no apareció ningún desfase. Lo presentamos como resultado nulo.</li>' +
-          '<li><b>Lo que sí funcionó</b> fue mirar qué pasa con las búsquedas el primer año después del desfile. Probamos que lo que sube se queda con tendencias nuevas de 2016 a 2018, que no habíamos usado para armar la idea: solo 1 de 17 fue pasajera.</li>' +
-          '<li><b>Lo que descartamos:</b> que lo que se mantiene plano sea pasajero. No se sostuvo: las planas se quedaron 73% de las veces, no tan lejos del 88% de las que suben (122 tendencias de 2019 a 2023, de donde salió la idea). El riesgo está en lo que cae.</li></ol></section>' +
-        '<section><h3>Lo que no dicen los datos</h3><ul>' +
+      '<div class="cabeza"><p class="kicker">Racional / por qué la herramienta es como es</p><h1 class="titulo titulo-foco" tabindex="-1">Racional</h1></div>' +
+      '<div class="rac"><nav class="rac-indice" aria-label="Secciones del racional"><ol>' + SEC.map(function(x, i){ return '<li><a href="#racional" data-ir-sec="' + x[0] + '"><b>0' + (i + 1) + '</b> ' + x[1] + '</a></li>'; }).join('') + '</ol></nav><div class="rac-cuerpo">' +
+
+      // 01
+      '<section class="rac-sec" id="r-problema"><h2 class="lt-h2">01 · Problema y contexto</h2>' +
+        '<p><b>A quién le sirve:</b> a la dueña o diseñadora de una marca de ropa argentina chica o mediana. No va a las fashion weeks, no paga un servicio de tendencias y decide sola qué producir para la próxima temporada.</p>' +
+        '<p><b>En qué situación:</b> después de cada fashion week aparecen notas de medios que dicen "esto es tendencia". Ninguna dice si va a durar. Producir de más algo que pasa de moda es stock que no se vende.</p>' +
+        '<p><b>Qué decisión necesita tomar:</b> en qué tendencia apostar fuerte, en cuál de forma moderada y en cuál probar poco.</p>' +
+        '<h3>¿Las empresas usan hoy un brief para decidir?</h3>' +
+        '<p>Las marcas grandes, sí: compran informes de tendencias. Ejemplos reales que miramos:</p><ul>' +
+          '<li><b>LIVETREND · FW26 Womenswear Outerwear</b> (informe pago): cada tendencia con fotos de desfile, cuántos looks la usaron, el cambio contra el año anterior y un sello del tipo "stable trend" o "last call". Lo tomamos como referencia de diseño.</li>' +
+          '<li><b>WGSN, Heuritech y T-Fashion:</b> publican resúmenes de sus reportes de pasarela. Juntamos 110 datos públicos en ' + repo('datasets/runway_reportes_2025_2026.csv') + '.</li>' +
+          '<li><b>Las notas de medios</b> (Who What Wear, CBC Life, Yahoo Lifestyle): es lo que lee hoy una marca chica. De ahí salen nuestras tendencias.</li></ul>' +
+        '<p>Esos informes dicen cuánto se vio algo en la pasarela, no si después se buscó. Nuestra herramienta le da a la marca chica un brief propio, con una regla que se puede verificar. Por eso la pirueta es <b>"Tu brief para llevar"</b>: una lámina por season que se descarga en PDF.</p></section>' +
+
+      // 02
+      '<section class="rac-sec" id="r-hipotesis"><h2 class="lt-h2">02 · Hipótesis</h2>' +
+        '<blockquote class="rac-cita">Una tendencia de pasarela que gana búsquedas en su primer año rara vez se desploma en el segundo, y las que las pierden tienen más del triple de chances de ser pasajeras.</blockquote>' +
+        '<div class="rac-dos"><div><h3>Qué asume</h3><ul><li>Que las búsquedas en Google reflejan interés real del público.</li><li>Que lo que pasa en las búsquedas el primer año después del desfile anticipa el segundo.</li><li>Que comparar contra el resto de la season descuenta lo que se mueve todo junto.</li></ul></div>' +
+          '<div><h3>Qué no puede afirmar</h3><ul><li>Que algo se vaya a vender: búsquedas no son ventas.</li><li>Que funcione igual en Argentina: con búsquedas solo de Argentina no se confirmó.</li><li>Que una tendencia puntual se quede: es una tendencia histórica, no una probabilidad.</li></ul></div></div>' +
+        '<div class="evid" style="padding:0;margin-top:26px"><div class="fila1"><b class="grande">9 de cada 10</b><p>tendencias que subieron seguían al año siguiente.<br>178 tendencias · 2016–2024</p></div>' +
+          '<div class="barras"><p style="font-size:16px">Pasaron de moda al segundo año · muestra 2021–2024</p>' + barra('Ganaron búsquedas', 2, 19, 'var(--oscuro)', '2 de 19') + barra('Perdieron búsquedas', 9, 16, '#e99a8a', '9 de 16') + '</div>' +
+          '<p class="chica">Las que bajan tienen unas 5 veces más chances de pasar de moda. Por eso “en riesgo” no es “se va”: es apostar poco.</p></div>' +
+        '<h3>Cómo cambió</h3><ol>' +
+          '<li><b>Entrega 1:</b> creíamos que la pasarela anticipa las ventas masivas 12 a 18 meses después.</li>' +
+          '<li><b>Entrega 2:</b> lo probamos con 2.430 looks de Vogue Runway clasificados con IA contra Google Trends: no apareció ningún desfase. Lo presentamos como resultado nulo.</li>' +
+          '<li><b>Entrega 3:</b> lo que sí funcionó fue mirar las búsquedas el primer año después del desfile. Con tendencias nuevas de 2016 a 2018, que no habíamos usado para armar la idea, solo 1 de 17 fue pasajera. Descartamos que lo plano sea pasajero: las planas se quedaron 73% de las veces, no tan lejos del 88% de las que suben (122 tendencias de 2019 a 2023).</li>' +
+          '<li><b>Entrega 4:</b> la misma hipótesis, con la app que la usa para la decisión de la marca.</li></ol>' +
+        '<h3>Ciclo por ciclo</h3><div class="leyenda"><span>Ganaron búsquedas</span><span class="r">Perdieron búsquedas</span><span class="u">20%</span></div><div class="ciclos">' + ciclos + '</div>' +
+        '<p class="rac-repo">Detalle: ' + repo('hipotesis.md') + '.</p></section>' +
+
+      // 03
+      '<section class="rac-sec" id="r-datos"><h2 class="lt-h2">03 · Datos y trazabilidad</h2>' +
+        '<h3>Fuentes</h3>' + tabla(['Fuente', 'Quién la produce', 'Actualización', 'Licencia y uso', 'Límites'], [
+          ['<b>Google Trends</b>: búsqueda web, todo el mundo, mensual', 'Google', 'Bajado el 20/10, el 27/10, el 1/11 y el 2/11 de 2026', 'Datos públicos; en el repo van las series bajadas', 'Índice relativo de 0 a 100, no volumen. Desde mediados de 2025 mide distinto'],
+          ['<b>Listas de tendencias</b> de medios después de cada fashion week', 'Who What Wear, CBC Life, Yahoo Lifestyle (y otros para la prueba 2016-2023)', 'Una por fashion week', 'Guardamos título, fecha y link; no copiamos texto', 'Medios en inglés; eligen ellos qué es tendencia'],
+          ['<b>Looks de Vogue Runway</b>: 2.430, de 15 casas, FW2011 a SS2024', 'Vogue, vía el dataset público tonyassi/vogue-runway-top15-512px (Hugging Face)', 'Fijo', 'Las fotos tienen derechos: no se suben al repo', 'Solo 15 casas de lujo'],
+          ['<b>Clasificación con Gemini</b>: color, prenda, silueta y largo de cada look', 'Nosotros, con Gemini', 'Una vez', 'Propia', 'Acierta el color en 33 de 40 fotos revisadas a mano; la prenda en 28 y la silueta en 23'],
+          ['<b>Fotos de desfiles</b> en la app', 'Vogue Runway, elegidas por el grupo', 'Por season', 'Solo en la versión publicada para la clase', 'Faltan las de 2024 y 2026'],
+          ['<b>Perfil de la marca</b>', 'La marca', 'Cuando lo edita', 'Queda en su navegador; se le manda a la IA y no se guarda en ningún servidor', 'Autodeclarado']]) +
+        '<h3>Cómo se cruzan</h3><ul><li><b>Tendencia ↔ búsquedas:</b> por el término de búsqueda que le asignamos a cada tendencia, la temporada y el mes del desfile.</li>' +
+          '<li><b>Colores ↔ pasarela:</b> por temporada de desfile.</li><li><b>Tendencias ↔ marca:</b> por el rubro (vestidos, polleras, pantalones, abrigos, accesorios).</li>' +
+          '<li><b>El paso de la nota al término de búsqueda</b> es una decisión nuestra y está anotada fila por fila (' + repo('analisis/brief_fw2025/terminos_declarados_fw2025.csv', 'terminos_declarados_*.csv') + ').</li></ul>' +
+        '<h3>Diccionario de variables</h3>' + tabla(['Variable', 'Qué es', 'Unidad y rango', 'Cálculo'], [
+          ['B0', 'Búsquedas del año antes del desfile', 'Índice 0–100', 'Promedio de los 12 meses anteriores'],
+          ['B1', 'Búsquedas del primer año', 'Índice 0–100', 'Promedio de los 12 meses desde el desfile'],
+          ['Búsquedas (%)', 'Cuánto cambió la tendencia', '%', 'B1 / B0 − 1'],
+          ['Season (%)', 'Cuánto se movió el resto de la season', '%', 'exp(mediana de log(B1/B0) de la season) − 1'],
+          ['g1 · contra su season', 'Cuánto más o menos se buscó que su season', 'log / %', 'log(B1/B0) − mediana de la season · exp(g1) − 1'],
+          ['Veredicto', 'Se queda, en riesgo o sin señal clara', 'Categoría', 'g1 ≥ +0,10 se queda; ≤ −0,10 en riesgo; en el medio, sin señal'],
+          ['Confianza', 'Qué tan grande fue el movimiento', 'Alta o media', 'Alta si |g1| ≥ 0,30'],
+          ['Cuánto apostar', 'La decisión sugerida', 'Probar poco, moderada o fuerte', 'Regla fija: en riesgo, probar poco; se queda con confianza alta y sin avisos, fuerte; el resto, moderada'],
+          ['Con cautela', 'Lectura frágil', 'Sí o no', 'Un pico de un solo mes, o una lectura que cambia sin los meses en que Google empezó a medir distinto'],
+          ['Presencia de un color', 'Qué parte de los looks tuvo ese color', '% y puntos (pp)', 'Looks con ese color / looks válidos, promedio de 3 temporadas, contra las 3 anteriores']]) +
+        '<h3>Trazabilidad</h3><ul><li>Las reglas de cada prueba se escribieron y firmaron con una huella sha256 <b>antes</b> de bajar los datos (' + repo('analisis/brief_fw2025/REGLAS_BRIEF_FW2025.txt', 'REGLAS_*.txt') + ').</li>' +
+          '<li>' + repo('trazabilidad/verificar_numeros.py') + ' recalcula cada número de la app desde los CSV crudos y los compara con la pantalla: <b>620 de 620 coinciden</b>. Detalle en ' + repo('trazabilidad/LEEME.md') + '.</li>' +
+          '<li>Decisiones con fecha en ' + repo('decisiones.md') + '.</li></ul></section>' +
+
+      // 04
+      '<section class="rac-sec" id="r-modelo"><h2 class="lt-h2">04 · Modelo</h2><p>Qué entra, qué se calcula y qué sale. La IA está al final y no toca lo calculado.</p>' +
+        '<div class="esq"><div class="esq-col"><p class="kicker">Entradas</p>' + caja('Listas de medios', 'qué es tendencia en cada season') + caja('Google Trends', '24 meses por término') + caja('Looks clasificados', 'colores de la pasarela') + caja('Perfil de la marca', 'rubro, público, precio, canal') + '</div>' +
+          '<div class="esq-flecha" aria-hidden="true">→</div><div class="esq-col"><p class="kicker">Proceso (reglas fijas)</p>' + caja('Término y ventanas', '12 meses antes y 12 después del desfile') + caja('Contra su season', 'g1 = log(B1/B0) − mediana') + caja('Umbrales', '±10% veredicto · ±30% confianza') + caja('Regla de apuesta', 'veredicto + confianza + avisos') + '</div>' +
+          '<div class="esq-flecha" aria-hidden="true">→</div><div class="esq-col"><p class="kicker">Salidas</p>' + caja('Calculado', 'veredicto, confianza, apuesta, números, curva', 'calc') + caja('Inferencia de la IA', 'explica cada tendencia y elige qué mirar, con controles', 'ia') + caja('Brief', 'la lámina para llevar, en PDF', 'calc') + '</div></div>' +
+        '<h3>Qué quedó afuera y por qué</h3><ul>' +
+          '<li><b>Veredicto para 2026:</b> desde mediados de 2025 Google mide distinto. Lo probamos y no se puede corregir.</li>' +
+          '<li><b>El segundo año de 2024 y 2025:</b> por el mismo motivo, todavía no se puede medir limpio.</li>' +
+          '<li><b>Búsquedas de Argentina:</b> con ellas la regla no se confirmó.</li>' +
+          '<li><b>Prenda y silueta de Gemini:</b> aciertan poco (28 y 23 de 40). Solo usamos el color.</li>' +
+          '<li><b>Números de informes pagos</b> (LIVETREND, WGSN): no se pueden verificar.</li>' +
+          '<li><b>Las tendencias "sin señal clara"</b> (' + D.sin_senal + '): no llegan al umbral; no se muestran como veredicto.</li></ul></section>' +
+
+      // 05
+      '<section class="rac-sec" id="r-usuario"><h2 class="lt-h2">05 · Usuario y recorrido</h2>' +
+        '<p><b>Perfil:</b> dueña o diseñadora de una marca chica o mediana, sin formación en estadística, que trabaja desde el celular y la compu. <b>Objetivo:</b> decidir rápido qué producir para la próxima temporada y cuánto, sin quedarse con stock de una moda pasajera.</p>' +
+        '<div class="flujo">' + ['Home', 'Perfil de la marca', 'Inicio', 'Por año o por season', 'Una season', 'Ficha de una tendencia', 'Brief en PDF'].map(function(x, i){ return '<span class="paso"><b>' + (i + 1) + '</b>' + x + '</span>'; }).join('<span class="esq-flecha" aria-hidden="true">→</span>') + '</div>' +
+        '<h3>Ramificaciones</h3><ul>' +
+          '<li><b>Con o sin perfil:</b> el home invita a crear el perfil, pero se puede "ver sin perfil". Sin perfil no se le pide nada a la IA y la página invita a armarlo.</li>' +
+          '<li><b>Por año o por season:</b> dos entradas que llegan al mismo lugar, porque una marca planifica por año o por verano/invierno.</li>' +
+          '<li><b>2026:</b> se puede ver lo que nombraron los medios, pero sin veredicto, sin IA y sin brief.</li>' +
+          '<li><b>Si la IA falla:</b> los datos calculados siguen; la sugerencia avisa el error y el brief se arma con una regla fija.</li></ul></section>' +
+
+      // 06
+      '<section class="rac-sec" id="r-diseno"><h2 class="lt-h2">06 · Decisiones de diseño</h2>' +
+        tabla(['Pantalla', 'Lo más importante', 'Cómo lo jerarquizamos'], [
+          ['Home', 'Que se entienda qué es y crear el perfil', 'El nombre que se pinta con los colores de la pasarela; un solo botón principal'],
+          ['Una season', 'Qué se queda y qué está en riesgo', 'Portada partida; top en columnas con el número enorme encima del look; una doble página por tendencia con sello'],
+          ['Ficha', 'El número contra su season y la confianza', 'Números grandes, sello sobre la foto, curvita; la IA abajo y aparte'],
+          ['Brief', 'Cuánto apostar en cada una', 'Agrupado por apuesta; lo de la IA con su etiqueta'],
+          ['Racional', 'Que se pueda replicar', 'Índice fijo, tablas y esquemas; link a cada archivo']]) +
+        '<ul><li><b>Color:</b> un tono por season (durazno para summer, pizarra para winter). Cada tendencia toma el color de su propia foto. Los sellos tienen color fijo (verde se queda, salmón en riesgo, amarillo cautela) y el rojo de los números se usa solo para "en riesgo".</li>' +
+          '<li><b>Grilla:</b> dobles páginas que alternan de lado y fotos de tamaños distintos, para que no sea una grilla repetida. En celular se apila con la foto arriba.</li>' +
+          '<li><b>Tipografía:</b> Inter en toda la app. El nombre de la season va en minúscula grande, los números en negrita enorme y los rótulos chicos y espaciados.</li>' +
+          '<li><b>Calculado o IA:</b> lo calculado lleva la etiqueta negra "Calculado"; lo de la IA, la azul "Inferencia de la IA", siempre en un bloque aparte.</li></ul>' +
+        '<p class="rac-repo">Del Figma al código, diferencias y capturas: ' + repo('entrega3/DISENO.md') + '.</p></section>' +
+
+      // 07
+      '<section class="rac-sec" id="r-alcance"><h2 class="lt-h2">07 · Recorte de alcance</h2><ul>' +
+        '<li><b>Seasons con veredicto:</b> primavera-verano y otoño-invierno 2024 y 2025 del <b>hemisferio norte</b> (desfiles de Nueva York, Londres, Milán y París). "Summer 2025" es primavera-verano de allá, con desfiles en septiembre y octubre de 2024; no es el verano argentino.</li>' +
+        '<li><b>2026:</b> solo observación, sin veredicto.</li>' +
+        '<li><b>Tendencias:</b> ' + (nV + D.sin_senal) + ' tendencias puntuales (prendas, detalles, estampados y algunos colores): ' + nV + ' con veredicto (' + nQ + ' se quedan, ' + nR + ' en riesgo) y ' + D.sin_senal + ' sin señal clara.</li>' +
+        '<li><b>Búsquedas:</b> en todo el mundo, en inglés, no en Argentina.</li>' +
+        '<li><b>Colores:</b> 15 casas de lujo en Vogue Runway, de 2023 a primavera 2024.</li>' +
+        '<li><b>Rubros:</b> vestidos, polleras, pantalones, abrigos y tejidos, accesorios y estampados.</li></ul>' +
+        '<h3>Lo que no dicen los datos</h3><ul>' +
           '<li>Google mide búsquedas, es decir, interés. No ventas.</li>' +
           '<li>Son búsquedas de todo el mundo. Con búsquedas solo de Argentina la regla no se confirmó.</li>' +
           '<li>Las tendencias las eligieron medios de moda en inglés (Who What Wear, CBC Life, Yahoo Lifestyle). No las elegimos nosotros, pero tampoco son todas las que hubo.</li>' +
@@ -1148,14 +1273,31 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
           '<li>Otoño 2025 pasó un chequeo más estricto, fijado de antemano, porque 7 de los 12 meses de su primer año caen en el período en que Google empezó a medir distinto. Pasó, pero en 8 de sus 13 veredictos la lectura con solo marzo a julio de 2025 da “sin señal clara” (ninguno se da vuelta); lo marcamos en cada una.</li>' +
           '<li>Primavera 2025 pasó un chequeo fijado de antemano (el veredicto no depende del tamaño de la búsqueda ni del salto de 2026), pero su primer año toca meses en que Google empezó a medir distinto. En 3 de sus 8 “se queda” la lectura cambia sin agosto y septiembre de 2025; lo marcamos en cada una.</li>' +
           '<li>Desde mediados de 2025 Google Trends mide distinto y las búsquedas no se pueden comparar con los años anteriores. Por eso 2026 va sin veredicto.</li>' +
-          '<li>Las muestras son chicas: de 15 a 68 tendencias por prueba.</li></ul></section>' +
-        '<section><h3>La IA: qué hace y qué no</h3>' +
-          '<p>Cuando abrís una tendencia o una temporada, la IA ya te da su sugerencia según el perfil de tu marca, sin que la pidas. En una tendencia le mandamos el veredicto, la confianza, el cambio de búsquedas, los avisos, la evidencia y los límites; explica los datos en palabras simples y sugiere ideas de producto. En una temporada le mandamos solo las tendencias con veredicto, y elige cuáles te conviene mirar y por qué.</p>' +
-          '<p>El perfil se le manda a la IA para personalizar la respuesta y no se guarda en ningún servidor. La respuesta queda guardada en tu navegador para no esperar la próxima vez; con “Actualizar” se pide de nuevo.</p>' +
-          '<p>No decide nada: el veredicto, la confianza y cuánto apostar los fijan reglas del código. Cada frase sobre los datos dice de qué dato sale, y un control automático revisa que cada número esté en ese dato; si falla, le pide que corrija una vez.</p>' +
-          '<p id="ia-modelo" style="font-size:14px;color:var(--gris)">Modelo: GPT-OSS 120B (abierto, de OpenAI), vía Groq</p>' +
-          '<div class="prompt"><button class="boton" id="ver-prompt">Ver qué le pedimos a la IA</button><div id="prompt-texto"></div></div></section>' +
-      '</div></div></div>';
+          '<li>Las muestras son chicas: de 15 a 68 tendencias por prueba.</li></ul>' + '</section>' +
+
+      // 08
+      '<section class="rac-sec" id="r-ia"><h2 class="lt-h2">08 · Proceso y uso de IA</h2>' +
+        '<h3>Modelos</h3>' + tabla(['Dónde', 'Modelo', 'Para qué'], [
+          ['En la app', 'GPT-OSS 120B (abierto, de OpenAI) vía Groq', 'Explicar cada tendencia y elegir qué mirar de una season, para la marca'],
+          ['En el análisis', 'Gemini', 'Clasificar color, prenda, silueta y largo de 2.430 looks'],
+          ['Para construir', 'Claude Code (agente de código)', 'Escribir el código, los scripts y los documentos a partir de lo que pedimos y revisamos']]) +
+        '<h3>Cómo manejamos el system prompt</h3><ul><li>Está versionado en ' + repo('netlify/functions/prompt.mjs') + ' y se puede ver acá abajo.</li>' +
+          '<li>La IA recibe solo datos ya calculados y el perfil recortado; el perfil es contexto, nunca instrucciones.</li>' +
+          '<li>El código revisa cada respuesta: cada frase dice de qué dato sale, sus números tienen que estar en ese dato y solo puede elegir tendencias con veredicto. Si algo falla, le pide que corrija una vez.</li></ul>' +
+        '<h3>Qué le pedimos a la IA y qué hicimos con eso</h3>' + tabla(['Qué le pedimos o propuso', 'Qué hicimos', 'Por qué'], [
+          ['Un diseño "editorial tipo revista" (Entrega 3)', 'Lo descartamos', 'Los profes marcaron que la metáfora era incorrecta y que el diseño no salía de bocetos propios'],
+          ['Pasar a código la alternativa "informe de temporada" del Figma', 'La rechazamos y elegimos "por año y season"', 'Se sentía rígida; la marca piensa por año y por verano o invierno'],
+          ['La versión "por año y season" tal cual', 'La corregimos con el informe LIVETREND como referencia', 'Estaba muy estructurada, "muy hecha por IA"'],
+          ['Que la IA eligiera cuánto apostar', 'Lo sacamos: lo decide una regla fija', 'Devolución de la Entrega 3: demasiada responsabilidad en la IA'],
+          ['Respuestas de la IA sin el aviso o con 7 frases', 'Corregimos con controles en el código', 'Cada frase tiene que tener su fuente y contar el aviso'],
+          ['La IA dijo "aceptación del mercado"', 'Lo corregimos en el prompt', 'Los datos son búsquedas, no ventas'],
+          ['Imágenes generadas y números de LIVETREND del Figma', 'Los reemplazamos por fotos de desfiles y nuestros veredictos', 'No se pueden verificar'],
+          ['Mostrar el cruce 2025 vs 2026 como prueba', 'Lo descartamos', 'No prueba la hipótesis: mide pasarela, no búsquedas'],
+          ['Mostrar en la página los aciertos de la prueba de la Entrega 2 (pasarela contra búsquedas de 2026)', 'Lo sacamos', 'No se podía rehacer desde lo crudo y medía 2026']]) +
+        '<p>Bocetos e iteraciones: Figma del grupo (' + '<a href="https://www.figma.com/design/asGRI8AJjCCl8UfmqiX8lA" target="_blank" rel="noopener">PALETA PREDICTIVA DISEÑO FINAL</a>), capturas en ' + repo('entrega3/capturas/entrega4', 'entrega3/capturas/entrega4') + ' y el detalle de la IA en ' + repo('entrega3/IA.md') + '.</p>' +
+        '<p id="ia-modelo" style="font-size:14px;color:var(--gris);margin-top:14px">Modelo: GPT-OSS 120B (abierto, de OpenAI), vía Groq</p>' +
+        '<div class="prompt"><button class="boton" id="ver-prompt">Ver qué le pedimos a la IA</button><div id="prompt-texto"></div></div></section>' +
+      '</div></div></div></div>';
   }
 
   // ---------- IA proactiva: se pide sola al abrir una ficha o una temporada ----------
@@ -1410,7 +1552,8 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     else if (sec === 't'){ var t = porId(p[1]); if (!t){ location.replace('#inicio'); return; } estado.temporada = t.temporada; html = pantallaFicha(t); sec = tipoS(t.temporada); }
     else if (sec === 'color'){ var c = COL.filter(function(x){ return slug(x.nombre) === p[1]; })[0]; if (!c){ location.replace('#season/' + estado.temporada + '/colores'); return; } html = pantallaColor(c); sec = tipoS(estado.temporada); }
     else if (sec === 'brief'){ var sb = TEMP[p[1]] && tieneVeredicto(p[1]) ? p[1] : 'FW2025'; estado.temporada = sb; html = pantallaBrief(sb); sec = tipoS(sb); }
-    else if (sec === 'metodo') html = pantallaMetodo();
+    else if (sec === 'metodo'){ location.replace('#racional'); return; }
+    else if (sec === 'racional') html = pantallaRacional();
     else if (sec === 'perfil') html = pantallaPerfil();
     else { location.replace('#inicio'); return; }
     home.classList.add('oculto'); app.classList.remove('oculto');
@@ -1428,7 +1571,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     conectar(h);
   }
   // Efecto de scroll: los bloques de cada pantalla aparecen al entrar en pantalla
-  var RV = '.lt-col, .brief-hoja, .lt-spread, .lt-vista, .lt-colores, .lt-franja, .lt-f-chica, .lt-sp-nums, .forma, .limites3 > div, .anio, .preferis, .ps, .tarjeta, .color, .s-sec > h2, .banda-cautela, .ia-bloque, .elegidas li, .stats > div, .advertencia, .vs, .curva, .datos-f, .pasos3 > div, .evid, .metodo-mas > section, .dos-paneles > div, .presencia, .banda-azul .wrap, .s-pie .wrap';
+  var RV = '.rac-sec, .lt-col, .brief-hoja, .lt-spread, .lt-vista, .lt-colores, .lt-franja, .lt-f-chica, .lt-sp-nums, .forma, .limites3 > div, .anio, .preferis, .ps, .tarjeta, .color, .s-sec > h2, .banda-cautela, .ia-bloque, .elegidas li, .stats > div, .advertencia, .vs, .curva, .datos-f, .pasos3 > div, .evid, .metodo-mas > section, .dos-paneles > div, .presencia, .banda-azul .wrap, .s-pie .wrap';
   var mira = window.IntersectionObserver && !matchMedia('(prefers-reduced-motion: reduce)').matches
     ? new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('visto'); mira.unobserve(e.target); } }); }, {rootMargin: '0px 0px -8% 0px'})
     : null;
