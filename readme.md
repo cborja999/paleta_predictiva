@@ -33,18 +33,35 @@ Definiciones, resultados ciclo por ciclo y límites: [`hipotesis.md`](hipotesis.
 
 ## La app
 
-Para cada temporada (primavera y otoño 2024 y 2025), la app muestra las tendencias que nombraron Who What Wear, CBC Life y Yahoo Lifestyle después de los desfiles, con fotos de dos desfiles y:
+**Cómo se usa:**
+1. **Perfil de la marca.** La marca arma su perfil al entrar: rubro (obligatorio), qué vende, público, precio y canal. Se guarda solo en su navegador.
+2. **Año y season.** Elige un año y una season, Summer o Winter. Son las primavera-verano y otoño-invierno del hemisferio norte, 2024 y 2025.
+3. **La season.** Cada season muestra:
+   - las 5 tendencias que más se movieron, cada una en una columna con el color de su foto;
+   - una página por tendencia, con fotos de dos desfiles;
+   - los colores de la pasarela.
+
+Para cada tendencia, que nombraron Who What Wear, CBC Life y Yahoo Lifestyle:
 
 - **Veredicto:** se queda o en riesgo. Son 77 tendencias: 45 con veredicto (23 se quedan y 22 en riesgo) y 32 sin señal clara.
 - **Confianza:** alta o media, según qué tan grande fue el movimiento.
 - **Cuánto apostar:** probar poco, moderada o fuerte, con una regla fija a partir del veredicto, la confianza y los avisos.
-- **El porqué:** cuánto se buscó el año después del desfile contra el resto de la temporada, con la curva de Google.
+- **El porqué:** cuánto se buscó el año después del desfile contra el resto de la season, con la curva de Google.
 
 Las tendencias de 2026 aparecen sin veredicto: desde mediados de 2025 Google Trends mide distinto y lo comprobamos con los datos.
 
+**Tu brief para llevar:** con el perfil, la app arma una lámina por season para la marca, con las tendencias agrupadas por cuánto apostar. Se descarga en PDF.
+
+**Racional:** una pantalla de la app explica el problema, la hipótesis, los datos (fuentes, diccionario de variables y trazabilidad), el modelo, el recorrido, el diseño, el alcance y el uso de IA.
+
 ### Dónde está la IA
 
-- **En la app:** al abrir una tendencia, la marca puede pedirle a una IA (GPT-OSS 120B, vía Groq) qué haría con ella según su rubro. **La IA no decide nada:** el veredicto, la confianza y la apuesta ya están calculados. Explica los datos frase por frase, cada frase dice de qué dato sale, y un control en el código revisa que no invente números. Lo único que agrega son ideas de producto, marcadas como sugerencia. Detalle: [`entrega3/IA.md`](entrega3/IA.md).
+- **En la app:** al abrir una season o una tendencia, la IA (GPT-OSS 120B, vía Groq) da sola su sugerencia para esa marca, según su perfil.
+  - En una tendencia, explica los datos frase por frase y cada frase dice de qué dato sale.
+  - En una season, elige de 3 a 5 tendencias para mirar, solo entre las que tienen veredicto.
+  - **La IA no decide nada:** el veredicto, la confianza y la apuesta ya están calculados, y un control en el código revisa que no invente números ni tendencias.
+  - Lo único que agrega son ideas y explicaciones, marcadas como sugerencia.
+  - Detalle: [`entrega3/IA.md`](entrega3/IA.md).
 - **En el análisis:** Gemini clasificó los 2.430 looks. Revisamos 40 a mano: coincidió en el color en 33 y en la prenda en 28, por eso la app usa solo el color.
 
 ## Por qué creerle a los números
@@ -156,7 +173,7 @@ Diccionario de columnas: `datasets/diccionario.md`.
 
 | Carpeta / archivo | Qué hay |
 |---|---|
-| `prototipo/` | La app (publicada en Netlify) y `armar_datos.py`, que arma sus datos |
+| `prototipo/` | La app (publicada en Netlify) y `armar_datos.py`, que arma sus datos. `FOTOS.md` y `FOTOS_FALTAN.md`: qué fotos usa y cuáles faltan |
 | `netlify/functions/` | La función de la IA y su prompt |
 | `trazabilidad/` | Verificación de cada número de la app desde lo crudo |
 | `hipotesis.md` | La hipótesis, definiciones, resultados y límites |
