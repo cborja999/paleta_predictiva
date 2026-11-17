@@ -1,4 +1,100 @@
-# Diseño: del brief al código
+# Diseño: del Figma al código (Entrega 4)
+
+App online: https://paleta-predictiva.netlify.app · Figma del grupo: https://www.figma.com/design/asGRI8AJjCCl8UfmqiX8lA (PALETA PREDICTIVA DISEÑO FINAL)
+
+## Del Figma al código
+
+### Qué leyó el agente del Figma
+
+El agente (Claude Code) leyó el Figma con el conector de Figma: las 14 pantallas (capturas y estructura de capas) y el código de referencia de algunos bloques. De ahí tomó:
+
+- **Tipografía:** Inter (negrita para títulos en mayúscula, medium para el texto).
+- **Colores:**
+
+  | Uso | Color |
+  |---|---|
+  | Tinta | `#111713` |
+  | Azul de botones y títulos | `#142638` |
+  | Pizarra de los paneles | `#3d444c` |
+  | Mostaza | `#b68a3a` |
+  | Tono de summer | `#faeee3` |
+  | Tono de winter | `#eaf2f8` |
+  | Chip "se queda" | `#ddeee5` |
+  | Chip "en riesgo" | `#f9e1e1` |
+  | Chip "sin señal" | `#e7eaf0` |
+  | Banda de cautela | `#fff2d8` |
+
+- **Estructura:** cabecera con menú, botones, chips de veredicto y bandas de cautela.
+- **Las dos alternativas del Figma:**
+  - **A, "informe de temporada"** (pantallas 01 a 07 y la variante compacta 02B): Resumen, Tendencias, ficha, Colores y Método.
+  - **B, "por año y season"** (A01 a A05, más la 08): Inicio → año → Summer o Winter → Prendas y Colores, con un tono por season.
+
+### Qué alternativa quedó y por qué
+
+1. Primero se pasó a código la **alternativa A**. En la prueba la sentimos rígida, y el grupo eligió la **B**: separar por año y season con el color de cada season se parece más a cómo una marca planifica (verano / invierno).
+2. Con la B andando, la vimos **muy sólida y estructurada, "muy hecha por IA"**. Hicimos una revisión tomando como referencia el informe **LIVETREND FW26 Outerwear**, que el grupo eligió por cómo combina foto, color y número:
+   - **Portada de cada season partida:** foto grande y bloque de color liso, con el nombre de la season en minúscula grande y flechas finas.
+   - **"Top de la season" en columnas altas:** las 5 que más se movieron, cada una con **el color sacado de su propia foto** (la página promedia la imagen y lo lleva a un tono tierra). El número va grande, encima del look.
+   - **Una doble página por tendencia:** foto alta con un **sello** ("SE QUEDA", "EN RIESGO", "CON CAUTELA"), foto chica, la curvita de búsquedas y los dos números grandes. Alterna de lado para no repetir la misma tarjeta.
+   - **Colores como franja:** cada color del ancho de cuánto se vio.
+   - **Ficha de la tendencia como una página del informe:** nombre enorme, foto alta con sello, foto chica con la curvita y los números grandes.
+
+### Qué se implementó con el agente y qué decidimos nosotros
+
+- **El código lo escribió el agente** (HTML, CSS y JavaScript en `prototipo/index.html`, la función de la IA en `netlify/functions/`), siempre a partir de lo que el grupo le pidió y revisó en cada paso.
+- **Decisiones del grupo:**
+  - qué alternativa usar;
+  - mantener el home;
+  - empezar por el perfil de la marca;
+  - que la IA sea proactiva;
+  - el orden de los años (2025, 2024, 2026);
+  - sacar la aclaración de las "sin señal clara";
+  - pasar el home a Inter;
+  - la revisión inspirada en LIVETREND.
+- **Lo que propuso la IA y descartamos:**
+  - la primera versión "editorial tipo revista" (Entrega 3);
+  - la alternativa tipo Wrapped;
+  - el diseño "informe de temporada" (alternativa A) pasado a código;
+  - una pantalla de Resumen con tabla.
+
+### Qué se decidió fuera del Figma
+
+- **El home:** se mantuvo del diseño anterior: el nombre con letras que se pintan del color de la pasarela y la franja de colores. Se pasó a Inter para que no sea la única pantalla con otra tipografía. El botón principal es "Creá el perfil de tu marca".
+- **Perfil de la marca:** pantalla corta, con solo el rubro obligatorio. Se guarda en el navegador y se edita o borra desde la cabecera. Si el perfil está vacío, la IA no se pide y la página invita a armarlo.
+- **IA proactiva y sus estados:** cargando (sin tapar los datos calculados), error, IA saturada (429) y sin perfil. Todos aclaran que los datos calculados siguen valiendo y ofrecen "Probar de nuevo". La respuesta queda guardada por perfil y hay un botón "Actualizar".
+- **Responsive:** todo funciona a 390 px. En celular, el top de la season se desliza de costado y las dobles páginas se apilan con la foto arriba.
+- **Accesibilidad y movimiento:** navegación por teclado (flechas en la ficha) y foco en el título al cambiar de pantalla. El efecto de aparición al hacer scroll se apaga si el sistema pide menos movimiento.
+- **Fotos que faltan y capturas:** si falta una foto, queda su lugar con el texto "Foto no disponible". `?sin_fotos=1` muestra la página sin fotos, para las capturas que van al repo público.
+
+### Diferencias entre el Figma y lo implementado
+
+| En el Figma | En la app | Por qué |
+|---|---|---|
+| Imágenes generadas ("imagen conceptual") en la alternativa B | Fotos de los desfiles que nombran los medios | Una foto generada no muestra la tendencia real. |
+| Números de visibilidad de LIVETREND (+82%, 550 looks) | Nuestros veredictos: búsquedas el año después del desfile contra su season | Esos números son de un informe pago que no está en el repo y no se pueden verificar. |
+| Paletas propuestas por season ("Coral", "Amarillo manteca") | La paleta medida en la pasarela, la misma en todas las seasons, y lo dice | No tenemos colores medidos por season; inventarlos sería un dato falso. |
+| Summer y Winter 2026 como ejemplo | El menú lleva a 2025; 2026 va sin veredicto | Desde mediados de 2025 Google mide distinto (`hipotesis.md`). |
+| Años 2026, 2025, 2024 | 2025, 2024, 2026 | Primero los que tienen veredicto. |
+| Grilla pareja de tarjetas | Top en columnas, dobles páginas alternadas, sellos | Revisión inspirada en LIVETREND, para que se sienta menos armado por una IA. |
+
+### Capturas (Entrega 4)
+
+`entrega3/capturas/entrega4/` (sin fotos, porque el repo es público; las mismas con fotos están en `entrega3/capturas/con_fotos/entrega4/`, solo en la compu de Borja):
+
+| Captura | Qué muestra |
+|---|---|
+| `01_home_escritorio`, `02_home_celular` | El home |
+| `03_perfil` | El perfil de la marca |
+| `04_inicio`, `05_por_anio` | La entrada por año y season |
+| `06_season_portada`, `07_season_completa`, `08_season_celular` | Una season: portada, top en columnas, dobles páginas y colores |
+| `09_ficha`, `10_ficha_celular` | La ficha de una tendencia |
+| `11_ia_sin_perfil`, `12_ia_temporada`, `13_ia_saturada` | Estados de la IA (12 y 13 con la respuesta simulada) |
+| `14_metodo` | Método |
+| `15_season_2026` | 2026, sin veredicto |
+
+---
+
+# Antes: Entrega 3
 
 ## Cómo se hizo
 

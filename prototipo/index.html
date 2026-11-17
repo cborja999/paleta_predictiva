@@ -6,7 +6,7 @@
 <title>Paleta predictiva</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* Colores y tipografía (Inter) del Figma (PALETA PREDICTIVA DISEÑO FINAL), también en el home. */
 :root{
@@ -415,6 +415,110 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 @media (max-width:700px){.ficha-tono .miga{margin:0 -16px;padding:14px 16px}}
 .color .info .boton{font-size:14px;padding:7px 10px}
 
+
+/* ---------- Prototipo LIVETREND: más orgánico ---------- */
+.lt{--c:#6b5a48}
+.tono-summer.lt{--panel:#b07a55} .tono-winter.lt{--panel:#3d444c}
+.lt-portada{display:grid;grid-template-columns:44% 1fr;min-height:min(78vh,640px);background:var(--panel)}
+.lt-portada-foto{position:relative;overflow:hidden;background:#2a2622}
+.lt-portada-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.pie-foto{position:absolute;left:10px;bottom:8px;font-size:11px;color:#fff;letter-spacing:.04em;text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.lt-panel{color:#fff;padding:22px clamp(20px,4vw,64px) 34px;display:flex;flex-direction:column}
+.lt-panel-top{display:flex;flex-wrap:wrap;gap:8px 40px;align-items:center;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.55)}
+.lt-panel-top .sel-anio{margin-left:auto}
+.lt-panel .sel-anio select{color:#fff;border-color:#fff;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0h10L5 6z' fill='%23fff'/%3E%3C/svg%3E");min-width:150px;font-size:14px;padding:6px 34px 6px 12px}
+.lt-panel .sel-anio option{color:var(--tinta)}
+.lt-titulo{font-size:clamp(64px,9vw,140px);font-weight:700;line-height:.86;letter-spacing:-.045em;text-transform:lowercase;margin:clamp(26px,5vh,56px) 0 18px}
+.lt-titulo:focus{outline:none}
+.lt-flechas{display:flex;gap:18px;color:#fff;margin-bottom:22px}
+.flecha-lt{width:clamp(40px,4vw,58px);height:auto}
+.lt-panel p{font-size:16px;line-height:1.5;max-width:52ch;font-weight:400}
+.lt-panel .lt-fuerte{font-weight:700;margin-top:14px}
+.lt-tabs{display:flex;gap:10px;margin-top:auto;padding-top:26px}
+.lt-tabs a{color:#fff;text-decoration:none;font-weight:600;font-size:15px;border:1px solid #fff;padding:9px 22px}
+.lt-tabs a:hover{background:#fff;color:var(--panel)}
+@media (max-width:860px){.lt-portada{grid-template-columns:1fr}.lt-portada-foto{height:56vh}.lt-titulo{font-size:clamp(64px,22vw,110px)}}
+.lt-h2{font-size:clamp(30px,3.6vw,46px);font-weight:300;text-transform:uppercase;letter-spacing:.01em;display:inline-block;padding-bottom:10px;border-bottom:1.5px solid var(--tinta);margin-top:6px}
+.lt-bajada{font-size:16px;margin-top:14px;max-width:80ch;font-weight:400}
+.lt .s-sec{margin-top:64px}
+/* Top: columnas altas con el color de su foto */
+.lt-cols{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px}
+.lt-col{position:relative;display:flex;flex-direction:column;background:var(--c);color:#fff;text-decoration:none;min-height:520px;padding:16px 14px 16px;overflow:hidden;transition:background .6s ease}
+.lt-col b{font-size:clamp(18px,1.6vw,24px);font-weight:700;text-transform:uppercase;line-height:1.05;position:relative;z-index:2}
+.lt-col .flecha-lt{width:44px;margin-top:14px;position:relative;z-index:2}
+.lt-col-foto{position:absolute;left:0;right:0;top:110px;bottom:110px;display:flex;justify-content:center}
+.lt-col-foto img{height:100%;width:auto;max-width:100%;object-fit:cover;object-position:top;mix-blend-mode:normal}
+.lt-col-num{position:relative;z-index:2;margin-top:auto;font-size:clamp(40px,4.2vw,64px);font-weight:700;letter-spacing:-.03em;line-height:1;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+.lt-col-pie{position:relative;z-index:2;font-size:12px;letter-spacing:.06em;text-transform:uppercase;border-top:1px solid rgba(255,255,255,.6);padding-top:8px;margin-top:10px}
+.lt-col-sello{position:relative;z-index:2;margin-top:8px}
+.lt-col-sello .sello{font-size:13px;padding:3px 8px}
+.lt-col:hover .lt-col-foto img{transform:scale(1.03);transition:transform .6s ease}
+@media (max-width:1100px){.lt-cols{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(220px,42%);overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-32px;padding-right:32px}.lt-col{scroll-snap-align:start}}
+@media (max-width:700px){.lt-cols{grid-auto-columns:72%;margin-right:-16px;padding-right:16px}.lt-col{min-height:460px}}
+/* Sellos, como los del LIVETREND */
+.sello{display:inline-block;color:#fff;font-size:clamp(16px,1.6vw,22px);font-weight:300;letter-spacing:.03em;text-transform:uppercase;padding:4px 12px;line-height:1.2;margin:0 6px 6px 0}
+.sello.queda{background:#7fa58c} .sello.riesgo{background:#e0907e} .sello.cautela{background:#e8bd5c} .sello.sin{background:#a9b1bd}
+/* Doble página por tendencia */
+.lt-spread{display:grid;grid-template-columns:1fr minmax(260px,38%);gap:clamp(20px,3vw,48px);padding:36px 0;border-bottom:1px solid var(--linea);align-items:stretch}
+.lt-spread.al-reves{grid-template-columns:minmax(260px,38%) 1fr}
+.lt-spread.al-reves .lt-sp-txt{order:2}
+.lt-sp-txt h3{font-size:clamp(30px,3.4vw,46px);font-weight:700;text-transform:uppercase;line-height:1.02;letter-spacing:-.01em;padding-bottom:12px;border-bottom:1.5px solid var(--tinta);display:inline-block}
+.lt-sp-txt h3 a{text-decoration:none}
+.lt-sp-txt h3 a:hover{text-decoration:underline;text-decoration-thickness:2px}
+.lt-sp-meta{font-size:14px;margin-top:12px;color:var(--gris);font-weight:400}
+.lt-sp-chica{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:end;margin-top:22px}
+.lt-sp-chica .f,.lt-f-chica .f{display:block;aspect-ratio:2/3;background:var(--crema);overflow:hidden}
+.lt-sp-chica img,.lt-f-chica img{width:100%;height:100%;object-fit:cover;object-position:top}
+.curvita{border:1px solid var(--linea);padding:10px 12px 8px;margin:0}
+.curvita svg{width:100%;height:auto;display:block}
+.curvita figcaption{font-size:11px;color:var(--gris);margin-top:6px;font-weight:400}
+.lt-sp-nums{display:grid;grid-template-columns:1fr 1fr;gap:16px 34px;margin-top:24px;max-width:560px}
+.lt-sp-nums b{display:block;font-size:clamp(46px,5vw,72px);font-weight:700;letter-spacing:-.035em;line-height:1;padding-bottom:8px;border-bottom:1px solid var(--tinta);font-variant-numeric:tabular-nums}
+.lt-sp-nums span{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-top:8px;text-align:right}
+.lt-sp-conf{font-size:14px;margin-top:16px;font-weight:400}
+.lt-ver{display:inline-block;margin-top:14px;font-weight:700;text-decoration:none;border-bottom:1.5px solid currentColor}
+.lt-sp-alta{position:relative;display:block;background:var(--crema);overflow:hidden;min-height:440px}
+.lt-sp-alta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .7s ease}
+.lt-sp-alta:hover img{transform:scale(1.025)}
+.lt-sellos{position:absolute;left:0;top:0;z-index:2;display:flex;flex-wrap:wrap}
+.lt-sellos .sello{margin:0 0 0 0}
+.lt-sp-alta.sin-foto::after,.lt-f-alta.sin-foto::after,.lt-portada-foto.sin-foto::after{content:"Foto no disponible";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#a9a59b;font-size:13px;text-transform:uppercase;letter-spacing:.1em}
+@media (max-width:760px){.lt-spread,.lt-spread.al-reves{grid-template-columns:1fr}.lt-spread.al-reves .lt-sp-txt{order:0}.lt-sp-alta{min-height:420px;order:-1}.lt-sp-chica{grid-template-columns:110px 1fr}}
+/* 2026: fotos de tamaños distintos, sin veredicto */
+.lt-vistas{columns:3 260px;column-gap:18px;margin-top:24px}
+.lt-vista{break-inside:avoid;margin:0 0 22px}
+.lt-vista .f{display:block;aspect-ratio:3/4;background:var(--crema);overflow:hidden;position:relative}
+.lt-vista.alta .f{aspect-ratio:2/3}
+.lt-vista img{width:100%;height:100%;object-fit:cover;object-position:top}
+.lt-vista .f.sin-foto::after{content:"Foto no disponible";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#a9a59b;font-size:12px;text-transform:uppercase}
+.lt-vista figcaption{padding-top:10px}
+.lt-vista figcaption b{display:block;font-size:20px;font-weight:700;text-transform:uppercase;line-height:1.1}
+.lt-vista figcaption span{display:block;font-size:13px;color:var(--gris);margin-top:4px;font-weight:400}
+/* Colores como franja */
+.lt-franja{display:flex;height:120px;margin-top:26px}
+.lt-franja span{display:block;height:100%}
+.lt-colores{list-style:none;padding:0;margin:18px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:6px 22px}
+.lt-colores a{display:grid;grid-template-columns:18px 1fr;gap:2px 10px;align-items:center;text-decoration:none;padding:8px 0;border-bottom:1px solid var(--linea)}
+.lt-colores i{width:18px;height:18px;grid-row:1/3;border:1px solid rgba(0,0,0,.08)}
+.lt-colores b{font-size:15px;font-weight:700}
+.lt-colores span{font-size:13px;color:var(--gris);font-weight:400}
+.lt-colores a:hover b{text-decoration:underline}
+/* Ficha estilo LIVETREND */
+.lt-ficha{display:grid;grid-template-columns:1fr minmax(300px,40%);gap:clamp(24px,3vw,56px);margin-top:26px}
+.lt-f-izq h1{font-size:clamp(46px,6vw,92px);font-weight:700;text-transform:uppercase;line-height:.95;letter-spacing:-.03em;padding-bottom:14px;border-bottom:1.5px solid var(--tinta);word-break:break-word}
+.lt-f-izq .donde{font-size:16px;margin-top:14px}
+.lt-f-chica{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:end;margin-top:26px}
+.lt-sp-nums.grande{margin-top:30px;max-width:none}
+.lt-sp-nums.grande b{font-size:clamp(56px,6.5vw,104px)}
+.lt-f-izq .f-frase{margin-top:22px}
+.lt-f-datos{display:flex;flex-wrap:wrap;gap:10px 36px;margin-top:20px;padding-top:14px;border-top:1px solid var(--linea)}
+.lt-f-datos dt{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gris)}
+.lt-f-datos dd{margin:2px 0 0;font-size:16px;font-weight:700}
+.lt-f-alta{position:relative;min-height:620px;background:var(--crema);overflow:hidden}
+.lt-f-alta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.lt-f-resto{max-width:880px}
+@media (max-width:1000px){.lt-ficha{grid-template-columns:1fr}.lt-f-alta{min-height:520px;order:-1}.lt-f-chica{grid-template-columns:120px 1fr}}
+
 /* ---------- Perfil de la marca ---------- */
 .perfil{display:grid;grid-template-columns:1fr 380px;gap:48px;margin-top:30px;align-items:start}
 @media (max-width:1000px){.perfil{grid-template-columns:1fr;gap:28px}}
@@ -567,7 +671,10 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     return '';
   }
   // Foto del desfile (si está en fotos/; si no, queda el lugar)
+  // ?sin_fotos=1: deja el lugar de la foto vacío (para capturas que van al repo público, sin fotos con derechos)
+  var SIN_FOTOS = /[?&]sin_fotos=1/.test(location.search);
   function img(t, n, alt){
+    if (SIN_FOTOS) return '<img alt="" src="data:," onerror="this.parentNode.classList.add(\'sin-foto\');this.remove()">';
     var d = (t.desfiles || [])[n - 1];
     return '<img src="fotos/' + t.id + '-' + n + '.jpg" alt="' + esc(alt || ('Look de pasarela: ' + t.nombre + (d ? ', ' + d.marca : ''))) + '" loading="lazy" onerror="this.parentNode.classList.add(\'sin-foto\');this.remove()">';
   }
@@ -699,6 +806,56 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       '</div></div>';
   }
 
+  // ---------- Prototipo LIVETREND: cada tendencia con su color, flechas, sellos y fotos de tamaños distintos ----------
+  // El color de cada tendencia sale de su foto: se promedia la imagen y se lleva a un tono tierra (como las columnas del LIVETREND)
+  var TONOS = {};
+  function tonoDe(im){
+    if (TONOS[im.src]) return TONOS[im.src];
+    try {
+      var c = document.createElement('canvas'), w = 24, h = 32; c.width = w; c.height = h;
+      var x = c.getContext('2d'); x.drawImage(im, 0, 0, w, h);
+      var px = x.getImageData(0, 0, w, h).data, r = 0, g = 0, b = 0, n = 0;
+      for (var i = 0; i < px.length; i += 4){
+        var m = (px[i] + px[i + 1] + px[i + 2]) / 3;
+        if (m > 232 || m < 18) continue;          // fuera blancos de fondo y negros puros
+        var sat = Math.max(px[i], px[i + 1], px[i + 2]) - Math.min(px[i], px[i + 1], px[i + 2]);
+        var peso = 1 + sat / 40;                   // pesa más lo que tiene color (la ropa) que lo gris (el fondo)
+        r += px[i] * peso; g += px[i + 1] * peso; b += px[i + 2] * peso; n += peso;
+      }
+      if (!n) return null;
+      r /= n * 255; g /= n * 255; b /= n * 255;
+      var mx = Math.max(r, g, b), mn = Math.min(r, g, b), l = (mx + mn) / 2, d = mx - mn, hh = 0, ss = d ? d / (1 - Math.abs(2 * l - 1)) : 0;
+      if (d) hh = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4;
+      hh = Math.round(hh * 60 + 360) % 360;
+      ss = Math.min(ss, 0.34); l = Math.max(0.27, Math.min(0.42, l * 0.85));   // tierra, apagado y oscuro para el texto blanco
+      return (TONOS[im.src] = 'hsl(' + hh + ' ' + Math.round(ss * 100) + '% ' + Math.round(l * 100) + '%)');
+    } catch (e){ return null; }
+  }
+  function pintarTonos(){
+    main.querySelectorAll('[data-tono] img').forEach(function(im){
+      var caja = im.closest('[data-tono]');
+      function aplicar(){ var t = tonoDe(im); if (t) caja.style.setProperty('--c', t); }
+      if (im.complete && im.naturalWidth) aplicar(); else im.addEventListener('load', aplicar, {once: true});
+    });
+  }
+  function flecha(t){
+    var sube = t.veredicto === 'queda';
+    return '<svg class="flecha-lt" viewBox="0 0 60 60" aria-hidden="true"><path d="' + (sube ? 'M8 52 L52 8 M22 8 H52 V38' : 'M8 8 L52 52 M52 22 V52 H22') + '" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>';
+  }
+  function sello(t){
+    var cl = t.veredicto === 'sin' ? 'sin' : t.veredicto;
+    return '<span class="sello ' + cl + '">' + (t.veredicto === 'queda' ? 'Se queda' : t.veredicto === 'riesgo' ? 'En riesgo' : 'Sin veredicto') + '</span>' + (cuidado(t) ? '<span class="sello cautela">Con cautela</span>' : '');
+  }
+  // La curvita del LIVETREND: los 24 meses, con el desfile marcado
+  function curvita(t){
+    var s = t.serie.slice(-24), W = 260, H = 70, v = s.filter(function(x){ return x != null; }), mx = Math.max.apply(null, v) || 1;
+    var d = ''; s.forEach(function(y, i){ if (y == null) return; d += (d ? 'L' : 'M') + (i / 23 * W).toFixed(1) + ' ' + (H - y / mx * H).toFixed(1); });
+    return '<figure class="curvita"><svg viewBox="-2 -4 ' + (W + 4) + ' ' + (H + 8) + '" role="img" aria-label="Búsquedas de ' + esc(t.termino) + ', 12 meses antes y 12 después del desfile">' +
+      '<line x1="' + (11.5 / 23 * W).toFixed(1) + '" x2="' + (11.5 / 23 * W).toFixed(1) + '" y1="0" y2="' + H + '" stroke="#b9b8b3" stroke-dasharray="2 3"/>' +
+      '<path d="' + d + '" fill="none" stroke="#8a6a3a" stroke-width="1.6"/></svg><figcaption>' + esc(t.termino) + ' · antes y después del desfile</figcaption></figure>';
+  }
+  function pie(t, n){ var m = marcaDesfile(t, n); return m ? '<span class="pie-foto">' + esc(m) + ' · ' + nomS(t.temporada) + '</span>' : ''; }
+
   // A04 / A05 · Una season: prendas, colores e IA, con el tono de verano o de invierno
   function tarjeta(t){
     var pie = pieCautela(t);
@@ -728,25 +885,56 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
   function pantallaSeason(s){
     var k = tipoS(s), anio = s.slice(2), otra = (k === 'summer' ? 'FW' : 'SS') + anio, conV = tieneVeredicto(s);
     var anios = ANIOS.map(function(a){ return [s.slice(0, 2) + a, 'Año: ' + a]; });
-    var l = conV ? visibles() : vistasDe(s);
-    return '<div class="pantalla tono-' + k + '">' +
-      '<section class="s-cab"><div class="wrap"><p class="kicker">Inicio / seasons / ' + (k === 'summer' ? 'summer' : 'winter') + ' / ' + anio + '</p>' +
-        '<div class="s-titulo"><h1 class="titulo titulo-foco" tabindex="-1">' + nomS(s) + '</h1>' +
-        '<label class="sel-anio"><span class="sr">Año</span><select id="sel-anio">' + opciones(anios, s) + '</select></label></div>' +
-        '<p class="bajada">' + (k === 'summer' ? 'Explorá las prendas y los colores de esta edición de verano.' : 'Explorá las prendas y los colores de esta edición de invierno.') + '</p>' +
-        '<div class="s-tabs"><a class="boton" href="#season/' + s + '" data-ir-sec="s-prendas">Prendas</a><a class="boton claro" href="#season/' + s + '/colores" data-ir-sec="s-colores">Colores</a></div>' +
-        '<p class="chica">' + largoS(s) + ' · desfiles de ' + mesDesfile(s) + (conV ? ' · búsquedas en Google del año siguiente' : ' · sin veredicto: desde mediados de 2025 Google mide distinto') + '.</p></div></section>' +
+    var l = conV ? visibles() : vistasDe(s), tapa = tapaDe(s);
+    var q = l.filter(function(t){ return t.veredicto === 'queda'; }).length, r = l.filter(function(t){ return t.veredicto === 'riesgo'; }).length;
+    var texto = conV
+      ? 'Desfiles de ' + mesDesfile(s) + ' (' + largoS(s).toLowerCase() + '). Los medios nombraron ' + (l.length + sinDe(s).length) + ' tendencias; ' + l.length + ' se movieron lo suficiente para tener veredicto: ' + q + ' se quedan y ' + r + ' están en riesgo.'
+      : 'Desfiles de ' + mesDesfile(s) + ' (' + largoS(s).toLowerCase() + '). Los medios nombraron ' + l.length + ' tendencias. Van sin veredicto: desde mediados de 2025 Google mide distinto.';
+    var top = conV ? l.slice().sort(function(a, b){ return Math.abs(b.g1) - Math.abs(a.g1); }).slice(0, 5) : [];
+    return '<div class="pantalla tono-' + k + ' lt">' +
+      // Portada partida: la foto de un lado, el color liso del otro
+      '<section class="lt-portada"><div class="lt-portada-foto">' + (tapa ? img(tapa, conV ? 2 : 1) + pie(tapa, conV ? 2 : 1) : '') + '</div>' +
+        '<div class="lt-panel"><div class="lt-panel-top"><span>' + nomS(s) + '</span><span>Fashion weeks</span><span>Prendas y colores</span>' +
+          '<label class="sel-anio"><span class="sr">Año</span><select id="sel-anio">' + opciones(anios, s) + '</select></label></div>' +
+          '<h1 class="lt-titulo titulo-foco" tabindex="-1" data-titulo="' + nomS(s) + '"><span class="sr">' + nomS(s) + '</span><span aria-hidden="true">' + (k === 'summer' ? 'summer' : 'winter') + '<br>' + anio + '</span></h1>' +
+          '<div class="lt-flechas" aria-hidden="true">' + (conV ? flecha({veredicto: 'queda'}) + flecha({veredicto: q >= r ? 'queda' : 'riesgo'}) : '') + '</div>' +
+          '<p>' + texto + '</p>' +
+          (conV ? '<p class="lt-fuerte">Las búsquedas de toda la season ' + (deTemporada(s)[0].temporada_pct >= 0 ? 'subieron ' : 'bajaron ') + pct(deTemporada(s)[0].temporada_pct) + ' el año después del desfile. Cada tendencia se compara contra eso.</p>' : '') +
+          '<div class="lt-tabs"><a href="#season/' + s + '" data-ir-sec="s-prendas">Prendas</a><a href="#season/' + s + '/colores" data-ir-sec="s-colores">Colores</a></div></div></section>' +
       '<div class="wrap">' +
-        (conV ? bloqueIATemporada(s) + bandaCautela(s) : '<div class="banda-cautela"><b class="n">2026</b><div><strong>Solo observación, sin veredicto</strong><span>Desde mediados de 2025 Google Trends mide distinto y las búsquedas de 2026 no se pueden comparar con años anteriores. Por eso estas tendencias van sin veredicto, y la IA no elige entre ellas.</span></div></div>') +
-        '<section id="s-prendas" class="s-sec"><h2 class="subt">01 / Prendas</h2>' +
-          '<p class="bajada" style="margin-top:8px">' + (conV ? l.length + ' tendencias con veredicto. Búsquedas en Google del año después del desfile, comparadas con el resto de la season. No son ventas.' : l.length + ' tendencias que nombraron los medios después de los desfiles. Sin veredicto.') + '</p>' +
-          (conV ? (rubroPerfil() ? '<p class="leyenda-fuente" style="color:var(--tinta)"><span class="chip chico mio">Tu rubro</span> Primero las de ' + nombreRubro(rubroPerfil()).toLowerCase() + ', según tu perfil. <a class="link" href="#perfil">Cambiar</a></p>' : '<p class="leyenda-fuente"><a class="link" href="#perfil">Creá tu perfil</a> y las de tu rubro aparecen primero.</p>') +
-            '<p class="leyenda-fuente"><span><span class="tag">Calculado</span>veredictos, números y curvas: salen de los datos con reglas fijas</span><span><span class="tag ia">Inferencia de la IA</span>sugerencias para tu marca, siempre aparte</span></p>' : '') +
-          '<div class="grilla">' + l.map(conV ? tarjeta : tarjetaVista).join('') + '</div>' +
-          (conV ? '<p class="leyenda-senal">SE QUEDA: supera a su season · EN RIESGO: queda por debajo · SIN SEÑAL: no alcanza el umbral de ±10% (no se muestran).</p>' : '') + '</section>' +
-        '<section id="s-colores" class="s-sec"><h2 class="subt">02 / Colores</h2>' +
-          '<p class="bajada" style="margin-top:8px">Presencia de cada familia de color en la pasarela, medida con Gemini en looks de Vogue Runway de ' + temps(CM.recientes).replace(/, .* y /, ' a ') + ' y comparada con ' + temps(CM.previas) + '. <b>Es la misma paleta en todas las seasons:</b> no tenemos colores medidos para ' + nomS(s) + '. Presencia no es permanencia.</p>' +
-          paletaSeason() + '<p class="nota-colores">Gemini acertó el color en 33 de 40 fotos revisadas a mano. pp = puntos porcentuales frente al período previo.</p></section>' +
+        (conV ? bloqueIATemporada(s) + bandaCautela(s) : '') +
+        // Top de la season: columnas altas, cada una con el color de su foto
+        (top.length ? '<section class="s-sec" id="s-prendas"><h2 class="lt-h2">Top de la season</h2><p class="lt-bajada">Las cinco que más se movieron contra su season, para un lado o para el otro.</p>' +
+          '<div class="lt-cols">' + top.map(function(t){
+            return '<a class="lt-col" href="#t/' + t.id + '" data-tono><b>' + t.nombre + '</b>' + flecha(t) +
+              '<span class="lt-col-foto">' + img(t, 1) + '</span><span class="lt-col-num">' + pct(t.bruto_pct) + '</span>' +
+              '<span class="lt-col-pie">búsquedas · season ' + pct(t.temporada_pct) + '</span><span class="lt-col-sello">' + sello(t) + '</span></a>';
+          }).join('') + '</div></section>' : '') +
+        // Todas: una doble página por tendencia, con fotos de tamaños distintos, alternando el lado
+        '<section class="s-sec"' + (top.length ? '' : ' id="s-prendas"') + '><h2 class="lt-h2">' + (conV ? 'Todas las tendencias' : 'Lo que se vio') + '</h2>' +
+          (conV ? (rubroPerfil() ? '<p class="lt-bajada"><span class="chip chico mio">Tu rubro</span> Primero las de ' + nombreRubro(rubroPerfil()).toLowerCase() + ', según tu perfil. <a class="link" href="#perfil">Cambiar</a></p>' : '<p class="lt-bajada"><a class="link" href="#perfil">Creá tu perfil</a> y las de tu rubro aparecen primero.</p>') +
+            '<p class="leyenda-fuente"><span><span class="tag">Calculado</span>veredictos, números y curvas: salen de los datos con reglas fijas</span><span><span class="tag ia">Inferencia de la IA</span>sugerencias para tu marca, siempre aparte</span></p>' :
+            '<p class="lt-bajada">Sin veredicto: es lo que nombraron los medios. La IA no elige entre estas.</p>') +
+          (conV ? l.map(function(t, i){
+            return '<article class="lt-spread' + (i % 2 ? ' al-reves' : '') + '">' +
+              '<div class="lt-sp-txt"><h3><a href="#t/' + t.id + '">' + t.nombre + '</a></h3>' +
+                '<p class="lt-sp-meta">' + (RUBRO_NOM[t.rubro] || '') + (deMiRubro(t) ? ' · <b>tu rubro</b>' : '') + ' · la nombró ' + t.medio + '</p>' +
+                '<div class="lt-sp-chica"><span class="f">' + img(t, 2) + '</span>' + curvita(t) + '</div>' +
+                '<div class="lt-sp-nums"><div><b>' + pct(t.bruto_pct) + '</b><span>búsquedas</span></div><div><b class="' + (t.veredicto === 'riesgo' ? 'riesgo-num' : '') + '">' + pct(t.cambio_pct) + '</b><span>contra su season</span></div></div>' +
+                '<p class="lt-sp-conf">Confianza ' + t.confianza.toLowerCase() + ' · apuesta ' + APUESTA[t.apuesta].toLowerCase() + (pieCautela(t) ? ' · ' + pieCautela(t).toLowerCase() : '') + '</p>' +
+                '<a class="lt-ver" href="#t/' + t.id + '">Ver el análisis →</a></div>' +
+              '<a class="lt-sp-alta" href="#t/' + t.id + '" aria-label="' + esc(t.nombre) + ': ver el análisis">' + img(t, 1) + '<span class="lt-sellos">' + sello(t) + '</span>' + pie(t, 1) + '</a></article>';
+          }).join('') : '<div class="lt-vistas">' + l.map(function(v, i){
+            return '<figure class="lt-vista' + (i % 3 === 1 ? ' alta' : '') + '"><span class="f">' + img(v, 1) + '</span><figcaption><b>' + v.nombre + '</b><span>La nombró <a href="' + v.url_fuente + '" target="_blank" rel="noopener">' + v.medio + '</a></span></figcaption></figure>';
+          }).join('') + '</div>') +
+          (conV ? '<p class="leyenda-senal">↗ SE QUEDA: supera a su season · ↘ EN RIESGO: queda por debajo · las que no llegan a ±10% quedan sin señal clara.</p>' : '') + '</section>' +
+        // Colores: la franja de la pasarela, cada color del ancho de cuánto se vio
+        '<section id="s-colores" class="s-sec"><h2 class="lt-h2">Colores de la pasarela</h2>' +
+          '<p class="lt-bajada">Cuánto se vio cada color en looks de Vogue Runway de ' + temps(CM.recientes).replace(/, .* y /, ' a ') + ', medido con Gemini (acertó el color en 33 de 40 fotos revisadas a mano). <b>Es la misma paleta en todas las seasons:</b> no tenemos colores medidos para ' + nomS(s) + '. Presencia no es permanencia.</p>' +
+          '<div class="lt-franja" role="img" aria-label="Los colores de la pasarela, cada uno del ancho de cuánto se vio">' + COL.map(function(c){ return '<span style="flex:' + c.reciente + ';background:' + c.hex + '"></span>'; }).join('') + '</div>' +
+          '<ul class="lt-colores">' + COL.map(function(c){
+            return '<li><a href="#color/' + slug(c.nombre) + '"><i style="background:' + c.hex + '"></i><b>' + c.nombre + '</b><span>' + num(c.reciente, 1) + '% · ' + pp(c.cambio_pts) + '</span></a></li>';
+          }).join('') + '</ul></section>' +
       '</div>' +
       '<section class="s-pie ' + k + '"><div class="wrap"><h2 class="subt">' + (k === 'summer' ? 'El año y la season se mantienen al explorar' : 'Misma season, dos lecturas distintas') + '</h2>' +
         '<p>' + (k === 'summer' ? 'Prendas y Colores pertenecen a ' + nomS(s) + '. Cambiar de apartado no mezcla períodos ni seasons.' : 'Las prendas muestran búsquedas en Google; los colores, presencia medida en la pasarela. Son indicadores distintos.') + '</p>' +
@@ -795,23 +983,19 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       ? 'Ajuste relativo: (' + num(fa, 2) + ' ÷ ' + num(fb, 2) + ' − 1) × 100 ≈ ' + pct(t.cambio_pct) + '. No es una resta de puntos.'
       : 'Ajuste relativo: ' + pct(t.cambio_pct) + ' (cuánto más o menos se buscó que si se hubiera movido como la temporada).';
     var aviso = avisoTexto(t);
-    return '<div class="pantalla tono-' + tipoS(t.temporada) + ' ficha-tono"><div class="wrap">' +
+    return '<div class="pantalla tono-' + tipoS(t.temporada) + ' ficha-tono lt"><div class="wrap">' +
       '<nav class="miga" aria-label="Ubicación"><a href="#season/' + t.temporada + '">← Inicio / ' + nomS(t.temporada) + ' / Prendas / ' + (RUBRO_NOM[t.rubro] || '') + '</a>' +
         '<span class="pasar"><a href="#t/' + ant.id + '" aria-label="Tendencia anterior: ' + esc(ant.nombre) + '">← Anterior</a><span>' + (i + 1) + ' de ' + l.length + '</span><a href="#t/' + sig.id + '" aria-label="Tendencia siguiente: ' + esc(sig.nombre) + '">Siguiente →</a></span></nav>' +
-      '<div class="ficha-t"><div>' +
-        '<h1 class="titulo-foco" tabindex="-1">' + t.nombre + '</h1>' +
-        '<p class="donde">' + nomS(t.temporada) + ' · ' + (RUBRO_NOM[t.rubro] || '') + '<br>Desfiles de ' + mes(t.mes_desfile) + '</p>' +
-        '<div class="fotos-f"><div class="f">' + img(t, 1) + '</div><div class="f">' + img(t, 2) + '</div></div>' +
-        '<p class="cred-f">' + lista([marcaDesfile(t, 1), marcaDesfile(t, 2)].filter(Boolean)) + ' · ' + TEMP[t.temporada] + '<br>Fuente de la tendencia: <a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a></p>' +
-      '</div><div>' +
-        '<div class="chips"><span class="chip ' + t.veredicto + '">' + ETIQ[t.veredicto] + '</span>' + (cuidado(t) ? '<span class="chip cautela">Cautela temporal</span>' : '') + '<span class="tag" style="align-self:center">Calculado</span></div>' +
-        '<h2 class="f-titular">' + t.nombre + ': ' + pct(t.bruto_pct) + ' en búsquedas</h2>' +
-        '<p class="f-frase">' + frase + '</p>' +
-        '<div class="stats">' +
-          '<div><b' + (t.bruto_pct < 0 ? ' class="riesgo-num"' : '') + '>' + pct(t.bruto_pct) + '</b><strong>Búsquedas de «' + esc(t.termino) + '»</strong><span>Cambio interanual bruto</span></div>' +
-          '<div><b' + (sube ? '' : ' class="riesgo-num"') + '>' + pct(t.cambio_pct) + '</b><strong>' + (sube ? 'Por encima' : 'Por debajo') + ' de su temporada</strong><span>Cambio relativo ajustado</span></div>' +
-          '<div><b>' + t.confianza + '</b><strong>Confianza del resultado</strong><span>Apuesta: ' + APUESTA[t.apuesta].toLowerCase() + '</span></div>' +
+      '<div class="lt-ficha">' +
+        '<div class="lt-f-izq"><h1 class="titulo-foco" tabindex="-1">' + t.nombre + '</h1>' +
+          '<p class="donde">' + nomS(t.temporada) + ' · ' + (RUBRO_NOM[t.rubro] || '') + ' · desfiles de ' + mes(t.mes_desfile) + '</p>' +
+          '<div class="lt-f-chica"><span class="f">' + img(t, 2) + '</span>' + curvita(t) + '</div>' +
+          '<div class="lt-sp-nums grande"><div><b>' + pct(t.bruto_pct) + '</b><span>búsquedas de «' + esc(t.termino) + '»</span></div><div><b class="' + (sube ? '' : 'riesgo-num') + '">' + pct(t.cambio_pct) + '</b><span>' + (sube ? 'por encima' : 'por debajo') + ' de su season</span></div></div>' +
+          '<p class="f-frase">' + frase + '</p>' +
+          '<dl class="lt-f-datos"><div><dt>Confianza</dt><dd>' + t.confianza + '</dd></div><div><dt>Cuánto apostar</dt><dd>' + APUESTA[t.apuesta] + '</dd></div><div><dt>Fuente</dt><dd><a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a></dd></div><div><dd><span class="tag">Calculado</span></dd></div></dl>' +
         '</div>' +
+        '<div class="lt-f-alta">' + img(t, 1) + '<span class="lt-sellos">' + sello(t) + '</span>' + pie(t, 1) + '</div>' +
+      '</div><div class="lt-f-resto">' +
         (aviso ? '<div class="advertencia" role="note"><p>Advertencia · comparabilidad</p><p>' + esc(aviso) + '</p></div>' : '') +
         '<section class="vs"><div class="bloque-cab"><div><h2 class="subt">Búsquedas: ' + t.nombre + ' vs. temporada</h2><p class="chica">Año posterior al desfile vs. año anterior · búsquedas globales</p></div></div>' +
           barrasVs(t.nombre, t.bruto_pct, 'Su season', t.temporada_pct, sube ? 'var(--oscuro)' : 'var(--r-num)') +
@@ -822,7 +1006,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
           '<div><dt>La nombró</dt><dd><a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a>, como “' + esc(t.tendencia_fuente) + '”</dd></div>' +
           '<div><dt>Cuánto apostar</dt><dd>' + APUESTA[t.apuesta] + '</dd></div>' +
         '</dl>' +
-      '</div></div>' + bloqueIA(t) + '</div></div>';
+      '</div>' + bloqueIA(t) + '</div></div>';
   }
 
   // ---------- 04 Colores y 07 ficha de color ----------
@@ -949,7 +1133,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
   }
   function pieIA(c, j){
     return (j.problemas && j.problemas.length ? '<p class="ia-control">El control automático marcó: ' + esc(j.problemas.join('; ')) + '. Tomalo con más cuidado.</p>' : '') +
-      '<p class="ia-meta">' + (j.simulada ? '<b>Respuesta simulada para probar la página.</b> ' : '') + 'Sugerencia para tu perfil · ' + fecha(c.fecha) + ' · Modelo: ' + esc(j.modelo) + ' · Groq</p>' +
+      '<p class="ia-meta">' + (j.simulada ? '<b>Respuesta simulada para probar la página.</b> ' : '') + 'Sugerencia para tu perfil · ' + fecha(c.fecha) + ' · Modelo: ' + esc(j.modelo) + (j.simulada ? '' : ' · Groq') + '</p>' +
       '<details class="envio"><summary>Qué le mandamos a la IA</summary><pre>' + esc(JSON.stringify(j.contexto, null, 2)) + '</pre></details>';
   }
   function verFicha(c){
@@ -1099,7 +1283,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     if (activo && menu.scrollWidth > menu.clientWidth) menu.scrollLeft = activo.offsetLeft - (menu.clientWidth - activo.offsetWidth) / 2;
     pintarCabecera(); if (sec === 'perfil') $('cab-der').setAttribute('aria-current', 'page'); else $('cab-der').removeAttribute('aria-current');
     var foco = main.querySelector('.titulo-foco');
-    document.title = (foco ? foco.innerText.replace(/\s+/g, ' ').trim() + ' · ' : '') + 'Paleta predictiva';
+    document.title = (foco ? (foco.dataset.titulo || foco.innerText.replace(/\s+/g, ' ').trim()) + ' · ' : '') + 'Paleta predictiva';
     window.scrollTo(0, 0);
     if (foco && ir.yaEntro) foco.focus({preventScroll:true});
     if (bajarA && $(bajarA)) $(bajarA).scrollIntoView();
@@ -1107,7 +1291,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     conectar(h);
   }
   // Efecto de scroll: los bloques de cada pantalla aparecen al entrar en pantalla
-  var RV = '.forma, .limites3 > div, .anio, .preferis, .ps, .tarjeta, .color, .s-sec > h2, .banda-cautela, .ia-bloque, .elegidas li, .stats > div, .advertencia, .vs, .curva, .datos-f, .pasos3 > div, .evid, .metodo-mas > section, .dos-paneles > div, .presencia, .banda-azul .wrap, .s-pie .wrap';
+  var RV = '.lt-col, .lt-spread, .lt-vista, .lt-colores, .lt-franja, .lt-f-chica, .lt-sp-nums, .forma, .limites3 > div, .anio, .preferis, .ps, .tarjeta, .color, .s-sec > h2, .banda-cautela, .ia-bloque, .elegidas li, .stats > div, .advertencia, .vs, .curva, .datos-f, .pasos3 > div, .evid, .metodo-mas > section, .dos-paneles > div, .presencia, .banda-azul .wrap, .s-pie .wrap';
   var mira = window.IntersectionObserver && !matchMedia('(prefers-reduced-motion: reduce)').matches
     ? new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('visto'); mira.unobserve(e.target); } }); }, {rootMargin: '0px 0px -8% 0px'})
     : null;
@@ -1127,6 +1311,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
   // Lo que cada pantalla necesita después de pintarse
   function conectar(h){
     revelar();
+    pintarTonos();
     conectarPerfil();
     var sa = $('sel-anio'); if (sa) sa.addEventListener('change', function(){ location.hash = '#season/' + sa.value; });
     main.querySelectorAll('[data-ir-sec]').forEach(function(a){ a.addEventListener('click', function(e){ var d = $(a.dataset.irSec); if (d){ e.preventDefault(); d.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); history.replaceState(null, '', a.getAttribute('href')); } }); });
