@@ -330,7 +330,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 .presencia .pista i{position:absolute;left:0;top:0;bottom:0}
 .presencia .chica{font-size:14px;margin-top:16px}
 
-/* ---------- Alternativa "por año y season" (A01 a A05) ---------- */
+/* ---------- Alternativa "por año y temporada" (A01 a A05) ---------- */
 :root{--azul-s:#142638; --summer:#faeee3; --winter:#eaf2f8; --borde-s:#cfd5da; --crema-ini:#f7f3ec}
 .boton.claro{background:#fff;color:var(--azul-s);border-color:var(--azul-s)}
 .boton.claro:hover{background:#f3f5f7}
@@ -391,7 +391,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 .ps-dentro{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
 .ps-dentro a{background:#fff;padding:16px 14px;font-size:18px;font-weight:700;text-decoration:none}
 .ps-dentro a:hover{text-decoration:underline}
-/* Tono de la season: verano durazno, invierno celeste */
+/* Tono de la temporada: verano durazno, invierno celeste */
 .tono-summer{--tono:var(--summer)} .tono-winter{--tono:var(--winter)}
 .s-cab{background:var(--tono)}
 .s-cab .wrap{padding-top:30px;padding-bottom:26px;color:var(--azul-s)}
@@ -717,7 +717,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       <nav class="menu" aria-label="Secciones">
         <a href="#inicio" data-sec="inicio">Inicio</a>
         <a href="#anio" data-sec="anio">Por año</a>
-        <a href="#por-season" data-sec="por-season">Por season</a>
+        <a href="#por-season" data-sec="por-season">Por temporada</a>
         <a href="#season/SS2025" data-sec="summer">Summer</a>
         <a href="#season/FW2025" data-sec="winter">Winter</a>
         <a href="#racional" data-sec="racional">Racional</a>
@@ -821,7 +821,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       : '<a class="boton-home" href="#perfil">Creá el perfil de tu marca</a><a class="caps link-ant" href="#inicio">Ver sin perfil</a>';
   }
 
-  // ---------- Alternativa "por año y season" del Figma (A01 a A05) ----------
+  // ---------- Alternativa "por año y temporada" del Figma (A01 a A05) ----------
   // Summer = primavera-verano (SS) y Winter = otoño-invierno (FW) del hemisferio norte, como las llama el Figma.
   // Primero los años con veredicto (2025 y 2024); 2026 va al final porque es solo observación
   var CON_VEREDICTO = ['FW2025', 'SS2025', 'FW2024', 'SS2024'], ANIOS = ['2025', '2024', '2026'];
@@ -839,7 +839,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
                 : 'Se apoyan en un pico de un solo mes. El veredicto no cambia, pero conviene mirar la curva.';
     return '<div class="banda-cautela"><b class="n">' + (n || a) + ' de ' + v.length + '</b><div><strong>' + (n ? 'Lecturas sensibles al período' : 'Lecturas con un pico de un mes') + '</strong><span>' + txt + '</span></div></div>';
   }
-  // Foto de portada de una season: la primera tendencia que se queda con confianza alta
+  // Foto de portada de una temporada: la primera tendencia que se queda con confianza alta
   function tapaDe(s){ var v = deTemporada(s); return v.filter(function(t){ return t.veredicto === 'queda' && t.confianza === 'Alta'; })[0] || v[0] || vistasDe(s)[0]; }
   function cuentaS(s){
     if (!tieneVeredicto(s)) return vistasDe(s).length + ' tendencias vistas · sin veredicto';
@@ -857,24 +857,24 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     var su = tapaDe('SS2025'), wi = tapaDe('FW2025'), p = perfil();
     return '<div class="pantalla">' +
       '<section class="ini-hero"><div class="wrap ini-grid"><div><p class="kicker">Inteligencia de moda / para marcas argentinas</p>' +
-        '<h1 class="titulo titulo-foco" tabindex="-1">Análisis de moda por año y season</h1>' +
-        '<p class="bajada">Reunimos las tendencias de las fashion weeks y lo que pasó con sus búsquedas en Google para que explores prendas y colores' + (p ? ' pensando en ' + esc(p.nombre || 'tu marca') : '') + '. Elegí un año y una season, revisá la evidencia y entendé sus límites antes de decidir.</p>' +
-        '<div class="ini-botones"><a class="boton flecha" href="#anio">Explorar por año </a><a class="boton claro flecha" href="#por-season">Explorar por season </a></div>' +
+        '<h1 class="titulo titulo-foco" tabindex="-1">Análisis de moda por año y temporada</h1>' +
+        '<p class="bajada">Reunimos las tendencias de las fashion weeks y lo que pasó con sus búsquedas en Google para que explores prendas y colores' + (p ? ' pensando en ' + esc(p.nombre || 'tu marca') : '') + '. Elegí un año y una temporada, revisá la evidencia y entendé sus límites antes de decidir.</p>' +
+        '<div class="ini-botones"><a class="boton flecha" href="#anio">Explorar por año </a><a class="boton claro flecha" href="#por-season">Explorar por temporada </a></div>' +
         '<ol class="ini-pasos"><li><b>01</b> Elegí el año</li><li><b>02</b> Summer o Winter</li><li><b>03</b> Prendas y Colores</li></ol>' +
         '<p class="chica">Analizamos señales; no garantizamos ventas.</p></div>' +
         '<div class="ini-fotos"><a href="#season/SS2025" class="ini-foto"><span class="f">' + img(su, 1) + '</span><span class="etq-f">Summer / verano · ' + esc(marcaDesfile(su, 1)) + '</span></a>' +
           '<a href="#season/FW2025" class="ini-foto alto"><span class="f">' + img(wi, 2) + '</span><span class="etq-f">Winter / invierno · ' + esc(marcaDesfile(wi, 2)) + '</span></a></div></div></section>' +
       '<div class="wrap">' +
-        '<h2 class="subt sec-t">Dos formas de explorar</h2><p class="bajada" style="margin-top:8px">El resultado es el mismo: una season de un año concreto, con Prendas y Colores.</p>' +
+        '<h2 class="subt sec-t">Dos formas de explorar</h2><p class="bajada" style="margin-top:8px">El resultado es el mismo: una temporada de un año concreto, con Prendas y Colores.</p>' +
         '<div class="dos-formas"><div class="forma winter-suave"><p class="kicker">01 / Por año</p><h3>Primero elegí el año</h3><p>Después, Summer o Winter. Cada edición reúne sus prendas y sus colores.</p>' +
-          '<div class="botonera">' + ANIOS.map(function(a, i){ return '<a class="boton' + (i ? ' claro' : '') + '" href="#anio/' + a + '">' + a + '</a>'; }).join('') + '</div><p class="chica">Año → Season → Prendas y Colores</p></div>' +
-          '<div class="forma summer-suave"><p class="kicker">02 / Por season</p><h3>Primero elegí la season</h3><p>Después, el año. Compará distintas ediciones de verano o invierno.</p>' +
-          '<div class="botonera"><a class="boton flecha" href="#por-season">Summer </a><a class="boton claro flecha" href="#por-season">Winter </a></div><p class="chica">Season → Año → Prendas y Colores</p></div></div>' +
-        '<h2 class="subt sec-t">Dentro de cada season</h2>' +
-        '<div class="dos-formas"><div class="forma gris-suave"><h3>Prendas</h3><p>Las tendencias que nombraron los medios después de los desfiles, con su foto, su veredicto, cuánto cambiaron sus búsquedas y la confianza.</p><a class="link" href="#season/FW2025">Ver prendas de la season →</a></div>' +
-          '<div class="forma gris-suave"><h3>Colores</h3><p>La presencia de cada familia de color en la pasarela, medida en ' + num(2430, 0) + ' looks. Presencia no es permanencia: se distingue de las prendas.</p><a class="link" href="#season/FW2025/colores">Ver colores de la season →</a></div></div>' +
+          '<div class="botonera">' + ANIOS.map(function(a, i){ return '<a class="boton' + (i ? ' claro' : '') + '" href="#anio/' + a + '">' + a + '</a>'; }).join('') + '</div><p class="chica">Año → Temporada → Prendas y Colores</p></div>' +
+          '<div class="forma summer-suave"><p class="kicker">02 / Por temporada</p><h3>Primero elegí la temporada</h3><p>Después, el año. Compará distintas ediciones de verano o invierno.</p>' +
+          '<div class="botonera"><a class="boton flecha" href="#por-season">Summer </a><a class="boton claro flecha" href="#por-season">Winter </a></div><p class="chica">Temporada → Año → Prendas y Colores</p></div></div>' +
+        '<h2 class="subt sec-t">Dentro de cada temporada</h2>' +
+        '<div class="dos-formas"><div class="forma gris-suave"><h3>Prendas</h3><p>Las tendencias que nombraron los medios después de los desfiles, con su foto, su veredicto, cuánto cambiaron sus búsquedas y la confianza.</p><a class="link" href="#season/FW2025">Ver prendas de la temporada →</a></div>' +
+          '<div class="forma gris-suave"><h3>Colores</h3><p>La presencia de cada familia de color en la pasarela, medida en ' + num(2430, 0) + ' looks. Presencia no es permanencia: se distingue de las prendas.</p><a class="link" href="#season/FW2025/colores">Ver colores de la temporada →</a></div></div>' +
         '<h2 class="subt sec-t">Cómo leer el análisis</h2>' +
-        '<div class="limites3"><div><p class="kicker">01 / Contexto</p><h3>Año y season primero</h3><p>Cada lectura muestra su período y su fuente. Las seasons no se mezclan al comparar.</p></div>' +
+        '<div class="limites3"><div><p class="kicker">01 / Contexto</p><h3>Año y temporada primero</h3><p>Cada lectura muestra su período y su fuente. Las temporadas no se mezclan al comparar.</p></div>' +
           '<div><p class="kicker">02 / Evidencia</p><h3>Datos con su significado</h3><p>Pasarela y búsquedas son indicadores distintos. Los porcentajes siempre dicen qué miden.</p></div>' +
           '<div><p class="kicker">03 / Decisión</p><h3>Confianza y advertencias</h3><p>El nivel de confianza no reemplaza las cautelas. Validá la lectura con tu producto y tu mercado.</p></div></div>' +
       '</div>' +
@@ -889,14 +889,14 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       '<p class="bajada">Entrá a Summer o Winter de esa edición. Dentro encontrás los apartados de Prendas y Colores.</p>' +
       '<div class="orden"><span><b>01</b> Año</span><span>→</span><span><b>02</b> Summer / Winter</span><span>→</span><span><b>03</b> Prendas / Colores</span><span>→</span><span><b>04</b> Detalle</span></div>' +
       ANIOS.map(function(a){
-        return '<section class="anio' + (a === foco ? ' marcado' : '') + '" id="anio-' + a + '"><div class="anio-n"><p class="kicker">Edición</p><b>' + a + '</b><span>' + (a === '2026' ? 'Solo observación: sin veredicto' : 'Elegí una season') + '</span></div>' +
+        return '<section class="anio' + (a === foco ? ' marcado' : '') + '" id="anio-' + a + '"><div class="anio-n"><p class="kicker">Edición</p><b>' + a + '</b><span>' + (a === '2026' ? 'Solo observación: sin veredicto' : 'Elegí una temporada') + '</span></div>' +
           tarjetaSeason('SS' + a, a) + tarjetaSeason('FW' + a, a) + '</section>';
       }).join('') +
-      '<div class="preferis"><div><h2>¿Preferís empezar por la season?</h2><p>Summer y Winter también tienen su propio acceso por año.</p></div><a class="boton claro flecha" href="#por-season">Explorar por season </a></div>' +
+      '<div class="preferis"><div><h2>¿Preferís empezar por la temporada?</h2><p>Summer y Winter también tienen su propio acceso por año.</p></div><a class="boton claro flecha" href="#por-season">Explorar por temporada </a></div>' +
       '</div></div>';
   }
 
-  // A03 · Por season
+  // A03 · Por temporada
   function pantallaPorSeason(){
     function panel(k){
       var pref = k === 'summer' ? 'SS' : 'FW', t = tapaDe(pref + '2025');
@@ -906,10 +906,10 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
         '<p class="kicker" style="margin-top:22px">Dentro de cada edición:</p><div class="ps-dentro"><a href="#season/' + pref + '2025">Prendas</a><a href="#season/' + pref + '2025/colores">Colores</a></div></section>';
     }
     return '<div class="pantalla"><div class="wrap">' +
-      '<div class="cabeza"><p class="kicker">Inicio / explorar por season</p><h1 class="titulo titulo-foco" tabindex="-1">Summer o Winter</h1></div>' +
-      '<p class="bajada">Elegí verano o invierno y después el año. Cada season mantiene separados sus apartados de Prendas y Colores. 2025 está marcado porque es la última con veredicto.</p>' +
+      '<div class="cabeza"><p class="kicker">Inicio / explorar por temporada</p><h1 class="titulo titulo-foco" tabindex="-1">Summer o Winter</h1></div>' +
+      '<p class="bajada">Elegí verano o invierno y después el año. Cada temporada mantiene separados sus apartados de Prendas y Colores. 2025 está marcado porque es la última con veredicto.</p>' +
       '<div class="ps-grilla">' + panel('summer') + panel('winter') + '</div>' +
-      '<h2 class="subt sec-t">El contexto viaja con cada lectura</h2><p class="bajada" style="margin-top:8px">El año y la season se mantienen visibles al entrar a Prendas, Colores o al detalle. Cada indicador conserva su período, su fuente y sus advertencias.</p>' +
+      '<h2 class="subt sec-t">El contexto viaja con cada lectura</h2><p class="bajada" style="margin-top:8px">El año y la temporada se mantienen visibles al entrar a Prendas, Colores o al detalle. Cada indicador conserva su período, su fuente y sus advertencias.</p>' +
       '</div></div>';
   }
 
@@ -963,14 +963,14 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
   }
   function pie(t, n){ var m = marcaDesfile(t, n); return m ? '<span class="pie-foto">' + esc(m) + ' · ' + nomS(t.temporada) + '</span>' : ''; }
 
-  // A04 / A05 · Una season: prendas, colores e IA, con el tono de verano o de invierno
+  // A04 / A05 · Una temporada: prendas, colores e IA, con el tono de verano o de invierno
   function tarjeta(t){
     var pie = pieCautela(t);
     return '<a class="tarjeta" href="#t/' + t.id + '">' +
       '<div class="t-foto" data-nombre="' + esc(t.nombre) + '">' + img(t, 1) + '<span class="cred">' + esc(marcaDesfile(t, 1)) + '</span></div>' +
       '<div class="t-cuerpo"><h3>' + t.nombre + '</h3><span><span class="chip chico ' + t.veredicto + '">' + ETIQ[t.veredicto] + '</span>' + (deMiRubro(t) ? ' <span class="chip chico mio">Tu rubro</span>' : '') + '</span>' +
         '<b class="grande' + (t.veredicto === 'riesgo' ? ' riesgo-num' : '') + '">' + pct(t.bruto_pct) + '</b>' +
-        '<span class="bajo">búsquedas · season ' + pct(t.temporada_pct) + '</span>' +
+        '<span class="bajo">búsquedas · temporada ' + pct(t.temporada_pct) + '</span>' +
         '<span class="conf">Confianza ' + t.confianza.toLowerCase() + '</span>' +
         '<span class="boton flecha">Ver detalle de la prenda </span></div>' +
       '<div class="t-pie' + (pie ? '' : ' limpio') + '">' + (pie || 'Sin advertencias adicionales') + '</div></a>';
@@ -995,8 +995,8 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     var l = conV ? visibles() : vistasDe(s), tapa = tapaDe(s);
     var q = l.filter(function(t){ return t.veredicto === 'queda'; }).length, r = l.filter(function(t){ return t.veredicto === 'riesgo'; }).length;
     var texto = conV
-      ? 'Desfiles de ' + mesDesfile(s) + ' (' + largoS(s).toLowerCase() + '). Los medios nombraron ' + (l.length + sinDe(s).length) + ' tendencias; ' + l.length + ' se movieron lo suficiente para tener veredicto: ' + q + ' se quedan y ' + r + ' están en riesgo.'
-      : 'Desfiles de ' + mesDesfile(s) + ' (' + largoS(s).toLowerCase() + '). Los medios nombraron ' + l.length + ' tendencias. Van sin veredicto: desde mediados de 2025 Google mide distinto.';
+      ? 'Desfiles de ' + mesDesfile(s) + ' (' + largoS(s).toLowerCase() + ').'
+      : 'Desfiles de ' + mesDesfile(s) + ' (' + largoS(s).toLowerCase() + '). Van sin veredicto: desde mediados de 2025 Google mide distinto.';
     var top = conV ? l.slice().sort(function(a, b){ return Math.abs(b.g1) - Math.abs(a.g1); }).slice(0, 5) : [];
     return '<div class="pantalla tono-' + k + ' lt">' +
       // Portada partida: la foto de un lado, el color liso del otro
@@ -1006,16 +1006,16 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
           '<h1 class="lt-titulo titulo-foco" tabindex="-1" data-titulo="' + nomS(s) + '"><span class="sr">' + nomS(s) + '</span><span aria-hidden="true">' + (k === 'summer' ? 'summer' : 'winter') + '<br>' + anio + '</span></h1>' +
           '<div class="lt-flechas" aria-hidden="true">' + (conV ? flecha({veredicto: 'queda'}) + flecha({veredicto: q >= r ? 'queda' : 'riesgo'}) : '') + '</div>' +
           '<p>' + texto + '</p>' +
-          (conV ? '<p class="lt-fuerte">Las búsquedas de toda la season ' + (deTemporada(s)[0].temporada_pct >= 0 ? 'subieron ' : 'bajaron ') + pct(deTemporada(s)[0].temporada_pct) + ' el año después del desfile. Cada tendencia se compara contra eso.</p>' : '') +
+          (conV ? '<p class="lt-fuerte">Las búsquedas de toda la temporada ' + (deTemporada(s)[0].temporada_pct >= 0 ? 'subieron ' : 'bajaron ') + pct(deTemporada(s)[0].temporada_pct) + ' el año después del desfile. Cada tendencia se compara contra eso.</p>' : '') +
           '<div class="lt-tabs"><a href="#season/' + s + '" data-ir-sec="s-prendas">Prendas</a><a href="#season/' + s + '/colores" data-ir-sec="s-colores">Colores</a>' + (conV ? '<a class="lleno" href="#brief/' + s + '">Tu brief para llevar ↓</a>' : '') + '</div></div></section>' +
       '<div class="wrap">' +
         (conV ? bloqueIATemporada(s) + bandaCautela(s) : '') +
-        // Top de la season: columnas altas, cada una con el color de su foto
-        (top.length ? '<section class="s-sec" id="s-prendas"><h2 class="lt-h2">Top de la season</h2><p class="lt-bajada">Las cinco que más se movieron contra su season, para un lado o para el otro.</p>' +
+        // Top de la temporada: columnas altas, cada una con el color de su foto
+        (top.length ? '<section class="s-sec" id="s-prendas"><h2 class="lt-h2">Top de la temporada</h2><p class="lt-bajada">Las cinco que más se movieron contra su temporada, para un lado o para el otro.</p>' +
           '<div class="lt-cols">' + top.map(function(t){
             return '<a class="lt-col" href="#t/' + t.id + '" data-tono><b>' + t.nombre + '</b>' + flecha(t) +
               '<span class="lt-col-foto">' + img(t, 1) + '</span><span class="lt-col-num">' + pct(t.bruto_pct) + '</span>' +
-              '<span class="lt-col-pie">búsquedas · season ' + pct(t.temporada_pct) + '</span><span class="lt-col-sello">' + sello(t) + '</span></a>';
+              '<span class="lt-col-pie">búsquedas · temporada ' + pct(t.temporada_pct) + '</span><span class="lt-col-sello">' + sello(t) + '</span></a>';
           }).join('') + '</div></section>' : '') +
         // Todas: una doble página por tendencia, con fotos de tamaños distintos, alternando el lado
         '<section class="s-sec"' + (top.length ? '' : ' id="s-prendas"') + '><h2 class="lt-h2">' + (conV ? 'Todas las tendencias' : 'Lo que se vio') + '</h2>' +
@@ -1027,25 +1027,25 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
               '<div class="lt-sp-txt"><h3><a href="#t/' + t.id + '">' + t.nombre + '</a></h3>' +
                 '<p class="lt-sp-meta">' + (RUBRO_NOM[t.rubro] || '') + (deMiRubro(t) ? ' · <b>tu rubro</b>' : '') + ' · la nombró ' + t.medio + '</p>' +
                 '<div class="lt-sp-chica"><span class="f">' + img(t, 2) + '</span>' + curvita(t) + '</div>' +
-                '<div class="lt-sp-nums"><div><b>' + pct(t.bruto_pct) + '</b><span>búsquedas</span></div><div><b class="' + (t.veredicto === 'riesgo' ? 'riesgo-num' : '') + '">' + pct(t.cambio_pct) + '</b><span>contra su season</span></div></div>' +
+                '<div class="lt-sp-nums"><div><b>' + pct(t.bruto_pct) + '</b><span>búsquedas</span></div><div><b class="' + (t.veredicto === 'riesgo' ? 'riesgo-num' : '') + '">' + pct(t.cambio_pct) + '</b><span>contra su temporada</span></div></div>' +
                 '<p class="lt-sp-conf">Confianza ' + t.confianza.toLowerCase() + ' · apuesta ' + APUESTA[t.apuesta].toLowerCase() + (pieCautela(t) ? ' · ' + pieCautela(t).toLowerCase() : '') + '</p>' +
                 '<a class="lt-ver" href="#t/' + t.id + '">Ver el análisis →</a></div>' +
               '<a class="lt-sp-alta" href="#t/' + t.id + '" aria-label="' + esc(t.nombre) + ': ver el análisis">' + img(t, 1) + '<span class="lt-sellos">' + sello(t) + '</span>' + pie(t, 1) + '</a></article>';
           }).join('') : '<div class="lt-vistas">' + l.map(function(v, i){
             return '<figure class="lt-vista' + (i % 3 === 1 ? ' alta' : '') + '"><span class="f">' + img(v, 1) + '</span><figcaption><b>' + v.nombre + '</b><span>La nombró <a href="' + v.url_fuente + '" target="_blank" rel="noopener">' + v.medio + '</a></span></figcaption></figure>';
           }).join('') + '</div>') +
-          (conV ? '<p class="leyenda-senal">↗ SE QUEDA: supera a su season · ↘ EN RIESGO: queda por debajo · las que no llegan a ±10% quedan sin señal clara.</p>' : '') + '</section>' +
+          (conV ? '<p class="leyenda-senal">↗ SE QUEDA: supera a su temporada · ↘ EN RIESGO: queda por debajo · las que no llegan a ±10% quedan sin señal clara.</p>' : '') + '</section>' +
         // Colores: la franja de la pasarela, cada color del ancho de cuánto se vio
         '<section id="s-colores" class="s-sec"><h2 class="lt-h2">Colores de la pasarela</h2>' +
-          '<p class="lt-bajada">Cuánto se vio cada color en looks de Vogue Runway de ' + temps(CM.recientes).replace(/, .* y /, ' a ') + ', medido con Gemini (acertó el color en 33 de 40 fotos revisadas a mano). <b>Es la misma paleta en todas las seasons:</b> no tenemos colores medidos para ' + nomS(s) + '. Presencia no es permanencia.</p>' +
+          '<p class="lt-bajada">Cuánto se vio cada color en looks de Vogue Runway de ' + temps(CM.recientes).replace(/, .* y /, ' a ') + ', medido con Gemini (acertó el color en 33 de 40 fotos revisadas a mano). <b>Es la misma paleta en todas las temporadas:</b> no tenemos colores medidos para ' + nomS(s) + '. Presencia no es permanencia.</p>' +
           '<div class="lt-franja" role="img" aria-label="Los colores de la pasarela, cada uno del ancho de cuánto se vio">' + COL.map(function(c){ return '<span style="flex:' + c.reciente + ';background:' + c.hex + '"></span>'; }).join('') + '</div>' +
           '<ul class="lt-colores">' + COL.map(function(c){
             return '<li><a href="#color/' + slug(c.nombre) + '"><i style="background:' + c.hex + '"></i><b>' + c.nombre + '</b><span>' + num(c.reciente, 1) + '% · ' + pp(c.cambio_pts) + '</span></a></li>';
           }).join('') + '</ul></section>' +
       '</div>' +
-      '<section class="s-pie ' + k + '"><div class="wrap"><h2 class="subt">' + (k === 'summer' ? 'El año y la season se mantienen al explorar' : 'Misma season, dos lecturas distintas') + '</h2>' +
-        '<p>' + (k === 'summer' ? 'Prendas y Colores pertenecen a ' + nomS(s) + '. Cambiar de apartado no mezcla períodos ni seasons.' : 'Las prendas muestran búsquedas en Google; los colores, presencia medida en la pasarela. Son indicadores distintos.') + '</p>' +
-        '<div class="s-pie-acc"><a class="link-pie" href="#anio">← Elegir otra season o año</a><a class="boton ' + (k === 'summer' ? 'claro' : 'borde') + ' flecha" href="#season/' + otra + '">Explorar ' + nomS(otra) + ' </a></div></div></section>' +
+      '<section class="s-pie ' + k + '"><div class="wrap"><h2 class="subt">' + (k === 'summer' ? 'El año y la temporada se mantienen al explorar' : 'Misma temporada, dos lecturas distintas') + '</h2>' +
+        '<p>' + (k === 'summer' ? 'Prendas y Colores pertenecen a ' + nomS(s) + '. Cambiar de apartado no mezcla períodos ni temporadas.' : 'Las prendas muestran búsquedas en Google; los colores, presencia medida en la pasarela. Son indicadores distintos.') + '</p>' +
+        '<div class="s-pie-acc"><a class="link-pie" href="#anio">← Elegir otra temporada o año</a><a class="boton ' + (k === 'summer' ? 'claro' : 'borde') + ' flecha" href="#season/' + otra + '">Explorar ' + nomS(otra) + ' </a></div></div></section>' +
       '</div>';
   }
 
@@ -1097,7 +1097,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
         '<div class="lt-f-izq"><h1 class="titulo-foco" tabindex="-1">' + t.nombre + '</h1>' +
           '<p class="donde">' + nomS(t.temporada) + ' · ' + (RUBRO_NOM[t.rubro] || '') + ' · desfiles de ' + mes(t.mes_desfile) + '</p>' +
           '<div class="lt-f-chica"><span class="f">' + img(t, 2) + '</span>' + curvita(t) + '</div>' +
-          '<div class="lt-sp-nums grande"><div><b>' + pct(t.bruto_pct) + '</b><span>búsquedas de «' + esc(t.termino) + '»</span></div><div><b class="' + (sube ? '' : 'riesgo-num') + '">' + pct(t.cambio_pct) + '</b><span>' + (sube ? 'por encima' : 'por debajo') + ' de su season</span></div></div>' +
+          '<div class="lt-sp-nums grande"><div><b>' + pct(t.bruto_pct) + '</b><span>búsquedas de «' + esc(t.termino) + '»</span></div><div><b class="' + (sube ? '' : 'riesgo-num') + '">' + pct(t.cambio_pct) + '</b><span>' + (sube ? 'por encima' : 'por debajo') + ' de su temporada</span></div></div>' +
           '<p class="f-frase">' + frase + '</p>' +
           '<dl class="lt-f-datos"><div><dt>Confianza</dt><dd>' + t.confianza + '</dd></div><div><dt>Cuánto apostar</dt><dd>' + APUESTA[t.apuesta] + '</dd></div><div><dt>Fuente</dt><dd><a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a></dd></div><div><dd><span class="tag">Calculado</span></dd></div></dl>' +
         '</div>' +
@@ -1105,7 +1105,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       '</div><div class="lt-f-resto">' +
         (aviso ? '<div class="advertencia" role="note"><p>Advertencia · comparabilidad</p><p>' + esc(aviso) + '</p></div>' : '') +
         '<section class="vs"><div class="bloque-cab"><div><h2 class="subt">Búsquedas: ' + t.nombre + ' vs. temporada</h2><p class="chica">Año posterior al desfile vs. año anterior · búsquedas globales</p></div></div>' +
-          barrasVs(t.nombre, t.bruto_pct, 'Su season', t.temporada_pct, sube ? 'var(--oscuro)' : 'var(--r-num)') +
+          barrasVs(t.nombre, t.bruto_pct, 'Su temporada', t.temporada_pct, sube ? 'var(--oscuro)' : 'var(--r-num)') +
           '<p class="formula">' + formula + '</p></section>' +
         curva(t) +
         '<dl class="datos-f">' +
@@ -1175,12 +1175,12 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
           '<li><b>LIVETREND · FW26 Womenswear Outerwear</b> (informe pago): cada tendencia con fotos de desfile, cuántos looks la usaron, el cambio contra el año anterior y un sello del tipo "stable trend" o "last call". Lo tomamos como referencia de diseño.</li>' +
           '<li><b>WGSN, Heuritech y T-Fashion:</b> publican resúmenes de sus reportes de pasarela. Juntamos 110 datos públicos en ' + repo('datasets/runway_reportes_2025_2026.csv') + '.</li>' +
           '<li><b>Las notas de medios</b> (Who What Wear, CBC Life, Yahoo Lifestyle): es lo que lee hoy una marca chica. De ahí salen nuestras tendencias.</li></ul>' +
-        '<p>Esos informes dicen cuánto se vio algo en la pasarela, no si después se buscó. Nuestra herramienta le da a la marca chica un brief propio, con una regla que se puede verificar. Por eso la pirueta es <b>"Tu brief para llevar"</b>: una lámina por season que se descarga en PDF.</p></section>' +
+        '<p>Esos informes dicen cuánto se vio algo en la pasarela, no si después se buscó. Nuestra herramienta le da a la marca chica un brief propio, con una regla que se puede verificar. Por eso la pirueta es <b>"Tu brief para llevar"</b>: una lámina por temporada que se descarga en PDF.</p></section>' +
 
       // 02
       '<section class="rac-sec" id="r-hipotesis"><h2 class="lt-h2">02 · Hipótesis</h2>' +
         '<blockquote class="rac-cita">Una tendencia de pasarela que gana búsquedas en su primer año rara vez se desploma en el segundo, y las que las pierden tienen más del triple de chances de ser pasajeras.</blockquote>' +
-        '<div class="rac-dos"><div><h3>Qué asume</h3><ul><li>Que las búsquedas en Google reflejan interés real del público.</li><li>Que lo que pasa en las búsquedas el primer año después del desfile anticipa el segundo.</li><li>Que comparar contra el resto de la season descuenta lo que se mueve todo junto.</li></ul></div>' +
+        '<div class="rac-dos"><div><h3>Qué asume</h3><ul><li>Que las búsquedas en Google reflejan interés real del público.</li><li>Que lo que pasa en las búsquedas el primer año después del desfile anticipa el segundo.</li><li>Que comparar contra el resto de la temporada descuenta lo que se mueve todo junto.</li></ul></div>' +
           '<div><h3>Qué no puede afirmar</h3><ul><li>Que algo se vaya a vender: búsquedas no son ventas.</li><li>Que funcione igual en Argentina: con búsquedas solo de Argentina no se confirmó.</li><li>Que una tendencia puntual se quede: es una tendencia histórica, no una probabilidad.</li></ul></div></div>' +
         '<div class="evid" style="padding:0;margin-top:26px"><div class="fila1"><b class="grande">9 de cada 10</b><p>tendencias que subieron seguían al año siguiente.<br>178 tendencias · 2016–2024</p></div>' +
           '<div class="barras"><p style="font-size:16px">Pasaron de moda al segundo año · muestra 2021–2024</p>' + barra('Ganaron búsquedas', 2, 19, 'var(--oscuro)', '2 de 19') + barra('Perdieron búsquedas', 9, 16, '#e99a8a', '9 de 16') + '</div>' +
@@ -1200,7 +1200,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
           ['<b>Listas de tendencias</b> de medios después de cada fashion week', 'Who What Wear, CBC Life, Yahoo Lifestyle (y otros para la prueba 2016-2023)', 'Una por fashion week', 'Guardamos título, fecha y link; no copiamos texto', 'Medios en inglés; eligen ellos qué es tendencia'],
           ['<b>Looks de Vogue Runway</b>: 2.430, de 15 casas, FW2011 a SS2024', 'Vogue, vía el dataset público tonyassi/vogue-runway-top15-512px (Hugging Face)', 'Fijo', 'Las fotos tienen derechos: no se suben al repo', 'Solo 15 casas de lujo'],
           ['<b>Clasificación con Gemini</b>: color, prenda, silueta y largo de cada look', 'Nosotros, con Gemini', 'Una vez', 'Propia', 'Acierta el color en 33 de 40 fotos revisadas a mano; la prenda en 28 y la silueta en 23'],
-          ['<b>Fotos de desfiles</b> en la app', 'Vogue Runway, elegidas por el grupo', 'Por season', 'Solo en la versión publicada para la clase', 'Faltan las de 2024 y 2026'],
+          ['<b>Fotos de desfiles</b> en la app', 'Vogue Runway, elegidas por el grupo', 'Por temporada', 'Solo en la versión publicada para la clase', 'Faltan las de 2024 y 2026'],
           ['<b>Perfil de la marca</b>', 'La marca', 'Cuando lo edita', 'Queda en su navegador; se le manda a la IA y no se guarda en ningún servidor', 'Autodeclarado']]) +
         '<h3>Cómo se cruzan</h3><ul><li><b>Tendencia ↔ búsquedas:</b> por el término de búsqueda que le asignamos a cada tendencia, la temporada y el mes del desfile.</li>' +
           '<li><b>Colores ↔ pasarela:</b> por temporada de desfile.</li><li><b>Tendencias ↔ marca:</b> por el rubro (vestidos, polleras, pantalones, abrigos, accesorios).</li>' +
@@ -1209,8 +1209,8 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
           ['B0', 'Búsquedas del año antes del desfile', 'Índice 0–100', 'Promedio de los 12 meses anteriores'],
           ['B1', 'Búsquedas del primer año', 'Índice 0–100', 'Promedio de los 12 meses desde el desfile'],
           ['Búsquedas (%)', 'Cuánto cambió la tendencia', '%', 'B1 / B0 − 1'],
-          ['Season (%)', 'Cuánto se movió el resto de la season', '%', 'exp(mediana de log(B1/B0) de la season) − 1'],
-          ['g1 · contra su season', 'Cuánto más o menos se buscó que su season', 'log / %', 'log(B1/B0) − mediana de la season · exp(g1) − 1'],
+          ['Temporada (%)', 'Cuánto se movió el resto de la temporada', '%', 'exp(mediana de log(B1/B0) de la temporada) − 1'],
+          ['g1 · contra su temporada', 'Cuánto más o menos se buscó que su temporada', 'log / %', 'log(B1/B0) − mediana de la temporada · exp(g1) − 1'],
           ['Veredicto', 'Se queda, en riesgo o sin señal clara', 'Categoría', 'g1 ≥ +0,10 se queda; ≤ −0,10 en riesgo; en el medio, sin señal'],
           ['Confianza', 'Qué tan grande fue el movimiento', 'Alta o media', 'Alta si |g1| ≥ 0,30'],
           ['Cuánto apostar', 'La decisión sugerida', 'Probar poco, moderada o fuerte', 'Regla fija: en riesgo, probar poco; se queda con confianza alta y sin avisos, fuerte; el resto, moderada'],
@@ -1222,8 +1222,8 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 
       // 04
       '<section class="rac-sec" id="r-modelo"><h2 class="lt-h2">04 · Modelo</h2><p>Qué entra, qué se calcula y qué sale. La IA está al final y no toca lo calculado.</p>' +
-        '<div class="esq"><div class="esq-col"><p class="kicker">Entradas</p>' + caja('Listas de medios', 'qué es tendencia en cada season') + caja('Google Trends', '24 meses por término') + caja('Looks clasificados', 'colores de la pasarela') + caja('Perfil de la marca', 'rubro, público, precio, canal') + '</div>' +
-          '<div class="esq-flecha" aria-hidden="true">→</div><div class="esq-col"><p class="kicker">Proceso (reglas fijas)</p>' + caja('Término y ventanas', '12 meses antes y 12 después del desfile') + caja('Contra su season', 'g1 = log(B1/B0) − mediana') + caja('Umbrales', '±10% veredicto · ±30% confianza') + caja('Regla de apuesta', 'veredicto + confianza + avisos') + '</div>' +
+        '<div class="esq"><div class="esq-col"><p class="kicker">Entradas</p>' + caja('Listas de medios', 'qué es tendencia en cada temporada') + caja('Google Trends', '24 meses por término') + caja('Looks clasificados', 'colores de la pasarela') + caja('Perfil de la marca', 'rubro, público, precio, canal') + '</div>' +
+          '<div class="esq-flecha" aria-hidden="true">→</div><div class="esq-col"><p class="kicker">Proceso (reglas fijas)</p>' + caja('Término y ventanas', '12 meses antes y 12 después del desfile') + caja('Contra su temporada', 'g1 = log(B1/B0) − mediana') + caja('Umbrales', '±10% veredicto · ±30% confianza') + caja('Regla de apuesta', 'veredicto + confianza + avisos') + '</div>' +
           '<div class="esq-flecha" aria-hidden="true">→</div><div class="esq-col"><p class="kicker">Salidas</p>' + caja('Calculado', 'veredicto, confianza, apuesta, números, curva', 'calc') + caja('Inferencia de la IA', 'explica cada tendencia y elige qué mirar, con controles', 'ia') + caja('Brief', 'la lámina para llevar, en PDF', 'calc') + '</div></div>' +
         '<h3>Qué quedó afuera y por qué</h3><ul>' +
           '<li><b>Veredicto para 2026:</b> desde mediados de 2025 Google mide distinto. Lo probamos y no se puede corregir.</li>' +
@@ -1236,10 +1236,10 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       // 05
       '<section class="rac-sec" id="r-usuario"><h2 class="lt-h2">05 · Usuario y recorrido</h2>' +
         '<p><b>Perfil:</b> dueña o diseñadora de una marca chica o mediana, sin formación en estadística, que trabaja desde el celular y la compu. <b>Objetivo:</b> decidir rápido qué producir para la próxima temporada y cuánto, sin quedarse con stock de una moda pasajera.</p>' +
-        '<div class="flujo">' + ['Home', 'Perfil de la marca', 'Inicio', 'Por año o por season', 'Una season', 'Ficha de una tendencia', 'Brief en PDF'].map(function(x, i){ return '<span class="paso"><b>' + (i + 1) + '</b>' + x + '</span>'; }).join('<span class="esq-flecha" aria-hidden="true">→</span>') + '</div>' +
+        '<div class="flujo">' + ['Home', 'Perfil de la marca', 'Inicio', 'Por año o por temporada', 'Una temporada', 'Ficha de una tendencia', 'Brief en PDF'].map(function(x, i){ return '<span class="paso"><b>' + (i + 1) + '</b>' + x + '</span>'; }).join('<span class="esq-flecha" aria-hidden="true">→</span>') + '</div>' +
         '<h3>Ramificaciones</h3><ul>' +
           '<li><b>Con o sin perfil:</b> el home invita a crear el perfil, pero se puede "ver sin perfil". Sin perfil no se le pide nada a la IA y la página invita a armarlo.</li>' +
-          '<li><b>Por año o por season:</b> dos entradas que llegan al mismo lugar, porque una marca planifica por año o por verano/invierno.</li>' +
+          '<li><b>Por año o por temporada:</b> dos entradas que llegan al mismo lugar, porque una marca planifica por año o por verano/invierno.</li>' +
           '<li><b>2026:</b> se puede ver lo que nombraron los medios, pero sin veredicto, sin IA y sin brief.</li>' +
           '<li><b>Si la IA falla:</b> los datos calculados siguen; la sugerencia avisa el error y el brief se arma con una regla fija.</li></ul></section>' +
 
@@ -1247,19 +1247,19 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       '<section class="rac-sec" id="r-diseno"><h2 class="lt-h2">06 · Decisiones de diseño</h2>' +
         tabla(['Pantalla', 'Lo más importante', 'Cómo lo jerarquizamos'], [
           ['Home', 'Que se entienda qué es y crear el perfil', 'El nombre que se pinta con los colores de la pasarela; un solo botón principal'],
-          ['Una season', 'Qué se queda y qué está en riesgo', 'Portada partida; top en columnas con el número enorme encima del look; una doble página por tendencia con sello'],
-          ['Ficha', 'El número contra su season y la confianza', 'Números grandes, sello sobre la foto, curvita; la IA abajo y aparte'],
+          ['Una temporada', 'Qué se queda y qué está en riesgo', 'Portada partida; top en columnas con el número enorme encima del look; una doble página por tendencia con sello'],
+          ['Ficha', 'El número contra su temporada y la confianza', 'Números grandes, sello sobre la foto, curvita; la IA abajo y aparte'],
           ['Brief', 'Cuánto apostar en cada una', 'Agrupado por apuesta; lo de la IA con su etiqueta'],
           ['Racional', 'Que se pueda replicar', 'Índice fijo, tablas y esquemas; link a cada archivo']]) +
-        '<ul><li><b>Color:</b> un tono por season (durazno para summer, pizarra para winter). Cada tendencia toma el color de su propia foto. Los sellos tienen color fijo (verde se queda, salmón en riesgo, amarillo cautela) y el rojo de los números se usa solo para "en riesgo".</li>' +
+        '<ul><li><b>Color:</b> un tono por temporada (durazno para summer, pizarra para winter). Cada tendencia toma el color de su propia foto. Los sellos tienen color fijo (verde se queda, salmón en riesgo, amarillo cautela) y el rojo de los números se usa solo para "en riesgo".</li>' +
           '<li><b>Grilla:</b> dobles páginas que alternan de lado y fotos de tamaños distintos, para que no sea una grilla repetida. En celular se apila con la foto arriba.</li>' +
-          '<li><b>Tipografía:</b> Inter en toda la app. El nombre de la season va en minúscula grande, los números en negrita enorme y los rótulos chicos y espaciados.</li>' +
+          '<li><b>Tipografía:</b> Inter en toda la app. El nombre de la temporada va en minúscula grande, los números en negrita enorme y los rótulos chicos y espaciados.</li>' +
           '<li><b>Calculado o IA:</b> lo calculado lleva la etiqueta negra "Calculado"; lo de la IA, la azul "Inferencia de la IA", siempre en un bloque aparte.</li></ul>' +
         '<p class="rac-repo">Del Figma al código, diferencias y capturas: ' + repo('entrega3/DISENO.md') + '.</p></section>' +
 
       // 07
       '<section class="rac-sec" id="r-alcance"><h2 class="lt-h2">07 · Recorte de alcance</h2><ul>' +
-        '<li><b>Seasons con veredicto:</b> primavera-verano y otoño-invierno 2024 y 2025 del <b>hemisferio norte</b> (desfiles de Nueva York, Londres, Milán y París). "Summer 2025" es primavera-verano de allá, con desfiles en septiembre y octubre de 2024; no es el verano argentino.</li>' +
+        '<li><b>Temporadas con veredicto:</b> primavera-verano y otoño-invierno 2024 y 2025 del <b>hemisferio norte</b> (desfiles de Nueva York, Londres, Milán y París). "Summer 2025" es primavera-verano de allá, con desfiles en septiembre y octubre de 2024; no es el verano argentino.</li>' +
         '<li><b>2026:</b> solo observación, sin veredicto.</li>' +
         '<li><b>Tendencias:</b> ' + (nV + D.sin_senal) + ' tendencias puntuales (prendas, detalles, estampados y algunos colores): ' + nV + ' con veredicto (' + nQ + ' se quedan, ' + nR + ' en riesgo) y ' + D.sin_senal + ' sin señal clara.</li>' +
         '<li><b>Búsquedas:</b> en todo el mundo, en inglés, no en Argentina.</li>' +
@@ -1278,7 +1278,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       // 08
       '<section class="rac-sec" id="r-ia"><h2 class="lt-h2">08 · Proceso y uso de IA</h2>' +
         '<h3>Modelos</h3>' + tabla(['Dónde', 'Modelo', 'Para qué'], [
-          ['En la app', 'GPT-OSS 120B (abierto, de OpenAI) vía Groq', 'Explicar cada tendencia y elegir qué mirar de una season, para la marca'],
+          ['En la app', 'GPT-OSS 120B (abierto, de OpenAI) vía Groq', 'Explicar cada tendencia y elegir qué mirar de una temporada, para la marca'],
           ['En el análisis', 'Gemini', 'Clasificar color, prenda, silueta y largo de 2.430 looks'],
           ['Para construir', 'Claude Code (agente de código)', 'Escribir el código, los scripts y los documentos a partir de lo que pedimos y revisamos']]) +
         '<h3>Cómo manejamos el system prompt</h3><ul><li>Está versionado en ' + repo('netlify/functions/prompt.mjs') + ' y se puede ver acá abajo.</li>' +
@@ -1286,8 +1286,8 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
           '<li>El código revisa cada respuesta: cada frase dice de qué dato sale, sus números tienen que estar en ese dato y solo puede elegir tendencias con veredicto. Si algo falla, le pide que corrija una vez.</li></ul>' +
         '<h3>Qué le pedimos a la IA y qué hicimos con eso</h3>' + tabla(['Qué le pedimos o propuso', 'Qué hicimos', 'Por qué'], [
           ['Un diseño "editorial tipo revista" (Entrega 3)', 'Lo descartamos', 'Los profes marcaron que la metáfora era incorrecta y que el diseño no salía de bocetos propios'],
-          ['Pasar a código la alternativa "informe de temporada" del Figma', 'La rechazamos y elegimos "por año y season"', 'Se sentía rígida; la marca piensa por año y por verano o invierno'],
-          ['La versión "por año y season" tal cual', 'La corregimos con el informe LIVETREND como referencia', 'Estaba muy estructurada, "muy hecha por IA"'],
+          ['Pasar a código la alternativa "informe de temporada" del Figma', 'La rechazamos y elegimos "por año y temporada"', 'Se sentía rígida; la marca piensa por año y por verano o invierno'],
+          ['La versión "por año y temporada" tal cual', 'La corregimos con el informe LIVETREND como referencia', 'Estaba muy estructurada, "muy hecha por IA"'],
           ['Que la IA eligiera cuánto apostar', 'Lo sacamos: lo decide una regla fija', 'Devolución de la Entrega 3: demasiada responsabilidad en la IA'],
           ['Respuestas de la IA sin el aviso o con 7 frases', 'Corregimos con controles en el código', 'Cada frase tiene que tener su fuente y contar el aviso'],
           ['La IA dijo "aceptación del mercado"', 'Lo corregimos en el prompt', 'Los datos son búsquedas, no ventas'],
@@ -1326,7 +1326,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
   }
   function bloqueIATemporada(s){
     var p = perfil();
-    return '<section aria-label="Sugerencia de la IA para esta season" class="ia-bloque ia-temp">' +
+    return '<section aria-label="Sugerencia de la IA para esta temporada" class="ia-bloque ia-temp">' +
       cabIA(p ? 'Qué mirar de ' + nomS(s) + ' para ' + esc(p.nombre || 'tu marca') : 'Qué mirar de ' + nomS(s) + ' para tu marca', 'La IA elige entre las tendencias que ya tienen veredicto calculado. No cambia veredictos ni números.', !!p) +
       '<div class="ia-cuerpo" id="ia-cuerpo" aria-live="polite" data-ia="temp" data-id="' + s + '"></div></section>';
   }
@@ -1464,7 +1464,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
   }
 
   // ---------- Pirueta: "Tu brief para llevar" ----------
-  // Una lámina por season para la marca: lo calculado (veredicto, números, apuesta) sale de los datos;
+  // Una lámina por temporada para la marca: lo calculado (veredicto, números, apuesta) sale de los datos;
   // la selección y el porqué los escribe la IA, marcados como suyos. Si la IA no responde, elige una regla fija y lo dice.
   var GRUPOS = [['alta', 'Apostar fuerte', 'queda'], ['media', 'Apuesta moderada', 'queda'], ['baja', 'Probar poco', 'riesgo']];
   function pantallaBrief(s){
@@ -1496,20 +1496,20 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       '<header class="bh-cab"><div><p class="bh-k">Brief de temporada · Paleta predictiva</p><p class="bh-titulo">brief<br>' + (k === 'summer' ? 'summer' : 'winter') + ' ' + s.slice(2) + '</p></div>' +
         '<div class="bh-marca"><p class="bh-k">Para</p><b>' + esc(p.nombre || 'tu marca') + '</b><span>' + esc(datosMarca) + '</span><span class="bh-fecha">' + fecha + '</span></div></header>' +
       '<div class="bh-intro">' + (conIA && sel.resumen ? '<p>' + esc(sel.resumen) + '</p><span class="tag ia">Inferencia de la IA</span>' :
-        '<p>Las tendencias de ' + nomS(s) + ' de tu rubro que más se movieron contra su season. <b>Elegidas por una regla fija</b>: la IA no respondió.</p><span class="tag">Calculado</span>') + '</div>' +
+        '<p>Las tendencias de ' + nomS(s) + ' de tu rubro que más se movieron contra su temporada. <b>Elegidas por una regla fija</b>: la IA no respondió.</p><span class="tag">Calculado</span>') + '</div>' +
       '<div class="bh-grupos" style="--n:' + grupos.length + '">' + grupos.map(function(g){
         return '<section class="bh-grupo"><h2>' + g[0][1] + ' <span aria-hidden="true">' + (g[0][0] === 'baja' ? '↘' : '↗') + '</span></h2>' + g[1].map(function(x){
           var e = x[0], t = x[1];
           return '<div class="bh-item" data-tono><span class="bh-foto">' + img(t, 1) + '</span><div class="bh-txt"><b>' + t.nombre + '</b>' +
             '<span class="bh-sellos">' + sello(t) + '</span>' +
-            '<span class="bh-nums"><strong>' + pct(t.bruto_pct) + '</strong> búsquedas · <strong class="' + (t.veredicto === 'riesgo' ? 'riesgo-num' : '') + '">' + pct(t.cambio_pct) + '</strong> contra su season · confianza ' + t.confianza.toLowerCase() + '</span>' +
+            '<span class="bh-nums"><strong>' + pct(t.bruto_pct) + '</strong> búsquedas · <strong class="' + (t.veredicto === 'riesgo' ? 'riesgo-num' : '') + '">' + pct(t.cambio_pct) + '</strong> contra su temporada · confianza ' + t.confianza.toLowerCase() + '</span>' +
             (e.por_que ? '<span class="bh-porque">' + esc(e.por_que) + ' <i>IA</i></span>' : '') + '</div></div>';
         }).join('') + '</section>';
       }).join('') + '</div>' +
-      '<div class="bh-paleta"><p class="bh-k">Colores de la pasarela · ' + temps(CM.recientes).replace(/, .* y /, ' a ') + ' · misma paleta en todas las seasons</p>' +
+      '<div class="bh-paleta"><p class="bh-k">Colores de la pasarela · ' + temps(CM.recientes).replace(/, .* y /, ' a ') + ' · misma paleta en todas las temporadas</p>' +
         '<div class="lt-franja">' + COL.map(function(c){ return '<span style="flex:' + c.reciente + ';background:' + c.hex + '"></span>'; }).join('') + '</div>' +
         '<p class="bh-colores">' + COL.slice(0, 6).map(function(c){ return '<span><i style="background:' + c.hex + '"></i>' + c.nombre + ' ' + num(c.reciente, 1) + '%</span>'; }).join('') + '</p></div>' +
-      '<footer class="bh-pie"><p><b>Calculado:</b> veredictos, números, confianza y cuánto apostar (regla fija), con búsquedas mundiales de Google el año después del desfile contra su season. ' +
+      '<footer class="bh-pie"><p><b>Calculado:</b> veredictos, números, confianza y cuánto apostar (regla fija), con búsquedas mundiales de Google el año después del desfile contra su temporada. ' +
         '<b>Inferencia de la IA:</b> ' + (conIA ? 'la selección, el resumen y cada porqué.' : 'nada en esta lámina.') + '</p>' +
         '<p>Búsquedas no son ventas. Validá con tu mercado antes de producir. · paleta-predictiva.netlify.app</p></footer>' +
       '</article>';
