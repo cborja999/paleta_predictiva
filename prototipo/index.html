@@ -58,6 +58,11 @@ img{display:block}
 .cab{position:sticky;top:0;z-index:30;background:var(--blanco)}
 .cab .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:96px;border-bottom:1px solid var(--tinta)}
 .logo{font-weight:700;font-size:20px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.cab-izq{display:flex;flex-direction:column;gap:5px;min-width:0}
+.cab-donde{margin:0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:46vw}
+.cab-donde:empty{display:none}
+.cab-donde b{color:var(--tinta);font-weight:700}
+.cab-donde span{transition:opacity .25s ease}
 .menu{display:flex;gap:6px}
 .menu a{font-size:16px;font-weight:500;text-decoration:none;padding:10px 12px;white-space:nowrap}
 .menu a:hover{background:var(--crema)}
@@ -78,7 +83,14 @@ img{display:block}
   .logo{font-size:17px}
   .menu{order:3;width:100%;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px 10px}
   .menu a{font-size:14px;padding:8px 10px}
-  .cab-der{font-size:12px;padding:6px 10px}
+  .cab-der{font-size:12px;padding:6px 10px;max-width:150px}
+  .cab .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto auto;grid-template-areas:"izq der der" "menu menu idioma";column-gap:10px;align-items:center}
+  .cab-izq{grid-area:izq;min-width:0}
+  .cab-donde{max-width:100%;font-size:11px}
+  .cab-fin{display:contents}
+  .cab-fin .cab-der{grid-area:der;justify-self:end}
+  .menu{grid-area:menu;width:auto;min-width:0;margin:0 0 0 -16px;padding:0 0 10px 16px}
+  .cab .idioma{grid-area:idioma;justify-self:end;margin-bottom:10px}
 }
 
 /* ---------- Piezas comunes ---------- */
@@ -453,12 +465,12 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 .lt-cols{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px}
 .lt-col{position:relative;display:flex;flex-direction:column;background:var(--c);color:#fff;text-decoration:none;min-height:520px;padding:16px 14px 16px;overflow:hidden;transition:background .6s ease}
 .lt-col b{font-size:clamp(18px,1.6vw,24px);font-weight:700;text-transform:uppercase;line-height:1.05;position:relative;z-index:2}
-.lt-col .flecha-lt{width:44px;margin-top:14px;position:relative;z-index:2}
+.lt-col .flecha-lt{float:right;width:28px;height:auto;margin:1px 0 4px 10px}
 .lt-col-foto{position:absolute;left:0;right:0;top:110px;bottom:110px;display:flex;justify-content:center}
 .lt-col-foto img{height:100%;width:auto;max-width:100%;object-fit:cover;object-position:top;mix-blend-mode:normal}
 .lt-col-num{position:relative;z-index:2;margin-top:auto;font-size:clamp(40px,4.2vw,64px);font-weight:700;letter-spacing:-.03em;line-height:1;text-shadow:0 2px 14px rgba(0,0,0,.35)}
 .lt-col-pie{position:relative;z-index:2;font-size:12px;letter-spacing:.06em;text-transform:uppercase;border-top:1px solid rgba(255,255,255,.6);padding-top:8px;margin-top:10px}
-.lt-col-sello{position:relative;z-index:2;margin-top:8px}
+.lt-col-sello{position:relative;z-index:2;margin-top:8px;min-height:58px;display:flex;flex-wrap:wrap;align-content:flex-start;gap:4px}
 .lt-col-sello .sello{font-size:13px;padding:3px 8px}
 .lt-col:hover .lt-col-foto img{transform:scale(1.03);transition:transform .6s ease}
 @media (max-width:1100px){.lt-cols{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(220px,42%);overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-32px;padding-right:32px}.lt-col{scroll-snap-align:start}}
@@ -480,7 +492,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 .curvita{border:1px solid var(--linea);padding:10px 12px 8px;margin:0}
 .curvita svg{width:100%;height:auto;display:block}
 .curvita figcaption{font-size:11px;color:var(--gris);margin-top:6px;font-weight:400}
-.lt-sp-nums{display:grid;grid-template-columns:1fr 1fr;gap:16px 34px;margin-top:24px;max-width:560px}
+.lt-sp-nums{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px clamp(16px,4vw,34px);margin-top:24px;max-width:560px}
 .lt-sp-nums b{display:block;font-size:clamp(46px,5vw,72px);font-weight:700;letter-spacing:-.035em;line-height:1;padding-bottom:8px;border-bottom:1px solid var(--tinta);font-variant-numeric:tabular-nums}
 .lt-sp-nums span{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-top:8px;text-align:right}
 .lt-sp-conf{font-size:14px;margin-top:16px;font-weight:400}
@@ -494,8 +506,9 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 .prensa li{padding:12px 0;border-bottom:1px solid var(--linea)}
 .prensa q{display:block;quotes:"“" "”"}
 .prensa .pr-de{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:12px;letter-spacing:.04em;margin-top:8px;color:var(--gris)}
-.prensa .pr-de a{color:var(--tinta);font-weight:700;text-decoration:none;border-bottom:1.5px solid currentColor;white-space:nowrap;font-size:13px}
-.prensa .pr-de a:hover{border-bottom-width:3px}
+.prensa .pr-de a{background:var(--tono,var(--azul));color:#fff;font-weight:700;text-decoration:none;white-space:nowrap;font-size:13px;padding:7px 12px;letter-spacing:.04em;transition:background .6s ease,filter .2s ease}
+.prensa .pr-de a:hover{filter:brightness(1.18)}
+.prensa .pr-de a:focus-visible{outline:2px solid var(--tinta);outline-offset:2px}
 .prensa li.pr-gran{padding:6px 0 18px;position:relative}
 .prensa li.pr-gran::before{content:"“";display:block;font-size:110px;line-height:.8;font-weight:700;height:56px;margin-top:10px;color:var(--tinta)}
 .prensa li.pr-gran q{font-size:clamp(22px,2.3vw,30px);line-height:1.18;font-weight:500;letter-spacing:-.015em;quotes:none}
@@ -534,7 +547,8 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 .lt-f-izq .donde{font-size:16px;margin-top:14px}
 .lt-f-chica{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:end;margin-top:26px}
 .lt-sp-nums.grande{margin-top:30px;max-width:none}
-.lt-sp-nums.grande b{font-size:clamp(56px,6.5vw,104px)}
+.lt-sp-nums.grande b{font-size:clamp(40px,6.5vw,104px)}
+@media (max-width:600px){.lt-sp-nums.grande b{font-size:min(56px,12.5vw)}}
 .lt-f-izq .f-frase{margin-top:22px}
 .lt-f-datos{display:flex;flex-wrap:wrap;gap:10px 36px;margin-top:20px;padding-top:14px;border-top:1px solid var(--linea)}
 .lt-f-datos dt{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gris)}
@@ -761,7 +775,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 <div id="app" class="oculto">
   <header class="cab">
     <div class="wrap">
-      <a class="logo" href="#">Paleta predictiva</a>
+      <div class="cab-izq"><a class="logo" href="#">Paleta predictiva</a><p class="cab-donde" id="cab-donde"></p></div>
       <nav class="menu" aria-label="Secciones">
         <a href="#temporadas" data-sec="temporadas">Temporadas</a>
         <a href="#brief/FW2025" data-sec="brief" id="menu-brief">Tu brief</a>
@@ -1000,10 +1014,12 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       return (TONOS[im.src] = 'hsl(' + hh + ' ' + Math.round(ss * 100) + '% ' + Math.round(l * 100) + '%)');
     } catch (e){ return null; }
   }
+  // Para el botón de "Abrir artículo": el mismo tono de la foto, con más color y oscuro para que el texto blanco se lea
+  function vivo(hsl){ var m = /hsl\((\d+)\D+(\d+)%\D+(\d+)%/.exec(hsl); return m ? 'hsl(' + m[1] + ' ' + Math.max(+m[2], 48) + '% 34%)' : hsl; }
   function pintarTonos(){
     main.querySelectorAll('[data-tono] img').forEach(function(im){
       var caja = im.closest('[data-tono]');
-      function aplicar(){ var t = tonoDe(im); if (t) caja.style.setProperty('--c', t); }
+      function aplicar(){ var t = tonoDe(im); if (!t) return; if (caja.dataset.tono === 'link') caja.style.setProperty('--tono', vivo(t)); else caja.style.setProperty('--c', t); }
       if (im.complete && im.naturalWidth) aplicar(); else im.addEventListener('load', aplicar, {once: true});
     });
   }
@@ -1023,10 +1039,10 @@ function prensaHTML(t, max){
   function fecha(f){ var p = (f || '').split('-'); return p.length > 1 ? MESES[+p[1] - 1] + ' ' + p[0] : ''; }
   function abrir(url){ return '<a href="' + url + '" target="_blank" rel="noopener">Abrir artículo ↗<span class="sr"> (se abre en otra pestaña)</span></a>'; }
   var notas = (t.prensa || []).slice(0, max || 9);
-  if (!notas.length) return '';
-  // La nota que nombró la tendencia no va acá: está arriba ("la nombró…") y en los datos de la ficha
+  // Si no encontramos una nota de prensa sobre la tendencia, va la frase de la nota que la nombró (nunca las dos juntas)
+  if (!notas.length) notas = [{cita: t.tendencia_fuente, medio: t.medio, url: t.url_fuente, origen: true}];
   return '<aside class="prensa" aria-label="En la prensa"><h4>En la prensa</h4><ul>' + notas.map(function(n){
-    return '<li class="pr-gran"><q class="pr-cita" data-no-tr>' + esc(n.cita || n.titulo) + '</q><span class="pr-de"><span><b>' + esc(n.medio) + '</b>' + (fecha(n.fecha) ? ' · ' + fecha(n.fecha) : '') + '</span>' + abrir(n.url) + '</span></li>';
+    return '<li class="pr-gran"><q class="pr-cita" data-no-tr>' + esc(n.cita || n.titulo) + '</q><span class="pr-de"><span><b>' + esc(n.medio) + '</b>' + (n.origen ? ' · la nota que la nombró' : fecha(n.fecha) ? ' · ' + fecha(n.fecha) : '') + '</span>' + abrir(n.url) + '</span></li>';
   }).join('') + '</ul></aside>';
 }
 function curvita(t){
@@ -1087,7 +1103,7 @@ function curvita(t){
         // Top de la temporada: columnas altas, cada una con el color de su foto
         (top.length ? '<section class="s-sec" id="s-prendas"><h2 class="lt-h2">Top de la temporada</h2><p class="lt-bajada">Las cinco que más se movieron contra su temporada, para un lado o para el otro.</p>' +
           '<div class="lt-cols">' + top.map(function(t){
-            return '<a class="lt-col" href="#t/' + t.id + '" data-tono><b>' + t.nombre + '</b>' + flecha(t) +
+            return '<a class="lt-col" href="#t/' + t.id + '" data-tono><b>' + flecha(t) + t.nombre + '</b>' +
               '<span class="lt-col-foto">' + img(t, 1) + '</span><span class="lt-col-num">' + pct(t.bruto_pct) + '</span>' +
               '<span class="lt-col-pie">búsquedas</span><span class="lt-col-sello">' + sello(t) + '</span></a>';
           }).join('') + '</div></section>' : '') +
@@ -1097,7 +1113,7 @@ function curvita(t){
             '<p class="leyenda-fuente"><span><span class="tag">Calculado</span>veredictos, números y curvas: salen de los datos con reglas fijas</span><span><span class="tag ia">Inferencia de la IA</span>sugerencias para tu marca, siempre aparte</span></p>' :
             '<p class="lt-bajada">Sin veredicto: es lo que nombraron los medios. La IA no elige entre estas.</p>') +
           (conV ? l.map(function(t, i){
-            return '<article class="lt-spread' + (i % 2 ? ' al-reves' : '') + '">' +
+            return '<article class="lt-spread' + (i % 2 ? ' al-reves' : '') + '" data-tono="link">' +
               '<div class="lt-sp-txt"><h3><a href="#t/' + t.id + '">' + t.nombre + '</a></h3>' +
                 '<p class="lt-sp-meta">' + (RUBRO_NOM[t.rubro] || '') + (deMiRubro(t) ? ' · <b>tu rubro</b>' : '') + ' · la nombró <a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '<span class="sr"> (se abre en otra pestaña)</span></a></p>' +
                 '<div class="lt-sp-chica"><span class="f">' + img(t, 2) + '</span>' + curvita(t) + '</div>' +
@@ -1161,7 +1177,7 @@ function curvita(t){
     return '<div class="pantalla tono-' + tipoS(t.temporada) + ' ficha-tono lt"><div class="wrap">' +
       '<nav class="miga" aria-label="Ubicación"><a href="#season/' + t.temporada + '">← Temporadas / ' + nomS(t.temporada) + ' / Prendas / ' + (RUBRO_NOM[t.rubro] || '') + '</a>' +
         '<span class="pasar"><a href="#t/' + ant.id + '" aria-label="Tendencia anterior: ' + esc(ant.nombre) + '">← Anterior</a><span>' + (i + 1) + L(' de ', ' of ') + l.length + '</span><a href="#t/' + sig.id + '" aria-label="Tendencia siguiente: ' + esc(sig.nombre) + '">Siguiente →</a></span></nav>' +
-      '<div class="lt-ficha">' +
+      '<div class="lt-ficha" data-tono="link">' +
         '<div class="lt-f-izq"><h1 class="titulo-foco" tabindex="-1">' + t.nombre + '</h1>' +
           '<p class="donde">' + nomS(t.temporada) + ' · ' + (RUBRO_NOM[t.rubro] || '') + ' · desfiles de ' + mes(t.mes_desfile) + '</p>' +
           '<div class="lt-f-chica"><span class="f">' + img(t, 2) + '</span>' + curvita(t) + '</div>' +
@@ -1629,6 +1645,10 @@ function curvita(t){
     if (activo && menu.scrollWidth > menu.clientWidth) menu.scrollLeft = activo.offsetLeft - (menu.clientWidth - activo.offsetWidth) / 2;
     $('menu-brief').setAttribute('href', '#brief/' + (tieneVeredicto(estado.temporada) ? estado.temporada : CON_VEREDICTO[0]));
     pintarCabecera(); if (sec === 'perfil') $('cab-der').setAttribute('aria-current', 'page'); else $('cab-der').removeAttribute('aria-current');
+    estado.donde = sec === 'racional' ? 'Racional' : sec === 'perfil' ? 'Perfil de la marca' : p[0] === 'temporadas' ? 'Elegí la temporada'
+      : p[0] === 'season' ? nomS(p[1]) : p[0] === 't' ? nomS(t.temporada) + ' · ' + t.nombre : p[0] === 'brief' ? 'Tu brief · ' + nomS(estado.temporada)
+      : p[0] === 'color' ? 'Color · ' + c.nombre : '';
+    marcarDonde();
     var foco = main.querySelector('.titulo-foco');
     document.title = (foco ? tr(foco.dataset.titulo || foco.textContent.replace(/\s+/g, ' ').trim()) + ' · ' : '') + 'Paleta predictiva';
     window.scrollTo(0, 0);
@@ -1637,6 +1657,16 @@ function curvita(t){
     ir.yaEntro = true;
     conectar(h);
   }
+  // Dónde estás: debajo del logo, la pantalla y, al bajar, la sección que estás leyendo (temporada y racional)
+  function marcarDonde(){
+    var caja = $('cab-donde'); if (!caja) return;
+    var parte = '', alto = (document.querySelector('.cab') || {}).offsetHeight || 100;
+    main.querySelectorAll('.s-sec > h2, .rac-sec > h2').forEach(function(h){ if (h.getBoundingClientRect().top < alto + window.innerHeight * .3) parte = h.textContent.replace(/^\d+ · /, ''); });
+    var html = estado.donde ? '<b>' + esc(estado.donde) + '</b>' + (parte ? '<span> · ' + esc(parte) + '</span>' : '') : '';
+    if (caja.dataset.html !== html){ caja.dataset.html = html; caja.innerHTML = html; }
+  }
+  var pidioDonde = false;
+  window.addEventListener('scroll', function(){ if (pidioDonde) return; pidioDonde = true; requestAnimationFrame(function(){ pidioDonde = false; marcarDonde(); }); }, {passive: true});
   // Efecto de scroll: los bloques de cada pantalla aparecen al entrar en pantalla
   var RV = '.tp-card, .rac-sec, .lt-col, .brief-hoja, .lt-spread, .lt-vista, .lt-colores, .lt-franja, .lt-f-chica, .lt-sp-nums, .forma, .limites3 > div, .anio, .preferis, .ps, .tarjeta, .color, .s-sec > h2, .banda-cautela, .ia-bloque, .elegidas li, .stats > div, .advertencia, .vs, .curva, .datos-f, .pasos3 > div, .evid, .metodo-mas > section, .dos-paneles > div, .presencia, .banda-azul .wrap, .s-pie .wrap';
   var mira = window.IntersectionObserver && !matchMedia('(prefers-reduced-motion: reduce)').matches

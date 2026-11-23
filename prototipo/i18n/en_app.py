@@ -49,7 +49,7 @@ T = {
 " · la nombró ": " · named by ", "contra su temporada": "against its season", "Contra su temporada": "Against its season",
 "Ver el análisis →": "See the analysis →", ": ver el análisis": ": see the analysis",
 "La nombró ": "Named by ", "La nombró": "Named by", ", como “": ", as “",
-"En la prensa": "In the press", "Abrir artículo ↗": "Open article ↗", " (se abre en otra pestaña)": " (opens in a new tab)",
+"En la prensa": "In the press", " · la nota que la nombró": " · the article that named it", "Abrir artículo ↗": "Open article ↗", " (se abre en otra pestaña)": " (opens in a new tab)",
 "Las búsquedas son de todo el mundo, el año después del desfile. No son ventas: validá con tu mercado antes de producir.": "Searches are worldwide, the year after the shows. They are not sales: check with your market before producing.",
 "↗ SE QUEDA: supera a su temporada · ↘ EN RIESGO: queda por debajo · las que no llegan a ±10% quedan sin señal clara.": "↗ STAYS: beats its season · ↘ AT RISK: falls below it · those that don't reach ±10% have no clear signal.",
 "Ver las tendencias": "See the trends",

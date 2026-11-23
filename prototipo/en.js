@@ -96,6 +96,7 @@ window.EN_DIC = {
 "La nombró": "Named by",
 ", como “": ", as “",
 "En la prensa": "In the press",
+" · la nota que la nombró": " · the article that named it",
 "Abrir artículo ↗": "Open article ↗",
 " (se abre en otra pestaña)": " (opens in a new tab)",
 "Las búsquedas son de todo el mundo, el año después del desfile. No son ventas: validá con tu mercado antes de producir.": "Searches are worldwide, the year after the shows. They are not sales: check with your market before producing.",
