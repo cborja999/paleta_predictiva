@@ -477,8 +477,11 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 .lt-sp-nums span{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-top:8px;text-align:right}
 .lt-sp-conf{font-size:14px;margin-top:16px;font-weight:400}
 .prensa{margin-top:30px;border-top:1.5px solid var(--tinta);padding-top:14px;max-width:600px}
-.prensa h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:0;display:flex;justify-content:space-between;gap:12px}
-.prensa h4 span{font-weight:400;letter-spacing:.04em;text-transform:none;color:var(--gris)}
+.prensa h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:0}
+.pr-cita .l{transition:color .45s ease}
+.pr-cita .l.pinta{color:var(--c)}
+.pr-cita .pal{white-space:nowrap}
+.lt-sp-meta a{color:inherit}
 .prensa ul{list-style:none;margin:0;padding:0}
 .prensa li{padding:12px 0;border-bottom:1px solid var(--linea)}
 .prensa q{display:block;quotes:"“" "”"}
@@ -490,7 +493,6 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 .prensa li.pr-gran q{font-size:clamp(22px,2.3vw,30px);line-height:1.18;font-weight:500;letter-spacing:-.015em;quotes:none}
 .prensa li.pr-gran .pr-de{font-size:13px;margin-top:14px;color:var(--tinta);text-transform:uppercase;letter-spacing:.08em}
 .prensa li.pr-gran .pr-de b{font-weight:700}
-.prensa li.pr-chica q{font-size:15px;line-height:1.35;font-weight:400}
 .lt-ver{display:inline-block;margin-top:14px;font-weight:700;text-decoration:none;border-bottom:1.5px solid currentColor}
 .lt-sp-alta{position:relative;display:block;background:var(--crema);overflow:hidden;min-height:440px}
 .lt-sp-alta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .7s ease}
@@ -821,12 +823,35 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
   }
   function marcaDesfile(t, n){ var d = (t.desfiles || [])[n - 1]; return d ? d.marca : ''; }
 
+  // Colores de la pasarela (los oscuros, para que se lean sobre blanco): los usan las letras del home y las citas
+  function luz(hex){ var n = parseInt(hex.slice(1), 16); return 0.299 * (n >> 16) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255); }
+  var TONOS_PASARELA = D.colores.filter(function(c){ return luz(c.hex) < 200; }).sort(function(a, b){ return b.reciente - a.reciente; }).map(function(c){ return c.hex; });
+  var ORD_TONOS = [6, 1, 3, 8, 0, 5, 2, 7, 4].filter(function(i){ return i < TONOS_PASARELA.length; });
+  // Las citas de prensa se pintan como las letras del home: al pasar el mouse, y una ola cuando aparecen
+  function citasDeColor(){
+    var quieto = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    main.querySelectorAll('.pr-cita:not([data-l])').forEach(function(q){
+      var texto = q.textContent, k = 0; q.dataset.l = '1';
+      q.innerHTML = '<span class="sr">' + esc(texto) + '</span><span aria-hidden="true">' + texto.split(' ').map(function(pal){
+        return '<span class="pal">' + pal.split('').map(function(ch){ return '<span class="l" style="--c:' + TONOS_PASARELA[ORD_TONOS[k++ % ORD_TONOS.length]] + '">' + esc(ch) + '</span>'; }).join('') + '</span>';
+      }).join(' ') + '</span>';
+      var ls = q.querySelectorAll('.l');
+      ls.forEach(function(l){
+        l.addEventListener('mouseenter', function(){ clearTimeout(l._t); l.classList.add('pinta'); });
+        l.addEventListener('mouseleave', function(){ l._t = setTimeout(function(){ l.classList.remove('pinta'); }, 900); });
+      });
+      function ola(){ ls.forEach(function(l, i){ setTimeout(function(){ l.classList.add('pinta'); }, i * 18); setTimeout(function(){ l.classList.remove('pinta'); }, 1400 + i * 18); }); }
+      q.addEventListener('touchstart', ola, {passive: true});
+      if (!quieto && 'IntersectionObserver' in window){
+        var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting && !document.hidden){ io.disconnect(); ola(); } }); }, {threshold: .8});
+        io.observe(q);
+      }
+    });
+  }
   // ---------- Home: se mantiene (letras que se pintan y franja de colores) ----------
   (function(){
     var h = document.querySelector('.home-marca'), texto = h.textContent, k = 0;
-    function luz(hex){ var n = parseInt(hex.slice(1), 16); return 0.299 * (n >> 16) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255); }
-    var tonos = D.colores.filter(function(c){ return luz(c.hex) < 200; }).sort(function(a, b){ return b.reciente - a.reciente; }).map(function(c){ return c.hex; });
-    var ord = [6, 1, 3, 8, 0, 5, 2, 7, 4].filter(function(i){ return i < tonos.length; });
+    var tonos = TONOS_PASARELA, ord = ORD_TONOS;
     h.setAttribute('aria-label', texto);
     h.innerHTML = texto.split('').map(function(ch){
       if (ch === ' ') return '<br>';
@@ -952,16 +977,12 @@ function prensaHTML(t, max){
   var MESES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
   function fecha(f){ var p = (f || '').split('-'); return p.length > 1 ? MESES[+p[1] - 1] + ' ' + p[0] : ''; }
   function abrir(url){ return '<a href="' + url + '" target="_blank" rel="noopener">Abrir artículo ↗<span class="sr"> (se abre en otra pestaña)</span></a>'; }
-  var notas = (t.prensa || []).map(function(n){
-    return { q: n.cita || n.titulo, de: n.medio + (fecha(n.fecha) ? ' · ' + fecha(n.fecha) : ''), url: n.url };
-  }).slice(0, max || 9);
-  var original = { q: t.tendencia_fuente, de: t.medio + ' · la nota que la nombró', url: t.url_fuente };
-  // La cita de prensa va grande; si no hay, va grande la nota que la nombró
-  var lista = notas.length ? notas.concat([original]) : [original];
-  var items = lista.map(function(n, i){
-    return '<li class="' + (i ? 'pr-chica' : 'pr-gran') + '"><q>' + esc(n.q) + '</q><span class="pr-de"><span>' + (i ? esc(n.de) : '<b>' + esc(n.de.split(' · ')[0]) + '</b>' + (n.de.indexOf(' · ') > -1 ? ' · ' + esc(n.de.split(' · ').slice(1).join(' · ')) : '')) + '</span>' + abrir(n.url) + '</span></li>';
-  });
-  return '<aside class="prensa" aria-label="En la prensa"><h4>En la prensa <span>contexto, no un dato</span></h4><ul>' + items.join('') + '</ul></aside>';
+  var notas = (t.prensa || []).slice(0, max || 9);
+  if (!notas.length) return '';
+  // La nota que nombró la tendencia no va acá: está arriba ("la nombró…") y en los datos de la ficha
+  return '<aside class="prensa" aria-label="En la prensa"><h4>En la prensa</h4><ul>' + notas.map(function(n){
+    return '<li class="pr-gran"><q class="pr-cita">' + esc(n.cita || n.titulo) + '</q><span class="pr-de"><span><b>' + esc(n.medio) + '</b>' + (fecha(n.fecha) ? ' · ' + fecha(n.fecha) : '') + '</span>' + abrir(n.url) + '</span></li>';
+  }).join('') + '</ul></aside>';
 }
 function curvita(t){
     var s = t.serie.slice(-24), W = 260, H = 70, v = s.filter(function(x){ return x != null; }), mx = Math.max.apply(null, v) || 1;
@@ -1033,7 +1054,7 @@ function curvita(t){
           (conV ? l.map(function(t, i){
             return '<article class="lt-spread' + (i % 2 ? ' al-reves' : '') + '">' +
               '<div class="lt-sp-txt"><h3><a href="#t/' + t.id + '">' + t.nombre + '</a></h3>' +
-                '<p class="lt-sp-meta">' + (RUBRO_NOM[t.rubro] || '') + (deMiRubro(t) ? ' · <b>tu rubro</b>' : '') + ' · la nombró ' + t.medio + '</p>' +
+                '<p class="lt-sp-meta">' + (RUBRO_NOM[t.rubro] || '') + (deMiRubro(t) ? ' · <b>tu rubro</b>' : '') + ' · la nombró <a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '<span class="sr"> (se abre en otra pestaña)</span></a></p>' +
                 '<div class="lt-sp-chica"><span class="f">' + img(t, 2) + '</span>' + curvita(t) + '</div>' +
                 '<div class="lt-sp-nums"><div><b>' + pct(t.bruto_pct) + '</b><span>búsquedas</span></div><div><b class="' + (t.veredicto === 'riesgo' ? 'riesgo-num' : '') + '">' + pct(t.cambio_pct) + '</b><span>contra su temporada</span></div></div>' +
                 '<p class="lt-sp-conf">Confianza ' + t.confianza.toLowerCase() + ' · apuesta ' + APUESTA[t.apuesta].toLowerCase() + (pieCautela(t) ? ' · ' + pieCautela(t).toLowerCase() : '') + '</p>' +
@@ -1593,6 +1614,7 @@ function curvita(t){
   function conectar(h){
     revelar();
     pintarTonos();
+    citasDeColor();
     armarBrief(false);
     var pdf = main.querySelector('[data-brief-pdf]'); if (pdf) pdf.addEventListener('click', function(){ window.print(); });
     var otra = main.querySelector('[data-brief-otra]'); if (otra) otra.addEventListener('click', function(){ armarBrief(true); });
