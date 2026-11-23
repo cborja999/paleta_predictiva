@@ -75,6 +75,7 @@ El agente (Claude Code) leyó el Figma con el conector de Figma: las 14 pantalla
 | Paletas propuestas por season ("Coral", "Amarillo manteca") | La paleta medida en la pasarela, la misma en todas las seasons, y lo dice | No tenemos colores medidos por season; inventarlos sería un dato falso. |
 | Summer y Winter 2026 como ejemplo | El menú lleva a 2025; 2026 va sin veredicto | Desde mediados de 2025 Google mide distinto (`hipotesis.md`). |
 | Años 2026, 2025, 2024 | 2025, 2024, 2026 | Primero los que tienen veredicto. |
+| Dos entradas (por año y por temporada) y Summer/Winter en el menú | Una sola pantalla, "Elegí la temporada", y un menú de tres opciones: Temporadas, Tu brief y Racional | Al usarla eran cuatro caminos al mismo lugar y el recorrido no se entendía. |
 | Grilla pareja de tarjetas | Top en columnas, dobles páginas alternadas, sellos | Revisión inspirada en LIVETREND, para que se sienta menos armado por una IA. |
 
 ### Capturas (Entrega 4)

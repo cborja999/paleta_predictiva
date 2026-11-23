@@ -626,6 +626,28 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 @media (max-width:1000px){.rac{grid-template-columns:1fr;gap:20px}.rac-indice{position:static}.rac-indice ol{display:flex;flex-wrap:wrap;gap:0 18px;border-top:0}.rac-indice a{border-bottom:0;padding:4px 0}}
 @media (max-width:760px){.esq{grid-template-columns:1fr}.esq-flecha{transform:rotate(90deg)}.rac-dos{grid-template-columns:1fr}}
 
+
+/* ---------- Elegí la temporada ---------- */
+.tp-anio{display:grid;grid-template-columns:170px 1fr 1fr;gap:20px;padding:24px 0;border-top:1px solid var(--linea);align-items:stretch}
+.tp-anio:first-of-type{border-top:0}
+.tp-n b{display:block;font-size:clamp(44px,5vw,64px);font-weight:700;line-height:1;letter-spacing:-.03em;color:var(--azul-s)}
+.tp-n span{display:block;font-size:14px;margin-top:10px;color:var(--gris)}
+.tp-card{display:grid;grid-template-columns:130px 1fr;text-decoration:none;color:var(--azul-s);min-height:190px;transition:transform .25s ease,box-shadow .25s ease}
+.tp-card.summer{background:var(--summer)} .tp-card.winter{background:var(--winter)}
+.tp-card:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(17,23,19,.12)}
+.tp-foto{position:relative;display:block;overflow:hidden;background:rgba(0,0,0,.06)}
+.tp-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.tp-txt{display:flex;flex-direction:column;padding:16px 18px 16px}
+.tp-txt b{font-size:clamp(24px,2.4vw,30px);font-weight:700;text-transform:uppercase;line-height:1.05}
+.tp-txt b em{display:inline-block;white-space:nowrap;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.06em;background:var(--azul-s);color:#fff;padding:3px 7px;vertical-align:5px;margin-left:6px}
+.tp-txt span{font-size:14px;margin-top:8px;font-weight:400}
+.tp-cuenta{font-weight:600!important}
+.tp-ir{margin-top:auto!important;padding-top:12px;font-weight:700!important;font-size:15px!important}
+.lt-cambiar{margin-left:auto;color:#fff;font-size:13px;font-weight:600;letter-spacing:.04em;text-decoration:none;border:1px solid #fff;padding:6px 12px;text-transform:none}
+.lt-cambiar:hover{background:#fff;color:var(--panel)}
+@media (max-width:900px){.tp-anio{grid-template-columns:1fr 1fr}.tp-n{grid-column:1/-1;display:flex;align-items:baseline;gap:14px}.tp-n span{margin-top:0}}
+@media (max-width:620px){.tp-anio{grid-template-columns:1fr}.tp-card{grid-template-columns:110px 1fr;min-height:170px}}
+
 /* ---------- Perfil de la marca ---------- */
 .perfil{display:grid;grid-template-columns:1fr 380px;gap:48px;margin-top:30px;align-items:start}
 @media (max-width:1000px){.perfil{grid-template-columns:1fr;gap:28px}}
@@ -704,10 +726,10 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     <p class="caps">Fashion weeks · Nueva York, Londres, Milán y París</p>
     <h1 class="home-marca">Paleta Predictiva</h1>
     <p class="home-frase">Qué se queda <i>y qué se va.</i></p>
-    <div class="home-acciones" id="home-acciones"><a class="boton-home" href="#perfil">Creá el perfil de tu marca</a><a class="caps link-ant" href="#inicio">Ver sin perfil</a></div>
+    <div class="home-acciones" id="home-acciones"><a class="boton-home" href="#perfil">Creá el perfil de tu marca</a><a class="caps link-ant" href="#temporadas">Ver sin perfil</a></div>
   </div>
   <div class="home-paleta" id="home-paleta" role="img" aria-label="Los colores de la pasarela, cada uno del ancho de cuánto se vio"></div>
-  <div class="home-pie caps"><span id="home-paleta-pie">La paleta de la pasarela: cada franja es un color, del ancho de cuánto se vio</span><a href="#inicio">Entrar →</a></div>
+  <div class="home-pie caps"><span id="home-paleta-pie">La paleta de la pasarela: cada franja es un color, del ancho de cuánto se vio</span><a href="#temporadas">Entrar →</a></div>
 </section>
 
 <div id="app" class="oculto">
@@ -715,11 +737,8 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     <div class="wrap">
       <a class="logo" href="#">Paleta predictiva</a>
       <nav class="menu" aria-label="Secciones">
-        <a href="#inicio" data-sec="inicio">Inicio</a>
-        <a href="#anio" data-sec="anio">Por año</a>
-        <a href="#por-season" data-sec="por-season">Por temporada</a>
-        <a href="#season/SS2025" data-sec="summer">Summer</a>
-        <a href="#season/FW2025" data-sec="winter">Winter</a>
+        <a href="#temporadas" data-sec="temporadas">Temporadas</a>
+        <a href="#brief/FW2025" data-sec="brief" id="menu-brief">Tu brief</a>
         <a href="#racional" data-sec="racional">Racional</a>
       </nav>
       <a class="cab-der" id="cab-der" href="#perfil">Creá tu perfil</a>
@@ -817,8 +836,8 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
   function pintarHome(){
     var p = perfil();
     $('home-acciones').innerHTML = p
-      ? '<a class="boton-home" href="#inicio">Entrar como ' + esc(p.nombre || 'tu marca') + '</a><a class="caps link-ant" href="#perfil">Editar el perfil</a>'
-      : '<a class="boton-home" href="#perfil">Creá el perfil de tu marca</a><a class="caps link-ant" href="#inicio">Ver sin perfil</a>';
+      ? '<a class="boton-home" href="#temporadas">Entrar como ' + esc(p.nombre || 'tu marca') + '</a><a class="caps link-ant" href="#perfil">Editar el perfil</a>'
+      : '<a class="boton-home" href="#perfil">Creá el perfil de tu marca</a><a class="caps link-ant" href="#temporadas">Ver sin perfil</a>';
   }
 
   // ---------- Alternativa "por año y temporada" del Figma (A01 a A05) ----------
@@ -842,7 +861,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
   // Foto de portada de una temporada: la primera tendencia que se queda con confianza alta
   function tapaDe(s){ var v = deTemporada(s); return v.filter(function(t){ return t.veredicto === 'queda' && t.confianza === 'Alta'; })[0] || v[0] || vistasDe(s)[0]; }
   function cuentaS(s){
-    if (!tieneVeredicto(s)) return vistasDe(s).length + ' tendencias vistas · sin veredicto';
+    if (!tieneVeredicto(s)) return vistasDe(s).length + ' tendencias · sin veredicto';
     var v = deTemporada(s); return v.length + ' con veredicto · ' + v.filter(function(t){ return t.veredicto === 'queda'; }).length + ' se quedan · ' + v.filter(function(t){ return t.veredicto === 'riesgo'; }).length + ' en riesgo';
   }
   function tarjetaSeason(s, anio){
@@ -852,64 +871,22 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       '<a class="boton flecha" href="#season/' + s + '">Abrir ' + nomS(s) + ' </a></div>';
   }
 
-  // A01 · Inicio
-  function pantallaInicio(){
-    var su = tapaDe('SS2025'), wi = tapaDe('FW2025'), p = perfil();
-    return '<div class="pantalla">' +
-      '<section class="ini-hero"><div class="wrap ini-grid"><div><p class="kicker">Inteligencia de moda / para marcas argentinas</p>' +
-        '<h1 class="titulo titulo-foco" tabindex="-1">Análisis de moda por año y temporada</h1>' +
-        '<p class="bajada">Reunimos las tendencias de las fashion weeks y lo que pasó con sus búsquedas en Google para que explores prendas y colores' + (p ? ' pensando en ' + esc(p.nombre || 'tu marca') : '') + '. Elegí un año y una temporada, revisá la evidencia y entendé sus límites antes de decidir.</p>' +
-        '<div class="ini-botones"><a class="boton flecha" href="#anio">Explorar por año </a><a class="boton claro flecha" href="#por-season">Explorar por temporada </a></div>' +
-        '<ol class="ini-pasos"><li><b>01</b> Elegí el año</li><li><b>02</b> Summer o Winter</li><li><b>03</b> Prendas y Colores</li></ol>' +
-        '<p class="chica">Analizamos señales; no garantizamos ventas.</p></div>' +
-        '<div class="ini-fotos"><a href="#season/SS2025" class="ini-foto"><span class="f">' + img(su, 1) + '</span><span class="etq-f">Summer / verano · ' + esc(marcaDesfile(su, 1)) + '</span></a>' +
-          '<a href="#season/FW2025" class="ini-foto alto"><span class="f">' + img(wi, 2) + '</span><span class="etq-f">Winter / invierno · ' + esc(marcaDesfile(wi, 2)) + '</span></a></div></div></section>' +
-      '<div class="wrap">' +
-        '<h2 class="subt sec-t">Dos formas de explorar</h2><p class="bajada" style="margin-top:8px">El resultado es el mismo: una temporada de un año concreto, con Prendas y Colores.</p>' +
-        '<div class="dos-formas"><div class="forma winter-suave"><p class="kicker">01 / Por año</p><h3>Primero elegí el año</h3><p>Después, Summer o Winter. Cada edición reúne sus prendas y sus colores.</p>' +
-          '<div class="botonera">' + ANIOS.map(function(a, i){ return '<a class="boton' + (i ? ' claro' : '') + '" href="#anio/' + a + '">' + a + '</a>'; }).join('') + '</div><p class="chica">Año → Temporada → Prendas y Colores</p></div>' +
-          '<div class="forma summer-suave"><p class="kicker">02 / Por temporada</p><h3>Primero elegí la temporada</h3><p>Después, el año. Compará distintas ediciones de verano o invierno.</p>' +
-          '<div class="botonera"><a class="boton flecha" href="#por-season">Summer </a><a class="boton claro flecha" href="#por-season">Winter </a></div><p class="chica">Temporada → Año → Prendas y Colores</p></div></div>' +
-        '<h2 class="subt sec-t">Dentro de cada temporada</h2>' +
-        '<div class="dos-formas"><div class="forma gris-suave"><h3>Prendas</h3><p>Las tendencias que nombraron los medios después de los desfiles, con su foto, su veredicto, cuánto cambiaron sus búsquedas y la confianza.</p><a class="link" href="#season/FW2025">Ver prendas de la temporada →</a></div>' +
-          '<div class="forma gris-suave"><h3>Colores</h3><p>La presencia de cada familia de color en la pasarela, medida en ' + num(2430, 0) + ' looks. Presencia no es permanencia: se distingue de las prendas.</p><a class="link" href="#season/FW2025/colores">Ver colores de la temporada →</a></div></div>' +
-        '<h2 class="subt sec-t">Cómo leer el análisis</h2>' +
-        '<div class="limites3"><div><p class="kicker">01 / Contexto</p><h3>Año y temporada primero</h3><p>Cada lectura muestra su período y su fuente. Las temporadas no se mezclan al comparar.</p></div>' +
-          '<div><p class="kicker">02 / Evidencia</p><h3>Datos con su significado</h3><p>Pasarela y búsquedas son indicadores distintos. Los porcentajes siempre dicen qué miden.</p></div>' +
-          '<div><p class="kicker">03 / Decisión</p><h3>Confianza y advertencias</h3><p>El nivel de confianza no reemplaza las cautelas. Validá la lectura con tu producto y tu mercado.</p></div></div>' +
-      '</div>' +
-      '<section class="banda-azul"><div class="wrap"><div><h2 class="subt">Referencias de moda, no promesas de ventas</h2><p>La información orienta la exploración de una colección. No equivale a demanda argentina ni garantiza resultados comerciales. Las fotos son de los desfiles que nombran los medios.</p></div><a class="boton borde flecha" href="#racional">Consultar el racional </a></div></section>' +
-      '</div>';
-  }
-
-  // A02 · Por año
-  function pantallaAnio(foco){
-    return '<div class="pantalla"><div class="wrap">' +
-      '<div class="cabeza"><p class="kicker">Inicio / explorar por año</p><h1 class="titulo titulo-foco" tabindex="-1">Elegí el año</h1></div>' +
-      '<p class="bajada">Entrá a Summer o Winter de esa edición. Dentro encontrás los apartados de Prendas y Colores.</p>' +
-      '<div class="orden"><span><b>01</b> Año</span><span>→</span><span><b>02</b> Summer / Winter</span><span>→</span><span><b>03</b> Prendas / Colores</span><span>→</span><span><b>04</b> Detalle</span></div>' +
-      ANIOS.map(function(a){
-        return '<section class="anio' + (a === foco ? ' marcado' : '') + '" id="anio-' + a + '"><div class="anio-n"><p class="kicker">Edición</p><b>' + a + '</b><span>' + (a === '2026' ? 'Solo observación: sin veredicto' : 'Elegí una temporada') + '</span></div>' +
-          tarjetaSeason('SS' + a, a) + tarjetaSeason('FW' + a, a) + '</section>';
-      }).join('') +
-      '<div class="preferis"><div><h2>¿Preferís empezar por la temporada?</h2><p>Summer y Winter también tienen su propio acceso por año.</p></div><a class="boton claro flecha" href="#por-season">Explorar por temporada </a></div>' +
-      '</div></div>';
-  }
-
-  // A03 · Por temporada
-  function pantallaPorSeason(){
-    function panel(k){
-      var pref = k === 'summer' ? 'SS' : 'FW', t = tapaDe(pref + '2025');
-      return '<section class="ps ' + k + '"><h2>' + (k === 'summer' ? 'Summer' : 'Winter') + '</h2><p class="kicker">' + (k === 'summer' ? 'Verano' : 'Invierno') + ' / elegí el año</p>' +
-        '<a class="ps-foto" href="#season/' + pref + '2025">' + img(t, 1) + '</a><p class="chica" style="margin-top:8px">' + esc(marcaDesfile(t, 1)) + ' · ' + esc(t.nombre) + ' · ' + nomS(pref + '2025') + '</p>' +
-        '<div class="botonera">' + ANIOS.map(function(a, i){ return '<a class="boton' + (i === 0 ? '' : ' claro') + ' flecha" href="#season/' + pref + a + '">' + a + ' </a>'; }).join('') + '</div>' +
-        '<p class="kicker" style="margin-top:22px">Dentro de cada edición:</p><div class="ps-dentro"><a href="#season/' + pref + '2025">Prendas</a><a href="#season/' + pref + '2025/colores">Colores</a></div></section>';
+  // Elegí la temporada: una sola entrada, año × temporada (la versión intermedia de la alternativa del Figma)
+  function pantallaTemporadas(){
+    function card(s){
+      var k = tipoS(s), t = tapaDe(s), conV = tieneVeredicto(s);
+      return '<a class="tp-card ' + k + '" href="#season/' + s + '"><span class="tp-foto">' + (t ? img(t, conV ? 2 : 1) : '') + '</span>' +
+        '<span class="tp-txt"><b>' + nomS(s) + (s === CON_VEREDICTO[0] ? ' <em>la más nueva</em>' : '') + '</b>' +
+        '<span>' + (k === 'summer' ? 'Primavera-verano' : 'Otoño-invierno') + '</span>' +
+        '<span class="tp-ir">Ver la temporada →</span></span></a>';
     }
     return '<div class="pantalla"><div class="wrap">' +
-      '<div class="cabeza"><p class="kicker">Inicio / explorar por temporada</p><h1 class="titulo titulo-foco" tabindex="-1">Summer o Winter</h1></div>' +
-      '<p class="bajada">Elegí verano o invierno y después el año. Cada temporada mantiene separados sus apartados de Prendas y Colores. 2025 está marcado porque es la última con veredicto.</p>' +
-      '<div class="ps-grilla">' + panel('summer') + panel('winter') + '</div>' +
-      '<h2 class="subt sec-t">El contexto viaja con cada lectura</h2><p class="bajada" style="margin-top:8px">El año y la temporada se mantienen visibles al entrar a Prendas, Colores o al detalle. Cada indicador conserva su período, su fuente y sus advertencias.</p>' +
+      '<div class="cabeza"><p class="kicker">Temporadas</p><h1 class="titulo titulo-foco" tabindex="-1">Elegí la temporada</h1></div>' +
+      '<p class="bajada">Summer es primavera-verano y Winter es otoño-invierno, del hemisferio norte: las temporadas de los desfiles de Nueva York, Londres, Milán y París.</p>' +
+      ANIOS.map(function(a){
+        return '<section class="tp-anio" aria-label="' + a + '"><div class="tp-n"><b>' + a + '</b>' + (a === '2026' ? '<span>Solo observación, sin veredicto</span>' : '') + '</div>' +
+          card('SS' + a) + card('FW' + a) + '</section>';
+      }).join('') +
       '</div></div>';
   }
 
@@ -991,7 +968,6 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
   }
   function pantallaSeason(s){
     var k = tipoS(s), anio = s.slice(2), otra = (k === 'summer' ? 'FW' : 'SS') + anio, conV = tieneVeredicto(s);
-    var anios = ANIOS.map(function(a){ return [s.slice(0, 2) + a, 'Año: ' + a]; });
     var l = conV ? visibles() : vistasDe(s), tapa = tapaDe(s);
     var q = l.filter(function(t){ return t.veredicto === 'queda'; }).length, r = l.filter(function(t){ return t.veredicto === 'riesgo'; }).length;
     var texto = conV
@@ -1002,14 +978,14 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       // Portada partida: la foto de un lado, el color liso del otro
       '<section class="lt-portada"><div class="lt-portada-foto">' + (tapa ? img(tapa, conV ? 2 : 1) + pie(tapa, conV ? 2 : 1) : '') + '</div>' +
         '<div class="lt-panel"><div class="lt-panel-top"><span>' + nomS(s) + '</span><span>Fashion weeks</span><span>Prendas y colores</span>' +
-          '<label class="sel-anio"><span class="sr">Año</span><select id="sel-anio">' + opciones(anios, s) + '</select></label></div>' +
+          '<a class="lt-cambiar" href="#temporadas">Cambiar temporada</a></div>' +
           '<h1 class="lt-titulo titulo-foco" tabindex="-1" data-titulo="' + nomS(s) + '"><span class="sr">' + nomS(s) + '</span><span aria-hidden="true">' + (k === 'summer' ? 'summer' : 'winter') + '<br>' + anio + '</span></h1>' +
           '<div class="lt-flechas" aria-hidden="true">' + (conV ? flecha({veredicto: 'queda'}) + flecha({veredicto: q >= r ? 'queda' : 'riesgo'}) : '') + '</div>' +
           '<p>' + texto + '</p>' +
           (conV ? '<p class="lt-fuerte">Las búsquedas de toda la temporada ' + (deTemporada(s)[0].temporada_pct >= 0 ? 'subieron ' : 'bajaron ') + pct(deTemporada(s)[0].temporada_pct) + ' el año después del desfile. Cada tendencia se compara contra eso.</p>' : '') +
           '<div class="lt-tabs"><a href="#season/' + s + '" data-ir-sec="s-prendas">Prendas</a><a href="#season/' + s + '/colores" data-ir-sec="s-colores">Colores</a>' + (conV ? '<a class="lleno" href="#brief/' + s + '">Tu brief para llevar ↓</a>' : '') + '</div></div></section>' +
       '<div class="wrap">' +
-        (conV ? bloqueIATemporada(s) + bandaCautela(s) : '') +
+        (conV ? bloqueIATemporada(s) : '') +
         // Top de la temporada: columnas altas, cada una con el color de su foto
         (top.length ? '<section class="s-sec" id="s-prendas"><h2 class="lt-h2">Top de la temporada</h2><p class="lt-bajada">Las cinco que más se movieron contra su temporada, para un lado o para el otro.</p>' +
           '<div class="lt-cols">' + top.map(function(t){
@@ -1045,7 +1021,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       '</div>' +
       '<section class="s-pie ' + k + '"><div class="wrap"><h2 class="subt">' + (k === 'summer' ? 'El año y la temporada se mantienen al explorar' : 'Misma temporada, dos lecturas distintas') + '</h2>' +
         '<p>' + (k === 'summer' ? 'Prendas y Colores pertenecen a ' + nomS(s) + '. Cambiar de apartado no mezcla períodos ni temporadas.' : 'Las prendas muestran búsquedas en Google; los colores, presencia medida en la pasarela. Son indicadores distintos.') + '</p>' +
-        '<div class="s-pie-acc"><a class="link-pie" href="#anio">← Elegir otra temporada o año</a><a class="boton ' + (k === 'summer' ? 'claro' : 'borde') + ' flecha" href="#season/' + otra + '">Explorar ' + nomS(otra) + ' </a></div></div></section>' +
+        '<div class="s-pie-acc"><a class="link-pie" href="#temporadas">← Elegir otra temporada</a><a class="boton ' + (k === 'summer' ? 'claro' : 'borde') + ' flecha" href="#season/' + otra + '">Explorar ' + nomS(otra) + ' </a></div></div></section>' +
       '</div>';
   }
 
@@ -1091,7 +1067,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       : 'Ajuste relativo: ' + pct(t.cambio_pct) + ' (cuánto más o menos se buscó que si se hubiera movido como la temporada).';
     var aviso = avisoTexto(t);
     return '<div class="pantalla tono-' + tipoS(t.temporada) + ' ficha-tono lt"><div class="wrap">' +
-      '<nav class="miga" aria-label="Ubicación"><a href="#season/' + t.temporada + '">← Inicio / ' + nomS(t.temporada) + ' / Prendas / ' + (RUBRO_NOM[t.rubro] || '') + '</a>' +
+      '<nav class="miga" aria-label="Ubicación"><a href="#season/' + t.temporada + '">← Temporadas / ' + nomS(t.temporada) + ' / Prendas / ' + (RUBRO_NOM[t.rubro] || '') + '</a>' +
         '<span class="pasar"><a href="#t/' + ant.id + '" aria-label="Tendencia anterior: ' + esc(ant.nombre) + '">← Anterior</a><span>' + (i + 1) + ' de ' + l.length + '</span><a href="#t/' + sig.id + '" aria-label="Tendencia siguiente: ' + esc(sig.nombre) + '">Siguiente →</a></span></nav>' +
       '<div class="lt-ficha">' +
         '<div class="lt-f-izq"><h1 class="titulo-foco" tabindex="-1">' + t.nombre + '</h1>' +
@@ -1236,10 +1212,10 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       // 05
       '<section class="rac-sec" id="r-usuario"><h2 class="lt-h2">05 · Usuario y recorrido</h2>' +
         '<p><b>Perfil:</b> dueña o diseñadora de una marca chica o mediana, sin formación en estadística, que trabaja desde el celular y la compu. <b>Objetivo:</b> decidir rápido qué producir para la próxima temporada y cuánto, sin quedarse con stock de una moda pasajera.</p>' +
-        '<div class="flujo">' + ['Home', 'Perfil de la marca', 'Inicio', 'Por año o por temporada', 'Una temporada', 'Ficha de una tendencia', 'Brief en PDF'].map(function(x, i){ return '<span class="paso"><b>' + (i + 1) + '</b>' + x + '</span>'; }).join('<span class="esq-flecha" aria-hidden="true">→</span>') + '</div>' +
+        '<div class="flujo">' + ['Home', 'Perfil de la marca', 'Elegí la temporada', 'Una temporada', 'Ficha de una tendencia', 'Tu brief en PDF'].map(function(x, i){ return '<span class="paso"><b>' + (i + 1) + '</b>' + x + '</span>'; }).join('<span class="esq-flecha" aria-hidden="true">→</span>') + '</div>' +
         '<h3>Ramificaciones</h3><ul>' +
           '<li><b>Con o sin perfil:</b> el home invita a crear el perfil, pero se puede "ver sin perfil". Sin perfil no se le pide nada a la IA y la página invita a armarlo.</li>' +
-          '<li><b>Por año o por temporada:</b> dos entradas que llegan al mismo lugar, porque una marca planifica por año o por verano/invierno.</li>' +
+          '<li><b>Un solo camino para elegir:</b> el Figma tenía dos entradas, por año y por temporada, más Summer y Winter en el menú: cuatro caminos al mismo lugar. Al usarla vimos que confundía, así que lo juntamos en una pantalla, “Elegí la temporada”, con los años y las dos temporadas de cada uno. El menú quedó en tres opciones: Temporadas, Tu brief y Racional.</li>' +
           '<li><b>2026:</b> se puede ver lo que nombraron los medios, pero sin veredicto, sin IA y sin brief.</li>' +
           '<li><b>Si la IA falla:</b> los datos calculados siguen; la sugerencia avisa el error y el brief se arma con una regla fija.</li></ul></section>' +
 
@@ -1247,6 +1223,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       '<section class="rac-sec" id="r-diseno"><h2 class="lt-h2">06 · Decisiones de diseño</h2>' +
         tabla(['Pantalla', 'Lo más importante', 'Cómo lo jerarquizamos'], [
           ['Home', 'Que se entienda qué es y crear el perfil', 'El nombre que se pinta con los colores de la pasarela; un solo botón principal'],
+          ['Elegí la temporada', 'Llegar a una temporada en un clic', 'Una fila por año con sus dos temporadas, foto, color y conteo; la más nueva marcada'],
           ['Una temporada', 'Qué se queda y qué está en riesgo', 'Portada partida; top en columnas con el número enorme encima del look; una doble página por tendencia con sello'],
           ['Ficha', 'El número contra su temporada y la confianza', 'Números grandes, sello sobre la foto, curvita; la IA abajo y aparte'],
           ['Brief', 'Cuánto apostar en cada una', 'Agrupado por apuesta; lo de la IA con su etiqueta'],
@@ -1429,7 +1406,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
         '<label>Rango de precio <small>Opcional</small><select id="p-precio">' + opciones(PRECIOS, p.precio || '') + '</select></label>' +
         '<label>Canal de venta <small>Opcional</small><select id="p-canal">' + opciones(CANALES, p.canal || '') + '</select></label>' +
         '<div class="acciones-perfil"><button class="boton flecha" type="submit">Guardar y ver la temporada </button>' +
-          (perfil() ? '<button class="boton peligro" type="button" id="p-borrar">Borrar el perfil</button>' : '<a class="link" href="#inicio">Seguir sin perfil →</a>') + '</div>' +
+          (perfil() ? '<button class="boton peligro" type="button" id="p-borrar">Borrar el perfil</button>' : '<a class="link" href="#temporadas">Seguir sin perfil →</a>') + '</div>' +
       '</form>' +
       '<aside class="aviso-privado" aria-label="Qué pasa con tus datos"><h2>Qué pasa con tus datos</h2>' +
         '<ul><li>El perfil se guarda <b>solo en este navegador</b>. No hay cuentas ni contraseñas.</li>' +
@@ -1449,7 +1426,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       borrarCacheIA();
       if (!ok){ $('p-error').textContent = 'Este navegador no deja guardar datos (¿modo privado?). Podés seguir sin perfil.'; return; }
       estado.rubro = '';
-      location.hash = '#inicio';
+      location.hash = '#temporadas';
     });
     var b = $('p-borrar');
     if (b) b.addEventListener('click', function(){
@@ -1529,7 +1506,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     }, function(){ poner(hojaBrief(s, {elegidas: eleccionRegla(s)}, 'regla', hoy())); });
   }
 
-  // ---------- Navegación entre pantallas (una por dirección: #inicio, #anio, #por-season, #season/FW2025, #t/<id>, #color/<nombre>...) ----------
+  // ---------- Navegación entre pantallas (una por dirección: #temporadas, #season/FW2025, #t/<id>, #brief/FW2025, #racional...) ----------
   var app = $('app'), home = $('home'), main = $('pantalla');
   function ir(){
     var h = decodeURIComponent(location.hash.slice(1)), p = h.split('/'), html = '', sec = p[0];
@@ -1541,26 +1518,26 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     if (sec === 'visto-2026'){ location.replace('#season/SS2026'); return; }
     var bajarA = '';
     if (!sec){ pintarHome(); home.classList.remove('oculto'); app.classList.add('oculto'); document.title = 'Paleta predictiva'; window.scrollTo(0, 0); return; }
-    if (sec === 'inicio') html = pantallaInicio();
-    else if (sec === 'anio'){ html = pantallaAnio(p[1]); if (p[1]) bajarA = 'anio-' + p[1]; }
-    else if (sec === 'por-season') html = pantallaPorSeason();
+    if (sec === 'inicio' || sec === 'anio' || sec === 'por-season'){ location.replace('#temporadas'); return; }
+    if (sec === 'temporadas') html = pantallaTemporadas();
     else if (sec === 'season'){
-      if (!TEMP[p[1]]){ location.replace('#season/FW2025'); return; }
-      estado.temporada = p[1]; html = pantallaSeason(p[1]); sec = tipoS(p[1]);
+      if (!TEMP[p[1]]){ location.replace('#temporadas'); return; }
+      estado.temporada = p[1]; html = pantallaSeason(p[1]); sec = 'temporadas';
       if (p[2] === 'colores') bajarA = 's-colores';
     }
-    else if (sec === 't'){ var t = porId(p[1]); if (!t){ location.replace('#inicio'); return; } estado.temporada = t.temporada; html = pantallaFicha(t); sec = tipoS(t.temporada); }
-    else if (sec === 'color'){ var c = COL.filter(function(x){ return slug(x.nombre) === p[1]; })[0]; if (!c){ location.replace('#season/' + estado.temporada + '/colores'); return; } html = pantallaColor(c); sec = tipoS(estado.temporada); }
-    else if (sec === 'brief'){ var sb = TEMP[p[1]] && tieneVeredicto(p[1]) ? p[1] : 'FW2025'; estado.temporada = sb; html = pantallaBrief(sb); sec = tipoS(sb); }
+    else if (sec === 't'){ var t = porId(p[1]); if (!t){ location.replace('#temporadas'); return; } estado.temporada = t.temporada; html = pantallaFicha(t); sec = 'temporadas'; }
+    else if (sec === 'color'){ var c = COL.filter(function(x){ return slug(x.nombre) === p[1]; })[0]; if (!c){ location.replace('#season/' + estado.temporada + '/colores'); return; } html = pantallaColor(c); sec = 'temporadas'; }
+    else if (sec === 'brief'){ var sb = TEMP[p[1]] && tieneVeredicto(p[1]) ? p[1] : 'FW2025'; estado.temporada = sb; html = pantallaBrief(sb); sec = 'brief'; }
     else if (sec === 'metodo'){ location.replace('#racional'); return; }
     else if (sec === 'racional') html = pantallaRacional();
     else if (sec === 'perfil') html = pantallaPerfil();
-    else { location.replace('#inicio'); return; }
+    else { location.replace('#temporadas'); return; }
     home.classList.add('oculto'); app.classList.remove('oculto');
     main.innerHTML = html;
     document.querySelectorAll('.menu a').forEach(function(a){ if (a.dataset.sec === sec) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
     var activo = document.querySelector('.menu a[aria-current]'), menu = document.querySelector('.menu');
     if (activo && menu.scrollWidth > menu.clientWidth) menu.scrollLeft = activo.offsetLeft - (menu.clientWidth - activo.offsetWidth) / 2;
+    $('menu-brief').setAttribute('href', '#brief/' + (tieneVeredicto(estado.temporada) ? estado.temporada : CON_VEREDICTO[0]));
     pintarCabecera(); if (sec === 'perfil') $('cab-der').setAttribute('aria-current', 'page'); else $('cab-der').removeAttribute('aria-current');
     var foco = main.querySelector('.titulo-foco');
     document.title = (foco ? (foco.dataset.titulo || foco.innerText.replace(/\s+/g, ' ').trim()) + ' · ' : '') + 'Paleta predictiva';
@@ -1571,7 +1548,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     conectar(h);
   }
   // Efecto de scroll: los bloques de cada pantalla aparecen al entrar en pantalla
-  var RV = '.rac-sec, .lt-col, .brief-hoja, .lt-spread, .lt-vista, .lt-colores, .lt-franja, .lt-f-chica, .lt-sp-nums, .forma, .limites3 > div, .anio, .preferis, .ps, .tarjeta, .color, .s-sec > h2, .banda-cautela, .ia-bloque, .elegidas li, .stats > div, .advertencia, .vs, .curva, .datos-f, .pasos3 > div, .evid, .metodo-mas > section, .dos-paneles > div, .presencia, .banda-azul .wrap, .s-pie .wrap';
+  var RV = '.tp-card, .rac-sec, .lt-col, .brief-hoja, .lt-spread, .lt-vista, .lt-colores, .lt-franja, .lt-f-chica, .lt-sp-nums, .forma, .limites3 > div, .anio, .preferis, .ps, .tarjeta, .color, .s-sec > h2, .banda-cautela, .ia-bloque, .elegidas li, .stats > div, .advertencia, .vs, .curva, .datos-f, .pasos3 > div, .evid, .metodo-mas > section, .dos-paneles > div, .presencia, .banda-azul .wrap, .s-pie .wrap';
   var mira = window.IntersectionObserver && !matchMedia('(prefers-reduced-motion: reduce)').matches
     ? new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('visto'); mira.unobserve(e.target); } }); }, {rootMargin: '0px 0px -8% 0px'})
     : null;
@@ -1596,7 +1573,6 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     var pdf = main.querySelector('[data-brief-pdf]'); if (pdf) pdf.addEventListener('click', function(){ window.print(); });
     var otra = main.querySelector('[data-brief-otra]'); if (otra) otra.addEventListener('click', function(){ armarBrief(true); });
     conectarPerfil();
-    var sa = $('sel-anio'); if (sa) sa.addEventListener('change', function(){ location.hash = '#season/' + sa.value; });
     main.querySelectorAll('[data-ir-sec]').forEach(function(a){ a.addEventListener('click', function(e){ var d = $(a.dataset.irSec); if (d){ e.preventDefault(); d.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); history.replaceState(null, '', a.getAttribute('href')); } }); });
     pedirIA(false);
     var vp = $('ver-prompt');
