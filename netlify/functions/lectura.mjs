@@ -4,7 +4,7 @@
 // GET /api/lectura -> modelo y system prompts (para mostrarlos en la app).
 // La clave va en la variable de entorno GROQ_API_KEY de Netlify. Nunca en el codigo.
 import datos from "../../prototipo/datos.json";
-import { SYSTEM_PROMPT, SYSTEM_PROMPT_TEMPORADA, MODELO_POR_DEFECTO } from "./prompt.mjs";
+import { SYSTEM_PROMPT, SYSTEM_PROMPT_TEMPORADA, IDIOMA_EN, MODELO_POR_DEFECTO } from "./prompt.mjs";
 
 const RUBROS = { "": "todo tipo de ropa", vestidos: "vestidos", polleras: "polleras", pantalones: "pantalones",
   abrigos: "abrigos y tejidos", accesorios: "accesorios y estampados", varios: "varios rubros", todo: "varios rubros" };
@@ -170,14 +170,15 @@ export default async (req) => {
   let pedido;
   try { pedido = await req.json(); } catch { return json({ error: "Pedido inválido" }, 400); }
   const marca = limpiarPerfil(pedido.perfil, pedido.rubro, pedido.marca);
+  const extraIdioma = pedido.idioma === "en" ? IDIOMA_EN : "";   // solo "en" cambia algo; cualquier otro valor se ignora
   if (pedido.modo === "temporada") {
     if (!datos.tendencias.some(t => t.temporada === pedido.temporada)) return json({ error: "No encontramos esa temporada" }, 404);
     const contexto = armarContextoTemporada(pedido.temporada, marca);
     try {
-      let salida = await preguntar(key, modelo, contexto, "", SYSTEM_PROMPT_TEMPORADA);
+      let salida = await preguntar(key, modelo, contexto, "", SYSTEM_PROMPT_TEMPORADA + extraIdioma);
       let problemas = revisarTemporada(salida, contexto);
       if (problemas.length) {
-        salida = await preguntar(key, modelo, contexto, "Tu respuesta anterior tenía estos problemas, corregilos: " + problemas.join("; "), SYSTEM_PROMPT_TEMPORADA);
+        salida = await preguntar(key, modelo, contexto, "Tu respuesta anterior tenía estos problemas, corregilos: " + problemas.join("; "), SYSTEM_PROMPT_TEMPORADA + extraIdioma);
         problemas = revisarTemporada(salida, contexto);
       }
       // Lo que no pasa el control no se muestra: solo tendencias de la lista, sin repetir
@@ -194,10 +195,10 @@ export default async (req) => {
   if (!t) return json({ error: "No encontramos esa tendencia" }, 404);
   const contexto = armarContexto(t, marca);
   try {
-    let salida = await preguntar(key, modelo, contexto);
+    let salida = await preguntar(key, modelo, contexto, "", SYSTEM_PROMPT + extraIdioma);
     let problemas = revisar(salida, contexto);
     if (problemas.length) {   // un reintento, diciendole que corregir
-      salida = await preguntar(key, modelo, contexto, "Tu respuesta anterior tenía estos problemas, corregilos: " + problemas.join("; "));
+      salida = await preguntar(key, modelo, contexto, "Tu respuesta anterior tenía estos problemas, corregilos: " + problemas.join("; "), SYSTEM_PROMPT + extraIdioma);
       problemas = revisar(salida, contexto);
     }
     salida.lectura = (salida.lectura || []).filter(f => f && typeof f.texto === "string");

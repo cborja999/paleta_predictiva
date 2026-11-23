@@ -229,6 +229,10 @@ Devolvé solo un JSON con esta forma:
 }
 ```
 
+### Si la página está en inglés
+
+El pedido lleva `idioma: "en"` y al final del system prompt se agrega `IDIOMA_EN` (en `netlify/functions/prompt.mjs`): la IA escribe sus textos en inglés, pero las claves del JSON, los ids y los valores de `dato` no cambian, así que los controles son los mismos. Las respuestas en inglés se guardan aparte en el navegador.
+
 ## La IA en el resto del proyecto
 
 Antes de esta app usamos IA en el análisis: Gemini clasificó 2.430 looks de Vogue Runway por color, prenda, silueta y largo (`runway_gemini/`, validado a mano con 40 fotos en `analisis/validacion_gemini_muestra.csv`: coincidió en color 33 de 40, largo 36, prenda 28 y silueta 23; por eso la página usa solo el color). Ese cruce dio un resultado nulo y por eso la hipótesis cambió (ver `hipotesis.md`). En la app final la IA solo explica y sugiere; los veredictos y la apuesta son cálculo.

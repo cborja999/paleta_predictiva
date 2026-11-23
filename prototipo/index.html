@@ -64,6 +64,13 @@ img{display:block}
 .menu a[aria-current="page"]{background:var(--oscuro);color:#fff;font-weight:700}
 .cab-der{background:var(--oscuro);color:#fff;font-size:14px;padding:7px 12px;white-space:nowrap;text-decoration:none;max-width:260px;overflow:hidden;text-overflow:ellipsis}
 .cab-der:hover{background:var(--azul)}
+.cab-fin{display:flex;align-items:center;gap:10px}
+.idioma{display:inline-flex;border:1.5px solid var(--tinta);font-size:12px;font-weight:700;letter-spacing:.06em}
+.idioma button{font:inherit;background:transparent;color:var(--tinta);border:0;padding:5px 8px;cursor:pointer;min-width:34px}
+.idioma button[aria-pressed="true"]{background:var(--tinta);color:#fff}
+.idioma button:focus-visible{outline:2px solid var(--azul);outline-offset:2px}
+.home{position:relative}
+.home .idioma{position:absolute;top:16px;right:16px}
 .cab-der[aria-current="page"]{outline:2px solid var(--oscuro);outline-offset:2px}
 @media (max-width:1100px){.menu a{font-size:15px;padding:8px 8px}}
 @media (max-width:900px){
@@ -422,7 +429,8 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 .lt-portada{display:grid;grid-template-columns:44% 1fr;min-height:min(78vh,640px);background:var(--panel)}
 .lt-portada-foto{position:relative;overflow:hidden;background:#2a2622}
 .lt-portada-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
-.pie-foto{position:absolute;left:10px;bottom:8px;font-size:11px;color:#fff;letter-spacing:.04em;text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.pie-foto{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#111;font-size:14px;letter-spacing:.06em;text-transform:uppercase;line-height:1.2}
+.pie-foto b{font-weight:700}
 .lt-panel{color:#fff;padding:22px clamp(20px,4vw,64px) 34px;display:flex;flex-direction:column}
 .lt-panel-top{display:flex;flex-wrap:wrap;gap:8px 40px;align-items:center;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.55)}
 .lt-panel-top .sel-anio{margin-left:auto}
@@ -739,6 +747,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 </head>
 <body>
 <section class="home" id="home" aria-label="Inicio">
+  <div class="idioma" role="group" aria-label="Idioma / Language"><button type="button" data-idioma="es" lang="es">ES</button><button type="button" data-idioma="en" lang="en">EN</button></div>
   <div class="home-centro">
     <p class="caps">Fashion weeks · Nueva York, Londres, Milán y París</p>
     <h1 class="home-marca">Paleta Predictiva</h1>
@@ -758,7 +767,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
         <a href="#brief/FW2025" data-sec="brief" id="menu-brief">Tu brief</a>
         <a href="#racional" data-sec="racional">Racional</a>
       </nav>
-      <a class="cab-der" id="cab-der" href="#perfil">Creá tu perfil</a>
+      <div class="cab-fin"><div class="idioma" role="group" aria-label="Idioma / Language"><button type="button" data-idioma="es" lang="es">ES</button><button type="button" data-idioma="en" lang="en">EN</button></div><a class="cab-der" id="cab-der" href="#perfil">Creá tu perfil</a></div>
     </div>
   </header>
   <main id="pantalla" tabindex="-1"></main>
@@ -768,10 +777,45 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 </div>
 
 <script src="datos.js"></script>
+<script src="en.js"></script>
 <script>
 (function(){
   "use strict";
   var D = window.DATOS, T = D.tendencias;
+  // Idioma: español (como está escrito) o inglés. En inglés, lo que se muestra pasa por el diccionario de en.js
+  // (prototipo/i18n/). Los datos y las reglas no cambian; solo el texto.
+  var IDIOMA = (function(){ try { return localStorage.getItem('pp_idioma_v1') === 'en' ? 'en' : 'es'; } catch (e){ return 'es'; } })(), EN = IDIOMA === 'en';
+  function L(es, en){ return EN ? en : es; }
+  var TR = (function(){
+    if (!EN || !window.EN_DIC) return null;
+    var dic = window.EN_DIC, letra = /[0-9A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/, B = '0-9A-Za-zÁÉÍÓÚÜÑáéíóúüñ';
+    var alt = Object.keys(dic).sort(function(a, b){ return b.length - a.length; }).map(function(k){
+      return (letra.test(k[0]) ? '(?<![' + B + '])' : '') + k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + (letra.test(k[k.length - 1]) ? '(?![' + B + '])' : '');
+    });
+    return {re: new RegExp(alt.join('|'), 'g'), dic: dic};
+  })();
+  function tr(x){ return TR && x && /[A-Za-zÁ-ú]/.test(x) ? x.replace(TR.re, function(m){ return TR.dic[m]; }) : x; }
+  var ATRS = ['aria-label', 'title', 'placeholder', 'alt', 'data-titulo'], NO_TR = 'script,style,[data-no-tr]';
+  // Lo ya traducido no se vuelve a traducir (cada nodo recuerda su última traducción): así nunca entra en un bucle
+  function traducirAtr(el){ ATRS.forEach(function(a){ var x = el.getAttribute && el.getAttribute(a); if (x && !(el._tr && el._tr[a] === x)){ var y = tr(x); (el._tr = el._tr || {})[a] = y; if (y !== x) el.setAttribute(a, y); } }); }
+  function traducirTexto(n){ var x = n.nodeValue; if (n._tr === x) return; var y = tr(x); n._tr = y; if (y !== x) n.nodeValue = y; }
+  function traducir(raiz){
+    if (!TR || !raiz) return;
+    if (raiz.nodeType === 3){ if (!(raiz.parentNode && raiz.parentNode.closest && raiz.parentNode.closest(NO_TR))) traducirTexto(raiz); return; }
+    if (raiz.nodeType !== 1 || raiz.closest(NO_TR)) return;
+    var w = document.createTreeWalker(raiz, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, {acceptNode: function(n){ return n.nodeType === 1 && n.matches(NO_TR) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT; }}), n = raiz;
+    do { if (n.nodeType === 3) traducirTexto(n); else traducirAtr(n); } while ((n = w.nextNode()));
+  }
+  if (TR){
+    document.documentElement.lang = 'en';
+    new MutationObserver(function(ms){ ms.forEach(function(m){ if (m.type === 'attributes') traducirAtr(m.target); else m.addedNodes.forEach(traducir); }); })
+      .observe(document.documentElement, {childList: true, subtree: true, attributes: true, attributeFilter: ATRS});
+    document.title = tr(document.title); traducir(document.body);
+  }
+  document.querySelectorAll('[data-idioma]').forEach(function(b){
+    b.setAttribute('aria-pressed', String(b.dataset.idioma === IDIOMA));
+    b.addEventListener('click', function(){ if (b.dataset.idioma === IDIOMA) return; try { localStorage.setItem('pp_idioma_v1', b.dataset.idioma); } catch (e){} location.reload(); });
+  });
   var TEMP = {SS2024:'Primavera 2024', FW2024:'Otoño 2024', SS2025:'Primavera 2025', FW2025:'Otoño 2025', SS2026:'Primavera 2026', FW2026:'Otoño 2026'};
   var TEMPORADAS = ['FW2025', 'SS2025', 'FW2024', 'SS2024'];
   var MES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
@@ -787,10 +831,11 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
   function borrarPerfil(){ try { localStorage.removeItem(CLAVE_PERFIL); } catch (e){} }
   function rubroPerfil(){ var p = perfil(); return p && p.rubro !== 'varios' ? p.rubro : ''; }
   function $(id){ return document.getElementById(id); }
-  function mes(m){ var p = m.split('-'); return MES[+p[1]-1] + ' de ' + p[0]; }
-  function lista(xs){ return xs.join(', ').replace(/, ([^,]*)$/, ' y $1'); }
+  var MES_EN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function mes(m){ var p = m.split('-'); return EN ? MES_EN[+p[1]-1] + ' ' + p[0] : MES[+p[1]-1] + ' de ' + p[0]; }
+  function lista(xs){ return xs.join(', ').replace(/, ([^,]*)$/, L(' y ', ' and ') + '$1'); }
   function pct(n){ return (n > 0 ? '+' : n < 0 ? '−' : '') + Math.abs(n) + '%'; }
-  function num(n, d){ return n.toLocaleString('es-AR', {minimumFractionDigits:d, maximumFractionDigits:d}); }
+  function num(n, d){ return n.toLocaleString(L('es-AR', 'en-US'), {minimumFractionDigits:d, maximumFractionDigits:d}); }
   function pp(n){ return (n > 0 ? '+' : n < 0 ? '−' : '') + num(Math.abs(n), 1) + ' pp'; }
   function esc(x){ return String(x).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
   function slug(s){ return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-'); }
@@ -868,7 +913,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       });
     }, {passive:true});
   })();
-  $('home-paleta-pie').innerHTML = 'La paleta de la pasarela, ' + temps(D.colores_meta.recientes).replace(/, .* y /, ' a ') +
+  $('home-paleta-pie').innerHTML = 'La paleta de la pasarela, ' + temps(D.colores_meta.recientes).replace(/, .* (y|and) /, L(' a ', ' to ')) +
     '<span class="solo-compu">: cada franja es un color, del ancho de cuánto se vio</span>';
   $('home-paleta').innerHTML = D.colores.slice().sort(function(a, b){ return b.reciente - a.reciente; }).map(function(c, i){
     return '<span style="flex:' + c.reciente + ';background:' + c.hex + ';animation-delay:' + (i * 0.06) + 's" title="' + c.nombre + ' · ' + num(c.reciente, 1) + '% de los looks"></span>';
@@ -896,7 +941,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     var txt = n ? (s === 'FW2025' ? 'Pasan a «sin señal clara» al limitar la lectura a marzo–julio de 2025. Ninguna se da vuelta. No es una cuarta categoría.'
                                   : 'Pasan a «sin señal clara» sin agosto y septiembre de 2025, cuando Google empezó a medir distinto. Ninguna se da vuelta.')
                 : 'Se apoyan en un pico de un solo mes. El veredicto no cambia, pero conviene mirar la curva.';
-    return '<div class="banda-cautela"><b class="n">' + (n || a) + ' de ' + v.length + '</b><div><strong>' + (n ? 'Lecturas sensibles al período' : 'Lecturas con un pico de un mes') + '</strong><span>' + txt + '</span></div></div>';
+    return '<div class="banda-cautela"><b class="n">' + (n || a) + L(' de ', ' of ') + v.length + '</b><div><strong>' + (n ? 'Lecturas sensibles al período' : 'Lecturas con un pico de un mes') + '</strong><span>' + txt + '</span></div></div>';
   }
   // Foto de portada de una temporada: la primera tendencia que se queda con confianza alta
   function tapaDe(s){ var v = deTemporada(s); return v.filter(function(t){ return t.veredicto === 'queda' && t.confianza === 'Alta'; })[0] || v[0] || vistasDe(s)[0]; }
@@ -981,7 +1026,7 @@ function prensaHTML(t, max){
   if (!notas.length) return '';
   // La nota que nombró la tendencia no va acá: está arriba ("la nombró…") y en los datos de la ficha
   return '<aside class="prensa" aria-label="En la prensa"><h4>En la prensa</h4><ul>' + notas.map(function(n){
-    return '<li class="pr-gran"><q class="pr-cita">' + esc(n.cita || n.titulo) + '</q><span class="pr-de"><span><b>' + esc(n.medio) + '</b>' + (fecha(n.fecha) ? ' · ' + fecha(n.fecha) : '') + '</span>' + abrir(n.url) + '</span></li>';
+    return '<li class="pr-gran"><q class="pr-cita" data-no-tr>' + esc(n.cita || n.titulo) + '</q><span class="pr-de"><span><b>' + esc(n.medio) + '</b>' + (fecha(n.fecha) ? ' · ' + fecha(n.fecha) : '') + '</span>' + abrir(n.url) + '</span></li>';
   }).join('') + '</ul></aside>';
 }
 function curvita(t){
@@ -991,7 +1036,7 @@ function curvita(t){
       '<line x1="' + (11.5 / 23 * W).toFixed(1) + '" x2="' + (11.5 / 23 * W).toFixed(1) + '" y1="0" y2="' + H + '" stroke="#b9b8b3" stroke-dasharray="2 3"/>' +
       '<path d="' + d + '" fill="none" stroke="#8a6a3a" stroke-width="1.6"/></svg><figcaption>' + esc(t.termino) + ' · antes y después del desfile</figcaption></figure>';
   }
-  function pie(t, n){ var m = marcaDesfile(t, n); return m ? '<span class="pie-foto">' + esc(m) + ' · ' + nomS(t.temporada) + '</span>' : ''; }
+  function pie(t, n){ var m = marcaDesfile(t, n); return m ? '<span class="pie-foto"><b>' + esc(m) + '</b> · ' + nomS(t.temporada) + '</span>' : ''; }
 
   // A04 / A05 · Una temporada: prendas, colores e IA, con el tono de verano o de invierno
   function tarjeta(t){
@@ -1000,7 +1045,7 @@ function curvita(t){
       '<div class="t-foto" data-nombre="' + esc(t.nombre) + '">' + img(t, 1) + '<span class="cred">' + esc(marcaDesfile(t, 1)) + '</span></div>' +
       '<div class="t-cuerpo"><h3>' + t.nombre + '</h3><span><span class="chip chico ' + t.veredicto + '">' + ETIQ[t.veredicto] + '</span>' + (deMiRubro(t) ? ' <span class="chip chico mio">Tu rubro</span>' : '') + '</span>' +
         '<b class="grande' + (t.veredicto === 'riesgo' ? ' riesgo-num' : '') + '">' + pct(t.bruto_pct) + '</b>' +
-        '<span class="bajo">búsquedas · temporada ' + pct(t.temporada_pct) + '</span>' +
+        '<span class="bajo">búsquedas</span>' +
         '<span class="conf">Confianza ' + t.confianza.toLowerCase() + '</span>' +
         '<span class="boton flecha">Ver detalle de la prenda </span></div>' +
       '<div class="t-pie' + (pie ? '' : ' limpio') + '">' + (pie || 'Sin advertencias adicionales') + '</div></a>';
@@ -1044,7 +1089,7 @@ function curvita(t){
           '<div class="lt-cols">' + top.map(function(t){
             return '<a class="lt-col" href="#t/' + t.id + '" data-tono><b>' + t.nombre + '</b>' + flecha(t) +
               '<span class="lt-col-foto">' + img(t, 1) + '</span><span class="lt-col-num">' + pct(t.bruto_pct) + '</span>' +
-              '<span class="lt-col-pie">búsquedas · temporada ' + pct(t.temporada_pct) + '</span><span class="lt-col-sello">' + sello(t) + '</span></a>';
+              '<span class="lt-col-pie">búsquedas</span><span class="lt-col-sello">' + sello(t) + '</span></a>';
           }).join('') + '</div></section>' : '') +
         // Todas: una doble página por tendencia, con fotos de tamaños distintos, alternando el lado
         '<section class="s-sec"' + (top.length ? '' : ' id="s-prendas"') + '><h2 class="lt-h2">' + (conV ? 'Todas las tendencias' : 'Lo que se vio') + '</h2>' +
@@ -1115,7 +1160,7 @@ function curvita(t){
     var aviso = avisoTexto(t);
     return '<div class="pantalla tono-' + tipoS(t.temporada) + ' ficha-tono lt"><div class="wrap">' +
       '<nav class="miga" aria-label="Ubicación"><a href="#season/' + t.temporada + '">← Temporadas / ' + nomS(t.temporada) + ' / Prendas / ' + (RUBRO_NOM[t.rubro] || '') + '</a>' +
-        '<span class="pasar"><a href="#t/' + ant.id + '" aria-label="Tendencia anterior: ' + esc(ant.nombre) + '">← Anterior</a><span>' + (i + 1) + ' de ' + l.length + '</span><a href="#t/' + sig.id + '" aria-label="Tendencia siguiente: ' + esc(sig.nombre) + '">Siguiente →</a></span></nav>' +
+        '<span class="pasar"><a href="#t/' + ant.id + '" aria-label="Tendencia anterior: ' + esc(ant.nombre) + '">← Anterior</a><span>' + (i + 1) + L(' de ', ' of ') + l.length + '</span><a href="#t/' + sig.id + '" aria-label="Tendencia siguiente: ' + esc(sig.nombre) + '">Siguiente →</a></span></nav>' +
       '<div class="lt-ficha">' +
         '<div class="lt-f-izq"><h1 class="titulo-foco" tabindex="-1">' + t.nombre + '</h1>' +
           '<p class="donde">' + nomS(t.temporada) + ' · ' + (RUBRO_NOM[t.rubro] || '') + ' · desfiles de ' + mes(t.mes_desfile) + '</p>' +
@@ -1158,8 +1203,8 @@ function curvita(t){
           '<div class="fila"><span>Período previo</span><b>' + num(c.previo, 1) + '%</b></div><div class="pista"><i style="width:' + (c.previo / mx * 100).toFixed(1) + '%;background:#6b5546"></i></div>' +
           '<div class="fila"><span>Período observado</span><b>' + num(c.reciente, 1) + '%</b></div><div class="pista"><i style="width:' + (c.reciente / mx * 100).toFixed(1) + '%;background:' + c.hex + ';outline:1px solid rgba(0,0,0,.08)"></i></div>' +
           '<p class="chica">Promedio de las tres temporadas de cada período. La variación se calcula sin redondear, por eso puede no coincidir con la resta de los números redondeados.</p></div>' +
-        '<h2 class="subt" style="margin-top:40px;font-size:24px">Qué significa el ' + num(c.reciente, 1) + '%</h2>' +
-        '<p class="bajada" style="margin-top:12px">El ' + c.nombre.toLowerCase() + ' aparece en el ' + num(c.reciente, 1) + '% de los looks observados (1 de cada ' + c.cada + '). ' +
+        '<h2 class="subt" style="margin-top:40px;font-size:24px">' + L('Qué significa el ' + num(c.reciente, 1) + '%', 'What ' + num(c.reciente, 1) + '% means') + '</h2>' +
+        '<p class="bajada" style="margin-top:12px">' + L('El ' + c.nombre.toLowerCase() + ' aparece en el ' + num(c.reciente, 1) + '% de los looks observados (1 de cada ' + c.cada + '). ', tr(c.nombre) + ' appears in ' + num(c.reciente, 1) + '% of the observed looks (1 in every ' + c.cada + '). ') +
           (Math.abs(c.cambio_pts) < 0.05 ? 'Su presencia no cambió frente al período previo.' : 'Su presencia ' + (c.cambio_pts > 0 ? 'aumenta ' : 'baja ') + num(Math.abs(c.cambio_pts), 1) + ' puntos porcentuales frente al período previo.') + '</p>' +
       '</div></div>' +
       '<div class="dos-paneles"><div class="pizarra"><h2 class="subt">Presencia no es demanda</h2><p>Estos porcentajes describen la pasarela. No estiman ventas ni deben trasladarse directamente al mix de una colección.</p></div>' +
@@ -1337,8 +1382,8 @@ function curvita(t){
   function leerCache(clave){ try { return JSON.parse(localStorage.getItem(clave)); } catch (e){ return null; } }
   function escribirCache(clave, v){ try { localStorage.setItem(clave, JSON.stringify(v)); } catch (e){} }
   function borrarCacheIA(){ try { Object.keys(localStorage).forEach(function(k){ if (k.indexOf(CACHE) === 0) localStorage.removeItem(k); }); } catch (e){} }
-  function claveIA(tipo, id){ var p = perfil(); return p ? CACHE + huella(p) + '|' + tipo + '|' + id : ''; }
-  function fecha(iso){ var d = new Date(iso); return d.toLocaleDateString('es-AR', {day:'numeric', month:'long'}) + ', ' + d.toLocaleTimeString('es-AR', {hour:'2-digit', minute:'2-digit'}); }
+  function claveIA(tipo, id){ var p = perfil(); return p ? CACHE + huella(p) + (EN ? '|en' : '') + '|' + tipo + '|' + id : ''; }
+  function fecha(iso){ var d = new Date(iso); return d.toLocaleDateString(L('es-AR', 'en-US'), {day:'numeric', month:'long'}) + ', ' + d.toLocaleTimeString(L('es-AR', 'en-US'), {hour:'2-digit', minute:'2-digit'}); }
   function cabIA(titulo, texto, conActualizar){
     return '<div class="ia-panel"><div><p class="kicker">Para tu marca / sugerencia de IA <span class="tag ia">Inferencia de la IA</span></p>' +
       '<h2>' + titulo + '</h2><p>' + texto + '</p></div>' +
@@ -1371,7 +1416,7 @@ function curvita(t){
   function pieIA(c, j){
     return (j.problemas && j.problemas.length ? '<p class="ia-control">El control automático marcó: ' + esc(j.problemas.join('; ')) + '. Tomalo con más cuidado.</p>' : '') +
       '<p class="ia-meta">' + (j.simulada ? '<b>Respuesta simulada para probar la página.</b> ' : '') + 'Sugerencia para tu perfil · ' + fecha(c.fecha) + ' · Modelo: ' + esc(j.modelo) + (j.simulada ? '' : ' · Groq') + '</p>' +
-      '<details class="envio"><summary>Qué le mandamos a la IA</summary><pre>' + esc(JSON.stringify(j.contexto, null, 2)) + '</pre></details>';
+      '<details class="envio"><summary>Qué le mandamos a la IA</summary><pre data-no-tr>' + esc(JSON.stringify(j.contexto, null, 2)) + '</pre></details>';
   }
   function verFicha(c){
     var j = c.j, s = j.salida;
@@ -1426,7 +1471,7 @@ function curvita(t){
     if (c && c.j){ caja.innerHTML = tipo === 'temp' ? verTemporada(c) : verFicha(c); return; }
     if (!online && !SIMULAR){ caja.innerHTML = errorIA(new Error('La IA funciona en la versión online de la página (necesita el servidor).')); return; }
     caja.innerHTML = cargando(tipo);
-    var cuerpo = tipo === 'temp' ? {modo: 'temporada', temporada: id, perfil: p} : {id: id, perfil: p};
+    var cuerpo = tipo === 'temp' ? {modo: 'temporada', temporada: id, perfil: p, idioma: IDIOMA} : {id: id, perfil: p, idioma: IDIOMA};
     (SIMULAR ? simulada(tipo, id) : llamar(cuerpo)).then(function(j){
       var nuevo = {fecha: new Date().toISOString(), j: j};
       if (!j.simulada) escribirCache(clave, nuevo);
@@ -1437,7 +1482,7 @@ function curvita(t){
   }
 
   // ---------- Perfil de la marca (solo el rubro es obligatorio) ----------
-  var PRECIOS = [['', 'Elegí una opción'], ['accesible', 'Accesible'], ['medio', 'Medio'], ['alto', 'Alto / premium']];
+  var PRECIOS = [['', 'Elegí una opción'], ['accesible', 'Accesible'], ['medio', L('Medio', 'Mid-range')], ['alto', 'Alto / premium']];
   var CANALES = [['', 'Elegí una opción'], ['online', 'Online / Instagram'], ['local', 'Local propio'], ['mayorista', 'Mayorista'], ['mixto', 'Varios canales']];
   var RUBROS_PERFIL = [['', 'Elegí el rubro'], ['vestidos', 'Vestidos'], ['polleras', 'Polleras'], ['pantalones', 'Pantalones'], ['abrigos', 'Abrigos y tejidos'], ['accesorios', 'Accesorios y estampados'], ['varios', 'Varios rubros']];
   function nombreRubro(r){ var x = RUBROS_PERFIL.filter(function(o){ return o[0] === r; })[0]; return x ? x[1] : ''; }
@@ -1540,7 +1585,7 @@ function curvita(t){
   function armarBrief(forzar){
     var caja = $('brief-hoja'); if (!caja) return;
     var s = caja.dataset.s, clave = claveIA('temp', s), c = !forzar && leerCache(clave);
-    function hoy(iso){ return new Date(iso || Date.now()).toLocaleDateString('es-AR', {day: 'numeric', month: 'long', year: 'numeric'}); }
+    function hoy(iso){ return new Date(iso || Date.now()).toLocaleDateString(L('es-AR', 'en-US'), {day: 'numeric', month: 'long', year: 'numeric'}); }
     function poner(html){ var aca = $('brief-hoja'); if (aca && aca.dataset.s === s){ aca.innerHTML = html; pintarTonos(); } }
     if (c && c.j){ poner(hojaBrief(s, c.j.salida, 'ia', hoy(c.fecha))); return; }
     caja.innerHTML = cargandoBrief(s);
@@ -1585,7 +1630,7 @@ function curvita(t){
     $('menu-brief').setAttribute('href', '#brief/' + (tieneVeredicto(estado.temporada) ? estado.temporada : CON_VEREDICTO[0]));
     pintarCabecera(); if (sec === 'perfil') $('cab-der').setAttribute('aria-current', 'page'); else $('cab-der').removeAttribute('aria-current');
     var foco = main.querySelector('.titulo-foco');
-    document.title = (foco ? (foco.dataset.titulo || foco.innerText.replace(/\s+/g, ' ').trim()) + ' · ' : '') + 'Paleta predictiva';
+    document.title = (foco ? tr(foco.dataset.titulo || foco.textContent.replace(/\s+/g, ' ').trim()) + ' · ' : '') + 'Paleta predictiva';
     window.scrollTo(0, 0);
     if (foco && ir.yaEntro) foco.focus({preventScroll:true});
     if (bajarA && $(bajarA)) $(bajarA).scrollIntoView();

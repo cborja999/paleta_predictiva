@@ -56,3 +56,9 @@ Devolvé solo un JSON con esta forma:
   "resumen": "dos o tres oraciones para esta marca sobre la temporada",
   "elegidas": [ { "id": "el id de la tendencia", "por_que": "una oración", "dato": "el campo del que sale" } ]
 }`;
+
+// Si la página está en inglés, se agrega esto al final del system prompt. Las reglas son las mismas;
+// solo cambia el idioma de los textos que escribe la IA.
+export const IDIOMA_EN = `
+
+Idioma de salida: inglés. Escribí en inglés todos los textos que devolvés (frases de la lectura, para_tu_marca, ideas, resumen y cada por_que), con los nombres de las tendencias en inglés. Las claves del JSON, los ids y los valores de "dato" van exactamente como se piden arriba, sin traducir. Usá los mismos números que están en los datos. Los valores de los datos que están en español (veredicto, confianza, apuesta, aviso) contalos en inglés: "se queda" es "stays", "en riesgo" es "at risk", "probar poco" es "test small", "moderada" es "moderate bet", "fuerte" es "bet strong". No pongas palabras en español ni el nombre del campo entre paréntesis en el texto.`;
