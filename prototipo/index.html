@@ -476,6 +476,21 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 .lt-sp-nums b{display:block;font-size:clamp(46px,5vw,72px);font-weight:700;letter-spacing:-.035em;line-height:1;padding-bottom:8px;border-bottom:1px solid var(--tinta);font-variant-numeric:tabular-nums}
 .lt-sp-nums span{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-top:8px;text-align:right}
 .lt-sp-conf{font-size:14px;margin-top:16px;font-weight:400}
+.prensa{margin-top:30px;border-top:1.5px solid var(--tinta);padding-top:14px;max-width:600px}
+.prensa h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:0;display:flex;justify-content:space-between;gap:12px}
+.prensa h4 span{font-weight:400;letter-spacing:.04em;text-transform:none;color:var(--gris)}
+.prensa ul{list-style:none;margin:0;padding:0}
+.prensa li{padding:12px 0;border-bottom:1px solid var(--linea)}
+.prensa q{display:block;quotes:"“" "”"}
+.prensa .pr-de{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:12px;letter-spacing:.04em;margin-top:8px;color:var(--gris)}
+.prensa .pr-de a{color:var(--tinta);font-weight:700;text-decoration:none;border-bottom:1.5px solid currentColor;white-space:nowrap;font-size:13px}
+.prensa .pr-de a:hover{border-bottom-width:3px}
+.prensa li.pr-gran{padding:6px 0 18px;position:relative}
+.prensa li.pr-gran::before{content:"“";display:block;font-size:110px;line-height:.8;font-weight:700;height:56px;margin-top:10px;color:var(--tinta)}
+.prensa li.pr-gran q{font-size:clamp(22px,2.3vw,30px);line-height:1.18;font-weight:500;letter-spacing:-.015em;quotes:none}
+.prensa li.pr-gran .pr-de{font-size:13px;margin-top:14px;color:var(--tinta);text-transform:uppercase;letter-spacing:.08em}
+.prensa li.pr-gran .pr-de b{font-weight:700}
+.prensa li.pr-chica q{font-size:15px;line-height:1.35;font-weight:400}
 .lt-ver{display:inline-block;margin-top:14px;font-weight:700;text-decoration:none;border-bottom:1.5px solid currentColor}
 .lt-sp-alta{position:relative;display:block;background:var(--crema);overflow:hidden;min-height:440px}
 .lt-sp-alta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .7s ease}
@@ -931,7 +946,24 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     return '<span class="sello ' + cl + '">' + (t.veredicto === 'queda' ? 'Se queda' : t.veredicto === 'riesgo' ? 'En riesgo' : 'Sin veredicto') + '</span>' + (cuidado(t) ? '<span class="sello cautela">Con cautela</span>' : '');
   }
   // La curvita del LIVETREND: los 24 meses, con el desfile marcado
-  function curvita(t){
+  // Notas de prensa que hablan de la tendencia: contexto, no un dato. Primero la nota que la nombró (de donde sale
+// la tendencia) y después las que leímos a mano, con una cita textual corta.
+function prensaHTML(t, max){
+  var MESES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  function fecha(f){ var p = (f || '').split('-'); return p.length > 1 ? MESES[+p[1] - 1] + ' ' + p[0] : ''; }
+  function abrir(url){ return '<a href="' + url + '" target="_blank" rel="noopener">Abrir artículo ↗<span class="sr"> (se abre en otra pestaña)</span></a>'; }
+  var notas = (t.prensa || []).map(function(n){
+    return { q: n.cita || n.titulo, de: n.medio + (fecha(n.fecha) ? ' · ' + fecha(n.fecha) : ''), url: n.url };
+  }).slice(0, max || 9);
+  var original = { q: t.tendencia_fuente, de: t.medio + ' · la nota que la nombró', url: t.url_fuente };
+  // La cita de prensa va grande; si no hay, va grande la nota que la nombró
+  var lista = notas.length ? notas.concat([original]) : [original];
+  var items = lista.map(function(n, i){
+    return '<li class="' + (i ? 'pr-chica' : 'pr-gran') + '"><q>' + esc(n.q) + '</q><span class="pr-de"><span>' + (i ? esc(n.de) : '<b>' + esc(n.de.split(' · ')[0]) + '</b>' + (n.de.indexOf(' · ') > -1 ? ' · ' + esc(n.de.split(' · ').slice(1).join(' · ')) : '')) + '</span>' + abrir(n.url) + '</span></li>';
+  });
+  return '<aside class="prensa" aria-label="En la prensa"><h4>En la prensa <span>contexto, no un dato</span></h4><ul>' + items.join('') + '</ul></aside>';
+}
+function curvita(t){
     var s = t.serie.slice(-24), W = 260, H = 70, v = s.filter(function(x){ return x != null; }), mx = Math.max.apply(null, v) || 1;
     var d = ''; s.forEach(function(y, i){ if (y == null) return; d += (d ? 'L' : 'M') + (i / 23 * W).toFixed(1) + ' ' + (H - y / mx * H).toFixed(1); });
     return '<figure class="curvita"><svg viewBox="-2 -4 ' + (W + 4) + ' ' + (H + 8) + '" role="img" aria-label="Búsquedas de ' + esc(t.termino) + ', 12 meses antes y 12 después del desfile">' +
@@ -1005,6 +1037,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
                 '<div class="lt-sp-chica"><span class="f">' + img(t, 2) + '</span>' + curvita(t) + '</div>' +
                 '<div class="lt-sp-nums"><div><b>' + pct(t.bruto_pct) + '</b><span>búsquedas</span></div><div><b class="' + (t.veredicto === 'riesgo' ? 'riesgo-num' : '') + '">' + pct(t.cambio_pct) + '</b><span>contra su temporada</span></div></div>' +
                 '<p class="lt-sp-conf">Confianza ' + t.confianza.toLowerCase() + ' · apuesta ' + APUESTA[t.apuesta].toLowerCase() + (pieCautela(t) ? ' · ' + pieCautela(t).toLowerCase() : '') + '</p>' +
+                prensaHTML(t, 1) +
                 '<a class="lt-ver" href="#t/' + t.id + '">Ver el análisis →</a></div>' +
               '<a class="lt-sp-alta" href="#t/' + t.id + '" aria-label="' + esc(t.nombre) + ': ver el análisis">' + img(t, 1) + '<span class="lt-sellos">' + sello(t) + '</span>' + pie(t, 1) + '</a></article>';
           }).join('') : '<div class="lt-vistas">' + l.map(function(v, i){
@@ -1069,6 +1102,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
           '<div class="lt-sp-nums grande"><div><b>' + pct(t.bruto_pct) + '</b><span>búsquedas de «' + esc(t.termino) + '»</span></div><div><b class="' + (sube ? '' : 'riesgo-num') + '">' + pct(t.cambio_pct) + '</b><span>' + (sube ? 'por encima' : 'por debajo') + ' de su temporada</span></div></div>' +
           '<p class="f-frase">' + frase + '</p>' +
           '<dl class="lt-f-datos"><div><dt>Confianza</dt><dd>' + t.confianza + '</dd></div><div><dt>Cuánto apostar</dt><dd>' + APUESTA[t.apuesta] + '</dd></div><div><dt>Fuente</dt><dd><a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '</a></dd></div><div><dd><span class="tag">Calculado</span></dd></div></dl>' +
+          prensaHTML(t) +
         '</div>' +
         '<div class="lt-f-alta">' + img(t, 1) + '<span class="lt-sellos">' + sello(t) + '</span>' + pie(t, 1) + '</div>' +
       '</div><div class="lt-f-resto">' +

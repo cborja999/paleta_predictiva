@@ -190,6 +190,12 @@ REGLA_APUESTA = ("En riesgo: probar poco. Se queda con confianza alta y sin avis
 def apuesta(t):
     if t["veredicto"] == "riesgo": return "baja"
     return "alta" if t["confianza"] == "Alta" and not t["aviso"] and not t["nota"] else "media"
+# Notas de prensa que hablan de la tendencia (prototipo/prensa_tendencias.csv): leídas a mano, con una cita textual
+# corta. Es contexto, no un dato: no entra en ningún cálculo ni en la IA.
+PRENSA = {}
+with open(RAIZ / "prototipo" / "prensa_tendencias.csv", encoding="utf-8", newline="") as fh:
+    for r in csv.DictReader(fh):
+        PRENSA.setdefault(r["id"], []).append({k: r[k] for k in ("medio", "titulo", "fecha", "url", "cita")})
 med_temp = {}
 for t in tendencias:
     t["b0"], t["b1"] = round(promedio(t["serie"][:12]), 2), round(promedio(t["serie"][12:]), 2)
@@ -200,6 +206,7 @@ for t in tendencias:
     t["temporada_pct"] = round((math.exp(med) - 1) * 100)         # cuánto se movió la temporada (mediana)
     t["esperado"] = round(t["b0"] * math.exp(med), 2)             # dónde estaría si se hubiera movido como la temporada
     t["desfiles"] = desfiles(t["id"])
+    t["prensa"] = PRENSA.get(t["id"], [])
     t["apuesta"] = apuesta(t)
 
 
