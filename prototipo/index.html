@@ -506,8 +506,8 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 .prensa li{padding:12px 0;border-bottom:1px solid var(--linea)}
 .prensa q{display:block;quotes:"“" "”"}
 .prensa .pr-de{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:12px;letter-spacing:.04em;margin-top:8px;color:var(--gris)}
-.prensa .pr-de a{background:var(--tono,var(--azul));color:#fff;font-weight:700;text-decoration:none;white-space:nowrap;font-size:13px;padding:7px 12px;letter-spacing:.04em;transition:background .6s ease,filter .2s ease}
-.prensa .pr-de a:hover{filter:brightness(1.18)}
+.prensa .pr-de a{color:var(--tono,var(--azul));font-weight:700;text-decoration:none;white-space:nowrap;font-size:13px;letter-spacing:.04em;border-bottom:2px solid currentColor;padding-bottom:1px;transition:color .6s ease}
+.prensa .pr-de a:hover{border-bottom-width:4px}
 .prensa .pr-de a:focus-visible{outline:2px solid var(--tinta);outline-offset:2px}
 .prensa li.pr-gran{padding:6px 0 18px;position:relative}
 .prensa li.pr-gran::before{content:"“";display:block;font-size:110px;line-height:.8;font-weight:700;height:56px;margin-top:10px;color:var(--tinta)}
@@ -1014,7 +1014,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       return (TONOS[im.src] = 'hsl(' + hh + ' ' + Math.round(ss * 100) + '% ' + Math.round(l * 100) + '%)');
     } catch (e){ return null; }
   }
-  // Para el botón de "Abrir artículo": el mismo tono de la foto, con más color y oscuro para que el texto blanco se lea
+  // Para el link "Abrir artículo": el mismo tono de la foto, con más color y oscuro para que se lea sobre blanco
   function vivo(hsl){ var m = /hsl\((\d+)\D+(\d+)%\D+(\d+)%/.exec(hsl); return m ? 'hsl(' + m[1] + ' ' + Math.max(+m[2], 48) + '% 34%)' : hsl; }
   function pintarTonos(){
     main.querySelectorAll('[data-tono] img').forEach(function(im){
