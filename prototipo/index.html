@@ -983,7 +983,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
           '<div class="lt-flechas" aria-hidden="true">' + (conV ? flecha({veredicto: 'queda'}) + flecha({veredicto: q >= r ? 'queda' : 'riesgo'}) : '') + '</div>' +
           '<p>' + texto + '</p>' +
           (conV ? '<p class="lt-fuerte">Las búsquedas de toda la temporada ' + (deTemporada(s)[0].temporada_pct >= 0 ? 'subieron ' : 'bajaron ') + pct(deTemporada(s)[0].temporada_pct) + ' el año después del desfile. Cada tendencia se compara contra eso.</p>' : '') +
-          '<div class="lt-tabs"><a href="#season/' + s + '" data-ir-sec="s-prendas">Prendas</a><a href="#season/' + s + '/colores" data-ir-sec="s-colores">Colores</a>' + (conV ? '<a class="lleno" href="#brief/' + s + '">Tu brief para llevar ↓</a>' : '') + '</div></div></section>' +
+          '<div class="lt-tabs"><a href="#season/' + s + '" data-ir-sec="s-prendas">Ver las tendencias</a>' + (conV ? '<a class="lleno" href="#brief/' + s + '">Tu brief para llevar ↓</a>' : '') + '</div></div></section>' +
       '<div class="wrap">' +
         (conV ? bloqueIATemporada(s) : '') +
         // Top de la temporada: columnas altas, cada una con el color de su foto
@@ -1011,16 +1011,9 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
             return '<figure class="lt-vista' + (i % 3 === 1 ? ' alta' : '') + '"><span class="f">' + img(v, 1) + '</span><figcaption><b>' + v.nombre + '</b><span>La nombró <a href="' + v.url_fuente + '" target="_blank" rel="noopener">' + v.medio + '</a></span></figcaption></figure>';
           }).join('') + '</div>') +
           (conV ? '<p class="leyenda-senal">↗ SE QUEDA: supera a su temporada · ↘ EN RIESGO: queda por debajo · las que no llegan a ±10% quedan sin señal clara.</p>' : '') + '</section>' +
-        // Colores: la franja de la pasarela, cada color del ancho de cuánto se vio
-        '<section id="s-colores" class="s-sec"><h2 class="lt-h2">Colores de la pasarela</h2>' +
-          '<p class="lt-bajada">Cuánto se vio cada color en looks de Vogue Runway de ' + temps(CM.recientes).replace(/, .* y /, ' a ') + ', medido con Gemini (acertó el color en 33 de 40 fotos revisadas a mano). <b>Es la misma paleta en todas las temporadas:</b> no tenemos colores medidos para ' + nomS(s) + '. Presencia no es permanencia.</p>' +
-          '<div class="lt-franja" role="img" aria-label="Los colores de la pasarela, cada uno del ancho de cuánto se vio">' + COL.map(function(c){ return '<span style="flex:' + c.reciente + ';background:' + c.hex + '"></span>'; }).join('') + '</div>' +
-          '<ul class="lt-colores">' + COL.map(function(c){
-            return '<li><a href="#color/' + slug(c.nombre) + '"><i style="background:' + c.hex + '"></i><b>' + c.nombre + '</b><span>' + num(c.reciente, 1) + '% · ' + pp(c.cambio_pts) + '</span></a></li>';
-          }).join('') + '</ul></section>' +
       '</div>' +
-      '<section class="s-pie ' + k + '"><div class="wrap"><h2 class="subt">' + (k === 'summer' ? 'El año y la temporada se mantienen al explorar' : 'Misma temporada, dos lecturas distintas') + '</h2>' +
-        '<p>' + (k === 'summer' ? 'Prendas y Colores pertenecen a ' + nomS(s) + '. Cambiar de apartado no mezcla períodos ni temporadas.' : 'Las prendas muestran búsquedas en Google; los colores, presencia medida en la pasarela. Son indicadores distintos.') + '</p>' +
+      '<section class="s-pie ' + k + '"><div class="wrap"><h2 class="subt">' + nomS(s) + '</h2>' +
+        '<p>Las búsquedas son de todo el mundo, el año después del desfile. No son ventas: validá con tu mercado antes de producir.</p>' +
         '<div class="s-pie-acc"><a class="link-pie" href="#temporadas">← Elegir otra temporada</a><a class="boton ' + (k === 'summer' ? 'claro' : 'borde') + ' flecha" href="#season/' + otra + '">Explorar ' + nomS(otra) + ' </a></div></div></section>' +
       '</div>';
   }
@@ -1206,6 +1199,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
           '<li><b>El segundo año de 2024 y 2025:</b> por el mismo motivo, todavía no se puede medir limpio.</li>' +
           '<li><b>Búsquedas de Argentina:</b> con ellas la regla no se confirmó.</li>' +
           '<li><b>Prenda y silueta de Gemini:</b> aciertan poco (28 y 23 de 40). Solo usamos el color.</li>' +
+          '<li><b>Colores por temporada:</b> la clasificación llega hasta primavera 2024; mostrar la misma paleta en todas las temporadas confundía, así que la sacamos de cada temporada.</li>' +
           '<li><b>Números de informes pagos</b> (LIVETREND, WGSN): no se pueden verificar.</li>' +
           '<li><b>Las tendencias "sin señal clara"</b> (' + D.sin_senal + '): no llegan al umbral; no se muestran como veredicto.</li></ul></section>' +
 
@@ -1223,7 +1217,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
       '<section class="rac-sec" id="r-diseno"><h2 class="lt-h2">06 · Decisiones de diseño</h2>' +
         tabla(['Pantalla', 'Lo más importante', 'Cómo lo jerarquizamos'], [
           ['Home', 'Que se entienda qué es y crear el perfil', 'El nombre que se pinta con los colores de la pasarela; un solo botón principal'],
-          ['Elegí la temporada', 'Llegar a una temporada en un clic', 'Una fila por año con sus dos temporadas, foto, color y conteo; la más nueva marcada'],
+          ['Elegí la temporada', 'Llegar a una temporada en un clic', 'Una fila por año con sus dos temporadas, foto y color; la más nueva marcada; sin conteos'],
           ['Una temporada', 'Qué se queda y qué está en riesgo', 'Portada partida; top en columnas con el número enorme encima del look; una doble página por tendencia con sello'],
           ['Ficha', 'El número contra su temporada y la confianza', 'Números grandes, sello sobre la foto, curvita; la IA abajo y aparte'],
           ['Brief', 'Cuánto apostar en cada una', 'Agrupado por apuesta; lo de la IA con su etiqueta'],
@@ -1240,7 +1234,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
         '<li><b>2026:</b> solo observación, sin veredicto.</li>' +
         '<li><b>Tendencias:</b> ' + (nV + D.sin_senal) + ' tendencias puntuales (prendas, detalles, estampados y algunos colores): ' + nV + ' con veredicto (' + nQ + ' se quedan, ' + nR + ' en riesgo) y ' + D.sin_senal + ' sin señal clara.</li>' +
         '<li><b>Búsquedas:</b> en todo el mundo, en inglés, no en Argentina.</li>' +
-        '<li><b>Colores:</b> 15 casas de lujo en Vogue Runway, de 2023 a primavera 2024.</li>' +
+        '<li><b>Colores:</b> medidos en 15 casas de lujo de Vogue Runway, de 2023 a primavera 2024. Solo se muestran en el home: para las temporadas de la app (de otoño 2024 a 2026) no hay colores medidos, así que no se muestran por temporada.</li>' +
         '<li><b>Rubros:</b> vestidos, polleras, pantalones, abrigos y tejidos, accesorios y estampados.</li></ul>' +
         '<h3>Lo que no dicen los datos</h3><ul>' +
           '<li>Google mide búsquedas, es decir, interés. No ventas.</li>' +
@@ -1483,9 +1477,6 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
             (e.por_que ? '<span class="bh-porque">' + esc(e.por_que) + ' <i>IA</i></span>' : '') + '</div></div>';
         }).join('') + '</section>';
       }).join('') + '</div>' +
-      '<div class="bh-paleta"><p class="bh-k">Colores de la pasarela · ' + temps(CM.recientes).replace(/, .* y /, ' a ') + ' · misma paleta en todas las temporadas</p>' +
-        '<div class="lt-franja">' + COL.map(function(c){ return '<span style="flex:' + c.reciente + ';background:' + c.hex + '"></span>'; }).join('') + '</div>' +
-        '<p class="bh-colores">' + COL.slice(0, 6).map(function(c){ return '<span><i style="background:' + c.hex + '"></i>' + c.nombre + ' ' + num(c.reciente, 1) + '%</span>'; }).join('') + '</p></div>' +
       '<footer class="bh-pie"><p><b>Calculado:</b> veredictos, números, confianza y cuánto apostar (regla fija), con búsquedas mundiales de Google el año después del desfile contra su temporada. ' +
         '<b>Inferencia de la IA:</b> ' + (conIA ? 'la selección, el resumen y cada porqué.' : 'nada en esta lámina.') + '</p>' +
         '<p>Búsquedas no son ventas. Validá con tu mercado antes de producir. · paleta-predictiva.netlify.app</p></footer>' +
@@ -1523,7 +1514,6 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
     else if (sec === 'season'){
       if (!TEMP[p[1]]){ location.replace('#temporadas'); return; }
       estado.temporada = p[1]; html = pantallaSeason(p[1]); sec = 'temporadas';
-      if (p[2] === 'colores') bajarA = 's-colores';
     }
     else if (sec === 't'){ var t = porId(p[1]); if (!t){ location.replace('#temporadas'); return; } estado.temporada = t.temporada; html = pantallaFicha(t); sec = 'temporadas'; }
     else if (sec === 'color'){ var c = COL.filter(function(x){ return slug(x.nombre) === p[1]; })[0]; if (!c){ location.replace('#season/' + estado.temporada + '/colores'); return; } html = pantallaColor(c); sec = 'temporadas'; }

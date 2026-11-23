@@ -36,7 +36,6 @@ El agente (Claude Code) leyó el Figma con el conector de Figma: las 14 pantalla
    - **Portada de cada season partida:** foto grande y bloque de color liso, con el nombre de la season en minúscula grande y flechas finas.
    - **"Top de la season" en columnas altas:** las 5 que más se movieron, cada una con **el color sacado de su propia foto** (la página promedia la imagen y lo lleva a un tono tierra). El número va grande, encima del look.
    - **Una doble página por tendencia:** foto alta con un **sello** ("SE QUEDA", "EN RIESGO", "CON CAUTELA"), foto chica, la curvita de búsquedas y los dos números grandes. Alterna de lado para no repetir la misma tarjeta.
-   - **Colores como franja:** cada color del ancho de cuánto se vio.
    - **Ficha de la tendencia como una página del informe:** nombre enorme, foto alta con sello, foto chica con la curvita y los números grandes.
 
 ### Qué se implementó con el agente y qué decidimos nosotros
@@ -72,7 +71,7 @@ El agente (Claude Code) leyó el Figma con el conector de Figma: las 14 pantalla
 |---|---|---|
 | Imágenes generadas ("imagen conceptual") en la alternativa B | Fotos de los desfiles que nombran los medios | Una foto generada no muestra la tendencia real. |
 | Números de visibilidad de LIVETREND (+82%, 550 looks) | Nuestros veredictos: búsquedas el año después del desfile contra su season | Esos números son de un informe pago que no está en el repo y no se pueden verificar. |
-| Paletas propuestas por season ("Coral", "Amarillo manteca") | La paleta medida en la pasarela, la misma en todas las seasons, y lo dice | No tenemos colores medidos por season; inventarlos sería un dato falso. |
+| Paletas propuestas por season ("Coral", "Amarillo manteca") | Sin colores por temporada; la paleta medida queda solo en el home | No tenemos colores medidos por temporada (la clasificación llega a primavera 2024). Primero mostramos la misma paleta en todas, aclarado, pero confundía. |
 | Summer y Winter 2026 como ejemplo | El menú lleva a 2025; 2026 va sin veredicto | Desde mediados de 2025 Google mide distinto (`hipotesis.md`). |
 | Años 2026, 2025, 2024 | 2025, 2024, 2026 | Primero los que tienen veredicto. |
 | Dos entradas (por año y por temporada) y Summer/Winter en el menú | Una sola pantalla, "Elegí la temporada", y un menú de tres opciones: Temporadas, Tu brief y Racional | Al usarla eran cuatro caminos al mismo lugar y el recorrido no se entendía. |
