@@ -248,6 +248,9 @@ En compu (desde 761px de ancho y 560px de alto), cada doble página ocupa una pa
 ### En la prensa (componente propio)
 Línea de tinta de 1,5px arriba, rótulo "EN LA PRENSA", comillas grandes y la cita en 22 a 30px, que se pinta con los colores de la pasarela al pasar el mouse. Abajo, el medio en negrita y la fecha, y el link "Abrir artículo ↗" en el tono de la foto, subrayado. Si no hay nota de prensa, va la frase de la nota que nombró la tendencia.
 
+### ¿Tu prenda entra en esta tendencia? (componente propio)
+Una sección más de la ficha, sin caja: título en Headline, la etiqueta IA y un par de fotos como en el informe. A la izquierda la foto de pasarela; al lado, un espacio con borde punteado ("Tu prenda") que se toca para subir la foto; a la derecha, los tres rasgos numerados. Con el resultado, tu foto ocupa ese espacio y los rasgos muestran ✓ o ✕ con la frase de la IA, arriba el número grande (verde si entra, mostaza si está cerca, rojo si no entra). Las reglas y lo que no cambia van en una línea chica al pie.
+
 ### Bloque de la IA
 Una cabecera en pizarra con el rótulo "Para tu marca / sugerencia de IA", la etiqueta IA y el título en mayúscula, y un cuerpo en fondo IA con una línea azul de 2px arriba. Tiene estados de carga (tres barras que brillan), error y saturada.
 

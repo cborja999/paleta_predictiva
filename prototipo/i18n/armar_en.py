@@ -17,3 +17,8 @@ for k, v in malas.items(): print("se traduciria dos veces:", repr(k), "->", repr
 assert not malas, "arreglar las traducciones de arriba"
 (aqui.parent / "en.js").write_text("// Generado por prototipo/i18n/armar_en.py. No editar a mano.\nwindow.EN_DIC = " + json.dumps(d, ensure_ascii=False, indent=0) + ";\n", encoding="utf-8")
 print(len(d), "frases")
+# La página pide en.js con la huella de su contenido, así el navegador no usa una copia vieja
+import hashlib
+huella = hashlib.sha256((aqui.parent / "en.js").read_bytes()).hexdigest()[:10]
+pagina = aqui.parent / "index.html"
+pagina.write_text(re.sub(r'src="en\.js(\?v=[0-9a-f]+)?"', f'src="en.js?v={huella}"', pagina.read_text(encoding="utf-8")), encoding="utf-8")

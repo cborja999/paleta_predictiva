@@ -303,3 +303,9 @@ for titulo, lista in ((f"Con veredicto ({len(tendencias)} tendencias)", tendenci
                               f"{f['marca']} {TEMP[temp][1].lower()} {t['termino']} | {f['origen']} |")
         lineas.append("")
 (RAIZ / "prototipo" / "FOTOS.md").write_text("\n".join(lineas), encoding="utf-8")
+
+# El navegador puede guardar una copia vieja de datos.js: la página lo pide con la huella de su contenido (datos.js?v=...)
+import hashlib, re
+huella = hashlib.sha256((RAIZ / "prototipo" / "datos.js").read_bytes()).hexdigest()[:10]
+pagina = RAIZ / "prototipo" / "index.html"
+pagina.write_text(re.sub(r'src="datos\.js(\?v=[0-9a-f]+)?"', f'src="datos.js?v={huella}"', pagina.read_text(encoding="utf-8")), encoding="utf-8")
