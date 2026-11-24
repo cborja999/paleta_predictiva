@@ -487,6 +487,7 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 .lt-sp-txt h3 a:hover{text-decoration:underline;text-decoration-thickness:2px}
 .lt-sp-meta{font-size:14px;margin-top:12px;color:var(--gris);font-weight:400}
 .lt-sp-chica{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:end;margin-top:22px}
+.lt-sp-chica .lt-sp-datos{grid-column:1/-1}
 .lt-sp-chica .f,.lt-f-chica .f{display:block;aspect-ratio:2/3;background:var(--crema);overflow:hidden}
 .lt-sp-chica img,.lt-f-chica img{width:100%;height:100%;object-fit:cover;object-position:top}
 .curvita{border:1px solid var(--linea);padding:10px 12px 8px;margin:0}
@@ -516,33 +517,40 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 .prensa li.pr-gran .pr-de b{font-weight:700}
 .lt-sp-acc{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;margin-top:16px;max-width:600px}
 .lt-sp-acc .lt-sp-conf{margin:0}
-.lt-ver{position:absolute;right:10px;bottom:7px;z-index:3;background:var(--azul);color:#fff;font-size:14px;font-weight:700;padding:8px 14px;white-space:nowrap;transition:background .2s ease}
-.lt-sp-alta:hover .lt-ver,.lt-sp-alta:focus-visible .lt-ver{background:var(--oscuro)}
-.lt-sp-alta .pie-foto{padding-right:190px}
-/* En compu, cada doble página ocupa una pantalla (menos la cabecera) y al bajar frena un poco en cada una */
+.lt-ver{display:flex;width:max-content;margin-top:14px;font-size:15px;padding:9px 16px;white-space:nowrap;transition:background .2s ease}
+.lt-ver:hover{background:var(--oscuro);border-color:var(--oscuro)}
+/* En compu, cada doble página entra en una pantalla: los tamaños se ajustan a la altura (sin huecos ni freno al bajar) */
 @media (min-width:761px) and (min-height:560px){
-  html.snap{scroll-snap-type:y proximity;scroll-padding-top:96px}
-  .lt-spread{min-height:calc(100svh - 96px);padding:clamp(14px,3vh,28px) 0;scroll-snap-align:start}
-  .lt-sp-txt{display:flex;flex-direction:column;min-height:0}
+  .lt-spread{min-height:calc(100svh - 96px);padding:clamp(14px,2.6vh,32px) 0}
+  .lt-sp-txt{display:flex;flex-direction:column;justify-content:space-between;gap:clamp(10px,1.8vh,24px)}
+  .lt-sp-txt > *{margin-top:0!important}
   .lt-sp-txt h3{font-size:clamp(26px,min(3.4vw,5.4vh),46px);padding-bottom:10px}
-  .lt-sp-meta{margin-top:8px}
-  .lt-sp-chica{grid-template-columns:clamp(56px,8.5vh,130px) 1fr;margin-top:clamp(10px,2vh,22px)}
-  .lt-sp-chica .curvita svg{max-height:12vh}
+  .lt-ver{margin-top:clamp(10px,1.6vh,16px)}
+  .lt-sp-meta{margin-top:10px}
+  .lt-sp-chica{grid-template-columns:clamp(110px,16vh,230px) minmax(0,1fr);grid-template-rows:auto 1fr;column-gap:clamp(16px,2vw,30px);row-gap:clamp(8px,1.6vh,18px);align-items:start;margin-top:clamp(10px,2vh,22px)}
+  .lt-sp-chica .f{grid-row:1/3}
+  .lt-sp-chica .lt-sp-datos{grid-column:2;align-self:end}
+  .lt-sp-chica .curvita svg{height:clamp(50px,8vh,110px)}
+  .lt-sp-chica .lt-sp-nums{margin-top:0;gap:12px clamp(14px,2vw,30px)}
   .lt-sp-nums{margin-top:clamp(10px,2.2vh,24px)}
   .lt-sp-nums b{font-size:clamp(34px,min(5vw,7.6vh),72px)}
-  .lt-sp-txt .prensa{margin-top:auto;padding-top:12px}
-  .lt-sp-acc{margin-bottom:clamp(12px,2.4vh,28px)}
+  .lt-sp-acc{margin-bottom:0}
+  .lt-sp-txt .prensa{margin-top:clamp(14px,2.6vh,30px);padding-top:12px}
   .lt-sp-txt .prensa li.pr-gran{padding:4px 0 10px}
-  .lt-sp-txt .prensa li.pr-gran::before{font-size:clamp(52px,9vh,110px);height:clamp(26px,4.6vh,56px);margin-top:6px}
-  .lt-sp-txt .prensa li.pr-gran q{font-size:clamp(18px,min(2.2vw,3.3vh),30px)}
+  .lt-sp-txt .prensa li.pr-gran::before{font-size:clamp(44px,7vh,110px);height:clamp(20px,3.4vh,56px);margin-top:4px}
+  .lt-sp-txt .prensa li.pr-gran q{font-size:clamp(22px,min(2.9vw,4.6vh),42px);line-height:1.12;letter-spacing:-.02em}
   .lt-sp-txt .prensa li.pr-gran .pr-de{margin-top:10px}
   .lt-sp-alta{min-height:0}
 }
 @media (min-width:761px) and (min-height:560px) and (max-height:760px){
   .lt-sp-chica{grid-template-columns:1fr}
   .lt-sp-chica .f{display:none}
-  .lt-sp-chica .curvita svg{max-height:10vh}
+  .lt-sp-chica .lt-sp-datos{grid-column:1/-1}
+  .lt-sp-chica .curvita svg{height:11vh;flex:none}
   .lt-sp-txt .prensa li.pr-gran::before{display:none}
+  .lt-sp-txt .prensa li.pr-gran q{font-size:clamp(18px,min(2.3vw,3.1vh),30px)}
+  .lt-sp-nums b{font-size:clamp(32px,min(5vw,6.4vh),72px)}
+  .lt-sp-nums span{margin-top:5px}
 }
 .lt-sp-alta{position:relative;display:block;background:var(--crema);overflow:hidden;min-height:440px}
 .lt-sp-alta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .7s ease}
@@ -1109,9 +1117,9 @@ function prensaHTML(t, max){
 function curvita(t){
     var s = t.serie.slice(-24), W = 260, H = 70, v = s.filter(function(x){ return x != null; }), mx = Math.max.apply(null, v) || 1;
     var d = ''; s.forEach(function(y, i){ if (y == null) return; d += (d ? 'L' : 'M') + (i / 23 * W).toFixed(1) + ' ' + (H - y / mx * H).toFixed(1); });
-    return '<figure class="curvita"><svg viewBox="-2 -4 ' + (W + 4) + ' ' + (H + 8) + '" role="img" aria-label="Búsquedas de ' + esc(t.termino) + ', 12 meses antes y 12 después del desfile">' +
-      '<line x1="' + (11.5 / 23 * W).toFixed(1) + '" x2="' + (11.5 / 23 * W).toFixed(1) + '" y1="0" y2="' + H + '" stroke="#b9b8b3" stroke-dasharray="2 3"/>' +
-      '<path d="' + d + '" fill="none" stroke="#8a6a3a" stroke-width="1.6"/></svg><figcaption>' + esc(t.termino) + ' · antes y después del desfile</figcaption></figure>';
+    return '<figure class="curvita"><svg viewBox="-2 -4 ' + (W + 4) + ' ' + (H + 8) + '" preserveAspectRatio="none" role="img" aria-label="Búsquedas de ' + esc(t.termino) + ', 12 meses antes y 12 después del desfile">' +
+      '<line x1="' + (11.5 / 23 * W).toFixed(1) + '" x2="' + (11.5 / 23 * W).toFixed(1) + '" y1="0" y2="' + H + '" stroke="#b9b8b3" stroke-dasharray="2 3" vector-effect="non-scaling-stroke"/>' +
+      '<path d="' + d + '" fill="none" stroke="#8a6a3a" stroke-width="1.6" vector-effect="non-scaling-stroke"/></svg><figcaption>' + esc(t.termino) + ' · antes y después del desfile</figcaption></figure>';
   }
   function pie(t, n){ var m = marcaDesfile(t, n); return m ? '<span class="pie-foto"><b>' + esc(m) + '</b> · ' + nomS(t.temporada) + '</span>' : ''; }
 
@@ -1174,13 +1182,14 @@ function curvita(t){
             '<p class="lt-bajada">Sin veredicto: es lo que nombraron los medios. La IA no elige entre estas.</p>') +
           (conV ? l.map(function(t, i){
             return '<article class="lt-spread' + (i % 2 ? ' al-reves' : '') + '" data-tono="link">' +
-              '<div class="lt-sp-txt"><h3><a href="#t/' + t.id + '">' + t.nombre + '</a></h3>' +
+              '<div class="lt-sp-txt"><div class="lt-sp-cab"><h3><a href="#t/' + t.id + '">' + t.nombre + '</a></h3>' +
+                '<a class="boton lt-ver" href="#t/' + t.id + '">Ver el análisis <span aria-hidden="true">→</span><span class="sr">' + L(' de ', ': ') + esc(t.nombre) + '</span></a>' +
                 '<p class="lt-sp-meta">' + (RUBRO_NOM[t.rubro] || '') + (deMiRubro(t) ? ' · <b>tu rubro</b>' : '') + ' · la nombró <a href="' + t.url_fuente + '" target="_blank" rel="noopener">' + t.medio + '<span class="sr"> (se abre en otra pestaña)</span></a></p>' +
-                '<div class="lt-sp-chica"><span class="f">' + img(t, 2) + '</span>' + curvita(t) + '</div>' +
-                '<div class="lt-sp-nums"><div><b>' + pct(t.bruto_pct) + '</b><span>búsquedas</span></div><div><b class="' + (t.veredicto === 'riesgo' ? 'riesgo-num' : '') + '">' + pct(t.cambio_pct) + '</b><span>contra su temporada</span></div></div>' +
-                '<div class="lt-sp-acc"><p class="lt-sp-conf">Confianza ' + t.confianza.toLowerCase() + ' · apuesta ' + APUESTA[t.apuesta].toLowerCase() + (pieCautela(t) ? ' · ' + pieCautela(t).toLowerCase() : '') + '</p></div>' +
+                '</div><div class="lt-sp-chica"><span class="f">' + img(t, 2) + '</span>' + curvita(t) +
+                '<div class="lt-sp-datos"><div class="lt-sp-nums"><div><b>' + pct(t.bruto_pct) + '</b><span>búsquedas</span></div><div><b class="' + (t.veredicto === 'riesgo' ? 'riesgo-num' : '') + '">' + pct(t.cambio_pct) + '</b><span>contra su temporada</span></div></div>' +
+                '<div class="lt-sp-acc"><p class="lt-sp-conf">Confianza ' + t.confianza.toLowerCase() + ' · apuesta ' + APUESTA[t.apuesta].toLowerCase() + (pieCautela(t) ? ' · ' + pieCautela(t).toLowerCase() : '') + '</p></div></div></div>' +
                 prensaHTML(t, 1) + '</div>' +
-              '<a class="lt-sp-alta" href="#t/' + t.id + '" aria-label="' + esc(t.nombre) + ': ver el análisis">' + img(t, 1) + '<span class="lt-sellos">' + sello(t) + '</span>' + pie(t, 1) + '<span class="lt-ver" aria-hidden="true">Ver el análisis →</span></a></article>';
+              '<a class="lt-sp-alta" href="#t/' + t.id + '" aria-label="' + esc(t.nombre) + ': ver el análisis">' + img(t, 1) + '<span class="lt-sellos">' + sello(t) + '</span>' + pie(t, 1) + '</a></article>';
           }).join('') : '<div class="lt-vistas">' + l.map(function(v, i){
             return '<figure class="lt-vista' + (i % 3 === 1 ? ' alta' : '') + '"><span class="f">' + img(v, 1) + '</span><figcaption><b>' + v.nombre + '</b><span>La nombró <a href="' + v.url_fuente + '" target="_blank" rel="noopener">' + v.medio + '</a></span></figcaption></figure>';
           }).join('') + '</div>') +
@@ -1792,7 +1801,6 @@ function curvita(t){
       : p[0] === 'season' ? nomS(p[1]) : p[0] === 't' ? nomS(t.temporada) + ' · ' + t.nombre : p[0] === 'brief' ? 'Tu brief · ' + nomS(estado.temporada)
       : p[0] === 'color' ? 'Color · ' + c.nombre : '';
     marcarDonde();
-    document.documentElement.classList.toggle('snap', p[0] === 'season');
     var foco = main.querySelector('.titulo-foco');
     document.title = (foco ? tr(foco.dataset.titulo || foco.textContent.replace(/\s+/g, ' ').trim()) + ' · ' : '') + 'Paleta predictiva';
     window.scrollTo(0, 0);

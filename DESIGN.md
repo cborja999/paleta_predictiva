@@ -241,9 +241,9 @@ Esquinas rectas en todo: botones, sellos, chips, paneles y fotos (0px). Los bord
 - **Idioma:** selector ES/EN con borde de 1,5px; la opción activa va rellena de tinta.
 
 ### Doble página de tendencia (componente propio)
-Nombre en Title con línea debajo, meta ("rubro · la nombró [medio]"), foto chica más curvita, los dos números grandes con su rótulo a la derecha, confianza y apuesta en una línea y, abajo de todo, el bloque "En la prensa". Del otro lado, la foto alta con el sello arriba y una franja blanca semitransparente abajo con la marca del desfile y el botón "Ver el análisis →" (toda la foto lleva a la ficha).
+Nombre en Title con línea debajo, el botón "Ver el análisis →" justo abajo, meta ("rubro · la nombró [medio]"), una segunda foto de pasarela a la izquierda, del alto de la curva y los números juntos, y a su derecha la curvita y los dos números grandes con su rótulo, confianza y apuesta en una línea y, abajo de todo, el bloque "En la prensa". Del otro lado, la foto alta con el sello arriba y una franja blanca semitransparente abajo con la marca del desfile. Toda la foto lleva a la ficha.
 
-En compu (desde 761px de ancho y 560px de alto), cada doble página ocupa una pantalla menos la cabecera, con tamaños que se ajustan a la altura, y al bajar la página frena suave en cada una (scroll-snap de proximidad). En pantallas bajas (hasta 760px de alto) se oculta la foto chica y queda la curva. En celular no hay freno.
+En compu (desde 761px de ancho y 560px de alto), cada doble página ocupa una pantalla completa menos la cabecera, así no se ve la siguiente: los tamaños se ajustan a la altura y el espacio que sobra se reparte parejo entre los cuatro bloques (nombre, curva, números y prensa). No hay freno al bajar. La curvita se estira a todo el ancho de su caja. En pantallas bajas (hasta 760px de alto) se oculta la foto chica y queda la curva.
 
 ### En la prensa (componente propio)
 Línea de tinta de 1,5px arriba, rótulo "EN LA PRENSA", comillas grandes y la cita en 22 a 30px, que se pinta con los colores de la pasarela al pasar el mouse. Abajo, el medio en negrita y la fecha, y el link "Abrir artículo ↗" en el tono de la foto, subrayado. Si no hay nota de prensa, va la frase de la nota que nombró la tendencia.
