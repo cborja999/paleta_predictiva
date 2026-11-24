@@ -819,6 +819,7 @@ label.pf-foto input{position:absolute;width:1px;height:1px;opacity:0}
 .pf-rasgos .pq{display:block;font-size:14px;color:var(--gris);font-weight:400;margin-top:4px}
 .pf-res h3{font-size:clamp(22px,2.4vw,32px);font-weight:700;text-transform:uppercase;letter-spacing:-.01em;line-height:1.05;margin:0}
 .pf-res .pf-n{font-size:clamp(48px,6vw,88px);font-weight:700;letter-spacing:-.04em;line-height:.9;margin:0 0 6px}
+.pf-res.otra_prenda h3{margin-top:4px}
 .pf-res.entra .pf-n{color:var(--q)} .pf-res.cerca .pf-n{color:var(--c)} .pf-res.no_entra .pf-n,.pf-res.no_es_prenda .pf-n{color:var(--r-num)}
 .pf-res .pf-rasgos{margin-top:14px}
 .pf-pie{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:20px;font-size:14px;color:var(--gris);font-weight:400}
@@ -1529,12 +1530,14 @@ function curvita(t){
     if (r === 'entra') return L('¡' + f.tu + verbo(f, ' entra', ' entran') + ' en la tendencia!', 'Your piece fits the trend!');
     if (r === 'cerca') return L(f.tu + verbo(f, ' está', ' están') + ' cerca de la tendencia', 'Your piece is close to the trend');
     if (r === 'no_entra') return L(f.tu + verbo(f, ' no entra', ' no entran') + ' en la tendencia', 'Your piece doesn\'t fit the trend');
+    if (r === 'otra_prenda') return L('Esta foto no corresponde a la tendencia', 'This photo doesn\'t match the trend');
     return L('No encontramos una prenda en la foto', 'We couldn\'t find a garment in the photo');
   }
   function pfResultado(t, mia, j){
     return '<div class="pf-par">' + pfPasarela(t) + pfTuya(mia) +
-      '<div class="pf-lado pf-res ' + j.resultado + '" aria-live="polite">' + (j.resultado === 'no_es_prenda' ? '' : '<p class="pf-n">' + j.cumple + '/3</p>') + '<h3>' + pfTitulo(t, j.resultado) + '</h3>' +
-        (j.resultado === 'no_es_prenda' ? '<p class="pf-baja">Probá con una foto donde la prenda se vea entera, de frente y con buena luz.</p>' : pfLista(t, j)) +
+      '<div class="pf-lado pf-res ' + j.resultado + '" aria-live="polite">' + (j.resultado === 'no_es_prenda' || j.resultado === 'otra_prenda' ? '' : '<p class="pf-n">' + j.cumple + '/3</p>') + '<h3>' + pfTitulo(t, j.resultado) + '</h3>' +
+        (j.resultado === 'no_es_prenda' ? '<p class="pf-baja">Probá con una foto donde la prenda se vea entera, de frente y con buena luz.</p>' :
+         j.resultado === 'otra_prenda' ? '<p class="pf-baja">' + (j.prenda ? L('La IA ve ', 'The AI sees ') + '<b data-no-tr>' + esc(j.prenda) + '</b>. ' : '') + L('Para comparar con esta tendencia, subí una foto de ' + t.foto.tu.toLowerCase() + '.', 'To compare it with this trend, upload a photo of the same kind of piece.') + '</p>' : pfLista(t, j)) +
         '<button class="pf-otra" data-pf-otra>Probar otra prenda</button>' + (j.modelo ? '<p class="pf-baja" style="font-size:12px">' + esc(j.modelo) + ' · Groq</p>' : '') + '</div></div>';
   }
   function achicarFoto(archivo){

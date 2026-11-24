@@ -165,10 +165,13 @@ async function preguntar(key, modelo, contexto, extra, prompt = SYSTEM_PROMPT) {
 // ---------- Pirueta: ¿tu prenda entra en esta tendencia? ----------
 // La foto llega achicada desde el navegador (JPEG de hasta ~1000 px). No se guarda en ningún lado.
 const MAX_IMAGEN = 1_500_000;
-export function revisarFoto(salida) {
+export function revisarFoto(salida, generico = false) {
   const problemas = [];
   if (typeof salida?.es_prenda !== "boolean") problemas.push("falta es_prenda (true o false)");
   if (salida?.es_prenda === false) return problemas;
+  if (typeof salida?.misma_prenda !== "boolean") problemas.push("falta misma_prenda (true o false)");
+  if (salida?.misma_prenda === false && generico) problemas.push('el tipo esperado es "cualquiera": misma_prenda tiene que ser true y hay que mirar los 3 rasgos');
+  else if (salida?.misma_prenda === false) return problemas;
   const r = Array.isArray(salida?.rasgos) ? salida.rasgos : [];
   if (r.length !== 3) problemas.push("tienen que ser exactamente 3 rasgos");
   [1, 2, 3].forEach(n => {
@@ -181,9 +184,14 @@ export function revisarFoto(salida) {
   });
   return problemas;
 }
+// Qué tipo de prenda hace falta en la foto: sale de "Tu pollera", "Tus botas"... ("Tu prenda" o "Tu look": cualquiera)
+export function tipoEsperado(t) {
+  const x = t.foto.tu.replace(/^Tus? /, "").toLowerCase();
+  return x === "prenda" || x === "look" ? "cualquiera" : x;
+}
 async function compararFoto(key, modelo, t, imagen, idioma, extra) {
   const ctrl = new AbortController(); const reloj = setTimeout(() => ctrl.abort(), 30000);
-  const contexto = { tendencia: t.nombre, prenda: t.foto.tu, rasgos: t.foto.rasgos.map((r, i) => ({ n: i + 1, rasgo: r })) };
+  const contexto = { tendencia: t.nombre, tipo_esperado: tipoEsperado(t), rasgos: t.foto.rasgos.map((r, i) => ({ n: i + 1, rasgo: r })) };
   try {
     const r = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST", signal: ctrl.signal,
@@ -211,17 +219,21 @@ async function modoFoto(key, pedido) {
   const modelo = process.env.GROQ_MODEL_FOTO || MODELO_FOTO, idioma = pedido.idioma === "en" ? "en" : "es";
   try {
     let salida = await compararFoto(key, modelo, t, imagen, idioma, "");
-    let problemas = revisarFoto(salida);
+    const generico = tipoEsperado(t) === "cualquiera";
+    let problemas = revisarFoto(salida, generico);
     if (problemas.length) {
       salida = await compararFoto(key, modelo, t, imagen, idioma, "Tu respuesta anterior tenía estos problemas, corregilos: " + problemas.join("; "));
-      problemas = revisarFoto(salida);
+      problemas = revisarFoto(salida, generico);
     }
     if (problemas.length) return json({ error: "La IA no pudo comparar la foto. Probá con otra foto o de nuevo en un rato.", problemas }, 502);
-    // El resultado lo cuenta el código, no la IA: 3 de 3 entra, 2 de 3 cerca, 0 o 1 no entra
-    const cumple = salida.es_prenda ? salida.rasgos.filter(x => x.cumple === true).length : 0;
-    const resultado = !salida.es_prenda ? "no_es_prenda" : cumple === 3 ? "entra" : cumple === 2 ? "cerca" : "no_entra";
-    const rasgos = salida.es_prenda ? [1, 2, 3].map(n => { const x = salida.rasgos.find(y => y.n === n); return { n, rasgo: t.foto.rasgos[n - 1], cumple: x.cumple, por_que: x.por_que.trim() }; }) : [];
-    return json({ resultado, cumple, prenda: String(salida.prenda || "").slice(0, 80), rasgos, modelo });
+    // El resultado lo cuenta el código, no la IA: 3 de 3 entra, 2 de 3 cerca, 0 o 1 no entra.
+    // Si la foto es de otra prenda (un jean para una tendencia de polleras), no se compara: la foto no corresponde.
+    const otra = salida.es_prenda && tipoEsperado(t) !== "cualquiera" && salida.misma_prenda === false;
+    const sirve = salida.es_prenda && !otra;
+    const cumple = sirve ? salida.rasgos.filter(x => x.cumple === true).length : 0;
+    const resultado = !salida.es_prenda ? "no_es_prenda" : otra ? "otra_prenda" : cumple === 3 ? "entra" : cumple === 2 ? "cerca" : "no_entra";
+    const rasgos = sirve ? [1, 2, 3].map(n => { const x = salida.rasgos.find(y => y.n === n); return { n, rasgo: t.foto.rasgos[n - 1], cumple: x.cumple, por_que: x.por_que.trim() }; }) : [];
+    return json({ resultado, cumple, prenda: String(salida.prenda || "").slice(0, 80), tipo: tipoEsperado(t), rasgos, modelo });
   } catch (e) {
     const msg = e.name === "AbortError" ? "La IA tardó demasiado. Probá de nuevo." : e.message;
     return json({ error: msg }, e.status || 502);
