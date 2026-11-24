@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-24T13:43:26+00:00",
+  "title": "Design System: Paleta predictiva",
+  "extensions": {
+    "colorMeta": {
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Tinta verde-negra"
+      },
+      "azul-noche": {
+        "role": "primary",
+        "displayName": "Azul noche"
+      },
+      "verde-noche": {
+        "role": "primary",
+        "displayName": "Verde noche"
+      },
+      "panel-summer": {
+        "role": "secondary",
+        "displayName": "Terracota Summer"
+      },
+      "panel-winter": {
+        "role": "secondary",
+        "displayName": "Pizarra Winter"
+      },
+      "mostaza": {
+        "role": "secondary",
+        "displayName": "Mostaza de la curva"
+      },
+      "sello-queda": {
+        "role": "tertiary",
+        "displayName": "Verde salvia (se queda)"
+      },
+      "sello-riesgo": {
+        "role": "tertiary",
+        "displayName": "Salmón (en riesgo)"
+      },
+      "sello-cautela": {
+        "role": "tertiary",
+        "displayName": "Amarillo (con cautela)"
+      },
+      "azul-ia": {
+        "role": "tertiary",
+        "displayName": "Azul IA"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Nombre de la temporada en la portada, en minúscula."
+      },
+      "numero": {
+        "displayName": "Número",
+        "purpose": "Porcentajes de búsquedas y contra la temporada."
+      },
+      "headline": {
+        "displayName": "Título de sección",
+        "purpose": "Secciones en mayúscula, liviano, con línea debajo."
+      },
+      "title": {
+        "displayName": "Nombre de tendencia",
+        "purpose": "Nombres de tendencia y títulos de bloque."
+      },
+      "label": {
+        "displayName": "Rótulo",
+        "purpose": "Rótulos chicos, etiquetas y la línea de dónde estás."
+      }
+    },
+    "shadows": [
+      {
+        "name": "texto-sobre-foto",
+        "value": "0 2px 14px rgba(0,0,0,.35)",
+        "purpose": "Solo text-shadow para números blancos sobre fotos."
+      }
+    ],
+    "motion": [
+      {
+        "name": "aparecer",
+        "value": "opacity .7s, transform .9s cubic-bezier(.2,.7,.2,1); translateY(28px)",
+        "purpose": "Bloques que aparecen al bajar; se apaga con reducir movimiento."
+      },
+      {
+        "name": "pintar-letra",
+        "value": "color .45s ease",
+        "purpose": "Letras del home y citas de prensa que toman colores de la pasarela."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "celular",
+        "value": "700px"
+      },
+      {
+        "name": "tablet",
+        "value": "900px"
+      },
+      {
+        "name": "compu",
+        "value": "1000px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón principal",
+      "kind": "button",
+      "refersTo": "boton-principal",
+      "description": "Acción principal, recto y en azul noche.",
+      "html": "<button class=\"ds-btn\">Guardar y ver la temporada →</button>",
+      "css": ".ds-btn{background:#142638;color:#fff;font:700 16px Inter,system-ui,sans-serif;padding:11px 16px;border:1px solid #142638;border-radius:0;cursor:pointer}.ds-btn:hover{background:#071814}.ds-btn:focus-visible{outline:2px solid #142638;outline-offset:3px}"
+    },
+    {
+      "name": "Botón con borde",
+      "kind": "button",
+      "refersTo": "boton-principal",
+      "description": "Alternativa al principal.",
+      "html": "<button class=\"ds-btn-borde\">Probar otra prenda</button>",
+      "css": ".ds-btn-borde{background:none;color:#111713;font:700 16px Inter,system-ui,sans-serif;padding:11px 16px;border:1px solid currentColor;border-radius:0;cursor:pointer}.ds-btn-borde:hover{background:#f2eee6}.ds-btn-borde:focus-visible{outline:2px solid #142638;outline-offset:3px}"
+    },
+    {
+      "name": "Sellos de veredicto",
+      "kind": "chip",
+      "refersTo": "sello-queda",
+      "description": "Veredicto sobre la foto.",
+      "html": "<span class=\"ds-sello q\">Se queda</span><span class=\"ds-sello c\">Con cautela</span><span class=\"ds-sello r\">En riesgo</span>",
+      "css": ".ds-sello{display:inline-block;color:#fff;font:300 18px Inter,system-ui,sans-serif;letter-spacing:.03em;text-transform:uppercase;padding:4px 12px;margin:0 6px 6px 0}.ds-sello.q{background:#7fa58c}.ds-sello.c{background:#e8bd5c}.ds-sello.r{background:#e0907e}"
+    },
+    {
+      "name": "Etiquetas Calculado / IA",
+      "kind": "chip",
+      "refersTo": "etiqueta-ia",
+      "description": "Marca de dónde sale cada bloque.",
+      "html": "<span class=\"ds-tag\">Calculado</span> <span class=\"ds-tag ia\">Inferencia de la IA</span>",
+      "css": ".ds-tag{display:inline-flex;align-items:center;gap:6px;font:700 11px Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border:1px solid #111713;color:#111713}.ds-tag::before{content:'';width:7px;height:7px;background:#111713}.ds-tag.ia{background:#3b3fd6;border-color:#3b3fd6;color:#fff}.ds-tag.ia::before{background:#fff;border-radius:50%}"
+    },
+    {
+      "name": "Menú",
+      "kind": "nav",
+      "refersTo": "menu-activo",
+      "description": "Tres opciones; la activa en verde noche.",
+      "html": "<nav class=\"ds-menu\"><a aria-current=\"page\" href=\"#\">Temporadas</a><a href=\"#\">Tu brief</a><a href=\"#\">Racional</a></nav>",
+      "css": ".ds-menu{display:flex;gap:6px;font:500 16px Inter,system-ui,sans-serif}.ds-menu a{padding:10px 12px;text-decoration:none;color:#111713}.ds-menu a:hover{background:#f2eee6}.ds-menu a[aria-current]{background:#071814;color:#fff;font-weight:700}.ds-menu a:focus-visible{outline:2px solid #142638;outline-offset:3px}"
+    },
+    {
+      "name": "Números de tendencia",
+      "kind": "custom",
+      "refersTo": "numero",
+      "description": "Los dos números grandes con su rótulo.",
+      "html": "<div class=\"ds-nums\"><div><b>+197%</b><span>Búsquedas</span></div><div><b>+121%</b><span>Contra su temporada</span></div></div>",
+      "css": ".ds-nums{display:grid;grid-template-columns:1fr 1fr;gap:16px 34px;font-family:Inter,system-ui,sans-serif;color:#111713}.ds-nums b{display:block;font-size:64px;font-weight:700;letter-spacing:-.035em;line-height:1;padding-bottom:8px;border-bottom:1px solid #111713;font-variant-numeric:tabular-nums}.ds-nums span{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-top:8px;text-align:right}"
+    },
+    {
+      "name": "En la prensa",
+      "kind": "custom",
+      "refersTo": "title",
+      "description": "Cita de prensa con link en el tono de la foto.",
+      "html": "<aside class=\"ds-prensa\"><h4>En la prensa</h4><q>On the Fall/Winter 2025 runways, fashion houses zeroed in on lace and ruffles</q><p><span><b>The Zoe Report</b> · nov 2025</span><a href=\"#\">Abrir artículo ↗</a></p></aside>",
+      "css": ".ds-prensa{border-top:1.5px solid #111713;padding-top:14px;max-width:600px;font-family:Inter,system-ui,sans-serif;color:#111713}.ds-prensa h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}.ds-prensa q{display:block;font-size:26px;font-weight:500;line-height:1.18;letter-spacing:-.015em}.ds-prensa p{display:flex;justify-content:space-between;gap:12px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-top:14px}.ds-prensa a{color:hsl(297 48% 34%);font-weight:700;text-decoration:none;border-bottom:2px solid currentColor}.ds-prensa a:hover{border-bottom-width:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "El informe de pasarela",
+    "overview": "La app se lee como un informe de tendencias impreso: la foto de desfile manda, los números son enormes, un sello dice el veredicto y cada tendencia es una doble página. Editorial en la forma y verificable en el fondo.",
+    "keyCharacteristics": [
+      "La foto de desfile es la protagonista; los números grandes son el segundo nivel.",
+      "Una sola tipografía (Inter), con mucho contraste de peso y tamaño.",
+      "Bloques de color planos, esquinas rectas y líneas de 1 a 1,5 px.",
+      "Lo calculado y lo de la IA, siempre separados y etiquetados.",
+      "Dobles páginas que alternan de lado, nunca una grilla repetida."
+    ],
+    "rules": [
+      {
+        "name": "The Veredicto Fijo Rule",
+        "body": "El verde, el salmón y el amarillo de los sellos significan se queda, en riesgo y con cautela. No se usan para nada más.",
+        "section": "colors"
+      },
+      {
+        "name": "The Azul IA Rule",
+        "body": "El azul marca solo lo que viene de la IA. Lo calculado lleva la etiqueta negra Calculado.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tono de la Foto Rule",
+        "body": "Las columnas del top y el link Abrir artículo toman el color de su propia foto. Ese color es diseño, no un dato.",
+        "section": "colors"
+      },
+      {
+        "name": "The Una Sola Voz Rule",
+        "body": "Todo es Inter. La jerarquía sale del peso, el tamaño y la caja.",
+        "section": "typography"
+      },
+      {
+        "name": "The Número Primero Rule",
+        "body": "En una tendencia, lo que más se ve después de la foto son sus dos números.",
+        "section": "typography"
+      },
+      {
+        "name": "The Papel Plano Rule",
+        "body": "Nada flota. Si algo tiene que destacarse, cambia de color o de tamaño, no gana una sombra.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do que la foto de desfile sea lo más grande de cada tendencia, con el número grande como segundo nivel.",
+      "Do marcar cada bloque como Calculado o Inferencia de la IA, y poner lo de la IA siempre aparte.",
+      "Do usar el durazno para Summer y la pizarra para Winter, y el tono de cada foto para sus columnas y su link.",
+      "Do mantener las esquinas rectas (0px) y las líneas de 1 a 1,5px.",
+      "Do probar cada pantalla a 390px, con teclado y en inglés."
+    ],
+    "donts": [
+      "Don't hacer que parezca hecho por IA o una plantilla: nada de grillas de tarjetas iguales, gradientes decorativos ni íconos genéricos.",
+      "Don't hacer que parezca una tienda online: sin precios, carritos ni grillas de producto.",
+      "Don't usar los colores de los sellos para decorar, ni el rojo de número fuera de en riesgo.",
+      "Don't agregar sombras, esquinas redondeadas ni una segunda tipografía.",
+      "Don't mostrar un número sin su rótulo ni sin decir de dónde sale."
+    ]
+  }
+}
