@@ -391,3 +391,29 @@ T = {
 "Antes de producir": "Before producing", "La marca": "The brand", "En el análisis": "In the analysis",
 "Entrar →": "Enter →", "Ficha": "Trend page", "Ideas simuladas": "Simulated ideas",
 }
+
+# --- pirueta: ¿tu prenda entra en esta tendencia?
+T.update({
+"Compará tu prenda con la pasarela: subí una foto y la IA mira si tiene los tres rasgos de la tendencia.": "Compare your piece with the runway: upload a photo and the AI checks whether it has the trend's three traits.",
+"Comparación hecha por IA": "Comparison made by AI", "Lo que miramos": "What we look at", "Sacar foto": "Take a photo", "Elegir de la galería": "Choose from gallery",
+"La foto se manda a la IA (vía Groq) para compararla y no se guarda en ningún lado.": "The photo is sent to the AI (via Groq) to compare it and isn't stored anywhere.",
+"Cómo se decide": "How it's decided", "Entra": "Fits", "Cerca": "Close", "No entra": "Doesn't fit", "Lo que no cambia": "What doesn't change",
+"Cuánto apostar: ": "How much to bet: ", "Sale de las búsquedas, no de tu foto.": "It comes from searches, not from your photo.",
+"Pasarela": "Runway", "Tu prenda": "Your piece", "La foto de tu prenda": "The photo of your piece",
+"Probá con una foto donde la prenda se vea entera, de frente y con buena luz.": "Try a photo where the piece is fully visible, from the front and in good light.",
+"El veredicto y la apuesta no cambian con tu foto: salen de las búsquedas.": "The verdict and the bet don't change with your photo: they come from searches.",
+"No aplica a tu prenda: el veredicto y la apuesta son de la tendencia, no de tu foto.": "It doesn't apply to your piece: the verdict and the bet belong to the trend, not your photo.",
+"Probar otra prenda": "Try another piece", "La IA está mirando tu foto rasgo por rasgo…": "The AI is checking your photo trait by trait…",
+"No pudimos comparar la foto.": "We couldn't compare the photo.",
+"El veredicto y los datos de la tendencia siguen valiendo; lo que falló es solo la comparación.": "The trend's verdict and data still hold; only the comparison failed.",
+"Eso no es una foto. Probá con un JPG o PNG.": "That's not a photo. Try a JPG or PNG.", "No pudimos leer la foto. Probá con un JPG o PNG.": "We couldn't read the photo. Try a JPG or PNG.",
+"Esta tendencia todavía no tiene la comparación con foto.": "This trend doesn't have the photo comparison yet.",
+"La foto no es una imagen válida (JPG, PNG o WebP).": "The photo isn't a valid image (JPG, PNG or WebP).", "La foto es muy pesada. Probá con otra.": "The photo is too large. Try another one.",
+"La IA no pudo comparar la foto. Probá con otra foto o de nuevo en un rato.": "The AI couldn't compare the photo. Try another photo or again in a while.",
+"Simulación: acá iría lo que ve la IA.": "Simulation: what the AI sees would go here.", "Simulación": "Simulation",
+". Y en cada tendencia de 2025, ": ". And on each 2025 trend, ", "\"¿Tu prenda entra en esta tendencia?\"": "\"Does your piece fit this trend?\"",
+": la marca sube la foto de su prenda y la IA mira si tiene los tres rasgos de la tendencia.": ": the brand uploads a photo of its piece and the AI checks whether it has the trend's three traits.",
+"Qwen 3.8 27B (abierto, de Alibaba) vía Groq": "Qwen 3.8 27B (open, from Alibaba) via Groq",
+"Mirar la foto de una prenda y decir si tiene cada uno de los tres rasgos de la tendencia": "Look at a photo of a piece and say whether it has each of the trend's three traits",
+"Al comparar la foto de una prenda (": "When comparing a photo of a piece (",
+})

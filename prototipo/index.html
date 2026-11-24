@@ -757,6 +757,38 @@ details.envio pre,.prompt pre{white-space:pre-wrap;word-break:break-word;font-fa
 .leyenda span.r::before{background:#e99a8a}
 .leyenda span.u::before{width:1px;height:12px;vertical-align:-2px;background:var(--tinta)}
 .prompt{margin-top:18px}
+/* Pirueta: ¿tu prenda entra en esta tendencia? */
+.pf{border:1.5px solid var(--tinta);padding:26px 26px 28px;margin-top:34px;background:var(--blanco)}
+.pf-cab{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.pf h2{font-size:clamp(26px,3.4vw,40px);font-weight:700;text-transform:uppercase;letter-spacing:-.02em;line-height:1;margin:0}
+.pf-baja{font-size:16px;margin-top:10px;color:var(--gris)}
+.pf-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:28px;margin-top:24px}
+.pf-k{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin:0 0 10px}
+.pf-rasgos{list-style:none;margin:0;padding:0;counter-reset:r}
+.pf-rasgos li{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--linea);font-size:17px}
+.pf-rasgos li::before{counter-increment:r;content:"0" counter(r);font-weight:700;font-size:13px;letter-spacing:.06em}
+.pf-acc{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.pf-acc label{cursor:pointer}
+.pf-acc input{position:absolute;width:1px;height:1px;opacity:0}
+.pf-acc label:focus-within{outline:2px solid var(--ia);outline-offset:2px}
+.pf-escala{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:4px}
+.pf-escala div{border:1px solid var(--linea);padding:8px 10px;font-size:13px}
+.pf-escala b{display:block;font-size:20px}
+.pf-fijo{margin-top:18px;font-size:14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pf-nota{font-size:13px;color:var(--gris);margin-top:14px}
+.pf-fotos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pf-fotos figure{margin:0;background:var(--crema);aspect-ratio:3/4;overflow:hidden;position:relative}
+.pf-fotos img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.pf-fotos figcaption{position:absolute;left:0;right:0;bottom:0;background:rgba(255,255,255,.82);font-size:12px;font-weight:700;letter-spacing:.1em;padding:6px 8px;text-transform:uppercase}
+.pf-res h3{font-size:clamp(24px,3vw,34px);font-weight:700;text-transform:uppercase;letter-spacing:-.01em;line-height:1.05;margin:0}
+.pf-res .pf-n{font-size:clamp(56px,7vw,96px);font-weight:700;letter-spacing:-.04em;line-height:1;margin:6px 0 4px}
+.pf-res.entra .pf-n{color:var(--q)} .pf-res.cerca .pf-n{color:var(--c)} .pf-res.no_entra .pf-n,.pf-res.no_es_prenda .pf-n{color:var(--r-num)}
+.pf-res ol{list-style:none;margin:14px 0 0;padding:0}
+.pf-res li{display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid var(--linea)}
+.pf-res li i{font-style:normal;font-weight:700;font-size:18px;line-height:1.2}
+.pf-res li.si i{color:var(--q)} .pf-res li.no i{color:var(--r-num)}
+.pf-res li small{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:2px}
+@media (max-width:760px){.pf{padding:20px 16px 22px}.pf-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -1187,7 +1219,7 @@ function curvita(t){
           prensaHTML(t) +
         '</div>' +
         '<div class="lt-f-alta">' + img(t, 1) + '<span class="lt-sellos">' + sello(t) + '</span>' + pie(t, 1) + '</div>' +
-      '</div><div class="lt-f-resto">' +
+      '</div><div class="lt-f-resto">' + bloqueFoto(t) +
         (aviso ? '<div class="advertencia" role="note"><p>Advertencia · comparabilidad</p><p>' + esc(aviso) + '</p></div>' : '') +
         '<section class="vs"><div class="bloque-cab"><div><h2 class="subt">Búsquedas: ' + t.nombre + ' vs. temporada</h2><p class="chica">Año posterior al desfile vs. año anterior · búsquedas globales</p></div></div>' +
           barrasVs(t.nombre, t.bruto_pct, 'Su temporada', t.temporada_pct, sube ? 'var(--oscuro)' : 'var(--r-num)') +
@@ -1260,7 +1292,7 @@ function curvita(t){
           '<li><b>LIVETREND · FW26 Womenswear Outerwear</b> (informe pago): cada tendencia con fotos de desfile, cuántos looks la usaron, el cambio contra el año anterior y un sello del tipo "stable trend" o "last call". Lo tomamos como referencia de diseño.</li>' +
           '<li><b>WGSN, Heuritech y T-Fashion:</b> publican resúmenes de sus reportes de pasarela. Juntamos 110 datos públicos en ' + repo('datasets/runway_reportes_2025_2026.csv') + '.</li>' +
           '<li><b>Las notas de medios</b> (Who What Wear, CBC Life, Yahoo Lifestyle): es lo que lee hoy una marca chica. De ahí salen nuestras tendencias.</li></ul>' +
-        '<p>Esos informes dicen cuánto se vio algo en la pasarela, no si después se buscó. Nuestra herramienta le da a la marca chica un brief propio, con una regla que se puede verificar. Por eso la pirueta es <b>"Tu brief para llevar"</b>: una lámina por temporada que se descarga en PDF.</p></section>' +
+        '<p>Esos informes dicen cuánto se vio algo en la pasarela, no si después se buscó. Nuestra herramienta le da a la marca chica un brief propio, con una regla que se puede verificar. Por eso la pirueta es <b>"Tu brief para llevar"</b>: una lámina por temporada que se descarga en PDF. Y en cada tendencia de 2025, <b>"¿Tu prenda entra en esta tendencia?"</b>: la marca sube la foto de su prenda y la IA mira si tiene los tres rasgos de la tendencia.</p></section>' +
 
       // 02
       '<section class="rac-sec" id="r-hipotesis"><h2 class="lt-h2">02 · Hipótesis</h2>' +
@@ -1366,6 +1398,7 @@ function curvita(t){
       '<section class="rac-sec" id="r-ia"><h2 class="lt-h2">08 · Proceso y uso de IA</h2>' +
         '<h3>Modelos</h3>' + tabla(['Dónde', 'Modelo', 'Para qué'], [
           ['En la app', 'GPT-OSS 120B (abierto, de OpenAI) vía Groq', 'Explicar cada tendencia y elegir qué mirar de una temporada, para la marca'],
+          ['En la app', 'Qwen 3.8 27B (abierto, de Alibaba) vía Groq', 'Mirar la foto de una prenda y decir si tiene cada uno de los tres rasgos de la tendencia'],
           ['En el análisis', 'Gemini', 'Clasificar color, prenda, silueta y largo de 2.430 looks'],
           ['Para construir', 'Claude Code (agente de código)', 'Escribir el código, los scripts y los documentos a partir de lo que pedimos y revisamos']]) +
         '<h3>Cómo manejamos el system prompt</h3><ul><li>Está versionado en ' + repo('netlify/functions/prompt.mjs') + ' y se puede ver acá abajo.</li>' +
@@ -1428,6 +1461,89 @@ function curvita(t){
       esc(sat ? 'Hubo muchos pedidos en poco tiempo. Probá de nuevo en un minuto.' : (e.message || '')) + '</p>' +
       '<p class="explica" style="margin-top:6px">Los datos calculados siguen valiendo; lo que falló es solo la sugerencia.</p>' +
       '<button class="boton chico-b" style="margin-top:14px" data-ia-actualizar>Probar de nuevo</button>';
+  }
+  // ---------- Pirueta: ¿tu prenda entra en esta tendencia? ----------
+  // La marca sube la foto de su prenda; la IA (un modelo que ve fotos) dice si cumple los 3 rasgos que escribió el
+  // grupo. El resultado lo cuenta el código. El veredicto y cuánto apostar no cambian: salen de las búsquedas.
+  function verbo(f, es1, esN){ return f.plural ? esN : es1; }
+  function preguntaFoto(t){ return L('¿' + t.foto.tu + verbo(t.foto, ' entra', ' entran') + ' en esta tendencia?', 'Does your piece fit this trend?'); }
+  function bloqueFoto(t){
+    if (!t.foto) return '';
+    return '<section class="pf" id="pf" aria-labelledby="pf-t"><div class="pf-cab"><div><h2 id="pf-t">' + preguntaFoto(t) + '</h2>' +
+      '<p class="pf-baja">Compará tu prenda con la pasarela: subí una foto y la IA mira si tiene los tres rasgos de la tendencia.</p></div>' +
+      '<span class="tag ia">Comparación hecha por IA</span></div>' +
+      '<div id="pf-cuerpo">' + pfInicio(t) + '</div></section>';
+  }
+  function pfInicio(t){
+    return '<div class="pf-grid"><div><p class="pf-k">Lo que miramos</p><ol class="pf-rasgos">' + t.foto.rasgos.map(function(r){ return '<li>' + esc(r) + '</li>'; }).join('') + '</ol>' +
+      '<div class="pf-acc"><label class="boton"><input type="file" accept="image/*" capture="environment" data-pf-foto>Sacar foto</label>' +
+      '<label class="boton borde"><input type="file" accept="image/*" data-pf-foto>Elegir de la galería</label></div>' +
+      '<p class="pf-nota">La foto se manda a la IA (vía Groq) para compararla y no se guarda en ningún lado.</p></div>' +
+      '<div><p class="pf-k">Cómo se decide</p><div class="pf-escala"><div><b>3/3</b>Entra</div><div><b>2/3</b>Cerca</div><div><b>0–1/3</b>No entra</div></div>' +
+      '<p class="pf-k" style="margin-top:22px">Lo que no cambia</p><p class="pf-fijo">' + sello(t) + '<span>Cuánto apostar: <b>' + APUESTA[t.apuesta] + '</b></span><span class="tag">Calculado</span></p>' +
+      '<p class="pf-nota" style="margin-top:8px">Sale de las búsquedas, no de tu foto.</p></div></div>';
+  }
+  function pfFotos(t, mia){
+    return '<div class="pf-fotos"><figure>' + img(t, 1) + '<figcaption>Pasarela</figcaption></figure><figure><img src="' + mia + '" alt="La foto de tu prenda"><figcaption>Tu prenda</figcaption></figure></div>';
+  }
+  function pfTitulo(t, r){
+    var f = t.foto;
+    if (r === 'entra') return L('¡' + f.tu + verbo(f, ' entra', ' entran') + ' en la tendencia!', 'Your piece fits the trend!');
+    if (r === 'cerca') return L(f.tu + verbo(f, ' está', ' están') + ' cerca de la tendencia', 'Your piece is close to the trend');
+    if (r === 'no_entra') return L(f.tu + verbo(f, ' no entra', ' no entran') + ' en la tendencia', 'Your piece doesn\'t fit the trend');
+    return L('No encontramos una prenda en la foto', 'We couldn\'t find a garment in the photo');
+  }
+  function pfResultado(t, mia, j){
+    return '<div class="pf-grid">' + pfFotos(t, mia) + '<div class="pf-res ' + j.resultado + '" aria-live="polite"><h3>' + pfTitulo(t, j.resultado) + '</h3>' +
+      (j.resultado === 'no_es_prenda' ? '<p class="pf-baja">Probá con una foto donde la prenda se vea entera, de frente y con buena luz.</p>' :
+        '<p class="pf-n">' + j.cumple + '/3</p>' + (j.prenda ? '<p class="pf-baja" data-no-tr>' + esc(j.prenda) + '</p>' : '') +
+        '<ol>' + j.rasgos.map(function(x){ return '<li class="' + (x.cumple ? 'si' : 'no') + '"><i aria-hidden="true">' + (x.cumple ? '✓' : '✕') + '</i><span><small>' + esc(x.rasgo) + '</small><span data-no-tr>' + esc(x.por_que) + '</span></span></li>'; }).join('') + '</ol>') +
+      '<p class="pf-fijo">' + sello(t) + '<span>Cuánto apostar: <b>' + APUESTA[t.apuesta] + '</b></span><span class="tag">Calculado</span></p>' +
+      '<p class="pf-nota" style="margin-top:6px">' + (j.resultado === 'entra' || j.resultado === 'cerca' ? 'El veredicto y la apuesta no cambian con tu foto: salen de las búsquedas.' : 'No aplica a tu prenda: el veredicto y la apuesta son de la tendencia, no de tu foto.') + '</p>' +
+      '<p class="pf-fijo"><span class="tag ia">Comparación hecha por IA</span>' + (j.modelo ? '<span class="pf-nota" style="margin:0">' + esc(j.modelo) + ' · Groq</span>' : '') + '</p>' +
+      '<button class="boton borde" style="margin-top:16px" data-pf-otra>Probar otra prenda</button></div></div>';
+  }
+  function achicarFoto(archivo){
+    return new Promise(function(ok, mal){
+      var url = URL.createObjectURL(archivo), im = new Image();
+      im.onload = function(){
+        var k = Math.min(1, 1000 / Math.max(im.naturalWidth, im.naturalHeight)), c = document.createElement('canvas');
+        c.width = Math.round(im.naturalWidth * k); c.height = Math.round(im.naturalHeight * k);
+        c.getContext('2d').drawImage(im, 0, 0, c.width, c.height); URL.revokeObjectURL(url);
+        ok(c.toDataURL('image/jpeg', 0.85));
+      };
+      im.onerror = function(){ URL.revokeObjectURL(url); mal(new Error('No pudimos leer la foto. Probá con un JPG o PNG.')); };
+      im.src = url;
+    });
+  }
+  function simularFoto(t){
+    return new Promise(function(ok){ setTimeout(function(){ ok({resultado: 'cerca', cumple: 2, prenda: 'Simulación', simulada: true,
+      rasgos: t.foto.rasgos.map(function(r, i){ return {n: i + 1, rasgo: r, cumple: i < 2, por_que: 'Simulación: acá iría lo que ve la IA.'}; })}); }, 900); });
+  }
+  function conectarFoto(){
+    var caja = $('pf-cuerpo'); if (!caja) return;
+    var t = porId(decodeURIComponent(location.hash.slice(1)).split('/')[1]); if (!t || !t.foto) return;
+    caja.querySelectorAll('[data-pf-foto]').forEach(function(inp){
+      inp.addEventListener('change', function(){
+        var archivo = inp.files && inp.files[0]; if (!archivo) return;
+        if (!/^image\//.test(archivo.type)){ caja.insertAdjacentHTML('beforeend', '<p class="ia-error" style="margin-top:12px">Eso no es una foto. Probá con un JPG o PNG.</p>'); return; }
+        achicarFoto(archivo).then(function(mia){
+          caja.innerHTML = '<div class="pf-grid">' + pfFotos(t, mia) + '<div><p class="explica" style="margin-bottom:12px">La IA está mirando tu foto rasgo por rasgo…</p><div class="cargando"><i></i><i></i><i></i></div></div></div>';
+          var pedido = SIMULAR ? simularFoto(t) : !online ? Promise.reject(new Error('La IA funciona en la versión online de la página (necesita el servidor).')) : llamar({modo: 'foto', id: t.id, imagen: mia, idioma: IDIOMA});
+          return pedido.then(function(j){
+            var aca = $('pf-cuerpo'); if (aca) { aca.innerHTML = pfResultado(t, mia, j); conectarFoto(); }
+          }, function(e){
+            var aca = $('pf-cuerpo'); if (!aca) return;
+            var sat = e.status === 429;
+            aca.innerHTML = '<div class="pf-grid">' + pfFotos(t, mia) + '<div><p class="ia-error"><b>' + (sat ? 'La IA está saturada.' : 'No pudimos comparar la foto.') + '</b> ' + esc(sat ? 'Hubo muchos pedidos en poco tiempo. Probá de nuevo en un minuto.' : (e.message || '')) + '</p>' +
+              '<p class="explica" style="margin-top:6px">El veredicto y los datos de la tendencia siguen valiendo; lo que falló es solo la comparación.</p><button class="boton borde" style="margin-top:14px" data-pf-otra>Probar otra prenda</button></div></div>';
+            conectarFoto();
+          });
+        }, function(e){ caja.insertAdjacentHTML('beforeend', '<p class="ia-error" style="margin-top:12px">' + esc(e.message) + '</p>'); });
+      });
+    });
+    var otra = caja.querySelector('[data-pf-otra]');
+    if (otra) otra.addEventListener('click', function(){ caja.innerHTML = pfInicio(t); conectarFoto(); var b = caja.querySelector('label'); if (b) b.focus(); });
   }
   function pieIA(c, j){
     return (j.problemas && j.problemas.length ? '<p class="ia-control">El control automático marcó: ' + esc(j.problemas.join('; ')) + '. Tomalo con más cuidado.</p>' : '') +
@@ -1696,6 +1812,7 @@ function curvita(t){
     conectarPerfil();
     main.querySelectorAll('[data-ir-sec]').forEach(function(a){ a.addEventListener('click', function(e){ var d = $(a.dataset.irSec); if (d){ e.preventDefault(); d.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); history.replaceState(null, '', a.getAttribute('href')); } }); });
     pedirIA(false);
+    conectarFoto();
     var vp = $('ver-prompt');
     if (vp) vp.addEventListener('click', function(){
       var caja = $('prompt-texto');
@@ -1704,7 +1821,7 @@ function curvita(t){
       caja.innerHTML = '<p class="explica" style="margin-top:10px">Cargando…</p>';
       fetch(API).then(function(r){ return r.json(); }).then(function(j){
         $('ia-modelo').textContent = 'Modelo: ' + j.modelo + ' · ' + j.proveedor;
-        caja.innerHTML = '<p class="kicker" style="margin-top:14px">Al abrir una tendencia</p><pre>' + esc(j.system_prompt) + '</pre>' + (j.system_prompt_temporada ? '<p class="kicker" style="margin-top:14px">Al abrir una temporada</p><pre>' + esc(j.system_prompt_temporada) + '</pre>' : '');
+        caja.innerHTML = '<p class="kicker" style="margin-top:14px">Al abrir una tendencia</p><pre>' + esc(j.system_prompt) + '</pre>' + (j.system_prompt_temporada ? '<p class="kicker" style="margin-top:14px">Al abrir una temporada</p><pre>' + esc(j.system_prompt_temporada) + '</pre>' : '') + (j.system_prompt_foto ? '<p class="kicker" style="margin-top:14px">Al comparar la foto de una prenda (' + esc(j.modelo_foto || '') + ')</p><pre>' + esc(j.system_prompt_foto) + '</pre>' : '');
       }).catch(function(){ caja.innerHTML = '<p class="ia-error" style="margin-top:10px">No pudimos traer el prompt.</p>'; });
     });
   }

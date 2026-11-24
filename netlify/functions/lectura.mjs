@@ -1,10 +1,11 @@
 // Funcion de Netlify: POST /api/lectura -> recomendacion de la IA (Groq) para una marca.
 //   {id, perfil}                         -> lectura de una tendencia (modo "tendencia")
 //   {modo: "temporada", temporada, perfil} -> cuales tendencias de la temporada mirar (modo "temporada")
+//   {modo: "foto", id, imagen}           -> si la prenda de la foto cumple los 3 rasgos de la tendencia (pirueta)
 // GET /api/lectura -> modelo y system prompts (para mostrarlos en la app).
 // La clave va en la variable de entorno GROQ_API_KEY de Netlify. Nunca en el codigo.
 import datos from "../../prototipo/datos.json";
-import { SYSTEM_PROMPT, SYSTEM_PROMPT_TEMPORADA, IDIOMA_EN, MODELO_POR_DEFECTO } from "./prompt.mjs";
+import { SYSTEM_PROMPT, SYSTEM_PROMPT_TEMPORADA, IDIOMA_EN, MODELO_POR_DEFECTO, SYSTEM_PROMPT_FOTO, IDIOMA_EN_FOTO, MODELO_FOTO } from "./prompt.mjs";
 
 const RUBROS = { "": "todo tipo de ropa", vestidos: "vestidos", polleras: "polleras", pantalones: "pantalones",
   abrigos: "abrigos y tejidos", accesorios: "accesorios y estampados", varios: "varios rubros", todo: "varios rubros" };
@@ -161,14 +162,81 @@ async function preguntar(key, modelo, contexto, extra, prompt = SYSTEM_PROMPT) {
   } finally { clearTimeout(reloj); }
 }
 
+// ---------- Pirueta: ¿tu prenda entra en esta tendencia? ----------
+// La foto llega achicada desde el navegador (JPEG de hasta ~1000 px). No se guarda en ningún lado.
+const MAX_IMAGEN = 1_500_000;
+export function revisarFoto(salida) {
+  const problemas = [];
+  if (typeof salida?.es_prenda !== "boolean") problemas.push("falta es_prenda (true o false)");
+  if (salida?.es_prenda === false) return problemas;
+  const r = Array.isArray(salida?.rasgos) ? salida.rasgos : [];
+  if (r.length !== 3) problemas.push("tienen que ser exactamente 3 rasgos");
+  [1, 2, 3].forEach(n => {
+    const x = r.find(y => y && y.n === n);
+    if (!x) { problemas.push(`falta el rasgo ${n}`); return; }
+    if (typeof x.cumple !== "boolean") problemas.push(`el rasgo ${n} no dice si cumple (true o false)`);
+    if (typeof x.por_que !== "string" || !x.por_que.trim()) problemas.push(`falta el por qué del rasgo ${n}`);
+    else if (x.por_que.length > 220) problemas.push(`el por qué del rasgo ${n} es muy largo`);
+    else if (/\d/.test(x.por_que)) problemas.push(`el por qué del rasgo ${n} tiene números`);
+  });
+  return problemas;
+}
+async function compararFoto(key, modelo, t, imagen, idioma, extra) {
+  const ctrl = new AbortController(); const reloj = setTimeout(() => ctrl.abort(), 30000);
+  const contexto = { tendencia: t.nombre, prenda: t.foto.tu, rasgos: t.foto.rasgos.map((r, i) => ({ n: i + 1, rasgo: r })) };
+  try {
+    const r = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+      method: "POST", signal: ctrl.signal,
+      headers: { authorization: `Bearer ${key}`, "content-type": "application/json" },
+      body: JSON.stringify({
+        model: modelo, temperature: 0.2, max_completion_tokens: 900, response_format: { type: "json_object" },
+        messages: [{ role: "system", content: SYSTEM_PROMPT_FOTO + (idioma === "en" ? IDIOMA_EN_FOTO : "") },
+          { role: "user", content: [{ type: "text", text: JSON.stringify(contexto) + (extra ? "\n\n" + extra : "") },
+            { type: "image_url", image_url: { url: imagen } }] }],
+      }),
+    });
+    if (r.status === 429) throw Object.assign(new Error("La IA está saturada. Probá de nuevo en un minuto."), { status: 429 });
+    if (!r.ok) throw Object.assign(new Error(`La IA respondió con error ${r.status}.`), { status: 502 });
+    const j = await r.json();
+    try { return JSON.parse(j.choices?.[0]?.message?.content || ""); }
+    catch { throw Object.assign(new Error("La IA devolvió una respuesta incompleta. Probá de nuevo."), { status: 502 }); }
+  } finally { clearTimeout(reloj); }
+}
+async function modoFoto(key, pedido) {
+  const t = datos.tendencias.find(x => x.id === pedido.id);
+  if (!t || !t.foto) return json({ error: "Esta tendencia todavía no tiene la comparación con foto." }, 404);
+  const imagen = typeof pedido.imagen === "string" ? pedido.imagen : "";
+  if (!/^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(imagen)) return json({ error: "La foto no es una imagen válida (JPG, PNG o WebP)." }, 400);
+  if (imagen.length > MAX_IMAGEN) return json({ error: "La foto es muy pesada. Probá con otra." }, 413);
+  const modelo = process.env.GROQ_MODEL_FOTO || MODELO_FOTO, idioma = pedido.idioma === "en" ? "en" : "es";
+  try {
+    let salida = await compararFoto(key, modelo, t, imagen, idioma, "");
+    let problemas = revisarFoto(salida);
+    if (problemas.length) {
+      salida = await compararFoto(key, modelo, t, imagen, idioma, "Tu respuesta anterior tenía estos problemas, corregilos: " + problemas.join("; "));
+      problemas = revisarFoto(salida);
+    }
+    if (problemas.length) return json({ error: "La IA no pudo comparar la foto. Probá con otra foto o de nuevo en un rato.", problemas }, 502);
+    // El resultado lo cuenta el código, no la IA: 3 de 3 entra, 2 de 3 cerca, 0 o 1 no entra
+    const cumple = salida.es_prenda ? salida.rasgos.filter(x => x.cumple === true).length : 0;
+    const resultado = !salida.es_prenda ? "no_es_prenda" : cumple === 3 ? "entra" : cumple === 2 ? "cerca" : "no_entra";
+    const rasgos = salida.es_prenda ? [1, 2, 3].map(n => { const x = salida.rasgos.find(y => y.n === n); return { n, rasgo: t.foto.rasgos[n - 1], cumple: x.cumple, por_que: x.por_que.trim() }; }) : [];
+    return json({ resultado, cumple, prenda: String(salida.prenda || "").slice(0, 80), rasgos, modelo });
+  } catch (e) {
+    const msg = e.name === "AbortError" ? "La IA tardó demasiado. Probá de nuevo." : e.message;
+    return json({ error: msg }, e.status || 502);
+  }
+}
+
 export default async (req) => {
   const modelo = process.env.GROQ_MODEL || MODELO_POR_DEFECTO;
-  if (req.method === "GET") return json({ modelo, proveedor: "Groq", system_prompt: SYSTEM_PROMPT, system_prompt_temporada: SYSTEM_PROMPT_TEMPORADA });
+  if (req.method === "GET") return json({ modelo, proveedor: "Groq", system_prompt: SYSTEM_PROMPT, system_prompt_temporada: SYSTEM_PROMPT_TEMPORADA, modelo_foto: process.env.GROQ_MODEL_FOTO || MODELO_FOTO, system_prompt_foto: SYSTEM_PROMPT_FOTO });
   if (req.method !== "POST") return json({ error: "Método no permitido" }, 405);
   const key = process.env.GROQ_API_KEY;
   if (!key) return json({ error: "La IA no está configurada en este sitio (falta la clave)." }, 503);
   let pedido;
   try { pedido = await req.json(); } catch { return json({ error: "Pedido inválido" }, 400); }
+  if (pedido.modo === "foto") return modoFoto(key, pedido);
   const marca = limpiarPerfil(pedido.perfil, pedido.rubro, pedido.marca);
   const extraIdioma = pedido.idioma === "en" ? IDIOMA_EN : "";   // solo "en" cambia algo; cualquier otro valor se ignora
   if (pedido.modo === "temporada") {

@@ -196,6 +196,12 @@ PRENSA = {}
 with open(RAIZ / "prototipo" / "prensa_tendencias.csv", encoding="utf-8", newline="") as fh:
     for r in csv.DictReader(fh):
         PRENSA.setdefault(r["id"], []).append({k: r[k] for k in ("medio", "titulo", "fecha", "url", "cita")})
+# Rasgos visibles de cada tendencia, para comparar la foto de una prenda (prototipo/rasgos_tendencias.csv).
+# Los escribe el grupo; la IA solo dice si la foto los cumple. No cambian veredictos ni números.
+RASGOS = {}
+with open(RAIZ / "prototipo" / "rasgos_tendencias.csv", encoding="utf-8", newline="") as fh:
+    for r in csv.DictReader(fh):
+        RASGOS[r["id"]] = {"tu": r["tu"], "plural": r["plural"] == "1", "rasgos": [r["rasgo1"], r["rasgo2"], r["rasgo3"]]}
 med_temp = {}
 for t in tendencias:
     t["b0"], t["b1"] = round(promedio(t["serie"][:12]), 2), round(promedio(t["serie"][12:]), 2)
@@ -207,6 +213,7 @@ for t in tendencias:
     t["esperado"] = round(t["b0"] * math.exp(med), 2)             # dónde estaría si se hubiera movido como la temporada
     t["desfiles"] = desfiles(t["id"])
     t["prensa"] = PRENSA.get(t["id"], [])
+    if t["id"] in RASGOS: t["foto"] = RASGOS[t["id"]]
     t["apuesta"] = apuesta(t)
 
 

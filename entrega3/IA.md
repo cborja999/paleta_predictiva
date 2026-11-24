@@ -233,6 +233,18 @@ Devolvé solo un JSON con esta forma:
 
 El pedido lleva `idioma: "en"` y al final del system prompt se agrega `IDIOMA_EN` (en `netlify/functions/prompt.mjs`): la IA escribe sus textos en inglés, pero las claves del JSON, los ids y los valores de `dato` no cambian, así que los controles son los mismos. Las respuestas en inglés se guardan aparte en el navegador.
 
+## Pirueta: ¿tu prenda entra en esta tendencia?
+
+En la ficha de cada tendencia de 2025 la marca puede subir la foto de su prenda. Un modelo que ve fotos, **Qwen 3.8 27B** (`qwen/qwen3.8-27b`, abierto, vía Groq, con la misma clave), mira si la prenda tiene los **tres rasgos visibles** de la tendencia.
+
+- **Los rasgos** están en `prototipo/rasgos_tendencias.csv`, uno por fila y tendencia. Los del sombrero pillbox y el jean de pierna ancha salen del diseño del grupo. El resto los escribió el agente como borrador y están marcados "borrador a revisar" hasta que el grupo los corrija.
+- **Qué devuelve la IA:** si hay una prenda en la foto, qué prenda ve y, para cada rasgo, si lo cumple (sí o no) con una frase. No habla de ventas, de veredictos ni de cuánto apostar, y no usa números.
+- **Qué decide el código:** cuenta los rasgos que se cumplen. 3 de 3: entra; 2 de 3: cerca; 0 o 1: no entra. El veredicto y cuánto apostar no cambian con la foto y se muestran como "Calculado".
+- **Controles:** la foto llega achicada (JPEG de hasta 1000 px) y se rechaza si no es una imagen o pesa demasiado. El código revisa que vengan exactamente los 3 rasgos, con sí o no y una frase sin números. Si algo falla, le pide que corrija una vez; si sigue mal, muestra un error y no inventa un resultado.
+- **Privacidad:** la foto se manda a Groq para compararla y no se guarda en ningún servidor. La página lo dice.
+- **Límite:** el plan gratis de Groq deja unas 3 comparaciones por minuto. Si se pasa, la página muestra "La IA está saturada".
+- **Prompt:** `SYSTEM_PROMPT_FOTO` en `netlify/functions/prompt.mjs` (se ve también en el racional, "Ver qué le pedimos a la IA"). En inglés se agrega `IDIOMA_EN_FOTO`.
+
 ## La IA en el resto del proyecto
 
 Antes de esta app usamos IA en el análisis: Gemini clasificó 2.430 looks de Vogue Runway por color, prenda, silueta y largo (`runway_gemini/`, validado a mano con 40 fotos en `analisis/validacion_gemini_muestra.csv`: coincidió en color 33 de 40, largo 36, prenda 28 y silueta 23; por eso la página usa solo el color). Ese cruce dio un resultado nulo y por eso la hipótesis cambió (ver `hipotesis.md`). En la app final la IA solo explica y sugiere; los veredictos y la apuesta son cálculo.
