@@ -866,7 +866,7 @@ label.pf-foto input{position:absolute;width:1px;height:1px;opacity:0}
 </div>
 
 <script src="datos.js?v=5466fafd79"></script>
-<script src="en.js?v=0985a8c0ce"></script>
+<script src="en.js?v=d3344bf8c3"></script>
 <script>
 (function(){
   "use strict";
@@ -1495,8 +1495,8 @@ function curvita(t){
       '<div class="ia-cuerpo" id="ia-cuerpo" aria-live="polite" data-ia="temp" data-id="' + s + '"></div></section>';
   }
   function sinPerfil(tipo){
-    return '<p class="ia-vacio">' + (tipo === 'temp' ? 'Armá el perfil de tu marca y la IA te dice qué tendencias de esta temporada te conviene mirar, y por qué.' : 'Armá el perfil de tu marca y la IA te dice qué hacer con esta tendencia según tu rubro, tu público y tu canal.') +
-      '</p><a class="boton flecha" href="#perfil">Creá tu perfil </a><p class="explica" style="margin-top:10px">Lleva un minuto. Se guarda solo en este navegador.</p>';
+    return '<p class="ia-vacio">' + (tipo === 'temp' ? 'Para ver tu brief personalizado, entrá con tu marca acá.' : 'Para ver qué hacer con esta tendencia en tu marca, entrá con tu marca acá.') +
+      '</p><a class="boton flecha" href="#perfil">Entrar con mi marca </a><p class="explica" style="margin-top:10px">Sin usuario ni contraseña: alcanza con el rubro de tu marca. Se guarda solo en este navegador.</p>';
   }
   function cargando(tipo){ return '<p class="explica" style="margin-bottom:12px">La IA está ' + (tipo === 'temp' ? 'leyendo las tendencias de la temporada' : 'leyendo los datos de esta tendencia') + ' con tu perfil…</p><div class="cargando"><i></i><i></i><i></i></div>'; }
   function errorIA(e){
