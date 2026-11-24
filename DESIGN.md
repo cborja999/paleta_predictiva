@@ -251,6 +251,9 @@ Línea de tinta de 1,5px arriba, rótulo "EN LA PRENSA", comillas grandes y la c
 ### ¿Tu prenda entra en esta tendencia? (componente propio)
 Una sección más de la ficha, sin caja: título en Headline, la etiqueta IA y un par de fotos como en el informe. A la izquierda la foto de pasarela; al lado, un espacio con borde punteado ("Tu prenda") que se toca para subir la foto; a la derecha, los tres rasgos numerados. Con el resultado, tu foto ocupa ese espacio y los rasgos muestran ✓ o ✕ con la frase de la IA, arriba el número grande (verde si entra, mostaza si está cerca, rojo si no entra). Las reglas y lo que no cambia van en una línea chica al pie. Si la foto es de otra prenda, en lugar del número dice "Esta foto no corresponde a la tendencia" y qué ve la IA.
 
+### Sticker "Seleccionada para vos"
+Círculo blanco con borde de tinta, girado −10°, sobre la esquina de arriba a la derecha de la foto, con texto en mayúscula. Solo aparece con perfil, en las tendencias de su rubro. Es la única forma redonda y girada del sistema: se nota porque es personal.
+
 ### Bloque de la IA
 Una cabecera en pizarra con el rótulo "Para tu marca / sugerencia de IA", la etiqueta IA y el título en mayúscula, y un cuerpo en fondo IA con una línea azul de 2px arriba. Tiene estados de carga (tres barras que brillan), error y saturada.
 

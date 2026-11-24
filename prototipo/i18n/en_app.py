@@ -411,6 +411,7 @@ T.update({
 "La foto no es una imagen válida (JPG, PNG o WebP).": "The photo isn't a valid image (JPG, PNG or WebP).", "La foto es muy pesada. Probá con otra.": "The photo is too large. Try another one.",
 "La IA no pudo comparar la foto. Probá con otra foto o de nuevo en un rato.": "The AI couldn't compare the photo. Try another photo or again in a while.",
 "Simulación: acá iría lo que ve la IA.": "Simulation: what the AI sees would go here.", "Simulación": "Simulation",
+"Seleccionada": "Picked", "para vos": "for you", "Seleccionada para vos, según el rubro de tu perfil": "Picked for you, based on your profile's category",
 "Subí una foto de tu prenda y la IA la compara con la pasarela, rasgo por rasgo.": "Upload a photo of your piece and the AI compares it with the runway, trait by trait.",
 "Subí la foto de tu prenda": "Upload a photo of your piece", "Sacala o elegila de la galería": "Take it or choose it from your gallery",
 "Entra con 3 de 3 rasgos, está cerca con 2 y no entra con 0 o 1.": "It fits with 3 of 3 traits, it's close with 2 and it doesn't fit with 0 or 1.",
