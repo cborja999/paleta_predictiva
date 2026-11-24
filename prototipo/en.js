@@ -711,6 +711,8 @@ window.EN_DIC = {
 "La IA no pudo comparar la foto. Probá con otra foto o de nuevo en un rato.": "The AI couldn't compare the photo. Try another photo or again in a while.",
 "Simulación: acá iría lo que ve la IA.": "Simulation: what the AI sees would go here.",
 "Simulación": "Simulation",
+"Qué hacer con esta tendencia en tu marca": "What to do with this trend in your brand",
+"Tu brief personalizado de ": "Your personalized brief for ",
 "Para ver tu brief personalizado, entrá con tu marca acá.": "To see your personalized brief, enter with your brand here.",
 "Para ver qué hacer con esta tendencia en tu marca, entrá con tu marca acá.": "To see what to do with this trend in your brand, enter with your brand here.",
 "Entrar con mi marca ": "Enter with my brand ",

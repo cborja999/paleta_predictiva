@@ -268,6 +268,8 @@ img{display:block}
 .ia-cuerpo{background:var(--ia-fondo);border-top:2px solid var(--ia);padding:22px 24px 26px;min-height:120px}
 .ia-temp{margin-top:32px}
 .ia-temp .ia-panel{margin-top:0}
+.ia-corto{padding:20px 24px}
+.ia-corto h2{margin:6px 0 0}
 .chico-b{font-size:14px;padding:7px 12px}
 .ia-vacio{font-size:17px;max-width:60ch;margin-bottom:16px}
 .ia-meta{font-size:13px;color:var(--gris);margin-top:16px;font-weight:400}
@@ -866,7 +868,7 @@ label.pf-foto input{position:absolute;width:1px;height:1px;opacity:0}
 </div>
 
 <script src="datos.js?v=5466fafd79"></script>
-<script src="en.js?v=d3344bf8c3"></script>
+<script src="en.js?v=cae007ac1e"></script>
 <script>
 (function(){
   "use strict";
@@ -1482,14 +1484,21 @@ function curvita(t){
       '<h2>' + titulo + '</h2><p>' + texto + '</p></div>' +
       (conActualizar ? '<button class="boton borde chico-b" data-ia-actualizar>Actualizar</button>' : '') + '</div>';
   }
+  // Sin perfil, el bloque de la IA es una sola franja: qué te da y un botón para entrar con tu marca
+  function iaSinPerfil(titulo, clase){
+    return '<section aria-label="' + esc(titulo) + '" class="ia-bloque ' + clase + '"><div class="ia-panel ia-corto"><div><p class="kicker">Para tu marca <span class="tag ia">Inferencia de la IA</span></p><h2>' + titulo + '</h2></div>' +
+      '<a class="boton claro flecha" href="#perfil">Entrar con mi marca </a></div></section>';
+  }
   function bloqueIA(t){
     var p = perfil();
+    if (!p) return iaSinPerfil('Qué hacer con esta tendencia en tu marca', '');
     return '<section aria-label="Sugerencia de la IA para tu marca" class="ia-bloque">' +
       cabIA(p ? 'Qué hacer con esto en ' + esc(p.nombre || 'tu marca') : 'Qué hacer con esto en tu marca', 'La IA lee los datos calculados de arriba y tu perfil. Es una sugerencia, no un dato: no cambia el veredicto.', !!p) +
       '<div class="ia-cuerpo" id="ia-cuerpo" aria-live="polite" data-ia="t" data-id="' + t.id + '"></div></section>';
   }
   function bloqueIATemporada(s){
     var p = perfil();
+    if (!p) return iaSinPerfil('Tu brief personalizado de ' + nomS(s), 'ia-temp');
     return '<section aria-label="Sugerencia de la IA para esta temporada" class="ia-bloque ia-temp">' +
       cabIA(p ? 'Qué mirar de ' + nomS(s) + ' para ' + esc(p.nombre || 'tu marca') : 'Qué mirar de ' + nomS(s) + ' para tu marca', 'La IA elige entre las tendencias que ya tienen veredicto calculado. No cambia veredictos ni números.', !!p) +
       '<div class="ia-cuerpo" id="ia-cuerpo" aria-live="polite" data-ia="temp" data-id="' + s + '"></div></section>';
