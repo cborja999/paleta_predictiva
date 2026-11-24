@@ -91,6 +91,7 @@ window.EN_DIC = {
 "contra su temporada": "against its season",
 "Contra su temporada": "Against its season",
 "Ver el análisis →": "See the analysis →",
+"Ver el análisis": "See the analysis",
 ": ver el análisis": ": see the analysis",
 "La nombró ": "Named by ",
 "La nombró": "Named by",
